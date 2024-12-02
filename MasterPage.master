@@ -119,19 +119,19 @@
          </div>
          <div class="header-top__col-right">
            <ul class="header-top-link-list">
-             <li><a href="#">Investor</a></li>
+             <li><a href="investors.aspx">Investor</a></li>
              <li class="has-submenu">
                <a href="#">Resources</a>
                <ul>
-                 <li><a href="#">Blogs</a></li>
-                 <li><a href="#">Product Catalogues</a></li>
-                 <li><a href="#">White Paper</a></li>
-                 <li><a href="#">Video Gallery</a></li>
-                 <li><a href="#">Case Studies</a></li>
-                 <li><a href="#">Seminars</a></li>
+                 <li><a href="Blogs.aspx">Blogs</a></li>
+                 <li><a href="product-catalogues.aspx">Product Catalogues</a></li>
+                 <li><a href="white-paper.aspx">White Paper</a></li>
+                 <li><a href="video-gallery.aspx">Video Gallery</a></li>
+                 <li><a href="case-studies.aspx">Case Studies</a></li>
+                 <li><a href="seminars.aspx">Seminars</a></li>
                </ul>
              </li>
-             <li><a href="#">Career</a></li>
+             <li><a href="job-listing.aspx">Career</a></li>
            </ul>
            <div class="social-media-links">
              <ul class="social-link-list">
@@ -225,7 +225,7 @@
                      <li><a href="#">Environmental Safety</a></li>
                    </ul>
                  </li>
-                 <li><a href="#">Contact Us</a></li>
+                 <li><a href="contact-us.aspx">Contact Us</a></li>
                </ul>
              </nav>
            </div>

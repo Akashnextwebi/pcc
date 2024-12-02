@@ -2,6 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <link href="css/about.css" rel="stylesheet" />
+    <link href="css/breadcrums.css" rel="stylesheet" />
     <style>
         .job-list-three {
             background: #fff;
@@ -93,22 +94,21 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <main class="wrapper">
 
-        <div class="wptb-page-heading" style="position: relative; background-image: url('image/about/2.png');">
-            <!-- Overlay -->
-            <div class="overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1;"></div>
-
-            <div class="container" style="position: relative; z-index: 2;">
-                <div class="wptb-item--inner">
-                    <h2 class="wptb-item--title text-white mb-2">Career </h2>
-                    <div class="wptb-breadcrumb-wrap">
-                        <ul class="wptb-breadcrumb">
-                            <li><a href="#">Home</a></li>
-                            <li><span>Career</span></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
+         <div class="breadcrumb-section" style="background-image: linear-gradient(270deg, rgba(0, 0, 0, .55), rgba(0, 0, 0, 0.55) 101.02%), url(image/blog/braadcrumb-bg3.jpg);">
+      <div class="container-fluid one pl--95">
+          <div class="row">
+              <div class="col-lg-12">
+                  <div class="banner-content">
+                      <h1>Career</h1>
+                      <ul class="breadcrumb-list">
+                          <li><a href="index.html">Home</a></li>
+                          <li>Career</li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
         <section class="section-padding">
             <div class="container">
                 <div class="row justify-content-center">

@@ -10,6 +10,10 @@
             position: relative;
         }
 
+        .section-padding {
+            padding: 60px 0px;
+        }
+
         .container-fluid.one {
             max-width: 1746px;
         }
@@ -101,6 +105,47 @@
                 flex-direction: column;
                 justify-content: end;
             }
+
+                .case-study-card2 .case-content .category-and-title > a {
+                    border-radius: 16px;
+                    border: 1px solid rgba(255, 255, 255, 0.5);
+                    background: 0 0;
+                    display: inline-block;
+                    color: #fff;
+                    text-align: center;
+                    font-size: 12px;
+                    font-weight: 500;
+                    padding: 6px 28px;
+                    margin-bottom: 15px;
+                }
+
+                .case-study-card2 .case-content .category-and-title h4 {
+                    margin-bottom: 30px;
+                }
+
+                    .case-study-card2 .case-content .category-and-title h4 a {
+                        color: #fff;
+                        font-size: 24px;
+                        font-weight: 500;
+                        transition: 0.35s;
+                    }
+
+        .primary-btn2 {
+            color: #000;
+            font-size: 15px;
+            font-weight: 500;
+            background-color: #fff;
+            display: inline-flex;
+            align-items: center;
+            line-height: 1;
+            white-space: nowrap;
+            padding: 17px 28px;
+            gap: 8px;
+            overflow: hidden;
+            position: relative;
+            z-index: 1;
+            transition: all 0.6s;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
@@ -119,34 +164,106 @@
             </div>
         </div>
     </div>
-    <section class="section-padding">
-        <div class="container">
-            <siv class="row">
-                <div class="col-lg-6">
-                    <div class="magnetic-wrap">
-                        <div class="case-study-card2 magnetic-item" style="">
-                            <div class="case-img">
-                                <img src="assets/img/inner-pages/case-01.jpg" alt="">
-                            </div>
-                            <div class="case-content">
-                                <div class="category-and-title">
-                                    <a href="case-study1.html">Marketing</a>
-                                    <h4><a href="case-study-details.html">A Business Consulting to Increase Marketing Analaytic on Markio Logistics</a></h4>
+    <main>
+        <section class="section-padding">
+            <div class="container">
+                <siv class="row gy-4">
+                    <div class="col-lg-6">
+                        <div class="magnetic-wrap">
+                            <div class="case-study-card2 magnetic-item" style="">
+                                <div class="case-img">
+                                    <img src="image/case/case-01.jpg" alt="">
                                 </div>
-                                <div class="details-btn">
-                                    <a class="primary-btn2 btn-hover" href="case-study-details.html">Read More
+                                <div class="case-content">
+                                    <div class="category-and-title">
+                                        <a href="case-study1.html">Marketing</a>
+                                        <h4><a href="case-study-details.html">A Business Consulting to Increase Marketing Analaytic on Markio Logistics</a></h4>
+                                    </div>
+                                    <div class="details-btn">
+                                        <a class="primary-btn2 btn-hover" href="case-study-details.html">Read More
                                         <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12">
                                             <path fill-rule="evenodd" clip-rule="evenodd" d="M10.1865 1.06237L0 11.2484L0.751627 12L10.9376 1.81347V8.85645H12V0H3.14355V1.06237H10.1865Z"></path>
                                         </svg>
-                                        <span style="top: 51.7875px; left: 100.853px;"></span>
-                                    </a>
+                                            <span style="top: 51.7875px; left: 100.853px;"></span>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </siv>
-        </div>
-    </section>
+                    <div class="col-lg-6">
+                        <div class="magnetic-wrap">
+                            <div class="case-study-card2 magnetic-item" style="">
+                                <div class="case-img">
+                                    <img src="image/case/case-02.jpg" alt="">
+                                </div>
+                                <div class="case-content">
+                                    <div class="category-and-title">
+                                        <a href="case-study1.html">Marketing</a>
+                                        <h4><a href="case-study-details.html">A Business Consulting to Increase Marketing Analaytic on Markio Logistics</a></h4>
+                                    </div>
+                                    <div class="details-btn">
+                                        <a class="primary-btn2 btn-hover" href="case-study-details.html">Read More
+                     <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12">
+                         <path fill-rule="evenodd" clip-rule="evenodd" d="M10.1865 1.06237L0 11.2484L0.751627 12L10.9376 1.81347V8.85645H12V0H3.14355V1.06237H10.1865Z"></path>
+                     </svg>
+                                            <span style="top: 51.7875px; left: 100.853px;"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="magnetic-wrap">
+                            <div class="case-study-card2 magnetic-item" style="">
+                                <div class="case-img">
+                                    <img src="image/case/case-03.jpg" alt="">
+                                </div>
+                                <div class="case-content">
+                                    <div class="category-and-title">
+                                        <a href="case-study1.html">Marketing</a>
+                                        <h4><a href="case-study-details.html">A Business Consulting to Increase Marketing Analaytic on Markio Logistics</a></h4>
+                                    </div>
+                                    <div class="details-btn">
+                                        <a class="primary-btn2 btn-hover" href="case-study-details.html">Read More
+                     <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12">
+                         <path fill-rule="evenodd" clip-rule="evenodd" d="M10.1865 1.06237L0 11.2484L0.751627 12L10.9376 1.81347V8.85645H12V0H3.14355V1.06237H10.1865Z"></path>
+                     </svg>
+                                            <span style="top: 51.7875px; left: 100.853px;"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="magnetic-wrap">
+                            <div class="case-study-card2 magnetic-item" style="">
+                                <div class="case-img">
+                                    <img src="image/case/case-04.jpg" alt="">
+                                </div>
+                                <div class="case-content">
+                                    <div class="category-and-title">
+                                        <a href="case-study1.html">Marketing</a>
+                                        <h4><a href="case-study-details.html">A Business Consulting to Increase Marketing Analaytic on Markio Logistics</a></h4>
+                                    </div>
+                                    <div class="details-btn">
+                                        <a class="primary-btn2 btn-hover" href="case-study-details.html">Read More
+                     <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12">
+                         <path fill-rule="evenodd" clip-rule="evenodd" d="M10.1865 1.06237L0 11.2484L0.751627 12L10.9376 1.81347V8.85645H12V0H3.14355V1.06237H10.1865Z"></path>
+                     </svg>
+                                            <span style="top: 51.7875px; left: 100.853px;"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </siv>
+            </div>
+        </section>
+    </main>
+
 </asp:Content>
 

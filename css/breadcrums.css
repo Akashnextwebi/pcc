@@ -1,0 +1,73 @@
+﻿.breadcrumb-section {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+    padding: 305px 0 200px;
+    position: relative;
+}
+
+.section-padding {
+    padding: 60px 0px;
+}
+
+.container-fluid.one {
+    max-width: 1746px;
+}
+
+.pl--95 {
+    padding-left: 70px;
+}
+
+.breadcrumb-list {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 10px 20px;
+    flex-wrap: wrap;
+}
+
+.breadcrumb-section .banner-content h1 {
+    color: #fff;
+    font-size: 75px;
+    font-weight: 400;
+}
+
+.breadcrumb-section .banner-content .breadcrumb-list li:first-child {
+    padding-left: 0;
+}
+
+.breadcrumb-section .banner-content .breadcrumb-list li {
+    line-height: 1;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    padding-left: 16px;
+    position: relative;
+}
+
+    .breadcrumb-section .banner-content .breadcrumb-list li a {
+        color: #fff;
+        transition: 0.35s;
+    }
+
+.banner-content .breadcrumb-list li {
+    line-height: 1;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    padding-left: 16px;
+    position: relative;
+}
+
+.breadcrumb-section .banner-content .breadcrumb-list li::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #cacaca;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
