@@ -244,7 +244,7 @@
 
                                         </div>
                                         <div class="cart_button">
-                                            <a href="#" class="btn">View Product
+                                            <a href="product-details.aspx" class="btn">View Product
                                             </a>
                                         </div>
                                     </div>

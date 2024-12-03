@@ -243,7 +243,7 @@
                     <div class="col-lg-4">
                         <div class="project__item-two">
                             <div class="project__thumb-two">
-                                <a href="project-details.html" contenteditable="false" style="cursor: pointer;">
+                                <a href="product-lisitng.aspx" contenteditable="false" style="cursor: pointer;">
                                     <img src="image/sub/inner_project07.jpg" alt="img"></a>
                                 <span class="shape"></span>
                             </div>
