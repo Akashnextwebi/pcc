@@ -94,8 +94,8 @@ box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 
                             </div>
                             <div class="card-content">
                                 <div class="catgory-and-title">
-                                    <a href="portfolio-three-column.html">Technology</a>
-                                    <h5><a href="portfolio-details.html">Information Technology (IT)</a></h5>
+                                    <a href="whitepaper-details.aspx">Technology</a>
+                                    <h5><a href="whitepaper-details.aspx">Information Technology (IT)</a></h5>
                                 </div>
                             </div>
                         </div>
@@ -107,8 +107,8 @@ box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 
                             </div>
                             <div class="card-content">
                                 <div class="catgory-and-title">
-                                    <a href="portfolio-details.html">Managemnet</a>
-                                    <h5><a href="portfolio-details.html">To Change Management</a></h5>
+                                    <a href="whitepaper-details.aspx">Managemnet</a>
+                                    <h5><a href="whitepaper-details.aspx">To Change Management</a></h5>
                                 </div>
                             </div>
                         </div>
@@ -120,8 +120,8 @@ box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 
                             </div>
                             <div class="card-content">
                                 <div class="catgory-and-title">
-                                    <a href="portfolio-three-column.html">Marketing</a>
-                                    <h5><a href="portfolio-details.html">Marketing and Sales Consulting</a></h5>
+                                    <a href="whitepaper-details.aspx">Marketing</a>
+                                    <h5><a href="whitepaper-details.aspx">Marketing and Sales Consulting</a></h5>
                                 </div>
                             </div>
                         </div>

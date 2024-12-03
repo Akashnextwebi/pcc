@@ -84,7 +84,7 @@
 
                 <div class="row">
                     <div class="col-12 col-md-4">
-                        <a class="blog-card" href="#">
+                        <a class="blog-card" href="blogs-details.aspx">
                             <div class="image">
                                 <div class="tag">Defence</div>
                                 <img src="image/blog-1.jpg" alt="">
@@ -101,7 +101,7 @@
                         </a>
                     </div>
                     <div class="col-12 col-md-4">
-                        <a class="blog-card" href="#">
+                        <a class="blog-card" href="blogs-details.aspx">
                             <div class="image">
                                 <div class="tag">Industry</div>
                                 <img src="image/blog-2.jpg" alt="">
@@ -119,7 +119,7 @@
                         </a>
                     </div>
                     <div class="col-12 col-md-4">
-                        <a class="blog-card" href="#">
+                        <a class="blog-card" href="blogs-details.aspx">
                             <div class="image">
                                 <div class="tag">Aerospace</div>
                                 <img src="image/blog-3.jpg" alt="">

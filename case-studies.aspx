@@ -177,10 +177,10 @@
                                 <div class="case-content">
                                     <div class="category-and-title">
                                         <a href="case-study1.html">Marketing</a>
-                                        <h4><a href="case-study-details.html">A Business Consulting to Increase Marketing Analaytic on Markio Logistics</a></h4>
+                                        <h4><a href="case-studies.aspx">A Business Consulting to Increase Marketing Analaytic on Markio Logistics</a></h4>
                                     </div>
                                     <div class="details-btn">
-                                        <a class="primary-btn2 btn-hover" href="case-study-details.html">Read More
+                                        <a class="primary-btn2 btn-hover" href="case-studies.aspx">Read More
                                         <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12">
                                             <path fill-rule="evenodd" clip-rule="evenodd" d="M10.1865 1.06237L0 11.2484L0.751627 12L10.9376 1.81347V8.85645H12V0H3.14355V1.06237H10.1865Z"></path>
                                         </svg>
@@ -200,10 +200,10 @@
                                 <div class="case-content">
                                     <div class="category-and-title">
                                         <a href="case-study1.html">Marketing</a>
-                                        <h4><a href="case-study-details.html">A Business Consulting to Increase Marketing Analaytic on Markio Logistics</a></h4>
+                                        <h4><a href="case-studies.aspx">A Business Consulting to Increase Marketing Analaytic on Markio Logistics</a></h4>
                                     </div>
                                     <div class="details-btn">
-                                        <a class="primary-btn2 btn-hover" href="case-study-details.html">Read More
+                                        <a class="primary-btn2 btn-hover" href="case-studies.aspx">Read More
                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12">
                          <path fill-rule="evenodd" clip-rule="evenodd" d="M10.1865 1.06237L0 11.2484L0.751627 12L10.9376 1.81347V8.85645H12V0H3.14355V1.06237H10.1865Z"></path>
                      </svg>
@@ -223,10 +223,10 @@
                                 <div class="case-content">
                                     <div class="category-and-title">
                                         <a href="case-study1.html">Marketing</a>
-                                        <h4><a href="case-study-details.html">A Business Consulting to Increase Marketing Analaytic on Markio Logistics</a></h4>
+                                        <h4><a href="case-studies.aspx">A Business Consulting to Increase Marketing Analaytic on Markio Logistics</a></h4>
                                     </div>
                                     <div class="details-btn">
-                                        <a class="primary-btn2 btn-hover" href="case-study-details.html">Read More
+                                        <a class="primary-btn2 btn-hover" href="case-studies.aspx">Read More
                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12">
                          <path fill-rule="evenodd" clip-rule="evenodd" d="M10.1865 1.06237L0 11.2484L0.751627 12L10.9376 1.81347V8.85645H12V0H3.14355V1.06237H10.1865Z"></path>
                      </svg>
@@ -246,10 +246,10 @@
                                 <div class="case-content">
                                     <div class="category-and-title">
                                         <a href="case-study1.html">Marketing</a>
-                                        <h4><a href="case-study-details.html">A Business Consulting to Increase Marketing Analaytic on Markio Logistics</a></h4>
+                                        <h4><a href="case-studies.aspx">A Business Consulting to Increase Marketing Analaytic on Markio Logistics</a></h4>
                                     </div>
                                     <div class="details-btn">
-                                        <a class="primary-btn2 btn-hover" href="case-study-details.html">Read More
+                                        <a class="primary-btn2 btn-hover" href="case-studies.aspx">Read More
                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12">
                          <path fill-rule="evenodd" clip-rule="evenodd" d="M10.1865 1.06237L0 11.2484L0.751627 12L10.9376 1.81347V8.85645H12V0H3.14355V1.06237H10.1865Z"></path>
                      </svg>
