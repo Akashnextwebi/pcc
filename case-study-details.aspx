@@ -368,7 +368,7 @@
                     <div class="banner-content">
                         <h1>Case Study</h1>
                         <ul class="breadcrumb-list">
-                            <li><a href="index.html">Home</a></li>
+                            <li><a href="Default.aspx">Home</a></li>
                             <li>Case Study</li>
                         </ul>
                     </div>
@@ -417,7 +417,7 @@
                                                 </table>
                                                 <ul class="download-btns">
                                                     <li>
-                                                        <a href="assets/case-study.pdf" download="case-study.html">
+                                                        <a href="assets/case-study.pdf" download="#">
                                                             <img src="assets/img/inner-pages/Vector/pdf-icon.svg" alt="">
                                                             Download Pdf
 </a>

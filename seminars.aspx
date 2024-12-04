@@ -57,7 +57,7 @@
                     <div class="banner-content">
                         <h1>Seminars</h1>
                         <ul class="breadcrumb-list">
-                            <li><a href="index.html">Home</a></li>
+                            <li><a href="Default.aspx">Home</a></li>
                             <li>Seminars</li>
                         </ul>
                     </div>

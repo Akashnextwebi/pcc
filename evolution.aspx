@@ -156,7 +156,7 @@
                     <div class="banner-content">
                         <h1>Evolution</h1>
                         <ul class="breadcrumb-list">
-                            <li><a href="index.html">Home</a></li>
+                            <li><a href="Default.aspx">Home</a></li>
                             <li>Evolution</li>
                         </ul>
                     </div>
@@ -174,7 +174,7 @@
                                 <figure class="image">
                                     <img src="image/evolution/history-1.jpg" alt="">
                                 </figure>
-                                <div class="link-box"><a href="history.html"><i class="fa-solid fa-arrow-right-long"></i></a></div>
+                                <div class="link-box"><a href="#"><i class="fa-solid fa-arrow-right-long"></i></a></div>
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-12 content-column">
@@ -204,7 +204,7 @@
                                 <figure class="image">
                                     <img src="image/evolution/history-1.jpg" alt="">
                                 </figure>
-                                <div class="link-box"><a href="history.html"><i class="fa-solid fa-arrow-right-long"></i></a></div>
+                                <div class="link-box"><a href="#"><i class="fa-solid fa-arrow-right-long"></i></a></div>
                             </div>
                         </div>
                     </div>
@@ -216,7 +216,7 @@
                                 <figure class="image">
                                     <img src="image/evolution/history-1.jpg" alt="">
                                 </figure>
-                                <div class="link-box"><a href="history.html"><i class="fa-solid fa-arrow-right-long"></i></a></div>
+                                <div class="link-box"><a href="#"><i class="fa-solid fa-arrow-right-long"></i></a></div>
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-12 content-column">
@@ -246,7 +246,7 @@
                                 <figure class="image">
                                     <img src="image/evolution/history-1.jpg" alt="">
                                 </figure>
-                                <div class="link-box"><a href="history.html"><i class="fa-solid fa-arrow-right-long"></i></a></div>
+                                <div class="link-box"><a href="#"><i class="fa-solid fa-arrow-right-long"></i></a></div>
                             </div>
                         </div>
                     </div>

@@ -77,8 +77,8 @@
                 <div class="col-lg-12">
                     <div class="banner-content">
                         <ul class="breadcrumb-list">
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="index.html">Blog</a></li>
+                            <li><a href="Default.aspx">Home</a></li>
+                            <li><a href="Default.aspx">Blog</a></li>
 
                             <li>The Blueprint for quality: Engineering excellence in product and service delivery</li>
                         </ul>

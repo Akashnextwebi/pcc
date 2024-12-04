@@ -156,7 +156,7 @@
                     <div class="banner-content">
                         <h1>Case Study</h1>
                         <ul class="breadcrumb-list">
-                            <li><a href="index.html">Home</a></li>
+                            <li><a href="Default.aspx">Home</a></li>
                             <li>Case Study</li>
                         </ul>
                     </div>
@@ -176,7 +176,7 @@
                                 </div>
                                 <div class="case-content">
                                     <div class="category-and-title">
-                                        <a href="case-study1.html">Marketing</a>
+                                        <a href="ase-study-details.aspx">Marketing</a>
                                         <h4><a href="case-studies.aspx">A Business Consulting to Increase Marketing Analaytic on Markio Logistics</a></h4>
                                     </div>
                                     <div class="details-btn">
@@ -199,7 +199,7 @@
                                 </div>
                                 <div class="case-content">
                                     <div class="category-and-title">
-                                        <a href="case-study1.html">Marketing</a>
+                                        <a href="ase-study-details.aspx">Marketing</a>
                                         <h4><a href="case-studies.aspx">A Business Consulting to Increase Marketing Analaytic on Markio Logistics</a></h4>
                                     </div>
                                     <div class="details-btn">
@@ -222,7 +222,7 @@
                                 </div>
                                 <div class="case-content">
                                     <div class="category-and-title">
-                                        <a href="case-study1.html">Marketing</a>
+                                        <a href="ase-study-details.aspx">Marketing</a>
                                         <h4><a href="case-studies.aspx">A Business Consulting to Increase Marketing Analaytic on Markio Logistics</a></h4>
                                     </div>
                                     <div class="details-btn">
@@ -245,7 +245,7 @@
                                 </div>
                                 <div class="case-content">
                                     <div class="category-and-title">
-                                        <a href="case-study1.html">Marketing</a>
+                                        <a href="ase-study-details.aspx">Marketing</a>
                                         <h4><a href="case-studies.aspx">A Business Consulting to Increase Marketing Analaytic on Markio Logistics</a></h4>
                                     </div>
                                     <div class="details-btn">

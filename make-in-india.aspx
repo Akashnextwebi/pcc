@@ -2,58 +2,90 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <style>
+        .banner-area6 {
+            background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0.85) 100%), url(image/india/bacground-img.png);
+            background-size: cover;
+            background-repeat: repeat;
+            background-position: center center;
+            padding: 200px 0 100px;
         }
 
-        .banner1-section {
-            position: relative;
-            z-index: 1;
-        }
-
-        .mb-130 {
-            margin-bottom: 130px;
-        }
-
-        .banner1-section .banner-vector {
-            position: absolute;
-            right: 0;
-            top: 0;
-            z-index: -1;
-        }
-
-        .banner1-section .banner-vector {
-            position: absolute;
-            right: 0;
-            top: 0;
-            z-index: -1;
-        }
-
-        .banner1-section .banner-top {
-            padding: 70px 10% 70px 6%;
-        }
-
-            .banner1-section .banner-top .banner-content {
-                max-width: 890px;
+            .banner-area6 .banner-left-content {
+                max-width: 1035px;
                 width: 100%;
             }
 
-                .banner1-section .banner-top .banner-content span {
-                    color: #0d1720;
-                    font-size: 16px;
-                    font-weight: 500;
-                    line-height: 1;
-                    border: 1px solid #000;
-                    padding: 7px 20px;
-                    border-radius: 16px;
-                    display: inline-block;
-                    margin-bottom: 25px;
+                .banner-area6 .banner-left-content h1 {
+                    color: #000;;
+                    font-size: 60px;
+                    font-weight: 400;
+                    margin-bottom: 40px;
+                    line-height:70px;
                 }
 
-                .banner1-section .banner-top .banner-content h1 {
-                    color: #0d1720;
-                    font-size: 54px;
-                    font-weight: 400;
-                    margin-bottom: 0;
+                .banner-area6 .banner-left-content .quate-text {
+                    display: flex;
+                    align-items: center;
+                    max-width: 690px;
+                    width: 100%;
+                    gap: 20px;
+                    margin-bottom: 60px;
                 }
+
+                    .banner-area6 .banner-left-content .quate-text .icon svg {
+                        fill: var(--primary-color);
+                    }
+
+                    .banner-area6 .banner-left-content .quate-text .content p {
+                        color: #000;
+                        font-size: 20px;
+                        font-weight: 400;
+                        line-height: 30px;
+                        margin-bottom: 0;
+                    }
+
+                .banner-area6 .banner-left-content .btn-group {
+                    display: flex;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    gap: 30px;
+                    padding-top: 30px;
+                    border-top: 1px solid #eee;
+                }
+
+                    .banner-area6 .banner-left-content .btn-group li.success-rate {
+                        color: #000;
+                        font-size: 16px;
+                        font-weight: 400;
+                        line-height: 1;
+                        border: 1px solid #000;
+                        border-radius: 16px;
+                        padding: 7px 20px;
+                        display: flex;
+                        align-items: center;
+                        gap: 30px;
+                    }
+
+                    .banner-area6 .banner-left-content .btn-group li a {
+                        color: #000;
+                        font-size: 16px;
+                        font-weight: 400;
+                        line-height: 1;
+                        border: 1px solid #000;
+                        border-radius: 16px;
+                        padding: 7px 20px;
+                        display: flex;
+                        align-items: center;
+                        gap: 24px;
+                        overflow: hidden;
+                        position: relative;
+                        z-index: 1;
+                        transition: all 0.6s;
+                    }
+
+                    .banner-area6 .banner-left-content .btn-group li {
+                        line-height: 1;
+                    }
 
         .magnetic-wrap {
             position: relative;
@@ -173,18 +205,20 @@
                     gap: 6px;
                     margin-bottom: 20px;
                 }
-                .sub-title span {
-    color: #0d1720;
-    text-align: center;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1;
-    display: inline-block;
-    border-radius: 16px;
-    border: 1px solid #000;
-    padding: 7px 20px;
-    white-space: nowrap;
-}
+
+        .sub-title span {
+            color: #0d1720;
+            text-align: center;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1;
+            display: inline-block;
+            border-radius: 16px;
+            border: 1px solid #000;
+            padding: 7px 20px;
+            white-space: nowrap;
+        }
+
         .section-title1 {
             display: flex;
             align-items: flex-start;
@@ -192,117 +226,82 @@
             max-width: 1066px;
             width: 100%;
             gap: 25px;
-        }.section-title1 h2 {
-    color: #000;
-    font-size: 40px;
-    font-weight: 400;
-    margin-bottom: 0;
-    max-width: 740px;
-    margin-top: -10px;
-}.eg-card-2 {
-    padding: 40px;
-    border: 1px solid #ffc5c5;
-    display: flex
-;
-    align-items: flex-start;
-    gap: 30px;
-    transition: 0.35s;
-}.eg-card-2 .icon {
-    display: flex
-;
-    flex-direction: column;
-    align-items: center;
-    transition: 0.35s;
-}.eg-card-2 .content h5 {
-    color: #000;
-    font-size: 22px;
-    font-weight: 400;
-    margin-bottom: 10px;
-}.eg-card-2 .content p {
-    color: #566064;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 25px;
-    margin-bottom: 0;
-}
- .section-padding{
-     padding:60px 0px;
- }
+        }
+
+            .section-title1 h2 {
+                color: #000;
+                font-size: 40px;
+                font-weight: 400;
+                margin-bottom: 0;
+                max-width: 740px;
+                margin-top: -10px;
+            }
+
+        .eg-card-2 {
+            padding: 40px;
+            border: 1px solid #ffc5c5;
+            display: flex;
+            align-items: flex-start;
+            gap: 30px;
+            transition: 0.35s;
+        }
+
+            .eg-card-2 .icon {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                transition: 0.35s;
+            }
+
+            .eg-card-2 .content h5 {
+                color: #000;
+                font-size: 22px;
+                font-weight: 400;
+                margin-bottom: 10px;
+            }
+
+            .eg-card-2 .content p {
+                color: #566064;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 25px;
+                margin-bottom: 0;
+            }
+
+        .section-padding {
+            padding: 60px 0px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-    <div class="banner1-section mb-130 mt-50">
-        <img class="banner-vector" src="assets/img/home1/banner-leaf.png" alt="">
-        <div class="banner-top">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-12 gap-lg-4 gap-4 d-flex flex-md-nowrap flex-wrap align-items-center justify-content-between">
-                        <div class="banner-content mt-50">
-                            <span>Health Care</span>
-                            <h1>Unlocking Your Business's Potential With Innovate Consulting.</h1>
-                        </div>
-                        <div class="magnetic-wrap">
-                            <div class="banner-btn magnetic-item">
-                                <a href="services1.html">
-                                    <img src="image/india/indai.png" />
-
-                                </a>
+    <div class="banner-area6">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 d-flex flex-lg-row flex-column align-items-xxl-end align-items-lg-center justify-content-between gap-5">
+                    <div class="banner-left-content">
+                        <h1><span>Business consulting</span> is a professional service provided by individuals or firms.</h1>
+                        <div class="quate-text">
+                            <div class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M35.6529 3.71829L0 39.3693L2.63069 42L38.2817 6.34713V30.9976H42V0H11.0024V3.71829H35.6529Z"></path>
+                                </svg>
+                            </div>
+                            <div class="content">
+                                <p>
+                                    Current business operations, identify areas of improvement, and develop strategies
+and solutions to address.
+                                </p>
                             </div>
                         </div>
+                        <ul class="btn-group">
+                            <li class="success-rate">Success Rate <span>90%</span></li>
+                            <li><a href="#">Determine Problem</a></li>
+                            <li><a href="#">Unqiue Solution</a></li>
+                        </ul>
                     </div>
-                </div>
-            </div>
-        </div>
-        <div class="banner-bottom">
-            <div class="container">
-                <div class="row g-lg-4 gy-5">
-                    <div class="col-lg-7 order-lg-1 order-2">
-                        <div class="magnetic-wrap">
-                            <div class="banner-img magnetic-item" style="">
-                                <img src="image/india/1.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-5 order-lg-2 order-1">
-                        <div class="banner-right-content pl--95">
-                            <h5>The primary goal of business consulting is to help organizations improve their performance, solve specific problems, and achieve their strategic objectives.</h5>
-                            <ul class="btn-group">
-                                <li class="success-rate">Success Rate <span>90%</span></li>
-                                <li><a class="btn-hover" href="assets/video/video-bg3.mp4" data-fancybox="gallery">Spotlight
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="9" height="9" viewBox="0 0 9 9">
-                                        <g>
-                                            <path d="M8.596 5.19735L2.233 8.88935C1.693 9.20235 1 8.82335 1 8.19235V0.808348C1 0.178348 1.692 -0.201652 2.233 0.112348L8.596 3.80435C8.71884 3.87447 8.82094 3.97583 8.89196 4.09816C8.96299 4.22048 9.00039 4.3594 9.00039 4.50085C9.00039 4.64229 8.96299 4.78122 8.89196 4.90354C8.82094 5.02586 8.71884 5.12722 8.596 5.19735Z" fill="#0D1720"></path>
-                                        </g>
-                                    </svg>
-                                    <span></span>
-                                </a></li>
-                            </ul>
-                            <ul class="features">
-                                <li>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
-                                        <path d="M12.1223 3.19025C12.163 3.23089 12.1953 3.27917 12.2174 3.33232C12.2394 3.38548 12.2508 3.44246 12.2508 3.5C12.2508 3.55755 12.2394 3.61453 12.2174 3.66768C12.1953 3.72084 12.163 3.76911 12.1223 3.80975L5.99725 9.93475C5.95661 9.9755 5.90833 10.0078 5.85518 10.0299C5.80203 10.0519 5.74505 10.0633 5.6875 10.0633C5.62996 10.0633 5.57298 10.0519 5.51982 10.0299C5.46667 10.0078 5.41839 9.9755 5.37775 9.93475L2.31525 6.87225C2.2331 6.7901 2.18695 6.67868 2.18695 6.5625C2.18695 6.44632 2.2331 6.3349 2.31525 6.25275C2.3974 6.1706 2.50882 6.12445 2.625 6.12445C2.74118 6.12445 2.8526 6.1706 2.93475 6.25275L5.6875 9.00638L11.5028 3.19025C11.5434 3.14951 11.5917 3.11719 11.6448 3.09513C11.698 3.07307 11.755 3.06172 11.8125 3.06172C11.87 3.06172 11.927 3.07307 11.9802 3.09513C12.0333 3.11719 12.0816 3.14951 12.1223 3.19025Z"></path>
-                                    </svg>
-                                    Initial Assessment
-</li>
-                                <li>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
-                                        <path d="M12.1223 3.19025C12.163 3.23089 12.1953 3.27917 12.2174 3.33232C12.2394 3.38548 12.2508 3.44246 12.2508 3.5C12.2508 3.55755 12.2394 3.61453 12.2174 3.66768C12.1953 3.72084 12.163 3.76911 12.1223 3.80975L5.99725 9.93475C5.95661 9.9755 5.90833 10.0078 5.85518 10.0299C5.80203 10.0519 5.74505 10.0633 5.6875 10.0633C5.62996 10.0633 5.57298 10.0519 5.51982 10.0299C5.46667 10.0078 5.41839 9.9755 5.37775 9.93475L2.31525 6.87225C2.2331 6.7901 2.18695 6.67868 2.18695 6.5625C2.18695 6.44632 2.2331 6.3349 2.31525 6.25275C2.3974 6.1706 2.50882 6.12445 2.625 6.12445C2.74118 6.12445 2.8526 6.1706 2.93475 6.25275L5.6875 9.00638L11.5028 3.19025C11.5434 3.14951 11.5917 3.11719 11.6448 3.09513C11.698 3.07307 11.755 3.06172 11.8125 3.06172C11.87 3.06172 11.927 3.07307 11.9802 3.09513C12.0333 3.11719 12.0816 3.14951 12.1223 3.19025Z"></path>
-                                    </svg>
-                                    Problem Definition
-</li>
-                                <li>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
-                                        <path d="M12.1223 3.19025C12.163 3.23089 12.1953 3.27917 12.2174 3.33232C12.2394 3.38548 12.2508 3.44246 12.2508 3.5C12.2508 3.55755 12.2394 3.61453 12.2174 3.66768C12.1953 3.72084 12.163 3.76911 12.1223 3.80975L5.99725 9.93475C5.95661 9.9755 5.90833 10.0078 5.85518 10.0299C5.80203 10.0519 5.74505 10.0633 5.6875 10.0633C5.62996 10.0633 5.57298 10.0519 5.51982 10.0299C5.46667 10.0078 5.41839 9.9755 5.37775 9.93475L2.31525 6.87225C2.2331 6.7901 2.18695 6.67868 2.18695 6.5625C2.18695 6.44632 2.2331 6.3349 2.31525 6.25275C2.3974 6.1706 2.50882 6.12445 2.625 6.12445C2.74118 6.12445 2.8526 6.1706 2.93475 6.25275L5.6875 9.00638L11.5028 3.19025C11.5434 3.14951 11.5917 3.11719 11.6448 3.09513C11.698 3.07307 11.755 3.06172 11.8125 3.06172C11.87 3.06172 11.927 3.07307 11.9802 3.09513C12.0333 3.11719 12.0816 3.14951 12.1223 3.19025Z"></path>
-                                    </svg>
-                                    Data Gathering and Analysis
-</li>
-                                <li>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
-                                        <path d="M12.1223 3.19025C12.163 3.23089 12.1953 3.27917 12.2174 3.33232C12.2394 3.38548 12.2508 3.44246 12.2508 3.5C12.2508 3.55755 12.2394 3.61453 12.2174 3.66768C12.1953 3.72084 12.163 3.76911 12.1223 3.80975L5.99725 9.93475C5.95661 9.9755 5.90833 10.0078 5.85518 10.0299C5.80203 10.0519 5.74505 10.0633 5.6875 10.0633C5.62996 10.0633 5.57298 10.0519 5.51982 10.0299C5.46667 10.0078 5.41839 9.9755 5.37775 9.93475L2.31525 6.87225C2.2331 6.7901 2.18695 6.67868 2.18695 6.5625C2.18695 6.44632 2.2331 6.3349 2.31525 6.25275C2.3974 6.1706 2.50882 6.12445 2.625 6.12445C2.74118 6.12445 2.8526 6.1706 2.93475 6.25275L5.6875 9.00638L11.5028 3.19025C11.5434 3.14951 11.5917 3.11719 11.6448 3.09513C11.698 3.07307 11.755 3.06172 11.8125 3.06172C11.87 3.06172 11.927 3.07307 11.9802 3.09513C12.0333 3.11719 12.0816 3.14951 12.1223 3.19025Z"></path>
-                                    </svg>
-                                    Problem Definition
-</li>
-                            </ul>
+                    <div class="magnetic-wrap">
+                        <div class="banner-btn magnetic-item">
+                            <img src="image/india/indai.png" width="200" />
                         </div>
                     </div>
                 </div>
@@ -310,21 +309,17 @@
         </div>
     </div>
 
-    <div class="feature-card-section section-padding" style="background:#f4f9fd;">
+    <div class="feature-card-section section-padding" style="background: #f4f9fd;">
         <div class="container">
             <div class="row g-4">
-               
+
                 <div class="col-lg-12">
                     <div class="row">
                         <div class="col-lg-12 gap-lg-5 gap-4 d-flex flex-lg-nowrap flex-wrap align-items-start justify-content-between mb-60">
                             <div class="section-title1 one">
-                                <h2>Conduct market research to understand industry trends, competition, and customer behavior.</h2>
+                                <h2>Industry We Serve</h2>
                             </div>
-                            <a class="explore-btn" href="services1.html">Explore Area
-                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10.1865 1.06237L0 11.2484L0.751627 12L10.9376 1.81347V8.85645H12V0H3.14355V1.06237H10.1865Z"></path>
-                                </svg>
-                            </a>
+                          
                         </div>
                         <div class="col-lg-12">
                             <div class="row g-4">
