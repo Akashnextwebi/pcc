@@ -101,12 +101,50 @@
             line-height: 34px;
             font-weight: 700;
             margin-bottom: 15px;
-        }.history-section .content-box p {
-    max-width: 440px;
-}.clearfix::after {
+        }
+        .history-section .inner-box:nth-child(2) .image-box, .history-section .inner-box:nth-child(4) .image-box {
+            margin-left: 70px;
+            padding-left: 30px;
+        }
+        .history-section .content-box {
+    position: relative;
     display: block;
-    clear: both;
-    content: "";
+    margin-top: -16px;
+}
+        .history-section .image-box .image {
+    position: relative;
+    display: block;
+}.history-section .inner-box:nth-child(2) .content-box .text:before, .history-section .inner-box:nth-child(4) .content-box .text:before {
+    left: 50px;
+}
+        .history-section .inner-box:nth-child(2) .content-box .text, .history-section .inner-box:nth-child(4) .content-box .text {
+    padding-left: 100px;
+}
+
+        .history-section .content-box .text {
+            position: relative;
+            padding-bottom: 27px;
+            padding-top: 41px;
+        }
+
+
+.history-section .image-box .link-box {
+    position: absolute;
+    top: 50px;
+}
+        .history-section .content-box p {
+            max-width: 440px;
+        }
+
+        .clearfix::after {
+            display: block;
+            clear: both;
+            content: "";
+        }.history-section .inner-box:nth-child(2) .image-box .link-box, .history-section .inner-box:nth-child(4) .image-box .link-box {
+    left: 0px;
+}.history-section .image-box .link-box {
+    position: absolute;
+    top: 50px;
 }
     </style>
 </asp:Content>
@@ -116,10 +154,10 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="banner-content">
-                        <h1>About Us</h1>
+                        <h1>Evolution</h1>
                         <ul class="breadcrumb-list">
                             <li><a href="index.html">Home</a></li>
-                            <li>About Us</li>
+                            <li>Evolution</li>
                         </ul>
                     </div>
                 </div>
@@ -134,9 +172,9 @@
                         <div class="col-lg-6 col-md-6 col-sm-12 image-column">
                             <div class="image-box">
                                 <figure class="image">
-                                    <img src="assets/images/resource/history-1.jpg" alt="">
+                                    <img src="image/evolution/history-1.jpg" alt="">
                                 </figure>
-                                <div class="link-box"><a href="history.html"><i class="flaticon-diagonal-arrow"></i></a></div>
+                                <div class="link-box"><a href="history.html"><i class="fa-solid fa-arrow-right-long"></i></a></div>
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-12 content-column">
@@ -150,8 +188,71 @@
                         </div>
                     </div>
                 </div>
-
+                <div class="inner-box">
+                    <div class="row clearfix">
+                        <div class="col-lg-6 col-md-6 col-sm-12 content-column">
+                            <div class="content-box">
+                                <h2>2014</h2>
+                                <div class="text">
+                                    <h3>500 Projects Milestone</h3>
+                                    <p>Indignation and dislike men who are so demoralized by charms pleasure of the moment.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 image-column">
+                            <div class="image-box">
+                                <figure class="image">
+                                    <img src="image/evolution/history-1.jpg" alt="">
+                                </figure>
+                                <div class="link-box"><a href="history.html"><i class="fa-solid fa-arrow-right-long"></i></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="inner-box">
+                    <div class="row clearfix">
+                        <div class="col-lg-6 col-md-6 col-sm-12 image-column">
+                            <div class="image-box">
+                                <figure class="image">
+                                    <img src="image/evolution/history-1.jpg" alt="">
+                                </figure>
+                                <div class="link-box"><a href="history.html"><i class="fa-solid fa-arrow-right-long"></i></a></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 content-column">
+                            <div class="content-box">
+                                <h2>2019</h2>
+                                <div class="text">
+                                    <h3>Introduce New Technology</h3>
+                                    <p>Indignation and dislike men who are so demoralized by charms pleasure of the moment,trouble that are bound to ensue  obligations of business.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="inner-box">
+                    <div class="row clearfix">
+                        <div class="col-lg-6 col-md-6 col-sm-12 content-column">
+                            <div class="content-box">
+                                <h2>2022</h2>
+                                <div class="text">
+                                    <h3>Best Company Award</h3>
+                                    <p>Indignation and dislike men who are so demoralized by charms pleasure of the moment.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 image-column">
+                            <div class="image-box">
+                                <figure class="image">
+                                    <img src="image/evolution/history-1.jpg" alt="">
+                                </figure>
+                                <div class="link-box"><a href="history.html"><i class="fa-solid fa-arrow-right-long"></i></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+
         </section>
     </main>
 </asp:Content>
