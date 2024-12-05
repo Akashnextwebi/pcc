@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="product-details.aspx.cs" Inherits="product_details" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="./MasterPage.master" AutoEventWireup="true" CodeFile="product-details.aspx.cs" Inherits="product_details" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <link href="css/shop.css" rel="stylesheet" />
@@ -238,7 +238,7 @@
 
 
                                 <div class="cart_button">
-                                    <a href="shop-cart.html" class="btn-three w-100">
+                                    <a href="#" class="btn-three w-100">
                                         <div class="btn-wrap">
                                             <span class="text-first">Download Broacher</span>
                                             <span class="text-second">Download Broacher</span>
@@ -528,7 +528,7 @@
                                 </div>
                                 <div class="people-content">
                                     <div class="name-deg">
-                                        <h5><a href="people-details.html">Air Product 1</a></h5>
+                                        <h5><a href="#">Air Product 1</a></h5>
                                     </div>
                                     <div class="contact-area">
                                         <div class="contact-number">
@@ -553,7 +553,7 @@
                                 </div>
                                 <div class="people-content">
                                     <div class="name-deg">
-                                        <h5><a href="people-details.html">Air Product 1</a></h5>
+                                        <h5><a href="#">Air Product 1</a></h5>
                                     </div>
                                     <div class="contact-area">
                                         <div class="contact-number">
@@ -578,7 +578,7 @@
                                 </div>
                                 <div class="people-content">
                                     <div class="name-deg">
-                                        <h5><a href="people-details.html">Air Product 1</a></h5>
+                                        <h5><a href="#">Air Product 1</a></h5>
                                     </div>
                                     <div class="contact-area">
                                         <div class="contact-number">
@@ -603,7 +603,7 @@
              </div>
              <div class="people-content">
                  <div class="name-deg">
-                     <h5><a href="people-details.html">Air Product 1</a></h5>
+                     <h5><a href="#">Air Product 1</a></h5>
                  </div>
                  <div class="contact-area">
                      <div class="contact-number">

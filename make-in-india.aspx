@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="make-in-india.aspx.cs" Inherits="make_in_india" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="./MasterPage.master" AutoEventWireup="true" CodeFile="make-in-india.aspx.cs" Inherits="make_in_india" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <style>
@@ -708,7 +708,7 @@
                                     </div>
                                     <div class="people-content">
                                         <div class="name-deg">
-                                            <h5><a href="people-details.html">Air Product 1</a></h5>
+                                            <h5><a href="#">Air Product 1</a></h5>
                                         </div>
                                         <div class="contact-area">
                                             <div class="contact-number">
@@ -733,7 +733,7 @@
                                     </div>
                                     <div class="people-content">
                                         <div class="name-deg">
-                                            <h5><a href="people-details.html">Air Product 1</a></h5>
+                                            <h5><a href="#">Air Product 1</a></h5>
                                         </div>
                                         <div class="contact-area">
                                             <div class="contact-number">
@@ -758,7 +758,7 @@
                                     </div>
                                     <div class="people-content">
                                         <div class="name-deg">
-                                            <h5><a href="people-details.html">Air Product 1</a></h5>
+                                            <h5><a href="#">Air Product 1</a></h5>
                                         </div>
                                         <div class="contact-area">
                                             <div class="contact-number">
@@ -783,7 +783,7 @@
                                     </div>
                                     <div class="people-content">
                                         <div class="name-deg">
-                                            <h5><a href="people-details.html">Air Product 1</a></h5>
+                                            <h5><a href="#">Air Product 1</a></h5>
                                         </div>
                                         <div class="contact-area">
                                             <div class="contact-number">
@@ -810,7 +810,7 @@
                                     </div>
                                     <div class="people-content">
                                         <div class="name-deg">
-                                            <h5><a href="people-details.html">Air Product 1</a></h5>
+                                            <h5><a href="#">Air Product 1</a></h5>
                                         </div>
                                         <div class="contact-area">
                                             <div class="contact-number">
@@ -835,7 +835,7 @@
                                     </div>
                                     <div class="people-content">
                                         <div class="name-deg">
-                                            <h5><a href="people-details.html">Air Product 1</a></h5>
+                                            <h5><a href="#">Air Product 1</a></h5>
                                         </div>
                                         <div class="contact-area">
                                             <div class="contact-number">
@@ -860,7 +860,7 @@
                                     </div>
                                     <div class="people-content">
                                         <div class="name-deg">
-                                            <h5><a href="people-details.html">Air Product 1</a></h5>
+                                            <h5><a href="#">Air Product 1</a></h5>
                                         </div>
                                         <div class="contact-area">
                                             <div class="contact-number">
@@ -885,7 +885,7 @@
                                     </div>
                                     <div class="people-content">
                                         <div class="name-deg">
-                                            <h5><a href="people-details.html">Air Product 1</a></h5>
+                                            <h5><a href="#">Air Product 1</a></h5>
                                         </div>
                                         <div class="contact-area">
                                             <div class="contact-number">
@@ -910,7 +910,7 @@
                                     </div>
                                     <div class="people-content">
                                         <div class="name-deg">
-                                            <h5><a href="people-details.html">Air Product 1</a></h5>
+                                            <h5><a href="#">Air Product 1</a></h5>
                                         </div>
                                         <div class="contact-area">
                                             <div class="contact-number">

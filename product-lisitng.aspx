@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="product-lisitng.aspx.cs" Inherits="product_lisitng" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="./MasterPage.master" AutoEventWireup="true" CodeFile="product-lisitng.aspx.cs" Inherits="product_lisitng" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 
@@ -146,7 +146,7 @@
               </div>
               <div class="people-content">
                   <div class="name-deg">
-                      <h5><a href="people-details.html">Air Product 1</a></h5>
+                      <h5><a href="#">Air Product 1</a></h5>
                   </div>
                   <div class="contact-area">
                       <div class="contact-number">
@@ -171,7 +171,7 @@
               </div>
               <div class="people-content">
                   <div class="name-deg">
-                      <h5><a href="people-details.html">Air Product 1</a></h5>
+                      <h5><a href="#">Air Product 1</a></h5>
                   </div>
                   <div class="contact-area">
                       <div class="contact-number">
@@ -196,7 +196,7 @@
               </div>
               <div class="people-content">
                   <div class="name-deg">
-                      <h5><a href="people-details.html">Air Product 1</a></h5>
+                      <h5><a href="#">Air Product 1</a></h5>
                   </div>
                   <div class="contact-area">
                       <div class="contact-number">
@@ -221,7 +221,7 @@
               </div>
               <div class="people-content">
                   <div class="name-deg">
-                      <h5><a href="people-details.html">Air Product 1</a></h5>
+                      <h5><a href="#">Air Product 1</a></h5>
                   </div>
                   <div class="contact-area">
                       <div class="contact-number">
@@ -248,7 +248,7 @@
               </div>
               <div class="people-content">
                   <div class="name-deg">
-                      <h5><a href="people-details.html">Air Product 1</a></h5>
+                      <h5><a href="#">Air Product 1</a></h5>
                   </div>
                   <div class="contact-area">
                       <div class="contact-number">
@@ -272,7 +272,7 @@
               </div>
               <div class="people-content">
                   <div class="name-deg">
-                      <h5><a href="people-details.html">Air Product 1</a></h5>
+                      <h5><a href="#">Air Product 1</a></h5>
                   </div>
                   <div class="contact-area">
                       <div class="contact-number">
@@ -296,7 +296,7 @@
               </div>
               <div class="people-content">
                   <div class="name-deg">
-                      <h5><a href="people-details.html">Air Product 1</a></h5>
+                      <h5><a href="#">Air Product 1</a></h5>
                   </div>
                   <div class="contact-area">
                       <div class="contact-number">
@@ -320,7 +320,7 @@
               </div>
               <div class="people-content">
                   <div class="name-deg">
-                      <h5><a href="people-details.html">Air Product 1</a></h5>
+                      <h5><a href="#">Air Product 1</a></h5>
                   </div>
                   <div class="contact-area">
                       <div class="contact-number">
@@ -344,7 +344,7 @@
               </div>
               <div class="people-content">
                   <div class="name-deg">
-                      <h5><a href="people-details.html">Air Product 1</a></h5>
+                      <h5><a href="#">Air Product 1</a></h5>
                   </div>
                   <div class="contact-area">
                       <div class="contact-number">

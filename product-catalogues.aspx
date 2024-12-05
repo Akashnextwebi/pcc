@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="product-catalogues.aspx.cs" Inherits="product_catalogues" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="./MasterPage.master" AutoEventWireup="true" CodeFile="product-catalogues.aspx.cs" Inherits="product_catalogues" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <link href="css/breadcrums.css" rel="stylesheet" />
@@ -180,10 +180,10 @@
                                 </div>
                                 <div class="case-content">
                                     <div class="category-and-title">
-                                        <h4><a href="case-study-details.html">Product Catalogues Name</a></h4>
+                                        <h4><a href="case-study-details.aspx">Product Catalogues Name</a></h4>
                                     </div>
                                <div class="details-btn text-center">
-       <a class="primary-btn2 btn-hover w-100 text-center" href="case-study-details.html">Download &nbsp
+       <a class="primary-btn2 btn-hover w-100 text-center" href="case-study-details.aspx">Download &nbsp
                                     <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12">
                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M10.1865 1.06237L0 11.2484L0.751627 12L10.9376 1.81347V8.85645H12V0H3.14355V1.06237H10.1865Z"></path>
                                     </svg>
@@ -202,10 +202,10 @@
                                 </div>
                                 <div class="case-content">
                                     <div class="category-and-title">
-                                        <h4><a href="case-study-details.html">Product Catalogues Name2</a></h4>
+                                        <h4><a href="case-study-details.aspx">Product Catalogues Name2</a></h4>
                                     </div>
                                  <div class="details-btn text-center">
-       <a class="primary-btn2 btn-hover w-100 text-center" href="case-study-details.html">Download&nbsp
+       <a class="primary-btn2 btn-hover w-100 text-center" href="case-study-details.aspx">Download&nbsp
                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12">
                      <path fill-rule="evenodd" clip-rule="evenodd" d="M10.1865 1.06237L0 11.2484L0.751627 12L10.9376 1.81347V8.85645H12V0H3.14355V1.06237H10.1865Z"></path>
                  </svg>
@@ -224,10 +224,10 @@
                                 </div>
                                 <div class="case-content">
                                     <div class="category-and-title">
-                                        <h4><a href="case-study-details.html">Product Catalogues Name3</a></h4>
+                                        <h4><a href="case-study-details.aspx">Product Catalogues Name3</a></h4>
                                     </div>
                                     <div class="details-btn text-center">
-                                        <a class="primary-btn2 btn-hover w-100 text-center" href="case-study-details.html">Download &nbsp
+                                        <a class="primary-btn2 btn-hover w-100 text-center" href="case-study-details.aspx">Download &nbsp
                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12">
                      <path fill-rule="evenodd" clip-rule="evenodd" d="M10.1865 1.06237L0 11.2484L0.751627 12L10.9376 1.81347V8.85645H12V0H3.14355V1.06237H10.1865Z"></path>
                  </svg>
