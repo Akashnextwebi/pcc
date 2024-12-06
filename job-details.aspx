@@ -265,10 +265,10 @@
                         <div class="content">
                             <span class="company-logo">
                                 <img src="image/media_37.png" alt=""></span>
-                            <h4><a href="#" contenteditable="false" style="cursor: pointer;">Product Designer / UI Designer</a></h4>
+                            <h4><a href="#" contenteditable="false" style="cursor: pointer;">Asst. Manager (Communications)</a></h4>
                             <ul class="job-info">
-                                <li><i class="fa-solid fa-briefcase icon "></i>Segment</li>
-                                <li><i class="fa-solid fa-location-dot icon "></i>London, UK</li>
+                                <li><i class="fa-solid fa-briefcase icon "></i>Intermediate</li>
+                                <li><i class="fa-solid fa-location-dot icon "></i>Bangalore, India</li>
                                 <li><i class="fa-regular fa-clock icon "></i>11 hours ago</li>
                             </ul>
                             <ul class="job-other-info">
@@ -289,7 +289,7 @@
                     <div class="content-column col-lg-8 col-md-12 col-sm-12">
                         <div class="job-detail">
                             <h3>Job Description</h3>
-                            <p>As a Product Designer, you will work within a Product Delivery Team fused with UX, engineering, product and data talent. You will help the team design beautiful interfaces that solve business challenges for our clients. We work with a number of Tier 1 banks on building web-based applications for AML, KYC and Sanctions List management workflows. This role is ideal if you are looking to segue your career into the FinTech or Big Data arenas.</p>
+                            <p>As a Asst. Manager (Communications), you will work within a Product Delivery Team fused with UX, engineering, product and data talent. You will help the team design beautiful interfaces that solve business challenges for our clients. We work with a number of Tier 1 banks on building web-based applications for AML, KYC and Sanctions List management workflows. This role is ideal if you are looking to segue your career into the FinTech or Big Data arenas.</p>
                             <h3>Key Responsibilities</h3>
                             <ul class="list-style-three">
                                 <li>Be involved in every step of the product design cycle from discovery to developer handoff and user acceptance testing.</li>

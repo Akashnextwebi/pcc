@@ -147,7 +147,9 @@
                     <div class="banner-content">
                         <ul class="breadcrumb-list">
                             <li><a href="Default.aspx">Home</a></li>
-                            <li>White Paper</li>
+                            <li><a href="Default.aspx">Whitepaper</a></li>
+
+                            <li>By providing comprehensive event details, you can enhance attendees.</li>
                         </ul>
                         <h1>By providing comprehensive event details, you can enhance attendees.
                         </h1>
@@ -174,7 +176,7 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12">
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M10.1865 1.06237L0 11.2484L0.751627 12L10.9376 1.81347V8.85645H12V0H3.14355V1.06237H10.1865Z"></path>
                                 </svg>
-                                P.C Event Gallery
+                                Manish Kumar
                                                             <p class="mb-0"><strong><span>&nbsp| &nbsp</span>Date:</strong>23/12/2024</p>
 
                             </div>

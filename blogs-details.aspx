@@ -80,9 +80,9 @@
                             <li><a href="Default.aspx">Home</a></li>
                             <li><a href="Default.aspx">Blog</a></li>
 
-                            <li>The Blueprint for quality: Engineering excellence in product and service delivery</li>
+                            <li>The Future of Defense Technology</li>
                         </ul>
-                        <h1>The Blueprint for quality: Engineering excellence in product and service delivery</h1>
+                        <h1>The Future of Defense Technology</h1>
 
                     </div>
                 </div>

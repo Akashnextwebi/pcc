@@ -10,7 +10,10 @@
         section.product_view {
             background: #fff;
         }
-
+        .pcc-header .header-mid {
+    padding: 10px 40px;
+    border-bottom: 1px solid #000;
+}
         .product_right .product_price {
             color: #000;
         }
@@ -87,7 +90,7 @@
                     width: 50px;
                     height: 45px;
                     display: flex;
-                    color:#000;
+                    color: #000;
                     align-items: center;
                     justify-content: center;
                     background-color: #e8f1fb;
@@ -153,14 +156,18 @@
             display: flex;
             align-items: center;
             background: #fff;
-        }.wptb-icon-box2 .wptb-item--title {
-    font-size: 20px !important;
-    line-height: 30px !important;
-    margin-bottom: 15px !important;
-}.product_details_tab .tab-content p{
-     font-size:16px !important;
-     line-height:26px !important;
- }
+        }
+
+        .wptb-icon-box2 .wptb-item--title {
+            font-size: 20px !important;
+            line-height: 30px !important;
+            margin-bottom: 15px !important;
+        }
+
+        .product_details_tab .tab-content p {
+            font-size: 16px !important;
+            line-height: 26px !important;
+        }
 
         .people-card2 .people-content .contact-area {
             border-bottom: 1px solid #eee;
@@ -170,6 +177,21 @@
             align-items: center;
             justify-content: space-between;
         }
+         input[type="text"]{
+             background-color:#fff !important;
+             color:#000 !important;
+         }.btn i {
+    margin-left: 10px;
+    font-size: 16px;
+    position: absolute;
+    left: -10px;
+    background: var(--pcc-primary-theme);
+    top: 2px;
+    color: #fff;
+    width: 50px;
+    height: 100%;
+    line-height: 57px;
+}
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
@@ -228,20 +250,30 @@
                     <div class="col-lg-5 ps-lg-0 pe-lg-5">
                         <div class="product_right">
                             <div class="product_info">
-                                <h2 class="product_title">Time Display Units</h2>
+                                <h2 class="product_title">Product Name 1</h2>
                                 <h4 class="new-color">PARK-RTD-02</h4>
 
                                 <div class="product_description">
-                                    PARK RTD-02 unit is a special purpose time code reader used for launch control, with facilities to HOLD and RESTART the Program Clock generating the Countdown Time. It can also be interfaced with a Launch computer for External Hold.
-
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Vivamus auctor nisl nec lectus vehicula, ut suscipit arcu dictum.
+Curabitur fermentum leo id arcu facilisis, nec laoreet eros interdum.
+Suspendisse potenti. Integer id mi ut eros volutpat eleifend.
+Praesent convallis velit quis lacus placerat, vel tincidunt velit viverra.
+Duis efficitur magna sed purus sollicitudin dignissim.
+Aliquam ut sem eget risus dapibus pharetra at non elit.
+Nullam auctor risus ac nibh eleifend, sit amet lacinia erat facilisis.
+Mauris id sapien eget nunc molestie molestie non a eros.
+Etiam ac magna ac purus fermentum venenatis.
+Sed dictum velit vel augue vulputate, ac laoreet ex rhoncus.
+Pellentesque habitant morbi tristique senectus et netus et malesuada.
                                 </div>
 
 
                                 <div class="cart_button">
-                                    <a href="#" class="btn-three w-100">
+                                    <a href="#" class="btn-three w-100" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                         <div class="btn-wrap">
-                                            <span class="text-first">Download Broacher</span>
-                                            <span class="text-second">Download Broacher</span>
+                                            <span class="text-first">Download Brochure</span>
+                                            <span class="text-second">Download <b></b>rochure</span>
                                         </div>
 
                                     </a>
@@ -303,7 +335,7 @@
                                         </div>
 
                                         <!-- Iconbox -->
-                                        <div class="col-sm-4 " >
+                                        <div class="col-sm-4 ">
                                             <div class="wptb-icon-box2 style3">
                                                 <div class="wptb-item--inner">
                                                     <div class="wptb-item--holder">
@@ -333,7 +365,7 @@
                                         </div>
 
                                         <!-- Iconbox -->
-                                        <div class="col-sm-4" >
+                                        <div class="col-sm-4">
                                             <div class="wptb-icon-box2 style3 highlight">
                                                 <div class="wptb-item--inner">
                                                     <div class="wptb-item--holder">
@@ -364,7 +396,7 @@
                                         </div>
 
                                         <!-- Iconbox -->
-                                        <div class="col-sm-6 " >
+                                        <div class="col-sm-6 ">
                                             <div class="wptb-icon-box2 style3">
                                                 <div class="wptb-item--inner">
                                                     <div class="wptb-item--holder">
@@ -406,7 +438,7 @@
                                         </div>
 
                                         <!-- Iconbox -->
-                                        <div class="col-sm-6 " >
+                                        <div class="col-sm-6 ">
                                             <div class="wptb-icon-box2 style3">
                                                 <div class="wptb-item--inner">
                                                     <div class="wptb-item--holder">
@@ -520,110 +552,183 @@
                 </div>
                 <div class="row">
 
-                    <div class="col-lg-3">
-                        <div class="magnetic-wrap">
-                            <div class="people-card2 magnetic-item" style="">
-                                <div class="people-img">
-                                    <img src="image/shop/1.jpg" alt="">
-                                </div>
-                                <div class="people-content">
-                                    <div class="name-deg">
-                                        <h5><a href="#">Air Product 1</a></h5>
-                                    </div>
-                                    <div class="contact-area">
-                                        <div class="contact-number">
-                                            <div class="icon">
-                                                View Product
-                                            </div>
+                      <div class="col-lg-3">
+      <div class="magnetic-wrap">
+          <div class="people-card2 magnetic-item" style="">
+              <div class="people-img">
+                  <img src="image/shop/1.jpg" alt="">
+              </div>
+              <div class="people-content">
+                  <div class="name-deg">
+                      <h5 class="d-flex justify-content-between"><a href="#">Air Product 1</a><span class="text-danger fw-bold">PARK-RTD-02</span></h5>
 
-                                        </div>
-                                        <ul class="social-icon">
-                                            <li><a href="product-details.aspx" class="text-dark"><i class="fa-solid fa-arrow-right-long"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="magnetic-wrap">
-                            <div class="people-card2 magnetic-item" style="">
-                                <div class="people-img">
-                                    <img src="image/shop/1.jpg" alt="">
-                                </div>
-                                <div class="people-content">
-                                    <div class="name-deg">
-                                        <h5><a href="#">Air Product 1</a></h5>
-                                    </div>
-                                    <div class="contact-area">
-                                        <div class="contact-number">
-                                            <div class="icon">
-                                                View Product
-                                            </div>
 
-                                        </div>
-                                        <ul class="social-icon">
-                                            <li><a href="product-details.aspx" class="text-dark"><i class="fa-solid fa-arrow-right-long"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="magnetic-wrap">
-                            <div class="people-card2 magnetic-item" style="">
-                                <div class="people-img">
-                                    <img src="image/shop/1.jpg" alt="">
-                                </div>
-                                <div class="people-content">
-                                    <div class="name-deg">
-                                        <h5><a href="#">Air Product 1</a></h5>
-                                    </div>
-                                    <div class="contact-area">
-                                        <div class="contact-number">
-                                            <div class="icon">
-                                                View Product
-                                            </div>
 
-                                        </div>
-                                        <ul class="social-icon">
-                                            <li><a href="product-details.aspx" class="text-dark"><i class="fa-solid fa-arrow-right-long"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                     <div class="col-lg-3">
-     <div class="magnetic-wrap">
-         <div class="people-card2 magnetic-item" style="">
-             <div class="people-img">
-                 <img src="image/shop/1.jpg" alt="">
-             </div>
-             <div class="people-content">
-                 <div class="name-deg">
-                     <h5><a href="#">Air Product 1</a></h5>
-                 </div>
-                 <div class="contact-area">
-                     <div class="contact-number">
-                         <div class="icon">
-                             View Product
-                         </div>
 
-                     </div>
-                     <ul class="social-icon">
-                         <li><a href="product-details.aspx" class="text-dark"><i class="fa-solid fa-arrow-right-long"></i></a></li>
-                     </ul>
-                 </div>
-             </div>
-         </div>
-     </div>
- </div>
+
+                  </div>
+                  <div class="contact-area">
+                      <div class="contact-number">
+                          <div class="icon">
+                              View Product
+                          </div>
+
+                      </div>
+                      <ul class="social-icon">
+                          <li><a href="product-details.aspx"><i class="fa-solid fa-arrow-right-long"></i></a></li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>  <div class="col-lg-3">
+      <div class="magnetic-wrap">
+          <div class="people-card2 magnetic-item" style="">
+              <div class="people-img">
+                  <img src="image/shop/1.jpg" alt="">
+              </div>
+              <div class="people-content">
+                  <div class="name-deg">
+                      <h5 class="d-flex justify-content-between"><a href="#">Air Product 1</a><span class="text-danger fw-bold">PARK-RTD-02</span></h5>
+
+
+
+
+
+                  </div>
+                  <div class="contact-area">
+                      <div class="contact-number">
+                          <div class="icon">
+                              View Product
+                          </div>
+
+                      </div>
+                      <ul class="social-icon">
+                          <li><a href="product-details.aspx"><i class="fa-solid fa-arrow-right-long"></i></a></li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>  <div class="col-lg-3">
+      <div class="magnetic-wrap">
+          <div class="people-card2 magnetic-item" style="">
+              <div class="people-img">
+                  <img src="image/shop/1.jpg" alt="">
+              </div>
+              <div class="people-content">
+                  <div class="name-deg">
+                      <h5 class="d-flex justify-content-between"><a href="#">Air Product 1</a><span class="text-danger fw-bold">PARK-RTD-02</span></h5>
+
+
+
+
+
+                  </div>
+                  <div class="contact-area">
+                      <div class="contact-number">
+                          <div class="icon">
+                              View Product
+                          </div>
+
+                      </div>
+                      <ul class="social-icon">
+                          <li><a href="product-details.aspx"><i class="fa-solid fa-arrow-right-long"></i></a></li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>  <div class="col-lg-3">
+      <div class="magnetic-wrap">
+          <div class="people-card2 magnetic-item" style="">
+              <div class="people-img">
+                  <img src="image/shop/1.jpg" alt="">
+              </div>
+              <div class="people-content">
+                  <div class="name-deg">
+                      <h5 class="d-flex justify-content-between"><a href="#">Air Product 1</a><span class="text-danger fw-bold">PARK-RTD-02</span></h5>
+
+
+
+
+
+                  </div>
+                  <div class="contact-area">
+                      <div class="contact-number">
+                          <div class="icon">
+                              View Product
+                          </div>
+
+                      </div>
+                      <ul class="social-icon">
+                          <li><a href="product-details.aspx"><i class="fa-solid fa-arrow-right-long"></i></a></li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
                 </div>
             </div>
 
         </section>
+
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg	">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Download PDF
+                        </h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body bg-light">
+                        <div class="row">
+                            <div class="col-lg-12 ">
+
+
+                                <div class="wptb-form" action="contact.php" method="post">
+                                    <div class="wptb-form--inner">
+                                        <div class="row">
+                                            <div class="col-lg-12 col-md-12 mb-4">
+                                                <div class="form-group">
+                                                    <input type="text" name="name" class="form-control" placeholder="Enter Your Name" required="">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12 col-md-12 mb-4">
+                                                <div class="form-group">
+                                                    <input type="text" name="password" class="form-control" placeholder="Mobile Number">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12 col-md-12 mb-4">
+                                                <div class="form-group">
+                                                    <input type="text" name="password" class="form-control" placeholder="Corporate E-mail ID
+
+">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12 col-lg-12">
+
+                                                <div class="slider-btn ">
+                                                    <a
+                                                        href="#"
+                                                        class="btn ss-btn mr-15"
+                                                        data-animation="fadeInLeft"
+                                                        data-delay=".4s"><i class="fal fa-long-arrow-right"></i>Download</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
     </main>
 </asp:Content>
 

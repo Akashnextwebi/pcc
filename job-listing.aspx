@@ -94,21 +94,21 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <main class="wrapper">
 
-         <div class="breadcrumb-section" style="background-image: linear-gradient(270deg, rgba(0, 0, 0, .55), rgba(0, 0, 0, 0.55) 101.02%), url(image/blog/braadcrumb-bg3.jpg);">
-      <div class="container-fluid one pl--95">
-          <div class="row">
-              <div class="col-lg-12">
-                  <div class="banner-content">
-                      <h1>Career</h1>
-                      <ul class="breadcrumb-list">
-                          <li><a href="Default.aspx">Home</a></li>
-                          <li>Career</li>
-                      </ul>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
+        <div class="breadcrumb-section" style="background-image: linear-gradient(270deg, rgba(0, 0, 0, .55), rgba(0, 0, 0, 0.55) 101.02%), url(image/blog/braadcrumb-bg3.jpg);">
+            <div class="container-fluid one pl--95">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="banner-content">
+                            <h1>Career</h1>
+                            <ul class="breadcrumb-list">
+                                <li><a href="Default.aspx">Home</a></li>
+                                <li>Career</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <section class="section-padding">
             <div class="container">
                 <div class="row justify-content-center">
@@ -162,14 +162,14 @@
                             <div class="main-wrapper h-100 w-100">
                                 <a href="job-details-v2" class="save-btn text-center rounded-circle tran3s" title="Save Job"><i class="bi bi-bookmark-dash"></i></a>
                                 <div class="list-header d-flex align-items-center">
-                                    <a href="/job-details-v2" class="logo">
+                                    <a href="job-details.aspx" class="logo">
                                         <img src="/image/media_37.png" data-src="/image/media_37.png" alt="" class="lazy-img m-auto"></a>
                                     <div class="info-wrapper">
-                                        <a href="/job-details-v2" class="title fw-500 tran3s">Developer &amp; expert in java c++</a>
+                                        <a href="job-details.aspx" class="title fw-500 tran3s">Asst. Manager (Communications)</a>
                                         <ul class="style-none d-flex flex-wrap info-data">
-                                            <li>$30-$50/hour</li>
+                                            <li>₹5 LPA</li>
                                             <li>Intermediate</li>
-                                            <li>Spain, Barcelona</li>
+                                            <li>Bangalore India</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -179,154 +179,101 @@
                                 </p>
                                 <div class="d-sm-flex align-items-center justify-content-between mt-auto">
                                     <div class="d-flex align-items-center">
-                                        <a href="/job-details-v2" class="job-duration fw-500">Fulltime</a>
+                                        <a href="job-details.aspx" class="job-duration fw-500">Fulltime</a>
                                     </div>
-                                    <a href="#" class="btn2 " data-animation="fadeInLeft" data-delay=".4s">Apply Now <i class="fal fa-long-arrow-right"></i></a>
+                                    <a href="job-details.aspx" class="btn2 " data-animation="fadeInLeft" data-delay=".4s">Apply Now <i class="fal fa-long-arrow-right"></i></a>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-6">
-    <div class="job-list-three d-flex h-100 w-100">
-        <div class="main-wrapper h-100 w-100">
-            <a href="job-details-v2" class="save-btn text-center rounded-circle tran3s" title="Save Job"><i class="bi bi-bookmark-dash"></i></a>
-            <div class="list-header d-flex align-items-center">
-                <a href="/job-details-v2" class="logo">
-                    <img src="/image/media_37.png" data-src="/image/media_37.png" alt="" class="lazy-img m-auto"></a>
-                <div class="info-wrapper">
-                    <a href="/job-details-v2" class="title fw-500 tran3s">Developer &amp; expert in java c++</a>
-                    <ul class="style-none d-flex flex-wrap info-data">
-                        <li>$30-$50/hour</li>
-                        <li>Intermediate</li>
-                        <li>Spain, Barcelona</li>
-                    </ul>
-                </div>
-            </div>
-            <p>
-                We would like to design a page on Figma to promote Workroom as All-in-one
+                        <div class="job-list-three d-flex h-100 w-100">
+                            <div class="main-wrapper h-100 w-100">
+                                <a href="job-details-v2" class="save-btn text-center rounded-circle tran3s" title="Save Job"><i class="bi bi-bookmark-dash"></i></a>
+                                <div class="list-header d-flex align-items-center">
+                                    <a href="job-details.aspx" class="logo">
+                                        <img src="/image/media_37.png" data-src="/image/media_37.png" alt="" class="lazy-img m-auto"></a>
+                                    <div class="info-wrapper">
+                                        <a href="job-details.aspx" class="title fw-500 tran3s">Asst. Manager (Communications)</a>
+                                        <ul class="style-none d-flex flex-wrap info-data">
+                                            <li>₹5 LPA</li>
+                                            <li>Intermediate</li>
+                                            <li>Bangalore India</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <p>
+                                    We would like to design a page on Figma to promote Workroom as All-in-one
 											solutions for Marketing, Sales, Support teams...
-            </p>
-            <div class="d-sm-flex align-items-center justify-content-between mt-auto">
-                <div class="d-flex align-items-center">
-                    <a href="/job-details-v2" class="job-duration fw-500">Fulltime</a>
-                </div>
-                <a href="#" class="btn2 " data-animation="fadeInLeft" data-delay=".4s">Apply Now <i class="fal fa-long-arrow-right"></i></a>
-            </div>
-        </div>
-    </div>
-</div><div class="col-lg-6">
-    <div class="job-list-three d-flex h-100 w-100">
-        <div class="main-wrapper h-100 w-100">
-            <a href="job-details-v2" class="save-btn text-center rounded-circle tran3s" title="Save Job"><i class="bi bi-bookmark-dash"></i></a>
-            <div class="list-header d-flex align-items-center">
-                <a href="/job-details-v2" class="logo">
-                    <img src="/image/media_37.png" data-src="/image/media_37.png" alt="" class="lazy-img m-auto"></a>
-                <div class="info-wrapper">
-                    <a href="/job-details-v2" class="title fw-500 tran3s">Developer &amp; expert in java c++</a>
-                    <ul class="style-none d-flex flex-wrap info-data">
-                        <li>$30-$50/hour</li>
-                        <li>Intermediate</li>
-                        <li>Spain, Barcelona</li>
-                    </ul>
-                </div>
-            </div>
-            <p>
-                We would like to design a page on Figma to promote Workroom as All-in-one
+                                </p>
+                                <div class="d-sm-flex align-items-center justify-content-between mt-auto">
+                                    <div class="d-flex align-items-center">
+                                        <a href="job-details.aspx" class="job-duration fw-500">Fulltime</a>
+                                    </div>
+                                    <a href="job-details.aspx" class="btn2 " data-animation="fadeInLeft" data-delay=".4s">Apply Now <i class="fal fa-long-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="job-list-three d-flex h-100 w-100">
+                            <div class="main-wrapper h-100 w-100">
+                                <a href="job-details-v2" class="save-btn text-center rounded-circle tran3s" title="Save Job"><i class="bi bi-bookmark-dash"></i></a>
+                                <div class="list-header d-flex align-items-center">
+                                    <a href="job-details.aspx" class="logo">
+                                        <img src="/image/media_37.png" data-src="/image/media_37.png" alt="" class="lazy-img m-auto"></a>
+                                    <div class="info-wrapper">
+                                        <a href="job-details.aspx" class="title fw-500 tran3s">Asst. Manager (Communications)</a>
+                                        <ul class="style-none d-flex flex-wrap info-data">
+                                            <li>₹5 LPA</li>
+                                            <li>Intermediate</li>
+                                            <li>Bangalore India</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <p>
+                                    We would like to design a page on Figma to promote Workroom as All-in-one
 											solutions for Marketing, Sales, Support teams...
-            </p>
-            <div class="d-sm-flex align-items-center justify-content-between mt-auto">
-                <div class="d-flex align-items-center">
-                    <a href="/job-details-v2" class="job-duration fw-500">Fulltime</a>
-                </div>
-                <a href="#" class="btn2 " data-animation="fadeInLeft" data-delay=".4s">Apply Now <i class="fal fa-long-arrow-right"></i></a>
-            </div>
-        </div>
-    </div>
-</div><div class="col-lg-6">
-    <div class="job-list-three d-flex h-100 w-100">
-        <div class="main-wrapper h-100 w-100">
-            <a href="job-details-v2" class="save-btn text-center rounded-circle tran3s" title="Save Job"><i class="bi bi-bookmark-dash"></i></a>
-            <div class="list-header d-flex align-items-center">
-                <a href="/job-details-v2" class="logo">
-                    <img src="/image/media_37.png" data-src="/image/media_37.png" alt="" class="lazy-img m-auto"></a>
-                <div class="info-wrapper">
-                    <a href="/job-details-v2" class="title fw-500 tran3s">Developer &amp; expert in java c++</a>
-                    <ul class="style-none d-flex flex-wrap info-data">
-                        <li>$30-$50/hour</li>
-                        <li>Intermediate</li>
-                        <li>Spain, Barcelona</li>
-                    </ul>
-                </div>
-            </div>
-            <p>
-                We would like to design a page on Figma to promote Workroom as All-in-one
+                                </p>
+                                <div class="d-sm-flex align-items-center justify-content-between mt-auto">
+                                    <div class="d-flex align-items-center">
+                                        <a href="job-details.aspx" class="job-duration fw-500">Fulltime</a>
+                                    </div>
+                                    <a href="job-details.aspx" class="btn2 " data-animation="fadeInLeft" data-delay=".4s">Apply Now <i class="fal fa-long-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="job-list-three d-flex h-100 w-100">
+                            <div class="main-wrapper h-100 w-100">
+                                <a href="job-details-v2" class="save-btn text-center rounded-circle tran3s" title="Save Job"><i class="bi bi-bookmark-dash"></i></a>
+                                <div class="list-header d-flex align-items-center">
+                                    <a href="job-details.aspx" class="logo">
+                                        <img src="/image/media_37.png" data-src="/image/media_37.png" alt="" class="lazy-img m-auto"></a>
+                                    <div class="info-wrapper">
+                                        <a href="job-details.aspx" class="title fw-500 tran3s">Asst. Manager (Communications)</a>
+                                        <ul class="style-none d-flex flex-wrap info-data">
+                                            <li>₹5 LPA</li>
+                                            <li>Intermediate</li>
+                                            <li>Bangalore India</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <p>
+                                    We would like to design a page on Figma to promote Workroom as All-in-one
 											solutions for Marketing, Sales, Support teams...
-            </p>
-            <div class="d-sm-flex align-items-center justify-content-between mt-auto">
-                <div class="d-flex align-items-center">
-                    <a href="/job-details-v2" class="job-duration fw-500">Fulltime</a>
-                </div>
-                <a href="#" class="btn2 " data-animation="fadeInLeft" data-delay=".4s">Apply Now <i class="fal fa-long-arrow-right"></i></a>
-            </div>
-        </div>
-    </div>
-</div><div class="col-lg-6">
-    <div class="job-list-three d-flex h-100 w-100">
-        <div class="main-wrapper h-100 w-100">
-            <a href="job-details-v2" class="save-btn text-center rounded-circle tran3s" title="Save Job"><i class="bi bi-bookmark-dash"></i></a>
-            <div class="list-header d-flex align-items-center">
-                <a href="/job-details-v2" class="logo">
-                    <img src="/image/media_37.png" data-src="/image/media_37.png" alt="" class="lazy-img m-auto"></a>
-                <div class="info-wrapper">
-                    <a href="/job-details-v2" class="title fw-500 tran3s">Developer &amp; expert in java c++</a>
-                    <ul class="style-none d-flex flex-wrap info-data">
-                        <li>$30-$50/hour</li>
-                        <li>Intermediate</li>
-                        <li>Spain, Barcelona</li>
-                    </ul>
-                </div>
-            </div>
-            <p>
-                We would like to design a page on Figma to promote Workroom as All-in-one
-											solutions for Marketing, Sales, Support teams...
-            </p>
-            <div class="d-sm-flex align-items-center justify-content-between mt-auto">
-                <div class="d-flex align-items-center">
-                    <a href="/job-details-v2" class="job-duration fw-500">Fulltime</a>
-                </div>
-                <a href="#" class="btn2 " data-animation="fadeInLeft" data-delay=".4s">Apply Now <i class="fal fa-long-arrow-right"></i></a>
-            </div>
-        </div>
-    </div>
-</div><div class="col-lg-6">
-    <div class="job-list-three d-flex h-100 w-100">
-        <div class="main-wrapper h-100 w-100">
-            <a href="job-details-v2" class="save-btn text-center rounded-circle tran3s" title="Save Job"><i class="bi bi-bookmark-dash"></i></a>
-            <div class="list-header d-flex align-items-center">
-                <a href="/job-details-v2" class="logo">
-                    <img src="/image/media_37.png" data-src="/image/media_37.png" alt="" class="lazy-img m-auto"></a>
-                <div class="info-wrapper">
-                    <a href="/job-details-v2" class="title fw-500 tran3s">Developer &amp; expert in java c++</a>
-                    <ul class="style-none d-flex flex-wrap info-data">
-                        <li>$30-$50/hour</li>
-                        <li>Intermediate</li>
-                        <li>Spain, Barcelona</li>
-                    </ul>
-                </div>
-            </div>
-            <p>
-                We would like to design a page on Figma to promote Workroom as All-in-one
-											solutions for Marketing, Sales, Support teams...
-            </p>
-            <div class="d-sm-flex align-items-center justify-content-between mt-auto">
-                <div class="d-flex align-items-center">
-                    <a href="/job-details-v2" class="job-duration fw-500">Fulltime</a>
-                </div>
-                <a href="#" class="btn2 " data-animation="fadeInLeft" data-delay=".4s">Apply Now <i class="fal fa-long-arrow-right"></i></a>
-            </div>
-        </div>
-    </div>
-</div>
+                                </p>
+                                <div class="d-sm-flex align-items-center justify-content-between mt-auto">
+                                    <div class="d-flex align-items-center">
+                                        <a href="job-details.aspx" class="job-duration fw-500">Fulltime</a>
+                                    </div>
+                                    <a href="job-details.aspx" class="btn2 " data-animation="fadeInLeft" data-delay=".4s">Apply Now <i class="fal fa-long-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   
                 </div>
             </div>
         </section>
