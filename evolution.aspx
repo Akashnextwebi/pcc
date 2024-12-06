@@ -179,7 +179,7 @@
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-12 content-column">
                             <div class="content-box">
-                                <h2>2010</h2>
+                                <h2>2015</h2>
                                 <div class="text">
                                     <h3>Company was Founded</h3>
                                     <p>Indignation and dislike men who are so demoralized by charms pleasure of the moment,trouble that are bound to ensue  obligations of business.</p>
@@ -192,7 +192,7 @@
                     <div class="row clearfix">
                         <div class="col-lg-6 col-md-6 col-sm-12 content-column">
                             <div class="content-box">
-                                <h2>2014</h2>
+                                <h2>2018</h2>
                                 <div class="text">
                                     <h3>500 Projects Milestone</h3>
                                     <p>Indignation and dislike men who are so demoralized by charms pleasure of the moment.</p>
@@ -221,7 +221,7 @@
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-12 content-column">
                             <div class="content-box">
-                                <h2>2019</h2>
+                                <h2>2022</h2>
                                 <div class="text">
                                     <h3>Introduce New Technology</h3>
                                     <p>Indignation and dislike men who are so demoralized by charms pleasure of the moment,trouble that are bound to ensue  obligations of business.</p>
@@ -234,7 +234,7 @@
                     <div class="row clearfix">
                         <div class="col-lg-6 col-md-6 col-sm-12 content-column">
                             <div class="content-box">
-                                <h2>2022</h2>
+                                <h2>2024</h2>
                                 <div class="text">
                                     <h3>Best Company Award</h3>
                                     <p>Indignation and dislike men who are so demoralized by charms pleasure of the moment.</p>

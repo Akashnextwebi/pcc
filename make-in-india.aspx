@@ -684,7 +684,6 @@
             <div class="row g-lg-4 gy-5">
                 <div class="col-lg-5 pl--95 pr--95">
                     <div class="section-title1 two">
-                        <span>Our Products</span>
                         <h2>Products Designed and Manufactured in India</h2>
                        <div class="slider-btn mt-30 mb-105">
    <a

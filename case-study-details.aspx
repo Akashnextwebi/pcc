@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="./MasterPage.master" AutoEventWireup="true" CodeFile="case-study-details.aspx.cs" Inherits="case_study_details" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
-    <style>
+    <link href="css/breadcrums.css" rel="stylesheet" />
         <style >
         .breadcrumb-section {
             background-size: cover;
@@ -82,7 +82,7 @@
         }
 
         .pt-130 {
-            padding-top: 130px;
+            padding-top: 80px;
         }
 
         .container-fluid.one {
@@ -411,13 +411,13 @@
                                                         </tr>
                                                         <tr>
                                                             <td>Date:</td>
-                                                            <td><span>02/22/2023</span></td>
+                                                            <td><span>02/22/2024</span></td>
                                                         </tr>
                                                     </tbody>
                                                 </table>
                                                 <ul class="download-btns">
                                                     <li>
-                                                        <a href="assets/case-study.pdf" download="#">
+                                                        <a href="file/dummy32.pdf" download="#">
                                                             <img src="assets/img/inner-pages/Vector/pdf-icon.svg" alt="">
                                                             Download Pdf
 </a>
