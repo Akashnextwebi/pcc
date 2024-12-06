@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="about-us.aspx.cs" Inherits="about_us" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="./MasterPage.master" AutoEventWireup="true" CodeFile="about-us.aspx.cs" Inherits="about_us" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
         <link href="css/about.css" rel="stylesheet" />
@@ -13,7 +13,7 @@
                   <div class="banner-content">
                       <h1>About Us</h1>
                       <ul class="breadcrumb-list">
-                          <li><a href="index.html">Home</a></li>
+                          <li><a href="Default.aspx">Home</a></li>
                           <li>About Us</li>
                       </ul>
                   </div>

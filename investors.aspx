@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="investors.aspx.cs" Inherits="investors" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="./MasterPage.master" AutoEventWireup="true" CodeFile="investors.aspx.cs" Inherits="investors" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <link href="css/about.css" rel="stylesheet" />
@@ -115,7 +115,7 @@
                     <div class="banner-content">
                         <h1>Investor</h1>
                         <ul class="breadcrumb-list">
-                            <li><a href="index.html">Home</a></li>
+                            <li><a href="Default.aspx">Home</a></li>
                             <li>Investor</li>
                         </ul>
                     </div>
@@ -128,15 +128,14 @@
             <div class="container">
                 <div class="row">
                     <div class="col-xl-3 col-lg-4 col-md-6">
-                        <a href="annual-report.html" contenteditable="false" style="cursor: pointer;">
+                        <a href="investor-details.aspx" contenteditable="false" style="cursor: pointer;">
                             <div class="bd-callout bd-callout-info">
                                 Annual report
-                           
                             </div>
                         </a>
                     </div>
                     <div class="col-xl-3 col-lg-4 col-md-6">
-                        <a href="quartarly-results.html" contenteditable="false" style="cursor: pointer;">
+                        <a href="investor-details.aspx" contenteditable="false" style="cursor: pointer;">
                             <div class="bd-callout bd-callout-info">
                                 QUARTERLY RESULTS
                            
@@ -145,7 +144,7 @@
                     </div>
 
                     <div class="col-xl-3 col-lg-4 col-md-6">
-                        <a href="investor-comtact.html" contenteditable="false" style="cursor: pointer;">
+                        <a href="investor-details.aspx" contenteditable="false" style="cursor: pointer;">
                             <div class="bd-callout bd-callout-info">
                                 INVESTOR CONTACT
                            

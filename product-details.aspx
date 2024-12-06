@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="product-details.aspx.cs" Inherits="product_details" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="./MasterPage.master" AutoEventWireup="true" CodeFile="product-details.aspx.cs" Inherits="product_details" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <link href="css/shop.css" rel="stylesheet" />
@@ -50,26 +50,133 @@
                 opacity: 1;
                 transition: all 0.5s ease-in-out;
             }
+
+        .btn-three:hover {
+            border: 1px solid #d70006;
+        }
+
+        .people-card2 .people-content .name-deg {
+            border: 1px solid #eee;
+            padding: 22px 20px;
+        }
+
+            .people-card2 .people-content .name-deg h5 {
+                margin-bottom: 0;
+            }
+
+            .people-card2 .people-content .name-deg span {
+                color: #000;
+                font-size: 14px;
+                font-weight: 500;
+            }
+
+        .people-card2 .people-content .contact-area {
+            border-bottom: 1px solid #eee;
+            border-right: 1px solid #eee;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+            .people-card2 .people-content .contact-area .contact-number {
+                display: flex;
+                align-items: center;
+            }
+
+                .people-card2 .people-content .contact-area .contact-number .icon {
+                    width: 50px;
+                    height: 45px;
+                    display: flex;
+                    color:#000;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: #e8f1fb;
+                    transition: 0.35s;
+                }
+
+                .people-card2 .people-content .contact-area .contact-number .content {
+                    line-height: 1;
+                    padding-left: 15px;
+                    padding-right: 15px;
+                }
+
+        .people-card2 .people-content .contact-area {
+            border-bottom: 1px solid #eee;
+            border-right: 1px solid #eee;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+            .people-card2 .people-content .contact-area .social-icon {
+                display: flex;
+                align-items: center;
+            }
+
+                .people-card2 .people-content .contact-area .social-icon li {
+                    line-height: 1;
+                    border-left: 1px solid #eee;
+                }
+
+            .people-card2 .people-content .contact-area .contact-number .icon {
+                width: max-content;
+                height: 45px;
+                padding-right: 24px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #e8f1fb;
+                transition: 0.35s;
+                padding-left: 20px;
+            }
+
+            .people-card2 .people-content .contact-area .social-icon li {
+                line-height: 1;
+                border-left: 1px solid #eee;
+            }
+
+                .people-card2 .people-content .contact-area .social-icon li a {
+                    height: 45px;
+                    width: 45px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    transition: 0.35s;
+                }
+
+        .contact-area li {
+            display: inline-block;
+            margin: 0px 0px 0px 0 !important;
+        }
+
+        .people-card2 .people-content .contact-area .social-icon {
+            display: flex;
+            align-items: center;
+            background: #fff;
+        }.wptb-icon-box2 .wptb-item--title {
+    font-size: 20px !important;
+    line-height: 30px !important;
+    margin-bottom: 15px !important;
+}.product_details_tab .tab-content p{
+     font-size:16px !important;
+     line-height:26px !important;
+ }
+
+        .people-card2 .people-content .contact-area {
+            border-bottom: 1px solid #eee;
+            border-right: 1px solid #eee;
+            display: flex;
+            background: #e8f1fb;
+            align-items: center;
+            justify-content: space-between;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <main class="wrapper">
-        <div class="wptb-page-heading" style="background-image: url('assets/img/background/page-header-bg.jpg');">
-            <div class="container">
-                <div class="wptb-item--inner">
-                    <h2 class="wptb-item--title ">Oil Filters</h2>
-                    <div class="wptb-breadcrumb-wrap">
-                        <ul class="wptb-breadcrumb">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="shop.html">Shop</a></li>
-                            <li><span>Oil Filters</span></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <section class="product_view section-padding">
+
+        <section class="product_view section-padding mt-100">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-7 pe-lg-5">
@@ -131,7 +238,7 @@
 
 
                                 <div class="cart_button">
-                                    <a href="shop-cart.html" class="btn-three w-100">
+                                    <a href="#" class="btn-three w-100">
                                         <div class="btn-wrap">
                                             <span class="text-first">Download Broacher</span>
                                             <span class="text-second">Download Broacher</span>
@@ -170,7 +277,7 @@
 
 
                                         <!-- Iconbox -->
-                                        <div class="col-sm-6 " style="visibility: visible; animation-name: fadeInLeft;">
+                                        <div class="col-sm-4 ">
                                             <div class="wptb-icon-box2 style3">
                                                 <div class="wptb-item--inner">
                                                     <div class="wptb-item--holder">
@@ -196,7 +303,7 @@
                                         </div>
 
                                         <!-- Iconbox -->
-                                        <div class="col-sm-6 " style="visibility: visible; animation-name: fadeInLeft;">
+                                        <div class="col-sm-4 " >
                                             <div class="wptb-icon-box2 style3">
                                                 <div class="wptb-item--inner">
                                                     <div class="wptb-item--holder">
@@ -226,7 +333,7 @@
                                         </div>
 
                                         <!-- Iconbox -->
-                                        <div class="col-sm-6" style="visibility: visible; animation-name: fadeInLeft;">
+                                        <div class="col-sm-4" >
                                             <div class="wptb-icon-box2 style3 highlight">
                                                 <div class="wptb-item--inner">
                                                     <div class="wptb-item--holder">
@@ -257,7 +364,7 @@
                                         </div>
 
                                         <!-- Iconbox -->
-                                        <div class="col-sm-6 " style="visibility: hidden; animation-name: none;">
+                                        <div class="col-sm-6 " >
                                             <div class="wptb-icon-box2 style3">
                                                 <div class="wptb-item--inner">
                                                     <div class="wptb-item--holder">
@@ -299,7 +406,7 @@
                                         </div>
 
                                         <!-- Iconbox -->
-                                        <div class="col-sm-6 " style="visibility: hidden; animation-name: none;">
+                                        <div class="col-sm-6 " >
                                             <div class="wptb-icon-box2 style3">
                                                 <div class="wptb-item--inner">
                                                     <div class="wptb-item--holder">
@@ -389,16 +496,134 @@
 
             </div>
         </div>
-        <%--        <section class="section-padding">
+        <section class="section-padding">
             <div class="container">
+                <div class="text-center">
 
+
+                    <h2 class="mb-30 text-white">Full Datasheet: PCAMi-1000
+                    </h2>
+                </div>
                 <div class="row">
                     <div class="col-lg-12">
                         <iframe src="https://app.box.com/s/yg1yf6pi43vcc5qz7xfeyhuq7ffrqx0c?is_embed_widget=true" width="100%" height="500"></iframe>
                     </div>
                 </div>
             </div>
-        </section>--%>
+        </section>
+
+        <section class="section-padding bg-light">
+            <div class="container">
+                <div class="">
+                    <h2 class="mb-30">Related Products
+                    </h2>
+                </div>
+                <div class="row">
+
+                    <div class="col-lg-3">
+                        <div class="magnetic-wrap">
+                            <div class="people-card2 magnetic-item" style="">
+                                <div class="people-img">
+                                    <img src="image/shop/1.jpg" alt="">
+                                </div>
+                                <div class="people-content">
+                                    <div class="name-deg">
+                                        <h5><a href="#">Air Product 1</a></h5>
+                                    </div>
+                                    <div class="contact-area">
+                                        <div class="contact-number">
+                                            <div class="icon">
+                                                View Product
+                                            </div>
+
+                                        </div>
+                                        <ul class="social-icon">
+                                            <li><a href="product-details.aspx" class="text-dark"><i class="fa-solid fa-arrow-right-long"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="magnetic-wrap">
+                            <div class="people-card2 magnetic-item" style="">
+                                <div class="people-img">
+                                    <img src="image/shop/1.jpg" alt="">
+                                </div>
+                                <div class="people-content">
+                                    <div class="name-deg">
+                                        <h5><a href="#">Air Product 1</a></h5>
+                                    </div>
+                                    <div class="contact-area">
+                                        <div class="contact-number">
+                                            <div class="icon">
+                                                View Product
+                                            </div>
+
+                                        </div>
+                                        <ul class="social-icon">
+                                            <li><a href="product-details.aspx" class="text-dark"><i class="fa-solid fa-arrow-right-long"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="magnetic-wrap">
+                            <div class="people-card2 magnetic-item" style="">
+                                <div class="people-img">
+                                    <img src="image/shop/1.jpg" alt="">
+                                </div>
+                                <div class="people-content">
+                                    <div class="name-deg">
+                                        <h5><a href="#">Air Product 1</a></h5>
+                                    </div>
+                                    <div class="contact-area">
+                                        <div class="contact-number">
+                                            <div class="icon">
+                                                View Product
+                                            </div>
+
+                                        </div>
+                                        <ul class="social-icon">
+                                            <li><a href="product-details.aspx" class="text-dark"><i class="fa-solid fa-arrow-right-long"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="col-lg-3">
+     <div class="magnetic-wrap">
+         <div class="people-card2 magnetic-item" style="">
+             <div class="people-img">
+                 <img src="image/shop/1.jpg" alt="">
+             </div>
+             <div class="people-content">
+                 <div class="name-deg">
+                     <h5><a href="#">Air Product 1</a></h5>
+                 </div>
+                 <div class="contact-area">
+                     <div class="contact-number">
+                         <div class="icon">
+                             View Product
+                         </div>
+
+                     </div>
+                     <ul class="social-icon">
+                         <li><a href="product-details.aspx" class="text-dark"><i class="fa-solid fa-arrow-right-long"></i></a></li>
+                     </ul>
+                 </div>
+             </div>
+         </div>
+     </div>
+ </div>
+                </div>
+            </div>
+
+        </section>
     </main>
 </asp:Content>
 

@@ -1,7 +1,8 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="advanced-data-solutions.aspx.cs" Inherits="advanced_data_solutions" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="./MasterPage.master" AutoEventWireup="true" CodeFile="advanced-data-solutions.aspx.cs" Inherits="advanced_data_solutions" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <link href="css/about.css" rel="stylesheet" />
+    <link href="css/breadcrums.css" rel="stylesheet" />
     <style>
         .service-card p {
             font-size: 16px !important;
@@ -132,155 +133,218 @@
             font-size: 24px;
             font-weight: 500;
         }
+
+        .eg-card3.three {
+            position: relative;
+            padding: 0;
+            height: 100%;
+            transition: 0.5s;
+        }
+
+            .eg-card3.three .card-img {
+                height: 100%;
+            }
+
+            .eg-card3.three .card-content {
+                background: linear-gradient(357deg, #000 1.72%, rgba(0, 0, 0, 0) 49.89%);
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                transform: unset;
+                padding: 50px 40px;
+                display: flex;
+                justify-content: end;
+                flex-direction: column;
+                transition: 0.5s;
+            }
+
+            .eg-card3.three .card-img img {
+                min-height: 350px;
+                height: 100%;
+                -o-object-fit: cover;
+                object-fit: cover;
+            }
+
+            .eg-card3.three .card-content .view-btn {
+                position: absolute;
+                right: 85px;
+                top: 85px;
+                transition: 0.5s;
+                opacity: 0;
+            }
+
+            .eg-card3.three .card-content .catgory-and-title > a {
+                border-radius: 16px;
+                border: 1px solid rgba(255, 255, 255, 0.5);
+                background: 0 0;
+                display: inline-block;
+                color: #fff;
+                text-align: center;
+                font-size: 12px;
+                font-weight: 500;
+                padding: 2px 17px;
+                margin-bottom: 13px;
+            }
+
+        .eg-card3 .card-content .catgory-and-title h5 a {
+            color: #fff;
+            font-size: 40px;
+            font-weight: 500;
+            transition: 0.35s;
+        }
+
+        .eg-card3.three .card-content .catgory-and-title h5 {
+            margin-bottom: 0;
+        }
+
+            .eg-card3.three .card-content .catgory-and-title h5 a {
+                font-size: 24px;
+            }
+
+        .eg-card3.two .card-content .catgory-and-title h5 a {
+            font-size: 24px;
+        }
+
+        .eg-card3.two:hover .card-content .view-btn {
+            right: 35px;
+            top: 35px;
+            opacity: 1;
+        }
+
+        .eg-card3.three:hover .card-content .view-btn {
+            right: 35px;
+            top: 35px;
+            opacity: 1;
+        }
+
+        .eg-card3.three .card-content .view-btn {
+            position: absolute;
+            right: 85px;
+            top: 85px;
+            transition: 0.5s;
+            opacity: 0;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <main class="wrapper">
-
-        <div class="wptb-page-heading" style="position: relative; background-image: url('image/about/2.png');">
-            <!-- Overlay -->
-            <div class="overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1;"></div>
-
-            <div class="container" style="position: relative; z-index: 2;">
-                <div class="wptb-item--inner">
-                    <h2 class="wptb-item--title text-white mb-2">Advanced Data Solutions</h2>
-                    <div class="wptb-breadcrumb-wrap">
-                        <ul class="wptb-breadcrumb">
-                            <li><a href="#">Home</a></li>
-                            <li><span>Advanced Data Solutions</span></li>
-                        </ul>
+        <div class="breadcrumb-section" style="background-image: linear-gradient(270deg, rgba(0, 0, 0, .55), rgba(0, 0, 0, 0.55) 101.02%), url(image/blog/braadcrumb-bg3.jpg);">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="banner-content">
+                            <h1>Advance Data Solutions</h1>
+                            <ul class="breadcrumb-list">
+                                <li><a href="Default.aspx">Home</a></li>
+                                <li>Advance Data Solutions</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         <section class="section-padding">
             <div class="container">
-                <div class="wptb-heading">
-                    <div class="wptb-item--inner text-center">
-                        <h6 class="wptb-item--subtitle">Advanced S CATEGORIES
-                            </h6>
-                        <h1 class="wptb-item--title">We have high variety of quality products</h1>
-                        <div class="wptb-item--divider"></div>
-                    </div>
-                </div>
                 <div class="row gy-4">
-                    <div class="col-lg-3">
-                        <div class="service-card">
-                            <div class="card-inner">
-                                <div class="image">
-
-                                    <img src="image/data-solution.jpg" alt="">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="eg-card3 three">
+                            <div class="card-img">
+                                <img src="image/sub1/1.png" alt="">
+                            </div>
+                            <div class="card-content">
+                                <a class="view-btn" href="product-lisitng.aspx">
+                                    <img src="image/sub1/right-arrow2.png" alt="">
+                                </a>
+                                <div class="catgory-and-title">
+                                    <a href="product-lisitng.aspx">Technology</a>
+                                    <h5><a href="product-lisitng.aspx">Management Consulting</a></h5>
                                 </div>
-                                <div class="title text-start mb-0">
-                                    <h3>Advance Data
-                                       
-                                        Solutions</h3>
-
-                                </div>
-
-
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3">
-                        <div class="service-card">
-                            <div class="card-inner">
-                                <div class="image">
-
-                                    <img src="image/data-solution.jpg" alt="">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="eg-card3 three">
+                            <div class="card-img">
+                                <img src="image/sub1/2.png" alt="">
+                            </div>
+                            <div class="card-content">
+                                <a class="view-btn" href="product-lisitng.aspx">
+                                    <img src="image/sub1/right-arrow2.png" alt="">
+                                </a>
+                                <div class="catgory-and-title">
+                                    <a href="product-lisitng.aspx">Technology</a>
+                                    <h5><a href="product-lisitng.aspx">Management Consulting</a></h5>
                                 </div>
-                                <div class="title text-start mb-0">
-                                    <h3>Advance Data
-                   
-                    Solutions</h3>
-
-                                </div>
-
-
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3">
-                        <div class="service-card">
-                            <div class="card-inner">
-                                <div class="image">
-
-                                    <img src="image/data-solution.jpg" alt="">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="eg-card3 three">
+                            <div class="card-img">
+                                <img src="image/sub1/3.png" alt="">
+                            </div>
+                            <div class="card-content">
+                                <a class="view-btn" href="product-lisitng.aspx">
+                                    <img src="image/sub1/right-arrow2.png" alt="">
+                                </a>
+                                <div class="catgory-and-title">
+                                    <a href="product-lisitng.aspx">Technology</a>
+                                    <h5><a href="product-lisitng.aspx">Management Consulting</a></h5>
                                 </div>
-                                <div class="title text-start mb-0">
-                                    <h3>Advance Data
-                   
-                    Solutions</h3>
-
-                                </div>
-
-
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3">
-                        <div class="service-card">
-                            <div class="card-inner">
-                                <div class="image">
-
-                                    <img src="image/data-solution.jpg" alt="">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="eg-card3 three">
+                            <div class="card-img">
+                                <img src="image/sub1/4.png" alt="">
+                            </div>
+                            <div class="card-content">
+                                <a class="view-btn" href="product-lisitng.aspx">
+                                    <img src="image/sub1/right-arrow2.png" alt="">
+                                </a>
+                                <div class="catgory-and-title">
+                                    <a href="product-lisitng.aspx">Technology</a>
+                                    <h5><a href="product-lisitng.aspx">Management Consulting</a></h5>
                                 </div>
-                                <div class="title text-start mb-0">
-                                    <h3>Advance Data
-                   
-                    Solutions</h3>
-
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="eg-card3 three">
+                            <div class="card-img">
+                                <img src="image/sub1/5.png" alt="">
+                            </div>
+                            <div class="card-content">
+                                <a class="view-btn" href="product-lisitng.aspx">
+                                    <img src="image/sub1/right-arrow2.png" alt="">
+                                </a>
+                                <div class="catgory-and-title">
+                                    <a href="product-lisitng.aspx">Technology</a>
+                                    <h5><a href="product-lisitng.aspx">Management Consulting</a></h5>
                                 </div>
-
-
                             </div>
                         </div>
                     </div>
-
-
-                </div>
-                <div class="row mt-50">
-                    <div class="col-lg-4">
-                        <div class="project__item-two">
-                            <div class="project__thumb-two">
-                                <a href="product-lisitng.aspx" contenteditable="false" style="cursor: pointer;">
-                                    <img src="image/sub/inner_project07.jpg" alt="img"></a>
-                                <span class="shape"></span>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="eg-card3 three">
+                            <div class="card-img">
+                                <img src="image/sub1/6.png" alt="">
                             </div>
-                            <div class="project__content-two">
-                                <h2 class="title"><a href="project-details.html" contenteditable="false" style="cursor: pointer;">Service Company Building</a></h2>
+                            <div class="card-content">
+                                <a class="view-btn" href="product-lisitng.aspx">
+                                    <img src="image/sub1/right-arrow2.png" alt="">
+                                </a>
+                                <div class="catgory-and-title">
+                                    <a href="product-lisitng.aspx">Technology</a>
+                                    <h5><a href="product-lisitng.aspx">Management Consulting</a></h5>
+                                </div>
                             </div>
-
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="project__item-two">
-                            <div class="project__thumb-two">
-                                <a href="project-details.html" contenteditable="false" style="cursor: pointer;">
-                                    <img src="image/sub/inner_project07.jpg" alt="img"></a>
-                                <span class="shape"></span>
-                            </div>
-                            <div class="project__content-two">
-                                <h2 class="title"><a href="project-details.html" contenteditable="false" style="cursor: pointer;">Service Company Building</a></h2>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="project__item-two">
-                            <div class="project__thumb-two">
-                                <a href="project-details.html" contenteditable="false" style="cursor: pointer;">
-                                    <img src="image/sub/inner_project07.jpg" alt="img"></a>
-                                <span class="shape"></span>
-                            </div>
-                            <div class="project__content-two">
-                                <h2 class="title"><a href="project-details.html" contenteditable="false" style="cursor: pointer;">Service Company Building</a></h2>
-                            </div>
-
                         </div>
                     </div>
                 </div>
-
             </div>
         </section>
     </main>

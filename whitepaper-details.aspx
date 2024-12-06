@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="whitepaper-details.aspx.cs" Inherits="whitepaper_details" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="./MasterPage.master" AutoEventWireup="true" CodeFile="whitepaper-details.aspx.cs" Inherits="whitepaper_details" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <link href="css/breadcrums.css" rel="stylesheet" />
@@ -146,7 +146,7 @@
                 <div class="col-lg-12">
                     <div class="banner-content">
                         <ul class="breadcrumb-list">
-                            <li><a href="index.html">Home</a></li>
+                            <li><a href="Default.aspx">Home</a></li>
                             <li>White Paper</li>
                         </ul>
                         <h1>By providing comprehensive event details, you can enhance attendees.

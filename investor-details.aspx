@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="investor-details.aspx.cs" Inherits="investor_details" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="./MasterPage.master" AutoEventWireup="true" CodeFile="investor-details.aspx.cs" Inherits="investor_details" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <style>
@@ -213,7 +213,7 @@ padding:0.5rem 2.5rem;
                                 <tr>
                                     <td class="align-middle px-10 text-body-emphasis">Quarter Result 31-DEC-2021</td>
                                     <td class="">
-                                        <a href="../blocks/heros/home-11.html" class="btn btn-dark w-100 btn-hover-bg-primary btn-hover-border-primary btn-sm py-4" target="_blank" contenteditable="false" style="cursor: pointer;">
+                                        <a href="#" class="btn btn-dark w-100 btn-hover-bg-primary btn-hover-border-primary btn-sm py-4" target="_blank" contenteditable="false" style="cursor: pointer;">
                                             Download PDF
                                         </a>
                                     </td>

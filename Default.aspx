@@ -12,8 +12,7 @@
         style="
           background-image: url(image/banner-3.png);
           background-size: cover;
-        "
-      >
+        ">
         <div class="container">
           <div class="row justify-content-center align-items-center">
             <div class="col-lg-6 col-md-8">

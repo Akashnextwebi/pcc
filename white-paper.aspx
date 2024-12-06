@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="white-paper.aspx.cs" Inherits="white_paper" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="./MasterPage.master" AutoEventWireup="true" CodeFile="white-paper.aspx.cs" Inherits="white_paper" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <link href="css/about.css" rel="stylesheet" />
@@ -75,7 +75,7 @@ box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 
                     <div class="banner-content">
                         <h1>White Paper</h1>
                         <ul class="breadcrumb-list">
-                            <li><a href="index.html">Home</a></li>
+                            <li><a href="Default.aspx">Home</a></li>
                             <li>White Paper</li>
                         </ul>
                     </div>

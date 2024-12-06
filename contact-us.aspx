@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="contact-us.aspx.cs" Inherits="contact_us" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="./MasterPage.master" AutoEventWireup="true" CodeFile="contact-us.aspx.cs" Inherits="contact_us" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <link href="css/breadcrums.css" rel="stylesheet" />
@@ -170,7 +170,7 @@ background-color: rgba(255, 255, 255, 0.50);
                   <div class="banner-content">
                       <h1>Contact Us</h1>
                       <ul class="breadcrumb-list">
-                          <li><a href="index.html">Home</a></li>
+                          <li><a href="Default.aspx">Home</a></li>
                           <li>Contact Us</li>
                       </ul>
                   </div>

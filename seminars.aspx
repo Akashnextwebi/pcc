@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="seminars.aspx.cs" Inherits="seminars" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="./MasterPage.master" AutoEventWireup="true" CodeFile="seminars.aspx.cs" Inherits="seminars" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <link href="css/breadcrums.css" rel="stylesheet" />
@@ -57,7 +57,7 @@
                     <div class="banner-content">
                         <h1>Seminars</h1>
                         <ul class="breadcrumb-list">
-                            <li><a href="index.html">Home</a></li>
+                            <li><a href="Default.aspx">Home</a></li>
                             <li>Seminars</li>
                         </ul>
                     </div>
@@ -75,9 +75,9 @@
                                 <img src="image/seminar/1.png" alt="">
                             </div>
                             <div class="card-content">
-                                <a href="portfolio-two-column.html">Technology</a>
+                                <a href="#">Technology</a>
                                 <div class="title-and-btn">
-                                    <h4><a href="portfolio-details.html">Technology Assessment</a></h4>
+                                    <h4><a href="#">Technology Assessment</a></h4>
                                     <a href="https://www.youtube.com/watch?v=D0UnqGm_miA" class="video-i popup-video explore-btn" contenteditable="false" style="cursor: pointer;">Watch Now
     <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12">
         <path fill-rule="evenodd" clip-rule="evenodd" d="M10.1865 1.06237L0 11.2484L0.751627 12L10.9376 1.81347V8.85645H12V0H3.14355V1.06237H10.1865Z"></path>
@@ -93,9 +93,9 @@
                                 <img src="image/seminar/2.png" alt="">
                             </div>
                             <div class="card-content">
-                                <a href="portfolio-two-column.html">Management</a>
+                                <a href="#">Management</a>
                                 <div class="title-and-btn">
-                                    <h4><a href="portfolio-details.html">To Change Management</a></h4>
+                                    <h4><a href="#">To Change Management</a></h4>
                                     <a href="https://www.youtube.com/watch?v=D0UnqGm_miA" class="video-i popup-video explore-btn" contenteditable="false" style="cursor: pointer;">Watch Now
     <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12">
         <path fill-rule="evenodd" clip-rule="evenodd" d="M10.1865 1.06237L0 11.2484L0.751627 12L10.9376 1.81347V8.85645H12V0H3.14355V1.06237H10.1865Z"></path>
@@ -111,9 +111,9 @@
                                 <img src="image/seminar/3.png" alt="">
                             </div>
                             <div class="card-content">
-                                <a href="portfolio-two-column.html">Marketing</a>
+                                <a href="#">Marketing</a>
                                 <div class="title-and-btn">
-                                    <h4><a href="portfolio-details.html">Marketing and Sales Consulting</a></h4>
+                                    <h4><a href="#">Marketing and Sales Consulting</a></h4>
                                     <a href="https://www.youtube.com/watch?v=D0UnqGm_miA" class="video-i popup-video explore-btn" contenteditable="false" style="cursor: pointer;">Watch Now
        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12">
            <path fill-rule="evenodd" clip-rule="evenodd" d="M10.1865 1.06237L0 11.2484L0.751627 12L10.9376 1.81347V8.85645H12V0H3.14355V1.06237H10.1865Z"></path>
@@ -129,9 +129,9 @@
                                 <img src="image/seminar/4.png" alt="">
                             </div>
                             <div class="card-content">
-                                <a href="portfolio-two-column.html">Finance</a>
+                                <a href="#">Finance</a>
                                 <div class="title-and-btn">
-                                    <h4><a href="portfolio-details.html">Financial Consulting</a></h4>
+                                    <h4><a href="#">Financial Consulting</a></h4>
                                     <a href="https://www.youtube.com/watch?v=D0UnqGm_miA" class="video-i popup-video explore-btn" contenteditable="false" style="cursor: pointer;">Watch Now
        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12">
            <path fill-rule="evenodd" clip-rule="evenodd" d="M10.1865 1.06237L0 11.2484L0.751627 12L10.9376 1.81347V8.85645H12V0H3.14355V1.06237H10.1865Z"></path>

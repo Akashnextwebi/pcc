@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="video-gallery.aspx.cs" Inherits="video_gallery" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="./MasterPage.master" AutoEventWireup="true" CodeFile="video-gallery.aspx.cs" Inherits="video_gallery" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <link href="css/breadcrums.css" rel="stylesheet" />
@@ -29,7 +29,7 @@
                     <div class="banner-content">
                         <h1>Video Gallery</h1>
                         <ul class="breadcrumb-list">
-                            <li><a href="index.html">Home</a></li>
+                            <li><a href="Default.aspx">Home</a></li>
                             <li>Video Gallery</li>
                         </ul>
                     </div>
