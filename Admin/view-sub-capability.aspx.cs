@@ -30,6 +30,7 @@ public partial class Admin_view_sub_capability : System.Web.UI.Page
             {
 
                 var image = "<a href='/" + BD[i].ThumbImage + @"' target='_blank'><img src='/" + BD[i].ThumbImage + @"' alt='' class='rounded-circle avatar-xs shadow'></a>";
+               
                 strSubCapability += @"<tr>
                                         <td>" + (i + 1) + @"</td>
                                         <td>" + image + @"</td>

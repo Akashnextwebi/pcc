@@ -17,6 +17,8 @@ public partial class Admin_add_product : System.Web.UI.Page
     {
         if (!IsPostBack)
         {
+            BindCapability();
+            BindSubCapability();
             if (!string.IsNullOrEmpty(Request.QueryString["id"]))
             {
                 bindProducts();
@@ -36,6 +38,9 @@ public partial class Admin_add_product : System.Web.UI.Page
                 txtUrl.Text = pro.ProductUrl;
                 txtcode.Text = pro.SKUCode;
                 txtdatasheet.Text = pro.DatasheetName;
+                ddlCapabilityType.SelectedValue = pro.Capability;
+                BindSubCapability();
+                ddlSubcapability.SelectedValue = pro.SubCapability;
                 txtlink.Text = pro.DatasheetLink;
                 txtDesc.Text = pro.FullDesc;
                 txtMetaDesc.Text = pro.MetaDesc;
@@ -50,7 +55,7 @@ public partial class Admin_add_product : System.Web.UI.Page
                 
                 if (pro.Broucher != "")
                 {
-                    strUploadPDF = "<a href='/" + pro.Broucher + @"'><img src='assets/images/PDF.png' style='max-height:60px;' class='img-fluid'/></a>";
+                    strUploadPDF = "<a href='" + pro.Broucher + @"'><img src='assets/images/PDF.png' style='max-height:60px;' class='img-fluid'/></a>";
                     strUploadPDF = pro.Broucher;
 
                 }
@@ -63,6 +68,153 @@ public partial class Admin_add_product : System.Web.UI.Page
             ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "bindProducts", ex.Message);
         }
     }
+    public void BindCapability()
+    {
+        try
+        {
+            List<Capability> loc = Capability.GetAllCapability(conSQ);
+            if (loc != null && loc.Count() > 0)
+            {
+                ddlCapabilityType.DataSource = loc;
+                ddlCapabilityType.DataTextField = "CapabilityName";
+                ddlCapabilityType.DataValueField = "Id";
+                ddlCapabilityType.DataBind();
+                ddlCapabilityType.Items.Insert(0, new ListItem { Value = "0", Text = "Select Capability" });
+            }
+        }
+        catch (Exception ex)
+        {
+            ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "BindCapability", ex.Message);
+        }
+    }
+    public void GetCapability(string loc)
+    {
+        try
+        {
+            foreach (string str in loc.Split('|'))
+            {
+                foreach (ListItem li in ddlCapabilityType.Items)
+                {
+                    if (str.Trim() == li.Value.Trim())
+                    {
+                        li.Selected = true;
+                    }
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "GetCapability", ex.Message);
+        }
+    }
+    public string SaveCapability()
+    {
+        string x = "";
+        try
+        {
+
+            foreach (ListItem li in ddlCapabilityType.Items)
+            {
+                if (li.Selected)
+                {
+                    x += li.Value + "|";
+                }
+            }
+            x = x.TrimEnd('|');
+
+        }
+        catch (Exception ex)
+        {
+            ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "SaveCapability", ex.Message);
+
+        }
+        return x;
+    }
+    public void BindSubCapability()
+    {
+        try
+        {
+            List<SubCapability> loc = SubCapability.GetAllSubCapability(conSQ).Where(x => x.Capabilities == ddlCapabilityType.SelectedItem.Value).ToList();
+            if (loc != null && loc.Count() > 0)
+            {
+                ddlSubcapability.DataSource = loc;
+                ddlSubcapability.DataTextField = "SubCapabilityName";
+                ddlSubcapability.DataValueField = "Id";
+                ddlSubcapability.DataBind();
+                ddlSubcapability.Items.Insert(0, new ListItem { Value = "0", Text = "Select Subcapability" });
+            }
+        }
+        catch (Exception ex)
+        {
+            ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "BindSubCapability", ex.Message);
+        }
+    }
+    protected void ddlCapabilityType_SelectedIndexChanged(object sender, EventArgs e)
+    {
+
+        try
+        {
+            if (ddlCapabilityType.SelectedValue != "0")
+            {
+
+                BindSubCapability();
+            }
+            else
+            {
+                ddlSubcapability.Items.Clear();
+            }
+
+        }
+        catch (Exception ex)
+        {
+            ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "ddlCapabilityType_SelectedIndexChanged", ex.Message);
+
+        }
+
+    }
+    public void GetSubCapability(string loc)
+    {
+        try
+        {
+            foreach (string str in loc.Split('|'))
+            {
+                foreach (ListItem li in ddlSubcapability.Items)
+                {
+                    if (str.Trim() == li.Value.Trim())
+                    {
+                        li.Selected = true;
+                    }
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "GetSubCapability", ex.Message);
+        }
+    }
+    public string SaveSubCapability()
+    {
+        string x = "";
+        try
+        {
+
+            foreach (ListItem li in ddlSubcapability.Items)
+            {
+                if (li.Selected)
+                {
+                    x += li.Value + "|";
+                }
+            }
+            x = x.TrimEnd('|');
+
+        }
+        catch (Exception ex)
+        {
+            ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "SaveSubCapability", ex.Message);
+
+        }
+        return x;
+    }
     protected void btnSave_Click(object sender, EventArgs e)
     {
         try
@@ -70,6 +222,13 @@ public partial class Admin_add_product : System.Web.UI.Page
 
             if (Page.IsValid)
             {
+                var id = Request.QueryString["id"] == "" ? 0 : Convert.ToInt32(Request.QueryString["id"]);
+                var exist = ProductDetails.CheckExist(conSQ, txtproductName.Text, txtUrl.Text, id);
+                if (exist > 0)
+                {
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "Message", "Snackbar.show({pos: 'top-right',text: 'Product with title,url already exist.',actionTextColor: '#fff',backgroundColor: '#ea1c1c'});", true);
+                    return;
+                }
 
 
                 #region Upload Image
@@ -102,12 +261,14 @@ public partial class Admin_add_product : System.Web.UI.Page
                 var aid = Request.Cookies["bmw_aid"].Value;
 
                 ProductDetails pro = new ProductDetails();
-
+                pro.ProductGuid = Guid.NewGuid().ToString();
                 pro.ProductName = txtproductName.Text.Trim();
                 pro.ProductUrl = txtUrl.Text.Trim();
                 pro.SKUCode = txtcode.Text.Trim();
                 pro.DatasheetName = txtdatasheet.Text.Trim();
-                pro.DatasheetLink= txtlink.Text.Trim(); 
+                pro.DatasheetLink= txtlink.Text.Trim();
+                pro.Capability = SaveCapability();
+                pro.SubCapability = SaveSubCapability();
                 pro.FullDesc = txtDesc.Text.Trim();
                 pro.MetaDesc = txtMetaDesc.Text.Trim();
                 pro.MetaKeys = txtMetaKey.Text.Trim();
@@ -130,7 +291,7 @@ public partial class Admin_add_product : System.Web.UI.Page
                     return;
                 }
 
-                
+
 
                 if (btnSave.Text == "Update")
                 {
@@ -158,7 +319,7 @@ public partial class Admin_add_product : System.Web.UI.Page
                     if (result > 0)
                     {
                         ScriptManager.RegisterStartupScript(this, this.GetType(), "Message", "Snackbar.show({pos: 'top-right',text: 'Product Added successfully.',actionTextColor: '#fff',backgroundColor: '#008a3d'});", true);
-                        txtproductName.Text = txtUrl.Text = txtcode.Text = txtdatasheet.Text = txtlink.Text = txtDesc.Text = txtMetaDesc.Text = txtMetaKey.Text = txtPageTitle.Text = "";
+                        txtproductName.Text = txtUrl.Text = txtcode.Text = txtdatasheet.Text = txtlink.Text = txtDesc.Text = txtMetaDesc.Text = txtMetaKey.Text = txtPageTitle.Text = ddlCapabilityType.SelectedValue= ddlSubcapability.SelectedValue="";
 
                     }
                     else

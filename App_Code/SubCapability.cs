@@ -210,4 +210,38 @@ public class SubCapability
         }
         return result;
     }
+    public static List<SubCapability> GetAllSubCapability(SqlConnection conSQ)
+    {
+        var ListOfSubCapability = new List<SubCapability>();
+        try
+        {
+            string query = "Select *,(Select UserName from CreateUser Where UserGuid=SubCapability.AddedBy) as UpdatedBy from SubCapability where Status=@Status Order by Id Desc";
+            using (SqlCommand cmd = new SqlCommand(query, conSQ))
+            {
+                cmd.Parameters.AddWithValue("@Status", SqlDbType.NVarChar).Value = "Active";
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                ListOfSubCapability = (from DataRow dr in dt.Rows
+                                    select new SubCapability()
+                                    {
+                                        Id = Convert.ToInt32(Convert.ToString(dr["Id"])),
+                                        Capabilities = Convert.ToString(dr["Capabilities"]),
+                                        SubCapabilityName = Convert.ToString(dr["SubCapabilityName"]),
+                                        SubCapabilityUrl = Convert.ToString(dr["SubCapabilityUrl"]),
+                                        ThumbImage = Convert.ToString(dr["ThumbImage"]),
+                                        Tag = Convert.ToString(dr["Tag"]),
+                                        AddedOn = Convert.ToDateTime(Convert.ToString(dr["AddedOn"])),
+                                        AddedBy = Convert.ToString(dr["AddedBy"]),
+                                        AddedIp = Convert.ToString(dr["AddedIP"]),
+                                        Status = Convert.ToString(dr["Status"])
+                                    }).ToList();
+            }
+        }
+        catch (Exception ex)
+        {
+            ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "GetAllSubCapability", ex.Message);
+        }
+        return ListOfSubCapability;
+    }
 }

@@ -10,6 +10,7 @@ using System.Web.UI.WebControls;
 public partial class Admin_add_capability : System.Web.UI.Page
 {
     SqlConnection conSQ = new SqlConnection(ConfigurationManager.ConnectionStrings["conSQ"].ConnectionString);
+    public string StrProductname="";
     protected void Page_Load(object sender, EventArgs e)
     {
         if (!IsPostBack)
@@ -106,4 +107,28 @@ public partial class Admin_add_capability : System.Web.UI.Page
     {
         Response.Redirect("add-capability.aspx");
     }
+    //public void GetProductName()
+    //{
+    //    try
+    //    {
+    //        var pid = Convert.ToString(Request.QueryString["Pid"]);
+    //        if (pid != null && pid != "")
+    //        {
+    //            var sub = ProductDetails.GetProductnameWithGuid(conSQ, pid);
+    //            if (sub != null)
+    //            {
+    //                for (int i = 0; i < sub.Count; i++)
+    //                {
+    //                    StrProductname = sub[i].ProductName;
+    //                }
+    //            }
+    //        }
+
+    //    }
+    //    catch (Exception ex)
+    //    {
+    //        ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "GetProductName", ex.Message);
+
+    //    }
+    //}
 }
