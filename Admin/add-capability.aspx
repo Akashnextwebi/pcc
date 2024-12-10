@@ -29,12 +29,12 @@
                         <div class="card-body">
                             <div class="row mb-2">
                                 <div class="col-lg-6">
-                                    <label class="text-muted">Capability Name<sup class="text-danger">*</sup></label>
+                                    <label class="">Capability Name<sup class="text-danger">*</sup></label>
                                     <asp:TextBox runat="server" class="form-control mb-2 mr-sm-2 txtcapability" ID="txtcapability" placeholder="Capability Name" />
                                     <asp:RequiredFieldValidator ID="req1" runat="server" ControlToValidate="txtcapability" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Field can't be empty"></asp:RequiredFieldValidator>
                                 </div>
                                 <div class="col-lg-6">
-                                    <label class="text-muted">Capability URL<sup class="text-danger">*</sup></label>
+                                    <label class="">Capability URL<sup class="text-danger">*</sup></label>
                                     <asp:TextBox runat="server" class="form-control mb-2 mr-sm-2 txtUrl" ID="txtUrl" placeholder="Capability Url" />
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtUrl" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Field can't be empty"></asp:RequiredFieldValidator>
                                 </div>

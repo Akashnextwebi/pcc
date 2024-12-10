@@ -38,18 +38,23 @@
                                     <asp:TextBox runat="server" MaxLength="100" class="form-control mb-2 mr-sm-2 txtUrl" ID="txtUrl" placeholder="Auto-Generated" />
                                     <asp:RequiredFieldValidator ID="rfv2" runat="server" ControlToValidate="txtUrl" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Field can't be empty"></asp:RequiredFieldValidator>
                                 </div>
-                            
-                            <div class="col-lg-6 mb-3">
-                                <label class="text-muted">Cpability<sup class="text-danger">*</sup></label>
-                                <asp:DropDownList runat="server" ID="ddlCapabilityType" CssClass="form-control"  OnSelectedIndexChanged="ddlCapabilityType_SelectedIndexChanged" AutoPostBack="true"></asp:DropDownList>
-                                <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="ddlCapabilityType" InitialValue="0" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Field can't be empty"></asp:RequiredFieldValidator>
-                            </div>
-                            <div class="col-lg-6 mb-3">
-                                <label class="text-muted">Sub Capability<sup class="text-danger">*</sup></label>
-                                <asp:ListBox runat="server" SelectionMode="Single" ID="ddlSubcapability" CssClass="form-control fSelect"></asp:ListBox>
-                                <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="ddlsdetination" InitialValue="0" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Field can't be empty"></asp:RequiredFieldValidator>--%>
-                            </div>
+
+                                <div class="col-lg-4 mb-3">
+                                    <label class="">Cpability<sup class="text-danger">*</sup></label>
+                                    <asp:DropDownList runat="server" ID="ddlCapabilityType" CssClass="form-control" OnSelectedIndexChanged="ddlCapabilityType_SelectedIndexChanged" AutoPostBack="true"></asp:DropDownList>
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="ddlCapabilityType" InitialValue="0" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Field can't be empty"></asp:RequiredFieldValidator>
                                 </div>
+                                <div class="col-lg-4 mb-3">
+                                    <label class="">Sub Capability<sup class="text-danger">*</sup></label>
+                                    <asp:ListBox runat="server" SelectionMode="Single" ID="ddlSubcapability" CssClass="form-control fSelect"></asp:ListBox>
+                                    <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="ddlsdetination" InitialValue="0" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Field can't be empty"></asp:RequiredFieldValidator>--%>
+                                </div>
+                                <div class="col-lg-4 mb-3">
+                                    <label class="">Industry<sup class="text-danger">*</sup></label>
+                                    <asp:DropDownList runat="server" ID="ddlindustry" CssClass="form-control"  AutoPostBack="true"></asp:DropDownList>
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="ddlindustry" InitialValue="0" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Field can't be empty"></asp:RequiredFieldValidator>
+                                </div>
+                            </div>
                             <div class="row mb-2">
                                 <div class="col-lg-4">
                                     <label class="">SKU Code <sup>*</sup></label>
@@ -77,69 +82,69 @@
                                 </div>
                             </div>
                         </div>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="card">
-                    <div class="card-header">
-                        <h5 class=" card-title">Add Seo Details</h5>
                     </div>
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <label class="text-muted">Page Title</label>
-                                <asp:TextBox runat="server" MaxLength="100" class="form-control mb-2 mr-sm-2" ID="txtPageTitle" placeholder="Page Title" />
-                            </div>
-                            <div class="col-lg-12">
-                                <label class="text-muted">Meta Keys</label>
-                                <asp:TextBox ID="txtMetaKey" class="form-control mb-2 mr-sm-2" runat="server" placeholder="Meta Keys"></asp:TextBox>
-                            </div>
-                            <div class="col-lg-12">
-                                <label class="text-muted">Meta Description</label>
-                                <asp:TextBox ID="txtMetaDesc" TextMode="MultiLine" class="form-control mb-2 mr-sm-2" Rows="3" runat="server" placeholder="Meta Description"></asp:TextBox>
-                            </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class=" card-title">Add Seo Details</h5>
                         </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-header">
-                        <h5 class="card-title">Add Image Details</h5>
-                    </div>
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-lg-12 mb-3">
-                                <label class="">Thumb Image <sup>*</sup></label>
-                                <asp:FileUpload ID="CSthumbimg" runat="server" ToolTip="Maxmimum 1 MB file size" CssClass="form-control"></asp:FileUpload>
-                                <small class="text-danger">.png, .jpeg, .jpg, .gif formats are required, Image Size Should be 500 × 334 px</small><br />
-                            </div>
-                            <div class="col-lg-12 mb-3">
-                                <label class="">Broucher PDF <sup>*</sup></label>
-                                <asp:FileUpload ID="UploadPDF" runat="server" CssClass="form-control"></asp:FileUpload>
-                                <small class="text-danger">.pdf, .doc, formats are required.</small><br />
-                            </div>
-
-                            <div runat="server" id="divimg" class="col-lg-12 d-flex justify-content-around" visible="false">
-                                <div class="col-lg-3 text-center">
-                                    <%=strThumbImage %>
-                                    <h6 class=" mt-1">Thumb Image</h6>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <label class="">Page Title</label>
+                                    <asp:TextBox runat="server" MaxLength="100" class="form-control mb-2 mr-sm-2" ID="txtPageTitle" placeholder="Page Title" />
                                 </div>
-                                <a href="/<%=strUploadPDF %>" class="col-lg-3 text-center" target="_blank">
-                                    <img src="assets/images/pdf.png" alt="" width="60" height="60"><br />
-                                    Check PDF
-                                </a>
+                                <div class="col-lg-12">
+                                    <label class="">Meta Keys</label>
+                                    <asp:TextBox ID="txtMetaKey" class="form-control mb-2 mr-sm-2" runat="server" placeholder="Meta Keys"></asp:TextBox>
+                                </div>
+                                <div class="col-lg-12">
+                                    <label class="">Meta Description</label>
+                                    <asp:TextBox ID="txtMetaDesc" TextMode="MultiLine" class="form-control mb-2 mr-sm-2" Rows="3" runat="server" placeholder="Meta Description"></asp:TextBox>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title">Add Image Details</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-lg-12 mb-3">
+                                    <label class="">Thumb Image <sup>*</sup></label>
+                                    <asp:FileUpload ID="CSthumbimg" runat="server" ToolTip="Maxmimum 1 MB file size" CssClass="form-control"></asp:FileUpload>
+                                    <small class="text-danger">.png, .jpeg, .jpg, .gif formats are required, Image Size Should be 500 × 334 px</small><br />
+                                </div>
+                                <div class="col-lg-12 mb-3">
+                                    <label class="">Broucher PDF <sup>*</sup></label>
+                                    <asp:FileUpload ID="UploadPDF" runat="server" CssClass="form-control"></asp:FileUpload>
+                                    <small class="text-danger">.pdf, .doc, formats are required.</small><br />
+                                </div>
+
+                                <div runat="server" id="divimg" class="col-lg-12 d-flex justify-content-around" visible="false">
+                                    <div class="col-lg-3 text-center">
+                                        <%=strThumbImage %>
+                                        <h6 class=" mt-1">Thumb Image</h6>
+                                    </div>
+                                    <a href="/<%=strUploadPDF %>" class="col-lg-3 text-center" target="_blank">
+                                        <img src="assets/images/pdf.png" alt="" width="60" height="60"><br />
+                                        Check PDF
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="mb-3">
+                <asp:Button runat="server" ID="btnSave" CssClass="btn btn-primary" Text="Save" OnClick="btnSave_Click" OnClientClick="tinyMCE.triggerSave(false,true);" ValidationGroup="Save" Style="margin-top: 10px;" />
+                <asp:Button runat="server" ID="btnNew" CssClass="btn btn-info" Visible="false" Text="Add New Product" OnClick="btnNew_Click" Style="margin-top: 10px;" />
+                <asp:Label ID="lblThumb" runat="server" Visible="false"></asp:Label>
+                <asp:Label ID="lblPDF" runat="server" Visible="false"></asp:Label>
+            </div>
         </div>
-        <div class="mb-3">
-            <asp:Button runat="server" ID="btnSave" CssClass="btn btn-primary" Text="Save" OnClick="btnSave_Click" OnClientClick="tinyMCE.triggerSave(false,true);" ValidationGroup="Save" Style="margin-top: 10px;" />
-            <asp:Button runat="server" ID="btnNew" CssClass="btn btn-info" Visible="false" Text="Add New Product" OnClick="btnNew_Click" Style="margin-top: 10px;" />
-            <asp:Label ID="lblThumb" runat="server" Visible="false"></asp:Label>
-            <asp:Label ID="lblPDF" runat="server" Visible="false"></asp:Label>
-        </div>
-    </div>
     </div>
 
     <script src="assets/js/jquery-3.6.0.min.js"></script>

@@ -41,7 +41,7 @@
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txttag" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Field can't be empty"></asp:RequiredFieldValidator>
                                 </div>
                                 <div class="col-lg-6 mb-2">
-                                    <label class="text-muted">Thumb Image <sup class="text-danger">*</sup></label>
+                                    <label class="">Thumb Image <sup class="text-danger">*</sup></label>
                                     <asp:FileUpload runat="server" ID="ThumbImage" CssClass="form-control" />
                                     <small class="text-danger fw-bold">Image format .png, .jpeg, .jpg, .webp with 663px w X 395px h is recommended.</small><br />
                                     <%=strThumbImage %>

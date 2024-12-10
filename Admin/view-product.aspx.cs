@@ -40,10 +40,11 @@ public partial class Admin_view_product : System.Web.UI.Page
                                         <td>" + image + @"</td>
                                         <td>" + PDF + @"</td> 
                                         <td>" + BD[i].ProductName + @"</td>
-                                         <td><a href='manage-capabilities.aspx?Pid=" + BD[i].ProductGuid + @"' class='text-secondary fw-bold' target='_blank'>Capabilities(" + capcount + @")</a></td>
-                                          <td><a href='manage-specification.aspx?Pid=" + BD[i].ProductGuid + @"' class='text-secondary fw-bold' target='_blank'>Specification(" + specount + @")</a></td>
+                                        <td><a href='manage-capabilities.aspx?Pid=" + BD[i].ProductGuid + @"' class='text-secondary fw-bold' target='_blank'>Capabilities(" + capcount + @")</a></td>
+                                        <td><a href='manage-specification.aspx?Pid=" + BD[i].ProductGuid + @"' class='text-secondary fw-bold' target='_blank'>Specification(" + specount + @")</a></td>
                                         <td>" + BD[i].CapabilityTitle + @"</td>
-                                        <td>" + BD[i].SubcapabilityTitle + @"</td>                                      
+                                        <td>" + BD[i].SubcapabilityTitle + @"</td>    
+                                        <td>" + BD[i].IndustryTitle + @"</td>  
                                          <td>" + BD[i].AddedOn.ToString("dd/MMM/yyyy") + @"</td>
                                         <td class='text-center'> 
                                             <a href='add-product.aspx?id=" + BD[i].Id + @"' class='bs-tooltip text-info fs-18' data-id='" + BD[i].Id + @"' data-toggle='tooltip' data-placement='top' title='Edit' data-original-title='Edit'>

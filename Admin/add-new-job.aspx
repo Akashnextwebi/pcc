@@ -67,7 +67,7 @@
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtEducation" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Field can't be empty"></asp:RequiredFieldValidator>
                                 </div>
                                 <div class="col-lg-4 mb-2">
-                                    <label class="text-muted">Company Image <sup class="text-danger">*</sup></label>
+                                    <label class="">Company Image <sup class="text-danger">*</sup></label>
                                     <asp:FileUpload runat="server" ID="companyimage" CssClass="form-control" />
                                     <small class="text-danger fw-bold">Image format .png, .jpeg, .jpg, .webp with 60px w X 60px h is recommended.</small><br />
                                     <%=strCompanyImage %>
@@ -76,21 +76,21 @@
                             </div>
                             <div class="row mb-2">
                                 <div class="col-lg-12">
-                                    <label class="text-muted">Job Description<sup class="text-danger">*</sup></label>
+                                    <label class="">Job Description<sup class="text-danger"></sup></label>
                                     <asp:TextBox runat="server" TextMode="MultiLine" class="form-control mb-2 mr-sm-2 summernote" ID="txtDesc" Placeholder="Full Description ....." />
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="txtDesc" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Field can't be empty"></asp:RequiredFieldValidator>
                                 </div>
                             </div>
                             <div class="row mb-2">
                                 <div class="col-lg-12">
-                                    <label class="text-muted">Key Responsibilities<sup class="text-danger">*</sup></label>
+                                    <label class="">Key Responsibilities<sup class="text-danger"></sup></label>
                                     <asp:TextBox runat="server" TextMode="MultiLine" class="form-control mb-2 mr-sm-2 summernote" ID="txtkey" Placeholder="Full Description ....." />
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtkey" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Field can't be empty"></asp:RequiredFieldValidator>
                                 </div>
                             </div>
                             <div class="row mb-2">
                                 <div class="col-lg-12">
-                                    <label class="text-muted">Skills & Experience<sup class="text-danger">*</sup></label>
+                                    <label class="">Skills & Experience<sup class="text-danger"></sup></label>
                                     <asp:TextBox runat="server" TextMode="MultiLine" class="form-control mb-2 mr-sm-2 summernote" ID="txtskills" Placeholder="Full Description ....." />
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtskills" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Field can't be empty"></asp:RequiredFieldValidator>
                                 </div>
@@ -106,15 +106,15 @@
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-lg-12">
-                                    <label class="text-muted">Page Title</label>
+                                    <label class="">Page Title</label>
                                     <asp:TextBox runat="server" MaxLength="100" class="form-control mb-2 mr-sm-2" ID="txtPageTitle" placeholder="Page Title" />
                                 </div>
                                 <div class="col-lg-12">
-                                    <label class="text-muted">Meta Keys</label>
+                                    <label class="">Meta Keys</label>
                                     <asp:TextBox ID="txtMetaKey" class="form-control mb-2 mr-sm-2" runat="server" placeholder="Meta Keys"></asp:TextBox>
                                 </div>
                                 <div class="col-lg-12">
-                                    <label class="text-muted">Meta Description</label>
+                                    <label class="">Meta Description</label>
                                     <asp:TextBox ID="txtMetaDesc" TextMode="MultiLine" class="form-control mb-2 mr-sm-2" Rows="3" runat="server" placeholder="Meta Description"></asp:TextBox>
                                 </div>
                             </div>

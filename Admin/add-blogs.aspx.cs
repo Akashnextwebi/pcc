@@ -64,6 +64,13 @@ public partial class Admin_add_blogs : System.Web.UI.Page
         {
             if (Page.IsValid)
             {
+                var id = Request.QueryString["id"] == "" ? 0 : Convert.ToInt32(Request.QueryString["id"]);
+                var exist = BlogDetails.CheckExist(conSQ, txtName.Text, txtUrl.Text, id);
+                if (exist > 0)
+                {
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "Message", "Snackbar.show({pos: 'top-right',text: 'Blog Name with title,url already exist.',actionTextColor: '#fff',backgroundColor: '#ea1c1c'});", true);
+                    return;
+                }
                 var thumbimg = CheckThumbFormat();
 
                 if (thumbimg == "Format")

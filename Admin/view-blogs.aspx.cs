@@ -34,7 +34,7 @@ public partial class Admin_view_blogs : System.Web.UI.Page
                                         <td><a href='/" + BD[i].BlogImage + @"'/><img src='/" + BD[i].BlogImage + @"' style='height:60px;' /></td>
                                         <td>" + BD[i].BlogTitle + @"</td>
                                         <td>" + BD[i].PostedBy + @"</td>
-                                         <td>" + BD[i].AddedOn.ToString("dd/MMM/yyyy") + @"</td>
+                                         <td>" + BD[i].AddedOn.ToString("dd-MMM-yyyy") + @"</td>
                                         <td class='text-center'> 
                                             <a href='add-blogs.aspx?id=" + BD[i].Id + @"' class='bs-tooltip text-info fs-18' data-id='" + BD[i].Id + @"' data-toggle='tooltip' data-placement='top' title='Edit' data-original-title='Edit'>
                                                <i class='mdi mdi-pencil'></i></a>

@@ -236,4 +236,35 @@ public class BlogDetails
         }
         return result;
     }
+    public static int CheckExist(SqlConnection conSQ, string Name, string Url, int id)
+    {
+        try
+        {
+
+            var query = "Select Count(ID) as Cnt from BlogDetails where (BlogTitle=@BlogTitle OR BlogURL=@BlogURL) and (@Id=0 or id != @Id)  and Status !=@Status";
+            SqlCommand cmd = new SqlCommand(query, conSQ);
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+            cmd.Parameters.AddWithValue("@BlogTitle", SqlDbType.NVarChar).Value = Name;
+            cmd.Parameters.AddWithValue("@BlogURL", SqlDbType.NVarChar).Value = Url;
+            cmd.Parameters.AddWithValue("@Id", SqlDbType.NVarChar).Value = id;
+            //cmd.Parameters.AddWithValue("@Model", SqlDbType.NVarChar).Value = Model;
+            cmd.Parameters.AddWithValue("@Status", SqlDbType.NVarChar).Value = "Deleted";
+
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            if (dt.Rows.Count > 0)
+            {
+                int cnt = 0;
+                int.TryParse(Convert.ToString(dt.Rows[0]["Cnt"]), out cnt);
+                return cnt;
+            }
+            return 0;
+
+        }
+        catch (Exception ex)
+        {
+            ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "CheckExist", ex.Message);
+            return 0;
+        }
+    }
 }

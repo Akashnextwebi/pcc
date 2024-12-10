@@ -36,7 +36,7 @@
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtPName" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Field can't be empty"></asp:RequiredFieldValidator>
                                 </div>
                                 <div class="col-lg-6 mb-3">
-                                    <label class="text-muted">Select Rating <sup class="text-danger">*</sup></label>
+                                    <label class="">Select Rating <sup class="text-danger">*</sup></label>
                                     <div class="custom-textbox">
 
                                         <asp:DropDownList ID="ddlrating" runat="server" CssClass="dropdown-inside-textbox form-select">

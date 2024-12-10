@@ -693,7 +693,7 @@ Pellentesque habitant morbi tristique senectus et netus et malesuada.
                                         <div class="row">
                                             <div class="col-lg-12 col-md-12 mb-4">
                                                 <div class="form-group">
-                                                    <input type="text" name="name" class="form-control" placeholder="Enter Your Name" required="">
+                                                    <input type="text" name="name" class="form-control" placeholder="Enter Your Name" required>
                                                 </div>
                                             </div>
                                             <div class="col-lg-12 col-md-12 mb-4">

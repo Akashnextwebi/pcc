@@ -27,6 +27,7 @@ public class ProductDetails
     public string DatasheetLink { get; set; }
     public string Capability {  get; set; }
     public string SubCapability { get; set; }
+    public string Industry { get; set; }
     public string FullDesc { get; set; }
     public string PageTitle { get; set; }
     public string MetaKeys { get; set; }
@@ -37,6 +38,7 @@ public class ProductDetails
     public string Status { get; set; }
     public string SubcapabilityTitle { get; set; }
     public string CapabilityTitle {  get; set; }
+    public string IndustryTitle {  get; set; }
     public static ProductDetails getProductsById(SqlConnection _con, int id)
     {
         ProductDetails pro = new ProductDetails();
@@ -62,6 +64,7 @@ public class ProductDetails
                     pro.DatasheetLink = Convert.ToString(dt.Rows[0]["DatasheetLink"]);
                     pro.Capability = Convert.ToString(dt.Rows[0]["Capability"]);
                     pro.SubCapability = Convert.ToString(dt.Rows[0]["SubCapability"]);
+                    pro.Industry = Convert.ToString(dt.Rows[0]["Industry"]);
                     pro.FullDesc = Convert.ToString(dt.Rows[0]["FullDesc"]);
                     pro.PageTitle = Convert.ToString(dt.Rows[0]["PageTitle"]);
                     pro.MetaKeys = Convert.ToString(dt.Rows[0]["MetaKeys"]);
@@ -90,7 +93,7 @@ public class ProductDetails
         int result = 0;
         try
         {
-            string query = "Update ProductDetails Set ProductGuid=@ProductGuid,ProductName=@ProductName,ProductUrl=@ProductUrl,ThumbImage=@ThumbImage,SKUCode=@SKUCode,Broucher=@Broucher,DatasheetName=@DatasheetName,DatasheetLink=@DatasheetLink,Capability=@Capability,SubCapability=@SubCapability,FullDesc=@FullDesc,PageTitle=@PageTitle,MetaKeys=@MetaKeys,MetaDesc=@MetaDesc,AddedOn=@AddedOn,AddedBy=@AddedBy,AddedIp=@AddedIp,Status=@Status Where Id=@Id ";
+            string query = "Update ProductDetails Set ProductGuid=@ProductGuid,ProductName=@ProductName,ProductUrl=@ProductUrl,Industry=@Industry,ThumbImage=@ThumbImage,SKUCode=@SKUCode,Broucher=@Broucher,DatasheetName=@DatasheetName,DatasheetLink=@DatasheetLink,Capability=@Capability,SubCapability=@SubCapability,FullDesc=@FullDesc,PageTitle=@PageTitle,MetaKeys=@MetaKeys,MetaDesc=@MetaDesc,AddedOn=@AddedOn,AddedBy=@AddedBy,AddedIp=@AddedIp,Status=@Status Where Id=@Id ";
             using (SqlCommand cmd = new SqlCommand(query, _con))
             {
                 cmd.Parameters.AddWithValue("@Id", SqlDbType.Int).Value = cat.Id;
@@ -104,6 +107,7 @@ public class ProductDetails
                 cmd.Parameters.AddWithValue("@DatasheetLink", SqlDbType.NVarChar).Value = cat.DatasheetLink;
                 cmd.Parameters.AddWithValue("@Capability", SqlDbType.NVarChar).Value = cat.Capability;
                 cmd.Parameters.AddWithValue("@SubCapability", SqlDbType.NVarChar).Value = cat.SubCapability;
+                cmd.Parameters.AddWithValue("@Industry", SqlDbType.NVarChar).Value = cat.Industry;
                 cmd.Parameters.AddWithValue("@FullDesc", SqlDbType.NVarChar).Value = cat.FullDesc;
                 cmd.Parameters.AddWithValue("@PageTitle", SqlDbType.NVarChar).Value = cat.PageTitle;
                 cmd.Parameters.AddWithValue("@MetaKeys", SqlDbType.NVarChar).Value = cat.MetaKeys;
@@ -130,8 +134,8 @@ public class ProductDetails
 
         try
         {
-            string query = "Insert Into ProductDetails (ProductGuid,ProductName,ProductUrl,ThumbImage,SKUCode,Broucher,DatasheetName,DatasheetLink,Capability,SubCapability,FullDesc,PageTitle,MetaKeys,MetaDesc,AddedBy,AddedOn,AddedIp,Status) values" +
-                           "(@ProductGuid,@ProductName,@ProductUrl,@ThumbImage,@SKUCode,@Broucher,@DatasheetName,@DatasheetLink,@Capability,@SubCapability,@FullDesc,@PageTitle,@MetaKeys,@MetaDesc,@AddedBy,@AddedOn,@AddedIp,@Status)";
+            string query = "Insert Into ProductDetails (ProductGuid,ProductName,ProductUrl,ThumbImage,SKUCode,Broucher,DatasheetName,DatasheetLink,Capability,SubCapability,Industry,FullDesc,PageTitle,MetaKeys,MetaDesc,AddedBy,AddedOn,AddedIp,Status) values" +
+                           "(@ProductGuid,@ProductName,@ProductUrl,@ThumbImage,@SKUCode,@Broucher,@DatasheetName,@DatasheetLink,@Capability,@SubCapability,@Industry,@FullDesc,@PageTitle,@MetaKeys,@MetaDesc,@AddedBy,@AddedOn,@AddedIp,@Status)";
             using (SqlCommand cmd = new SqlCommand(query, _con))
             {
                 cmd.Parameters.AddWithValue("@ProductName", SqlDbType.NVarChar).Value = cat.ProductName;
@@ -144,6 +148,7 @@ public class ProductDetails
                 cmd.Parameters.AddWithValue("@DatasheetLink", SqlDbType.NVarChar).Value = cat.DatasheetLink;
                 cmd.Parameters.AddWithValue("@Capability", SqlDbType.NVarChar).Value = cat.Capability;
                 cmd.Parameters.AddWithValue("@SubCapability", SqlDbType.NVarChar).Value = cat.SubCapability;
+                cmd.Parameters.AddWithValue("@Industry", SqlDbType.NVarChar).Value = cat.Industry;
                 cmd.Parameters.AddWithValue("@FullDesc", SqlDbType.NVarChar).Value = cat.FullDesc;
                 cmd.Parameters.AddWithValue("@PageTitle", SqlDbType.NVarChar).Value = cat.PageTitle;
                 cmd.Parameters.AddWithValue("@MetaKeys", SqlDbType.NVarChar).Value = cat.MetaKeys;
@@ -168,7 +173,7 @@ public class ProductDetails
         List<ProductDetails> zips = new List<ProductDetails>();
         try
         {
-            string query = "Select *,(Select UserName from CreateUser Where UserGuid=ProductDetails.AddedBy) as UpdatedBy ,(select SubCapabilityName from SubCapability where try_convert (nvarchar,SubCapability.Id) = ProductDetails.SubCapability )as  SubCapabilityTitle,(select CapabilityName from Capability where try_convert (nvarchar,Capability.Id) = ProductDetails.Capability )as  CapabilityTitle from ProductDetails where Status ='Active'  Order by Id Desc";
+            string query = "Select *,(Select UserName from CreateUser Where UserGuid=ProductDetails.AddedBy) as UpdatedBy ,(select SubCapabilityName from SubCapability where try_convert (nvarchar,SubCapability.Id) = ProductDetails.SubCapability )as  SubCapabilityTitle,(select CapabilityName from Capability where try_convert (nvarchar,Capability.Id) = ProductDetails.Capability )as  CapabilityTitle,(select IndustryName from IndustryDetails where try_convert (nvarchar,IndustryDetails.Id) = ProductDetails.Industry )as IndustryTitle from ProductDetails where Status ='Active'  Order by Id Desc";
 
             using (SqlCommand cmd = new SqlCommand(query, conSQ))
             {
@@ -192,6 +197,8 @@ public class ProductDetails
                             SubCapability = Convert.ToString(dr["SubCapability"]),
                             CapabilityTitle = Convert.ToString(dr["CapabilityTitle"]),
                             SubcapabilityTitle = Convert.ToString(dr["SubcapabilityTitle"]),
+                            IndustryTitle = Convert.ToString(dr["IndustryTitle"]),
+                            Industry = Convert.ToString(dr["Industry"]),
                             FullDesc = Convert.ToString(dr["FullDesc"]),
                             PageTitle = Convert.ToString(dr["PageTitle"]),
                             MetaKeys = Convert.ToString(dr["MetaKeys"]),
@@ -259,6 +266,7 @@ public class ProductDetails
                                  DatasheetLink = Convert.ToString(dr["DatasheetLink"]),
                                  Capability = Convert.ToString(dr["Capability"]),
                                  SubCapability = Convert.ToString(dr["SubCapability"]),
+                                 Industry = Convert.ToString(dr["Industry"]),
                                  //CapabilityTitle = Convert.ToString(dr["CapabilityTitle"]),
                                  //SubcapabilityTitle = Convert.ToString(dr["SubcapabilityTitle"]),
                                  FullDesc = Convert.ToString(dr["FullDesc"]),

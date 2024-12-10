@@ -17,6 +17,7 @@ public partial class Admin_add_product : System.Web.UI.Page
     {
         if (!IsPostBack)
         {
+            BindIndustry();
             BindCapability();
             BindSubCapability();
             if (!string.IsNullOrEmpty(Request.QueryString["id"]))
@@ -37,10 +38,11 @@ public partial class Admin_add_product : System.Web.UI.Page
                 txtproductName.Text = pro.ProductName;
                 txtUrl.Text = pro.ProductUrl;
                 txtcode.Text = pro.SKUCode;
-                txtdatasheet.Text = pro.DatasheetName;
+                txtdatasheet.Text = pro.DatasheetName;             
                 ddlCapabilityType.SelectedValue = pro.Capability;
                 BindSubCapability();
                 ddlSubcapability.SelectedValue = pro.SubCapability;
+                ddlindustry.SelectedValue= pro.Industry;
                 txtlink.Text = pro.DatasheetLink;
                 txtDesc.Text = pro.FullDesc;
                 txtMetaDesc.Text = pro.MetaDesc;
@@ -126,6 +128,68 @@ public partial class Admin_add_product : System.Web.UI.Page
         catch (Exception ex)
         {
             ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "SaveCapability", ex.Message);
+
+        }
+        return x;
+    }
+    public void BindIndustry()
+    {
+        try
+        {
+            List<IndustryDetails> loc = IndustryDetails.GetAllIndustries(conSQ);
+            if (loc != null && loc.Count() > 0)
+            {
+                ddlindustry.DataSource = loc;
+                ddlindustry.DataTextField = "IndustryName";
+                ddlindustry.DataValueField = "Id";
+                ddlindustry.DataBind();
+                ddlindustry.Items.Insert(0, new ListItem { Value = "0", Text = "Select IndustryName" });
+            }
+        }
+        catch (Exception ex)
+        {
+            ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "BindIndustry", ex.Message);
+        }
+    }
+    public void GetIndustry(string loc)
+    {
+        try
+        {
+            foreach (string str in loc.Split('|'))
+            {
+                foreach (ListItem li in ddlindustry.Items)
+                {
+                    if (str.Trim() == li.Value.Trim())
+                    {
+                        li.Selected = true;
+                    }
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "GetIndustry", ex.Message);
+        }
+    }
+    public string SaveIndustry()
+    {
+        string x = "";
+        try
+        {
+
+            foreach (ListItem li in ddlindustry.Items)
+            {
+                if (li.Selected)
+                {
+                    x += li.Value + "|";
+                }
+            }
+            x = x.TrimEnd('|');
+
+        }
+        catch (Exception ex)
+        {
+            ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "SaveIndustry", ex.Message);
 
         }
         return x;
@@ -269,6 +333,7 @@ public partial class Admin_add_product : System.Web.UI.Page
                 pro.DatasheetLink= txtlink.Text.Trim();
                 pro.Capability = SaveCapability();
                 pro.SubCapability = SaveSubCapability();
+                pro.Industry = SaveIndustry();
                 pro.FullDesc = txtDesc.Text.Trim();
                 pro.MetaDesc = txtMetaDesc.Text.Trim();
                 pro.MetaKeys = txtMetaKey.Text.Trim();
