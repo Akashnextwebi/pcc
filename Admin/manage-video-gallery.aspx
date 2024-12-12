@@ -40,8 +40,8 @@
                                     <%=strThumbImage %>
                                 </div>
                                 <div class="col-lg-4 mb-3">
-                                    <asp:Button ID="btnSave" runat="server" Text="Save" ValidationGroup="Save" CssClass="btn btn-info waves-effect waves-light" Style="margin-top: 28px" OnClick="btnSave_Click" />
-                                    <asp:Button ID="btnNew" runat="server" Text="Add New Video" CssClass="btn btn-info waves-effect waves-light" Style="margin-top: 28px" OnClick="btnNew_Click" Visible="false" />
+                                    <asp:Button ID="btnSave" runat="server" Text="Save" ValidationGroup="Save" CssClass="btn btn-success waves-effect waves-light" Style="margin-top: 28px" OnClick="btnSave_Click" />
+                                    <asp:Button ID="btnNew" runat="server" Text="Add New Video" CssClass="btn btn-success waves-effect waves-light" Style="margin-top: 28px" OnClick="btnNew_Click" Visible="false" />
                                     <asp:Label runat="server" ID="lblThumb" Visible="false"></asp:Label>
                                 </div>
                             </div>

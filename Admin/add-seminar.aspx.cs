@@ -76,38 +76,40 @@ public partial class Admin_add_seminar : System.Web.UI.Page
                 BD.AddedOn = TimeStamps.UTCTime();
                 BD.AddedBy = aid;
                 BD.Status = "Active";
-
-                if (btnSave.Text == "Update")
+                if (BD.ThumbImage != "")
                 {
-                    BD.Id = Convert.ToInt32(Request.QueryString["id"]);
-                    int result = SeminarDetails.UpdateSeminarDetails(conSQ, BD);
-                    if (result > 0)
+                    if (btnSave.Text == "Update")
                     {
-                        ScriptManager.RegisterStartupScript(this, this.GetType(), "Message", "Snackbar.show({pos: 'top-right',text: 'Seminar Updated successfully.',actionTextColor: '#fff',backgroundColor: '#008a3d'});", true);
+                        BD.Id = Convert.ToInt32(Request.QueryString["id"]);
+                        int result = SeminarDetails.UpdateSeminarDetails(conSQ, BD);
+                        if (result > 0)
+                        {
+                            ScriptManager.RegisterStartupScript(this, this.GetType(), "Message", "Snackbar.show({pos: 'top-right',text: 'Seminar Updated successfully.',actionTextColor: '#fff',backgroundColor: '#008a3d'});", true);
+                        }
+                        else
+                        {
+                            ScriptManager.RegisterStartupScript(this, this.GetType(), "Message", "Snackbar.show({pos: 'top-right',text: 'There is some problem now.please try again after some time. ',actionTextColor: '#fff',backgroundColor: '#ea1c1c'});", true);
+                        }
                     }
                     else
                     {
-                        ScriptManager.RegisterStartupScript(this, this.GetType(), "Message", "Snackbar.show({pos: 'top-right',text: 'There is some problem now.please try again after some time. ',actionTextColor: '#fff',backgroundColor: '#ea1c1c'});", true);
-                    }
-                }
-                else
-                {
-                    int result = SeminarDetails.InsertSeminar(conSQ, BD);
-                    if (result > 0)
-                    {
-                        ScriptManager.RegisterStartupScript(this, this.GetType(), "Message", "Snackbar.show({pos: 'top-right',text: 'Seminar Added successfully.',actionTextColor: '#fff',backgroundColor: '#008a3d'});", true);
-                        txttitle.Text = txttag.Text = "";
-                    }
-                    else
-                    {
-                        ScriptManager.RegisterStartupScript(this, this.GetType(), "Message", "Snackbar.show({pos: 'top-right',text: 'There is some problem now.please try again after some time. ',actionTextColor: '#fff',backgroundColor: '#ea1c1c'});", true);
+                        int result = SeminarDetails.InsertSeminar(conSQ, BD);
+                        if (result > 0)
+                        {
+                            ScriptManager.RegisterStartupScript(this, this.GetType(), "Message", "Snackbar.show({pos: 'top-right',text: 'Seminar Added successfully.',actionTextColor: '#fff',backgroundColor: '#008a3d'});", true);
+                            txttitle.Text = txttag.Text = "";
+                        }
+                        else
+                        {
+                            ScriptManager.RegisterStartupScript(this, this.GetType(), "Message", "Snackbar.show({pos: 'top-right',text: 'There is some problem now.please try again after some time. ',actionTextColor: '#fff',backgroundColor: '#ea1c1c'});", true);
 
+                        }
                     }
-                }
 
+
+                }
 
             }
-
         }
         catch (Exception ex)
         {

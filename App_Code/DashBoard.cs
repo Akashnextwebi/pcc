@@ -112,12 +112,12 @@ public class DashBoard
         }
         return x;
     }
-    public static int GetArchitectCount(SqlConnection conSQ)
+    public static int GetstudiesCount(SqlConnection conSQ)
     {
         int x = 0;
         try
         {
-            string query = " Select * from ArchitectDetails Where Status='Published'";
+            string query = " Select * from CaseStudy Where Status='Active'";
             SqlCommand cmd = new SqlCommand(query, conSQ);
             SqlDataAdapter sda = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
@@ -126,21 +126,17 @@ public class DashBoard
         }
         catch (Exception ex)
         {
-            ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "GetStudentCount", ex.Message);
+            ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "GetstudiesCount", ex.Message);
         }
         return x;
     }
 
-
-
-
-
-    public static decimal NoOfContacts(SqlConnection conSQ)
+    public static decimal NoOfBlogs(SqlConnection conSQ)
     {
         decimal x = 0;
         try
         {
-            string query = " Select Count(Id) as cntB from ContactUs Where  Status != 'Deleted'";
+            string query = " Select Count(Id) as cntB from BlogDetails Where  Status != 'Deleted'";
             SqlCommand cmd = new SqlCommand(query, conSQ);
             SqlDataAdapter sda = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
@@ -154,19 +150,17 @@ public class DashBoard
         }
         catch (Exception ex)
         {
-            ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "GetTotalSales", ex.Message);
+            ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "NoOfBlogs", ex.Message);
         }
         return x;
     }
-
-    public static decimal TodaysOrder(SqlConnection conSQ, string tDay)
+    public static decimal NoOfProducts(SqlConnection conSQ)
     {
         decimal x = 0;
         try
         {
-            string query = " Select Count(Id) as cntB from Orders Where  PaymentStatus = 'Paid' and Try_Convert(date, AddedOn)=@tDay";
+            string query = " Select Count(Id) as cntB from ProductDetails Where  Status != 'Deleted'";
             SqlCommand cmd = new SqlCommand(query, conSQ);
-            cmd.Parameters.AddWithValue("@tDay", SqlDbType.NVarChar).Value = tDay;
             SqlDataAdapter sda = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             sda.Fill(dt);
@@ -179,20 +173,17 @@ public class DashBoard
         }
         catch (Exception ex)
         {
-            ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "NoOfEmailSubscribed", ex.Message);
+            ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "NoOfProducts", ex.Message);
         }
         return x;
     }
-
-    public static decimal MonthsOrder(SqlConnection conSQ, string mnth, string yr)
+    public static decimal NoOfInvestors(SqlConnection conSQ)
     {
         decimal x = 0;
         try
         {
-            string query = " Select Count(Id) as cntB from Orders Where  PaymentStatus = 'Paid' and (Month(AddedOn) = @mnth and Year(AddedOn) = @yr)";
+            string query = " Select Count(Id) as cntB from ManageInvestor Where  Status != 'Deleted'";
             SqlCommand cmd = new SqlCommand(query, conSQ);
-            cmd.Parameters.AddWithValue("@mnth", SqlDbType.NVarChar).Value = mnth;
-            cmd.Parameters.AddWithValue("@yr", SqlDbType.NVarChar).Value = yr;
             SqlDataAdapter sda = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             sda.Fill(dt);
@@ -205,13 +196,66 @@ public class DashBoard
         }
         catch (Exception ex)
         {
-            ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "NoOfEmailSubscribed", ex.Message);
+            ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "NoOfInvestors", ex.Message);
         }
         return x;
     }
+    public static decimal NoOfJobs(SqlConnection conSQ)
+    {
+        decimal x = 0;
+        try
+        {
+            string query = " Select Count(Id) as cntB from JobDetails Where  Status != 'Deleted'";
+            SqlCommand cmd = new SqlCommand(query, conSQ);
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            if (dt.Rows.Count > 0)
+            {
+                decimal cnt = 0;
+                decimal.TryParse(Convert.ToString(dt.Rows[0]["cntB"]), out cnt);
+                x = cnt;
+            }
+        }
+        catch (Exception ex)
+        {
+            ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "NoOfJobs", ex.Message);
+        }
+        return x;
+    }
+    public static List<ContactUs> GetTop10Contact(SqlConnection conSQ)
+    {
+        List<ContactUs> categories = new List<ContactUs>();
+        try
+        {
+            string query = "SELECT Top 10 * FROM ContactUs ORDER BY Id DESC ";
+            using (SqlCommand cmd = new SqlCommand(query, conSQ))
+            {
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                categories = (from DataRow dr in dt.Rows
+                              select new ContactUs()
+                              {
+                                  Id = Convert.ToInt32(Convert.ToString(dr["Id"])),
+                                  Name = Convert.ToString(dr["Name"]),
+                                  Email = Convert.ToString(dr["Email"]),
+                                  Subject = Convert.ToString(dr["Subject"]),
+                                  Message = Convert.ToString(dr["Message"]),
+                                  Status = Convert.ToString(dr["Status"]),
+                                  AddedIp = Convert.ToString(dr["AddedIp"]),
+                                  AddedOn = Convert.ToDateTime(dr["AddedOn"]),
 
 
+                              }).ToList();
+            }
+        }
+        catch (Exception ex)
+        {
+            ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "GetTop10Contact", ex.Message);
+        }
+        return categories;
 
-
+    }
 }
 

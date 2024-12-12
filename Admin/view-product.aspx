@@ -15,7 +15,7 @@
                             <ol class="breadcrumb m-0">
                                 <li class="breadcrumb-item"><a href="/Admin/">Dashboard</a></li>
                                 <li class="breadcrumb-item"><a href="javascript: void(0);">Products</a></li>
-                                <li class="breadcrumb-item active">View SubCapability</li>
+                                <li class="breadcrumb-item active">View Products</li>
                             </ol>
                         </div>
 

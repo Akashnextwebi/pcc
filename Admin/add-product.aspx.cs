@@ -57,8 +57,8 @@ public partial class Admin_add_product : System.Web.UI.Page
                 
                 if (pro.Broucher != "")
                 {
-                    strUploadPDF = "<a href='" + pro.Broucher + @"'><img src='assets/images/PDF.png' style='max-height:60px;' class='img-fluid'/></a>";
-                    strUploadPDF = pro.Broucher;
+                    strUploadPDF = "<a href='/" + pro.Broucher + @"'><img src='assets/images/PDF.png' style='max-height:60px;' class='img-fluid'/></a>";
+                    lblPDF.Text = pro.Broucher;
 
                 }
                 divimg.Visible = true;
@@ -330,7 +330,7 @@ public partial class Admin_add_product : System.Web.UI.Page
                 pro.ProductUrl = txtUrl.Text.Trim();
                 pro.SKUCode = txtcode.Text.Trim();
                 pro.DatasheetName = txtdatasheet.Text.Trim();
-                pro.DatasheetLink= txtlink.Text.Trim();
+                pro.DatasheetLink = txtlink.Text.Trim();
                 pro.Capability = SaveCapability();
                 pro.SubCapability = SaveSubCapability();
                 pro.Industry = SaveIndustry();
@@ -344,52 +344,43 @@ public partial class Admin_add_product : System.Web.UI.Page
                 pro.AddedOn = TimeStamps.UTCTime();
                 pro.AddedBy = aid;
                 pro.Status = "Active";
-                if (string.IsNullOrEmpty(pro.ThumbImage))
+                
+
+                if (pro.ThumbImage != "" && pro.Broucher != "")
                 {
-                    ScriptManager.RegisterStartupScript(this, this.GetType(), "Message", "Snackbar.show({pos: 'top-right',text: 'Please upload Thumb Image.',actionTextColor: '#fff',backgroundColor: '#ea1c1c'});", true);
-                    return;
-                }
-
-                if (string.IsNullOrEmpty(pro.Broucher))
-                {
-                    ScriptManager.RegisterStartupScript(this, this.GetType(), "Message", "Snackbar.show({pos: 'top-right',text: 'Please upload PDF',actionTextColor: '#fff',backgroundColor: '#ea1c1c'});", true);
-                    return;
-                }
-
-
-
-                if (btnSave.Text == "Update")
-                {
-                    pro.Id = Convert.ToInt32(Request.QueryString["id"]);
-                    int result = ProductDetails.UpdateProducts(conSQ, pro);
-                    if (result > 0)
+                    if (btnSave.Text == "Update")
                     {
-                        bindProducts();
-                        ScriptManager.RegisterStartupScript(this, this.GetType(), "Message", "Snackbar.show({pos: 'top-right',text: 'Products Details Updated successfully.',actionTextColor: '#fff',backgroundColor: '#008a3d'});", true);
+                        pro.Id = Convert.ToInt32(Request.QueryString["id"]);
+                        int result = ProductDetails.UpdateProducts(conSQ, pro);
+                        if (result > 0)
+                        {
+                            bindProducts();
+                            ScriptManager.RegisterStartupScript(this, this.GetType(), "Message", "Snackbar.show({pos: 'top-right',text: 'Products Details Updated successfully.',actionTextColor: '#fff',backgroundColor: '#008a3d'});", true);
+                        }
+                        else
+                        {
+                            ScriptManager.RegisterStartupScript(this, this.GetType(), "Message", "Snackbar.show({pos: 'top-right',text: 'Oops! Something went wrong. Please try after some time',actionTextColor: '#fff',backgroundColor: '#ea1c1c'});", true);
+                        }
                     }
+
                     else
                     {
-                        ScriptManager.RegisterStartupScript(this, this.GetType(), "Message", "Snackbar.show({pos: 'top-right',text: 'Oops! Something went wrong. Please try after some time',actionTextColor: '#fff',backgroundColor: '#ea1c1c'});", true);
-                    }
-                }
+                        if (string.IsNullOrEmpty(pro.Broucher))
+                        {
+                            ScriptManager.RegisterStartupScript(this, this.GetType(), "Message", "Snackbar.show({pos: 'top-right',text: 'Please upload PDF.',actionTextColor: '#fff',backgroundColor: '#ea1c1c'});", true);
+                            return;
+                        }
+                        int result = ProductDetails.InsertProducts(conSQ, pro);
+                        if (result > 0)
+                        {
+                            ScriptManager.RegisterStartupScript(this, this.GetType(), "Message", "Snackbar.show({pos: 'top-right',text: 'Product Added successfully.',actionTextColor: '#fff',backgroundColor: '#008a3d'});", true);
+                            txtproductName.Text = txtUrl.Text = txtcode.Text = txtdatasheet.Text = txtlink.Text = txtDesc.Text = txtMetaDesc.Text = txtMetaKey.Text = txtPageTitle.Text = ddlCapabilityType.SelectedValue = ddlSubcapability.SelectedValue = "";
 
-                else
-                {
-                    if (string.IsNullOrEmpty(pro.Broucher))
-                    {
-                        ScriptManager.RegisterStartupScript(this, this.GetType(), "Message", "Snackbar.show({pos: 'top-right',text: 'Please upload PDF.',actionTextColor: '#fff',backgroundColor: '#ea1c1c'});", true);
-                        return;
-                    }
-                    int result = ProductDetails.InsertProducts(conSQ, pro);
-                    if (result > 0)
-                    {
-                        ScriptManager.RegisterStartupScript(this, this.GetType(), "Message", "Snackbar.show({pos: 'top-right',text: 'Product Added successfully.',actionTextColor: '#fff',backgroundColor: '#008a3d'});", true);
-                        txtproductName.Text = txtUrl.Text = txtcode.Text = txtdatasheet.Text = txtlink.Text = txtDesc.Text = txtMetaDesc.Text = txtMetaKey.Text = txtPageTitle.Text = ddlCapabilityType.SelectedValue= ddlSubcapability.SelectedValue="";
-
-                    }
-                    else
-                    {
-                        ScriptManager.RegisterStartupScript(this, this.GetType(), "Message", "Snackbar.show({pos: 'top-right',text: 'Oops! Something went wrong. Please try after some time',actionTextColor: '#fff',backgroundColor: '#ea1c1c'});", true);
+                        }
+                        else
+                        {
+                            ScriptManager.RegisterStartupScript(this, this.GetType(), "Message", "Snackbar.show({pos: 'top-right',text: 'Oops! Something went wrong. Please try after some time',actionTextColor: '#fff',backgroundColor: '#ea1c1c'});", true);
+                        }
                     }
                 }
             }

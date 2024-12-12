@@ -63,27 +63,7 @@
             </div>
         </div>
         </div>
-            <div id="fadeInRightModal" class="modal zoomIn" tabindex="-1" aria-labelledby="fadeInRightModalLabel" style="display: none;" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="fadeInRightModalLabel">Message Information</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="table-responsive" id="Contactinfosingle">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-info" data-bs-dismiss="modal">Close</button>
-            </div>
-        </div>
-    </div>
-</div>
+            
         <script src="assets/js/jquery-3.6.0.min.js"></script>
         <script>
             $(document).ready(function () {
@@ -131,26 +111,6 @@
 
             });
         </script>
-    <script>
-        $(document).ready(function () {
-            $(document.body).on('click', '.btnmsg', function () {
-                $("#Contactinfosingle").empty();
-                var elem = $(this);
-                var id = elem.attr('data-id');
-                var name = elem.attr('data-name');
-                var Message = elem.attr('data-message');
-                $('.modal-header .modal-title').html('Message Information - ' + name);
-                if (Message) {
-                    var tableinfo = "<table class='table'><tbody>";
-                    tableinfo += "<tr><td>" + Message + "</td></tr>";
-                    tableinfo += "</tbody></table>";
-                    $("#Contactinfosingle").append(tableinfo);
-                } else {
-                    $("#Contactinfosingle").html("No message available.");
-                }
-            });
-        });
-
-    </script>
+    
 </asp:Content>
 

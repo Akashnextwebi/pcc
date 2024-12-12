@@ -275,8 +275,8 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="mb-3">
-                            <asp:Button runat="server" ID="btnSave" CssClass="btn btn-primary" Text="Save" OnClick="btnSave_Click" OnClientClick="tinyMCE.triggerSave(false,true);" ValidationGroup="Save" Style="margin-top: 10px;" />
-                            <asp:Button runat="server" ID="btnNew" CssClass="btn btn-info" Visible="false" Text="Add New Case Study" OnClick="btnNew_Click" Style="margin-top: 10px;" />
+                            <asp:Button runat="server" ID="btnSave" CssClass="btn btn-success" Text="Save" OnClick="btnSave_Click" OnClientClick="tinyMCE.triggerSave(false,true);" ValidationGroup="Save" Style="margin-top: 10px;" />
+                            <asp:Button runat="server" ID="btnNew" CssClass="btn btn-success" Visible="false" Text="Add New Case Study" OnClick="btnNew_Click" Style="margin-top: 10px;" />
                             <asp:Label ID="lblThumb" runat="server" Visible="false"></asp:Label>
                             <asp:Label ID="lblDetailImg" runat="server" Visible="false"></asp:Label>
                             <asp:Label ID="lblPDF" runat="server" Visible="false"></asp:Label>

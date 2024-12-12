@@ -41,7 +41,7 @@ public partial class Admin_view_testimonials : System.Web.UI.Page
                 strTestimonials += @"<tr>
                                         <td>" + (i + 1) + @"</td>
                                         <td>" + BD[i].Name + @"</td>
-                                        <td><a href='javascript:void(0);' data-bs-toggle='modal' data-bs-target='#fadeInRightModal' class='btn btn-sm btn-secondary badge-gradient-secondary btnmsg' data-message='" + BD[i].TestimonialDesc + "' data-id=" + BD[i].Id + @" data-name=" + BD[i].Name + @">View Message</a></td>
+                                        <td>"+ Message + @"</td>
                                         <td>" + BD[i].AddedBy + @"</td>
                                          <td>" + BD[i].AddedOn.ToString("dd/MMM/yyyy") + @"</td>
                                         <td class='text-center'> 

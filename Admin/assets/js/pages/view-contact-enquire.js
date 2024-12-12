@@ -64,15 +64,21 @@ $(document.body).on("click", ".deleteItem", function () {
     })
 });
 // message
-
-    $(document).ready(function () {
-        $(document.body).on('click', '.btnmsg', function () {
-            $("#Contactinfosingle").empty();
-            var elem = $(this);
-            var id = elem.attr('data-id');
-            var name = elem.attr('data-name');
-            var Message = elem.attr('data-message');
-            $('.modal-header .modal-title').html('Message Information - ' + name);
+$(document.body).on('click', '#Viewcust', function () {
+    $("#Contactinfosingle").empty();
+    var elem = $(this);
+    var id = elem.attr('data-vid');
+    var name = elem.attr('data-vname');
+    $('.modal-header .modal-title').html('Message Information - ' + name);
+    $.ajax({
+        type: 'POST',
+        url: "view-contact.aspx/GetContactMessage",
+        data: "{id: '" + id + "'}",
+        contentType: 'application/json; charset=utf-8',
+        dataType: "json",
+        async: false,
+        success: function (res) {
+            var Message = res.d;
             if (Message) {
                 var tableinfo = "<table class='table'><tbody>";
                 tableinfo += "<tr><td>" + Message + "</td></tr>";
@@ -81,6 +87,8 @@ $(document.body).on("click", ".deleteItem", function () {
             } else {
                 $("#Contactinfosingle").html("No message available.");
             }
-        });
-  });
+        }
+    });
+});
+  
 

@@ -51,7 +51,7 @@
                                 </div>
                                 <div class="col-lg-4 mb-3">
                                     <label class="">Industry<sup class="text-danger">*</sup></label>
-                                    <asp:DropDownList runat="server" ID="ddlindustry" CssClass="form-control"  AutoPostBack="true"></asp:DropDownList>
+                                    <asp:DropDownList runat="server" ID="ddlindustry" CssClass="form-control" AutoPostBack="true"></asp:DropDownList>
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="ddlindustry" InitialValue="0" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Field can't be empty"></asp:RequiredFieldValidator>
                                 </div>
                             </div>
@@ -128,10 +128,10 @@
                                         <%=strThumbImage %>
                                         <h6 class=" mt-1">Thumb Image</h6>
                                     </div>
-                                    <a href="/<%=strUploadPDF %>" class="col-lg-3 text-center" target="_blank">
-                                        <img src="assets/images/pdf.png" alt="" width="60" height="60"><br />
-                                        Check PDF
-                                    </a>
+                                    <div>
+                                        <%=strUploadPDF %><br />
+                                        <h6 class=" mt-1">Check PDF</h6>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -139,8 +139,8 @@
                 </div>
             </div>
             <div class="mb-3">
-                <asp:Button runat="server" ID="btnSave" CssClass="btn btn-primary" Text="Save" OnClick="btnSave_Click" OnClientClick="tinyMCE.triggerSave(false,true);" ValidationGroup="Save" Style="margin-top: 10px;" />
-                <asp:Button runat="server" ID="btnNew" CssClass="btn btn-info" Visible="false" Text="Add New Product" OnClick="btnNew_Click" Style="margin-top: 10px;" />
+                <asp:Button runat="server" ID="btnSave" CssClass="btn btn-success" Text="Save" OnClick="btnSave_Click" OnClientClick="tinyMCE.triggerSave(false,true);" ValidationGroup="Save" Style="margin-top: 10px;" />
+                <asp:Button runat="server" ID="btnNew" CssClass="btn btn-success" Visible="false" Text="Add New Product" OnClick="btnNew_Click" Style="margin-top: 10px;" />
                 <asp:Label ID="lblThumb" runat="server" Visible="false"></asp:Label>
                 <asp:Label ID="lblPDF" runat="server" Visible="false"></asp:Label>
             </div>

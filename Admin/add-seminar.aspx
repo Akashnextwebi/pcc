@@ -50,8 +50,8 @@
 
                             <div class="col-lg-12 mb-2">
                                 <div>
-                                    <asp:Button ID="btnSave" runat="server" Text="Save" ValidationGroup="Save" CssClass="btn btn-secondary waves-effect waves-light " OnClientClick="tinyMCE.triggerSave(false,true);" OnClick="btnSave_Click" />
-                                    <asp:Button ID="btnNew" runat="server" Text="Add New Seminar" Visible="false" CssClass="btn btn-info waves-effect waves-light" OnClick="btnNew_Click" />
+                                    <asp:Button ID="btnSave" runat="server" Text="Save" ValidationGroup="Save" CssClass="btn btn-success waves-effect waves-light " OnClientClick="tinyMCE.triggerSave(false,true);" OnClick="btnSave_Click" />
+                                    <asp:Button ID="btnNew" runat="server" Text="Add New Seminar" Visible="false" CssClass="btn btn-success waves-effect waves-light" OnClick="btnNew_Click" />
                                     <asp:Label ID="lblThumb" runat="server" Visible="false"></asp:Label>
 
                                 </div>

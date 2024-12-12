@@ -54,8 +54,117 @@
                                     </div>
                                 </div>
                             </div>
+                           <div class="row">
+                        <div class="col-xl-12">
+                            <div class="card crm-widget">
+                                <div class="card-body p-0">
+                                    <div class="row row-cols-xxl-5 row-cols-md-3 row-cols-1 g-0">
+                                        <div class="col">
+                                            <div class="py-4 px-3">
+                                                <h5 class="text-muted text-uppercase fs-13"><a href="view-blogs.aspx">View Blogs</a><i class=""></i></h5>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="flex-shrink-0">
+                                                        <i class="mdi mdi-image display-6 text-warning"></i>
+                                                    </div>
+                                                    <div class="flex-grow-1 ms-3">
+                                                        <h2 class="mb-0"><span class="counter-value" data-target="<%=StrBlogsCnt %>"><%=StrBlogsCnt %></span></h2>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><!-- end col -->
+                                        <div class="col">
+                                            <div class="mt-3 mt-md-0 py-4 px-3">
+                                                <h5 class="text-muted text-uppercase fs-13"><a href="view-case-studies.aspx">View Case Study</a><i class=""></i></h5>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="flex-shrink-0">
+                                                        <i class="mdi mdi-book display-6 text-secondary"></i>
+                                                    </div>
+                                                    <div class="flex-grow-1 ms-3">
+                                                        <h2 class="mb-0"><span class="counter-value" data-target="<%=strCasestudycnt %>"><%=strCasestudycnt %></span></h2>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><!-- end col -->
+                                        <div class="col">
+                                            <div class="mt-3 mt-md-0 py-4 px-3">
+                                                <h5 class="text-muted text-uppercase fs-13"><a href="view-product.aspx">View Product</a><i class=""></i></h5>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="flex-shrink-0">
+                                                        <i class="mdi mdi-cart  display-6 text-info"></i>
+                                                    </div>
+                                                    <div class="flex-grow-1 ms-3">
+                                                        <h2 class="mb-0"><span class="counter-value" data-target="<%=strProductcnt %>"><%=strProductcnt %></span></h2>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><!-- end col -->
+                                        <div class="col">
+                                            <div class="mt-3 mt-lg-0 py-4 px-3">
+                                                <h5 class="text-muted text-uppercase fs-13"><a href="manage-investor.aspx">View Ivestor</a><i class=""></i></h5>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="flex-shrink-0">
+                                                        <i class="mdi mdi-bank  display-6 text-danger"></i>
+                                                    </div>
+                                                    <div class="flex-grow-1 ms-3">
+                                                        <h2 class="mb-0"><span class="counter-value" data-target="<%=strInvestorcnt %>"><%=strInvestorcnt %></span></h2>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><!-- end col -->
+                                        <div class="col">
+                                            <div class="mt-3 mt-lg-0 py-4 px-3">
+                                                <h5 class="text-muted text-uppercase fs-13"><a href="view-jobs.aspx">View Jobs</a><i class=""></i></h5>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="flex-shrink-0">
+                                                        <i class="mdi mdi-briefcase display-6 text-success"></i>
+                                                    </div>
+                                                    <div class="flex-grow-1 ms-3">
+                                                        <h2 class="mb-0"><span class="counter-value" data-target="<%=strJobcnt %>"><%=strJobcnt %></span></h2>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><!-- end col -->
+                                    </div><!-- end row -->
+                                </div><!-- end card body -->
+                            </div><!-- end card -->
+                        </div><!-- end col -->
+                    </div>
                         </div>
 
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="card">
+                        <div class="card-header align-items-center d-flex">
+                            <h4 class="card-title mb-0 flex-grow-1">Recent Contact Request</h4>
+                            <div class="flex-shrink-0">
+                                <%--<a href="/admin/view-booking-enquiry.aspx" class="btn btn-soft-info btn-sm shadow-none">
+                                    <i class="ri-file-list-3-line align-middle"></i>
+                                    View Booking Request
+                                </a>--%>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive table-card">
+                                <table class="table table-borderless table-centered align-middle table-nowrap mb-0">
+                                    <thead class="text-muted table-light">
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Name</th>
+                                            <th>Email</th>
+                                            <th>Subject</th>
+                                            <th>Message</th>
+                                            <th>Added On</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <%=strContacts %>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

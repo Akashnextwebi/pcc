@@ -26,13 +26,17 @@ public partial class Admin_view_contact : System.Web.UI.Page
 
             for (int i = 0; i < BD.Count; i++)
             {
-
+                var Message = @"<td>
+                                    <button data-bs-toggle='modal' data-bs-target='#fadeInRightModal' type='button' id='Viewcust' data-vid='" + BD[i].Id + @"' data-vname='" + BD[i].Name + @"' class='btn btn-success btn-label waves-effect right waves-light rounded-pill btn-sm'>
+                                        <i class='ri-mail-send-line label-icon align-middle rounded-pill fs-16 ms-2'></i>
+                                    View Message
+                                    </button></td>";
                 strContact += @"<tr>
                                         <td>" + (i + 1) + @"</td>
                                         <td>" + BD[i].Name + @"</td>
-                                        <td>" + BD[i].Email + @"</td>
+                                        <td><a href='mailto:" + BD[i].Email + @"'>" + BD[i].Email + @"</a></td>
                                         <td>" + BD[i].Subject + @"</td>
-                                      <td><a href='javascript:void(0);' data-bs-toggle='modal' data-bs-target='#fadeInRightModal' class='btn btn-sm btn-secondary badge-gradient-secondary btnmsg' data-message='" + BD[i].Message + "' data-id=" + BD[i].Id + @" data-name=" + BD[i].Name + @">View Message</a></td>
+                                          " + Message + @"
                                         <td>" + BD[i].AddedOn.ToString("dd-MMM-yyyy") + @"</td>    
                                         <td class='text-center'> 
                                           <a href = 'javascript:void(0);' class='bs-tooltip  fs-18 link-danger deleteItem' data-id='" + BD[i].Id + @"' data-bs-toggle='tooltip' data-placement='top' title='Delete Contacts'><i class='mdi mdi-trash-can-outline'></i></a> 
@@ -82,7 +86,7 @@ public partial class Admin_view_contact : System.Web.UI.Page
         try
         {
             SqlConnection conSQ = new SqlConnection(ConfigurationManager.ConnectionStrings["conSQ"].ConnectionString);
-            message = "";
+            message = ContactUs.GetMessageById(conSQ, id);
         }
         catch (Exception ex)
         {

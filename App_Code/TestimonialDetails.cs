@@ -24,6 +24,7 @@ public class TestimonialDetails
     public DateTime AddedOn { get; set; }   
     public string AddedIp {  get; set; }
     public string AddedBy { get; set; }
+
     public string Status { get; set; }
     /// <summary>
     /// Inserts a new testimonial into the database.
@@ -189,7 +190,7 @@ public class TestimonialDetails
                             Ratings = Convert.ToString(dr["Ratings"]),
                             TestimonialDesc = Convert.ToString(dr["TestimonialDesc"]),
                             AddedOn = Convert.ToDateTime(Convert.ToString(dr["AddedOn"])),
-                            AddedBy = Convert.ToString(dr["AddedBy"]),
+                            AddedBy = Convert.ToString(dr["UpdatedBy"]),
                             AddedIp = Convert.ToString(dr["AddedIP"]),
                             Status = Convert.ToString(dr["Status"])
                         }).ToList();

@@ -172,4 +172,34 @@ public class ContactUs
         }
         return categories;
     }
+    public static string GetMessageById(SqlConnection conSQ, string id)
+    {
+        string message = null;
+        try
+        {
+            string query = "SELECT TOP 1 Message FROM ContactUs WHERE Id = @Id AND Status != 'Deleted'";
+            using (SqlCommand cmd = new SqlCommand(query, conSQ))
+            {
+                cmd.Parameters.AddWithValue("@Id", id);
+                conSQ.Open();
+                object result = cmd.ExecuteScalar();
+                if (result != DBNull.Value)
+                {
+                    message = result.ToString();
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "GetMessageById", ex.Message);
+        }
+        finally
+        {
+            if (conSQ.State == ConnectionState.Open)
+            {
+                conSQ.Close();
+            }
+        }
+        return message;
+    }
 }
