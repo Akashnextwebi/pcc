@@ -164,14 +164,14 @@
                  <li class="has-sub">
                    <a href="#">Company</a>
                    <ul>
-                     <li><a href="#">About Us</a></li>
+                     <li><a href="about-us.aspx">About Us</a></li>
                      <li><a href="evolution.aspx">Evolution</a></li>
-                     <li><a href="#">Board of Directors</a></li>
-                     <li><a href="#">Our team</a></li>
-                     <li><a href="#">Partners</a></li>
-                     <li><a href="#">Principals</a></li>
-                     <li><a href="#">Testimonials</a></li>
-                     <li><a href="#">Quality and Accreditations</a></li>
+                     <li><a href="board-of-directors.aspx">Board of Directors</a></li>
+                     <li><a href="our-team.aspx">Our team</a></li>
+                     <li><a href="partners.aspx">Partners</a></li>
+                     <li><a href="principals.aspx">Principals</a></li>
+                     <li><a href="testimonials.aspx">Testimonials</a></li>
+                     <li><a href="quality-and-accreditations.aspx">Quality and Accreditations</a></li>
                    </ul>
                  </li>
                  <li class="has-sub">
@@ -237,17 +237,7 @@
  <!-- offcanvas-area -->
  <div class="offcanvas-menu">
    <span class="menu-close"><i class="fas fa-times"></i></span>
-   <form
-     role="search"
-     method="get"
-     id="searchform"
-     class="searchform"
-     action="#"
-   >
-     <input type="text" name="s" id="search" placeholder="Search" />
-     <button><i class="fa fa-search"></i></button>
-   </form>
-
+  
    <div id="cssmenu3" class="menu-one-page-menu-container">
      <ul class="menu">
        <li class="menu-item menu-item-type-custom menu-item-object-custom">
@@ -423,7 +413,7 @@
  <script src="js/popper.min.js"></script>
  <script src="js/bootstrap.min.js"></script>
  <script src="js/slick.min.js"></script>
- <script src="js/ajax-form.js"></script>
+<%-- <script src="js/ajax-form.js"></script>--%>
  <script src="js/paroller.js"></script>
  <script src="js/wow.min.js"></script>
  <script src="js/js_isotope.pkgd.min.js"></script>
