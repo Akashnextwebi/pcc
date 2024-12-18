@@ -203,7 +203,7 @@
                  <li class="has-sub">
                    <a href="#">Services</a>
                    <ul>
-                     <li><a href="#">Legacy Upgrade</a></li>
+                     <li><a href="legacy-upgrade.aspx">Legacy Upgrade</a></li>
                      <li><a href="#">AMC</a></li>
                      <li>
                        <a href="#"

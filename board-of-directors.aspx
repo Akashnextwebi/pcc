@@ -82,7 +82,7 @@
                             </div>
                             <div class="people-content">
                                 <div class="name-degi">
-                                    <h5><a href="people-details.html">Mr. Harbard Mack</a></h5>
+                                    <h5><a href="#">Mr. Harbard Mack</a></h5>
                                     <span>Senior Consultant</span>
                                 </div>
                                <div class="social-icon">
@@ -100,7 +100,7 @@ View Profile
                             </div>
                             <div class="people-content">
                                 <div class="name-degi">
-                                    <h5><a href="people-details.html">Mr. DF Daniel Scoot</a></h5>
+                                    <h5><a href="#">Mr. DF Daniel Scoot</a></h5>
                                     <span>Senior Consultant</span>
                                 </div>
                               <div class="social-icon">
@@ -118,7 +118,7 @@ View Profile
                             </div>
                             <div class="people-content">
                                 <div class="name-degi">
-                                    <h5><a href="people-details.html">Mrs. Hanrry Ghust</a></h5>
+                                    <h5><a href="#">Mrs. Hanrry Ghust</a></h5>
                                     <span>Senior Consultant</span>
                                 </div>
                                 <div class="social-icon">
@@ -136,7 +136,7 @@ View Profile
                             </div>
                             <div class="people-content">
                                 <div class="name-degi">
-                                    <h5><a href="people-details.html">Mr. Dr Richard Joseph</a></h5>
+                                    <h5><a href="#">Mr. Dr Richard Joseph</a></h5>
                                     <span>Senior Consultant</span>
                                 </div>
                                 <div class="social-icon">
