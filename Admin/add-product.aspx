@@ -35,7 +35,7 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <label class="">Product URL <sup>*</sup></label>
-                                    <asp:TextBox runat="server" MaxLength="100" class="form-control mb-2 mr-sm-2 txtUrl" ReadOnly="true" ID="txtUrl" placeholder="Auto-Generated" />
+                                    <asp:TextBox runat="server" MaxLength="100" class="form-control mb-2 mr-sm-2 txtUrl"  ID="txtUrl" placeholder="Auto-Generated" />
                                     <asp:RequiredFieldValidator ID="rfv2" runat="server" ControlToValidate="txtUrl" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Field can't be empty"></asp:RequiredFieldValidator>
                                 </div>
 
