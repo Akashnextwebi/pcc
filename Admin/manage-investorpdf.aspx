@@ -78,7 +78,7 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <%=strInvestorPdf%>
+                                            <%=strInvestorPdf%> 
                                         </tbody>
                                         <tfoot>
                                             <tr>

@@ -36,7 +36,7 @@
                                         <tr>
                                             <th>#</th>
                                             <th>Thumb Image</th>
-                                            <th>SeminarTitle</th>
+                                            <th>Seminar Title</th>
                                             <th>Tag</th>
                                             <th>Added On</th>
                                             <th class="text-center">Action</th>

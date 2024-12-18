@@ -39,11 +39,11 @@
 
                     <div class="h-100">
                         <div class="row mb-3 pb-1">
-                            <div class="col-12">
+                            <div class="col-12 mb-3">
                                 <div class="d-flex align-items-lg-center flex-lg-row flex-column">
                                     <div class="flex-grow-1">
-                                        <h4 class="fs-16 mb-1">Hello, <%=Strusername %>!</h4>
-                                        <p class="text-muted mb-0">Here's what's happening with your store today.</p>
+                                        <h4 class="fs-16 mb-0">Hello, <%=Strusername %>!</h4>
+                                        <p class="text-muted mb-1">Here's what's happening with your store today.</p>
                                     </div>
                                     <div class="mt-3 mt-lg-0 d-none">
                                         <div class="row g-3 mb-0 align-items-center">
@@ -140,10 +140,10 @@
                         <div class="card-header align-items-center d-flex">
                             <h4 class="card-title mb-0 flex-grow-1">Recent Contact Request</h4>
                             <div class="flex-shrink-0">
-                                <%--<a href="/admin/view-booking-enquiry.aspx" class="btn btn-soft-info btn-sm shadow-none">
+                                <a href="/admin/view-contact.aspx" class="btn btn-soft-success btn-sm shadow-none">
                                     <i class="ri-file-list-3-line align-middle"></i>
-                                    View Booking Request
-                                </a>--%>
+                                    View All Contact Request
+                                </a>
                             </div>
                         </div>
                         <div class="card-body">

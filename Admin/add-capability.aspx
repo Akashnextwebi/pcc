@@ -35,8 +35,8 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <label class="">Capability URL<sup class="text-danger">*</sup></label>
-                                    <asp:TextBox runat="server" class="form-control mb-2 mr-sm-2 txtUrl" ID="txtUrl" placeholder="Capability Url" />
-                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtUrl" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Field can't be empty"></asp:RequiredFieldValidator>
+                                    <asp:TextBox runat="server" class="form-control mb-2 mr-sm-2 txtUrl"  ID="txtUrl" placeholder="Capability Url"  />
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtUrl" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Field can't be empty" Enabled="false" ></asp:RequiredFieldValidator>
                                 </div>
                             </div>
                             <div class="col-lg-12 mb-3">
