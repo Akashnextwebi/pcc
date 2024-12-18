@@ -4,32 +4,37 @@
     <link href="css/breadcrums.css" rel="stylesheet" />
     <style>
         .mb-130 {
-    margin-bottom: 130px;
-}
+            margin-bottom: 130px;
+        }
 
-.pt-130 {
-    padding-top: 130px;
-}
+        .pt-130 {
+            padding-top: 130px;
+        }
+
         .mb-70 {
             margin-bottom: 70px;
         }
+
         .details-page-content h2 {
-    color:#000;
-    font-size: 40px;
-    font-weight: 400;
-    line-height: 1.2;
-    margin-bottom: 25px;
-}
+            color: #000;
+            font-size: 40px;
+            font-weight: 400;
+            line-height: 1.2;
+            margin-bottom: 25px;
+        }
+
         .details-page-content p {
-    color: #566064;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.7;
-    margin-bottom: 12px;
-}
+            color: #566064;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1.7;
+            margin-bottom: 12px;
+        }
+
         .service-details-wrapper .service-details-solution-area .solution-img {
             height: 100%;
         }
+
             .service-details-wrapper .service-details-solution-area .solution-img img {
                 height: 100%;
                 -o-object-fit: cover;
@@ -37,39 +42,86 @@
                 -o-object-position: left;
                 object-position: left;
             }
-.details-section-title {
-    display: flex
-;
-    align-items: center;
-    gap: 8px;
-    background-color: #f4f9fd;
-    padding: 14px 30px;
-}
-.details-section-title h4 {
-    color: #000;
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 1.2;
-    margin-bottom: 0;
-}.service-details-wrapper .service-details-solution-area .solution-content ul {
-    list-style: decimal;
-    padding-left: 20px;
-    -moz-columns: 2;
-    columns: 2;
-    -moz-column-gap: 30px;
-    column-gap: 30px;
-    max-width: 740px;
-    width: 100%;
-    margin-bottom: 30px;
-}
- .service-details-wrapper .service-details-solution-area .solution-content ul li {
-    color: #566064;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 1.5;
-    margin-bottom: 15px;
-}
 
+        .details-section-title {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background-color: #f4f9fd;
+            padding: 14px 30px;
+        }
+
+            .details-section-title h4 {
+                color: #000;
+                font-size: 24px;
+                font-weight: 400;
+                line-height: 1.2;
+                margin-bottom: 0;
+            }
+
+        .service-details-wrapper .service-details-solution-area .solution-content ul {
+            list-style: decimal;
+            padding-left: 20px;
+            -moz-columns: 2;
+            columns: 2;
+            -moz-column-gap: 30px;
+            column-gap: 30px;
+            max-width: 740px;
+            width: 100%;
+            margin-bottom: 30px;
+        }
+
+            .service-details-wrapper .service-details-solution-area .solution-content ul li {
+                color: #566064;
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 1.5;
+                margin-bottom: 15px;
+            }.event-details-page .event-fetures {
+    padding-left: 30px;
+    position: relative;
+}
+             .event-details-page .event-fetures::before {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 4px;
+}
+             .event-details-page .event-fetures h6 {
+    color:#fff;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+              .event-details-page .event-fetures p{
+                  color:#fff;
+              }
+                .event-details-page .event-fetures .feature-list {
+                    padding-top: 10px;
+                    padding-left: 1.5rem;
+                }
+                .event-details-page .event-fetures .feature-list li {
+    color:#fff;
+    font-size: 15px;
+    font-weight: 500;
+    list-style: decimal;
+    margin-bottom: 12px;
+}
+                .sticky-img{
+                    position:sticky;
+                    top:100px !important;
+                    display:block;
+                    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                    background:#fff;
+                    padding:2px;
+                }
+                .section-padding{
+                    padding:80px 0px;
+                }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
@@ -88,7 +140,7 @@
             </div>
         </div>
     </div>
-    <div class="service-details-wrapper pt-130 mb-130">
+    <div class="service-details-wrapper pt-130 mb-40">
         <div class="container-fluid one pl--95">
             <div class="details-page-content mb-70">
                 <h2>Health &amp; Care Consulting</h2>
@@ -101,46 +153,86 @@
                     </div>
                 </div>
             </div>
-            <div class="service-details-solution-area mb-70">
-                <div class="row g-md-4 gy-5">
-                    <div class="col-lg-3 col-md-4">
-                        <div class="solution-img">
-                            <img src="image/update/1.png" alt="">
-                        </div>
-                    </div>
-                    <div class="col-lg-9 col-md-8">
-                        <div class="solution-content">
-                            <div class="details-section-title mb-40">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="14" viewBox="0 0 10 14">
-                                    <path d="M0 14V0L10 7L0 14Z"></path>
-                                </svg>
-                                <h4>Solution Approach</h4>
-                            </div>
-                            <ul>
-                                <li>1. Information Gathering and Analysis.</li>
-                                <li>2. Stakeholder Collaboration.</li>
-                                <li>3. Strategy Development.</li>
-                                <li>4. Solution Design &amp; Sketching.</li>
-                                <li>5. Implementation Planning.</li>
-                                <li>6. Implementation Planning.</li>
-                                <li>7. Change Management.</li>
-                                <li>8. Quality Assurance.</li>
-                                <li>9. Sustainability and Long-Term Planning.</li>
-                                <li>10. Closure and Transition.</li>
-                            </ul>
-                           
-                        </div>
-                    </div>
+
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <img src="image/ls/1.png" />
                 </div>
+                <div class="col-lg-6">
+                    <img src="image/ls/2.png" />
+
+                </div>
+
             </div>
-            
+
+
         </div>
     </div>
-    <div class="section-padding">
+    <div class="section-padding bg-dark event-details-page">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-3">
-
+            <div class="service-details-solution-area mb-70 ">
+                <div class="row g-md-4 gy-5">
+                    <div class="col-lg-8">
+                        <div class="section-title1">
+                            <h2 class="text-white">Our Quick Solution</h2>
+                        </div>
+    
+                        <div class="event-fetures mt-30 mb-40">
+                            <h6><span>Step-01 :</span>Assessment of Current System</h6>
+                            <p>Creating a schedule for a business consulting event involves addressing a wide range of topics to cater to the diverse needs and interests of attendees. Here's a comprehensive list of potential schedule topics for a business consulting event:</p>
+                            <ul class="feature-list">
+                                <li>Inventory: Identify all existing components—controllers, sensors, communication hardware, and software.
+/li>
+                                <li>Compatibility Check: Evaluate how the legacy components interact and where there are gaps in performance or integration with newer technologies.
+</li>
+                                <li>Risk Assessment: Consider safety, operational risks, and regulatory compliance during the upgrade.
+</li>
+                                
+                            </ul>
+                        </div>
+                        <div class="event-fetures mb-40">
+                            <h6><span>Step-02 :</span> Hardware Upgrade</h6>
+                            <p>Creating a schedule for a business consulting event involves addressing a wide range of topics to cater to the diverse needs and interests of attendees. Here's a comprehensive list of potential schedule topics for a business consulting event:</p>
+                            <ul class="feature-list">
+                                <li>Replace Obsolete Components: Modern controllers, sensors, and communication modules that offer improved speed, precision, and reliability.
+</li>
+                                <li>Power Management: Upgrade the power control systems to support higher loads, integrate better energy storage, or renewable energy solutions if applicable.
+</li>
+                                <li>Communication Protocols: Transition to more modern, secure, and efficient protocols (e.g., Ethernet, IoT-based systems) rather than older, legacy protocols like RS-485 or Modbus, which may be slower or less secure.
+</li>
+                            </ul>
+                        </div>
+                        <div class="event-fetures mb-40">
+                            <h6><span>Step-03 :</span> Software Upgrade</h6>
+                            <p>Creating a schedule for a business consulting event involves addressing a wide range of topics to cater to the diverse needs and interests of attendees. Here's a comprehensive list of potential schedule topics for a business consulting event:</p>
+                            <ul class="feature-list">
+                                <li>Control Systems: Update or replace legacy control software (e.g., SCADA or PLCs) with more scalable, flexible, and feature-rich options.
+</li>
+                                <li>Communication Software: Transition to newer communication platforms or middleware that can better handle the data flow, integration, and security.
+</li>
+                                <li>Data Analytics and Reporting: Add systems for data collection, analysis, and real-time reporting, possibly integrating AI/ML for predictive maintenance.
+</li>
+                            </ul>
+                        </div>
+                        <div class="event-fetures mb-40">
+                            <h6><span>Step-04 :</span> Cybersecurity Enhancements</h6>
+                            <p>Creating a schedule for a business consulting event involves addressing a wide range of topics to cater to the diverse needs and interests of attendees. Here's a comprehensive list of potential schedule topics for a business consulting event:</p>
+                            <ul class="feature-list">
+                                <li>Upgrade Security Protocols: Legacy systems may have vulnerabilities that newer systems are more resistant to, so implement stronger cybersecurity practices.
+</li>
+                                <li>Access Control: Ensure tighter access management for personnel and devices accessing the system (e.g., two-factor authentication, role-based access).
+</li>
+                               
+                            </ul>
+                        </div>
+                     
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="sticky-img">
+                              <img src="image/n1/2.png" />
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
