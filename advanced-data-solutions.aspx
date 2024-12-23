@@ -1,7 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="./MasterPage.master" AutoEventWireup="true" CodeFile="advanced-data-solutions.aspx.cs" Inherits="advanced_data_solutions" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
-    <link href="css/about.css" rel="stylesheet" />
     <link href="css/breadcrums.css" rel="stylesheet" />
     <style>
         .service-card p {
@@ -226,6 +225,101 @@
             transition: 0.5s;
             opacity: 0;
         }
+
+        .single-scroll-container {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+            .single-scroll-container .horizontal-scrolling-content {
+                max-width: 700px;
+                width: 100%;
+                background: #000;
+                margin-left: 630px;
+                padding: 100px 30px;
+            }
+
+                .single-scroll-container .horizontal-scrolling-content .section-title1 {
+                    margin-bottom: 10px;
+                }
+
+        .section-title1.two {
+            flex-direction: column;
+        }
+
+        .section-title1 {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            max-width: 1066px;
+            width: 100%;
+            gap: 25px;
+        }
+
+        .single-scroll-container .horizontal-scrolling-content .section-title1 span {
+            color: #fff;
+            border-color: #fff;
+        }
+
+        .single-scroll-container .horizontal-scrolling-content .section-title1 h2 {
+            color: #fff;
+            margin-bottom: 0;
+        }
+
+        .section-title1.two h2 {
+            margin-top: 0;
+            padding-top: 10px;
+        }
+
+        .section-title1 h2 {
+            font-size: 40px;
+            font-weight: 400;
+            margin-bottom: 0;
+            max-width: 640px;
+            margin-top: -10px;
+        }
+
+        .section-title1 > span {
+            color: #0d1720;
+            text-align: center;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1;
+            display: inline-block;
+            border-radius: 16px;
+            border: 1px solid #000;
+            padding: 7px 20px;
+            white-space: nowrap;
+        }
+
+        .single-scroll-container .horizontal-scrolling-content p {
+            color: #fff;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 30px;
+        }
+
+        .broacher-card {
+    padding: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+        .broacher-content {
+            margin-top:15px;
+
+        }
+        .broacher-content span {
+            border-bottom:1px solid #000;
+            color:#79010c;
+            font-weight:600;
+            font-size:18px !important;
+        }
+
+
+          .broacher-content h4 {
+    font-size:24px;
+              margin-top:10px;
+  }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
@@ -236,15 +330,35 @@
                     <div class="col-lg-12">
                         <div class="banner-content">
                             <h1>Advance Data Solutions</h1>
-                            <ul class="breadcrumb-list">
-                                <li><a href="Default.aspx">Home</a></li>
-                                <li>Advance Data Solutions</li>
-                            </ul>
+                            <div class="">
+                                <ul class="breadcrumb-list">
+                                    <li><a href="Default.aspx">Home</a></li>
+                                    <li>Advance Data Solutions</li>
+                                </ul>
+                            </div>
+
+                            <div class="slider-btn mt-30 ">
+                                <a href="#" class="btn ss-btn mr-15" data-animation="fadeInLeft" data-delay=".4s" tabindex="0" contenteditable="false" style="animation-delay: 0.4s; cursor: pointer;"><i class="fal fa fa-download"></i>Download the broacher</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <section class="section-padding pb-0">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10">
+                        <h2>Advance Data Solutions: Revolutionizing Park Control and Communications
+
+                        </h2>
+                        <p>Advance Data Solutions is at the forefront of developing advanced technologies for park control and communication systems. With a focus on innovation, the company delivers seamless, integrated solutions that enhance efficiency, safety, and user experience. From managing traffic flow in parking facilities to ensuring robust communication networks, Advance Data Solutions combines cutting-edge technology with industry expertise to meet the demands of modern infrastructure. Their solutions are tailored to optimize operations, reduce downtime, and provide reliable, scalable systems for diverse applications.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
         <section class="section-padding">
             <div class="container">
                 <div class="row gy-4">
@@ -346,6 +460,100 @@
                     </div>
                 </div>
             </div>
+        </section>
+        <div class="horizontal-scrolling-section ">
+            <div class="single-scroll-container" style="background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%), url(image/scroll-bg-1.jpg);">
+                <div class="container-fluid one pl--95">
+                    <div class="horizontal-scrolling-content">
+                        <div class="section-title1 two">
+                            <span>Real Estate</span>
+                            <h2>Defense Solutions Product Guide
+                            </h2>
+                        </div>
+                        <p>
+                            Explore Curtiss-Wright's mission-critical solutions based on the latest technologies and open standards. These innovative solutions are trusted and proven for aerospace and defense applications.
+                        </p>
+                        <div class="slider-btn mt-30 ">
+                            <a href="#" class="btn ss-btn mr-15" data-animation="fadeInLeft" data-delay=".4s" tabindex="0" contenteditable="false" style="animation-delay: 0.4s; cursor: pointer;"><i class="fal fa fa-download"></i>Download the product guide</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="section-padding">
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="pcc-section-heading mb-0">
+                            <span>Our Core Competence</span>
+                            <h2>Brochure for Advance Data Solutions
+</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-lg-3">
+                        <div class="broacher-card">
+                            <div class="broacher-img">
+                                <img src="image/brochure/1.png" alr="img" />
+
+                            </div>
+                            <div class="broacher-content">
+                                <span>White Paper</span>
+                                <h4>Innovative Jet Control Communication Solutions
+                                </h4>
+                                <p>Jet control and communication systems are critical for ensuring safe and efficient aviation operations. Advanced technologies enable seamless coordination between pilots, ground crews, and air traffic.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                      <div class="col-lg-3">
+      <div class="broacher-card">
+          <div class="broacher-img">
+              <img src="image/brochure/1.png" alr="img" />
+
+          </div>
+          <div class="broacher-content">
+              <span>White Paper</span>
+              <h4>Innovative Jet Control Communication Solutions
+              </h4>
+              <p>Jet control and communication systems are critical for ensuring safe and efficient aviation operations. Advanced technologies enable seamless coordination between pilots, ground crews, and air traffic.</p>
+          </div>
+      </div>
+
+  </div>  <div class="col-lg-3">
+      <div class="broacher-card">
+          <div class="broacher-img">
+              <img src="image/brochure/1.png" alr="img" />
+
+          </div>
+          <div class="broacher-content">
+              <span>White Paper</span>
+              <h4>Innovative Jet Control Communication Solutions
+              </h4>
+              <p>Jet control and communication systems are critical for ensuring safe and efficient aviation operations. Advanced technologies enable seamless coordination between pilots, ground crews, and air traffic.</p>
+          </div>
+      </div>
+
+  </div>  <div class="col-lg-3">
+      <div class="broacher-card">
+          <div class="broacher-img">
+              <img src="image/brochure/1.png" alr="img" />
+
+          </div>
+          <div class="broacher-content">
+              <span>White Paper</span>
+              <h4>Innovative Jet Control Communication Solutions
+              </h4>
+              <p>Jet control and communication systems are critical for ensuring safe and efficient aviation operations. Advanced technologies enable seamless coordination between pilots, ground crews, and air traffic.</p>
+          </div>
+      </div>
+
+  </div>
+                </div>
+            </div>
+
         </section>
     </main>
 </asp:Content>

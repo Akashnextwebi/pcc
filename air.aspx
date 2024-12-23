@@ -2,322 +2,10 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <link href="css/breadcrums.css" rel="stylesheet" />
-    <style>
-        .mb-80 {
-            margin-bottom: 80px;
-        }
-
-        .pt-80 {
-            padding-top: 80px;
-        }
-
-        .sub-title span {
-            color: #0d1720;
-            text-align: center;
-            font-size: 24px;
-            font-weight: 500;
-            line-height: 1;
-            display: inline-block;
-            border-radius: 16px;
-            border: 1px solid #000;
-            padding: 10px 25px;
-            white-space: nowrap;
-        }
-
-        .mb-60 {
-            margin-bottom: 60px;
-        }
-
-        .section-title1 {
-            display: flex;
-            align-items: flex-start;
-            justify-content: space-between;
-            width: 100%;
-            gap: 25px;
-        }
-
-            .section-title1 h2 {
-                color: #000;
-                font-size: 40px;
-                font-weight: 400;
-                margin-bottom: 0;
-                max-width: 740px;
-                margin-top: -10px;
-            }
-
-        .solution-section .company-logo {
-            position: absolute;
-            left: -300px;
-            bottom: 18px;
-            line-height: 1;
-            z-index: -1;
-        }
-
-        .solution-section .company-logo1 {
-            position: absolute;
-            right: -300px;
-            bottom: 18px;
-            line-height: 1;
-            z-index: 1;
-        }
-
-        .solution-section .company-logo h2 {
-            font-size: 198px;
-            font-weight: 400;
-            background: linear-gradient(180deg, #623a36 0%, #fff 100%);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 0;
-        }
-
-        .solution-section .company-logo1 h2 {
-            font-size: 198px;
-            font-weight: 400;
-            background: linear-gradient(180deg, #623a36 0%, #fff 100%);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 0;
-        }
-
-        .eg-card-2.style-2 {
-            flex-direction: column;
-            padding: 40px 25px;
-            position: relative;
-        }
-
-        .eg-card-2 {
-            padding: 40px;
-            border: 1px solid #eee;
-            display: flex;
-            align-items: flex-start;
-            gap: 30px;
-            transition: 0.35s;
-        }
-
-            .eg-card-2.style-2 .sl-no {
-                position: absolute;
-                top: 30px;
-                right: 25px;
-                line-height: 1;
-            }
-
-            .eg-card-2 .icon {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                transition: 0.35s;
-            }
-    </style>
-    <style>
-        .magnetic-wrap {
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .people-card2 .people-content .name-deg {
-            border: 1px solid #eee;
-            padding: 22px 20px;
-        }
-
-            .people-card2 .people-content .name-deg h5 {
-                margin-bottom: 0;
-            }
-
-            .people-card2 .people-content .name-deg span {
-                color: #000;
-                font-size: 14px;
-                font-weight: 500;
-            }
-
-        .people-card2 .people-content .contact-area {
-            border-bottom: 1px solid #eee;
-            border-right: 1px solid #eee;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-            .people-card2 .people-content .contact-area .contact-number {
-                display: flex;
-                align-items: center;
-            }
-
-                .people-card2 .people-content .contact-area .contact-number .icon {
-                    width: 50px;
-                    height: 45px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    background-color: #e8f1fb;
-                    transition: 0.35s;
-                }
-
-                .people-card2 .people-content .contact-area .contact-number .content {
-                    line-height: 1;
-                    padding-left: 15px;
-                    padding-right: 15px;
-                }
-
-        .people-card2 .people-content .contact-area {
-            border-bottom: 1px solid #eee;
-            border-right: 1px solid #eee;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-            .people-card2 .people-content .contact-area .social-icon {
-                display: flex;
-                align-items: center;
-            }
-
-                .people-card2 .people-content .contact-area .social-icon li {
-                    line-height: 1;
-                    border-left: 1px solid #eee;
-                }
-
-            .people-card2 .people-content .contact-area .contact-number .icon {
-                width: max-content;
-                height: 45px;
-                padding-right: 24px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                background-color: #e8f1fb;
-                transition: 0.35s;
-                padding-left: 20px;
-            }
-
-            .people-card2 .people-content .contact-area .social-icon li {
-                line-height: 1;
-                border-left: 1px solid #eee;
-            }
-
-                .people-card2 .people-content .contact-area .social-icon li a {
-                    height: 45px;
-                    width: 45px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    transition: 0.35s;
-                }
-
-        .contact-area li {
-            display: inline-block;
-            margin: 0px 0px 0px 0 !important;
-        }
-
-        .people-card2 .people-content .contact-area .social-icon {
-            display: flex;
-            align-items: center;
-            background: #fff;
-        }
-
-        .people-card2 .people-content .contact-area {
-            border-bottom: 1px solid #eee;
-            border-right: 1px solid #eee;
-            display: flex;
-            background: #e8f1fb;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .add-read-more.show-less-content .second-section,
-        .add-read-more.show-less-content .read-less {
-            display: none;
-        }
-
-        .add-read-more.show-more-content .read-more {
-            display: none;
-        }
-
-        .add-read-more .read-more,
-        .add-read-more .read-less {
-            font-weight: bold;
-            margin-left: 2px;
-            color: blue;
-            cursor: pointer;
-        }
-
-        .add-read-more {
-            width: 100%;
-            margin: 0 auto;
-        }
-
-        .single-scroll-container {
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            padding-top: 100px;
-            padding-bottom: 100px;
-        }
-
-            .single-scroll-container .horizontal-scrolling-content {
-                max-width: 750px;
-                width: 100%;
-            }.single-scroll-container .horizontal-scrolling-content .section-title1 {
-    margin-bottom: 10px;
-}
-.section-title1.two {
-    flex-direction: column;
-}
-.section-title1 {
-    display: flex
-;
-    align-items: flex-start;
-    justify-content: space-between;
-    max-width: 1066px;
-    width: 100%;
-    gap: 25px;
-}
-        .single-scroll-container .horizontal-scrolling-content .section-title1 span {
-            color:#fff;
-            border-color: #fff;
-        }
-        .section-title1 > span {
-    color: #0d1720;
-    text-align: center;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1;
-    display: inline-block;
-    border-radius: 16px;
-    border: 1px solid #000;
-    padding: 7px 20px;
-    white-space: nowrap;
-}
-        .single-scroll-container .horizontal-scrolling-content .section-title1 h2 {
-    color: #fff;
-    margin-bottom: 0;
-}
-.section-title1.two h2 {
-    margin-top: 0;
-    padding-top: 10px;
-}
-        .section-title1 h2 {
-            color: #fff;
-            font-size: 40px;
-            font-weight: 400;
-            margin-bottom: 0;
-            max-width: 740px;
-            margin-top: -10px;
-        }
-        .single-scroll-container .horizontal-scrolling-content p {
-    color: #fff;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 30px;
-    margin-bottom: 30px;
-}
-
-    </style>
+    <link href="css/industries.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-    <div class="breadcrumb-section" style="background-image: linear-gradient(270deg, rgba(0, 0, 0, .55), rgba(0, 0, 0, 0.55) 101.02%), url(image/blog/braadcrumb-bg3.jpg);">
+    <div class="breadcrumb-section" style="background-image: linear-gradient(270deg, rgba(0, 0, 0, .55), rgba(0, 0, 0, 0.55) 101.02%), url(image/liv/cc.jpg);">
         <div class="container-fluid one pl--95">
             <div class="row">
                 <div class="col-lg-12">
@@ -332,30 +20,53 @@
             </div>
         </div>
     </div>
+    <div class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10">
+                    <h2>Air for PCC: Park Control Communication
 
-    <div class="solution-section pt-80 mb-80">
-        <div class="container-fluid">
-            <div class="row g-4">
-                <div class="col-lg-4 ">
-                    <div class="sub-title mb-60   text-center">
-                        <span>Telemetry Data Aquisition
-                        </span>
-                    </div>
-                    <div class="text-center   ">
-                        <img src="image/9121320.jpg" width="320" />
 
-                    </div>
+                    </h2>
+                    <p >
+                        In modern aerospace technology, the integration of advanced communication systems is critical for efficient park control and communication (PCC). These systems ensure seamless interaction between drones, operators, and air traffic control, enhancing safety and operational efficiency. By leveraging cutting-edge communication protocols, PCC solutions allow precise navigation, situational awareness, and control within designated airspaces. As the demand for unmanned aerial systems grows, robust PCC systems will play a pivotal role in shaping the future of drone operations in both urban and remote environments.
+                    </p>
+                    <p class="mb-0">With decades of experience in aerospace manufacturing, we specialize in creating solutions that meet the highest standards of performance and durability. Our parts are engineered to integrate seamlessly into sophisticated systems, ensuring unmatched operational excellence. When seconds count, you need components you can trust—crafted for resilience and precision.
+
+</p>
                 </div>
-                <div class="col-lg-8">
-                    <div class="row">
-                        <div class="col-lg-12 gap-lg-5 gap-4 d-flex flex-lg-nowrap flex-wrap align-items-start justify-content-between mb-60">
-                            <div class="section-title1 one">
-                                <p class="add-read-more show-less-content">
-                                    Telemetry Data Acquisition is the technology for measuring the characteristics of a distant object that can be transmitted to any acquisition and receiving station for display, record and analysis of the data by wireless, satellite or fibre optic media. It is typically used in test flight of aircraft and other air vehicles and in hostile ground environments like Power generation plants, Liquid propulsion test centres, etc. PCC has been extending powerful Telemetry Data Acquisition Solutions for the past quarter century and takes up jobs for the establishment of world class telemetry station.  The Server/client distributed system on the network seamlessly and efficiently captures telemetry data; receiving, recording and distributing, without any loss. The RF front end of the Telemetry Data Acquisition Solutions comprises of a tracking dish antenna system that could be of any size, up to 5 mts, and supports single, dual and three axes, could either be installed on ground or a mobile platform for acquiring data from any target air vehicle such as aircraft, missile, satellite, Unmanned Air Vehicles, etc. The equally efficient RF Telemetry Receiver that supports cutting edge modulation schemes in a wide band that includes L & extended S, ensures the best data reception quality. The baseband system that decommutates and distributed the data is built around comprehensive telemetry application software which is quick and simple in its processing. The recorded data can be archived with world class storage can be accessed effortlessly for replay and post flight analysis.
+            </div>
+        </div>
+    </div>
 
-                                </p>
-                            </div>
-                        </div>
+    <section class="cta pt-30 pb-100">
+
+        <div class="cta__row">
+            <div class="cta__col">
+                <h2>Unlock Innovative, Customized Solutions for Defence, Aerospace,
+            and Industrial Applications
+          </h2>
+            </div>
+            <div class="cta__col">
+                <a href="#" class="custom-btn" contenteditable="false" style="cursor: pointer;">Let's Connect</a>
+            </div>
+        </div>
+
+    </section>
+
+    <div class="solution-section pb-50">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-12 ">
+                    <div class="sub-title  text-start">
+                        <h2>Spotlight on Air Capabilities
+                        </h2>
+                    </div>
+
+                </div>
+                <div class="col-lg-12">
+                    <div class="row">
+
                         <div class="col-lg-12 d-flex align-items-center position-relative">
                             <div class="row gy-4 justify-content-end">
 
@@ -367,41 +78,10 @@
                                             </div>
                                             <div class="people-content">
                                                 <div class="name-deg">
-                                                    <h5 class="d-flex justify-content-between"><a href="#">Air Product 1</a><span class="text-danger fw-bold">PARK-RTD-02</span></h5>
+                                                    <h5><a href="#">PCAMi - 1000 </a></h5>
 
 
-
-
-
-                                                </div>
-                                                <div class="contact-area">
-                                                    <div class="contact-number">
-                                                        <div class="icon">
-                                                            View Product
-                                           
-                                                        </div>
-
-                                                    </div>
-                                                    <ul class="social-icon">
-                                                        <li><a href="product-details.aspx"><i class="fa-solid fa-arrow-right-long"></i></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4">
-                                    <div class="magnetic-wrap">
-                                        <div class="people-card2 magnetic-item" style="">
-                                            <div class="people-img">
-                                                <img src="image/shop/1.jpg" alt="">
-                                            </div>
-                                            <div class="people-content">
-                                                <div class="name-deg">
-                                                    <h5 class="d-flex justify-content-between"><a href="#">Air Product 1</a><span class="text-danger fw-bold">PARK-RTD-02</span></h5>
-
-
-
+                                                    <p>Flight Test Telemetry & Instrumentation for Defense Aircrafts,  Commercial Flight trials, UAV, Missiles, Helicopters, Launch Vehicles : Onboard rugged Data Acquisition Unit; Suitable for deployment in aircrafts, helicopters, missiles and UAVs."</p>
 
 
                                                 </div>
@@ -429,10 +109,10 @@
                                             </div>
                                             <div class="people-content">
                                                 <div class="name-deg">
-                                                    <h5 class="d-flex justify-content-between"><a href="#">Air Product 1</a><span class="text-danger fw-bold">PARK-RTD-02</span></h5>
+                                                    <h5><a href="#">PARK ITS – 100</a></h5>
 
 
-
+                                                    <p>Onboard rugged DAU with ultra compact Integrated Telemetry System; MIL-grade COTS (Commercial Off The Shelf) solution for launchers, sounding rockets, guided-bombs  & missile testing and telemetry.</p>
 
 
                                                 </div>
@@ -460,11 +140,42 @@
                                             </div>
                                             <div class="people-content">
                                                 <div class="name-deg">
-                                                    <h5 class="d-flex justify-content-between"><a href="#">Air Product 1</a><span class="text-danger fw-bold">PARK-RTD-02</span></h5>
+                                                    <h5><a href="#">PARK - EIU</a></h5>
+
+
+                                                    <p>The Engine Instrumentation Unit (EIU) delivers precise real-time monitoring of engine parameters, ensuring reliability and enhanced safety. Its advanced data acquisition capabilities support predictive </p>
+
+
+                                                </div>
+                                                <div class="contact-area">
+                                                    <div class="contact-number">
+                                                        <div class="icon">
+                                                            View Product
+                                           
+                                                        </div>
+
+                                                    </div>
+                                                    <ul class="social-icon">
+                                                        <li><a href="product-details.aspx"><i class="fa-solid fa-arrow-right-long"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="magnetic-wrap">
+                                        <div class="people-card2 magnetic-item" style="">
+                                            <div class="people-img">
+                                                <img src="image/shop/1.jpg" alt="">
+                                            </div>
+                                            <div class="people-content">
+                                                <div class="name-deg">
+                                                    <h5 class=""><a href="#">PARK SSDVRS</a></h5>
 
 
 
-
+                                                    <p>SSDVRS likely refers to Solid State Digital Video Recording Systems, commonly used in aerospace and defense applications. These systems provide reliable and ruggedized solutions for high-definition video recording in challenging environments. </p>
 
                                                 </div>
                                                 <div class="contact-area">
@@ -493,10 +204,10 @@
                                             </div>
                                             <div class="people-content">
                                                 <div class="name-deg">
-                                                    <h5 class="d-flex justify-content-between"><a href="#">Air Product 1</a><span class="text-danger fw-bold">PARK-RTD-02</span></h5>
+                                                    <h5><a href="#">PARK PCM-32S and PARK GPS-PCM</a></h5>
 
 
-
+                                                    <p>Flight Encoders are essential components in aerospace systems, used to measure and relay precise angular or linear position data. They are integral to aircraft navigation, control systems, and data logging.</p>
 
 
                                                 </div>
@@ -517,100 +228,190 @@
                                     </div>
                                 </div>
 
+                                <div class="col-lg-4">
+                                    <div class="magnetic-wrap">
+                                        <div class="people-card2 magnetic-item" style="">
+                                            <div class="people-img">
+                                                <img src="image/shop/1.jpg" alt="">
+                                            </div>
+                                            <div class="people-content">
+                                                <div class="name-deg">
+                                                    <h5 class=""><a href="#">PARK BUMT-31 & PARK BUMT-32,
+PARK ST227 & PARK ST230
+                                                    </a></h5>
 
+                                                    <p>L Band & S Band Telemetry Transmitters are specialized devices used for transmitting telemetry data from airborne or ground systems to a receiving station. These transmitters operate in specific frequency bands (L Band: 1–2 GHz, S Band: 2–4 GHz) and play a critical role in real-time data transmission for various applications in aerospace, defense, and satellite systems.</p>
+
+
+
+                                                </div>
+                                                <div class="contact-area">
+                                                    <div class="contact-number">
+                                                        <div class="icon">
+                                                            View Product
+               
+                                                        </div>
+
+                                                    </div>
+                                                    <ul class="social-icon">
+                                                        <li><a href="product-details.aspx"><i class="fa-solid fa-arrow-right-long"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
 
 
                                 <!-- Sidebar  -->
 
                             </div>
-                            <div class="right-shape">
-                                <img src="assets/img/home2/shape-01.png" alt="">
-                            </div>
-                            <div class="company-logo">
-                                <h2>PCC</h2>
-                            </div>
+
                         </div>
+                    </div>
+                </div>
+                <div class="col-lg-12 text-center">
+                    <div class="slider-btn mt-5 ">
+                        <a href="#" class="btn11 ss-btn mr-15" data-animation="fadeInLeft" data-delay=".4s" tabindex="0" style="animation-delay: 0.4s;"><i class="fa-solid fa-arrows-rotate me-2"></i>Load more</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
 
     <div class="horizontal-scrolling-section ">
         <div class="single-scroll-container" style="background-image: linear-gradient(180deg, rgb(0 0 0 / 58%) 0%, rgb(0 0 0 / 20%) 100%), url(image/cta.png)">
             <div class="container-fluid one pl--95">
                 <div class="horizontal-scrolling-content">
                     <div class="section-title1 two">
-                        <span>Real Estate</span>
-                        <h2>A Business Consulting to Increase Marketing Analaytic on Markio Logistics</h2>
+                        <span>Air</span>
+                        <h2>Protecting the Sky, Securing the Future
+
+</h2>
                     </div>
-                    <p>Business consultants are typically hired by organizations of all sizes, from small startups to large corporations, and across various industries.</p>
-                  <div class="slider-btn ">
-                  <a href="#" class="btn ss-btn mr-15" data-animation="fadeInLeft" data-delay=".4s" tabindex="0" style="animation-delay: 0.4s;"><i class="fal fa-long-arrow-right"></i> Read more</a>
-                </div>
+                    <p>In an increasingly unpredictable world, air defense systems are more critical than ever. From safeguarding national borders to protecting vital infrastructure, advanced aerial defense ensures a secure environment against evolving threats. </p>
+                    <div class="slider-btn ">
+                        <a href="#" class="btn ss-btn mr-15" data-animation="fadeInLeft" data-delay=".4s" tabindex="0" style="animation-delay: 0.4s;"><i class="fal fa-long-arrow-right"></i>Read more</a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
+    <div class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                        <h2 class="mb-3">Across Air</h2>
+                    <div class="services-wrap ">
+                        <div class="row g-lg-4 gy-5">
+                            <div class="col-lg-2">
+                                <div class="selvices-tab">
+                                
+                                    <ul class="nav nav-tabs" id="myTab2" role="tablist">
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link active" id="technology-tab" data-bs-toggle="tab" data-bs-target="#technology" type="button" role="tab" aria-controls="technology" aria-selected="true">
+                                                <img src="image/liv/1.png" height="120"/>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10.1865 1.06237L0 11.2484L0.751627 12L10.9376 1.81347V8.85645H12V0H3.14355V1.06237H10.1865Z"></path>
+                                                </svg>
+                                            </button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link" id="finance-tab" data-bs-toggle="tab" data-bs-target="#finance" type="button" role="tab" aria-controls="finance" aria-selected="false" tabindex="-1">
+                                                <img src="image/liv/2.png" height="120" />
+                                               
+                                            </button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link" id="human-tab" data-bs-toggle="tab" data-bs-target="#human" type="button" role="tab" aria-controls="human" aria-selected="false" tabindex="-1">
+                                                <img src="image/liv/3.png" height="120"  />
+                                              
+                                            </button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link" id="management-tab" data-bs-toggle="tab" data-bs-target="#management" type="button" role="tab" aria-controls="management" aria-selected="false" tabindex="-1">
+                                                <img src="image/liv/4.png" height="120"  />
+                                              
+                                            </button>
+                                        </li>
 
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-10">
+                                <div class="selvices-centent">
+                                    <div class="tab-content" id="myTabContent2">
+                                        <div class="tab-pane fade active show" id="technology" role="tabpanel" aria-labelledby="technology-tab">
+                                            <div class="eg-card3 two">
+                                                <div class="card-img">
+                                                    <img src="image/liv/1.png" class="w-100" alt="">
+                                                </div>
+                                                <div class="card-content">
 
+                                                    <div class="catgory-and-title">
+                                                        <a href="services1.html" contenteditable="false" style="cursor: pointer;">Technology</a>
+                                                        <h5><a href="service-details.html" contenteditable="false" style="cursor: pointer;">Technology Assessment</a></h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="finance" role="tabpanel" aria-labelledby="finance-tab">
+                                            <div class="eg-card3 two">
+                                                <div class="card-img">
+                                                    <img src="image/liv/2.png" class="w-100" alt="">
+                                                </div>
+                                                <div class="card-content">
 
+                                                    <div class="catgory-and-title">
+                                                        <a href="services1.html" contenteditable="false" style="cursor: pointer;">Finance</a>
+                                                        <h5><a href="service-details.html" contenteditable="false" style="cursor: pointer;">Finance Consulting</a></h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="human" role="tabpanel" aria-labelledby="human-tab">
+                                            <div class="eg-card3 two">
+                                                <div class="card-img">
+                                                    <img src="image/liv/3.png" class="w-100" alt="">
+                                                </div>
+                                                <div class="card-content">
 
+                                                    <div class="catgory-and-title">
+                                                        <a href="services1.html" contenteditable="false" style="cursor: pointer;">Consulting</a>
+                                                        <h5><a href="service-details.html" contenteditable="false" style="cursor: pointer;">Human Resources</a></h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="management" role="tabpanel" aria-labelledby="management-tab">
+                                            <div class="eg-card3 two">
+                                                <div class="card-img">
+                                                    <img src="image/liv/4.png" class="w-100" alt="">
+                                                </div>
+                                                <div class="card-content">
 
+                                                    <div class="catgory-and-title">
+                                                        <a href="services1.html" contenteditable="false" style="cursor: pointer;">Fintach</a>
+                                                        <h5><a href="service-details.html" contenteditable="false" style="cursor: pointer;">Management Consulting</a></h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
+                </div>
+            </div>
+        </div>
+    </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-    
     <script src="js/vendor/jquery-3.6.0.min.js"></script>
 
-    <script>
-        $(document).ready(function () {
-            function AddReadMore() {
-                //This limit you can set after how much characters you want to show Read More.
-                var carLmt = 300;
-                // Text to show when text is collapsed
-                var readMoreTxt = " ...read more";
-                // Text to show when text is expanded
-                var readLessTxt = " read less";
-
-
-                //Traverse all selectors with this class and manupulate HTML part to show Read More
-                $(".add-read-more").each(function () {
-                    if ($(this).find(".first-section").length)
-                        return;
-
-                    var allstr = $(this).text();
-                    if (allstr.length > carLmt) {
-                        var firstSet = allstr.substring(0, carLmt);
-                        var secdHalf = allstr.substring(carLmt, allstr.length);
-                        var strtoadd = firstSet + "<span class='second-section'>" + secdHalf + "</span><span class='read-more'  title='Click to Show More'>" + readMoreTxt + "</span><span class='read-less' title='Click to Show Less'>" + readLessTxt + "</span>";
-                        $(this).html(strtoadd);
-                    }
-                });
-
-                //Read More and Read Less Click Event binding
-                $(document).on("click", ".read-more,.read-less", function () {
-                    $(this).closest(".add-read-more").toggleClass("show-less-content show-more-content");
-                });
-            }
-
-            AddReadMore();
-        });
-
-    </script>
+    
 </asp:Content>
 

@@ -195,9 +195,9 @@
                    <a href="#">Industries</a>
                    <ul>
                      <li><a href="air.aspx">Air</a></li>
-                     <li><a href="#">Land</a></li>
-                     <li><a href="#">Sea</a></li>
-                     <li><a href="#">Space</a></li>
+                     <li><a href="land.aspx">Land</a></li>
+                     <li><a href="sea.aspx">Sea</a></li>
+                     <li><a href="space.aspx">Space</a></li>
                    </ul>
                  </li>
                  <li class="has-sub">
@@ -435,6 +435,72 @@
     $(this).ekkoLightbox();
 });
         </script>
+        <script>
+            var swiper = new Swiper(".bolg-slider", {
+                speed: 1500,
+                slidesPerView: 4,
+                spaceBetween: 30,
+               
+                navigation: {
+                    nextEl: ".next-5",
+                    prevEl: ".prev-5",
+                },
+                pagination: {
+                    el: ".progress-pagination",
+                    type: "progressbar",
+                },
+                breakpoints: {
+                    280: {
+                        slidesPerView: 1,
+                    },
+                    386: {
+                        slidesPerView: 1,
+                    },
+                    576: {
+                        slidesPerView: 2,
+                        spaceBetween: 20,
+                    },
+                    768: {
+                        slidesPerView: 2,
+                        spaceBetween: 30,
+                    },
+                    992: {
+                        slidesPerView: 3,
+                    },
+                    1200: {
+                        slidesPerView: 4,
+                    },
+                    1400: {
+                        slidesPerView: 4
+                    },
+                }
+            });
+            document.querySelector(".next-5").addEventListener("click", function () {
+                swiper.slideNext(); // Move slider to the next slide
+            });
+
+            document.querySelector(".prev-5").addEventListener("click", function () {
+                swiper.slidePrev(); // Move slider to the previous slide
+            });
+        </script>
+     <script>
+         var swiper = new Swiper(".mySwiper", {
+             spaceBetween: 10,
+             slidesPerView: 4,
+             freeMode: true,
+             watchSlidesProgress: true,
+         });
+         var swiper2 = new Swiper(".mySwiper2", {
+             spaceBetween: 10,
+             navigation: {
+                 nextEl: ".swiper-button-next",
+                 prevEl: ".swiper-button-prev",
+             },
+             thumbs: {
+                 swiper: swiper,
+             },
+         });
+     </script>
     </form>
 </body>
 </html>
