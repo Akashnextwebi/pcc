@@ -49,7 +49,7 @@
                 </div>
                 <div class="col-lg-4">
                     <div class="content-card">
-                     <img src="image/liv/jet.png" width="48" class="content-img" />
+                        <img src="image/liv/jet.png" width="48" class="content-img" />
 
                         <h4>Why Choose Air PCC?
                         </h4>
@@ -69,7 +69,7 @@
         </div>
     </div>
 
-   
+
 
     <div class="solution-section section-padding pb-50 bg-light">
         <div class="container">
@@ -82,210 +82,80 @@
 
                 </div>
                 <div class="col-lg-12">
-                    <div class="row">
-
-                        <div class="col-lg-12 d-flex align-items-center position-relative">
-                            <div class="row gy-4 justify-content-end">
-
-                                <div class="col-lg-4">
-                                    <div class="magnetic-wrap">
-                                        <div class="people-card2 magnetic-item" style="">
-                                            <div class="people-img">
-                                                <img src="image/shop/1.jpg" alt="">
-                                            </div>
-                                            <div class="people-content">
-                                                <div class="name-deg">
-                                                    <h5><a href="#">PCAMi - 1000 </a></h5>
+                    <div class="row gy-4">
 
 
-                                                    <p>Flight Test Telemetry & Instrumentation for Defense Aircrafts,  Commercial Flight trials, UAV, Missiles, Helicopters, Launch Vehicles : Onboard rugged Data Acquisition Unit; Suitable for deployment in aircrafts, helicopters, missiles and UAVs."</p>
+                        <div class="col-lg-4">
+                            <div class="eg-card3 three">
+                                <div class="card-img">
+                                    <a href="product-lisitng.aspx">
+                                        <img src="image/air/1.png" alt=""></a>
+                                </div>
+                                <div class="card-content">
+                                   
+                                    <div class="catgory-and-title">
+                                        <h5><a href="product-lisitng.aspx">PCAMi - 1000 </a></h5>
 
-
-                                                </div>
-                                                <div class="contact-area">
-                                                    <div class="contact-number">
-                                                        <div class="icon">
-                                                            View Product
-                                           
-                                                        </div>
-
-                                                    </div>
-                                                    <ul class="social-icon">
-                                                        <li><a href="product-details.aspx"><i class="fa-solid fa-arrow-right-long"></i></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        <p>Flight Test Telemetry & Instrumentation for Defense Aircrafts,  Commercial Flight trials, UAV, Missiles, Helicopters, Launch Vehicles : Onboard rugged Data Acquisition Unit; Suitable for deployment in aircrafts, </p>
                                     </div>
                                 </div>
-                                <div class="col-lg-4">
-                                    <div class="magnetic-wrap">
-                                        <div class="people-card2 magnetic-item" style="">
-                                            <div class="people-img">
-                                                <img src="image/shop/1.jpg" alt="">
-                                            </div>
-                                            <div class="people-content">
-                                                <div class="name-deg">
-                                                    <h5><a href="#">PARK ITS – 100</a></h5>
-
-
-                                                    <p>Onboard rugged DAU with ultra compact Integrated Telemetry System; MIL-grade COTS (Commercial Off The Shelf) solution for launchers, sounding rockets, guided-bombs  & missile testing and telemetry.</p>
-
-
-                                                </div>
-                                                <div class="contact-area">
-                                                    <div class="contact-number">
-                                                        <div class="icon">
-                                                            View Product
-                                           
-                                                        </div>
-
-                                                    </div>
-                                                    <ul class="social-icon">
-                                                        <li><a href="product-details.aspx"><i class="fa-solid fa-arrow-right-long"></i></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4">
-                                    <div class="magnetic-wrap">
-                                        <div class="people-card2 magnetic-item" style="">
-                                            <div class="people-img">
-                                                <img src="image/shop/1.jpg" alt="">
-                                            </div>
-                                            <div class="people-content">
-                                                <div class="name-deg">
-                                                    <h5><a href="#">PARK - EIU</a></h5>
-
-
-                                                    <p>The Engine Instrumentation Unit (EIU) delivers precise real-time monitoring of engine parameters, ensuring reliability and enhanced safety. Its advanced data acquisition capabilities support predictive </p>
-
-
-                                                </div>
-                                                <div class="contact-area">
-                                                    <div class="contact-number">
-                                                        <div class="icon">
-                                                            View Product
-                                           
-                                                        </div>
-
-                                                    </div>
-                                                    <ul class="social-icon">
-                                                        <li><a href="product-details.aspx"><i class="fa-solid fa-arrow-right-long"></i></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4">
-                                    <div class="magnetic-wrap">
-                                        <div class="people-card2 magnetic-item" style="">
-                                            <div class="people-img">
-                                                <img src="image/shop/1.jpg" alt="">
-                                            </div>
-                                            <div class="people-content">
-                                                <div class="name-deg">
-                                                    <h5 class=""><a href="#">PARK SSDVRS</a></h5>
-
-
-
-                                                    <p>SSDVRS likely refers to Solid State Digital Video Recording Systems, commonly used in aerospace and defense applications. These systems provide reliable and ruggedized solutions for high-definition video recording in challenging environments. </p>
-
-                                                </div>
-                                                <div class="contact-area">
-                                                    <div class="contact-number">
-                                                        <div class="icon">
-                                                            View Product
-                                           
-                                                        </div>
-
-                                                    </div>
-                                                    <ul class="social-icon">
-                                                        <li><a href="product-details.aspx"><i class="fa-solid fa-arrow-right-long"></i></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-                                <div class="col-lg-4">
-                                    <div class="magnetic-wrap">
-                                        <div class="people-card2 magnetic-item" style="">
-                                            <div class="people-img">
-                                                <img src="image/shop/1.jpg" alt="">
-                                            </div>
-                                            <div class="people-content">
-                                                <div class="name-deg">
-                                                    <h5><a href="#">PARK PCM-32S and PARK GPS-PCM</a></h5>
-
-
-                                                    <p>Flight Encoders are essential components in aerospace systems, used to measure and relay precise angular or linear position data. They are integral to aircraft navigation, control systems, and data logging.</p>
-
-
-                                                </div>
-                                                <div class="contact-area">
-                                                    <div class="contact-number">
-                                                        <div class="icon">
-                                                            View Product
-                                           
-                                                        </div>
-
-                                                    </div>
-                                                    <ul class="social-icon">
-                                                        <li><a href="product-details.aspx"><i class="fa-solid fa-arrow-right-long"></i></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-4">
-                                    <div class="magnetic-wrap">
-                                        <div class="people-card2 magnetic-item" style="">
-                                            <div class="people-img">
-                                                <img src="image/shop/1.jpg" alt="">
-                                            </div>
-                                            <div class="people-content">
-                                                <div class="name-deg">
-                                                    <h5 class=""><a href="#">PARK BUMT-31 & PARK BUMT-32,
-PARK ST227 & PARK ST230
-                                                    </a></h5>
-
-                                                    <p>L Band & S Band Telemetry Transmitters are specialized devices used for transmitting telemetry data from airborne or ground systems to a receiving station. These transmitters operate in specific frequency bands (L Band: 1–2 GHz, S Band: 2–4 GHz) and play a critical role in real-time data transmission for various applications in aerospace, defense, and satellite systems.</p>
-
-
-
-                                                </div>
-                                                <div class="contact-area">
-                                                    <div class="contact-number">
-                                                        <div class="icon">
-                                                            View Product
-               
-                                                        </div>
-
-                                                    </div>
-                                                    <ul class="social-icon">
-                                                        <li><a href="product-details.aspx"><i class="fa-solid fa-arrow-right-long"></i></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-                                <!-- Sidebar  -->
-
                             </div>
-
                         </div>
+
+                        <div class="col-lg-4">
+                            <div class="eg-card3 three">
+                                <div class="card-img">
+                                    <a href="product-lisitng.aspx">
+                                        <img src="image/air/2.png" alt=""></a>
+                                </div>
+                                <div class="card-content">
+                                  
+                                    <div class="catgory-and-title">
+                                        <h5><a href="product-lisitng.aspx">PCAMi - 1000 </a></h5>
+
+                                        <p>Flight Test Telemetry & Instrumentation for Defense Aircrafts,  Commercial Flight trials, UAV, Missiles, Helicopters, Launch Vehicles : Onboard rugged Data Acquisition Unit; Suitable for deployment in aircrafts, </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="eg-card3 three">
+                                <div class="card-img">
+                                    <a href="product-lisitng.aspx">
+                                        <img src="image/air/3.png" alt=""></a>
+                                </div>
+                                <div class="card-content">
+                                   
+                                    <div class="catgory-and-title">
+                                        <h5><a href="product-lisitng.aspx">PCAMi - 1000 </a></h5>
+
+                                        <p>Flight Test Telemetry & Instrumentation for Defense Aircrafts,  Commercial Flight trials, UAV, Missiles, Helicopters, Launch Vehicles : Onboard rugged Data Acquisition Unit; Suitable for deployment in aircrafts, </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="eg-card3 three">
+                                <div class="card-img">
+                                    <a href="product-lisitng.aspx">
+                                        <img src="image/air/4.png" alt=""></a>
+                                </div>
+                                <div class="card-content">
+                                
+                                    <div class="catgory-and-title">
+                                        <h5><a href="product-lisitng.aspx">PCAMi - 1000 </a></h5>
+
+                                        <p>Flight Test Telemetry & Instrumentation for Defense Aircrafts,  Commercial Flight trials, UAV, Missiles, Helicopters, Launch Vehicles : Onboard rugged Data Acquisition Unit; Suitable for deployment in aircrafts, </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sidebar  -->
+
                     </div>
+
+
                 </div>
                 <div class="col-lg-12 text-center">
                     <div class="slider-btn mt-5 ">
@@ -295,7 +165,7 @@ PARK ST227 & PARK ST230
             </div>
         </div>
     </div>
-        <%--<section class="cta ">
+    <%--<section class="cta ">
 
     <div class="cta__row">
         <div class="cta__col">
@@ -317,7 +187,7 @@ PARK ST227 & PARK ST230
                         <span>Air</span>
                         <h2>Protecting the Sky, Securing the Future
 
-</h2>
+                        </h2>
                     </div>
                     <p>In an increasingly unpredictable world, air defense systems are more critical than ever. From safeguarding national borders to protecting vital infrastructure, advanced aerial defense ensures a secure environment against evolving threats. </p>
                     <div class="slider-btn ">
@@ -328,10 +198,10 @@ PARK ST227 & PARK ST230
         </div>
     </div>
 
-    
+
 
     <script src="js/vendor/jquery-3.6.0.min.js"></script>
 
-    
+
 </asp:Content>
 

@@ -4,18 +4,55 @@
     <link href="css/shop.css" rel="stylesheet" />
     <link href="css/about.css" rel="stylesheet" />
     <link href="css/light.css" rel="stylesheet" />
-
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link href="css/globel.css" rel="stylesheet" />
     <style>
         section.product_view {
             background: #fff;
         }
+
+        .campus-slider .swiper-button-prev {
+            color: #fff;
+            background: #0000005c;
+            z-index: 10;
+            padding: 20px;
+            border-radius: 50%;
+        }
+
+           .campus-slider .swiper-button-next {
+       color: #fff;
+       background: #000;
+       z-index: 10;
+       padding: 20px;
+       border-radius: 50%;
+   }
+
+            .campus-slider .swiper-button-prev:after {
+                font-size: 18px;
+                content: 'prev';
+            }
+
+      
+        .campus-slider .swiper-button-next:after {
+            content: 'next';
+            font-size: 18px;
+        }
+
         .pcc-header .header-mid {
-    padding: 10px 40px;
-    border-bottom: 1px solid #000;
-}
+            padding: 10px 40px;
+            border-bottom: 1px solid #000;
+        }
+
         .product_right .product_price {
             color: #000;
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            color: #000; /* Make sure the arrows are visible */
+            z-index: 10; /* Ensure the buttons are above the slides */
         }
 
         .new-color {
@@ -177,21 +214,24 @@
             align-items: center;
             justify-content: space-between;
         }
-         input[type="text"]{
-             background-color:#fff !important;
-             color:#000 !important;
-         }.btn i {
-    margin-left: 10px;
-    font-size: 16px;
-    position: absolute;
-    left: -10px;
-    background: var(--pcc-primary-theme);
-    top: 2px;
-    color: #fff;
-    width: 50px;
-    height: 100%;
-    line-height: 57px;
-}
+
+        input[type="text"] {
+            background-color: #fff !important;
+            color: #000 !important;
+        }
+
+        .btn i {
+            margin-left: 10px;
+            font-size: 16px;
+            position: absolute;
+            left: -10px;
+            background: var(--pcc-primary-theme);
+            top: 2px;
+            color: #fff;
+            width: 50px;
+            height: 100%;
+            line-height: 57px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
@@ -272,8 +312,9 @@ Pellentesque habitant morbi tristique senectus et netus et malesuada.
                                 <div class="cart_button">
                                     <a href="#" class="btn-three w-100" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                         <div class="btn-wrap">
-                                            <span class="text-first">Download Brochure</span>
-                                            <span class="text-second">Download <b></b>rochure</span>
+                                            <span class="text-first"> <i class="fa-solid fa-cloud-arrow-down me-2"></i>
+Download Brochure</span>
+                                            <span class="text-second"><i class="fa-solid fa-cloud-arrow-down me-2"></i>Download <b></b>Brochure</span>
                                         </div>
 
                                     </a>
@@ -533,15 +574,78 @@ Pellentesque habitant morbi tristique senectus et netus et malesuada.
                 <div class="text-center">
 
 
-                    <h2 class="mb-30 text-white">Full Datasheet: PCAMi-1000
+                    <h2 class="mb-30 text-white">Full Datasheet Screenshots
                     </h2>
                 </div>
                 <div class="row">
                     <div class="col-lg-12">
-                        <iframe src="https://app.box.com/s/yg1yf6pi43vcc5qz7xfeyhuq7ffrqx0c?is_embed_widget=true" width="100%" height="500"></iframe>
+                        <div class="swiper campus-slider ">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                                <!-- Slides -->
+                                <div class="swiper-slide">
+                                    <div class="data-sheet">
+                                        <img src="image/datasheet/1.png" />
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="data-sheet">
+                                        <img src="image/datasheet/2.png" />
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="data-sheet">
+                                        <img src="image/datasheet/3.png" />
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="data-sheet">
+                                        <img src="image/datasheet/4.png" />
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="data-sheet">
+                                        <img src="image/datasheet/5.png" />
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="data-sheet">
+                                        <img src="image/datasheet/6.png" />
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="data-sheet">
+                                        <img src="image/datasheet/3.png" />
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="data-sheet">
+                                        <img src="image/datasheet/4.png" />
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="data-sheet">
+                                        <img src="image/datasheet/5.png" />
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="data-sheet">
+                                        <img src="image/datasheet/6.png" />
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+
+                        </div>
+
+
                     </div>
+
                 </div>
             </div>
+
         </section>
 
         <section class="section-padding bg-light">
@@ -552,123 +656,126 @@ Pellentesque habitant morbi tristique senectus et netus et malesuada.
                 </div>
                 <div class="row">
 
-                      <div class="col-lg-3">
-      <div class="magnetic-wrap">
-          <div class="people-card2 magnetic-item" style="">
-              <div class="people-img">
-                  <img src="image/shop/1.jpg" alt="">
-              </div>
-              <div class="people-content">
-                  <div class="name-deg">
-                      <h5 class="d-flex justify-content-between"><a href="#">Air Product 1</a><span class="text-danger fw-bold">PARK-RTD-02</span></h5>
+                    <div class="col-lg-3">
+                        <div class="magnetic-wrap">
+                            <div class="people-card2 magnetic-item" style="">
+                                <div class="people-img">
+                                    <img src="image/shop/1.jpg" alt="">
+                                </div>
+                                <div class="people-content">
+                                    <div class="name-deg">
+                                        <h5 class="d-flex justify-content-between"><a href="#">Air Product 1</a><span class="text-danger fw-bold">PARK-RTD-02</span></h5>
 
 
 
 
 
-                  </div>
-                  <div class="contact-area">
-                      <div class="contact-number">
-                          <div class="icon">
-                              View Product
-                          </div>
+                                    </div>
+                                    <div class="contact-area">
+                                        <div class="contact-number">
+                                            <div class="icon">
+                                                View Product
+                                            </div>
 
-                      </div>
-                      <ul class="social-icon">
-                          <li><a href="product-details.aspx"><i class="fa-solid fa-arrow-right-long"></i></a></li>
-                      </ul>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>  <div class="col-lg-3">
-      <div class="magnetic-wrap">
-          <div class="people-card2 magnetic-item" style="">
-              <div class="people-img">
-                  <img src="image/shop/1.jpg" alt="">
-              </div>
-              <div class="people-content">
-                  <div class="name-deg">
-                      <h5 class="d-flex justify-content-between"><a href="#">Air Product 1</a><span class="text-danger fw-bold">PARK-RTD-02</span></h5>
-
-
-
-
-
-                  </div>
-                  <div class="contact-area">
-                      <div class="contact-number">
-                          <div class="icon">
-                              View Product
-                          </div>
-
-                      </div>
-                      <ul class="social-icon">
-                          <li><a href="product-details.aspx"><i class="fa-solid fa-arrow-right-long"></i></a></li>
-                      </ul>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>  <div class="col-lg-3">
-      <div class="magnetic-wrap">
-          <div class="people-card2 magnetic-item" style="">
-              <div class="people-img">
-                  <img src="image/shop/1.jpg" alt="">
-              </div>
-              <div class="people-content">
-                  <div class="name-deg">
-                      <h5 class="d-flex justify-content-between"><a href="#">Air Product 1</a><span class="text-danger fw-bold">PARK-RTD-02</span></h5>
+                                        </div>
+                                        <ul class="social-icon">
+                                            <li><a href="product-details.aspx"><i class="fa-solid fa-arrow-right-long"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="magnetic-wrap">
+                            <div class="people-card2 magnetic-item" style="">
+                                <div class="people-img">
+                                    <img src="image/shop/1.jpg" alt="">
+                                </div>
+                                <div class="people-content">
+                                    <div class="name-deg">
+                                        <h5 class="d-flex justify-content-between"><a href="#">Air Product 1</a><span class="text-danger fw-bold">PARK-RTD-02</span></h5>
 
 
 
 
 
-                  </div>
-                  <div class="contact-area">
-                      <div class="contact-number">
-                          <div class="icon">
-                              View Product
-                          </div>
+                                    </div>
+                                    <div class="contact-area">
+                                        <div class="contact-number">
+                                            <div class="icon">
+                                                View Product
+                                            </div>
 
-                      </div>
-                      <ul class="social-icon">
-                          <li><a href="product-details.aspx"><i class="fa-solid fa-arrow-right-long"></i></a></li>
-                      </ul>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>  <div class="col-lg-3">
-      <div class="magnetic-wrap">
-          <div class="people-card2 magnetic-item" style="">
-              <div class="people-img">
-                  <img src="image/shop/1.jpg" alt="">
-              </div>
-              <div class="people-content">
-                  <div class="name-deg">
-                      <h5 class="d-flex justify-content-between"><a href="#">Air Product 1</a><span class="text-danger fw-bold">PARK-RTD-02</span></h5>
-
-
-
+                                        </div>
+                                        <ul class="social-icon">
+                                            <li><a href="product-details.aspx"><i class="fa-solid fa-arrow-right-long"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="magnetic-wrap">
+                            <div class="people-card2 magnetic-item" style="">
+                                <div class="people-img">
+                                    <img src="image/shop/1.jpg" alt="">
+                                </div>
+                                <div class="people-content">
+                                    <div class="name-deg">
+                                        <h5 class="d-flex justify-content-between"><a href="#">Air Product 1</a><span class="text-danger fw-bold">PARK-RTD-02</span></h5>
 
 
-                  </div>
-                  <div class="contact-area">
-                      <div class="contact-number">
-                          <div class="icon">
-                              View Product
-                          </div>
 
-                      </div>
-                      <ul class="social-icon">
-                          <li><a href="product-details.aspx"><i class="fa-solid fa-arrow-right-long"></i></a></li>
-                      </ul>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
+
+
+                                    </div>
+                                    <div class="contact-area">
+                                        <div class="contact-number">
+                                            <div class="icon">
+                                                View Product
+                                            </div>
+
+                                        </div>
+                                        <ul class="social-icon">
+                                            <li><a href="product-details.aspx"><i class="fa-solid fa-arrow-right-long"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="magnetic-wrap">
+                            <div class="people-card2 magnetic-item" style="">
+                                <div class="people-img">
+                                    <img src="image/shop/1.jpg" alt="">
+                                </div>
+                                <div class="people-content">
+                                    <div class="name-deg">
+                                        <h5 class="d-flex justify-content-between"><a href="#">Air Product 1</a><span class="text-danger fw-bold">PARK-RTD-02</span></h5>
+
+
+
+
+
+                                    </div>
+                                    <div class="contact-area">
+                                        <div class="contact-number">
+                                            <div class="icon">
+                                                View Product
+                                            </div>
+
+                                        </div>
+                                        <ul class="social-icon">
+                                            <li><a href="product-details.aspx"><i class="fa-solid fa-arrow-right-long"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -730,5 +837,38 @@ Pellentesque habitant morbi tristique senectus et netus et malesuada.
             </div>
         </div>
     </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        var swiper = new Swiper(".campus-slider", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            pagination: false,
+            navigation: true,
+            keyboard: false,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 1.1,
+                },
+                480: {
+                    slidesPerView: 1.1,
+                },
+                787: {
+                    slidesPerView: 2,
+                },
+                991: {
+                    slidesPerView: 5,
+                },
+                1200: {
+                    slidesPerView: 1.5,
+                },
+            },
+        });
+</script>
 </asp:Content>
 

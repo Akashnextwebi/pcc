@@ -137,6 +137,7 @@
             position: relative;
             padding: 0;
             height: 100%;
+            overflow:hidden;
             transition: 0.5s;
         }
 
@@ -158,7 +159,9 @@
                 flex-direction: column;
                 transition: 0.5s;
             }
-
+            .eg-card3.three:hover img{
+                transform:scale(1.15)
+            }
             .eg-card3.three .card-img img {
                 min-height: 350px;
                 height: 100%;

@@ -24,7 +24,7 @@
                                             href="#"
                                             class="btn ss-btn mr-15"
                                             data-animation="fadeInLeft"
-                                            data-delay=".4s"><i class="fal fa-long-arrow-right"></i>Read more</a>
+                                            data-delay=".4s" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fal fa-long-arrow-right"></i>Read more</a>
                                     </div>
                                 </div>
                             </div>
@@ -50,7 +50,7 @@
                                             href="#"
                                             class="btn ss-btn mr-15"
                                             data-animation="fadeInLeft"
-                                            data-delay=".4s"><i class="fal fa-long-arrow-right"></i>Read more</a>
+                                            data-delay=".4s" data-bs-toggle="modal" data-bs-target="#exampleModal2"><i class="fal fa-long-arrow-right" ></i>Read more</a>
                                     </div>
                                 </div>
                             </div>
@@ -76,7 +76,7 @@
                                             href="#"
                                             class="btn ss-btn mr-15"
                                             data-animation="fadeInLeft"
-                                            data-delay=".4s"><i class="fal fa-long-arrow-right"></i>Read more</a>
+                                            data-delay=".4s" data-bs-toggle="modal" data-bs-target="#exampleModal3"><i class="fal fa-long-arrow-right"></i>Read more</a>
                                     </div>
                                 </div>
                             </div>
@@ -212,7 +212,8 @@
                                     <div class="title">
                                         <h3>Precise Time & Frequency solutions</h3>
                                         <p>
-                                            Delivering Perfection where every Second<br /> Matters.
+                                            Delivering Perfection where every Second<br />
+                                            Matters.
                                         </p>
                                     </div>
                                     <div class="image">
@@ -232,9 +233,13 @@
                             <div class="service-card">
                                 <div class="card-inner">
                                     <div class="title">
-                                        <h3>Control <br />Solutions</h3>
+                                        <h3>Control
+                                            <br />
+                                            Solutions</h3>
                                         <p>
-                                            Ensuring Consistent Performance for <br />Mission-Critical Applications
+                                            Ensuring Consistent Performance for
+                                            <br />
+                                            Mission-Critical Applications
                                         </p>
                                     </div>
                                     <div class="image">
@@ -253,9 +258,13 @@
                             <div class="service-card">
                                 <div class="card-inner">
                                     <div class="title">
-                                        <h3>Select Custom <br />Solutions</h3>
+                                        <h3>Select Custom
+                                            <br />
+                                            Solutions</h3>
                                         <p>
-                                            Redefining complex requirements with <br />adaptable innovations. 
+                                            Redefining complex requirements with
+                                            <br />
+                                            adaptable innovations. 
                                         </p>
                                     </div>
                                     <div class="image">
@@ -813,19 +822,19 @@
                     </div>
                     <div class="col-12 col-md-12">
                         <div class="partner-slider">
-                          <%--  <div class="partner-logo">
+                            <%--  <div class="partner-logo">
                                 <img src="image/partners/anash.png" alt="" />
                             </div>--%>
                             <div class="partner-logo">
                                 <img src="image/partners/bhe.jpg" alt="" />
                             </div>
-                          <%--  <div class="partner-logo">
+                            <%--  <div class="partner-logo">
                                 <img src="image/partners/envinode.png" alt="" />
                             </div>--%>
                             <div class="partner-logo">
                                 <img src="image/partners/gdp.jpg" alt="" />
                             </div>
-                          <%--  <div class="partner-logo">
+                            <%--  <div class="partner-logo">
                                 <img src="image/partners/ontime.png" alt="" />
                             </div>
                             <div class="partner-logo">
@@ -840,5 +849,48 @@
             </div>
         </section>
     </main>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Driving Data Acquisition while Powering Precision</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Tailored to meet the demands of dynamic flight conditions, the (on-board) Health and Utility Management Systems provide actionable insights into the performance and condition of critical flight components. From detecting potential faults to optimizing maintenance schedules, HUMS empowers operators to reduce downtime, enhance operational efficiency, and ensure regulatory compliance. By integrating advanced data acquisition and real-time monitoring technologies, these systems enable smarter decision-making through intuitive interfaces and robust connectivity.</p>
+                </div>
+              
+            </div>
+        </div>
+    </div>
+       <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered">
+           <div class="modal-content">
+               <div class="modal-header">
+                   <h1 class="modal-title fs-5" id="exampleModalLabel2">Control Refined. Performance Redefined.</h1>
+                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+               </div>
+               <div class="modal-body">
+                   <p>The Full Authority Digital Engine Control (FADEC) systems leverage sophisticated algorithms and digital precision to enable top-tier engine performance and consistency across a wide range of conditions. These systems continuously monitor and manage critical parameters like fuel flow, engine temperature, and thrust levels. They adapt in real time to changing flight conditions and deliver peak performance while reducing overall pilot workload. Designed for durability and seamless integration, FADEC represents the pinnacle of modern aerospace engineering, driving innovation in both commercial and military aviation.</p>
+               </div>
+            
+           </div>
+       </div>
+   </div>
+         <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel3" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered">
+         <div class="modal-content">
+             <div class="modal-header">
+                 <h1 class="modal-title fs-5" id="exampleModalLabel3">Raising the Standard for Seamless Synchronization  </h1>
+                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+             </div>
+             <div class="modal-body">
+                 <p>Precision timing systems are the backbone of synchronized operations across aviation and aerospace industries. Engineered for reliability in extreme conditions, the Precision Timing Systems integrate advanced technologies such as atomic clocks and GPS synchronization to maintain stability. Whether managing flight trajectories or supporting mission-critical tasks, they provide the foundation for precision, efficiency, and safety in complex aviation environments.</p>
+             </div>
+           
+         </div>
+     </div>
+ </div>
 </asp:Content>
 

@@ -504,3 +504,185 @@
     .content-img {
         margin-bottom: 20px;
     }
+
+.eg-card3.three {
+    position: relative;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    display: block;
+    transition: height 0.5s ease;
+}
+
+    .eg-card3.three .card-img {
+        height: 100%;
+    }
+
+    .eg-card3.three .card-content {
+        background: linear-gradient(357deg, #000 1.72%, rgba(0, 0, 0, 0) 49.89%);
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 71%;
+        transform: unset;
+        padding: 30px 40px 10px;
+        display: flex;
+        justify-content: end;
+        flex-direction: column;
+        transition: height 0.5s ease;
+    }
+
+    .eg-card3.three:hover img {
+        transform: scale(1.15)
+    }
+
+    .eg-card3.three .card-img img {
+        min-height: 350px;
+        height: 100%;
+        -o-object-fit: cover;
+        object-fit: cover;
+    }
+
+    .eg-card3.three .card-content .view-btn {
+        position: absolute;
+        right: 85px;
+        top: 85px;
+        transition: 0.5s;
+        opacity: 0;
+    }
+
+    .eg-card3.three .card-content .catgory-and-title > a {
+        border-radius: 16px;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        background: 0 0;
+        display: inline-block;
+        color: #fff;
+        text-align: center;
+        font-size: 12px;
+        font-weight: 500;
+        padding: 2px 17px;
+        margin-bottom: 13px;
+    }
+
+.eg-card3 .card-content .catgory-and-title h5 a {
+    color: #fff;
+    font-size: 40px;
+    font-weight: 500;
+    transition: 0.35s;
+}
+
+.eg-card3.three .card-content .catgory-and-title h5 {
+    margin-bottom: 0;
+}
+
+    .eg-card3.three .card-content .catgory-and-title h5 a {
+        font-size: 24px;
+    }
+
+.eg-card3.two .card-content .catgory-and-title h5 a {
+    font-size: 24px;
+}
+
+.eg-card3.two:hover .card-content .view-btn {
+    right: 35px;
+    top: 35px;
+    opacity: 1;
+}
+
+.eg-card3.three:hover .card-content .view-btn {
+    right: 35px;
+    top: 35px;
+    opacity: 1;
+}
+
+.eg-card3.three .card-content .view-btn {
+    position: absolute;
+    right: 85px;
+    top: 85px;
+    transition: 0.5s;
+    opacity: 0;
+}
+.eg-card3 .catgory-and-title p {
+    display: none;
+    transition: opacity 0.3s ease;
+    color: #fff;
+    margin-top: 10px;
+   
+}
+
+/* Show the <p> tag on hover */
+.eg-card3:hover .catgory-and-title p {
+    display: block;
+    opacity: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+.eg-card3.three:hover .card-content {
+    background: #000000b5;
+}
+.eg-card3.three {
+    position: relative;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    display: block;
+    transition: height 0.5s ease;
+}
+
+    .eg-card3.three .card-img {
+        height: 100%;
+    }
+
+    .eg-card3.three .card-content {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 0; /* Initially hidden */
+        background: rgba(0, 0, 0, 0.85); /* Black background with opacity */
+        padding: 40px 40px 10px;
+        display: flex;
+        justify-content: end;
+        flex-direction: column;
+        transition: height 0.5s ease, background 0.5s ease;
+        overflow: hidden;
+        z-index: 1;
+    }
+
+    .eg-card3.three:hover .card-content {
+        height: 50%; /* Expand from bottom to top */
+        background: rgba(0, 0, 0, 0.85);
+    }
+
+    .eg-card3.three:hover img {
+        transform: scale(1.15);
+        transition: transform 0.5s ease;
+    }
+
+    .eg-card3.three .card-img img {
+        min-height: 350px;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .eg-card3.three .catgory-and-title p {
+        color: #fff;
+        display: none;
+        margin-top: 10px;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+    }
+
+    .eg-card3.three:hover .catgory-and-title p {
+        display: block;
+        opacity: 1;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3; /* Limit to 3 lines */
+        -webkit-box-orient: vertical;
+    }
