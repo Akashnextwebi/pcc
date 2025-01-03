@@ -60,7 +60,7 @@
           </div>
       </div>
   </div>
-    <section class="section-padding mt-100">
+    <section class="section-padding ">
         <div class="container">
             <div class="sec-title centred">
                 <span class="sub-title">Certification</span>

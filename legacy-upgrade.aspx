@@ -2,144 +2,15 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <link href="css/breadcrums.css" rel="stylesheet" />
-    <style>
-        .mb-130 {
-            margin-bottom: 130px;
-        }
-
-        .pt-130 {
-            padding-top: 130px;
-        }
-
-        .mb-70 {
-            margin-bottom: 70px;
-        }
-
-        .details-page-content h2 {
-            color: #000;
-            font-size: 40px;
-            font-weight: 400;
-            line-height: 1.2;
-            margin-bottom: 25px;
-        }
-
-        .details-page-content p {
-            color: #566064;
-            font-size: 16px;
-            font-weight: 400;
-            line-height: 1.7;
-            margin-bottom: 12px;
-        }
-
-        .service-details-wrapper .service-details-solution-area .solution-img {
-            height: 100%;
-        }
-
-            .service-details-wrapper .service-details-solution-area .solution-img img {
-                height: 100%;
-                -o-object-fit: cover;
-                object-fit: cover;
-                -o-object-position: left;
-                object-position: left;
-            }
-
-        .details-section-title {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            background-color: #f4f9fd;
-            padding: 14px 30px;
-        }
-
-            .details-section-title h4 {
-                color: #000;
-                font-size: 24px;
-                font-weight: 400;
-                line-height: 1.2;
-                margin-bottom: 0;
-            }
-
-        .service-details-wrapper .service-details-solution-area .solution-content ul {
-            list-style: decimal;
-            padding-left: 20px;
-            -moz-columns: 2;
-            columns: 2;
-            -moz-column-gap: 30px;
-            column-gap: 30px;
-            max-width: 740px;
-            width: 100%;
-            margin-bottom: 30px;
-        }
-
-            .service-details-wrapper .service-details-solution-area .solution-content ul li {
-                color: #566064;
-                font-size: 16px;
-                font-weight: 500;
-                line-height: 1.5;
-                margin-bottom: 15px;
-            }
-
-        .event-details-page .event-fetures {
-            padding-left: 30px;
-            position: relative;
-        }
-
-            .event-details-page .event-fetures::before {
-                height: 10px;
-                width: 10px;
-                border-radius: 50%;
-                background-color: #fff;
-                content: "";
-                position: absolute;
-                left: 0;
-                top: 4px;
-            }
-
-            .event-details-page .event-fetures h6 {
-                color: #fff;
-                font-size: 16px;
-                font-weight: 600;
-                margin-bottom: 10px;
-            }
-
-            .event-details-page .event-fetures p {
-                color: #fff;
-            }
-
-            .event-details-page .event-fetures .feature-list {
-                padding-top: 10px;
-                padding-left: 1.5rem;
-            }
-
-                .event-details-page .event-fetures .feature-list li {
-                    color: #fff;
-                    font-size: 15px;
-                    font-weight: 500;
-                    list-style: decimal;
-                    margin-bottom: 12px;
-                }
-
-        .sticky-img {
-            position: sticky;
-            top: 100px !important;
-            display: block;
-            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-            background: #fff;
-            padding: 2px;
-        }
-
-        .section-padding {
-            padding: 80px 0px;
-        }
-    </style>
+    <link href="css/services.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-    <div class="breadcrumb-section" style="background-image: linear-gradient(270deg, rgba(0, 0, 0, .55), rgba(0, 0, 0, 0.55) 101.02%), url(image/blog/braadcrumb-bg3.jpg);">
+      <div class="breadcrumb-section" style="background-image: linear-gradient(270deg, rgba(0, 0, 0, .55), rgba(0, 0, 0, 0.55) 101.02%), url(image/update.png);">
         <div class="container-fluid one pl--95">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="banner-content">
-                        <h1>Legacy Upgrade</h1>
+                        <h1 class="mb-3">Legacy Upgrade</h1>
                         <ul class="breadcrumb-list">
                             <li><a href="Default.aspx">Home</a></li>
                             <li>Legacy Upgrade</li>
@@ -152,7 +23,7 @@
     <div class="service-details-wrapper pt-130 mb-40">
         <div class="container-fluid one pl--95">
             <div class="details-page-content mb-70">
-                <h2>Health &amp; Care Consulting</h2>
+                <h2>Legacy Upgrade in PCC</h2>
                 <div class="row g-lg-4 gy-2">
                     <div class="col-lg-6">
                         <p class="first-para">H ealth and care consulting refers to a specialized field of consulting that focuses on providing advisory and support services to organizations and individuals within the healthcare and healthcare-related industries. This can encompass a wide range of services and expertise aimed at improving the delivery, efficiency, quality, and outcomes of healthcare services and patient.Health and care consultants bring specialized knowledge and expertise in healthcare management, policy, technology, and clinical practice. They stay up-to-date with industry trends and best practices, providing valuable insights and solutions.</p>

@@ -314,7 +314,13 @@
             font-weight:600;
             font-size:18px !important;
         }
-
+        .breadcrumb-section {
+    background-size: 100% 90%;
+    background-repeat: no-repeat;
+    background-position: right;
+    padding: 305px 0 200px;
+    position: relative;
+}
 
           .broacher-content h4 {
     font-size:24px;
@@ -324,7 +330,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <main class="wrapper">
-        <div class="breadcrumb-section" style="background-image: linear-gradient(270deg, rgba(0, 0, 0, .55), rgba(0, 0, 0, 0.55) 101.02%), url(image/blog/braadcrumb-bg3.jpg);">
+        <div class="breadcrumb-section" style="background-image: linear-gradient(270deg, rgba(0, 0, 0, .55), rgba(0, 0, 0, 0.55) 101.02%), url(image/data-solution.png);">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
@@ -466,7 +472,7 @@
                 <div class="container-fluid one pl--95">
                     <div class="horizontal-scrolling-content">
                         <div class="section-title1 two">
-                            <span>Real Estate</span>
+                            <span>PCC</span>
                             <h2>Defense Solutions Product Guide
                             </h2>
                         </div>

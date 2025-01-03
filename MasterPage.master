@@ -204,24 +204,24 @@
                    <a href="#">Services</a>
                    <ul>
                      <li><a href="legacy-upgrade.aspx">Legacy Upgrade</a></li>
-                     <li><a href="#">AMC</a></li>
+                     <li><a href="amc.aspx">AMC</a></li>
                      <li>
-                       <a href="#"
+                       <a href="realization-of-concept-to-fruition-of-futuristic.aspx"
                          >Realization of concept to fruition of futuristic
                          products</a
                        >
                      </li>
-                     <li><a href="#">Turnkey Solution</a></li>
+                     <li><a href="tunkey-solution.aspx">Turnkey Solution</a></li>
                    </ul>
                  </li>
                  <li class="has-sub">
                    <a href="#">Sustainability</a>
                    <ul>
                      <li><a href="make-in-india.aspx">Make in India</a></li>
-                     <li><a href="#">Safety First</a></li>
-                     <li><a href="#">Investing on People</a></li>
-                     <li><a href="#">Cyber Security</a></li>
-                     <li><a href="#">Environmental Safety</a></li>
+                     <li><a href="safety-first.aspx">Safety First</a></li>
+                     <li><a href="investing-on-people.aspx">Investing on People</a></li>
+                     <li><a href="cyber-security.aspx">Cyber Security</a></li>
+                     <li><a href="environmental-safety.aspx">Environmental Safety</a></li>
                    </ul>
                  </li>
                  <li><a href="contact-us.aspx">Contact Us</a></li>

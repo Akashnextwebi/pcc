@@ -343,7 +343,7 @@
                 <div class="container-fluid one pl--95">
                     <div class="horizontal-scrolling-content">
                         <div class="section-title1 two">
-                            <span>Real Estate</span>
+                            <span>PCC</span>
                             <h2>Defense Solutions Product Guide
                             </h2>
                         </div>

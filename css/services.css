@@ -1,0 +1,128 @@
+﻿.mb-130 {
+    margin-bottom: 130px;
+}
+
+.pt-130 {
+    padding-top: 130px;
+}
+
+.mb-70 {
+    margin-bottom: 70px;
+}
+
+.details-page-content h2 {
+    color: #000;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.details-page-content p {
+    color: #566064;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.7;
+    margin-bottom: 12px;
+}
+
+.service-details-wrapper .service-details-solution-area .solution-img {
+    height: 100%;
+}
+
+    .service-details-wrapper .service-details-solution-area .solution-img img {
+        height: 100%;
+        -o-object-fit: cover;
+        object-fit: cover;
+        -o-object-position: left;
+        object-position: left;
+    }
+
+.details-section-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #f4f9fd;
+    padding: 14px 30px;
+}
+
+    .details-section-title h4 {
+        color: #000;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 1.2;
+        margin-bottom: 0;
+    }
+
+.service-details-wrapper .service-details-solution-area .solution-content ul {
+    list-style: decimal;
+    padding-left: 20px;
+    -moz-columns: 2;
+    columns: 2;
+    -moz-column-gap: 30px;
+    column-gap: 30px;
+    max-width: 740px;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+    .service-details-wrapper .service-details-solution-area .solution-content ul li {
+        color: #566064;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.5;
+        margin-bottom: 15px;
+    }
+
+.event-details-page .event-fetures {
+    padding-left: 30px;
+    position: relative;
+}
+
+    .event-details-page .event-fetures::before {
+        height: 10px;
+        width: 10px;
+        border-radius: 50%;
+        background-color: #fff;
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 4px;
+    }
+
+    .event-details-page .event-fetures h6 {
+        color: #fff;
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+    .event-details-page .event-fetures p {
+        color: #fff;
+    }
+
+    .event-details-page .event-fetures .feature-list {
+        padding-top: 10px;
+        padding-left: 1.5rem;
+    }
+
+        .event-details-page .event-fetures .feature-list li {
+            color: #fff;
+            font-size: 15px;
+            font-weight: 500;
+            list-style: decimal;
+            margin-bottom: 12px;
+        }
+
+.sticky-img {
+    position: sticky;
+    top: 100px !important;
+    display: block;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background: #fff;
+    padding: 2px;
+}
+
+.section-padding {
+    padding: 80px 0px;
+}
