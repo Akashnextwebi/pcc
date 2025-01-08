@@ -85,69 +85,107 @@
                     <div class="row gy-4">
 
 
-                        <div class="col-lg-4">
-                            <div class="eg-card3 three">
-                                <div class="card-img">
-                                    <a href="product-lisitng.aspx">
-                                        <img src="image/air/1.png" alt=""></a>
-                                </div>
-                                <div class="card-content">
-                                   
-                                    <div class="catgory-and-title">
-                                        <h5><a href="product-lisitng.aspx">PCAMi - 1000 </a></h5>
-
-                                        <p>Flight Test Telemetry & Instrumentation for Defense Aircrafts,  Commercial Flight trials, UAV, Missiles, Helicopters, Launch Vehicles : Onboard rugged Data Acquisition Unit; Suitable for deployment in aircrafts, </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
 
                         <div class="col-lg-4">
-                            <div class="eg-card3 three">
-                                <div class="card-img">
-                                    <a href="product-lisitng.aspx">
-                                        <img src="image/air/2.png" alt=""></a>
-                                </div>
-                                <div class="card-content">
-                                  
-                                    <div class="catgory-and-title">
-                                        <h5><a href="product-lisitng.aspx">PCAMi - 1000 </a></h5>
+                            <div class="card1">
+                                <a href="product-details.aspx" contenteditable="false" style="cursor: pointer;">
+                                    <img src="image/air/1.png" class="img1">
+                                    <div class="intro1">
+                                        <h4 class="text-h1">PCAMi - 1000
 
-                                        <p>Flight Test Telemetry & Instrumentation for Defense Aircrafts,  Commercial Flight trials, UAV, Missiles, Helicopters, Launch Vehicles : Onboard rugged Data Acquisition Unit; Suitable for deployment in aircrafts, </p>
+            </h4>
+
+                                        <p class="text-p">
+                                            Flight Test Telemetry & Instrumentation for Defense Aircrafts, Commercial Flight trials, UAV, Missiles, Helicopters, Launch Vehicles : Onboard           
+                                        </p>
                                     </div>
-                                </div>
+                                </a>
+
                             </div>
                         </div>
                         <div class="col-lg-4">
-                            <div class="eg-card3 three">
-                                <div class="card-img">
-                                    <a href="product-lisitng.aspx">
-                                        <img src="image/air/3.png" alt=""></a>
-                                </div>
-                                <div class="card-content">
-                                   
-                                    <div class="catgory-and-title">
-                                        <h5><a href="product-lisitng.aspx">PCAMi - 1000 </a></h5>
+                            <div class="card1">
+                                <a href="product-details.aspx" contenteditable="false" style="cursor: pointer;">
+                                    <img src="image/air/2.png" class="img1">
+                                    <div class="intro1">
+                                        <h4 class="text-h1">PCAMi - 1000
 
-                                        <p>Flight Test Telemetry & Instrumentation for Defense Aircrafts,  Commercial Flight trials, UAV, Missiles, Helicopters, Launch Vehicles : Onboard rugged Data Acquisition Unit; Suitable for deployment in aircrafts, </p>
+</h4>
+
+                                        <p class="text-p">
+                                            Flight Test Telemetry & Instrumentation for Defense Aircrafts, Commercial Flight trials, UAV, Missiles, Helicopters, Launch Vehicles : Onboard           
+                                        </p>
                                     </div>
-                                </div>
+                                </a>
+
                             </div>
                         </div>
                         <div class="col-lg-4">
-                            <div class="eg-card3 three">
-                                <div class="card-img">
-                                    <a href="product-lisitng.aspx">
-                                        <img src="image/air/4.png" alt=""></a>
-                                </div>
-                                <div class="card-content">
-                                
-                                    <div class="catgory-and-title">
-                                        <h5><a href="product-lisitng.aspx">PCAMi - 1000 </a></h5>
+                            <div class="card1">
+                                <a href="product-details.aspx" contenteditable="false" style="cursor: pointer;">
+                                    <img src="image/air/3.png" class="img1">
+                                    <div class="intro1">
+                                        <h4 class="text-h1">PCAMi - 1000
 
-                                        <p>Flight Test Telemetry & Instrumentation for Defense Aircrafts,  Commercial Flight trials, UAV, Missiles, Helicopters, Launch Vehicles : Onboard rugged Data Acquisition Unit; Suitable for deployment in aircrafts, </p>
+</h4>
+
+                                        <p class="text-p">
+                                            Flight Test Telemetry & Instrumentation for Defense Aircrafts, Commercial Flight trials, UAV, Missiles, Helicopters, Launch Vehicles : Onboard           
+                                        </p>
                                     </div>
-                                </div>
+                                </a>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="card1">
+                                <a href="product-details.aspx" contenteditable="false" style="cursor: pointer;">
+                                    <img src="image/air/4.png" class="img1">
+                                    <div class="intro1">
+                                        <h4 class="text-h1">PCAMi - 1000
+
+</h4>
+
+                                        <p class="text-p">
+                                            Flight Test Telemetry & Instrumentation for Defense Aircrafts, Commercial Flight trials, UAV, Missiles, Helicopters, Launch Vehicles : Onboard           
+                                        </p>
+                                    </div>
+                                </a>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="card1">
+                                <a href="product-details.aspx" contenteditable="false" style="cursor: pointer;">
+                                    <img src="image/air/2.png" class="img1">
+                                    <div class="intro1">
+                                        <h4 class="text-h1">PCAMi - 1000
+
+</h4>
+
+                                        <p class="text-p">
+                                            Flight Test Telemetry & Instrumentation for Defense Aircrafts, Commercial Flight trials, UAV, Missiles, Helicopters, Launch Vehicles : Onboard           
+                                        </p>
+                                    </div>
+                                </a>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="card1">
+                                <a href="product-details.aspx" contenteditable="false" style="cursor: pointer;">
+                                    <img src="image/air/2.png" class="img1">
+                                    <div class="intro1">
+                                        <h4 class="text-h1">PCAMi - 1000
+
+</h4>
+
+                                        <p class="text-p">
+                                            Flight Test Telemetry & Instrumentation for Defense Aircrafts, Commercial Flight trials, UAV, Missiles, Helicopters, Launch Vehicles : Onboard           
+                                        </p>
+                                    </div>
+                                </a>
+
                             </div>
                         </div>
 

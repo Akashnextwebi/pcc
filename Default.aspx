@@ -854,7 +854,7 @@
 <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Driving Data Acquisition while Powering Precision</h1>
+                    <h1 class="modal-title" style="color:#79010c"  id="exampleModalLabel">Driving Data Acquisition while Powering Precision</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -868,7 +868,7 @@
 <div class="modal-dialog modal-dialog-centered">
            <div class="modal-content">
                <div class="modal-header">
-                   <h1 class="modal-title fs-5" id="exampleModalLabel2">Control Refined. Performance Redefined.</h1>
+                   <h1 class="modal-title " style="color:#79010c"  id="exampleModalLabel2">Control Refined. Performance Redefined.</h1>
                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                </div>
                <div class="modal-body">
@@ -882,7 +882,7 @@
 <div class="modal-dialog modal-dialog-centered">
          <div class="modal-content">
              <div class="modal-header">
-                 <h1 class="modal-title fs-5" id="exampleModalLabel3">Raising the Standard for Seamless Synchronization  </h1>
+                 <h1 class="modal-title " style="color:#79010c" id="exampleModalLabel3">Raising the Standard for Seamless Synchronization  </h1>
                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
              </div>
              <div class="modal-body">

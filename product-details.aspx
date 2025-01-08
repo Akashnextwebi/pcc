@@ -21,20 +21,20 @@
             border-radius: 50%;
         }
 
-           .campus-slider .swiper-button-next {
-       color: #fff;
-       background: #000;
-       z-index: 10;
-       padding: 20px;
-       border-radius: 50%;
-   }
+        .campus-slider .swiper-button-next {
+            color: #fff;
+            background: #000;
+            z-index: 10;
+            padding: 20px;
+            border-radius: 50%;
+        }
 
-            .campus-slider .swiper-button-prev:after {
-                font-size: 18px;
-                content: 'prev';
-            }
+        .campus-slider .swiper-button-prev:after {
+            font-size: 18px;
+            content: 'prev';
+        }
 
-      
+
         .campus-slider .swiper-button-next:after {
             content: 'next';
             font-size: 18px;
@@ -147,7 +147,14 @@
             align-items: center;
             justify-content: space-between;
         }
-
+        .btn i {
+            margin-left: 10px;
+            font-size: 16px;
+            position: absolute;
+            left: -10px;
+            background: var(--pcc-primary-theme);
+            top: 1px;
+        }
             .people-card2 .people-content .contact-area .social-icon {
                 display: flex;
                 align-items: center;
@@ -312,8 +319,8 @@ Pellentesque habitant morbi tristique senectus et netus et malesuada.
                                 <div class="cart_button">
                                     <a href="#" class="btn-three w-100" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                         <div class="btn-wrap">
-                                            <span class="text-first"> <i class="fa-solid fa-cloud-arrow-down me-2"></i>
-Download Brochure</span>
+                                            <span class="text-first"><i class="fa-solid fa-cloud-arrow-down me-2"></i>
+                                                Download Brochure</span>
                                             <span class="text-second"><i class="fa-solid fa-cloud-arrow-down me-2"></i>Download <b></b>Brochure</span>
                                         </div>
 
@@ -571,12 +578,28 @@ Download Brochure</span>
         </div>
         <section class="section-padding">
             <div class="container">
-                <div class="text-center">
+                <div class="row">
+                    <div class="col-lg-8">
+                         <div class="text-start">
 
 
-                    <h2 class="mb-30 text-white">Full Datasheet Screenshots
-                    </h2>
+     <h2 class="mb-30 text-white">Full Datasheet Screenshots
+     </h2>
+ </div>
+                    </div>
+                    <div class="col-lg-4">
+                         <a href="#" class="btn-three w-100" data-bs-toggle="modal" data-bs-target="#exampleModal">
+     <div class="btn-wrap">
+         <span class="text-first"><i class="fa-solid fa-cloud-arrow-down me-2"></i>
+             Download Brochure</span>
+         <span class="text-second"><i class="fa-solid fa-cloud-arrow-down me-2"></i>Download <b></b>Brochure</span>
+     </div>
+
+ </a>
+                    </div>
+
                 </div>
+               
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="swiper campus-slider ">
@@ -823,7 +846,7 @@ Download Brochure</span>
                                                         href="#"
                                                         class="btn ss-btn mr-15"
                                                         data-animation="fadeInLeft"
-                                                        data-delay=".4s"><i class="fal fa-long-arrow-right"></i>Download</a>
+                                                        data-delay=".4s"><i class="fa-solid fa-cloud-arrow-down "></i>Download</a>
                                                 </div>
                                             </div>
                                         </div>

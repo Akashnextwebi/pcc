@@ -71,224 +71,129 @@
 
   
 
-    <div class="solution-section section-padding bg-light pb-50">
+        <div class="solution-section section-padding pb-50 bg-light">
         <div class="container">
             <div class="row g-4">
                 <div class="col-lg-12 ">
                     <div class="sub-title  text-start">
-                        <h2>Spotlight on Land Capabilities
+                        <h2>Spotlight on Air Capabilities
                         </h2>
                     </div>
 
                 </div>
                 <div class="col-lg-12">
-                    <div class="row">
-
-                        <div class="col-lg-12 d-flex align-items-center position-relative">
-                            <div class="row gy-4 justify-content-end">
-
-                                <div class="col-lg-4">
-                                    <div class="magnetic-wrap">
-                                        <div class="people-card2 magnetic-item" style="">
-                                            <div class="people-img">
-                                                <img src="image/shop/1.jpg" alt="">
-                                            </div>
-                                            <div class="people-content">
-                                                <div class="name-deg">
-                                                    <h5><a href="#">PARK ITD-1020 </a></h5>
+                    <div class="row gy-4">
 
 
-                                                    <p>The PARK ITD-1020 Integrated Telemetry IF Demodulator is a state-of-the-art device designed for efficient intermediate frequency (IF) demodulation in telemetry systems. Its robust capabilities make it ideal for aerospace and defense applications requiring reliable telemetry signal processing.</p>
 
+                        <div class="col-lg-4">
+                            <div class="card1">
+                                <a href="product-lisitng.aspx" contenteditable="false" style="cursor: pointer;">
+                                    <img src="image/air/1.png" class="img1">
+                                    <div class="intro1">
+                                        <h4 class="text-h1">PCAMi - 1000
 
-                                                </div>
-                                                <div class="contact-area">
-                                                    <div class="contact-number">
-                                                        <div class="icon">
-                                                            View Product
-                                           
-                                                        </div>
+            </h4>
 
-                                                    </div>
-                                                    <ul class="social-icon">
-                                                        <li><a href="product-details.aspx"><i class="fa-solid fa-arrow-right-long"></i></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        <p class="text-p">
+                                            Flight Test Telemetry & Instrumentation for Defense Aircrafts, Commercial Flight trials, UAV, Missiles, Helicopters, Launch Vehicles : Onboard           
+                                        </p>
                                     </div>
-                                </div>
-                                <div class="col-lg-4">
-                                    <div class="magnetic-wrap">
-                                        <div class="people-card2 magnetic-item" style="">
-                                            <div class="people-img">
-                                                <img src="image/shop/1.jpg" alt="">
-                                            </div>
-                                            <div class="people-content">
-                                                <div class="name-deg">
-                                                    <h5><a href="#">PARK BITSYNC 2020</a></h5>
-
-
-                                                    <p>A Telemetry Bit Synchronizer is a crucial component in telemetry systems, designed to recover and synchronize digital data streams from analog telemetry signals with precision and reliability. Widely used in aerospace, defense, research, and transportation industries, it supports satellite communication, missile guidance, and aircraft testing by ensuring error-</p>
-
-
-                                                </div>
-                                                <div class="contact-area">
-                                                    <div class="contact-number">
-                                                        <div class="icon">
-                                                            View Product
-                                           
-                                                        </div>
-
-                                                    </div>
-                                                    <ul class="social-icon">
-                                                        <li><a href="product-details.aspx"><i class="fa-solid fa-arrow-right-long"></i></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4">
-                                    <div class="magnetic-wrap">
-                                        <div class="people-card2 magnetic-item" style="">
-                                            <div class="people-img">
-                                                <img src="image/shop/1.jpg" alt="">
-                                            </div>
-                                            <div class="people-content">
-                                                <div class="name-deg">
-                                                    <h5><a href="#">PARK DS-02</a></h5>
-
-
-                                                    <p>A PCM Decommutation System is an advanced data processing system used to extract and analyze information from telemetry signals encoded in Pulse Code Modulation (PCM) format. These systems are critical in the aerospace, defense, automotive, and research sectors, enabling real-time decoding, processing, and visualization of complex telemetry data streams.</p>
-
-
-                                                </div>
-                                                <div class="contact-area">
-                                                    <div class="contact-number">
-                                                        <div class="icon">
-                                                            View Product
-                                           
-                                                        </div>
-
-                                                    </div>
-                                                    <ul class="social-icon">
-                                                        <li><a href="product-details.aspx"><i class="fa-solid fa-arrow-right-long"></i></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4">
-                                    <div class="magnetic-wrap">
-                                        <div class="people-card2 magnetic-item" style="">
-                                            <div class="people-img">
-                                                <img src="image/shop/1.jpg" alt="">
-                                            </div>
-                                            <div class="people-content">
-                                                <div class="name-deg">
-                                                    <h5 class=""><a href="#">PCM Simulator
- PARK PCM SIM-2020
- 
-                                                    </a></h5>
-
-
-                                                    <p>PCM Simulator is a sophisticated tool designed to emulate Pulse Code Modulation (PCM) telemetry data streams for testing and verification purposes. It is essential for validating telemetry systems without requiring live mission data, making it a valuable resource in aerospace, defense, automotive, and other industries relying on telemetry.</p>
-                                                </div>
-                                                <div class="contact-area">
-                                                    <div class="contact-number">
-                                                        <div class="icon">
-                                                            View Product
-                                           
-                                                        </div>
-
-                                                    </div>
-                                                    <ul class="social-icon">
-                                                        <li><a href="product-details.aspx"><i class="fa-solid fa-arrow-right-long"></i></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-                                <div class="col-lg-4">
-                                    <div class="magnetic-wrap">
-                                        <div class="people-card2 magnetic-item" style="">
-                                            <div class="people-img">
-                                                <img src="image/shop/1.jpg" alt="">
-                                            </div>
-                                            <div class="people-content">
-                                                <div class="name-deg">
-                                                    <h5><a href="#">PARK ITPDS-2020 &
- PARK ITPS-X020
-                                                    </a></h5>
-
-
-                                                    <p>The Integrated Telemetry Data Processor (ITDP) is a comprehensive system designed to collect, process, and analyze telemetry data from various sources, such as aerospace vehicles, missiles, or ground-based equipment. It integrates multiple functions, including decommutation, data formatting, storage, and real-time analysis, enabling seamless telemetry operations.</p>
-
-                                                </div>
-                                                <div class="contact-area">
-                                                    <div class="contact-number">
-                                                        <div class="icon">
-                                                            View Product
-                                           
-                                                        </div>
-
-                                                    </div>
-                                                    <ul class="social-icon">
-                                                        <li><a href="product-details.aspx"><i class="fa-solid fa-arrow-right-long"></i></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-4">
-                                    <div class="magnetic-wrap">
-                                        <div class="people-card2 magnetic-item" style="">
-                                            <div class="people-img">
-                                                <img src="image/shop/1.jpg" alt="">
-                                            </div>
-                                            <div class="people-content">
-                                                <div class="name-deg">
-                                                    <h5 class=""><a href="#">
- PARK RBDS-02
- PARK GTAPS-0102
-
-                                                    </a></h5>
-
-<p>PCM Telemetry Ground Station Setup is a sophisticated system designed to receive, process, and analyze telemetry data transmitted from airborne, spaceborne, or ground-based platforms. This setup is integral to tracking, monitoring, and evaluating the performance of vehicles or systems during testing or operational phases.</p>
-
-
-                                                </div>
-                                                <div class="contact-area">
-                                                    <div class="contact-number">
-                                                        <div class="icon">
-                                                            View Product
-               
-                                                        </div>
-
-                                                    </div>
-                                                    <ul class="social-icon">
-                                                        <li><a href="product-details.aspx"><i class="fa-solid fa-arrow-right-long"></i></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-                                <!-- Sidebar  -->
+                                </a>
 
                             </div>
-
                         </div>
+                        <div class="col-lg-4">
+                            <div class="card1">
+                                <a href="product-details.aspx" contenteditable="false" style="cursor: pointer;">
+                                    <img src="image/air/2.png" class="img1">
+                                    <div class="intro1">
+                                        <h4 class="text-h1">PCAMi - 1000
+
+</h4>
+
+                                        <p class="text-p">
+                                            Flight Test Telemetry & Instrumentation for Defense Aircrafts, Commercial Flight trials, UAV, Missiles, Helicopters, Launch Vehicles : Onboard           
+                                        </p>
+                                    </div>
+                                </a>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="card1">
+                                <a href="product-details.aspx" contenteditable="false" style="cursor: pointer;">
+                                    <img src="image/air/3.png" class="img1">
+                                    <div class="intro1">
+                                        <h4 class="text-h1">PCAMi - 1000
+
+</h4>
+
+                                        <p class="text-p">
+                                            Flight Test Telemetry & Instrumentation for Defense Aircrafts, Commercial Flight trials, UAV, Missiles, Helicopters, Launch Vehicles : Onboard           
+                                        </p>
+                                    </div>
+                                </a>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="card1">
+                                <a href="product-details.aspx" contenteditable="false" style="cursor: pointer;">
+                                    <img src="image/air/4.png" class="img1">
+                                    <div class="intro1">
+                                        <h4 class="text-h1">PCAMi - 1000
+
+</h4>
+
+                                        <p class="text-p">
+                                            Flight Test Telemetry & Instrumentation for Defense Aircrafts, Commercial Flight trials, UAV, Missiles, Helicopters, Launch Vehicles : Onboard           
+                                        </p>
+                                    </div>
+                                </a>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="card1">
+                                <a href="product-details.aspx" contenteditable="false" style="cursor: pointer;">
+                                    <img src="image/air/2.png" class="img1">
+                                    <div class="intro1">
+                                        <h4 class="text-h1">PCAMi - 1000
+
+</h4>
+
+                                        <p class="text-p">
+                                            Flight Test Telemetry & Instrumentation for Defense Aircrafts, Commercial Flight trials, UAV, Missiles, Helicopters, Launch Vehicles : Onboard           
+                                        </p>
+                                    </div>
+                                </a>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="card1">
+                                <a href="product-details.aspx" contenteditable="false" style="cursor: pointer;">
+                                    <img src="image/air/2.png" class="img1">
+                                    <div class="intro1">
+                                        <h4 class="text-h1">PCAMi - 1000
+
+</h4>
+
+                                        <p class="text-p">
+                                            Flight Test Telemetry & Instrumentation for Defense Aircrafts, Commercial Flight trials, UAV, Missiles, Helicopters, Launch Vehicles : Onboard           
+                                        </p>
+                                    </div>
+                                </a>
+
+                            </div>
+                        </div>
+
+                        <!-- Sidebar  -->
+
                     </div>
+
+
                 </div>
                 <div class="col-lg-12 text-center">
                     <div class="slider-btn mt-5 ">

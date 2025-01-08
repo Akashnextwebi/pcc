@@ -71,218 +71,129 @@
 
     
 
-    <div class="solution-section pb-50">
+        <div class="solution-section section-padding pb-50 bg-light">
         <div class="container">
             <div class="row g-4">
                 <div class="col-lg-12 ">
                     <div class="sub-title  text-start">
-                        <h2>Spotlight on Sea Capabilities
+                        <h2>Spotlight on Air Capabilities
                         </h2>
                     </div>
 
                 </div>
                 <div class="col-lg-12">
-                    <div class="row">
-
-                        <div class="col-lg-12 d-flex align-items-center position-relative">
-                            <div class="row gy-4 justify-content-end">
-
-                                <div class="col-lg-4">
-                                    <div class="magnetic-wrap">
-                                        <div class="people-card2 magnetic-item" style="">
-                                            <div class="people-img">
-                                                <img src="image/shop/1.jpg" alt="">
-                                            </div>
-                                            <div class="people-content">
-                                                <div class="name-deg">
-                                                    <h5><a href="#">PCAMi - 1000 </a></h5>
+                    <div class="row gy-4">
 
 
-                                                    <p>Flight Test Telemetry & Instrumentation for Defense Aircrafts,  Commercial Flight trials, UAV, Missiles, Helicopters, Launch Vehicles : Onboard rugged Data Acquisition Unit; Suitable for deployment in aircrafts, helicopters, missiles and UAVs.</p>
 
-                                                </div>
-                                                <div class="contact-area">
-                                                    <div class="contact-number">
-                                                        <div class="icon">
-                                                            View Product
-                                           
-                                                        </div>
+                        <div class="col-lg-4">
+                            <div class="card1">
+                                <a href="product-lisitng.aspx" contenteditable="false" style="cursor: pointer;">
+                                    <img src="image/air/1.png" class="img1">
+                                    <div class="intro1">
+                                        <h4 class="text-h1">PCAMi - 1000
 
-                                                    </div>
-                                                    <ul class="social-icon">
-                                                        <li><a href="product-details.aspx"><i class="fa-solid fa-arrow-right-long"></i></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
+            </h4>
+
+                                        <p class="text-p">
+                                            Flight Test Telemetry & Instrumentation for Defense Aircrafts, Commercial Flight trials, UAV, Missiles, Helicopters, Launch Vehicles : Onboard           
+                                        </p>
                                     </div>
-                                </div>
-                                <div class="col-lg-4">
-                                    <div class="magnetic-wrap">
-                                        <div class="people-card2 magnetic-item" style="">
-                                            <div class="people-img">
-                                                <img src="image/shop/1.jpg" alt="">
-                                            </div>
-                                            <div class="people-content">
-                                                <div class="name-deg">
-                                                    <h5><a href="#">PARK ITS – 100</a></h5>
-
-
-                                                    <p>Onboard rugged DAU with ultra compact Integrated Telemetry System; MIL-grade COTS (Commercial Off The Shelf) solution for launchers, sounding rockets, guided-bombs  & missile testing and telemetry.</p>
-
-                                                </div>
-                                                <div class="contact-area">
-                                                    <div class="contact-number">
-                                                        <div class="icon">
-                                                            View Product
-                                           
-                                                        </div>
-
-                                                    </div>
-                                                    <ul class="social-icon">
-                                                        <li><a href="product-details.aspx"><i class="fa-solid fa-arrow-right-long"></i></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4">
-                                    <div class="magnetic-wrap">
-                                        <div class="people-card2 magnetic-item" style="">
-                                            <div class="people-img">
-                                                <img src="image/shop/1.jpg" alt="">
-                                            </div>
-                                            <div class="people-content">
-                                                <div class="name-deg">
-                                                    <h5><a href="#">PARK PCM-32S and PARK GPS-PCM</a></h5>
-
-
-                                                    <p>Flight Encoders are essential components in aerospace systems, used to measure and relay precise angular or linear position data. They are integral to aircraft navigation, control systems, and data logging.</p>
-
-                                                </div>
-                                                <div class="contact-area">
-                                                    <div class="contact-number">
-                                                        <div class="icon">
-                                                            View Product
-                                           
-                                                        </div>
-
-                                                    </div>
-                                                    <ul class="social-icon">
-                                                        <li><a href="product-details.aspx"><i class="fa-solid fa-arrow-right-long"></i></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4">
-                                    <div class="magnetic-wrap">
-                                        <div class="people-card2 magnetic-item" style="">
-                                            <div class="people-img">
-                                                <img src="image/shop/1.jpg" alt="">
-                                            </div>
-                                            <div class="people-content">
-                                                <div class="name-deg">
-                                                    <h5 class=""><a href="#">PARK BUMT-31 & PARK BUMT-32,
-PARK ST227 & PARK ST230
-                                                    </a></h5>
-
-
-
-                                                    <p>L Band & S Band Telemetry Transmitters are specialized devices used for transmitting telemetry data from airborne or ground systems to a receiving station. These transmitters operate in specific frequency bands (L Band: 1–2 GHz, S Band: 2–4 GHz) and play a critical role in real-time data transmission for various applications in aerospace, defense, and satellite systems.</p>
-                                                </div>
-                                                <div class="contact-area">
-                                                    <div class="contact-number">
-                                                        <div class="icon">
-                                                            View Product
-                                           
-                                                        </div>
-
-                                                    </div>
-                                                    <ul class="social-icon">
-                                                        <li><a href="product-details.aspx"><i class="fa-solid fa-arrow-right-long"></i></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-                                <div class="col-lg-4">
-                                    <div class="magnetic-wrap">
-                                        <div class="people-card2 magnetic-item" style="">
-                                            <div class="people-img">
-                                                <img src="image/shop/1.jpg" alt="">
-                                            </div>
-                                            <div class="people-content">
-                                                <div class="name-deg">
-                                                    <h5><a href="#">PARK BPBL-14 & PARK BPBS-39
-                                                    </a></h5>
-
-
-                                                    <p>L Band & S Band Telemetry Power Amplifiers are key components in telemetry systems used for amplifying RF signals to ensure reliable data transmission over long distances. Operating in the L Band (1–2 GHz) and S Band (2–4 GHz), these amplifiers are widely used in aerospace, defense, and satellite communication applications.</p>
-
-                                                </div>
-                                                <div class="contact-area">
-                                                    <div class="contact-number">
-                                                        <div class="icon">
-                                                            View Product
-                                           
-                                                        </div>
-
-                                                    </div>
-                                                    <ul class="social-icon">
-                                                        <li><a href="product-details.aspx"><i class="fa-solid fa-arrow-right-long"></i></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-4">
-                                    <div class="magnetic-wrap">
-                                        <div class="people-card2 magnetic-item" style="">
-                                            <div class="people-img">
-                                                <img src="image/shop/1.jpg" alt="">
-                                            </div>
-                                            <div class="people-content">
-                                                <div class="name-deg">
-                                                    <h5 class=""><a href="#"> PARK-BHLN23 & PARK-BHLN24
-
-                                                    </a></h5>
-
-<p>L Band & S Band 2-Way Power Dividers are RF components designed to evenly split or combine power signals in telemetry and communication systems. They operate within the L Band (1–2 GHz) and S Band (2–4 GHz), making them crucial for aerospace, defense, and satellite applications requiring precise signal distribution.</p>
-
-
-                                                </div>
-                                                <div class="contact-area">
-                                                    <div class="contact-number">
-                                                        <div class="icon">
-                                                            View Product
-               
-                                                        </div>
-
-                                                    </div>
-                                                    <ul class="social-icon">
-                                                        <li><a href="product-details.aspx"><i class="fa-solid fa-arrow-right-long"></i></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-                                <!-- Sidebar  -->
+                                </a>
 
                             </div>
-
                         </div>
+                        <div class="col-lg-4">
+                            <div class="card1">
+                                <a href="product-lisitng.aspx" contenteditable="false" style="cursor: pointer;">
+                                    <img src="image/air/2.png" class="img1">
+                                    <div class="intro1">
+                                        <h4 class="text-h1">PCAMi - 1000
+
+</h4>
+
+                                        <p class="text-p">
+                                            Flight Test Telemetry & Instrumentation for Defense Aircrafts, Commercial Flight trials, UAV, Missiles, Helicopters, Launch Vehicles : Onboard           
+                                        </p>
+                                    </div>
+                                </a>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="card1">
+                                <a href="product-details.aspx" contenteditable="false" style="cursor: pointer;">
+                                    <img src="image/air/3.png" class="img1">
+                                    <div class="intro1">
+                                        <h4 class="text-h1">PCAMi - 1000
+
+</h4>
+
+                                        <p class="text-p">
+                                            Flight Test Telemetry & Instrumentation for Defense Aircrafts, Commercial Flight trials, UAV, Missiles, Helicopters, Launch Vehicles : Onboard           
+                                        </p>
+                                    </div>
+                                </a>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="card1">
+                                <a href="product-details.aspx" contenteditable="false" style="cursor: pointer;">
+                                    <img src="image/air/4.png" class="img1">
+                                    <div class="intro1">
+                                        <h4 class="text-h1">PCAMi - 1000
+
+</h4>
+
+                                        <p class="text-p">
+                                            Flight Test Telemetry & Instrumentation for Defense Aircrafts, Commercial Flight trials, UAV, Missiles, Helicopters, Launch Vehicles : Onboard           
+                                        </p>
+                                    </div>
+                                </a>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="card1">
+                                <a href="product-details.aspx" contenteditable="false" style="cursor: pointer;">
+                                    <img src="image/air/2.png" class="img1">
+                                    <div class="intro1">
+                                        <h4 class="text-h1">PCAMi - 1000
+
+</h4>
+
+                                        <p class="text-p">
+                                            Flight Test Telemetry & Instrumentation for Defense Aircrafts, Commercial Flight trials, UAV, Missiles, Helicopters, Launch Vehicles : Onboard           
+                                        </p>
+                                    </div>
+                                </a>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="card1">
+                                <a href="product-details.aspx" contenteditable="false" style="cursor: pointer;">
+                                    <img src="image/air/2.png" class="img1">
+                                    <div class="intro1">
+                                        <h4 class="text-h1">PCAMi - 1000
+
+</h4>
+
+                                        <p class="text-p">
+                                            Flight Test Telemetry & Instrumentation for Defense Aircrafts, Commercial Flight trials, UAV, Missiles, Helicopters, Launch Vehicles : Onboard           
+                                        </p>
+                                    </div>
+                                </a>
+
+                            </div>
+                        </div>
+
+                        <!-- Sidebar  -->
+
                     </div>
+
+
                 </div>
                 <div class="col-lg-12 text-center">
                     <div class="slider-btn mt-5 ">
