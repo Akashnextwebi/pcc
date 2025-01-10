@@ -34,7 +34,7 @@ public partial class Admin_manage_specification : System.Web.UI.Page
             try
             {
                 
-                string aid = Request.Cookies["nt_aid"].Value;
+                string aid = Request.Cookies["bmw_aid"].Value;
                 SpecificationDetails st = new SpecificationDetails()
                 {
                     Title = txttitle.Text,
