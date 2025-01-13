@@ -87,7 +87,8 @@ box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 
         <section class="section-padding">
             <div class="container">
                 <div class="row g-lg-4 gy-5 mb-70">
-                    <div class="col-lg-4 col-md-6">
+                    <%=strwhitepaper %>
+                   <%-- <div class="col-lg-4 col-md-6">
                         <div class="eg-card3 four">
                             <div class="card-img">
                                 <img src="image/whitepaper/portfolio-three-column-img1.jpg" alt="">
@@ -125,7 +126,7 @@ box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div>--%>
 
                 </div>
             </div>

@@ -227,4 +227,94 @@ public class JobDetails
         }
         return result;
     }
+    public static List<JobDetails> GetAllJobs(SqlConnection _con)
+    {
+        List<JobDetails> Job = new List<JobDetails>();
+        try
+        {
+            string query = "Select *,(Select UserName from CreateUser Where UserGuid=JobDetails.AddedBy) as UpdatedBy from JobDetails where Status=@Status Order by Id ";
+            using (SqlCommand cmd = new SqlCommand(query, _con))
+            {
+                cmd.Parameters.AddWithValue("@Status", SqlDbType.NVarChar).Value = "Active";
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                Job = (from DataRow dr in dt.Rows
+                              select new JobDetails()
+                              {
+                                  Id = Convert.ToInt32(Convert.ToString(dr["Id"])),
+                                  JobTitle = Convert.ToString(dr["JobTitle"]),
+                                  JobUrl = Convert.ToString(dr["JobUrl"]),
+                                  PostedOn = Convert.ToDateTime(dr["PostedOn"]),
+                                  EmploymentType = Convert.ToString(dr["EmploymentType"]),
+                                  JobLocation = Convert.ToString(dr["JobLocation"]),
+                                  Education = Convert.ToString(dr["Education"]),
+                                  JobDescription = Convert.ToString(dr["JobDescription"]),
+                                  KeyResponsibilities = Convert.ToString(dr["KeyResponsibilities"]),
+                                  Salary = Convert.ToString(dr["Salary"]),
+                                  Experience = Convert.ToString(dr["Experience"]),
+                                  ThumbImage = Convert.ToString(dr["ThumbImage"]),
+                                  PageTitle = Convert.ToString(dr["PageTitle"]),
+                                  MetaKeys = Convert.ToString(dr["MetaKeys"]),
+                                  MetaDesc = Convert.ToString(dr["MetaDesc"]),
+                                  AddedIp = Convert.ToString(dr["AddedIp"]),
+                                  AddedOn = Convert.ToDateTime(dr["AddedOn"]),
+                                  AddedBy = Convert.ToString(dr["AddedBy"]),
+                                  Status = Convert.ToString(dr["Status"]),
+                              }).ToList();
+            }
+        }
+        catch (Exception ex)
+        {
+            ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "GetAllJobs", ex.Message);
+        }
+        return Job;
+    }
+    public static JobDetails getJobDetailsByUrl(SqlConnection _con, string JobUrl)
+    {
+        JobDetails Job = new JobDetails();
+        try
+        {
+            string query = "Select top 1 * from JobDetails where Status='Active' and JobUrl=@JobUrl";
+            using (SqlCommand cmd = new SqlCommand(query, _con))
+            {
+                cmd.Parameters.AddWithValue("@JobUrl", SqlDbType.Int).Value = JobUrl;
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                if (dt.Rows.Count > 0)
+                {
+                    Job.Id = Convert.ToInt32(Convert.ToString(dt.Rows[0]["Id"]));
+                    Job.JobTitle = Convert.ToString(dt.Rows[0]["JobTitle"]);
+                    Job.JobUrl = Convert.ToString(dt.Rows[0]["JobUrl"]);
+                    Job.PostedOn = Convert.ToDateTime(dt.Rows[0]["PostedOn"]);
+                    Job.EmploymentType = Convert.ToString(dt.Rows[0]["EmploymentType"]);
+                    Job.JobLocation = Convert.ToString(dt.Rows[0]["JobLocation"]);
+                    Job.Education = Convert.ToString(dt.Rows[0]["Education"]);
+                    Job.JobDescription = Convert.ToString(dt.Rows[0]["JobDescription"]);
+                    Job.KeyResponsibilities = Convert.ToString(dt.Rows[0]["KeyResponsibilities"]);
+                    Job.Salary = Convert.ToString(dt.Rows[0]["Salary"]);
+                    Job.Experience = Convert.ToString(dt.Rows[0]["Experience"]);
+                    Job.ThumbImage = Convert.ToString(dt.Rows[0]["ThumbImage"]);
+                    Job.PageTitle = Convert.ToString(dt.Rows[0]["PageTitle"]);
+                    Job.MetaKeys = Convert.ToString(dt.Rows[0]["MetaKeys"]);
+                    Job.MetaDesc = Convert.ToString(dt.Rows[0]["MetaDesc"]);
+                    Job.AddedIp = Convert.ToString(dt.Rows[0]["AddedIp"]);
+                    Job.AddedOn = Convert.ToDateTime(dt.Rows[0]["AddedOn"]);
+                    Job.AddedBy = Convert.ToString(dt.Rows[0]["AddedBy"]);
+                    Job.Status = Convert.ToString(dt.Rows[0]["Status"]);
+
+                }
+                else
+                {
+                    Job = null;
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "getJobDetailsByUrl", ex.Message);
+        }
+        return Job;
+    }
 }

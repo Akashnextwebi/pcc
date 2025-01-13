@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="./MasterPage.master" AutoEventWireup="true" CodeFile="whitepaper-details.aspx.cs" Inherits="whitepaper_details" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
-    <link href="css/breadcrums.css" rel="stylesheet" />
+    <link href="/css/breadcrums.css" rel="stylesheet" />
     <style>
         .mb-130 {
             margin-bottom: 130px;
@@ -140,14 +140,14 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-    <div class="breadcrumb-section" style="background-image: linear-gradient(270deg, rgba(0, 0, 0, .55), rgba(0, 0, 0, 0.55) 101.02%), url(image/blog/braadcrumb-bg3.jpg);">
+    <div class="breadcrumb-section" style="background-image: linear-gradient(270deg, rgba(0, 0, 0, .55), rgba(0, 0, 0, 0.55) 101.02%), url(/image/blog/braadcrumb-bg3.jpg);">
         <div class="container-fluid one pl--95">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="banner-content">
                         <ul class="breadcrumb-list">
-                            <li><a href="Default.aspx">Home</a></li>
-                            <li><a href="Default.aspx">Whitepaper</a></li>
+                            <li><a href="/Default.aspx">Home</a></li>
+                            <li><a href="/Default.aspx">Whitepaper</a></li>
 
                             <li>By providing comprehensive event details, you can enhance attendees.</li>
                         </ul>
@@ -165,19 +165,19 @@
                 <div class="row justify-content-center g-lg-4 gy-5">
                     <div class="col-lg-10">
                         <div class="section-title1">
-                            <h2>By providing comprehensive event details, you can enhance attendees.</h2>
+                            <h2><%=strheading %></h2>
                         </div>
 
                         <div class="whitepaper-img mb-20">
-                            <img src="image/whitepaper/event-thumb.jpg" alt="" class="img-fluid w-100" />
+                            <img src="/<%=strImage %>" alt="" class="img-fluid w-100" />
                         </div>
                         <div class="pic-cap-and-sicial">
                             <div class="pic-cap">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12">
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M10.1865 1.06237L0 11.2484L0.751627 12L10.9376 1.81347V8.85645H12V0H3.14355V1.06237H10.1865Z"></path>
                                 </svg>
-                                Manish Kumar
-                                                            <p class="mb-0"><strong><span>&nbsp| &nbsp</span>Date:</strong>23/12/2024</p>
+                               <%=strPostedby %>
+                                                            <p class="mb-0"><strong><span>&nbsp| &nbsp</span>Date:</strong><%--23/12/2024--%> <%=strpostedon %></p>
 
                             </div>
                             <ul class="social-link d-flex align-items-center">
@@ -187,7 +187,8 @@
                             </ul>
                         </div>
                         <h3>Agenda &amp; Schedule</h3>
-                        <p>By providing comprehensive event details, you can enhance attendees' experience and ensure that they have all the information they need to participate in and enjoy your event or conference. Keep the information up-to-date and easily accessible through your event website or promotional materials.</p>
+                        <%=strFullDesc %>
+                        <%--<p>By providing comprehensive event details, you can enhance attendees' experience and ensure that they have all the information they need to participate in and enjoy your event or conference. Keep the information up-to-date and easily accessible through your event website or promotional materials.</p>
                         <div class="event-fetures mt-30 mb-40">
                             <h6><span>Day-01 :</span>Event Opening and Keynote Sessions</h6>
                             <p>Creating a schedule for a business consulting event involves addressing a wide range of topics to cater to the diverse needs and interests of attendees. Here's a comprehensive list of potential schedule topics for a business consulting event:</p>
@@ -228,7 +229,7 @@
                                 <li>Marketing and Sales Consulting Strategies</li>
                                 <li>Operations and Process Improvement Consulting</li>
                             </ul>
-                        </div>
+                        </div>--%>
 
 
                     </div>

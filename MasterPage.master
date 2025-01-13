@@ -15,22 +15,22 @@
    content="Park Controls & Communications offers advanced test and measurement solutions for aerospace, defense, and industrial sectors. Specializing in automatic test equipment (ATE), data acquisition, signal conditioning, and hardware-in-the-loop simulation, we deliver high-quality, custom solutions to support mission-critical operations."
  />
  <meta name="viewport" content="width=device-width, initial-scale=1" />
- <link rel="shortcut icon" type="image/x-icon" href="image/fav-icon.png" />
+ <link rel="shortcut icon" type="image/x-icon" href="/image/fav-icon.png" />
 
  <!-- CSS here -->
- <link rel="stylesheet" href="css/bootstrap.min.css" />
- <link rel="stylesheet" href="css/animate.min.css" />
- <link rel="stylesheet" href="css/magnific-popup.css" />
- <link rel="stylesheet" href="fontawesome/css/all.min.css" />
- <link rel="stylesheet" href="fontawesome-pro/css/all.min.css" />
- <link rel="stylesheet" href="css/dripicons.css" />
- <link rel="stylesheet" href="css/slick.css" />
- <link rel="stylesheet" href="css/meanmenu.css" />
- <link rel="stylesheet" href="css/swiper.min.css" />
- <link rel="stylesheet" href="css/default.css" />
- <link rel="stylesheet" href="css/style.css" />
- <link rel="stylesheet" href="css/custom.css" />
- <link rel="stylesheet" href="css/responsive.css" />
+ <link rel="stylesheet" href="/css/bootstrap.min.css" />
+ <link rel="stylesheet" href="/css/animate.min.css" />
+ <link rel="stylesheet" href="/css/magnific-popup.css" />
+ <link rel="stylesheet" href="/fontawesome/css/all.min.css" />
+ <link rel="stylesheet" href="/fontawesome-pro/css/all.min.css" />
+ <link rel="stylesheet" href="/css/dripicons.css" />
+ <link rel="stylesheet" href="/css/slick.css" />
+ <link rel="stylesheet" href="/css/meanmenu.css" />
+ <link rel="stylesheet" href="/css/swiper.min.css" />
+ <link rel="stylesheet" href="/css/default.css" />
+ <link rel="stylesheet" href="/css/style.css" />
+ <link rel="stylesheet" href="/css/custom.css" />
+ <link rel="stylesheet" href="/css/responsive.css" />
  <style>
    :root {
      --pcc-primary-theme: rgb(121, 1, 12);
@@ -123,15 +123,15 @@
              <li class="has-submenu">
                <a href="#">Resources</a>
                <ul>
-                 <li><a href="blogs.aspx">Blogs</a></li>
-                 <li><a href="product-catalogues.aspx">Product Catalogues</a></li>
-                 <li><a href="white-paper.aspx">White Paper</a></li>
-                 <li><a href="video-gallery.aspx">Video Gallery</a></li>
-                 <li><a href="case-studies.aspx">Case Studies</a></li>
-                 <li><a href="seminars.aspx">Seminars</a></li>
+                 <li><a href="/blogs.aspx">Blogs</a></li>
+                 <li><a href="/product-catalogues.aspx">Product Catalogues</a></li>
+                 <li><a href="/white-paper.aspx">White Paper</a></li>
+                 <li><a href="/video-gallery.aspx">Video Gallery</a></li>
+                 <li><a href="/case-studies.aspx">Case Studies</a></li>
+                 <li><a href="/seminars.aspx">Seminars</a></li>
                </ul>
              </li>
-             <li><a href="job-listing.aspx">Career</a></li>
+             <li><a href="/job-listing.aspx">Career</a></li>
            </ul>
            <div class="social-media-links">
              <ul class="social-link-list">
@@ -152,8 +152,8 @@
        <div class="row align-items-center">
          <div class="col-lg-3 col-md-12 d-none d-md-block">
            <div class="logo">
-             <a href="Default.aspx"
-               ><img src="image/park-control-logo.png" alt="logo"
+             <a href="/Default.aspx"
+               ><img src="/image/park-control-logo.png" alt="logo"
              /></a>
            </div>
          </div>
@@ -164,20 +164,20 @@
                  <li class="has-sub">
                    <a href="#">Company</a>
                    <ul>
-                     <li><a href="about-us.aspx">About Us</a></li>
-                     <li><a href="evolution.aspx">Evolution</a></li>
-                     <li><a href="board-of-directors.aspx">Board of Directors</a></li>
-                     <li><a href="our-team.aspx">Our team</a></li>
-                     <li><a href="partners.aspx">Partners</a></li>
-                     <li><a href="principals.aspx">Principals</a></li>
-                     <li><a href="testimonials.aspx">Testimonials</a></li>
-                     <li><a href="quality-and-accreditations.aspx">Quality and Accreditations</a></li>
+                     <li><a href="/about-us.aspx">About Us</a></li>
+                     <li><a href="/evolution.aspx">Evolution</a></li>
+                     <li><a href="/board-of-directors.aspx">Board of Directors</a></li>
+                     <li><a href="/our-team.aspx">Our team</a></li>
+                     <li><a href="/partners.aspx">Partners</a></li>
+                     <li><a href="/principals.aspx">Principals</a></li>
+                     <li><a href="/testimonials.aspx">Testimonials</a></li>
+                     <li><a href="/quality-and-accreditations.aspx">Quality and Accreditations</a></li>
                    </ul>
                  </li>
                  <li class="has-sub">
                    <a href="#">Core Competencies</a>
                    <ul>
-                     <li><a href="advanced-data-solutions.aspx">Advance Data Solutions</a></li>
+                     <li><a href="/advanced-data-solutions.aspx">Advance Data Solutions</a></li>
                      <li>
                        <a href="#">Advance Time & Frequency Solutions</a>
                      </li>
@@ -194,19 +194,19 @@
                  <li class="has-sub">
                    <a href="#">Industries</a>
                    <ul>
-                     <li><a href="air.aspx">Air</a></li>
-                     <li><a href="land.aspx">Land</a></li>
-                     <li><a href="sea.aspx">Sea</a></li>
-                     <li><a href="space.aspx">Space</a></li>
+                     <li><a href="/air.aspx">Air</a></li>
+                     <li><a href="/land.aspx">Land</a></li>
+                     <li><a href="/sea.aspx">Sea</a></li>
+                     <li><a href="/space.aspx">Space</a></li>
                    </ul>
                  </li>
                  <li class="has-sub">
                    <a href="#">Services</a>
                    <ul>
-                     <li><a href="legacy-upgrade.aspx">Legacy Upgrade</a></li>
-                     <li><a href="amc.aspx">AMC</a></li>
+                     <li><a href="/legacy-upgrade.aspx">Legacy Upgrade</a></li>
+                     <li><a href="/amc.aspx">AMC</a></li>
                      <li>
-                       <a href="realization-of-concept-to-fruition-of-futuristic.aspx"
+                       <a href="/realization-of-concept-to-fruition-of-futuristic.aspx"
                          >Realization of concept to fruition of futuristic
                          products</a
                        >
@@ -217,14 +217,14 @@
                  <li class="has-sub">
                    <a href="#">Sustainability</a>
                    <ul>
-                     <li><a href="make-in-india.aspx">Make in India</a></li>
-                     <li><a href="safety-first.aspx">Safety First</a></li>
-                     <li><a href="investing-on-people.aspx">Investing on People</a></li>
-                     <li><a href="cyber-security.aspx">Cyber Security</a></li>
-                     <li><a href="environmental-safety.aspx">Environmental Safety</a></li>
+                     <li><a href="/make-in-india.aspx">Make in India</a></li>
+                     <li><a href="/safety-first.aspx">Safety First</a></li>
+                     <li><a href="/investing-on-people.aspx">Investing on People</a></li>
+                     <li><a href="/cyber-security.aspx">Cyber Security</a></li>
+                     <li><a href="/environmental-safety.aspx">Environmental Safety</a></li>
                    </ul>
                  </li>
-                 <li><a href="contact-us.aspx">Contact Us</a></li>
+                 <li><a href="/contact-us.aspx">Contact Us</a></li>
                </ul>
              </nav>
            </div>
@@ -294,7 +294,7 @@
            <div class="footer-widget">
              <div class="f-about">
                <div class="f-widget-title">
-                 <h2><img src="image/park-control-logo.png" alt="img" /></h2>
+                 <h2><img src="/image/park-control-logo.png" alt="img" /></h2>
                </div>
                <p>
                  A pioneer in extending customized solutions and supply of
@@ -304,7 +304,7 @@
                  and Aerospace sector.
                </p>
                <img
-                 src="image/Signature-PARK-CONTROLS-COMMUNICATIONS-P-LTD-3.jpg"
+                 src="/image/Signature-PARK-CONTROLS-COMMUNICATIONS-P-LTD-3.jpg"
                  alt=""
                />
              </div>
@@ -403,32 +403,32 @@
  </footer>
  <!-- footer-end -->
         <a href="#" class="float" >
-            <img src="image/chat.png" />
+            <img src="/image/chat.png" />
 </a>
 
 
  <!-- JS here -->
- <script src="js/vendor/modernizr-3.5.0.min.js"></script>
- <script src="js/vendor/jquery-3.6.0.min.js"></script>
- <script src="js/popper.min.js"></script>
- <script src="js/bootstrap.min.js"></script>
- <script src="js/slick.min.js"></script>
+ <script src="/js/vendor/modernizr-3.5.0.min.js"></script>
+ <script src="/js/vendor/jquery-3.6.0.min.js"></script>
+ <script src="/js/popper.min.js"></script>
+ <script src="/js/bootstrap.min.js"></script>
+ <script src="/js/slick.min.js"></script>
 <%-- <script src="js/ajax-form.js"></script>--%>
- <script src="js/paroller.js"></script>
- <script src="js/wow.min.js"></script>
- <script src="js/js_isotope.pkgd.min.js"></script>
- <script src="js/imagesloaded.min.js"></script>
- <script src="js/parallax.min.js"></script>
- <script src="js/jquery.waypoints.min.js"></script>
- <script src="js/jquery.counterup.min.js"></script>
- <script src="js/jquery.scrollUp.min.js"></script>
- <script src="js/jquery.meanmenu.min.js"></script>
- <script src="js/parallax-scroll.js"></script>
- <script src="js/swiper.min.js"></script>
- <script src="js/jquery.magnific-popup.min.js"></script>
- <script src="js/element-in-view.js"></script>
- <script src="js/vanilla-tilt.js"></script>
- <script src="js/main.js"></script>
+ <script src="/js/paroller.js"></script>
+ <script src="/js/wow.min.js"></script>
+ <script src="/js/js_isotope.pkgd.min.js"></script>
+ <script src="/js/imagesloaded.min.js"></script>
+ <script src="/js/parallax.min.js"></script>
+ <script src="/js/jquery.waypoints.min.js"></script>
+ <script src="/js/jquery.counterup.min.js"></script>
+ <script src="/js/jquery.scrollUp.min.js"></script>
+ <script src="/js/jquery.meanmenu.min.js"></script>
+ <script src="/js/parallax-scroll.js"></script>
+ <script src="/js/swiper.min.js"></script>
+ <script src="/js/jquery.magnific-popup.min.js"></script>
+ <script src="/js/element-in-view.js"></script>
+ <script src="/js/vanilla-tilt.js"></script>
+ <script src="/js/main.js"></script>
         <script>
             $(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
     event.preventDefault();

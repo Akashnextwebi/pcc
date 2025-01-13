@@ -264,15 +264,15 @@
                     <div class="inner-box">
                         <div class="content">
                             <span class="company-logo">
-                                <img src="image/media_37.png" alt=""></span>
-                            <h4><a href="#" contenteditable="false" style="cursor: pointer;">Asst. Manager (Communications)</a></h4>
+                                <img src="/image/media_37.png" alt=""></span>
+                            <h4><a href="#" contenteditable="false" style="cursor: pointer;"><%=strJobTitle %></a></h4>
                             <ul class="job-info">
-                                <li><i class="fa-solid fa-briefcase icon "></i>Intermediate</li>
-                                <li><i class="fa-solid fa-location-dot icon "></i>Bangalore, India</li>
-                                <li><i class="fa-regular fa-clock icon "></i>11 hours ago</li>
+                                <li><i class="fa-solid fa-briefcase icon "></i><%=strEducation %></li>
+                                <li><i class="fa-solid fa-location-dot icon "></i><%=strJobLocation %></li>
+                                <li><i class="fa-regular fa-clock icon "></i><%--11 hours ago--%> <%=strtime %></li>
                             </ul>
                             <ul class="job-other-info">
-                                <li class="time">Full Time</li>
+                                <li class="time"><%=strEmploymentType %></li>
 
                             </ul>
                         </div>
@@ -289,24 +289,14 @@
                     <div class="content-column col-lg-8 col-md-12 col-sm-12">
                         <div class="job-detail">
                             <h3>Job Description</h3>
-                            <p>As a Asst. Manager (Communications), you will work within a Product Delivery Team fused with UX, engineering, product and data talent. You will help the team design beautiful interfaces that solve business challenges for our clients. We work with a number of Tier 1 banks on building web-based applications for AML, KYC and Sanctions List management workflows. This role is ideal if you are looking to segue your career into the FinTech or Big Data arenas.</p>
+                            <p><%=strJobDescription %></p>
                             <h3>Key Responsibilities</h3>
                             <ul class="list-style-three">
-                                <li>Be involved in every step of the product design cycle from discovery to developer handoff and user acceptance testing.</li>
-                                <li>Work with BAs, product managers and tech teams to lead the Product Design</li>
-                                <li>Maintain quality of the design process and ensure that when designs are translated into code they accurately reflect the design specifications.</li>
-                                <li>Accurately estimate design tickets during planning sessions.</li>
-                                <li>Contribute to sketching sessions involving non-designersCreate, iterate and maintain UI deliverables including sketch files, style guides, high fidelity prototypes, micro interaction specifications and pattern libraries.</li>
-                                <li>Ensure design choices are data led by identifying assumptions to test each sprint, and work with the analysts in your team to plan moderated usability test sessions.</li>
-                                <li>Design pixel perfect responsive UI’s and understand that adopting common interface patterns is better for UX than reinventing the wheel</li>
-                                <li>Present your work to the wider business at Show &amp; Tell sessions.</li>
+                                <%=strKeyResponsibilities %>
                             </ul>
                             <h3>Skill &amp; Experience</h3>
                             <ul class="list-style-three">
-                                <li>You have at least 3 years’ experience working as a Product Designer.</li>
-                                <li>You have experience using Sketch and InVision or Framer X</li>
-                                <li>You have some previous experience working in an agile environment – Think two-week sprints.</li>
-                                <li>You are familiar using Jira and Confluence in your workflow</li>
+                                <%=strSkills %>
                             </ul>
                         </div>
 
@@ -328,46 +318,76 @@
                         <div class="apply-now-sec">
                             <h4 class="mb-30 font-bold text-center">Apply For This Job</h4>
                             <div class="apply-form">
+                                <asp:Label ID="lblStatus" runat="server"></asp:Label>
 
                                 <div class="contact-one__input-box">
-                                    <input name="txtFullName" type="text" maxlength="100" placeholder="Full Name">
+                                    <%--<input name="txtFullName" type="text" maxlength="100" placeholder="Full Name">--%>
+                                    <asp:TextBox ID="txtname" runat="server" placeholder="Full Name"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="rfv1" runat="server" ControlToValidate="txtname" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Field can't be empty"></asp:RequiredFieldValidator>
                                 </div>
                                 <div class="contact-one__input-box">
-                                    <input name="txtEmailId" type="email" maxlength="100" placeholder="Email Id">
+                                    <%-- <input name="txtEmailId" type="email" maxlength="100" placeholder="Email Id">--%>
+                                    <asp:TextBox ID="txtemail" runat="server" placeholder="Email Id"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtemail" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Field can't be empty"></asp:RequiredFieldValidator>
+                                    <asp:RegularExpressionValidator runat="server" ControlToValidate="txtemail" ErrorMessage="Please Enter valid EmailId" ForeColor="Red" ValidationGroup="Save" SetFocusOnError="True" Display="Dynamic" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
                                 </div>
                                 <div class="contact-one__input-box">
-                                    <input name="txtContactNumber" type="text" maxlength="15" placeholder="Contact Number">
+                                    <%--<input name="txtContactNumber" type="text" maxlength="15" placeholder="Contact Number">--%>
+                                    <asp:TextBox ID="txtcontact" runat="server" placeholder="Contact Number"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtcontact" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Field can't be empty"></asp:RequiredFieldValidator>
+                                    <asp:RegularExpressionValidator runat="server" ControlToValidate="txtcontact" ErrorMessage="Please Enter valid contact number" ForeColor="Red" ValidationGroup="Save" SetFocusOnError="True" Display="Dynamic" ValidationExpression="^([0-9\(\)\/\+ \-]*)$"></asp:RegularExpressionValidator>
                                 </div>
                                 <div class="contact-one__input-box">
-                                    <input name="txtExperience" type="text" maxlength="100" placeholder="Experience">
+                                    <%-- <input name="txtExperience" type="text" maxlength="100" placeholder="Experience">--%>
+                                    <asp:TextBox ID="txtexperience" runat="server" placeholder="Experience"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtexperience" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Field can't be empty"></asp:RequiredFieldValidator>
                                 </div>
                                 <div class="contact-one__input-box">
-                                    <input name="txtLocation" type="text" maxlength="100" placeholder="Location">
+                                    <%-- <input name="txtLocation" type="text" maxlength="100" placeholder="Location">--%>
+                                    <asp:TextBox ID="txtlocation" runat="server" placeholder="Location"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtlocation" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Field can't be empty"></asp:RequiredFieldValidator>
                                 </div>
                                 <div class="contact-one__input-box">
-                                    <input name="txtCurrentCompany" type="text" maxlength="100" placeholder="Current Company">
+                                    <%-- <input name="txtCurrentCompany" type="text" maxlength="100" placeholder="Current Company">--%>
+                                    <asp:TextBox ID="txtcompany" runat="server" placeholder="Current Company"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="txtcompany" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Field can't be empty"></asp:RequiredFieldValidator>
                                 </div>
                                 <div class="contact-one__input-box">
-                                    <select name="ddlNoticePeriod">
+                                    <%-- <select name="ddlNoticePeriod">
                                         <option value="">Notice Period</option>
                                         <option value="Immediate Joiner">Immediate Joiner</option>
                                         <option value="0-15 days">0-15 days</option>
                                         <option value="1 month">1 month</option>
                                         <option value="2 months">2 months</option>
                                         <option value="3 months">3 months</option>
-                                    </select>
+                                    </select>--%>
+                                    <asp:DropDownList ID="ddlNoticePeriod" runat="server">
+                                        <asp:ListItem Text="Notice Period" Value="" />
+                                        <asp:ListItem Text="Immediate Joiner" Value="Immediate Joiner" />
+                                        <asp:ListItem Text="0-15 days" Value="0-15 days" />
+                                        <asp:ListItem Text="1 month" Value="1 month" />
+                                        <asp:ListItem Text="2 months" Value="2 months" />
+                                        <asp:ListItem Text="3 months" Value="3 months" />
+                                    </asp:DropDownList>
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ControlToValidate="ddlNoticePeriod" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Please select Notice Period"></asp:RequiredFieldValidator>
                                 </div>
                                 <div class="contact-one__input-box">
                                     <label>Resume <sup>*</sup></label>
-                                    <input type="file" name="fuResumePath" title="Maximum 1 MB file size">
+                                    <%--<input type="file" name="fuResumePath" title="Maximum 1 MB file size">--%>
+                                    <asp:FileUpload ID="fuResumePath" runat="server" ToolTip="Maximum 1 MB file size"></asp:FileUpload>
                                     <small class="text-danger">.pdf, .doc, .docx, .png, .jpg, .jpeg formats are required</small>
                                 </div>
                                 <div class="contact-one__input-box">
-                                    <input name="txtWriteYourMessage" type="text" maxlength="250" placeholder="Write Your Message">
+                                    <%-- <input name="txtWriteYourMessage" type="text" maxlength="250" placeholder="Write Your Message">--%>
+                                    <asp:TextBox ID="txtWriteYourMessage" runat="server" MaxLength="250" Placeholder="Write Your Message"></asp:TextBox>
+
                                 </div>
                                 <div class="contact-one__input-box">
-                                    <input type="submit" name="btnSubmit" value="Submit" class="btn ss-btn">
-                                    
+                                    <%--  <input type="submit" name="btnSubmit" value="Submit" class="btn ss-btn">--%>
+                                    <asp:Button ID="btnSubmit" runat="server" Text="Submit" CssClass="btn ss-btn" OnClick="btnSubmit_Click" ValidationGroup="Save" />
+                                    <asp:Label ID="lblResume" runat="server" Visible="false"></asp:Label>
+                                    <asp:HiddenField ID="txtJobId" runat="server" />
+                                    <asp:HiddenField ID="txtJobTitle" runat="server" />
                                 </div>
 
                             </div>

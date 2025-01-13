@@ -251,4 +251,91 @@ public class WhitePaperDetails
         }
         return result;
     }
+    public static List<WhitePaperDetails> GetAllWhitepapers(SqlConnection _con)
+    {
+        List<WhitePaperDetails> wp = new List<WhitePaperDetails>();
+        try
+        {
+            string query = "Select *,(Select UserName from CreateUser Where UserGuid=WhitePaperDetails.AddedBy) as UpdatedBy from WhitePaperDetails where Status=@Status Order by Id ";
+            using (SqlCommand cmd = new SqlCommand(query, _con))
+            {
+                cmd.Parameters.AddWithValue("@Status", SqlDbType.NVarChar).Value = "Active";
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                wp = (from DataRow dr in dt.Rows
+                       select new WhitePaperDetails()
+                       {
+                           Id = Convert.ToInt32(Convert.ToString(dr["Id"])),
+                           WhitePaperTitle = Convert.ToString(dr["WhitePaperTitle"]),
+                           WhitePaperUrl = Convert.ToString(dr["WhitePaperUrl"]),
+                           Tag = Convert.ToString(dr["Tag"]),
+                           PostedOn = Convert.ToString(dr["PostedOn"]),
+                           PostedBy = Convert.ToString(dr["PostedBy"]),
+                           WhitePaperHeading = Convert.ToString(dr["WhitePaperHeading"]),
+                           FullDesc = Convert.ToString(dr["FullDesc"]),
+                           ThumbImage = Convert.ToString(dr["ThumbImage"]),
+                           DetailImage = Convert.ToString(dr["DetailImage"]),
+                           BannerImage = Convert.ToString(dr["BannerImage"]),
+                           PageTitle = Convert.ToString(dr["PageTitle"]),
+                           MetaKeys = Convert.ToString(dr["MetaKeys"]),
+                           MetaDesc = Convert.ToString(dr["MetaDesc"]),
+                           AddedOn = Convert.ToDateTime(Convert.ToString(dr["AddedOn"])),
+                           AddedBy = Convert.ToString(dr["AddedBy"]),
+                           AddedIp = Convert.ToString(dr["AddedIp"]),
+                           Status = Convert.ToString(dr["Status"])
+                       }).ToList();
+            }
+        }
+        catch (Exception ex)
+        {
+            ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "GetAllWhitepapers", ex.Message);
+        }
+        return wp;
+    }
+    public static WhitePaperDetails getWhitepaperDetailsByUrl(SqlConnection _con, string WhitePaperUrl)
+    {
+        WhitePaperDetails blog = new WhitePaperDetails();
+        try
+        {
+            string query = "Select top 1 * from WhitePaperDetails where Status='Active' and WhitePaperUrl=@WhitePaperUrl";
+            using (SqlCommand cmd = new SqlCommand(query, _con))
+            {
+                cmd.Parameters.AddWithValue("@WhitePaperUrl", SqlDbType.Int).Value = WhitePaperUrl;
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                if (dt.Rows.Count > 0)
+                {
+                    blog.Id = Convert.ToInt32(Convert.ToString(dt.Rows[0]["Id"]));
+                    blog.WhitePaperTitle = Convert.ToString(dt.Rows[0]["WhitePaperTitle"]);
+                    blog.WhitePaperUrl = Convert.ToString(dt.Rows[0]["WhitePaperUrl"]);
+                    blog.Tag = Convert.ToString(dt.Rows[0]["Tag"]);
+                    blog.PostedOn = Convert.ToString(dt.Rows[0]["PostedOn"]);
+                    blog.PostedBy = Convert.ToString(dt.Rows[0]["PostedBy"]);
+                    blog.ThumbImage = Convert.ToString(dt.Rows[0]["ThumbImage"]);
+                    blog.DetailImage = Convert.ToString(dt.Rows[0]["DetailImage"]);
+                    blog.BannerImage = Convert.ToString(dt.Rows[0]["BannerImage"]);
+                    blog.PageTitle = Convert.ToString(dt.Rows[0]["PageTitle"]);
+                    blog.MetaKeys = Convert.ToString(dt.Rows[0]["MetaKeys"]);
+                    blog.MetaDesc = Convert.ToString(dt.Rows[0]["MetaDesc"]);
+                    blog.WhitePaperHeading = Convert.ToString(dt.Rows[0]["WhitePaperHeading"]);
+                    blog.FullDesc = Convert.ToString(dt.Rows[0]["FullDesc"]);
+                    blog.AddedOn = Convert.ToDateTime(Convert.ToString(dt.Rows[0]["AddedOn"]));                
+                    blog.AddedBy = Convert.ToString(dt.Rows[0]["AddedBy"]);
+                    blog.AddedIp = Convert.ToString(dt.Rows[0]["AddedIp"]);
+                    blog.Status = Convert.ToString(dt.Rows[0]["Status"]);
+                }
+                else
+                {
+                    blog = null;
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "getWhitepaperDetailsByUrl", ex.Message);
+        }
+        return blog;
+    }
 }

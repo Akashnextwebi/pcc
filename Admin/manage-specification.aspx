@@ -40,7 +40,7 @@
                                     <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="txtanswer" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Field can't be empty"></asp:RequiredFieldValidator>--%>
                                 </div>
                                 <div class="col-lg-4 mb-3">
-                                    <asp:Button ID="btnSave" runat="server" Text="Save" ValidationGroup="Save" CssClass="btn btn-danger waves-effect waves-light" Style="margin-top: 28px" OnClick="btnSave_Click" />
+                                    <asp:Button ID="btnSave" runat="server" Text="Save" ValidationGroup="Save" CssClass="btn btn-success waves-effect waves-light" Style="margin-top: 28px" OnClick="btnSave_Click" />
                                     <asp:Button ID="btnNew" runat="server" Text="Add New Specification" CssClass="btn btn-outline-danger waves-effect waves-light" Style="margin-top: 28px" OnClick="btnNew_Click" Visible="false" />
                                     
                                 </div>
