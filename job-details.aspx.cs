@@ -49,37 +49,37 @@ public partial class job_details : System.Web.UI.Page
                     Page.MetaKeywords = Job.MetaKeys;
                 }
                 #endregion
-                
-                    var currDate = TimeStamps.UTCTime() - Job.AddedOn;
-                    var ago = "";
-                    if (currDate.TotalMinutes < 60)
-                    {
-                        ago = Convert.ToInt32(currDate.TotalMinutes) + " Minute ago";
-                    }
-                    else if (currDate.TotalHours < 24)
-                    {
-                        ago = currDate.TotalHours.ToString("N0") + " Hours ago";
-                    }
-                    else if (currDate.TotalDays < 30)
-                    {
-                        ago = currDate.TotalDays.ToString("N0") + " Days ago";
-                    }
-                    else if (currDate.TotalDays < 365 / 30)
-                    {
-                        ago = currDate.TotalDays.ToString("N0") + " Month ago";
-                    }
-                    else if (currDate.TotalDays > 365)
-                    {
-                        ago = currDate.TotalDays.ToString("N0") + " Year ago";
-                    }
-                
+
+                var currDate = TimeStamps.UTCTime() - Job.AddedOn;
+                var ago = "";
+                if (currDate.TotalMinutes < 60)
+                {
+                    ago = Convert.ToInt32(currDate.TotalMinutes) + " Minute ago";
+                }
+                else if (currDate.TotalHours < 24)
+                {
+                    ago = currDate.TotalHours.ToString("N0") + " Hours ago";
+                }
+                else if (currDate.TotalDays < 30)
+                {
+                    ago = currDate.TotalDays.ToString("N0") + " Days ago";
+                }
+                else if (currDate.TotalDays < 365 / 30)
+                {
+                    ago = currDate.TotalDays.ToString("N0") + " Month ago";
+                }
+                else if (currDate.TotalDays > 365)
+                {
+                    ago = currDate.TotalDays.ToString("N0") + " Year ago";
+                }
+
                 strJobTitle = Job.JobTitle;
-                strEducation=Job.Education;
+                strEducation = Job.Education;
                 strJobLocation = Job.JobLocation;
-                strJobDescription=Job.JobDescription;
-                strKeyResponsibilities=Job.KeyResponsibilities;
+                strJobDescription = Job.JobDescription;
+                strKeyResponsibilities = Job.KeyResponsibilities;
                 strSkills = Job.KeyResponsibilities;
-                strEmploymentType=Job.EmploymentType;
+                strEmploymentType = Job.EmploymentType;
                 strtime = ago;
 
             }
@@ -89,13 +89,12 @@ public partial class job_details : System.Web.UI.Page
             ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "BindJobDetails", ex.Message);
         }
     }
-    protected void btnSubmit_Click(object sender, EventArgs e)
+    protected void btnsubmit_Click(object sender, EventArgs e)
     {
-        lblStatus.Text = "";
-        lblStatus.CssClass = "";
+        lblStatus.Visible = true;
         try
         {
-            var rPath = CheckPdfFormat();
+            var rPath = CheckResumeFormat();
             if (rPath == "Format")
             {
                 lblStatus.Text = "Invalid resume format.";
@@ -103,31 +102,72 @@ public partial class job_details : System.Web.UI.Page
                 return;
             }
 
-            ApplyJobs JD = new ApplyJobs();
-            JD.Fullname = txtname.Text.Trim();
-            JD.Emailid = txtemail.Text.Trim();
-            JD.Contactnumber = txtcontact.Text.Trim();
-            JD.Experience = txtexperience.Text.Trim();
-            JD.Location = txtlocation.Text.Trim();
-            JD.CurrentCompany = txtcompany.Text.Trim();
-            JD.Resume = UploadResume();
-            JD.Message = txtWriteYourMessage.Text.Trim();
-            JD.Noticeperiod = ddlNoticePeriod.Text.Trim();
-            JD.JobId = txtJobId.Value == "" ? 0 : Convert.ToInt32(txtJobId.Value);
-            JD.JobTitle = txtJobTitle.Value.Trim();
-            JD.AddedIp = CommonModel.IPAddress();
-            JD.AddedOn = TimeStamps.UTCTime();
-            JD.Status = "Active";           
-            int result = ApplyJobs.InsertApplyjobs(conSQ, JD);
-            if (result > 0)
+            var ApplyJobs = new ApplyJobs()
             {
 
-                SendMail(JD);
+                Fullname = txtname.Text.Trim(),
+                Emailid = txtemail.Text.Trim(),
+                Contactnumber = txtcontact.Text.Trim(),
+                Experience = txtexperience.Text.Trim(),
+                Location = txtlocation.Text.Trim(),
+                CurrentCompany = txtcompany.Text.Trim(),
+                Resume = UploadResumes(),
+                Message = txtWriteYourMessage.Text.Trim(),
+                Noticeperiod = ddlNoticePeriod.Text.Trim(),
+                JobId = txtJobId.Value == "" ? 0 : Convert.ToInt32(txtJobId.Value),
+                JobTitle = txtJobTitle.Value.Trim(),
+                AddedIp = CommonModel.IPAddress(),
+                AddedOn = TimeStamps.UTCTime(),
+                Status = "Active",
+
+            };
+
+            var result = ApplyJobs.InsertApplyjobs(conSQ, ApplyJobs);
+
+
+            if (result > 0)
+            {
+                lblStatus.Text = "Job applied Succefully, our team will reach out to you soon!";
+                lblStatus.CssClass = "alert alert-success d-block";
+                string Pageurl = HttpContext.Current.Request.Url.AbsoluteUri.ToString();
+                MailMessage mail = new MailMessage();
+                mail.To.Add(ConfigurationManager.AppSettings["ToMail"]);
+                if (!string.IsNullOrEmpty(ConfigurationManager.AppSettings["CCMail"]))
+                {
+                    mail.CC.Add(ConfigurationManager.AppSettings["CCMail"]);
+                }
+                string path = HttpContext.Current.Server.MapPath(@"\" + ApplyJobs.Resume + "");
+                Attachment attachment = new Attachment(path);
+                mail.Attachments.Add(attachment);
+                mail.From = new MailAddress(ConfigurationManager.AppSettings["from"], ConfigurationManager.AppSettings["fromName"]);
+                mail.Subject = "Job Application - Park Control and Communication";
+                mail.Body = @"Hi Admin, <br><br>You have received a Job Application from " + txtname.Text + ".<br><br>" +
+                    "<u><b><i>Application Details : </i></b></u>" +
+                    "<br>Full Name : " + txtname.Text + "" +
+                    "<br>Email Id : " + txtemail.Text + "" +
+                    "<br>Contact Number : " + txtcontact.Text + "" +
+                    "<br>Experience: " + txtexperience.Text + "" +
+                    "<br>Location: " + txtlocation.Text + "" +
+                    "<br>Current Company: " + txtcompany.Text + "" +
+                    "<br>Message: " + txtWriteYourMessage.Text + "" +
+                    "<br>Job Title: " + txtJobTitle.Value + "" +
+                    "<br>Noticeperiod : " + ddlNoticePeriod.SelectedItem.Value + "" +
+                    "<br>PageURL : <a href='" + Pageurl + "'>" + Pageurl + "</a>" +
+                    "<br><br>Regards,<br> Park Control and Communication";
+                mail.IsBodyHtml = true;
+
+                SmtpClient smtp = new SmtpClient();
+                smtp.Host = ConfigurationManager.AppSettings["host"];
+                smtp.Port = Convert.ToInt32(ConfigurationManager.AppSettings["port"]);
+                smtp.Credentials = new System.Net.NetworkCredential(ConfigurationManager.AppSettings["userName"], ConfigurationManager.AppSettings["password"]);
+                smtp.EnableSsl = Convert.ToBoolean(ConfigurationManager.AppSettings["enableSsl"]);
+
+                smtp.Send(mail);
+                lblStatus.Text = "true";
                 txtname.Text = txtemail.Text = txtcontact.Text = txtexperience.Text = txtlocation.Text = txtcompany.Text = txtWriteYourMessage.Text = "";
                 ddlNoticePeriod.ClearSelection();
-                //lblStatus.Text = "Job applied successfully";
-                //lblStatus.CssClass = "alert alert-success d-block";
-                Response.Redirect("thankyou.aspx");
+                lblStatus.Text = "Job applied successfully";
+                //Response.Redirect("thank-you.aspx");
 
             }
             else
@@ -138,47 +178,51 @@ public partial class job_details : System.Web.UI.Page
         }
         catch (Exception ex)
         {
-            lblStatus.Text = "There is some problem now. Please try after some time";
-            lblStatus.CssClass = "alert alert-danger d-block";
-            ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "btnSubmit_Click", ex.Message);
+
+            ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "UploadResumePath", ex.Message);
 
         }
     }
-    private string CheckPdfFormat()
+    private string CheckResumeFormat()
     {
-        #region ThumbImage
-        string Resume = "";
-        if (fuResumePath.HasFile)
+        #region resumeFormat
+        string resume = "";
+        if (UploadResume.HasFile)
         {
             try
             {
-                string fileExtension = Path.GetExtension(fuResumePath.PostedFile.FileName.ToLower());
-                if (!(fileExtension == ".pdf" || fileExtension == ".doc" || fileExtension == ".docx" || fileExtension == ".jpg" || fileExtension == ".jpeg" || fileExtension == ".png" || fileExtension == ".gif" || fileExtension == ".webp"))
+                string fileExtension = Path.GetExtension(UploadResume.PostedFile.FileName.ToLower());
+                if ((fileExtension == ".pdf" || fileExtension == ".doc" || fileExtension == ".docx"))
+                {
+                    string iconPath = Server.MapPath(".") + "\\../Uploadpdf\\" + fileExtension;
+                }
+                else
                 {
                     return "Format";
                 }
             }
             catch (Exception ex)
             {
-                ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "CheckPdfFormat", ex.Message);
+                ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "CheckThumbFormat", ex.Message);
+
             }
         }
         #endregion
-        return Resume;
+        return resume;
     }
-    public string UploadResume()
+    public string UploadResumes()
     {
         #region upload file
         string thumbfile = "";
         try
         {
-            if (fuResumePath.HasFile)
+            if (UploadResume.HasFile)
             {
-                string fileExtension = Path.GetExtension(fuResumePath.PostedFile.FileName.ToLower()),
+                string fileExtension = Path.GetExtension(UploadResume.PostedFile.FileName.ToLower()),
                 ImageGuid1 = Guid.NewGuid().ToString() + "_resume".Replace(" ", "-").Replace(".", "");
-                string iconPath = Server.MapPath(".") + "../UploadPDF\\" + ImageGuid1 + "" + fileExtension;
-                fuResumePath.SaveAs(iconPath);
-                thumbfile = "UploadPDf/" + ImageGuid1 + "" + fileExtension;
+                string iconPath = Server.MapPath(".") + "\\../UploadImages\\" + ImageGuid1 + "" + fileExtension;
+                UploadResume.SaveAs(iconPath);
+                thumbfile = "UploadImages/" + ImageGuid1 + "" + fileExtension;
             }
             else
             {
@@ -193,39 +237,5 @@ public partial class job_details : System.Web.UI.Page
 
         #endregion
         return thumbfile;
-    }
-
-    public int SendMail(ApplyJobs con)
-    {
-        try
-        {
-            MailMessage mail = new MailMessage();
-            mail.To.Add(ConfigurationManager.AppSettings["ToMail"]);
-            if (!string.IsNullOrEmpty(ConfigurationManager.AppSettings["CCMail"]))
-            {
-                mail.CC.Add(ConfigurationManager.AppSettings["CCMail"]);
-            }
-            string path = HttpContext.Current.Server.MapPath(@"\" + con.Resume + "");
-            Attachment attachment = new Attachment(path);
-            mail.Attachments.Add(attachment);
-            mail.From = new MailAddress(ConfigurationManager.AppSettings["from"], ConfigurationManager.AppSettings["fromName"]);
-            mail.Subject = "Job Application - Park Control and Communication";
-            mail.Body = "Hi Admin, <br><br>You have received a Job Application " + con.Fullname + ".<br><br><u><b><i>Details : </i></b></u><br>Fullname : " + con.Fullname + "<br>Email-Id : " + con.Emailid + "<br>ContactNumber : " + con.Contactnumber + "<br>Experience :" + con.Experience + "<br>Location :" + con.Location + "<br>CurrentCompany:" + con.CurrentCompany + "<br>Noticeperiod:" + con.Noticeperiod + @"</a><br><br>Regards,<br>Park Control and Communication";
-            mail.IsBodyHtml = true;
-            SmtpClient smtp = new SmtpClient();
-            smtp.Host = ConfigurationManager.AppSettings["host"];
-            smtp.Port = Convert.ToInt32(ConfigurationManager.AppSettings["port"]);
-            smtp.Credentials = new System.Net.NetworkCredential
-            (ConfigurationManager.AppSettings["userName"], ConfigurationManager.AppSettings["password"]);
-            smtp.EnableSsl = Convert.ToBoolean(ConfigurationManager.AppSettings["enableSsl"]);
-            smtp.Send(mail);
-            return 1;
-        }
-        catch (Exception ex)
-        {
-            ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.AbsoluteUri, "SendMail", ex.Message);
-            return 0;
-
-        }
     }
 }

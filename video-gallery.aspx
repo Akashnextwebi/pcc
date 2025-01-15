@@ -42,7 +42,8 @@
             <div class="container">
                 <div class="row">
                     <div class="services-slider-pcc">
-                        <div class="col-lg-4 col-md-6">
+                        <%=strvideogallery %>
+                       <%-- <div class="col-lg-4 col-md-6">
                             <div class="service-card">
                                 <div class="card-inner">
 
@@ -134,7 +135,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div>--%>
                     </div>
                 </div>
             </div>

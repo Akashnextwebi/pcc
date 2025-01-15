@@ -84,13 +84,13 @@
                         <div class="card-body">
                             <div class="row mb-2">
                                 <div class="col-lg-12 mb-3">
-                                    <label class="">OV Title<sup>*</sup></label>
+                                    <label class="">Overview Title<sup>*</sup></label>
                                     <asp:TextBox runat="server" MaxLength="100" class="form-control mb-2 mr-sm-2 txtName onlyAlpha" ID="txtOverview" placeholder="Enter Overview Title" />
                                     <asp:RequiredFieldValidator ID="rfv14" runat="server" ControlToValidate="txtOverview" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Field can't be empty"></asp:RequiredFieldValidator>
                                 </div>
 
                                 <div class="col-lg-12">
-                                    <label class="">OV Full Description <sup>*</sup></label>
+                                    <label class="">Overview Full Description <sup>*</sup></label>
                                     <asp:TextBox runat="server" TextMode="MultiLine" class="form-control mb-2 mr-sm-2 summernote" ID="OverviewDesc" Placeholder="Enter Full Description ....." />
                                     <asp:RequiredFieldValidator ID="rfv6" runat="server" ControlToValidate="OverviewDesc" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Field can't be empty"></asp:RequiredFieldValidator>
                                 </div>
@@ -108,19 +108,19 @@
                         <div class="card-body">
                             <div class="row mb-2">
                                 <div class="col-lg-12 mb-3">
-                                    <label class="">PS Title<sup>*</sup></label>
+                                    <label class="">Problem Statement Title<sup>*</sup></label>
                                     <asp:TextBox runat="server" MaxLength="100" class="form-control mb-2 mr-sm-2 txtName onlyAlpha" ID="txtPStitle" placeholder="Enter Problem Statement Title" />
                                     <asp:RequiredFieldValidator ID="rfv9" runat="server" ControlToValidate="txtPStitle" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Field can't be empty"></asp:RequiredFieldValidator>
                                 </div>
 
                                 <div class="col-lg-12 mb-3">
-                                    <label class="">PS Full Description <sup>*</sup></label>
+                                    <label class="">Problem Statement Full Description <sup>*</sup></label>
                                     <asp:TextBox runat="server" TextMode="MultiLine" class="form-control mb-2 mr-sm-2 summernote" ID="txtPSDesc" Placeholder="Enter Full Description ....." />
                                     <asp:RequiredFieldValidator ID="rfv10" runat="server" ControlToValidate="txtPSDesc" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Field can't be empty"></asp:RequiredFieldValidator>
                                 </div>
 
                                 <div class="col-lg-6 mb-3">
-                                    <label class=""> PS Upload Image<sup>*</sup></label>
+                                    <label class=""> Problem Statement Image<sup>*</sup></label>
                                     <asp:FileUpload ID="ImgPS" runat="server" ToolTip="Maxmimum 1 MB file size" CssClass="form-control"></asp:FileUpload>
                                     <small class="text-danger">.png, .jpeg, .jpg, .gif formats are required, Image Size Should be 463 × 306 px</small><br />
 
@@ -139,18 +139,18 @@
                         <div class="card-body">
                             <div class="row mb-2">
                                 <div class="col-lg-12">
-                                    <label class="">OA Title<sup>*</sup></label>
+                                    <label class="">Our Approach Title<sup>*</sup></label>
                                     <asp:TextBox runat="server" MaxLength="100" class="form-control mb-2 mr-sm-2 txtName onlyAlpha" ID="txtApproach" placeholder="Enter Approach Title" />
                                     <asp:RequiredFieldValidator ID="rfv11" runat="server" ControlToValidate="txtApproach" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Field can't be empty"></asp:RequiredFieldValidator>
                                 </div>
                             </div>
                             <div class="col-lg-12">
-                                <label class="">OA Full Description About Approach<sup>*</sup></label>
+                                <label class="">Our Approach Full Description About Approach<sup>*</sup></label>
                                 <asp:TextBox runat="server" TextMode="MultiLine" class="form-control mb-2 mr-sm-2 summernote" ID="txtDescApproach" Placeholder="Enter Full Description ....." />
                                 <asp:RequiredFieldValidator ID="rev12" runat="server" ControlToValidate="txtDescApproach" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Field can't be empty"></asp:RequiredFieldValidator>
                             </div>
                             <div class="col-lg-6">
-                                <label class="">OA Upload Image<sup>*</sup></label>
+                                <label class="">Our Approach Image<sup>*</sup></label>
                                 <asp:FileUpload ID="ImgApproach" runat="server" ToolTip="Maxmimum 1 MB file size" CssClass="form-control"></asp:FileUpload>
                                 <small class="text-danger">.png, .jpeg, .jpg, .gif formats are required, Image Size Should be 463 × 306 px</small><br />
                             </div>
@@ -171,32 +171,32 @@
                         <div class="card-body">
                             <div class="row mb-2">
                                 <div class="col-lg-12 mb-3">
-                                    <label class="">TU Title<sup>*</sup></label>
+                                    <label class="">Technology Upgrades Title<sup>*</sup></label>
                                     <asp:TextBox runat="server" MaxLength="100" class="form-control mb-2 mr-sm-2 txtName onlyAlpha" ID="txttutitle" placeholder="Enter Implementation Title" />
                                     <asp:RequiredFieldValidator ID="rfv15" runat="server" ControlToValidate="txttutitle" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Field can't be empty"></asp:RequiredFieldValidator>
                                 </div>
                                 <div class="col-lg-12">
-                                    <label class="">TU Full Description  <sup>*</sup></label>
+                                    <label class="">Technology Upgrades Full Description  <sup>*</sup></label>
                                     <asp:TextBox runat="server" TextMode="MultiLine" class="form-control mb-2 mr-sm-2 summernote" ID="txttudesc" Placeholder="Enter Full Description ....." />
                                     <asp:RequiredFieldValidator ID="rfv13" runat="server" ControlToValidate="txttudesc" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Field can't be empty"></asp:RequiredFieldValidator>
                                 </div>
                                 <div class="col-lg-12 mb-3">
-                                    <label class="">CE Title<sup>*</sup></label>
+                                    <label class="">Cybersecurity Enhancement Title<sup>*</sup></label>
                                     <asp:TextBox runat="server" MaxLength="100" class="form-control mb-2 mr-sm-2 txtName onlyAlpha" ID="txtcetitle" placeholder="Enter Implementation Title" />
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtcetitle" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Field can't be empty"></asp:RequiredFieldValidator>
                                 </div>
                                 <div class="col-lg-12">
-                                    <label class="">CE Full Description  <sup>*</sup></label>
+                                    <label class="">Cybersecurity Enhancement Full Description  <sup>*</sup></label>
                                     <asp:TextBox runat="server" TextMode="MultiLine" class="form-control mb-2 mr-sm-2 summernote" ID="txtcedesc" Placeholder="Enter Full Description ....." />
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtcedesc" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Field can't be empty"></asp:RequiredFieldValidator>
                                 </div>
                                 <div class="col-lg-12 mb-3">
-                                    <label class="">DBP Title<sup>*</sup></label>
+                                    <label class="">Digital Banking Platforms Title<sup>*</sup></label>
                                     <asp:TextBox runat="server" MaxLength="100" class="form-control mb-2 mr-sm-2 txtName onlyAlpha" ID="txtdbptitle" placeholder="Enter Implementation Title" />
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtdbptitle" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Field can't be empty"></asp:RequiredFieldValidator>
                                 </div>
                                 <div class="col-lg-12">
-                                    <label class="">DBP Full Description  <sup>*</sup></label>
+                                    <label class="">Digital Banking Platforms Full Description  <sup>*</sup></label>
                                     <asp:TextBox runat="server" TextMode="MultiLine" class="form-control mb-2 mr-sm-2 summernote" ID="txtdbpdesc" Placeholder="Enter Full Description ....." />
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtdbpdesc" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Field can't be empty"></asp:RequiredFieldValidator>
                                 </div>
@@ -223,7 +223,7 @@
                                 <div class="col-lg-12 mb-3">
                                     <label class="">Detail Image <sup>*</sup></label>
                                     <asp:FileUpload ID="CSDetailImage" runat="server" ToolTip="Maxmimum 1 MB file size" CssClass="form-control"></asp:FileUpload>
-                                    <small class="text-danger">.png, .jpeg, .jpg, .gif formats are required, Image Size Should be 1600 × 600 px</small><br />
+                                    <small class="text-danger">.png, .jpeg, .jpg, .gif formats are required, Image Size Should be 1080 × 720 px</small><br />
                                 </div>
                                 <div class="col-lg-12 mb-3">
                                     <label class="">Upload PDF <sup>*</sup></label>

@@ -33,6 +33,7 @@ public partial class Admin_add_seminar : System.Web.UI.Page
                 btnNew.Visible = true;
                 txttitle.Text = BD.SeminarTitle;
                 txttag.Text = BD.Tag;
+                txturl.Text = BD.VideoUrl;
                 if (BD.ThumbImage != "")
                 {
                     lblThumb.Text = BD.ThumbImage;
@@ -71,6 +72,7 @@ public partial class Admin_add_seminar : System.Web.UI.Page
                 SeminarDetails BD = new SeminarDetails();
                 BD.SeminarTitle = txttitle.Text;
                 BD.Tag = txttag.Text;
+                BD.VideoUrl = txturl.Text;
                 BD.ThumbImage = UploadThumbImage();
                 BD.AddedIp = CommonModel.IPAddress();
                 BD.AddedOn = TimeStamps.UTCTime();

@@ -40,6 +40,7 @@ public partial class Admin_add_new_job : System.Web.UI.Page
                 txtEmpType.Text = job.EmploymentType;
                 txtPostedOn.Text = job.PostedOn.ToString("dd MMM yyyy");
                 txtMetaKey.Text = job.MetaKeys;
+                txtShortDesc.Text = job.ShortDesc;
                 txtDesc.Text = job.JobDescription;
                 txtkey.Text= job.KeyResponsibilities;
                 txtskills.Text = job.Experience;
@@ -89,6 +90,7 @@ public partial class Admin_add_new_job : System.Web.UI.Page
                 job.JobLocation = txtLocation.Text.Trim();
                 job.Salary = txtSalary.Text.Trim();
                 job.Education = txtEducation.Text.Trim();
+                job.ShortDesc = txtShortDesc.Text.Trim();
                 job.JobDescription = txtDesc.Text.Trim();
                 job.KeyResponsibilities = txtkey.Text.Trim();
                 job.Experience = txtskills.Text.Trim();
@@ -121,7 +123,7 @@ public partial class Admin_add_new_job : System.Web.UI.Page
                     if (result > 0)
                     {
                         ScriptManager.RegisterStartupScript(this, this.GetType(), "Message", "Snackbar.show({pos: 'top-right',text: 'Job Details Added successfully.',actionTextColor: '#fff',backgroundColor: '#008a3d'});", true);
-                        txtName.Text = txtUrl.Text = txtPostedOn.Text = txtEmpType.Text = txtLocation.Text = txtSalary.Text = txtEducation.Text = txtDesc.Text = txtkey.Text = txtskills.Text = txtMetaDesc.Text = txtMetaKey.Text = txtPageTitle.Text = "";
+                        txtName.Text = txtUrl.Text = txtPostedOn.Text = txtEmpType.Text = txtLocation.Text = txtSalary.Text = txtEducation.Text = txtDesc.Text = txtkey.Text = txtskills.Text = txtMetaDesc.Text = txtMetaKey.Text = txtPageTitle.Text = txtShortDesc.Text="";
                     }
                     else
                     {

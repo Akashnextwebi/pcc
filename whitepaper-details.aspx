@@ -140,7 +140,7 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-    <div class="breadcrumb-section" style="background-image: linear-gradient(270deg, rgba(0, 0, 0, .55), rgba(0, 0, 0, 0.55) 101.02%), url(/image/blog/braadcrumb-bg3.jpg);">
+    <div class="breadcrumb-section" style="background-image: linear-gradient(270deg, rgba(0, 0, 0, .55), rgba(0, 0, 0, 0.55) 101.02%), url(/<%=strBanner%>);">
         <div class="container-fluid one pl--95">
             <div class="row">
                 <div class="col-lg-12">
@@ -149,9 +149,9 @@
                             <li><a href="/Default.aspx">Home</a></li>
                             <li><a href="/Default.aspx">Whitepaper</a></li>
 
-                            <li>By providing comprehensive event details, you can enhance attendees.</li>
+                            <li><%=strwhitepaperheading %></li>
                         </ul>
-                        <h1>By providing comprehensive event details, you can enhance attendees.
+                        <h1><%=strwhitepaperheading %>
                         </h1>
 
                     </div>
@@ -165,7 +165,7 @@
                 <div class="row justify-content-center g-lg-4 gy-5">
                     <div class="col-lg-10">
                         <div class="section-title1">
-                            <h2><%=strheading %></h2>
+                            <h2><%=strwhitepaperheading %></h2>
                         </div>
 
                         <div class="whitepaper-img mb-20">

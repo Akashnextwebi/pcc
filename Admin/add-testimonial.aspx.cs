@@ -31,6 +31,7 @@ public partial class Admin_add_testimonial : System.Web.UI.Page
                 btnSave.Text = "Update";
                 btnNew.Visible = true;
                 txtPName.Text = BD.Name;
+                txtdesignation.Text = BD.Designation;
                 ddlrating.SelectedValue = BD.Ratings;
                 TxtTdesc.Text = BD.TestimonialDesc;
                 
@@ -53,6 +54,7 @@ public partial class Admin_add_testimonial : System.Web.UI.Page
                 var aid = Request.Cookies["bmw_aid"].Value;
                 TestimonialDetails BD = new TestimonialDetails();
                 BD.Name = txtPName.Text;
+                BD.Designation = txtdesignation.Text;
                 BD.Ratings = ddlrating.SelectedValue;
                 BD.TestimonialDesc = TxtTdesc.Text;             
                 BD.AddedIp = CommonModel.IPAddress();

@@ -290,5 +290,117 @@ public class CaseStudy
         }
         return result;
     }
-
+    public static List<CaseStudy> GetAllCasestudies(SqlConnection _con)
+    {
+        List<CaseStudy> cs = new List<CaseStudy>();
+        try
+        {
+            string query = "Select *,(Select UserName from CreateUser Where UserGuid=CaseStudy.AddedBy) as UpdatedBy from CaseStudy where Status=@Status Order by Id ";
+            using (SqlCommand cmd = new SqlCommand(query, _con))
+            {
+                cmd.Parameters.AddWithValue("@Status", SqlDbType.NVarChar).Value = "Active";
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                cs = (from DataRow dr in dt.Rows
+                      select new CaseStudy()
+                      {
+                          Id = Convert.ToInt32(Convert.ToString(dr["Id"])),
+                          CSThumbImage = Convert.ToString(dr["CSThumbImage"]),
+                          CSDetailImage = Convert.ToString(dr["CSDetailImage"]),
+                          UploadPDF = Convert.ToString(dr["UploadPDF"]),
+                          CaseStudyName = Convert.ToString(dr["CaseStudyName"]),
+                          CaseStudyUrl = Convert.ToString(dr["CaseStudyUrl"]),
+                          PageTitle = Convert.ToString(dr["PageTitle"]),
+                          MetaKeys = Convert.ToString(dr["MetaKeys"]),
+                          MetaDesc = Convert.ToString(dr["MetaDesc"]),
+                          Category = Convert.ToString(dr["Category"]),
+                          OVDesc = Convert.ToString(dr["OVDesc"]),
+                          PSTitle = Convert.ToString(dr["PSTitle"]),
+                          Client = Convert.ToString(dr["Client"]),
+                          PSDesc = Convert.ToString(dr["PSDesc"]),
+                          OADesc = Convert.ToString(dr["OADesc"]),
+                          OATitle = Convert.ToString(dr["OATitle"]),
+                          OAImages = Convert.ToString(dr["OAImages"]),
+                          TUTitle = Convert.ToString(dr["TUTitle"]),
+                          TUDesc = Convert.ToString(dr["TUDesc"]),
+                          CETitle = Convert.ToString(dr["CETitle"]),
+                          CEDesc = Convert.ToString(dr["CEDesc"]),
+                          DBPTitle = Convert.ToString(dr["DBPTitle"]),
+                          DBPDesc = Convert.ToString(dr["DBPDesc"]),
+                          AddedOn = Convert.ToDateTime(Convert.ToString(dr["AddedOn"])),
+                          PostedOn = Convert.ToDateTime(Convert.ToString(dr["PostedOn"])),
+                          Location = Convert.ToString(dr["Location"]),
+                          AddedBy = Convert.ToString(dr["AddedBy"]),
+                          AddedIP = Convert.ToString(dr["AddedIP"]),
+                          Status = Convert.ToString(dr["Status"]),
+                          OverviewTitle = Convert.ToString(dr["OverviewTitle"]),
+                          PSImages = Convert.ToString(dr["PSImages"]),
+                      }).ToList();
+            }
+        }
+        catch (Exception ex)
+        {
+            ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "GetAllCasestudies", ex.Message);
+        }
+        return cs;
+    }
+    public static CaseStudy getCasestudiesDetailsByUrl(SqlConnection _con, string CaseStudyUrl)
+    {
+        CaseStudy cs = new CaseStudy();
+        try
+        {
+            string query = "Select top 1 * from CaseStudy where Status='Active' and CaseStudyUrl=@CaseStudyUrl";
+            using (SqlCommand cmd = new SqlCommand(query, _con))
+            {
+                cmd.Parameters.AddWithValue("@CaseStudyUrl", SqlDbType.Int).Value = CaseStudyUrl;
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                if (dt.Rows.Count > 0)
+                {
+                    cs.Id = Convert.ToInt32(Convert.ToString(dt.Rows[0]["Id"]));
+                    cs.CSThumbImage = Convert.ToString(dt.Rows[0]["CSThumbImage"]);
+                    cs.CSDetailImage = Convert.ToString(dt.Rows[0]["CSDetailImage"]);
+                    cs.UploadPDF = Convert.ToString(dt.Rows[0]["UploadPDF"]);
+                    cs.CaseStudyName = Convert.ToString(dt.Rows[0]["CaseStudyName"]);
+                    cs.CaseStudyUrl = Convert.ToString(dt.Rows[0]["CaseStudyUrl"]);
+                    cs.PageTitle = Convert.ToString(dt.Rows[0]["PageTitle"]);
+                    cs.MetaKeys = Convert.ToString(dt.Rows[0]["MetaKeys"]);
+                    cs.MetaDesc = Convert.ToString(dt.Rows[0]["MetaDesc"]);
+                    cs.Category = Convert.ToString(dt.Rows[0]["Category"]);
+                    cs.OVDesc = Convert.ToString(dt.Rows[0]["OVDesc"]);
+                    cs.PSTitle = Convert.ToString(dt.Rows[0]["PSTitle"]);
+                    cs.Client = Convert.ToString(dt.Rows[0]["Client"]);
+                    cs.PSDesc = Convert.ToString(dt.Rows[0]["PSDesc"]);
+                    cs.OADesc = Convert.ToString(dt.Rows[0]["OADesc"]);
+                    cs.OATitle = Convert.ToString(dt.Rows[0]["OATitle"]);
+                    cs.OAImages = Convert.ToString(dt.Rows[0]["OAImages"]);
+                    cs.TUTitle = Convert.ToString(dt.Rows[0]["TUTitle"]);
+                    cs.TUDesc = Convert.ToString(dt.Rows[0]["TUDesc"]);
+                    cs.CETitle = Convert.ToString(dt.Rows[0]["CETitle"]);
+                    cs.CEDesc = Convert.ToString(dt.Rows[0]["CEDesc"]);
+                    cs.DBPTitle = Convert.ToString(dt.Rows[0]["DBPTitle"]);
+                    cs.DBPDesc = Convert.ToString(dt.Rows[0]["DBPDesc"]);
+                    cs.AddedOn = Convert.ToDateTime(Convert.ToString(dt.Rows[0]["AddedOn"]));
+                    cs.PostedOn = Convert.ToDateTime(Convert.ToString(dt.Rows[0]["PostedOn"]));
+                    cs.Location = Convert.ToString(dt.Rows[0]["Location"]);
+                    cs.AddedBy = Convert.ToString(dt.Rows[0]["AddedBy"]);
+                    cs.AddedIP = Convert.ToString(dt.Rows[0]["AddedIP"]);
+                    cs.Status = Convert.ToString(dt.Rows[0]["Status"]);
+                    cs.OverviewTitle = Convert.ToString(dt.Rows[0]["OverviewTitle"]);
+                    cs.PSImages = Convert.ToString(dt.Rows[0]["PSImages"]);
+                }
+                else
+                {
+                    cs = null;
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "getCasestudiesDetailsByUrl", ex.Message);
+        }
+        return cs;
+    }
 }

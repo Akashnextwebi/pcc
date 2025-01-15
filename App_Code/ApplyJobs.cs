@@ -68,4 +68,65 @@ public class ApplyJobs
         }
         return result;
     }
+    public static List<ApplyJobs> GetAllApplyjobs(SqlConnection _con)
+    {
+        List<ApplyJobs> categories = new List<ApplyJobs>();
+        try
+        {
+            string query = "Select * from ApplyJobs  where Status !='Deleted' ORDER BY AddedOn DESC";
+            using (SqlCommand cmd = new SqlCommand(query, _con))
+            {
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                categories = (from DataRow dr in dt.Rows
+                              select new ApplyJobs()
+                              {
+                                  Id = Convert.ToInt32(Convert.ToString(dr["Id"])),
+                                  Fullname = Convert.ToString(dr["Fullname"]),
+                                  Emailid = Convert.ToString(dr["Emailid"]),
+                                  Contactnumber = Convert.ToString(dr["Contactnumber"]),
+                                  Experience = Convert.ToString(dr["Experience"]),
+                                  Location = Convert.ToString(dr["Location"]),
+                                  Message = Convert.ToString(dr["Message"]),
+                                  Status = Convert.ToString(dr["Status"]),
+                                  CurrentCompany = Convert.ToString(dr["CurrentCompany"]),
+                                  Noticeperiod = Convert.ToString(dr["Noticeperiod"]),
+                                  Resume = Convert.ToString(dr["Resume"]),
+                                  AddedIp = Convert.ToString(dr["AddedIp"]),
+                                  AddedOn = Convert.ToDateTime(dr["AddedOn"]),
+                                  JobTitle = Convert.ToString(dr["JobTitle"]),
+                                  JobId = Convert.ToInt32(Convert.ToString(dr["JobId"])),
+                              }).ToList();
+            }
+        }
+        catch (Exception ex)
+        {
+            ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "GetAllApplyjobs", ex.Message);
+        }
+        return categories;
+    }
+    public static int DeleteApplyjobs(SqlConnection _con, ApplyJobs cat)
+    {
+        int result = 0;
+        try
+        {
+            string query = "Update ApplyJobs Set Status=@Status, AddedOn=@AddedOn, AddedIp=@AddedIp Where Id=@Id";
+            using (SqlCommand cmd = new SqlCommand(query, _con))
+            {
+                cmd.Parameters.AddWithValue("@Id", SqlDbType.NVarChar).Value = cat.Id;
+                cmd.Parameters.AddWithValue("@Status", SqlDbType.NVarChar).Value = "Deleted";
+                cmd.Parameters.AddWithValue("@AddedOn", SqlDbType.NVarChar).Value = cat.AddedOn;
+                cmd.Parameters.AddWithValue("@AddedIp", SqlDbType.NVarChar).Value = cat.AddedIp;
+                _con.Open();
+                result = cmd.ExecuteNonQuery();
+                _con.Close();
+            }
+        }
+        catch (Exception ex)
+        {
+            ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "DeleteApplyjobs", ex.Message);
+        }
+        return result;
+    }
 }

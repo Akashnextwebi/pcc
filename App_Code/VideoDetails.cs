@@ -161,4 +161,35 @@ public class VideoDetails
         }
         return result;
     }
+    public static List<VideoDetails> GetAllVideogalleries(SqlConnection _con)
+    {
+        List<VideoDetails> vd = new List<VideoDetails>();
+        try
+        {
+            string query = "Select *,(Select UserName from CreateUser Where UserGuid=VideoDetails.AddedBy) as UpdatedBy from VideoDetails where Status=@Status Order by Id ";
+            using (SqlCommand cmd = new SqlCommand(query, _con))
+            {
+                cmd.Parameters.AddWithValue("@Status", SqlDbType.NVarChar).Value = "Active";
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                vd = (from DataRow dr in dt.Rows
+                      select new VideoDetails()
+                      {
+                          Id = Convert.ToInt32(Convert.ToString(dr["Id"])),
+                          VideoLink = Convert.ToString(dr["VideoLink"]),
+                          ThumbImage = Convert.ToString(dr["ThumbImage"]),
+                          AddedOn = Convert.ToDateTime(Convert.ToString(dr["AddedOn"])),
+                          AddedIp = Convert.ToString(dr["AddedIp"]),
+                          AddedBy = Convert.ToString(dr["AddedBy"]),
+                          Status = Convert.ToString(dr["Status"])
+                      }).ToList();
+            }
+        }
+        catch (Exception ex)
+        {
+            ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "GetAllVideogalleries", ex.Message);
+        }
+        return vd;
+    }
 }

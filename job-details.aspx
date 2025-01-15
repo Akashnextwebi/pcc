@@ -374,7 +374,7 @@
                                 <div class="contact-one__input-box">
                                     <label>Resume <sup>*</sup></label>
                                     <%--<input type="file" name="fuResumePath" title="Maximum 1 MB file size">--%>
-                                    <asp:FileUpload ID="fuResumePath" runat="server" ToolTip="Maximum 1 MB file size"></asp:FileUpload>
+                                   <asp:FileUpload ID="UploadResume" runat="server" ToolTip="Maxmimum 1 MB file size"></asp:FileUpload><br />
                                     <small class="text-danger">.pdf, .doc, .docx, .png, .jpg, .jpeg formats are required</small>
                                 </div>
                                 <div class="contact-one__input-box">
@@ -384,7 +384,7 @@
                                 </div>
                                 <div class="contact-one__input-box">
                                     <%--  <input type="submit" name="btnSubmit" value="Submit" class="btn ss-btn">--%>
-                                    <asp:Button ID="btnSubmit" runat="server" Text="Submit" CssClass="btn ss-btn" OnClick="btnSubmit_Click" ValidationGroup="Save" />
+                                     <a><asp:LinkButton  class="btn ss-btn" ID="btnsubmit" runat="server" Text="Apply Now" OnClick="btnsubmit_Click" ValidationGroup="Save">Submit<i class="fal fa-arrow-right-long"></i></asp:LinkButton></a>
                                     <asp:Label ID="lblResume" runat="server" Visible="false"></asp:Label>
                                     <asp:HiddenField ID="txtJobId" runat="server" />
                                     <asp:HiddenField ID="txtJobTitle" runat="server" />

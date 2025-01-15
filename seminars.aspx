@@ -69,7 +69,8 @@
         <section class="section-padding">
             <div class="container">
                 <div class="row g-md-4 gy-5 mb-70">
-                    <div class="col-md-6">
+                    <%=strseminar %>
+                   <%-- <div class="col-md-6">
                         <div class="eg-card4">
                             <div class="card-img">
                                 <img src="image/seminar/1.png" alt="">
@@ -140,7 +141,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div>--%>
 
                 </div>
             </div>

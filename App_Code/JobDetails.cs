@@ -23,6 +23,7 @@ public class JobDetails
     public string EmploymentType { get; set; }    
     public string JobLocation { get; set; }
     public string Education { get; set; }
+    public string ShortDesc { get; set; }
     public string JobDescription { get; set; }
     public string KeyResponsibilities { get; set; }
     public string Experience { get; set; }
@@ -57,6 +58,7 @@ public class JobDetails
                     Job.EmploymentType = Convert.ToString(dt.Rows[0]["EmploymentType"]);
                     Job.JobLocation = Convert.ToString(dt.Rows[0]["JobLocation"]);
                     Job.Education = Convert.ToString(dt.Rows[0]["Education"]);
+                    Job.ShortDesc = Convert.ToString(dt.Rows[0]["ShortDesc"]);
                     Job.JobDescription = Convert.ToString(dt.Rows[0]["JobDescription"]);
                     Job.KeyResponsibilities = Convert.ToString(dt.Rows[0]["KeyResponsibilities"]);
                     Job.Salary = Convert.ToString(dt.Rows[0]["Salary"]);              
@@ -88,8 +90,8 @@ public class JobDetails
 
         try
         {
-            string query = "Insert Into JobDetails (JobTitle,JobUrl,PostedOn,EmploymentType,JobLocation,Education,JobDescription,KeyResponsibilities,Salary,Experience,ThumbImage,PageTitle,MetaKeys,MetaDesc,AddedIp,AddedOn,AddedBy,Status) values " +
-                "(@JobTitle,@JobUrl,@PostedOn,@EmploymentType,@JobLocation,@Education,@JobDescription,@KeyResponsibilities,@Salary,@Experience,@ThumbImage,@PageTitle,@MetaKeys,@MetaDesc,@AddedIp,@AddedOn,@AddedBy,@Status) ";
+            string query = "Insert Into JobDetails (JobTitle,JobUrl,PostedOn,EmploymentType,JobLocation,Education,ShortDesc,JobDescription,KeyResponsibilities,Salary,Experience,ThumbImage,PageTitle,MetaKeys,MetaDesc,AddedIp,AddedOn,AddedBy,Status) values " +
+                "(@JobTitle,@JobUrl,@PostedOn,@EmploymentType,@JobLocation,@Education,@ShortDesc,@JobDescription,@KeyResponsibilities,@Salary,@Experience,@ThumbImage,@PageTitle,@MetaKeys,@MetaDesc,@AddedIp,@AddedOn,@AddedBy,@Status) ";
             using (SqlCommand cmd = new SqlCommand(query, _con))
             {
                 cmd.Parameters.AddWithValue("@JobTitle", SqlDbType.NVarChar).Value = cat.JobTitle;
@@ -97,7 +99,8 @@ public class JobDetails
                 cmd.Parameters.AddWithValue("@PostedOn", SqlDbType.NVarChar).Value = cat.PostedOn;
                 cmd.Parameters.AddWithValue("@EmploymentType", SqlDbType.DateTime).Value = cat.EmploymentType;
                 cmd.Parameters.AddWithValue("@JobLocation", SqlDbType.NVarChar).Value = cat.JobLocation;
-                cmd.Parameters.AddWithValue("@Education", SqlDbType.NVarChar).Value = cat.Education;  
+                cmd.Parameters.AddWithValue("@Education", SqlDbType.NVarChar).Value = cat.Education;
+                cmd.Parameters.AddWithValue("@ShortDesc", SqlDbType.NVarChar).Value = cat.ShortDesc;
                 cmd.Parameters.AddWithValue("@JobDescription", SqlDbType.NVarChar).Value = cat.JobDescription;
                 cmd.Parameters.AddWithValue("@KeyResponsibilities", SqlDbType.NVarChar).Value = cat.KeyResponsibilities;
                 cmd.Parameters.AddWithValue("@Salary", SqlDbType.NVarChar).Value = cat.Salary;
@@ -127,7 +130,7 @@ public class JobDetails
         int result = 0;
         try
         {
-            string query = "Update JobDetails Set JobTitle=@JobTitle,JobUrl=@JobUrl,PostedOn = @PostedOn,EmploymentType=@EmploymentType,JobLocation=@JobLocation,Education=@Education,MetaDesc=@MetaDesc,JobDescription=@JobDescription,KeyResponsibilities=@KeyResponsibilities,Salary=@Salary,ThumbImage=@ThumbImage,Experience=@Experience,PageTitle=@PageTitle,MetaKeys=@MetaKeys,AddedOn=@AddedOn,AddedBy=@AddedBy,AddedIp=@AddedIp,Status=@Status Where Id=@Id  ";
+            string query = "Update JobDetails Set JobTitle=@JobTitle,JobUrl=@JobUrl,PostedOn = @PostedOn,EmploymentType=@EmploymentType,JobLocation=@JobLocation,Education=@Education,ShortDesc=@ShortDesc,MetaDesc=@MetaDesc,JobDescription=@JobDescription,KeyResponsibilities=@KeyResponsibilities,Salary=@Salary,ThumbImage=@ThumbImage,Experience=@Experience,PageTitle=@PageTitle,MetaKeys=@MetaKeys,AddedOn=@AddedOn,AddedBy=@AddedBy,AddedIp=@AddedIp,Status=@Status Where Id=@Id  ";
             using (SqlCommand cmd = new SqlCommand(query, _con))
             {
                 cmd.Parameters.AddWithValue("@id", SqlDbType.Int).Value = cat.Id;
@@ -137,6 +140,7 @@ public class JobDetails
                 cmd.Parameters.AddWithValue("@EmploymentType", SqlDbType.DateTime).Value = cat.EmploymentType;
                 cmd.Parameters.AddWithValue("@JobLocation", SqlDbType.NVarChar).Value = cat.JobLocation;
                 cmd.Parameters.AddWithValue("@Education", SqlDbType.NVarChar).Value = cat.Education;
+                cmd.Parameters.AddWithValue("@ShortDesc", SqlDbType.NVarChar).Value = cat.ShortDesc;
                 cmd.Parameters.AddWithValue("@JobDescription", SqlDbType.NVarChar).Value = cat.JobDescription;
                 cmd.Parameters.AddWithValue("@KeyResponsibilities", SqlDbType.NVarChar).Value = cat.KeyResponsibilities;
                 cmd.Parameters.AddWithValue("@Salary", SqlDbType.NVarChar).Value = cat.Salary;
@@ -183,6 +187,7 @@ public class JobDetails
                                   EmploymentType = Convert.ToString(dr["EmploymentType"]),
                                   JobLocation = Convert.ToString(dr["JobLocation"]),
                                   Education = Convert.ToString(dr["Education"]),
+                                  ShortDesc = Convert.ToString(dr["ShortDesc"]),
                                   JobDescription = Convert.ToString(dr["JobDescription"]),
                                   KeyResponsibilities = Convert.ToString(dr["KeyResponsibilities"]),
                                   Salary = Convert.ToString(dr["Salary"]),
@@ -249,6 +254,7 @@ public class JobDetails
                                   EmploymentType = Convert.ToString(dr["EmploymentType"]),
                                   JobLocation = Convert.ToString(dr["JobLocation"]),
                                   Education = Convert.ToString(dr["Education"]),
+                                  ShortDesc = Convert.ToString(dr["ShortDesc"]),
                                   JobDescription = Convert.ToString(dr["JobDescription"]),
                                   KeyResponsibilities = Convert.ToString(dr["KeyResponsibilities"]),
                                   Salary = Convert.ToString(dr["Salary"]),
@@ -291,6 +297,7 @@ public class JobDetails
                     Job.EmploymentType = Convert.ToString(dt.Rows[0]["EmploymentType"]);
                     Job.JobLocation = Convert.ToString(dt.Rows[0]["JobLocation"]);
                     Job.Education = Convert.ToString(dt.Rows[0]["Education"]);
+                    Job.ShortDesc = Convert.ToString(dt.Rows[0]["ShortDesc"]);
                     Job.JobDescription = Convert.ToString(dt.Rows[0]["JobDescription"]);
                     Job.KeyResponsibilities = Convert.ToString(dt.Rows[0]["KeyResponsibilities"]);
                     Job.Salary = Convert.ToString(dt.Rows[0]["Salary"]);

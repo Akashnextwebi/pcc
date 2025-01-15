@@ -156,7 +156,7 @@
                     <div class="banner-content">
                         <h1>Case Study</h1>
                         <ul class="breadcrumb-list">
-                            <li><a href="Default.aspx">Home</a></li>
+                            <li><a href="/Default.aspx">Home</a></li>
                             <li>Case Study</li>
                         </ul>
                     </div>
@@ -168,7 +168,8 @@
         <section class="section-padding">
             <div class="container">
                 <siv class="row gy-4">
-                    <div class="col-lg-6">
+                    <%=strcasecasestudy %>
+                   <%-- <div class="col-lg-6">
                         <div class="magnetic-wrap">
                             <div class="case-study-card2 magnetic-item" style="">
                                 <div class="case-img">
@@ -259,7 +260,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div>--%>
                 </siv>
             </div>
         </section>

@@ -40,6 +40,11 @@
                                     <asp:TextBox runat="server" class="form-control mb-2 mr-sm-2" ID="txttag" placeholder="Enter Name" />
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txttag" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Field can't be empty"></asp:RequiredFieldValidator>
                                 </div>
+                                <div class="col-lg-6 mb-3">
+                                    <label>Video Url<sup style="color: red;">*</sup></label>
+                                    <asp:TextBox runat="server" class="form-control mb-2 mr-sm-2" ID="txturl" placeholder="Video url" />
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txturl" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Field can't be empty"></asp:RequiredFieldValidator>
+                                </div>
                                 <div class="col-lg-6 mb-2">
                                     <label class="">Thumb Image <sup class="text-danger">*</sup></label>
                                     <asp:FileUpload runat="server" ID="ThumbImage" CssClass="form-control" />

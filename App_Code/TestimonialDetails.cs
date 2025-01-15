@@ -19,6 +19,7 @@ public class TestimonialDetails
     }
     public int Id { get; set; } 
     public string Name { get; set; }
+    public string Designation { get; set; }
     public string Ratings { get; set; }
     public string TestimonialDesc { get; set; }
     public DateTime AddedOn { get; set; }   
@@ -39,10 +40,11 @@ public class TestimonialDetails
 
         try
         {
-            string query = "Insert Into TestimonialDetails (Name,Ratings,TestimonialDesc,AddedOn,AddedBy, AddedIp,Status) values(@Name,@Ratings,@TestimonialDesc,@AddedOn,@AddedBy, @AddedIp,@Status) ";
+            string query = "Insert Into TestimonialDetails (Name,Designation,Ratings,TestimonialDesc,AddedOn,AddedBy, AddedIp,Status) values(@Name,@Designation,@Ratings,@TestimonialDesc,@AddedOn,@AddedBy, @AddedIp,@Status) ";
             using (SqlCommand cmd = new SqlCommand(query, conSQ))
             {
                 cmd.Parameters.AddWithValue("@Name", SqlDbType.NVarChar).Value = con.Name;
+                cmd.Parameters.AddWithValue("@Designation", SqlDbType.NVarChar).Value = con.Designation;
                 cmd.Parameters.AddWithValue("@Ratings", SqlDbType.NVarChar).Value = con.Ratings;
                 cmd.Parameters.AddWithValue("@TestimonialDesc", SqlDbType.NVarChar).Value = con.TestimonialDesc;
                 cmd.Parameters.AddWithValue("@AddedOn", SqlDbType.NVarChar).Value = con.AddedOn;
@@ -73,11 +75,12 @@ public class TestimonialDetails
         int result = 0;
         try
         {
-            string query = "Update TestimonialDetails Set Name=@Name,Ratings=@Ratings,TestimonialDesc=@TestimonialDesc,AddedOn=@AddedOn,AddedIp=@AddedIp,AddedBy=@AddedBy Where Id=@Id ";
+            string query = "Update TestimonialDetails Set Name=@Name,Designation=@Designation,Ratings=@Ratings,TestimonialDesc=@TestimonialDesc,AddedOn=@AddedOn,AddedIp=@AddedIp,AddedBy=@AddedBy Where Id=@Id ";
             using (SqlCommand cmd = new SqlCommand(query, conSQ))
             {
                 cmd.Parameters.AddWithValue("@id", SqlDbType.Int).Value = cat.Id;
                 cmd.Parameters.AddWithValue("@Name", SqlDbType.NVarChar).Value = cat.Name;
+                cmd.Parameters.AddWithValue("@Designation", SqlDbType.NVarChar).Value = cat.Designation;
                 cmd.Parameters.AddWithValue("@Ratings", SqlDbType.NVarChar).Value = cat.Ratings;
                 cmd.Parameters.AddWithValue("@TestimonialDesc", SqlDbType.NVarChar).Value = cat.TestimonialDesc;
                 cmd.Parameters.AddWithValue("@AddedOn", SqlDbType.NVarChar).Value = cat.AddedOn;
@@ -120,6 +123,7 @@ public class TestimonialDetails
                               {
                                   Id = Convert.ToInt32(Convert.ToString(dr["Id"])),
                                   Name = Convert.ToString(dr["Name"]),
+                                  Designation = Convert.ToString(dr["Designation"]),
                                   Ratings = Convert.ToString(dr["Ratings"]),
                                   TestimonialDesc = Convert.ToString(dr["TestimonialDesc"]),
                                   AddedOn = Convert.ToDateTime(Convert.ToString(dr["AddedOn"])),
@@ -187,6 +191,7 @@ public class TestimonialDetails
                         {
                             Id = Convert.ToInt32(Convert.ToString(dr["Id"])),
                             Name = Convert.ToString(dr["Name"]),
+                            Designation = Convert.ToString(dr["Designation"]),
                             Ratings = Convert.ToString(dr["Ratings"]),
                             TestimonialDesc = Convert.ToString(dr["TestimonialDesc"]),
                             AddedOn = Convert.ToDateTime(Convert.ToString(dr["AddedOn"])),
@@ -202,5 +207,38 @@ public class TestimonialDetails
             ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "GetTestimonialDetails", ex.Message);
         }
         return zips;
+    }
+    public static List<TestimonialDetails> GetAllTestimonials(SqlConnection _con)
+    {
+        List<TestimonialDetails> Testi = new List<TestimonialDetails>();
+        try
+        {
+            string query = "Select *,(Select UserName from CreateUser Where UserGuid=TestimonialDetails.AddedBy) as UpdatedBy from TestimonialDetails where Status=@Status Order by Id ";
+            using (SqlCommand cmd = new SqlCommand(query, _con))
+            {
+                cmd.Parameters.AddWithValue("@Status", SqlDbType.NVarChar).Value = "Active";
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                Testi = (from DataRow dr in dt.Rows
+                      select new TestimonialDetails()
+                      {
+                          Id = Convert.ToInt32(Convert.ToString(dr["Id"])),
+                          Name = Convert.ToString(dr["Name"]),
+                          Designation = Convert.ToString(dr["Designation"]),
+                          Ratings = Convert.ToString(dr["Ratings"]),
+                          TestimonialDesc = Convert.ToString(dr["TestimonialDesc"]),
+                          AddedOn = Convert.ToDateTime(Convert.ToString(dr["AddedOn"])),
+                          AddedBy = Convert.ToString(dr["UpdatedBy"]),
+                          AddedIp = Convert.ToString(dr["AddedIP"]),
+                          Status = Convert.ToString(dr["Status"])
+                      }).ToList();
+            }
+        }
+        catch (Exception ex)
+        {
+            ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "GetAllTestimonials", ex.Message);
+        }
+        return Testi;
     }
 }

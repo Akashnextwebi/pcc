@@ -173,7 +173,8 @@
         <section class="section-padding">
             <div class="container">
                 <siv class="row gy-4">
-                    <div class="col-lg-4">
+                    <%=strcatalogues %>
+                    <%--<div class="col-lg-4">
                         <div class="magnetic-wrap">
                             <div class="case-study-card2 magnetic-item" style="">
                                 <div class="case-img">
@@ -216,8 +217,8 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4">
+                    </div>--%>
+                    <%--<div class="col-lg-4">
                         <div class="magnetic-wrap">
                             <div class="case-study-card2 magnetic-item" style="">
                                 <div class="case-img">
@@ -238,7 +239,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div>--%>
 
                 </siv>
             </div>

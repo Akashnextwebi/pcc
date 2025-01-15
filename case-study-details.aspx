@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="./MasterPage.master" AutoEventWireup="true" CodeFile="case-study-details.aspx.cs" Inherits="case_study_details" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
-    <link href="css/breadcrums.css" rel="stylesheet" />
+    <link href="/css/breadcrums.css" rel="stylesheet" />
         <style >
         .breadcrumb-section {
             background-size: cover;
@@ -361,14 +361,14 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-    <div class="breadcrumb-section" style="background-image: linear-gradient(270deg, rgba(0, 0, 0, .55), rgba(0, 0, 0, 0.55) 101.02%), url(image/blog/braadcrumb-bg3.jpg);">
+    <div class="breadcrumb-section" style="background-image: linear-gradient(270deg, rgba(0, 0, 0, .55), rgba(0, 0, 0, 0.55) 101.02%), url(/<%=strdetail%>);">
         <div class="container-fluid one pl--95">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="banner-content">
-                        <h1>Case Study</h1>
+                        <h1><%=strcasestudyname %></h1>
                         <ul class="breadcrumb-list">
-                            <li><a href="Default.aspx">Home</a></li>
+                            <li><a href="/Default.aspx">Home</a></li>
                             <li>Case Study</li>
                         </ul>
                     </div>
@@ -387,10 +387,11 @@
                                     <div class="row g-lg-4 gy-5">
                                         <div class="col-lg-8">
                                             <div class="details-page-content">
-                                                <h2>Digital Banking Transformation</h2>
-                                                <p class="first-para">T he banking industry is a multifaceted sector of the economy that involves the buying, selling, development, management, and financing of real property, which includes land and physical structures. It plays a significant role in the global economy and encompasses various aspects of real estate transactions and operations. The real estate industry is influenced by economic conditions, population growth, urbanization trends, and government policies. It is a vital part of the economy, providing housing, commercial spaces, and infrastructure for communities and businesses , helping individuals and organizations navigate property transactions and investments.</p>
+                                                <h2><%=strovtitle %></h2>
+                                                <%=strovdesc %>
+                                                <%--<p class="first-para">T he banking industry is a multifaceted sector of the economy that involves the buying, selling, development, management, and financing of real property, which includes land and physical structures. It plays a significant role in the global economy and encompasses various aspects of real estate transactions and operations. The real estate industry is influenced by economic conditions, population growth, urbanization trends, and government policies. It is a vital part of the economy, providing housing, commercial spaces, and infrastructure for communities and businesses , helping individuals and organizations navigate property transactions and investments.</p>
                                                 <p>In a rapidly evolving and complex healthcare landscape, health and care consulting serves as a valuable resource for healthcare organizations looking to navigate challenges, improve patient care, and remain competitive. The advantages of consulting services are often realized through improved outcomes, increased patient satisfaction, and better overall healthcare delivery. Real estate professionals, from realtors to property developers, play crucial roles in this industry.</p>
-                                                <p class="moretext">To empower organizations to thrive and achieve their full potential by providing strategic insights, innovative solutions, and expert guidance. We partner with our clients to enhance efficiency, competitiveness, and sustainability in an ever-evolving business landscape. moreless-button</p>
+                                                <p class="moretext">To empower organizations to thrive and achieve their full potential by providing strategic insights, innovative solutions, and expert guidance. We partner with our clients to enhance efficiency, competitiveness, and sustainability in an ever-evolving business landscape. moreless-button</p>--%>
                                             </div>
                                         </div>
                                         <div class="col-lg-4 pl--95">
@@ -399,26 +400,26 @@
                                                     <tbody>
                                                         <tr>
                                                             <td>Category:</td>
-                                                            <td><span>Fintect</span></td>
+                                                            <td><span><%=strcategory %></span></td>
                                                         </tr>
                                                         <tr>
                                                             <td>Clients:</td>
-                                                            <td><span>Mr. Marko Paul</span></td>
+                                                            <td><span><%=strclint %></span></td>
                                                         </tr>
                                                         <tr>
                                                             <td>Location:</td>
-                                                            <td><span>Newyork, USA</span></td>
+                                                            <td><span><%=strlocation %></span></td>
                                                         </tr>
                                                         <tr>
                                                             <td>Date:</td>
-                                                            <td><span>02/22/2024</span></td>
+                                                            <td><span><%=strdate %></span></td>
                                                         </tr>
                                                     </tbody>
                                                 </table>
                                                 <ul class="download-btns">
                                                     <li>
-                                                        <a href="file/dummy32.pdf" download="#">
-                                                            <img src="assets/img/inner-pages/Vector/pdf-icon.svg" alt="">
+                                                        <a href="<%=strpdf %>f" download="#">
+                                                            <img src="/assets/img/inner-pages/Vector/pdf-icon.svg" alt="">
                                                             Download Pdf
 </a>
                                                     </li>
@@ -438,7 +439,8 @@
                                                     </svg>
                                                     <h4>Problem Statements</h4>
                                                 </div>
-                                                <p>Health and care consulting offers several advantages for healthcare organizations, providers, and stakeholders. These advantages can help improve the quality of healthcare services, enhance operational efficiency, and address complex challenges within the healthcare industry.</p>
+                                                <%=strpsdesc %>
+                                                <%--<p>Health and care consulting offers several advantages for healthcare organizations, providers, and stakeholders. These advantages can help improve the quality of healthcare services, enhance operational efficiency, and address complex challenges within the healthcare industry.</p>
                                                 <div class="statement-content-bottom">
                                                     <div class="title">
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="7" height="10" viewBox="0 0 7 10">
@@ -484,12 +486,12 @@
                                                             Data Security and Privacy
 </li>
                                                     </ul>
-                                                </div>
+                                                </div>--%>
                                             </div>
                                         </div>
                                         <div class="col-lg-4">
                                             <div class="advantage-img">
-                                                <img src="image/case/1.png" alt="">
+                                                <img src="/<%=strpsImage %>" alt="">
                                             </div>
                                         </div>
                                     </div>
@@ -498,7 +500,7 @@
                                     <div class="row g-lg-4 gy-5">
                                         <div class="col-lg-3">
                                             <div class="approach-img">
-                                                <img src="image/case/2.png" alt="">
+                                                <img src="/<%=stroaImage %>" alt="">
                                             </div>
                                         </div>
                                         <div class="col-lg-9">
@@ -509,7 +511,8 @@
                                                     </svg>
                                                     <h4>Our Approach</h4>
                                                 </div>
-                                                <p>The solution approach will involve a phased implementation plan, strategic partnerships with fintech providers, technology infrastructure upgrades, and a strong focus on customer-centric design principles."This problem statement sets the stage for the digital banking transformation, outlining the challenges, objectives, scope, and desired outcomes of the initiative. It also highlights the importance of embracing digital technologies to stay competitive and meet the evolving needs of customers in the digital age.</p>
+                                                <%=stroadesc %>
+                                                <%--<p>The solution approach will involve a phased implementation plan, strategic partnerships with fintech providers, technology infrastructure upgrades, and a strong focus on customer-centric design principles."This problem statement sets the stage for the digital banking transformation, outlining the challenges, objectives, scope, and desired outcomes of the initiative. It also highlights the importance of embracing digital technologies to stay competitive and meet the evolving needs of customers in the digital age.</p>
                                                 <ul>
                                                     <li>Information Gathering and Analysis.</li>
                                                     <li>Stakeholder Collaboration.</li>
@@ -521,7 +524,7 @@
                                                     <li>Quality Assurance.</li>
                                                     <li>Sustainability and Long-Term Planning.</li>
                                                     <li>Closure and Transition.</li>
-                                                </ul>
+                                                </ul>--%>
                                             </div>
                                         </div>
                                     </div>
@@ -539,9 +542,10 @@
                     <div class="col-lg-6">
                         <div class="single-implementation mb-30">
                             <div class="title">
-                                <h6>1. Technology Upgrades</h6>
+                                <h6>1. <%=strtechnologytitle %></h6>
                             </div>
-                            <ul>
+                            <%=strtechnologydesc %>
+                          <%--  <ul>
                                 <li>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
                                         <path d="M12.1223 3.1903C12.1631 3.23094 12.1954 3.27922 12.2174 3.33237C12.2395 3.38552 12.2508 3.4425 12.2508 3.50005C12.2508 3.5576 12.2395 3.61458 12.2174 3.66773C12.1954 3.72088 12.1631 3.76916 12.1223 3.8098L5.99731 9.9348C5.95667 9.97554 5.9084 10.0079 5.85524 10.0299C5.80209 10.052 5.74511 10.0633 5.68756 10.0633C5.63002 10.0633 5.57304 10.052 5.51988 10.0299C5.46673 10.0079 5.41845 9.97554 5.37781 9.9348L2.31531 6.8723C2.23316 6.79015 2.18701 6.67873 2.18701 6.56255C2.18701 6.44637 2.23316 6.33495 2.31531 6.2528C2.39747 6.17065 2.50889 6.1245 2.62506 6.1245C2.74124 6.1245 2.85266 6.17065 2.93481 6.2528L5.68756 9.00642L11.5028 3.1903C11.5435 3.14956 11.5917 3.11723 11.6449 3.09518C11.698 3.07312 11.755 3.06177 11.8126 3.06177C11.8701 3.06177 11.9271 3.07312 11.9802 3.09518C12.0334 3.11723 12.0817 3.14956 12.1223 3.1903Z"></path>
@@ -554,13 +558,14 @@
                                     </svg>
                                     Explore cloud-based solutions for scalability and cost-efficiency.
 </li>
-                            </ul>
+                            </ul>--%>
                         </div>
                         <div class="single-implementation">
                             <div class="title">
-                                <h6>2. Digital Banking Platforms</h6>
+                                <h6>2. <%=strdigitaltitle %></h6>
                             </div>
-                            <ul>
+                           <%=strdigitaldesc %>
+                            <%--<ul>
                                 <li>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
                                         <path d="M12.1223 3.1903C12.1631 3.23094 12.1954 3.27922 12.2174 3.33237C12.2395 3.38552 12.2508 3.4425 12.2508 3.50005C12.2508 3.5576 12.2395 3.61458 12.2174 3.66773C12.1954 3.72088 12.1631 3.76916 12.1223 3.8098L5.99731 9.9348C5.95667 9.97554 5.9084 10.0079 5.85524 10.0299C5.80209 10.052 5.74511 10.0633 5.68756 10.0633C5.63002 10.0633 5.57304 10.052 5.51988 10.0299C5.46673 10.0079 5.41845 9.97554 5.37781 9.9348L2.31531 6.8723C2.23316 6.79015 2.18701 6.67873 2.18701 6.56255C2.18701 6.44637 2.23316 6.33495 2.31531 6.2528C2.39747 6.17065 2.50889 6.1245 2.62506 6.1245C2.74124 6.1245 2.85266 6.17065 2.93481 6.2528L5.68756 9.00642L11.5028 3.1903C11.5435 3.14956 11.5917 3.11723 11.6449 3.09518C11.698 3.07312 11.755 3.06177 11.8126 3.06177C11.8701 3.06177 11.9271 3.07312 11.9802 3.09518C12.0334 3.11723 12.0817 3.14956 12.1223 3.1903Z"></path>
@@ -573,15 +578,16 @@
                                     </svg>
                                     Implement features like mobile check deposit, digital wallets, and AI-powered chatbots for enhanced customer experiences.
 </li>
-                            </ul>
+                            </ul>--%>
                         </div>
                     </div>
                     <div class="col-lg-6 pl--95">
                         <div class="single-implementation">
                             <div class="title">
-                                <h6>3. Cybersecurity Enhancement</h6>
+                                <h6>3. <%=strcybertitle %></h6>
                             </div>
-                            <ul>
+                            <%=strcyberdesc %>
+                           <%-- <ul>
                                 <li>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
                                         <path d="M12.1223 3.1903C12.1631 3.23094 12.1954 3.27922 12.2174 3.33237C12.2395 3.38552 12.2508 3.4425 12.2508 3.50005C12.2508 3.5576 12.2395 3.61458 12.2174 3.66773C12.1954 3.72088 12.1631 3.76916 12.1223 3.8098L5.99731 9.9348C5.95667 9.97554 5.9084 10.0079 5.85524 10.0299C5.80209 10.052 5.74511 10.0633 5.68756 10.0633C5.63002 10.0633 5.57304 10.052 5.51988 10.0299C5.46673 10.0079 5.41845 9.97554 5.37781 9.9348L2.31531 6.8723C2.23316 6.79015 2.18701 6.67873 2.18701 6.56255C2.18701 6.44637 2.23316 6.33495 2.31531 6.2528C2.39747 6.17065 2.50889 6.1245 2.62506 6.1245C2.74124 6.1245 2.85266 6.17065 2.93481 6.2528L5.68756 9.00642L11.5028 3.1903C11.5435 3.14956 11.5917 3.11723 11.6449 3.09518C11.698 3.07312 11.755 3.06177 11.8126 3.06177C11.8701 3.06177 11.9271 3.07312 11.9802 3.09518C12.0334 3.11723 12.0817 3.14956 12.1223 3.1903Z"></path>
@@ -594,7 +600,7 @@
                                     </svg>
                                     Real estate investment trusts (REITs) provide a way for investors to access real estate assets through publicly traded securities.
 </li>
-                            </ul>
+                            </ul>--%>
                         </div>
 
                     </div>

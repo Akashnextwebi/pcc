@@ -12,7 +12,7 @@ using System.Web.UI.WebControls;
 public partial class whitepaper_details : System.Web.UI.Page
 {
     SqlConnection conSQ = new SqlConnection(ConfigurationManager.ConnectionStrings["conSQ"].ConnectionString);
-    public string strImage = "", strBanner = "", strFullDesc = "",strPostedby="",strpostedon="",strheading="";
+    public string strImage = "", strBanner = "", strFullDesc = "",strPostedby="",strpostedon="",strheading="", strwhitepaperheading="";
     protected void Page_Load(object sender, EventArgs e)
     {
         var wurl = Convert.ToString(RouteData.Values["wurl"]);
@@ -49,10 +49,11 @@ public partial class whitepaper_details : System.Web.UI.Page
 
                 strImage = wp.DetailImage;
                 strBanner = wp.BannerImage;
+                strwhitepaperheading = wp.WhitePaperHeading;
                 strFullDesc = wp.FullDesc;
                 strPostedby = wp.PostedBy;
                 strpostedon=wp.PostedOn;
-                strheading = wp.WhitePaperHeading;
+               //strheading = wp.WhitePaperHeading;
             }
         }
         catch (Exception ex)

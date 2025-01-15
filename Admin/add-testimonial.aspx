@@ -30,12 +30,17 @@
                         </div>
                         <div class="card-body">
                             <div class="row">
-                                <div class="col-lg-6 mb-3">
+                                <div class="col-lg-4 mb-3">
                                     <label>Name <sup style="color: red;">*</sup></label>
                                     <asp:TextBox runat="server" class="form-control mb-2 mr-sm-2" ID="txtPName" placeholder="Enter Name" />
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtPName" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Field can't be empty"></asp:RequiredFieldValidator>
                                 </div>
-                                <div class="col-lg-6 mb-3">
+                                <div class="col-lg-4 mb-3">
+                                    <label>Designation <sup style="color: red;">*</sup></label>
+                                    <asp:TextBox runat="server" class="form-control mb-2 mr-sm-2" ID="txtdesignation" placeholder="Enter Name" />
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtdesignation" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Field can't be empty"></asp:RequiredFieldValidator>
+                                </div>
+                                <div class="col-lg-4 mb-3">
                                     <label class="">Select Rating <sup class="text-danger">*</sup></label>
                                     <div class="custom-textbox">
 
@@ -43,9 +48,9 @@
                                             <asp:ListItem Value="">Please Select</asp:ListItem>
                                             <asp:ListItem>1</asp:ListItem>
                                             <asp:ListItem>2</asp:ListItem>
-                                             <asp:ListItem>3</asp:ListItem>
-                                             <asp:ListItem>4</asp:ListItem>
-                                             <asp:ListItem>5</asp:ListItem>
+                                            <asp:ListItem>3</asp:ListItem>
+                                            <asp:ListItem>4</asp:ListItem>
+                                            <asp:ListItem>5</asp:ListItem>
                                         </asp:DropDownList>
                                     </div>
                                 </div>

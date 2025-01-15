@@ -43,7 +43,7 @@
         
         routes.MapPageRoute("/404", "404", "~/404.aspx");
         routes.MapPageRoute("Blog", "blog/{burl}", "~/blog-detail.aspx");
-        routes.MapPageRoute("Case", "case/{curl}", "~/case-studies-detail.aspx");
+        routes.MapPageRoute("Casestudy", "casestudy/{curl}", "~/case-study-details.aspx");
         routes.MapPageRoute("Job", "Job/{jurl}", "~/job-details.aspx");
         routes.MapPageRoute("Whitepaper", "whitepaper/{wurl}", "~/whitepaper-details.aspx");
     }

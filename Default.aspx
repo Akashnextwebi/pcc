@@ -641,7 +641,8 @@
                             class="testimonial-active wow fadeInUp animated"
                             data-animation="fadeInUp"
                             data-delay=".4s">
-                            <div class="testimonial-box">
+                            <%=strtestimonial %>
+                           <%-- <div class="testimonial-box">
                                 <div class="single-testimonial">
                                     <div class="review-icon">
                                         <img src="image/icons/review-icon.png" alt="img" />
@@ -715,7 +716,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div>--%>
                         </div>
                     </div>
                 </div>
@@ -893,4 +894,3 @@
      </div>
  </div>
 </asp:Content>
-

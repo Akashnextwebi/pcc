@@ -47,7 +47,7 @@ public partial class job_listing : System.Web.UI.Page
                                     </div>
                                 </div>
                                 <p>
-                                    " + Jobs[i].JobDescription + @"
+                                    " + Jobs[i].ShortDesc + @"
                                 </p>
                                 <div class='d-sm-flex align-items-center justify-content-between mt-auto'>
                                     <div class='d-flex align-items-center'>

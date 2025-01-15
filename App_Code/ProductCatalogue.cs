@@ -167,4 +167,36 @@ public class ProductCatalogue
         }
         return result;
     }
+    public static List<ProductCatalogue> GetAllProductcatalogues(SqlConnection _con)
+    {
+        List<ProductCatalogue> Catalogues = new List<ProductCatalogue>();
+        try
+        {
+            string query = "Select *,(Select UserName from CreateUser Where UserGuid=ProductCatalogue.AddedBy) as UpdatedBy from ProductCatalogue where Status=@Status Order by Id ";
+            using (SqlCommand cmd = new SqlCommand(query, _con))
+            {
+                cmd.Parameters.AddWithValue("@Status", SqlDbType.NVarChar).Value = "Active";
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                Catalogues = (from DataRow dr in dt.Rows
+                           select new ProductCatalogue()
+                           {
+                               Id = Convert.ToInt32(Convert.ToString(dr["Id"])),
+                               CatalogueName = Convert.ToString(dr["CatalogueName"]),
+                               ThumbImage = Convert.ToString(dr["ThumbImage"]),
+                               PDFLink = Convert.ToString(dr["PDFLink"]),
+                               AddedOn = Convert.ToDateTime(Convert.ToString(dr["AddedOn"])),
+                               AddedBy = Convert.ToString(dr["AddedBy"]),
+                               AddedIp = Convert.ToString(dr["AddedIP"]),
+                               Status = Convert.ToString(dr["Status"])
+                           }).ToList();
+            }
+        }
+        catch (Exception ex)
+        {
+            ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "GetAllProductcatalogues", ex.Message);
+        }
+        return Catalogues;
+    }
 }
