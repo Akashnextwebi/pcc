@@ -35,6 +35,7 @@
                                     <thead>
                                         <tr>
                                             <th>#</th>
+                                            <th>Banner Image</th>
                                             <th>Capability Name</th>
                                             <th>CapabilityUrl</th>
                                             <th>Added On</th>

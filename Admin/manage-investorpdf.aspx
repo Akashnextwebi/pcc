@@ -30,7 +30,7 @@
                         <div class="row">
                             <div class="col-lg-4 mb-3">
                                 <label class="">Investor<sup class="text-danger">*</sup></label>
-                                <asp:DropDownList runat="server" ID="ddlinvestor" CssClass="form-control"></asp:DropDownList>
+                                <asp:DropDownList runat="server" ID="ddlinvestor" CssClass="form-select"></asp:DropDownList>
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="ddlinvestor" InitialValue="0" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Field can't be empty"></asp:RequiredFieldValidator>
                             </div>
 

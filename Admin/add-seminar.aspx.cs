@@ -86,6 +86,7 @@ public partial class Admin_add_seminar : System.Web.UI.Page
                         int result = SeminarDetails.UpdateSeminarDetails(conSQ, BD);
                         if (result > 0)
                         {
+                            GetSeminars();
                             ScriptManager.RegisterStartupScript(this, this.GetType(), "Message", "Snackbar.show({pos: 'top-right',text: 'Seminar Updated successfully.',actionTextColor: '#fff',backgroundColor: '#008a3d'});", true);
                         }
                         else

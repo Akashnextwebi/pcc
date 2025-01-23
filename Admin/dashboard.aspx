@@ -54,81 +54,187 @@
                                     </div>
                                 </div>
                             </div>
-                           <div class="row">
-                        <div class="col-xl-12">
-                            <div class="card crm-widget">
-                                <div class="card-body p-0">
-                                    <div class="row row-cols-xxl-5 row-cols-md-3 row-cols-1 g-0">
-                                        <div class="col">
-                                            <div class="py-4 px-3">
-                                                <h5 class="text-muted text-uppercase fs-13"><a href="view-blogs.aspx">View Blogs</a><i class=""></i></h5>
-                                                <div class="d-flex align-items-center">
-                                                    <div class="flex-shrink-0">
-                                                        <i class="mdi mdi-image display-6 text-warning"></i>
-                                                    </div>
-                                                    <div class="flex-grow-1 ms-3">
-                                                        <h2 class="mb-0"><span class="counter-value" data-target="<%=StrBlogsCnt %>"><%=StrBlogsCnt %></span></h2>
-                                                    </div>
+                            <div class="row">
+                                <div class="col-xl-3 col-md-6">
+                                    <div class="card card-animate bg-soft-info">
+                                        <div class="card-body">
+                                            <div class="d-flex align-items-center">
+                                                <div class="flex-grow-1 overflow-hidden">
+                                                    <p class="text-uppercase fw-medium text-muted text-truncate mb-0">Blogs</p>
                                                 </div>
                                             </div>
-                                        </div><!-- end col -->
-                                        <div class="col">
-                                            <div class="mt-3 mt-md-0 py-4 px-3">
-                                                <h5 class="text-muted text-uppercase fs-13"><a href="view-case-studies.aspx">View Case Study</a><i class=""></i></h5>
-                                                <div class="d-flex align-items-center">
-                                                    <div class="flex-shrink-0">
-                                                        <i class="mdi mdi-book display-6 text-secondary"></i>
-                                                    </div>
-                                                    <div class="flex-grow-1 ms-3">
-                                                        <h2 class="mb-0"><span class="counter-value" data-target="<%=strCasestudycnt %>"><%=strCasestudycnt %></span></h2>
-                                                    </div>
+                                            <div class="d-flex align-items-end justify-content-between mt-4">
+                                                <div>
+                                                    <h4 class="fs-22 fw-semibold ff-secondary mb-4"><span class="counter-value" data-target="<%=StrBlogsCnt %>"><%=StrBlogsCnt %></span> </h4>
+                                                    <a href="view-blogs.aspx" class="text-decoration-underline">View All Blogs</a>
+                                                </div>
+                                                <div class="avatar-sm flex-shrink-0">
+                                                    <span class="avatar-title bg-info rounded fs-3">
+                                                        <i class="mdi mdi-image text-light "></i>
+                                                    </span>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-md-6">
+                                    <div class="card card-animate bg-soft-success">
+                                        <div class="card-body">
+                                            <div class="d-flex align-items-center">
+                                                <div class="flex-grow-1 overflow-hidden">
+                                                    <p class="text-uppercase fw-medium text-muted text-truncate mb-0">Case Study</p>
+                                                </div>
+
+                                            </div>
+                                            <div class="d-flex align-items-end justify-content-between mt-4">
+                                                <div>
+                                                    <h4 class="fs-22 fw-semibold ff-secondary mb-4"><span class="counter-value" data-target="<%=strCasestudycnt %>"><%=strCasestudycnt %></span></h4>
+                                                    <a href="view-case-studies.aspx" class="text-decoration-underline">View All Case Study</a>
+                                                </div>
+                                                <div class="avatar-sm flex-shrink-0">
+                                                    <span class="avatar-title bg-success rounded fs-3">
+                                                        <i class="mdi mdi-book text-light"></i>
+                                                    </span>
                                                 </div>
                                             </div>
-                                        </div><!-- end col -->
-                                        <div class="col">
-                                            <div class="mt-3 mt-md-0 py-4 px-3">
-                                                <h5 class="text-muted text-uppercase fs-13"><a href="view-product.aspx">View Product</a><i class=""></i></h5>
-                                                <div class="d-flex align-items-center">
-                                                    <div class="flex-shrink-0">
-                                                        <i class="mdi mdi-cart  display-6 text-info"></i>
-                                                    </div>
-                                                    <div class="flex-grow-1 ms-3">
-                                                        <h2 class="mb-0"><span class="counter-value" data-target="<%=strProductcnt %>"><%=strProductcnt %></span></h2>
-                                                    </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-md-6">
+                                    <div class="card card-animate bg-soft-warning">
+                                        <div class="card-body">
+                                            <div class="d-flex align-items-center">
+                                                <div class="flex-grow-1 overflow-hidden">
+                                                    <p class="text-uppercase fw-medium text-muted text-truncate mb-0">Products</p>
                                                 </div>
                                             </div>
-                                        </div><!-- end col -->
-                                        <div class="col">
-                                            <div class="mt-3 mt-lg-0 py-4 px-3">
-                                                <h5 class="text-muted text-uppercase fs-13"><a href="manage-investor.aspx">View Ivestor</a><i class=""></i></h5>
-                                                <div class="d-flex align-items-center">
-                                                    <div class="flex-shrink-0">
-                                                        <i class="mdi mdi-bank  display-6 text-danger"></i>
-                                                    </div>
-                                                    <div class="flex-grow-1 ms-3">
-                                                        <h2 class="mb-0"><span class="counter-value" data-target="<%=strInvestorcnt %>"><%=strInvestorcnt %></span></h2>
-                                                    </div>
+                                            <div class="d-flex align-items-end justify-content-between mt-4">
+                                                <div>
+                                                    <h4 class="fs-22 fw-semibold ff-secondary mb-4"><span class="counter-value" data-target="<%=strProductcnt %>"><%=strProductcnt %></span> </h4>
+                                                    <a href="/Admin/view-product.aspx" class="text-decoration-underline">View Products</a>
+                                                </div>
+                                                <div class="avatar-sm flex-shrink-0">
+                                                    <span class="avatar-title bg-warning rounded fs-3">
+                                                        <i class="mdi mdi-cart text-light"></i>
+                                                    </span>
                                                 </div>
                                             </div>
-                                        </div><!-- end col -->
-                                        <div class="col">
-                                            <div class="mt-3 mt-lg-0 py-4 px-3">
-                                                <h5 class="text-muted text-uppercase fs-13"><a href="view-jobs.aspx">View Jobs</a><i class=""></i></h5>
-                                                <div class="d-flex align-items-center">
-                                                    <div class="flex-shrink-0">
-                                                        <i class="mdi mdi-briefcase display-6 text-success"></i>
-                                                    </div>
-                                                    <div class="flex-grow-1 ms-3">
-                                                        <h2 class="mb-0"><span class="counter-value" data-target="<%=strJobcnt %>"><%=strJobcnt %></span></h2>
-                                                    </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-md-6">
+                                    <div class="card card-animate bg-soft-danger">
+                                        <div class="card-body">
+                                            <div class="d-flex align-items-center">
+                                                <div class="flex-grow-1 overflow-hidden">
+                                                    <p class="text-uppercase fw-medium text-muted text-truncate mb-0">Investors</p>
                                                 </div>
                                             </div>
-                                        </div><!-- end col -->
-                                    </div><!-- end row -->
-                                </div><!-- end card body -->
-                            </div><!-- end card -->
-                        </div><!-- end col -->
-                    </div>
+                                            <div class="d-flex align-items-end justify-content-between mt-4">
+                                                <div>
+                                                    <h4 class="fs-22 fw-semibold ff-secondary mb-4"><span class="counter-value" data-target="<%=strInvestorcnt %>"><%=strInvestorcnt %></span></h4>
+                                                    <a href="/Admin/manage-investor.aspx" class="text-decoration-underline">View Investors</a>
+                                                </div>
+                                                <div class="avatar-sm flex-shrink-0">
+                                                    <span class="avatar-title bg-danger danger fs-3">
+                                                        <i class="mdi mdi-bank text-light"></i>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-md-6">
+                                    <div class="card card-animate bg-soft-primary">
+                                        <div class="card-body">
+                                            <div class="d-flex align-items-center">
+                                                <div class="flex-grow-1 overflow-hidden">
+                                                    <p class="text-uppercase fw-medium text-muted text-truncate mb-0">Jobs</p>
+                                                </div>
+
+                                            </div>
+                                            <div class="d-flex align-items-end justify-content-between mt-4">
+                                                <div>
+                                                    <h4 class="fs-22 fw-semibold ff-secondary mb-4"><span class="counter-value" data-target="<%=strJobcnt %>"><%=strJobcnt%></span></h4>
+                                                    <a href="view-jobs.aspx" class="text-decoration-underline">View All Jobs</a>
+                                                </div>
+                                                <div class="avatar-sm flex-shrink-0">
+                                                    <span class="avatar-title bg-primary rounded fs-3">
+                                                        <i class="mdi mdi-briefcase text-light"></i>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-md-6">
+                                    <div class="card card-animate bg-soft-dark">
+                                        <div class="card-body">
+                                            <div class="d-flex align-items-center">
+                                                <div class="flex-grow-1 overflow-hidden">
+                                                    <p class="text-uppercase fw-medium text-muted text-truncate mb-0">White Papers</p>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-end justify-content-between mt-4">
+                                                <div>
+                                                    <h4 class="fs-22 fw-semibold ff-secondary mb-4"><span class="counter-value" data-target="<%=strWhitepapercnt %>"><%=strWhitepapercnt %></span> </h4>
+                                                    <a href="/Admin/view-whitepaper.aspx" class="text-decoration-underline">View White Papers</a>
+                                                </div>
+                                                <div class="avatar-sm flex-shrink-0">
+                                                    <span class="avatar-title bg-dark rounded fs-3">
+                                                        <i class="mdi mdi-file-document text-light"></i>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-md-6">
+                                    <div class="card card-animate bg-soft-secondary">
+                                        <div class="card-body">
+                                            <div class="d-flex align-items-center">
+                                                <div class="flex-grow-1 overflow-hidden">
+                                                    <p class="text-uppercase fw-medium text-muted text-truncate mb-0">No.of Job Request </p>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-end justify-content-between mt-4">
+                                                <div>
+                                                    <h4 class="fs-22 fw-semibold ff-secondary mb-4"><span class="counter-value" data-target="<%=strApplicationcnt %>"><%=strApplicationcnt%></span> </h4>
+                                                    <a href="/Admin/view-job-application.aspx" class="text-decoration-underline">View No.of Jobs</a>
+                                                </div>
+                                                <div class="avatar-sm flex-shrink-0">
+                                                    <span class="avatar-title bg-secondary rounded fs-3">
+                                                        <i class="mdi mdi-file-eye-outline text-light"></i>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-md-6">
+                                    <div class="card card-animate bg-soft-light">
+                                        <div class="card-body">
+                                            <div class="d-flex align-items-center">
+                                                <div class="flex-grow-1 overflow-hidden">
+                                                    <p class="text-uppercase fw-medium text-muted text-truncate mb-0">Contact Request </p>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-end justify-content-between mt-4">
+                                                <div>
+                                                    <h4 class="fs-22 fw-semibold ff-secondary mb-4"><span class="counter-value" data-target="<%=strContactcnt%>"><%=strContactcnt%></span> </h4>
+                                                    <a href="/Admin/view-contact.aspx" class="text-decoration-underline">View Contact Request</a>
+                                                </div>
+                                                <div class="avatar-sm flex-shrink-0">
+                                                    <span class="avatar-title bg-success rounded fs-3">
+                                                        <i class="mdi mdi-email text-light"></i>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
                     </div>
@@ -170,6 +276,32 @@
             </div>
         </div>
     </div>
+            <div id="fadeInRightModal" class="modal zoomIn" tabindex="-1" aria-labelledby="fadeInRightModalLabel" style="display: none;" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="fadeInRightModalLabel">Message Information</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="table-responsive" id="Contactinfosingle">
+                        </div>
+                    </div>
+                    <!--end col-->
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/pages/view-contact-enquire.js"></script>
 
 </asp:Content>
 

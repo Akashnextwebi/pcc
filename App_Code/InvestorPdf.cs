@@ -200,4 +200,72 @@ public class InvestorPdf
             return 0;
         }
     }
+   
+    public static List<InvestorPdf> GetInvestors(SqlConnection conSQ, string name)
+    {
+        var ListOfInvestors = new List<InvestorPdf>();
+        try
+        {
+            string query = "Select * from InvestorPdf where Status='Active' and Investor=@Investor Order by Id ";
+            using (SqlCommand cmd = new SqlCommand(query, conSQ))
+            {
+                cmd.Parameters.AddWithValue("@Status", SqlDbType.NVarChar).Value = "Active";
+                cmd.Parameters.AddWithValue("@Investor", SqlDbType.NVarChar).Value = name;
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                ListOfInvestors = (from DataRow dr in dt.Rows
+                                    select new InvestorPdf()
+                                    {
+                                        Id = Convert.ToInt32(Convert.ToString(dr["Id"])),
+                                        Investor = Convert.ToString(dr["Investor"]),
+                                        PDFTitle = Convert.ToString(dr["PDFTitle"]),
+                                        PDF = Convert.ToString(dr["PDF"]),
+                                        InvestorTitle = Convert.ToString(dr["InvestorTitle"]),
+                                        AddedOn = Convert.ToDateTime(Convert.ToString(dr["AddedOn"])),
+                                        AddedIp = Convert.ToString(dr["AddedIp"]),
+                                        AddedBy = Convert.ToString(dr["AddedBy"]),
+                                        Status = Convert.ToString(dr["Status"])
+                                    }).ToList();
+            }
+        }
+        catch (Exception ex)
+        {
+            ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "GetInvestors", ex.Message);
+        }
+        return ListOfInvestors;
+    }
+    public static List<InvestorPdf> GetAllInvestors(SqlConnection _con)
+    {
+        List<InvestorPdf> inv = new List<InvestorPdf>();
+        try
+        {
+            string query = "Select *,(Select UserName from CreateUser Where UserGuid=InvestorPdf.AddedBy) as UpdatedBy from InvestorPdf where Status=@Status Order by Id ";
+            using (SqlCommand cmd = new SqlCommand(query, _con))
+            {
+                cmd.Parameters.AddWithValue("@Status", SqlDbType.NVarChar).Value = "Active";
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                inv = (from DataRow dr in dt.Rows
+                      select new InvestorPdf()
+                      {
+                          Id = Convert.ToInt32(Convert.ToString(dr["Id"])),
+                          Investor = Convert.ToString(dr["Investor"]),
+                          PDFTitle = Convert.ToString(dr["PDFTitle"]),
+                          PDF = Convert.ToString(dr["PDF"]),
+                          //InvestorTitle = Convert.ToString(dr["InvestorTitle"]),
+                          AddedOn = Convert.ToDateTime(Convert.ToString(dr["AddedOn"])),
+                          AddedIp = Convert.ToString(dr["AddedIp"]),
+                          AddedBy = Convert.ToString(dr["AddedBy"]),
+                          Status = Convert.ToString(dr["Status"])
+                      }).ToList();
+            }
+        }
+        catch (Exception ex)
+        {
+            ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "GetAllInvestors", ex.Message);
+        }
+        return inv;
+    }
 }

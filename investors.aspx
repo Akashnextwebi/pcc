@@ -127,7 +127,8 @@
         <section class="section-padding">
             <div class="container">
                 <div class="row">
-                    <div class="col-xl-3 col-lg-4 col-md-6">
+                    <%=strInvestors %>
+                    <%--<div class="col-xl-3 col-lg-4 col-md-6">
                         <a href="investor-details.aspx" contenteditable="false" style="cursor: pointer;">
                             <div class="bd-callout bd-callout-info">
                                 Annual report
@@ -325,7 +326,7 @@
                             ANNUAL RETURN 2021
                        
                         </div>
-                    </div>
+                    </div>--%>
                 </div>
             </div>
         </section>

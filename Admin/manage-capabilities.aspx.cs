@@ -14,9 +14,10 @@ public partial class Admin_manage_capabilities : System.Web.UI.Page
 
     SqlConnection conSQ = new SqlConnection(ConfigurationManager.ConnectionStrings["conSQ"].ConnectionString);
 
-    public string strcap = "", strThumbImage="";
+    public string strcap = "", strThumbImage="", StrProductname="";
     protected void Page_Load(object sender, EventArgs e)
     {
+        GetProductName();
         GetCapabilitiesList();
         if (!IsPostBack)
         {
@@ -257,5 +258,28 @@ public partial class Admin_manage_capabilities : System.Web.UI.Page
         var pid = Convert.ToString(Request.QueryString["Pid"]);
         Response.Redirect("/admin/manage-capabilities.aspx?Pid=" + pid, false);
     }
+     public void GetProductName()
+    {
+        try
+        {
+            var pid = Convert.ToString(Request.QueryString["Pid"]);
+            if (pid != null && pid != "")
+            {
+                var sub = ProductDetails.GetProductnameWithGuid(conSQ, pid);
+                if (sub != null)
+                {
+                    for (int i = 0; i < sub.Count; i++)
+                    {
+                        StrProductname = sub[i].ProductName;
+                    }
+                }
+            }
 
+        }
+        catch (Exception ex)
+        {
+            ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "GetProductName", ex.Message);
+
+        }
+    }
 }

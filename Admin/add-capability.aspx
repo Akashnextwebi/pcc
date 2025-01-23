@@ -35,13 +35,38 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <label class="">Capability URL<sup class="text-danger">*</sup></label>
-                                    <asp:TextBox runat="server" class="form-control mb-2 mr-sm-2 txtUrl"  ID="txtUrl" placeholder="Capability Url"  />
-                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtUrl" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Field can't be empty" Enabled="false" ></asp:RequiredFieldValidator>
+                                    <asp:TextBox runat="server" class="form-control mb-2 mr-sm-2 txtUrl" ID="txtUrl" placeholder="Capability Url" />
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtUrl" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Field can't be empty" Enabled="false"></asp:RequiredFieldValidator>
+                                </div>
+                                <div class="col-lg-6">
+                                    <label class="">Banner Title<sup class="text-danger">*</sup></label>
+                                    <asp:TextBox runat="server" class="form-control mb-2 mr-sm-2 " ID="txtbtitle" placeholder="Capability Name" />
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtbtitle" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Field can't be empty"></asp:RequiredFieldValidator>
+                                </div>
+                                <div class="col-lg-6 mb-2">
+                                    <label class="">Banner Image <sup class="text-danger">*</sup></label>
+                                    <asp:FileUpload runat="server" ID="ThumbImage" CssClass="form-control" />
+                                    <small class="text-danger fw-bold">Image format .png, .jpeg, .jpg, .webp with 1080 × 720 px is recommended.</small><br />
+                                    <%=strThumbImage %>
+                                </div>
+                                <div class="row mb-2">
+                                    <div class="col-lg-12 mb-3">
+                                        <label class="">Desc Heading<sup>*</sup></label>
+                                        <asp:TextBox runat="server" MaxLength="100" class="form-control mb-2 mr-sm-2 txtheading onlyAlpha" ID="txtheading" placeholder="Enter Desc Heading" />
+                                        <asp:RequiredFieldValidator ID="rfv14" runat="server" ControlToValidate="txtheading" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Field can't be empty"></asp:RequiredFieldValidator>
+                                    </div>
+
+                                    <div class="col-lg-12">
+                                        <label class="">Full Description <sup>*</sup></label>
+                                        <asp:TextBox runat="server" TextMode="MultiLine" class="form-control mb-2  summernote" ID="txtfulldesc" Placeholder="Enter Full Description ....." />
+                                        <asp:RequiredFieldValidator ID="rfv6" runat="server" ControlToValidate="txtfulldesc" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Field can't be empty"></asp:RequiredFieldValidator>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-lg-12 mb-3">
                                 <asp:Button runat="server" ID="btnSave" CssClass="btn btn-success" Text="Save" OnClick="btnSave_Click" OnClientClick="tinyMCE.triggerSave(false,true);" ValidationGroup="Save" />
                                 <asp:Button runat="server" ID="btnNew" CssClass="btn btn-success" Visible="false" Text="Add New Capability" OnClick="btnNew_Click" />
+                                <asp:Label runat="server" ID="lblThumb" Visible="false"></asp:Label>
                             </div>
                         </div>
                     </div>

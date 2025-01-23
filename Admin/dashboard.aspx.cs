@@ -8,7 +8,7 @@ using System.Web;
 public partial class Admin_dashboard : System.Web.UI.Page
 {
     SqlConnection conSQ = new SqlConnection(ConfigurationManager.ConnectionStrings["conSQ"].ConnectionString);
-    public string Strusername = "", StrBlogsCnt="",strCasestudycnt="",strProductcnt="",strInvestorcnt="", strJobcnt="",strContacts="";
+    public string Strusername = "", StrBlogsCnt="",strCasestudycnt="",strProductcnt="",strInvestorcnt="", strJobcnt="",strContacts="",strWhitepapercnt="", strApplicationcnt="", strContactcnt="";
     protected void Page_Load(object sender, EventArgs e)
     {//check if admin login is valid
         if (Request.Cookies["bmw_aid"] == null)
@@ -24,6 +24,9 @@ public partial class Admin_dashboard : System.Web.UI.Page
             strProductcnt = DashBoard.NoOfProducts(conSQ).ToString();
             strInvestorcnt = DashBoard.NoOfInvestors(conSQ).ToString();
             strJobcnt = DashBoard.NoOfJobs(conSQ).ToString();
+            strWhitepapercnt= DashBoard.NoOfWhitePapers(conSQ).ToString();
+            strApplicationcnt = DashBoard.NoOfApplications(conSQ).ToString();
+            strContactcnt = DashBoard.NoOfContacts(conSQ).ToString();
         }
         BindTop10Contacts();
     }
@@ -49,21 +52,17 @@ public partial class Admin_dashboard : System.Web.UI.Page
 
             for (int i = 0; i < BD.Count; i++)
             {
-                var Message = "";
-                if (BD[i].Message.Length > 100)
-                {
-                    Message = BD[i].Message.Substring(0, 100) + " ....";
-                }
-                else
-                {
-                    Message = BD[i].Message;
-                }
+                var Message = @"<td>
+                                    <button data-bs-toggle='modal' data-bs-target='#fadeInRightModal' type='button' id='Viewcust' data-vid='" + BD[i].Id + @"' data-vname='" + BD[i].Name + @"' class='btn btn-success btn-label waves-effect right waves-light rounded-pill btn-sm'>
+                                        <i class='ri-mail-send-line label-icon align-middle rounded-pill fs-16 ms-2'></i>
+                                    View Message
+                                    </button></td>";
                 strContacts += @"<tr>
                                         <td>" + (i + 1) + @"</td>
                                         <td>" + BD[i].Name + @"</td>
                                         <td><a href='mailto:" + BD[i].Email + @"'>" + BD[i].Email + @"</a></td>
                                         <td>" + BD[i].Subject + @"</td>
-                                        <td class='col-1'>" + Message + @"</td>
+                                        " + Message + @"
                                         <td>" + BD[i].AddedOn.ToString("dd-MMM-yyyy") + @"</td>
                                         </tr>";
 

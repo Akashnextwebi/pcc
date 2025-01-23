@@ -403,4 +403,58 @@ public class CaseStudy
         }
         return cs;
     }
+    public static CaseStudy GetPrevCasestudyDetails(SqlConnection conSQ, int id)
+    {
+        CaseStudy categories = new CaseStudy();
+        try
+        {
+            string query = "Select CaseStudyName,CaseStudyUrl from CaseStudy where Status=@Status and id < @Id Order by Id Desc ";
+            using (SqlCommand cmd = new SqlCommand(query, conSQ))
+            {
+                cmd.Parameters.AddWithValue("@Status", SqlDbType.NVarChar).Value = "Active";
+                cmd.Parameters.AddWithValue("@Id", SqlDbType.NVarChar).Value = id;
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                categories = (from DataRow dr in dt.Rows
+                              select new CaseStudy()
+                              {
+                                  CaseStudyName = Convert.ToString(dr["CaseStudyName"]),
+                                  CaseStudyUrl = Convert.ToString(dr["CaseStudyUrl"]),
+                              }).FirstOrDefault();
+            }
+        }
+        catch (Exception ex)
+        {
+            ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "GetPrevCasestudyDetails", ex.Message);
+        }
+        return categories;
+    }
+    public static CaseStudy GetNextCasestudyDetails(SqlConnection conSQ, int id)
+    {
+        CaseStudy categories = new CaseStudy();
+        try
+        {
+            string query = "Select CaseStudyName,CaseStudyUrl from CaseStudy where Status=@Status and id > @Id Order by Id";
+            using (SqlCommand cmd = new SqlCommand(query, conSQ))
+            {
+                cmd.Parameters.AddWithValue("@Status", SqlDbType.NVarChar).Value = "Active";
+                cmd.Parameters.AddWithValue("@Id", SqlDbType.NVarChar).Value = id;
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                categories = (from DataRow dr in dt.Rows
+                              select new CaseStudy()
+                              {
+                                  CaseStudyName = Convert.ToString(dr["CaseStudyName"]),
+                                  CaseStudyUrl = Convert.ToString(dr["CaseStudyUrl"]),
+                              }).FirstOrDefault();
+            }
+        }
+        catch (Exception ex)
+        {
+            ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "GetNextCasestudyDetails", ex.Message);
+        }
+        return categories;
+    }
 }

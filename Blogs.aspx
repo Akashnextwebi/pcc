@@ -82,8 +82,8 @@
         <section id="blog" class="blog-area p-relative fix pt-100 pb-100" style="background: #f3f3f3">
             <div class="container">
 
-                <div class="row">
-                    <div class="col-12 col-md-4">
+                <div class="row Bloglist">
+                   <%-- <div class="col-12 col-md-4">
                         <a class="blog-card" href="blogs-details.aspx">
                             <div class="image">
                                 <div class="tag">Defence</div>
@@ -135,16 +135,16 @@
                                 </div>
                             </div>
                         </a>
-                    </div>
+                    </div>--%>
                     <siv class="col-lg-12">
                         <div class="wptb-pagination-wrap text-center">
-                            <ul class="pagination">
-                                <li><a class="disabled page-number previous" href="#"><i class="fa-solid fa-chevron-left"></i></a></li>
+                            <ul class="pagination pPagination">
+                                <%--<li><a class="disabled page-number previous" href="#"><i class="fa-solid fa-chevron-left"></i></a></li>
                                 <li><span class="page-number current">1</span></li>
                                 <li><a class="page-number" href="#">2</a></li>
                                 <li><a class="page-number" href="#">3</a></li>
                                 <li><a class="page-number" href="#">9</a></li>
-                                <li><a class="page-number next" href="#"><i class="fa-solid fa-chevron-right"></i></a></li>
+                                <li><a class="page-number next" href="#"><i class="fa-solid fa-chevron-right"></i></a></li>--%>
                             </ul>
                         </div>
                     </siv>
@@ -152,5 +152,8 @@
             </div>
         </section>
     </main>
+     <script src="js/vendor/jquery-3.6.0.min.js"></script>
+    <script src="js/pages/blog.js"></script>
+   
 </asp:Content>
 

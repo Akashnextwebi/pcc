@@ -4,6 +4,8 @@ using System.Data.SqlClient;
 using System.Data;
 using System.Linq;
 using System.Web;
+using System.Activities.Statements;
+using System.Xml.Linq;
 
 /// <summary>
 /// Summary description for SubCapability
@@ -22,6 +24,10 @@ public class SubCapability
     public string SubCapabilityUrl { get; set; }
     public string ThumbImage { get; set; }
     public string Tag { get; set; }
+    public string BannerTitle { get; set; }
+    public string DescHeading { get; set; }
+    public string FullDesc { get; set; }
+    public string BannerImage { get; set; }
     public DateTime AddedOn {get; set;}
     public string AddedIp {  get; set; }
     public string AddedBy { get; set; }
@@ -50,6 +56,10 @@ public class SubCapability
                                   SubCapabilityUrl = Convert.ToString(dr["SubCapabilityUrl"]),
                                   ThumbImage = Convert.ToString(dr["ThumbImage"]),
                                   Tag = Convert.ToString(dr["Tag"]),
+                                  BannerTitle = Convert.ToString(dr["BannerTitle"]),
+                                  DescHeading = Convert.ToString(dr["DescHeading"]),
+                                  FullDesc = Convert.ToString(dr["FullDesc"]),
+                                  BannerImage = Convert.ToString(dr["BannerImage"]),
                                   AddedOn = Convert.ToDateTime(Convert.ToString(dr["AddedOn"])),
                                   AddedBy = Convert.ToString(dr["AddedBy"]),
                                   AddedIp = Convert.ToString(dr["AddedIP"]),
@@ -68,7 +78,7 @@ public class SubCapability
         int result = 0;
         try
         {
-            string query = "Update SubCapability Set Capabilities=@Capabilities,SubCapabilityName=@SubCapabilityName,SubCapabilityUrl=@SubCapabilityUrl,ThumbImage=@ThumbImage,Tag=@Tag,AddedOn=@AddedOn,AddedIp=@AddedIp,AddedBy=@AddedBy,Status=@Status Where Id=@Id ";
+            string query = "Update SubCapability Set Capabilities=@Capabilities,SubCapabilityName=@SubCapabilityName,SubCapabilityUrl=@SubCapabilityUrl,ThumbImage=@ThumbImage,Tag=@Tag,BannerTitle=@BannerTitle,DescHeading=@DescHeading,FullDesc=@FullDesc,BannerImage=@BannerImage,AddedOn=@AddedOn,AddedIp=@AddedIp,AddedBy=@AddedBy,Status=@Status Where Id=@Id ";
             using (SqlCommand cmd = new SqlCommand(query, conSQ))
             {
                 cmd.Parameters.AddWithValue("@id", SqlDbType.Int).Value = cat.Id;
@@ -77,6 +87,10 @@ public class SubCapability
                 cmd.Parameters.AddWithValue("@SubCapabilityUrl", SqlDbType.NVarChar).Value = cat.SubCapabilityUrl;
                 cmd.Parameters.AddWithValue("@ThumbImage", SqlDbType.NVarChar).Value = cat.ThumbImage;
                 cmd.Parameters.AddWithValue("@Tag", SqlDbType.NVarChar).Value = cat.Tag;
+                cmd.Parameters.AddWithValue("@BannerTitle", SqlDbType.NVarChar).Value = cat.BannerTitle;
+                cmd.Parameters.AddWithValue("@DescHeading", SqlDbType.NVarChar).Value = cat.DescHeading;
+                cmd.Parameters.AddWithValue("@FullDesc", SqlDbType.NVarChar).Value = cat.FullDesc;
+                cmd.Parameters.AddWithValue("@BannerImage", SqlDbType.NVarChar).Value = cat.BannerImage;
                 cmd.Parameters.AddWithValue("@AddedOn", SqlDbType.NVarChar).Value = cat.AddedOn;
                 cmd.Parameters.AddWithValue("@AddedIp", SqlDbType.NVarChar).Value = cat.AddedIp;
                 cmd.Parameters.AddWithValue("@AddedBy", SqlDbType.NVarChar).Value = cat.AddedBy;
@@ -98,7 +112,7 @@ public class SubCapability
 
         try
         {
-            string query = "Insert Into SubCapability (Capabilities,SubCapabilityName,SubCapabilityUrl,ThumbImage,Tag,AddedOn,AddedBy, AddedIp,Status) values(@Capabilities,@SubCapabilityName,@SubCapabilityUrl,@ThumbImage,@Tag,@AddedOn,@AddedBy,@AddedIp,@Status) ";
+            string query = "Insert Into SubCapability (Capabilities,SubCapabilityName,SubCapabilityUrl,ThumbImage,Tag,BannerTitle,DescHeading,FullDesc,BannerImage,AddedOn,AddedBy, AddedIp,Status) values(@Capabilities,@SubCapabilityName,@SubCapabilityUrl,@ThumbImage,@Tag,@BannerTitle,@DescHeading,@FullDesc,@BannerImage,@AddedOn,@AddedBy,@AddedIp,@Status) ";
             using (SqlCommand cmd = new SqlCommand(query, conSQ))
             {
                 cmd.Parameters.AddWithValue("@Capabilities", SqlDbType.NVarChar).Value = cat.Capabilities;
@@ -106,6 +120,10 @@ public class SubCapability
                 cmd.Parameters.AddWithValue("@SubCapabilityUrl", SqlDbType.NVarChar).Value = cat.SubCapabilityUrl;
                 cmd.Parameters.AddWithValue("@ThumbImage", SqlDbType.NVarChar).Value = cat.ThumbImage;
                 cmd.Parameters.AddWithValue("@Tag", SqlDbType.NVarChar).Value = cat.Tag;
+                cmd.Parameters.AddWithValue("@BannerTitle", SqlDbType.NVarChar).Value = cat.BannerTitle;
+                cmd.Parameters.AddWithValue("@DescHeading", SqlDbType.NVarChar).Value = cat.DescHeading;
+                cmd.Parameters.AddWithValue("@FullDesc", SqlDbType.NVarChar).Value = cat.FullDesc;
+                cmd.Parameters.AddWithValue("@BannerImage", SqlDbType.NVarChar).Value = cat.BannerImage;
                 cmd.Parameters.AddWithValue("@AddedOn", SqlDbType.NVarChar).Value = cat.AddedOn;
                 cmd.Parameters.AddWithValue("@AddedIp", SqlDbType.NVarChar).Value = cat.AddedIp;
                 cmd.Parameters.AddWithValue("@AddedBy", SqlDbType.NVarChar).Value = cat.AddedBy;
@@ -174,6 +192,10 @@ public class SubCapability
                             CapabilityTitle = Convert.ToString(dr["CapabilityTitle"]),
                             ThumbImage = Convert.ToString(dr["ThumbImage"]),
                             Tag = Convert.ToString(dr["Tag"]),
+                            BannerTitle = Convert.ToString(dr["BannerTitle"]),
+                            DescHeading = Convert.ToString(dr["DescHeading"]),
+                            FullDesc = Convert.ToString(dr["FullDesc"]),
+                            BannerImage = Convert.ToString(dr["BannerImage"]),
                             AddedOn = Convert.ToDateTime(Convert.ToString(dr["AddedOn"])),
                             AddedBy = Convert.ToString(dr["AddedBy"]),
                             AddedIp = Convert.ToString(dr["AddedIP"]),
@@ -231,6 +253,10 @@ public class SubCapability
                                         SubCapabilityUrl = Convert.ToString(dr["SubCapabilityUrl"]),
                                         ThumbImage = Convert.ToString(dr["ThumbImage"]),
                                         Tag = Convert.ToString(dr["Tag"]),
+                                        BannerTitle = Convert.ToString(dr["BannerTitle"]),
+                                        DescHeading = Convert.ToString(dr["DescHeading"]),
+                                        FullDesc = Convert.ToString(dr["FullDesc"]),
+                                        BannerImage = Convert.ToString(dr["BannerImage"]),
                                         AddedOn = Convert.ToDateTime(Convert.ToString(dr["AddedOn"])),
                                         AddedBy = Convert.ToString(dr["AddedBy"]),
                                         AddedIp = Convert.ToString(dr["AddedIP"]),
@@ -243,5 +269,84 @@ public class SubCapability
             ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "GetAllSubCapability", ex.Message);
         }
         return ListOfSubCapability;
+    }
+    public static List<SubCapability> GetAllSubcapability(SqlConnection conSQ, string name)
+    {
+        List<SubCapability> categories = new List<SubCapability>();
+        try
+        {
+            string query = @"select * from SubCapability Where Capabilities=@Capabilities and status='Active'";
+            using (SqlCommand cmd = new SqlCommand(query, conSQ))
+            {
+                // cmd.Parameters.AddWithValue("@id", SqlDbType.NVarChar).Value = id;
+                cmd.Parameters.AddWithValue("@Capabilities", SqlDbType.NVarChar).Value = name;
+                cmd.Parameters.AddWithValue("@Status", SqlDbType.NVarChar).Value = "Active";
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                categories = (from DataRow dr in dt.Rows
+                              select new SubCapability()
+                              {
+                                  Id = Convert.ToInt32(Convert.ToString(dr["Id"])),
+                                  Capabilities = Convert.ToString(dr["Capabilities"]),
+                                  SubCapabilityName = Convert.ToString(dr["SubCapabilityName"]),
+                                  SubCapabilityUrl = Convert.ToString(dr["SubCapabilityUrl"]),
+                                  ThumbImage = Convert.ToString(dr["ThumbImage"]),
+                                  Tag = Convert.ToString(dr["Tag"]),
+                                  BannerTitle = Convert.ToString(dr["BannerTitle"]),
+                                  DescHeading = Convert.ToString(dr["DescHeading"]),
+                                  FullDesc = Convert.ToString(dr["FullDesc"]),
+                                  BannerImage = Convert.ToString(dr["BannerImage"]),
+                                  AddedOn = Convert.ToDateTime(Convert.ToString(dr["AddedOn"])),
+                                  AddedBy = Convert.ToString(dr["AddedBy"]),
+                                  AddedIp = Convert.ToString(dr["AddedIP"]),
+                                  Status = Convert.ToString(dr["Status"])
+                              }).ToList();
+            }
+        }
+        catch (Exception ex)
+        {
+            ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "GetAllSubcapability", ex.Message);
+        }
+        return categories;
+    }
+    public static SubCapability GetAllSubCapabilityWithUrl(SqlConnection conSQ, string Url)
+    {
+        var Scap = new SubCapability();
+        try
+        {
+            string query = "Select * from SubCapability where Status!=@Status and SubCapabilityUrl=@SubCapabilityUrl ";
+            using (SqlCommand cmd = new SqlCommand(query, conSQ))
+            {
+                cmd.Parameters.AddWithValue("@SubCapabilityUrl", SqlDbType.Int).Value = Url;
+                cmd.Parameters.AddWithValue("@Status", SqlDbType.NVarChar).Value = "Deleted";
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                Scap = (from DataRow dr in dt.Rows
+                       select new SubCapability()
+                       {
+                           Id = Convert.ToInt32(Convert.ToString(dr["Id"])),
+                           Capabilities = Convert.ToString(dr["Capabilities"]),
+                           SubCapabilityName = Convert.ToString(dr["SubCapabilityName"]),
+                           SubCapabilityUrl = Convert.ToString(dr["SubCapabilityUrl"]),
+                           ThumbImage = Convert.ToString(dr["ThumbImage"]),
+                           Tag = Convert.ToString(dr["Tag"]),
+                           BannerTitle = Convert.ToString(dr["BannerTitle"]),
+                           DescHeading = Convert.ToString(dr["DescHeading"]),
+                           FullDesc = Convert.ToString(dr["FullDesc"]),
+                           BannerImage = Convert.ToString(dr["BannerImage"]),
+                           AddedOn = Convert.ToDateTime(Convert.ToString(dr["AddedOn"])),
+                           AddedBy = Convert.ToString(dr["AddedBy"]),
+                           AddedIp = Convert.ToString(dr["AddedIP"]),
+                           Status = Convert.ToString(dr["Status"])
+                       }).FirstOrDefault();
+            }
+        }
+        catch (Exception ex)
+        {
+            ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "GetAllSubCapabilityWithUrl", ex.Message);
+        }
+        return Scap;
     }
 }

@@ -234,4 +234,38 @@ public class SpecificationDetails
         }
         return ListOfspes;
     }
+    public static List<SpecificationDetails> GetAllSpecificationProductGuid(SqlConnection conSQ, string ProductGuid)
+    {
+        var ListOfDatasheets = new List<SpecificationDetails>();
+        try
+        {
+            string query = "Select * from SpecificationDetails where Status=@Status and ProductGuid=@ProductGuid Order by Id ";
+            using (SqlCommand cmd = new SqlCommand(query, conSQ))
+            {
+                cmd.Parameters.AddWithValue("@Status", SqlDbType.NVarChar).Value = "Active";
+                cmd.Parameters.AddWithValue("@ProductGuid", SqlDbType.NVarChar).Value = ProductGuid;
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                ListOfDatasheets = (from DataRow dr in dt.Rows
+                                    select new SpecificationDetails()
+                                    {
+                                        Id = Convert.ToInt32(Convert.ToString(dr["Id"])),
+                                        ProductGuid = Convert.ToString(dr["ProductGuid"]),
+                                        Title = Convert.ToString(dr["Title"]),
+                                        FullDesc = Convert.ToString(dr["FullDesc"]),
+                                        AddedOn = Convert.ToDateTime(Convert.ToString(dr["AddedOn"])),
+                                        AddedIp = Convert.ToString(dr["AddedIP"]),
+                                        AddedBy = Convert.ToString(dr["AddedBy"]),
+                                        Status = Convert.ToString(dr["Status"])
+                                    }).ToList();
+            }
+        }
+        catch (Exception ex)
+        {
+            ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "GetAllSpecificationProductGuid", ex.Message);
+        }
+        return ListOfDatasheets;
+    }
+
 }

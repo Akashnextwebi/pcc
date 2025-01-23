@@ -23,6 +23,7 @@ public class WhitePaperDetails
     public string PostedOn { get; set; }
     public string PostedBy { get; set; }
     public string WhitePaperHeading { get; set; }
+    public string Capability {  get; set; }
     public string FullDesc { get; set; }
     public string ThumbImage { get; set; }
     public string DetailImage { get; set; }
@@ -34,6 +35,8 @@ public class WhitePaperDetails
     public string AddedIp {  get; set; }
     public string AddedBy { get; set; }
     public string Status { get; set; }
+    //Extra 
+    public string CapabilityTitle { get; set; }
     /// <summary>
     /// Retrieves all details of a Whitepaper entry with a specific ID from the database.
     /// </summary>
@@ -61,6 +64,7 @@ public class WhitePaperDetails
                                   WhitePaperTitle = Convert.ToString(dr["WhitePaperTitle"]),
                                   WhitePaperUrl = Convert.ToString(dr["WhitePaperUrl"]),
                                   Tag = Convert.ToString(dr["Tag"]),
+                                  Capability = Convert.ToString(dr["Capability"]),
                                   PostedOn = Convert.ToString(dr["PostedOn"]),
                                   PostedBy = Convert.ToString(dr["PostedBy"]),
                                   WhitePaperHeading = Convert.ToString(dr["WhitePaperHeading"]),
@@ -96,13 +100,14 @@ public class WhitePaperDetails
         int result = 0;
         try
         {
-            string query = "Update WhitePaperDetails Set WhitePaperTitle=@WhitePaperTitle,WhitePaperUrl=@WhitePaperUrl,Tag = @Tag,PostedOn=@PostedOn,PostedBy=@PostedBy,WhitePaperHeading=@WhitePaperHeading,FullDesc=@FullDesc,ThumbImage=@ThumbImage,DetailImage=@DetailImage,BannerImage=@BannerImage,PageTitle=@PageTitle,MetaKeys=@MetaKeys,MetaDesc=@MetaDesc,AddedOn=@AddedOn,AddedBy=@AddedBy,AddedIp=@AddedIp,Status=@Status Where Id=@Id ";
+            string query = "Update WhitePaperDetails Set WhitePaperTitle=@WhitePaperTitle,WhitePaperUrl=@WhitePaperUrl,Tag = @Tag,Capability=@Capability,PostedOn=@PostedOn,PostedBy=@PostedBy,WhitePaperHeading=@WhitePaperHeading,FullDesc=@FullDesc,ThumbImage=@ThumbImage,DetailImage=@DetailImage,BannerImage=@BannerImage,PageTitle=@PageTitle,MetaKeys=@MetaKeys,MetaDesc=@MetaDesc,AddedOn=@AddedOn,AddedBy=@AddedBy,AddedIp=@AddedIp,Status=@Status Where Id=@Id ";
             using (SqlCommand cmd = new SqlCommand(query, conSQ))
             {
                 cmd.Parameters.AddWithValue("@id", SqlDbType.Int).Value = cat.Id;
                 cmd.Parameters.AddWithValue("@WhitePaperTitle", SqlDbType.NVarChar).Value = cat.WhitePaperTitle;
                 cmd.Parameters.AddWithValue("@WhitePaperUrl", SqlDbType.NVarChar).Value = cat.WhitePaperUrl;
                 cmd.Parameters.AddWithValue("@Tag", SqlDbType.NVarChar).Value = cat.Tag;
+                cmd.Parameters.AddWithValue("@Capability", SqlDbType.NVarChar).Value = cat.Capability;
                 cmd.Parameters.AddWithValue("@PostedOn", SqlDbType.NVarChar).Value = cat.PostedOn;
                 cmd.Parameters.AddWithValue("@PostedBy", SqlDbType.NVarChar).Value = cat.PostedBy;
                 cmd.Parameters.AddWithValue("@WhitePaperHeading", SqlDbType.NVarChar).Value = cat.WhitePaperHeading;
@@ -141,13 +146,14 @@ public class WhitePaperDetails
 
         try
         {
-            string query = "Insert Into WhitePaperDetails (WhitePaperTitle,WhitePaperUrl,Tag,PostedOn,PostedBy,WhitePaperHeading,ThumbImage,DetailImage,BannerImage,PageTitle,MetaKeys,MetaDesc,FullDesc,AddedOn,AddedBy,AddedIp,Status) values" +
-                           "(@WhitePaperTitle,@WhitePaperUrl,@Tag,@PostedOn,@PostedBy,@WhitePaperHeading,@ThumbImage,@DetailImage,@BannerImage,@PageTitle,@MetaKeys,@MetaDesc,@FullDesc,@AddedOn,@AddedBy,@AddedIp,@Status)";
+            string query = "Insert Into WhitePaperDetails (WhitePaperTitle,WhitePaperUrl,Tag,Capability,PostedOn,PostedBy,WhitePaperHeading,ThumbImage,DetailImage,BannerImage,PageTitle,MetaKeys,MetaDesc,FullDesc,AddedOn,AddedBy,AddedIp,Status) values" +
+                           "(@WhitePaperTitle,@WhitePaperUrl,@Tag,@Capability,@PostedOn,@PostedBy,@WhitePaperHeading,@ThumbImage,@DetailImage,@BannerImage,@PageTitle,@MetaKeys,@MetaDesc,@FullDesc,@AddedOn,@AddedBy,@AddedIp,@Status)";
             using (SqlCommand cmd = new SqlCommand(query, conSQ))
             {
                 cmd.Parameters.AddWithValue("@WhitePaperTitle", SqlDbType.NVarChar).Value = cat.WhitePaperTitle;
                 cmd.Parameters.AddWithValue("@WhitePaperUrl", SqlDbType.NVarChar).Value = cat.WhitePaperUrl;
                 cmd.Parameters.AddWithValue("@Tag", SqlDbType.NVarChar).Value = cat.Tag;
+                cmd.Parameters.AddWithValue("@Capability", SqlDbType.NVarChar).Value = cat.Capability;
                 cmd.Parameters.AddWithValue("@PostedOn", SqlDbType.NVarChar).Value = cat.PostedOn;
                 cmd.Parameters.AddWithValue("@PostedBy", SqlDbType.NVarChar).Value = cat.PostedBy;
                 cmd.Parameters.AddWithValue("@WhitePaperHeading", SqlDbType.NVarChar).Value = cat.WhitePaperHeading;
@@ -184,7 +190,7 @@ public class WhitePaperDetails
         List<WhitePaperDetails> categories = new List<WhitePaperDetails>();
         try
         {
-            string query = "Select *,(Select UserName from CreateUser Where UserGuid=WhitePaperDetails.AddedBy) as UpdatedBy from WhitePaperDetails where Status=@Status Order by Id ";
+            string query = "Select *,(Select UserName from CreateUser Where UserGuid=WhitePaperDetails.AddedBy) as UpdatedBy ,(select CapabilityName from Capability where try_convert (nvarchar,Capability.Id) = WhitePaperDetails.Capability )as  CapabilityTitle from WhitePaperDetails where Status ='Active'  Order by Id Desc";
             using (SqlCommand cmd = new SqlCommand(query, conSQ))
             {
                 cmd.Parameters.AddWithValue("@Status", SqlDbType.NVarChar).Value = "Active";
@@ -198,6 +204,8 @@ public class WhitePaperDetails
                                   WhitePaperTitle = Convert.ToString(dr["WhitePaperTitle"]),
                                   WhitePaperUrl = Convert.ToString(dr["WhitePaperUrl"]),
                                   Tag = Convert.ToString(dr["Tag"]),
+                                  Capability = Convert.ToString(dr["Capability"]),
+                                  CapabilityTitle = Convert.ToString(dr["CapabilityTitle"]),
                                   PostedOn = Convert.ToString(dr["PostedOn"]),
                                   PostedBy = Convert.ToString(dr["PostedBy"]),
                                   WhitePaperHeading = Convert.ToString(dr["WhitePaperHeading"]),
@@ -270,6 +278,7 @@ public class WhitePaperDetails
                            WhitePaperTitle = Convert.ToString(dr["WhitePaperTitle"]),
                            WhitePaperUrl = Convert.ToString(dr["WhitePaperUrl"]),
                            Tag = Convert.ToString(dr["Tag"]),
+                           Capability = Convert.ToString(dr["Capability"]),
                            PostedOn = Convert.ToString(dr["PostedOn"]),
                            PostedBy = Convert.ToString(dr["PostedBy"]),
                            WhitePaperHeading = Convert.ToString(dr["WhitePaperHeading"]),
@@ -295,7 +304,7 @@ public class WhitePaperDetails
     }
     public static WhitePaperDetails getWhitepaperDetailsByUrl(SqlConnection _con, string WhitePaperUrl)
     {
-        WhitePaperDetails blog = new WhitePaperDetails();
+        WhitePaperDetails wp = new WhitePaperDetails();
         try
         {
             string query = "Select top 1 * from WhitePaperDetails where Status='Active' and WhitePaperUrl=@WhitePaperUrl";
@@ -307,28 +316,29 @@ public class WhitePaperDetails
                 sda.Fill(dt);
                 if (dt.Rows.Count > 0)
                 {
-                    blog.Id = Convert.ToInt32(Convert.ToString(dt.Rows[0]["Id"]));
-                    blog.WhitePaperTitle = Convert.ToString(dt.Rows[0]["WhitePaperTitle"]);
-                    blog.WhitePaperUrl = Convert.ToString(dt.Rows[0]["WhitePaperUrl"]);
-                    blog.Tag = Convert.ToString(dt.Rows[0]["Tag"]);
-                    blog.PostedOn = Convert.ToString(dt.Rows[0]["PostedOn"]);
-                    blog.PostedBy = Convert.ToString(dt.Rows[0]["PostedBy"]);
-                    blog.ThumbImage = Convert.ToString(dt.Rows[0]["ThumbImage"]);
-                    blog.DetailImage = Convert.ToString(dt.Rows[0]["DetailImage"]);
-                    blog.BannerImage = Convert.ToString(dt.Rows[0]["BannerImage"]);
-                    blog.PageTitle = Convert.ToString(dt.Rows[0]["PageTitle"]);
-                    blog.MetaKeys = Convert.ToString(dt.Rows[0]["MetaKeys"]);
-                    blog.MetaDesc = Convert.ToString(dt.Rows[0]["MetaDesc"]);
-                    blog.WhitePaperHeading = Convert.ToString(dt.Rows[0]["WhitePaperHeading"]);
-                    blog.FullDesc = Convert.ToString(dt.Rows[0]["FullDesc"]);
-                    blog.AddedOn = Convert.ToDateTime(Convert.ToString(dt.Rows[0]["AddedOn"]));                
-                    blog.AddedBy = Convert.ToString(dt.Rows[0]["AddedBy"]);
-                    blog.AddedIp = Convert.ToString(dt.Rows[0]["AddedIp"]);
-                    blog.Status = Convert.ToString(dt.Rows[0]["Status"]);
+                    wp.Id = Convert.ToInt32(Convert.ToString(dt.Rows[0]["Id"]));
+                    wp.WhitePaperTitle = Convert.ToString(dt.Rows[0]["WhitePaperTitle"]);
+                    wp.WhitePaperUrl = Convert.ToString(dt.Rows[0]["WhitePaperUrl"]);
+                    wp.Tag = Convert.ToString(dt.Rows[0]["Tag"]);
+                    wp.Capability = Convert.ToString(dt.Rows[0]["Capability"]);
+                    wp.PostedOn = Convert.ToString(dt.Rows[0]["PostedOn"]);
+                    wp.PostedBy = Convert.ToString(dt.Rows[0]["PostedBy"]);
+                    wp.ThumbImage = Convert.ToString(dt.Rows[0]["ThumbImage"]);
+                    wp.DetailImage = Convert.ToString(dt.Rows[0]["DetailImage"]);
+                    wp.BannerImage = Convert.ToString(dt.Rows[0]["BannerImage"]);
+                    wp.PageTitle = Convert.ToString(dt.Rows[0]["PageTitle"]);
+                    wp.MetaKeys = Convert.ToString(dt.Rows[0]["MetaKeys"]);
+                    wp.MetaDesc = Convert.ToString(dt.Rows[0]["MetaDesc"]);
+                    wp.WhitePaperHeading = Convert.ToString(dt.Rows[0]["WhitePaperHeading"]);
+                    wp.FullDesc = Convert.ToString(dt.Rows[0]["FullDesc"]);
+                    wp.AddedOn = Convert.ToDateTime(Convert.ToString(dt.Rows[0]["AddedOn"]));
+                    wp.AddedBy = Convert.ToString(dt.Rows[0]["AddedBy"]);
+                    wp.AddedIp = Convert.ToString(dt.Rows[0]["AddedIp"]);
+                    wp.Status = Convert.ToString(dt.Rows[0]["Status"]);
                 }
                 else
                 {
-                    blog = null;
+                    wp = null;
                 }
             }
         }
@@ -336,6 +346,6 @@ public class WhitePaperDetails
         {
             ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "getWhitepaperDetailsByUrl", ex.Message);
         }
-        return blog;
+        return wp;
     }
 }

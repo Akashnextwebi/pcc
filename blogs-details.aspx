@@ -1,8 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="./MasterPage.master" AutoEventWireup="true" CodeFile="blogs-details.aspx.cs" Inherits="blogs_details" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
-    <link href="css/about.css" rel="stylesheet" />
-    <link href="css/breadcrums.css" rel="stylesheet" />
+    <link href="/css/about.css" rel="stylesheet" />
+    <link href="/css/breadcrums.css" rel="stylesheet" />
     <style>
         .details-navigation {
             display: flex;
@@ -71,18 +71,18 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
   
-    <div class="breadcrumb-section" style="background-image: linear-gradient(270deg, rgba(0, 0, 0, .55), rgba(0, 0, 0, 0.55) 101.02%), url(image/blog/braadcrumb-bg3.jpg);">
+    <div class="breadcrumb-section" style="background-image: linear-gradient(270deg, rgba(0, 0, 0, .55), rgba(0, 0, 0, 0.55) 101.02%), url(/image/blog/braadcrumb-bg3.jpg);">
         <div class="container-fluid one pl--95">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="banner-content">
                         <ul class="breadcrumb-list">
-                            <li><a href="Default.aspx">Home</a></li>
-                            <li><a href="Default.aspx">Blog</a></li>
+                            <li><a href="/Default.aspx">Home</a></li>
+                            <li><a href="/Default.aspx">Blog</a></li>
 
-                            <li>The Future of Defense Technology</li>
+                            <li><%=StrBlogTitle %></li>
                         </ul>
-                        <h1>The Future of Defense Technology</h1>
+                        <h1><%=StrBlogTitle %></h1>
 
                     </div>
                 </div>
@@ -96,11 +96,12 @@
                     <div class="col-lg-10">
                         <div class="blog-details">
                             <div class="blog-img">
-                                <img src="image/blog/1.png" class="img-fluid" alt="blog-image-name" />
+                                <img src="/<%=StrDetailImage %>" class="img-fluid" alt="blog-image-name" />
 
                             </div>
                         </div>
-                        <h3>Navigating the Digital Frontier</h3>
+                        <%=StrBlogDesc %>
+                        <%--<h3>Navigating the Digital Frontier</h3>
                         <p>
                             One of the key drivers behind the growing demand for digital engineering services is the increasing reliance on technology across industries. As businesses seek to digitize their operations and leverage data-driven insights, they require the expertise of skilled professionals who can design, develop, and implement cutting-edge solutions tailored to their specific needs.
 
@@ -108,13 +109,14 @@
                         <p>
                             Moreover, the rapid pace of technological innovation means that businesses must continually adapt and evolve to keep pace with changing market dynamics. Digital engineering services offer the agility and flexibility that organizations need to respond quickly to emerging trends and opportunities, ensuring that they remain at the forefront of their respective industries.
 
-                        </p>
+                        </p>--%>
                     </div>
                 </div>
                 <div class="row justify-content-center">
                     <div class="col-lg-10">
                         <div class="details-navigation">
-                            <div class="single-navigation">
+                            <%=StrPrev %>
+                           <%-- <div class="single-navigation">
                                 <a class="arrow" href="#blog-details">
                                     <svg width="9" height="15" viewBox="0 0 8 13" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M0 6.50008L8 0L2.90909 6.50008L8 13L0 6.50008Z"></path>
@@ -124,9 +126,9 @@
                                     <a href="#blog-details">Prev Post</a>
                                     <h6><a href="#blog-details">Consulting vs. In-House Expertise: Finding the Right Balance</a></h6>
                                 </div>
-                            </div>
-
-                            <div class="single-navigation two text-end">
+                            </div>--%>
+                            <%=StrNext %>
+                           <%-- <div class="single-navigation two text-end">
                                 <div class="content">
                                     <a href="#blog-details">Next Post</a>
                                     <h6><a href="#blog-details">Consulting Industry Adapts to the Changing Business Landscape</a></h6>
@@ -136,7 +138,7 @@
                                         <path d="M8 6.50008L0 0L5.09091 6.50008L0 13L8 6.50008Z"></path>
                                     </svg>
                                 </a>
-                            </div>
+                            </div>--%>
                         </div>
                     </div>
                 </div>

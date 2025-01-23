@@ -33,6 +33,7 @@ public partial class Admin_view_whitepaper : System.Web.UI.Page
                                         <td><a href='/" + BD[i].ThumbImage + @"'/><img src='/" + BD[i].ThumbImage + @"' style='height:60px;' /></td>
                                         <td><a href='/" + BD[i].DetailImage + @"'/><img src='/" + BD[i].DetailImage + @"' style='height:60px;' /></td>
                                         <td><a href='/" + BD[i].BannerImage + @"'/><img src='/" + BD[i].BannerImage + @"' style='height:60px;' /></td>
+                                        <td>" + BD[i].CapabilityTitle + @"</td> 
                                         <td>" + BD[i].WhitePaperTitle + @"</td>
                                         <td>" + BD[i].PostedBy + @"</td>
                                          <td>" + BD[i].AddedOn.ToString("dd/MMM/yyyy") + @"</td>

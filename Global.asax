@@ -42,10 +42,16 @@
         routes.Clear();
         
         routes.MapPageRoute("/404", "404", "~/404.aspx");
-        routes.MapPageRoute("Blog", "blog/{burl}", "~/blog-detail.aspx");
+        routes.MapPageRoute("Blog", "blog/{BUrl}", "~/blogs-details.aspx");
         routes.MapPageRoute("Casestudy", "casestudy/{curl}", "~/case-study-details.aspx");
         routes.MapPageRoute("Job", "Job/{jurl}", "~/job-details.aspx");
         routes.MapPageRoute("Whitepaper", "whitepaper/{wurl}", "~/whitepaper-details.aspx");
+        routes.MapPageRoute("Capability", "capability/{curl}", "~/advanced-data-solutions.aspx");
+        routes.MapPageRoute("SubCapability", "subcapability/{surl}", "~/product-lisitng.aspx");
+        routes.MapPageRoute("Product", "product/{purl}", "~/product-details.aspx");
+        routes.MapPageRoute("Investor", "investor/{iurl}", "~/investor-details.aspx");
+
+
     }
 
 </script>

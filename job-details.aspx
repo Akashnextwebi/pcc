@@ -264,7 +264,7 @@
                     <div class="inner-box">
                         <div class="content">
                             <span class="company-logo">
-                                <img src="/image/media_37.png" alt=""></span>
+                                <img src="/<%=strImage %>" alt=""></span>
                             <h4><a href="#" contenteditable="false" style="cursor: pointer;"><%=strJobTitle %></a></h4>
                             <ul class="job-info">
                                 <li><i class="fa-solid fa-briefcase icon "></i><%=strEducation %></li>

@@ -19,6 +19,7 @@
                 </div>
             </div>
         </div>
+        
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-8">
@@ -35,23 +36,23 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <label class="">Product URL <sup>*</sup></label>
-                                    <asp:TextBox runat="server" MaxLength="100" class="form-control mb-2 mr-sm-2 txtUrl"  ID="txtUrl" placeholder="Auto-Generated" />
+                                    <asp:TextBox runat="server" MaxLength="100" class="form-control mb-2 mr-sm-2 txtUrl" ID="txtUrl" placeholder="Auto-Generated" />
                                     <asp:RequiredFieldValidator ID="rfv2" runat="server" ControlToValidate="txtUrl" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Field can't be empty"></asp:RequiredFieldValidator>
                                 </div>
 
                                 <div class="col-lg-4 mb-3">
                                     <label class="">Cpability<sup class="text-danger">*</sup></label>
-                                    <asp:DropDownList runat="server" ID="ddlCapabilityType" CssClass="form-control" OnSelectedIndexChanged="ddlCapabilityType_SelectedIndexChanged" AutoPostBack="true"></asp:DropDownList>
+                                    <asp:DropDownList runat="server" ID="ddlCapabilityType" CssClass="form-select" OnSelectedIndexChanged="ddlCapabilityType_SelectedIndexChanged" AutoPostBack="true"></asp:DropDownList>
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="ddlCapabilityType" InitialValue="0" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Field can't be empty"></asp:RequiredFieldValidator>
                                 </div>
                                 <div class="col-lg-4 mb-3">
                                     <label class="">Sub Capability<sup class="text-danger">*</sup></label>
-                                    <asp:ListBox runat="server" SelectionMode="Single" ID="ddlSubcapability" CssClass="form-control fSelect"></asp:ListBox>
+                                    <asp:ListBox runat="server" SelectionMode="Single" ID="ddlSubcapability" CssClass="form-select fSelect"></asp:ListBox>
                                     <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="ddlsdetination" InitialValue="0" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Field can't be empty"></asp:RequiredFieldValidator>--%>
                                 </div>
                                 <div class="col-lg-4 mb-3">
                                     <label class="">Industry<sup class="text-danger">*</sup></label>
-                                    <asp:DropDownList runat="server" ID="ddlindustry" CssClass="form-control" AutoPostBack="true"></asp:DropDownList>
+                                    <asp:DropDownList runat="server" ID="ddlindustry" CssClass="form-select" AutoPostBack="true"></asp:DropDownList>
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="ddlindustry" InitialValue="0" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Field can't be empty"></asp:RequiredFieldValidator>
                                 </div>
                             </div>
@@ -61,7 +62,7 @@
                                     <asp:TextBox runat="server" MaxLength="100" class="form-control mb-2 mr-sm-2 " ID="txtcode" placeholder="Enter SKU Code" />
                                     <asp:RequiredFieldValidator ID="rfv4" runat="server" ControlToValidate="txtcode" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Field can't be empty"></asp:RequiredFieldValidator>
                                 </div>
-                                <div class="col-lg-4">
+                                <%--<div class="col-lg-4">
                                     <label class="">Datasheet Name<sup>*</sup></label>
                                     <asp:TextBox runat="server" MaxLength="100" class="form-control mb-2 mr-sm-2 " ID="txtdatasheet" placeholder="Datasheet Name" />
                                     <asp:RequiredFieldValidator ID="rfv7" runat="server" ControlToValidate="txtdatasheet" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Field can't be empty"></asp:RequiredFieldValidator>
@@ -71,6 +72,15 @@
                                     <label class="">Datasheet Link<sup>*</sup></label>
                                     <asp:TextBox runat="server" MaxLength="100" class="form-control mb-2 mr-sm-2 " ID="txtlink" placeholder="Datasheet Link" />
                                     <asp:RequiredFieldValidator ID="rfv8" runat="server" ControlToValidate="txtlink" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Field can't be empty"></asp:RequiredFieldValidator>
+                                </div>--%>
+                                <div class="col-lg-3">
+                                    <div class="form-group align-items-center m-t-25">
+                                        <input class="form-check-input" type="checkbox" id="chkenquiry" runat="server">
+                                        <label class="form-check-label ms-2" for="<%=chkenquiry.ClientID %>">
+                                            Unable Enquiry ?
+                                        </label>
+                                    </div>
+
                                 </div>
                             </div>
 

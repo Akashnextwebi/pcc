@@ -81,6 +81,7 @@ public partial class Admin_add_product_catalogue : System.Web.UI.Page
                     int result = ProductCatalogue.UpdateCatalogueDetails(conSQ, BD);
                     if (result > 0)
                     {
+                        GetCatalogues();
                         ScriptManager.RegisterStartupScript(this, this.GetType(), "Message", "Snackbar.show({pos: 'top-right',text: 'Product Catalogue  Updated successfully.',actionTextColor: '#fff',backgroundColor: '#008a3d'});", true);
                     }
                     else

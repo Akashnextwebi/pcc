@@ -27,10 +27,14 @@ public class BlogDetails
     public string MetaDescription { get; set; }
     public string BlogImage { get; set; }
     public string ThumbImage {  get; set; }
+    public string Tag {  get; set; }
     public DateTime AddedOn { get; set; }
     public string AddedIp {  get; set; }
     public string AddedBy {  get; set; }
     public string Status {  get; set; }
+    //Extra
+    public string TotalCount {  get; set; }
+   
     /// <summary>
     /// Retrieves all details of a blog entry with a specific ID from the database.
     /// </summary>
@@ -64,6 +68,7 @@ public class BlogDetails
                                   MetaKeys = Convert.ToString(dr["MetaKeys"]),
                                   MetaDescription = Convert.ToString(dr["MetaDescription"]),
                                   FullDescription = Convert.ToString(dr["FullDescription"]),
+                                  Tag = Convert.ToString(dr["Tag"]),
                                   AddedOn = Convert.ToDateTime(Convert.ToString(dr["AddedOn"])),
                                   PostedOn = Convert.ToString(dr["PostedOn"]),
                                   AddedBy = Convert.ToString(dr["AddedBy"]),
@@ -90,7 +95,7 @@ public class BlogDetails
         int result = 0;
         try
         {
-            string query = "Update BlogDetails Set ThumbImage=@ThumbImage,BlogImage=@BlogImage,PostedOn = @PostedOn,PostedBy=@PostedBy,BlogTitle=@BlogTitle,BlogURL=@BlogURL,PageTitle=@PageTitle,MetaKeys=@MetaKeys,MetaDescription=@MetaDescription,FullDescription=@FullDescription,AddedOn=@AddedOn,AddedBy=@AddedBy,AddedIp=@AddedIp Where Id=@Id ";
+            string query = "Update BlogDetails Set ThumbImage=@ThumbImage,BlogImage=@BlogImage,PostedOn = @PostedOn,PostedBy=@PostedBy,BlogTitle=@BlogTitle,BlogURL=@BlogURL,PageTitle=@PageTitle,MetaKeys=@MetaKeys,MetaDescription=@MetaDescription,FullDescription=@FullDescription,Tag=@Tag,AddedOn=@AddedOn,AddedBy=@AddedBy,AddedIp=@AddedIp Where Id=@Id ";
             using (SqlCommand cmd = new SqlCommand(query, conSQ))
             {
                 cmd.Parameters.AddWithValue("@id", SqlDbType.Int).Value = cat.Id;
@@ -103,6 +108,7 @@ public class BlogDetails
                 cmd.Parameters.AddWithValue("@MetaKeys", SqlDbType.NVarChar).Value = cat.MetaKeys;
                 cmd.Parameters.AddWithValue("@MetaDescription", SqlDbType.NVarChar).Value = cat.MetaDescription;
                 cmd.Parameters.AddWithValue("@FullDescription", SqlDbType.NVarChar).Value = cat.FullDescription;
+                cmd.Parameters.AddWithValue("@Tag", SqlDbType.NVarChar).Value = cat.Tag;
                 cmd.Parameters.AddWithValue("@PostedOn", SqlDbType.DateTime).Value = cat.PostedOn;
                 cmd.Parameters.AddWithValue("@AddedOn", SqlDbType.DateTime).Value = cat.AddedOn;
                 cmd.Parameters.AddWithValue("@AddedBy", SqlDbType.NVarChar).Value = cat.AddedBy;
@@ -132,8 +138,8 @@ public class BlogDetails
 
         try
         {
-            string query = "Insert Into BlogDetails (ThumbImage,BlogImage,BlogTitle,BlogURL,PostedBy,PageTitle,MetaKeys,MetaDescription,FullDescription,PostedOn,AddedOn,AddedBy,AddedIp,Status) values" +
-                           "(@ThumbImage,@BlogImage,@BlogTitle,@BlogURL,@PostedBy,@PageTitle,@MetaKeys,@MetaDescription,@FullDescription,@PostedOn,@AddedOn,@AddedBy,@AddedIp,@Status)";
+            string query = "Insert Into BlogDetails (ThumbImage,BlogImage,BlogTitle,BlogURL,PostedBy,PageTitle,MetaKeys,MetaDescription,FullDescription,Tag,PostedOn,AddedOn,AddedBy,AddedIp,Status) values" +
+                           "(@ThumbImage,@BlogImage,@BlogTitle,@BlogURL,@PostedBy,@PageTitle,@MetaKeys,@MetaDescription,@FullDescription,@Tag,@PostedOn,@AddedOn,@AddedBy,@AddedIp,@Status)";
             using (SqlCommand cmd = new SqlCommand(query, conSQ))
             {
                 cmd.Parameters.AddWithValue("@ThumbImage", SqlDbType.NVarChar).Value = cat.ThumbImage;
@@ -145,6 +151,7 @@ public class BlogDetails
                 cmd.Parameters.AddWithValue("@MetaKeys", SqlDbType.NVarChar).Value = cat.MetaKeys;
                 cmd.Parameters.AddWithValue("@MetaDescription", SqlDbType.NVarChar).Value = cat.MetaDescription;
                 cmd.Parameters.AddWithValue("@FullDescription", SqlDbType.NVarChar).Value = cat.FullDescription;
+                cmd.Parameters.AddWithValue("@Tag", SqlDbType.NVarChar).Value = cat.Tag;
                 cmd.Parameters.AddWithValue("@PostedOn", SqlDbType.DateTime).Value = cat.PostedOn;
                 cmd.Parameters.AddWithValue("@AddedOn", SqlDbType.DateTime).Value = cat.AddedOn;
                 cmd.Parameters.AddWithValue("@AddedBy", SqlDbType.NVarChar).Value = cat.AddedBy;
@@ -192,6 +199,7 @@ public class BlogDetails
                                   MetaKeys = Convert.ToString(dr["MetaKeys"]),
                                   MetaDescription = Convert.ToString(dr["MetaDescription"]),
                                   FullDescription = Convert.ToString(dr["FullDescription"]),
+                                  Tag = Convert.ToString(dr["Tag"]),
                                   AddedOn = Convert.ToDateTime(Convert.ToString(dr["AddedOn"])),
                                   PostedOn = Convert.ToString(dr["PostedOn"]),
                                   AddedBy = Convert.ToString(dr["AddedBy"]),
@@ -266,5 +274,156 @@ public class BlogDetails
             ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "CheckExist", ex.Message);
             return 0;
         }
+    }
+    public static List<BlogDetails> GetAllBlogDetailsWithFilters(SqlConnection conSQ, string PgNo, string Plenght)
+    {
+        var BlogDetails = new List<BlogDetails>();
+        try
+        {
+            int pageNo = (Convert.ToInt32(PgNo) - 1) * Convert.ToInt32(Plenght);
+
+
+            string query = @"SELECT *,
+       COUNT(*) OVER () AS TotalCount
+FROM BlogDetails
+WHERE  Status = 'Active'
+ORDER BY Id DESC
+OFFSET @PageNumber ROWS FETCH NEXT @PageLength ROWS ONLY;";
+
+            using (SqlCommand cmd = new SqlCommand(query, conSQ))
+            {
+
+
+                cmd.Parameters.AddWithValue("@Status", SqlDbType.NVarChar).Value = "Deleted";
+                cmd.Parameters.AddWithValue("@PageNumber", SqlDbType.NVarChar).Value = pageNo;
+                cmd.Parameters.AddWithValue("@PageLength", SqlDbType.NVarChar).Value = Convert.ToInt32(Plenght);
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                BlogDetails = (from DataRow dr in dt.Rows
+                               select new BlogDetails()
+                               {
+                                   Id = Convert.ToInt32(Convert.ToString(dr["Id"])),
+                                   BlogImage = Convert.ToString(dr["BlogImage"]),
+                                   ThumbImage = Convert.ToString(dr["ThumbImage"]),
+                                   BlogTitle = Convert.ToString(dr["BlogTitle"]),
+                                   BlogURL = Convert.ToString(dr["BlogURL"]),
+                                   PostedBy = Convert.ToString(dr["PostedBy"]),
+                                   PageTitle = Convert.ToString(dr["PageTitle"]),
+                                   MetaKeys = Convert.ToString(dr["MetaKeys"]),
+                                   MetaDescription = Convert.ToString(dr["MetaDescription"]),
+                                   FullDescription = Convert.ToString(dr["FullDescription"]),
+                                   Tag = Convert.ToString(dr["Tag"]),
+                                   AddedOn = Convert.ToDateTime(Convert.ToString(dr["AddedOn"])),
+                                   PostedOn = Convert.ToString(dr["PostedOn"]),
+                                   AddedBy = Convert.ToString(dr["AddedBy"]),
+                                   AddedIp = Convert.ToString(dr["AddedIp"]),
+                                   Status = Convert.ToString(dr["Status"]),
+                                   TotalCount = Convert.ToString(dr["TotalCount"])
+
+                               }).ToList();
+            }
+        }
+        catch (Exception ex)
+        {
+            ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "GetAllBlogDetailsWithFilters", ex.Message);
+        }
+        return BlogDetails;
+    }
+    public static List<BlogDetails> GetAllBlogDetailsWithUrl(SqlConnection conSQ, string Url)
+    {
+        List<BlogDetails> categories = new List<BlogDetails>();
+        try
+        {
+            string query = "Select * from BlogDetails where Status=@Status and BlogURL=@BlogURL ";
+            using (SqlCommand cmd = new SqlCommand(query, conSQ))
+            {
+                cmd.Parameters.AddWithValue("@BlogURL", SqlDbType.Int).Value = Url;
+                cmd.Parameters.AddWithValue("@Status", SqlDbType.NVarChar).Value = "Active";
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                categories = (from DataRow dr in dt.Rows
+                              select new BlogDetails()
+                              {
+                                  Id = Convert.ToInt32(Convert.ToString(dr["Id"])),
+                                  BlogImage = Convert.ToString(dr["BlogImage"]),
+                                  ThumbImage = Convert.ToString(dr["ThumbImage"]),
+                                  BlogTitle = Convert.ToString(dr["BlogTitle"]),
+                                  BlogURL = Convert.ToString(dr["BlogURL"]),
+                                  PostedBy = Convert.ToString(dr["PostedBy"]),
+                                  PageTitle = Convert.ToString(dr["PageTitle"]),
+                                  MetaKeys = Convert.ToString(dr["MetaKeys"]),
+                                  MetaDescription = Convert.ToString(dr["MetaDescription"]),
+                                  FullDescription = Convert.ToString(dr["FullDescription"]),
+                                  Tag = Convert.ToString(dr["Tag"]),
+                                  AddedOn = Convert.ToDateTime(Convert.ToString(dr["AddedOn"])),
+                                  PostedOn = Convert.ToString(dr["PostedOn"]),
+                                  AddedBy = Convert.ToString(dr["AddedBy"]),
+                                  AddedIp = Convert.ToString(dr["AddedIp"]),
+                                  Status = Convert.ToString(dr["Status"]),
+                                 
+                              }).ToList();
+            }
+        }
+        catch (Exception ex)
+        {
+            ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "GetAllBlogDetailsWithUrl", ex.Message);
+        }
+        return categories;
+    }
+    public static BlogDetails GetPrevBlogDetails(SqlConnection conSQ, int id)
+    {
+        BlogDetails categories = new BlogDetails();
+        try
+        {
+            string query = "Select BlogTitle,BlogURL from BlogDetails where Status=@Status and id < @Id Order by Id Desc ";
+            using (SqlCommand cmd = new SqlCommand(query, conSQ))
+            {
+                cmd.Parameters.AddWithValue("@Status", SqlDbType.NVarChar).Value = "Active";
+                cmd.Parameters.AddWithValue("@Id", SqlDbType.NVarChar).Value = id;
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                categories = (from DataRow dr in dt.Rows
+                              select new BlogDetails()
+                              {
+                                  BlogTitle = Convert.ToString(dr["BlogTitle"]),
+                                  BlogURL = Convert.ToString(dr["BlogURL"]),
+                              }).FirstOrDefault();
+            }
+        }
+        catch (Exception ex)
+        {
+            ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "GetPrevBlogDetails", ex.Message);
+        }
+        return categories;
+    }
+    public static BlogDetails GetNextBlogDetails(SqlConnection conSQ, int id)
+    {
+        BlogDetails categories = new BlogDetails();
+        try
+        {
+            string query = "Select BlogTitle,BlogURL from BlogDetails where Status=@Status and id > @Id Order by Id";
+            using (SqlCommand cmd = new SqlCommand(query, conSQ))
+            {
+                cmd.Parameters.AddWithValue("@Status", SqlDbType.NVarChar).Value = "Active";
+                cmd.Parameters.AddWithValue("@Id", SqlDbType.NVarChar).Value = id;
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                categories = (from DataRow dr in dt.Rows
+                              select new BlogDetails()
+                              {
+                                  BlogTitle = Convert.ToString(dr["BlogTitle"]),
+                                  BlogURL = Convert.ToString(dr["BlogURL"]),
+                              }).FirstOrDefault();
+            }
+        }
+        catch (Exception ex)
+        {
+            ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "GetNextBlogDetails", ex.Message);
+        }
+        return categories;
     }
 }

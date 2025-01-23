@@ -208,4 +208,38 @@ public class manageCapabilities
         }
         return ListOfcaps;
     }
+    public static List<manageCapabilities> GetAllCapabilitiesProductGuid(SqlConnection conSQ, string ProductGuid)
+    {
+        var ListOfDatasheets = new List<manageCapabilities>();
+        try
+        {
+            string query = "Select * from manageCapabilities where Status=@Status and ProductGuid=@ProductGuid Order by Id ";
+            using (SqlCommand cmd = new SqlCommand(query, conSQ))
+            {
+                cmd.Parameters.AddWithValue("@Status", SqlDbType.NVarChar).Value = "Active";
+                cmd.Parameters.AddWithValue("@ProductGuid", SqlDbType.NVarChar).Value = ProductGuid;
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                ListOfDatasheets = (from DataRow dr in dt.Rows
+                                    select new manageCapabilities()
+                                    {
+                                        Id = Convert.ToInt32(Convert.ToString(dr["Id"])),
+                                        ProductGuid = Convert.ToString(dr["ProductGuid"]),
+                                        Title = Convert.ToString(dr["Title"]),
+                                        ThumbImage = Convert.ToString(dr["ThumbImage"]),
+                                        FullDesc = Convert.ToString(dr["FullDesc"]),
+                                        AddedOn = Convert.ToDateTime(Convert.ToString(dr["AddedOn"])),
+                                        AddedIp = Convert.ToString(dr["AddedIP"]),
+                                        AddedBy = Convert.ToString(dr["AddedBy"]),
+                                        Status = Convert.ToString(dr["Status"])
+                                    }).ToList();
+            }
+        }
+        catch (Exception ex)
+        {
+            ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "GetAllCapabilitiesProductGuid", ex.Message);
+        }
+        return ListOfDatasheets;
+    }
 }

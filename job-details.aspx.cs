@@ -13,7 +13,7 @@ using System.Web.UI.WebControls;
 public partial class job_details : System.Web.UI.Page
 {
     SqlConnection conSQ = new SqlConnection(ConfigurationManager.ConnectionStrings["conSQ"].ConnectionString);
-    public string strJobTitle = "", strEducation = "", strJobLocation = "", strJobDescription = "", strKeyResponsibilities = "", strSkills = "", strEmploymentType = "", strtime = "";
+    public string strJobTitle = "", strEducation = "", strJobLocation = "", strJobDescription = "", strKeyResponsibilities = "", strSkills = "", strEmploymentType = "", strtime = "",strImage="";
     protected void Page_Load(object sender, EventArgs e)
     {
         var jurl = Convert.ToString(RouteData.Values["jurl"]);
@@ -81,6 +81,7 @@ public partial class job_details : System.Web.UI.Page
                 strSkills = Job.KeyResponsibilities;
                 strEmploymentType = Job.EmploymentType;
                 strtime = ago;
+                strImage = Job.ThumbImage;
 
             }
         }
@@ -166,8 +167,8 @@ public partial class job_details : System.Web.UI.Page
                 lblStatus.Text = "true";
                 txtname.Text = txtemail.Text = txtcontact.Text = txtexperience.Text = txtlocation.Text = txtcompany.Text = txtWriteYourMessage.Text = "";
                 ddlNoticePeriod.ClearSelection();
-                lblStatus.Text = "Job applied successfully";
-                //Response.Redirect("thank-you.aspx");
+               lblStatus.Text = "Job applied successfully";
+                //Response.Redirect("thankyou.aspx");
 
             }
             else

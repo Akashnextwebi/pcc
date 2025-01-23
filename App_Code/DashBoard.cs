@@ -228,7 +228,7 @@ public class DashBoard
         List<ContactUs> categories = new List<ContactUs>();
         try
         {
-            string query = "SELECT Top 10 * FROM ContactUs ORDER BY Id DESC ";
+            string query = "SELECT Top 10 * FROM ContactUs where Status !='Deleted' Order By id desc ";
             using (SqlCommand cmd = new SqlCommand(query, conSQ))
             {
                 SqlDataAdapter sda = new SqlDataAdapter(cmd);
@@ -256,6 +256,75 @@ public class DashBoard
         }
         return categories;
 
+    }
+    public static decimal NoOfWhitePapers(SqlConnection conSQ)
+    {
+        decimal x = 0;
+        try
+        {
+            string query = " Select Count(Id) as cntB from WhitePaperDetails Where  Status != 'Deleted'";
+            SqlCommand cmd = new SqlCommand(query, conSQ);
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            if (dt.Rows.Count > 0)
+            {
+                decimal cnt = 0;
+                decimal.TryParse(Convert.ToString(dt.Rows[0]["cntB"]), out cnt);
+                x = cnt;
+            }
+        }
+        catch (Exception ex)
+        {
+            ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "NoOfWhitePapers", ex.Message);
+        }
+        return x;
+    }
+    public static decimal NoOfApplications(SqlConnection conSQ)
+    {
+        decimal x = 0;
+        try
+        {
+            string query = " Select Count(Id) as cntB from ApplyJobs Where  Status != 'Deleted'";
+            SqlCommand cmd = new SqlCommand(query, conSQ);
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            if (dt.Rows.Count > 0)
+            {
+                decimal cnt = 0;
+                decimal.TryParse(Convert.ToString(dt.Rows[0]["cntB"]), out cnt);
+                x = cnt;
+            }
+        }
+        catch (Exception ex)
+        {
+            ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "NoOfApplications", ex.Message);
+        }
+        return x;
+    }
+    public static decimal NoOfContacts(SqlConnection conSQ)
+    {
+        decimal x = 0;
+        try
+        {
+            string query = " Select Count(Id) as cntB from ContactUs Where  Status != 'Deleted'";
+            SqlCommand cmd = new SqlCommand(query, conSQ);
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            if (dt.Rows.Count > 0)
+            {
+                decimal cnt = 0;
+                decimal.TryParse(Convert.ToString(dt.Rows[0]["cntB"]), out cnt);
+                x = cnt;
+            }
+        }
+        catch (Exception ex)
+        {
+            ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "NoOfContacts", ex.Message);
+        }
+        return x;
     }
 }
 

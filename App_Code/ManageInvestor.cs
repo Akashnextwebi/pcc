@@ -225,4 +225,71 @@ public class ManageInvestor
             return 0;
         }
     }
+    public static List<ManageInvestor> GetAllInvestors(SqlConnection _con)
+    {
+        List<ManageInvestor> Investor = new List<ManageInvestor>();
+        try
+        {
+            string query = "Select *,(Select UserName from CreateUser Where UserGuid=ManageInvestor.AddedBy) as UpdatedBy from ManageInvestor where Status=@Status Order by Id ";
+            using (SqlCommand cmd = new SqlCommand(query, _con))
+            {
+                cmd.Parameters.AddWithValue("@Status", SqlDbType.NVarChar).Value = "Active";
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                Investor = (from DataRow dr in dt.Rows
+                       select new ManageInvestor()
+                       {
+                           Id = Convert.ToInt32(Convert.ToString(dr["Id"])),
+                           InvestorTitle = Convert.ToString(dr["InvestorTitle"]),
+                           InvestorUrl = Convert.ToString(dr["InvestorUrl"]),
+                           AddedOn = Convert.ToDateTime(Convert.ToString(dr["AddedOn"])),
+                           AddedIp = Convert.ToString(dr["AddedIp"]),
+                           AddedBy = Convert.ToString(dr["AddedBy"]),
+                           Status = Convert.ToString(dr["Status"])
+                       }).ToList();
+            }
+        }
+        catch (Exception ex)
+        {
+            ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "GetAllInvestors", ex.Message);
+        }
+        return Investor;
+    }
+    public static ManageInvestor getInvestordetailsByUrl(SqlConnection _con, string InvestorUrl)
+    {
+        ManageInvestor inv = new ManageInvestor();
+        try
+        {
+            string query = "Select top 1 * from ManageInvestor where Status='Active' and InvestorUrl=@InvestorUrl";
+            using (SqlCommand cmd = new SqlCommand(query, _con))
+            {
+                cmd.Parameters.AddWithValue("@InvestorUrl", SqlDbType.Int).Value = InvestorUrl;
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                if (dt.Rows.Count > 0)
+                {
+                    inv.Id = Convert.ToInt32(Convert.ToString(dt.Rows[0]["Id"]));
+                    inv.InvestorTitle = Convert.ToString(dt.Rows[0]["InvestorTitle"]);
+                    inv.InvestorUrl = Convert.ToString(dt.Rows[0]["InvestorUrl"]);
+                    inv.AddedOn = Convert.ToDateTime(Convert.ToString(dt.Rows[0]["AddedOn"]));
+                    inv.AddedBy = Convert.ToString(dt.Rows[0]["AddedBy"]);
+                    inv.AddedIp = Convert.ToString(dt.Rows[0]["AddedIp"]);
+                    inv.Status = Convert.ToString(dt.Rows[0]["Status"]);
+
+                }
+                else
+                {
+                    inv = null;
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "getInvestordetailsByUrl", ex.Message);
+        }
+        return inv;
+    }
+
 }

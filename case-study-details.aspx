@@ -418,7 +418,7 @@
                                                 </table>
                                                 <ul class="download-btns">
                                                     <li>
-                                                        <a href="<%=strpdf %>f" download="#">
+                                                        <a href="/<%=strpdf %>" download="#">
                                                             <img src="/assets/img/inner-pages/Vector/pdf-icon.svg" alt="">
                                                             Download Pdf
 </a>
@@ -612,7 +612,8 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="details-navigation">
-                            <div class="single-navigation">
+                            <%=StrPrev %>
+                           <%-- <div class="single-navigation">
                                 <a class="arrow" href="#blog-details">
                                     <svg width="9" height="15" viewBox="0 0 8 13" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M0 6.50008L8 0L2.90909 6.50008L8 13L0 6.50008Z"></path>
@@ -622,9 +623,9 @@
                                     <a href="#blog-details">Prev Post</a>
                                     <h6><a href="#blog-details">Consulting vs. In-House Expertise: Finding the Right Balance</a></h6>
                                 </div>
-                            </div>
-                           
-                            <div class="single-navigation two text-end">
+                            </div>--%>
+                           <%=StrNext %>
+                           <%-- <div class="single-navigation two text-end">
                                 <div class="content">
                                     <a href="#blog-details">Next Post</a>
                                     <h6><a href="#blog-details">Consulting Industry Adapts to the Changing Business Landscape</a></h6>
@@ -634,7 +635,7 @@
                                         <path d="M8 6.50008L0 0L5.09091 6.50008L0 13L8 6.50008Z"></path>
                                     </svg>
                                 </a>
-                            </div>
+                            </div>--%>
                         </div>
                     </div>
                 </div>

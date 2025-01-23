@@ -16,6 +16,7 @@ public partial class Admin_add_whitepaper : System.Web.UI.Page
     {
         if (!IsPostBack)
         {
+            BindCapability();
             if (Request.QueryString["id"] != null)
             {
                 GetWhitepapers();
@@ -39,6 +40,7 @@ public partial class Admin_add_whitepaper : System.Web.UI.Page
                 txtPostedOn.Text = WD.PostedOn;
                 txtPostedOn.Text= WD.PostedOn;
                 txttag.Text= WD.Tag;
+                ddlCapability.SelectedValue = WD.Capability;
                 txtheading.Text = WD.WhitePaperHeading;
                 txtDesc.Text = WD.FullDesc;
                 txtPageTitle.Text = WD.PageTitle;
@@ -65,6 +67,68 @@ public partial class Admin_add_whitepaper : System.Web.UI.Page
         {
             ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "GetWhitepapers", ex.Message);
         }
+    }
+    public void BindCapability()
+    {
+        try
+        {
+            List<Capability> loc = Capability.GetAllCapability(conSQ);
+            if (loc != null && loc.Count() > 0)
+            {
+                ddlCapability.DataSource = loc;
+                ddlCapability.DataTextField = "CapabilityName";
+                ddlCapability.DataValueField = "Id";
+                ddlCapability.DataBind();
+                ddlCapability.Items.Insert(0, new ListItem { Value = "0", Text = "Select Capability" });
+            }
+        }
+        catch (Exception ex)
+        {
+            ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "BindCapability", ex.Message);
+        }
+    }
+    public void GetCapability(string loc)
+    {
+        try
+        {
+            foreach (string str in loc.Split('|'))
+            {
+                foreach (ListItem li in ddlCapability.Items)
+                {
+                    if (str.Trim() == li.Value.Trim())
+                    {
+                        li.Selected = true;
+                    }
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "GetCapability", ex.Message);
+        }
+    }
+    public string SaveCapability()
+    {
+        string x = "";
+        try
+        {
+
+            foreach (ListItem li in ddlCapability.Items)
+            {
+                if (li.Selected)
+                {
+                    x += li.Value + "|";
+                }
+            }
+            x = x.TrimEnd('|');
+
+        }
+        catch (Exception ex)
+        {
+            ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "SaveCapability", ex.Message);
+
+        }
+        return x;
     }
     protected void btnSave_Click(object sender, EventArgs e)
     {
@@ -117,6 +181,7 @@ public partial class Admin_add_whitepaper : System.Web.UI.Page
                 WD.PostedOn = txtPostedOn.Text;
                 WD.WhitePaperHeading = txtheading.Text;
                 WD.Tag = txttag.Text;
+                WD.Capability = SaveCapability();
                 WD.ThumbImage = UploadThumbImage();
                 WD.DetailImage = UploadDetailImage();
                 WD.BannerImage = UploadBannerImage();

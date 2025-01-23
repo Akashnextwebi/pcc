@@ -41,6 +41,7 @@ public partial class Admin_add_blogs : System.Web.UI.Page
                 txtPageTitle.Text = BD.PageTitle;
                 txtPostedBy.Text = BD.PostedBy;
                 txtPostedOn.Text = BD.PostedOn;
+                txttag.Text=BD.Tag;
                 if (BD.ThumbImage != "")
                 {
                     strThumbImage = "<img src='/" + BD.ThumbImage + "' style='max-height:60px;' />";
@@ -107,6 +108,7 @@ public partial class Admin_add_blogs : System.Web.UI.Page
                 BD.MetaDescription = txtMetaDesc.Text;
                 BD.MetaKeys = txtMetaKey.Text;
                 BD.PageTitle = txtPageTitle.Text;
+                BD.Tag = txttag.Text;
                 BD.AddedIp = CommonModel.IPAddress();
                 BD.AddedOn = TimeStamps.UTCTime();
                 BD.PostedOn = txtPostedOn.Text;
@@ -135,7 +137,7 @@ public partial class Admin_add_blogs : System.Web.UI.Page
                         if (result > 0)
                         {
                             ScriptManager.RegisterStartupScript(this, this.GetType(), "Message", "Snackbar.show({pos: 'top-right',text: 'Blog Added successfully.',actionTextColor: '#fff',backgroundColor: '#008a3d'});", true);
-                            txtDesc.Text = txtMetaDesc.Text = txtName.Text = txtUrl.Text = txtPageTitle.Text = txtMetaKey.Text = "";
+                            txtDesc.Text = txtMetaDesc.Text = txtName.Text = txtUrl.Text = txtPageTitle.Text = txtMetaKey.Text = txttag.Text = txtPostedBy.Text= txtPostedOn.Text="";
                             strThumbImage = strBlogImage = "";
                         }
                         else

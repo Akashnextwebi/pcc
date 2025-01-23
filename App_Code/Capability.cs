@@ -19,6 +19,10 @@ public class Capability
     public int Id {  get; set; }
     public string CapabilityName { get; set; }
     public string CapabilityUrl { get; set; }
+    public string BannerTitle {  get; set; }
+    public string DescHeading {  get; set; }
+    public string FullDesc { get; set; }
+    public string BannerImage { get; set; }
     public DateTime AddedOn { get; set; }
     public string AddedIp {  get; set; }
     public string AddedBy { get; set; }
@@ -46,6 +50,10 @@ public class Capability
                                   Id = Convert.ToInt32(Convert.ToString(dr["Id"])),
                                   CapabilityName = Convert.ToString(dr["CapabilityName"]),
                                   CapabilityUrl = Convert.ToString(dr["CapabilityUrl"]),
+                                  BannerTitle = Convert.ToString(dr["BannerTitle"]),
+                                  DescHeading = Convert.ToString(dr["DescHeading"]),
+                                  FullDesc = Convert.ToString(dr["FullDesc"]),
+                                  BannerImage = Convert.ToString(dr["BannerImage"]),
                                   AddedOn = Convert.ToDateTime(Convert.ToString(dr["AddedOn"])),
                                   AddedBy = Convert.ToString(dr["AddedBy"]),
                                   AddedIp = Convert.ToString(dr["AddedIp"]),
@@ -59,17 +67,23 @@ public class Capability
         }
         return categories;
     }
-    public static int UpdateCapabilityDetails(SqlConnection conSQ, Capability cat)
+   
+    public int UpdateCapabilityDetails(SqlConnection conSQ, Capability cat)
     {
+        
         int result = 0;
         try
         {
-            string query = "Update Capability Set CapabilityName=@CapabilityName,CapabilityUrl=@CapabilityUrl,AddedOn=@AddedOn,AddedIp=@AddedIp,AddedBy=@AddedBy,Status=@Status Where Id=@Id ";
+            string query = "Update Capability Set CapabilityName=@CapabilityName,CapabilityUrl=@CapabilityUrl,BannerTitle=@BannerTitle,DescHeading=@DescHeading,FullDesc=@FullDesc,BannerImage=@BannerImage,AddedOn=@AddedOn,AddedIp=@AddedIp,AddedBy=@AddedBy,Status=@Status Where Id=@Id ";
             using (SqlCommand cmd = new SqlCommand(query, conSQ))
             {
                 cmd.Parameters.AddWithValue("@id", SqlDbType.Int).Value = cat.Id;
                 cmd.Parameters.AddWithValue("@CapabilityName", SqlDbType.NVarChar).Value = cat.CapabilityName;
                 cmd.Parameters.AddWithValue("@CapabilityUrl", SqlDbType.NVarChar).Value = cat.CapabilityUrl;
+                cmd.Parameters.AddWithValue("@BannerTitle", SqlDbType.NVarChar).Value = cat.BannerTitle;
+                cmd.Parameters.AddWithValue("@DescHeading", SqlDbType.NVarChar).Value = cat.DescHeading;
+                cmd.Parameters.AddWithValue("@FullDesc", SqlDbType.NVarChar).Value = cat.FullDesc;
+                cmd.Parameters.AddWithValue("@BannerImage", SqlDbType.NVarChar).Value = cat.BannerImage;
                 cmd.Parameters.AddWithValue("@AddedOn", SqlDbType.NVarChar).Value = cat.AddedOn;
                 cmd.Parameters.AddWithValue("@AddedIp", SqlDbType.NVarChar).Value = cat.AddedIp;
                 cmd.Parameters.AddWithValue("@AddedBy", SqlDbType.NVarChar).Value = cat.AddedBy;
@@ -91,11 +105,15 @@ public class Capability
 
         try
         {
-            string query = "Insert Into Capability (CapabilityName,CapabilityUrl,AddedOn,AddedBy, AddedIp,Status) values(@CapabilityName,@CapabilityUrl,@AddedOn,@AddedBy,@AddedIp,@Status) ";
+            string query = "Insert Into Capability (CapabilityName,CapabilityUrl,BannerTitle,DescHeading,FullDesc,BannerImage,AddedOn,AddedBy, AddedIp,Status) values(@CapabilityName,@CapabilityUrl,@BannerTitle,@DescHeading,@FullDesc,@BannerImage,@AddedOn,@AddedBy,@AddedIp,@Status) ";
             using (SqlCommand cmd = new SqlCommand(query, conSQ))
             {
                 cmd.Parameters.AddWithValue("@CapabilityName", SqlDbType.NVarChar).Value = cat.CapabilityName;
                 cmd.Parameters.AddWithValue("@CapabilityUrl", SqlDbType.NVarChar).Value = cat.CapabilityUrl;
+                cmd.Parameters.AddWithValue("@BannerTitle", SqlDbType.NVarChar).Value = cat.BannerTitle;
+                cmd.Parameters.AddWithValue("@DescHeading", SqlDbType.NVarChar).Value = cat.DescHeading;
+                cmd.Parameters.AddWithValue("@FullDesc", SqlDbType.NVarChar).Value = cat.FullDesc;
+                cmd.Parameters.AddWithValue("@BannerImage", SqlDbType.NVarChar).Value = cat.BannerImage;
                 cmd.Parameters.AddWithValue("@AddedOn", SqlDbType.NVarChar).Value = cat.AddedOn;
                 cmd.Parameters.AddWithValue("@AddedIp", SqlDbType.NVarChar).Value = cat.AddedIp;
                 cmd.Parameters.AddWithValue("@AddedBy", SqlDbType.NVarChar).Value = cat.AddedBy;
@@ -129,6 +147,10 @@ public class Capability
                             Id = Convert.ToInt32(Convert.ToString(dr["Id"])),
                             CapabilityName = Convert.ToString(dr["CapabilityName"]),
                             CapabilityUrl = Convert.ToString(dr["CapabilityUrl"]),
+                            BannerTitle = Convert.ToString(dr["BannerTitle"]),
+                            DescHeading = Convert.ToString(dr["DescHeading"]),
+                            FullDesc = Convert.ToString(dr["FullDesc"]),
+                            BannerImage = Convert.ToString(dr["BannerImage"]),
                             AddedOn = Convert.ToDateTime(Convert.ToString(dr["AddedOn"])),
                             AddedBy = Convert.ToString(dr["AddedBy"]),
                             AddedIp = Convert.ToString(dr["AddedIp"]),
@@ -214,6 +236,10 @@ public class Capability
                                        Id = Convert.ToInt32(Convert.ToString(dr["Id"])),
                                        CapabilityName = Convert.ToString(dr["CapabilityName"]),
                                        CapabilityUrl = Convert.ToString(dr["CapabilityUrl"]),
+                                       BannerTitle = Convert.ToString(dr["BannerTitle"]),
+                                       DescHeading = Convert.ToString(dr["DescHeading"]),
+                                       FullDesc = Convert.ToString(dr["FullDesc"]),
+                                       BannerImage = Convert.ToString(dr["BannerImage"]),
                                        AddedOn = Convert.ToDateTime(Convert.ToString(dr["AddedOn"])),
                                        AddedBy = Convert.ToString(dr["AddedBy"]),
                                        AddedIp = Convert.ToString(dr["AddedIp"]),
@@ -226,5 +252,75 @@ public class Capability
             ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "GetAllCapability", ex.Message);
         }
         return ListOfCapability;
+    }
+    public static List<Capability> GetCompetenciesDetails(SqlConnection conSQ)
+    {
+        List<Capability> categories = new List<Capability>();
+        try
+        {
+            string query = "Select * from Capability where status = 'Active' Order by Id Desc";
+            using (SqlCommand cmd = new SqlCommand(query, conSQ))
+            {
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                categories = (from DataRow dr in dt.Rows
+                              select new Capability()
+                              {
+                                  Id = Convert.ToInt32(Convert.ToString(dr["Id"])),
+                                  CapabilityName = Convert.ToString(dr["CapabilityName"]),
+                                  CapabilityUrl = Convert.ToString(dr["CapabilityUrl"]),
+                                  BannerTitle = Convert.ToString(dr["BannerTitle"]),
+                                  DescHeading = Convert.ToString(dr["DescHeading"]),
+                                  FullDesc = Convert.ToString(dr["FullDesc"]),
+                                  BannerImage = Convert.ToString(dr["BannerImage"]),
+                                  AddedOn = Convert.ToDateTime(Convert.ToString(dr["AddedOn"])),
+                                  AddedBy = Convert.ToString(dr["AddedBy"]),
+                                  AddedIp = Convert.ToString(dr["AddedIp"]),
+                                  Status = Convert.ToString(dr["Status"])
+                              }).ToList();
+            }
+        }
+        catch (Exception ex)
+        {
+            ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "GetCompetenciesDetails", ex.Message);
+        }
+        return categories;
+    }
+    public static Capability GetAllCapabilityWithUrl(SqlConnection conSQ, string Url)
+    {
+        var Cap = new Capability();
+        try
+        {
+            string query = "Select * from Capability where Status!=@Status and CapabilityUrl=@CapabilityUrl ";
+            using (SqlCommand cmd = new SqlCommand(query, conSQ))
+            {
+                cmd.Parameters.AddWithValue("@CapabilityUrl", SqlDbType.Int).Value = Url;
+                cmd.Parameters.AddWithValue("@Status", SqlDbType.NVarChar).Value = "Deleted";
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                Cap = (from DataRow dr in dt.Rows
+                              select new Capability()
+                              {
+                                  Id = Convert.ToInt32(Convert.ToString(dr["Id"])),
+                                  CapabilityName = Convert.ToString(dr["CapabilityName"]),
+                                  CapabilityUrl = Convert.ToString(dr["CapabilityUrl"]),
+                                  BannerTitle = Convert.ToString(dr["BannerTitle"]),
+                                  DescHeading = Convert.ToString(dr["DescHeading"]),
+                                  FullDesc = Convert.ToString(dr["FullDesc"]),
+                                  BannerImage = Convert.ToString(dr["BannerImage"]),
+                                  AddedOn = Convert.ToDateTime(Convert.ToString(dr["AddedOn"])),
+                                  AddedBy = Convert.ToString(dr["AddedBy"]),
+                                  AddedIp = Convert.ToString(dr["AddedIp"]),
+                                  Status = Convert.ToString(dr["Status"])
+                              }).FirstOrDefault();
+            }
+        }
+        catch (Exception ex)
+        {
+            ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "GetAllCapabilityWithUrl", ex.Message);
+        }
+        return Cap;
     }
 }

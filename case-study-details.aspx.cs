@@ -12,7 +12,7 @@ using System.Web.UI.WebControls;
 public partial class case_study_details : System.Web.UI.Page
 {
     SqlConnection conSQ = new SqlConnection(ConfigurationManager.ConnectionStrings["conSQ"].ConnectionString);
-    public string strovtitle = "", strovdesc = "", strpsdesc = "", strpsImage = "", stroadesc = "", stroaImage = "", strtechnologytitle = "", strtechnologydesc = "", strdigitaltitle = "", strdigitaldesc = "", strcybertitle = "", strcyberdesc = "",strcategory="",strclint="",strlocation="",strdate="",strpdf="", strdetail="", strcasestudyname="";
+    public string strovtitle = "", strovdesc = "", strpsdesc = "", strpsImage = "", stroadesc = "", stroaImage = "", strtechnologytitle = "", strtechnologydesc = "", strdigitaltitle = "", strdigitaldesc = "", strcybertitle = "", strcyberdesc = "",strcategory="",strclint="",strlocation="",strdate="",strpdf="", strdetail="", strcasestudyname="", StrPrev="", StrNext="",strid="";
     protected void Page_Load(object sender, EventArgs e)
     {
         var curl = Convert.ToString(RouteData.Values["curl"]);
@@ -66,11 +66,53 @@ public partial class case_study_details : System.Web.UI.Page
                 strpdf = cs.UploadPDF;
                 strdetail = cs.CSDetailImage;
                 strcasestudyname=cs.CaseStudyName;
+                strid=cs.Id.ToString();
+                OtherCasestudy(cs.Id);
             }
         }
         catch (Exception ex)
         {
             ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "BindCasestudiesDetails", ex.Message);
+        }
+    }
+    public void OtherCasestudy(int id)
+    {
+        try
+        {
+            var prev = CaseStudy.GetPrevCasestudyDetails(conSQ, id);
+            var next = CaseStudy.GetNextCasestudyDetails(conSQ, id);
+            if (prev != null)
+            {
+                StrPrev += @"<div class='single-navigation'>
+    <a class='arrow' href='/Casestudy/" + prev.CaseStudyUrl + @"'>
+        <svg width='9' height='15' viewBox='0 0 8 13' xmlns='http://www.w3.org/2000/svg'>
+            <path d='M0 6.50008L8 0L2.90909 6.50008L8 13L0 6.50008Z'></path>
+        </svg>
+    </a>
+    <div class='content'>
+        <a href='/Casestudy/" + prev.CaseStudyUrl + @"'>Prev Post</a>
+        <h6><a href='/Casestudy/" + prev.CaseStudyUrl + @"'>Consulting vs. In-House Expertise: Finding the Right Balance</a></h6>
+    </div>
+</div>";
+            }
+            if (next != null)
+            {
+                StrNext += @"<div class='single-navigation two text-end'>
+     <div class='content'>
+         <a href='/Casestudy/" + next.CaseStudyUrl + @"'>Next Post</a>
+         <h6><a href='/Casestudy/" + next.CaseStudyUrl + @"'>Consulting Industry Adapts to the Changing Business Landscape</a></h6>
+     </div>
+     <a class='arrow' href='/Casestudy/" + next.CaseStudyUrl + @"'>
+         <svg width='9' height='15' viewBox='0 0 8 13' xmlns='http://www.w3.org/2000/svg'>
+             <path d='M8 6.50008L0 0L5.09091 6.50008L0 13L8 6.50008Z'></path>
+         </svg>
+     </a>
+ </div>";
+            }
+        }
+        catch (Exception ex)
+        {
+            ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "OtherCasestudy", ex.Message);
         }
     }
 }

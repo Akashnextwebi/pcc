@@ -177,7 +177,8 @@
                  <li class="has-sub">
                    <a href="#">Core Competencies</a>
                    <ul>
-                     <li><a href="/advanced-data-solutions.aspx">Advance Data Solutions</a></li>
+                       <%=strsolution %>
+                     <%--<li><a href="/advanced-data-solutions.aspx">Advance Data Solutions</a></li>
                      <li>
                        <a href="#">Advance Time & Frequency Solutions</a>
                      </li>
@@ -188,7 +189,7 @@
                      </li>
                      <li>
                        <a href="#">Advance Indigenization & Customization</a>
-                     </li>
+                     </li>--%>
                    </ul>
                  </li>
                  <li class="has-sub">
@@ -475,13 +476,13 @@
                     },
                 }
             });
-            document.querySelector(".next-5").addEventListener("click", function () {
-                swiper.slideNext(); // Move slider to the next slide
-            });
+            //document.querySelector(".next-5").addEventListener("click", function () {
+            //    swiper.slideNext(); // Move slider to the next slide
+            //});
 
-            document.querySelector(".prev-5").addEventListener("click", function () {
-                swiper.slidePrev(); // Move slider to the previous slide
-            });
+            //document.querySelector(".prev-5").addEventListener("click", function () {
+            //    swiper.slidePrev(); // Move slider to the previous slide
+            //});
         </script>
      <script>
          var swiper = new Swiper(".mySwiper", {

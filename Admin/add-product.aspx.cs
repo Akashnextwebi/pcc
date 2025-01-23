@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Activities.Expressions;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
@@ -38,16 +39,17 @@ public partial class Admin_add_product : System.Web.UI.Page
                 txtproductName.Text = pro.ProductName;
                 txtUrl.Text = pro.ProductUrl;
                 txtcode.Text = pro.SKUCode;
-                txtdatasheet.Text = pro.DatasheetName;             
+                //txtdatasheet.Text = pro.DatasheetName;             
                 ddlCapabilityType.SelectedValue = pro.Capability;
                 BindSubCapability();
                 ddlSubcapability.SelectedValue = pro.SubCapability;
                 ddlindustry.SelectedValue= pro.Industry;
-                txtlink.Text = pro.DatasheetLink;
+               // txtlink.Text = pro.DatasheetLink;
                 txtDesc.Text = pro.FullDesc;
                 txtMetaDesc.Text = pro.MetaDesc;
                 txtMetaKey.Text = pro.MetaKeys;
                 txtPageTitle.Text = pro.PageTitle;
+                chkenquiry.Checked = pro.Enquiry == "Yes" ? true : false;
 
                 if (pro.ThumbImage != "")
                 {
@@ -143,7 +145,7 @@ public partial class Admin_add_product : System.Web.UI.Page
                 ddlindustry.DataTextField = "IndustryName";
                 ddlindustry.DataValueField = "Id";
                 ddlindustry.DataBind();
-                ddlindustry.Items.Insert(0, new ListItem { Value = "0", Text = "Select IndustryName" });
+                ddlindustry.Items.Insert(0, new ListItem { Value = "0", Text = "Select Industry Name" });
             }
         }
         catch (Exception ex)
@@ -329,8 +331,9 @@ public partial class Admin_add_product : System.Web.UI.Page
                 pro.ProductName = txtproductName.Text.Trim();
                 pro.ProductUrl = txtUrl.Text.Trim();
                 pro.SKUCode = txtcode.Text.Trim();
-                pro.DatasheetName = txtdatasheet.Text.Trim();
-                pro.DatasheetLink = txtlink.Text.Trim();
+                pro.DatasheetName = "";
+                pro.DatasheetLink = "";
+                pro.Enquiry = chkenquiry.Checked ? "Yes" : "No";
                 pro.Capability = SaveCapability();
                 pro.SubCapability = SaveSubCapability();
                 pro.Industry = SaveIndustry();
@@ -374,8 +377,8 @@ public partial class Admin_add_product : System.Web.UI.Page
                         if (result > 0)
                         {
                             ScriptManager.RegisterStartupScript(this, this.GetType(), "Message", "Snackbar.show({pos: 'top-right',text: 'Product Added successfully.',actionTextColor: '#fff',backgroundColor: '#008a3d'});", true);
-                            txtproductName.Text = txtUrl.Text = txtcode.Text = txtdatasheet.Text = txtlink.Text = txtDesc.Text = txtMetaDesc.Text = txtMetaKey.Text = txtPageTitle.Text = ddlCapabilityType.SelectedValue = ddlSubcapability.SelectedValue = "";
-
+                            txtproductName.Text = txtUrl.Text = txtcode.Text =  txtDesc.Text = txtMetaDesc.Text = txtMetaKey.Text = txtPageTitle.Text = ddlCapabilityType.SelectedValue = ddlSubcapability.SelectedValue = "";
+                            chkenquiry.Checked = false;
                         }
                         else
                         {

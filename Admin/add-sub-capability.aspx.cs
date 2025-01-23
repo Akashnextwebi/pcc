@@ -11,7 +11,7 @@ using System.Web.UI.WebControls;
 public partial class Admin_add_sub_capability : System.Web.UI.Page
 {
     SqlConnection conSQ = new SqlConnection(ConfigurationManager.ConnectionStrings["conSQ"].ConnectionString);
-    public string strThumbImage = "";
+    public string strThumbImage = "", strBannerImage="";
     protected void Page_Load(object sender, EventArgs e)
     {
         if (!IsPostBack)
@@ -36,6 +36,16 @@ public partial class Admin_add_sub_capability : System.Web.UI.Page
                 txtsubcapability.Text = BD.SubCapabilityName;
                 txtUrl.Text = BD.SubCapabilityUrl;
                 txttag.Text=BD.Tag;
+                txtbtitle.Text = BD.BannerTitle;
+                txtheading.Text = BD.DescHeading;
+                txtfulldesc.Text = BD.FullDesc;
+
+                if (BD.BannerImage != "")
+                {
+                    lblBanner.Text = BD.BannerImage;
+                    strBannerImage = @"<a href='/" + BD.BannerImage + @"' target='_blank'><img src='/" + BD.BannerImage + @"' width='60px'></a>";
+
+                }
                 if (BD.ThumbImage != "")
                 {
                     lblThumb.Text = BD.ThumbImage;
@@ -138,6 +148,17 @@ public partial class Admin_add_sub_capability : System.Web.UI.Page
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "Message", "Snackbar.show({pos: 'top-right',text: 'Invalid image size.Please upload correct resolution image for Thumb image',actionTextColor: '#fff',backgroundColor: '#ea1c1c'});", true);
                     return;
                 }
+                var BannerImg = CheckBannerFormat();
+                if (BannerImg == "Format")
+                {
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "Message", "Snackbar.show({pos: 'top-right',text: 'Invalid Banner image format. Please upload .png, .jpeg, .jpg, .webp, .gif for blog image',actionTextColor: '#fff',backgroundColor: '#ea1c1c'});", true);
+                    return;
+                }
+                if (BannerImg == "Size")
+                {
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "Message", "Snackbar.show({pos: 'top-right',text: 'Invalid Banner image size.Please upload correct resolution image for blog image',actionTextColor: '#fff',backgroundColor: '#ea1c1c'});", true);
+                    return;
+                }
 
                 var aid = Request.Cookies["bmw_aid"].Value;
                 SubCapability BD = new SubCapability();
@@ -145,6 +166,10 @@ public partial class Admin_add_sub_capability : System.Web.UI.Page
                 BD.SubCapabilityName= txtsubcapability.Text;
                 BD.SubCapabilityUrl=txtUrl.Text;
                 BD.Tag = txttag.Text;
+                BD.BannerTitle = txtbtitle.Text.Trim();
+                BD.DescHeading = txtheading.Text.Trim();
+                BD.FullDesc = txtfulldesc.Text.Trim();
+                BD.BannerImage = UploadBannerImage();
                 BD.ThumbImage = UploadThumbImage();
                 BD.AddedIp = CommonModel.IPAddress();
                 BD.AddedOn = TimeStamps.UTCTime();
@@ -250,6 +275,77 @@ public partial class Admin_add_sub_capability : System.Web.UI.Page
             else
             {
                 thumbfile = lblThumb.Text;
+            }
+        }
+        catch (Exception ex)
+        {
+            ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "UploadThumbImage", ex.Message);
+
+        }
+
+        #endregion
+        return thumbfile;
+    }
+    private string CheckBannerFormat()
+    {
+        #region BannerImage
+        string thumbImg = "";
+        if (BannerImage.HasFile)
+        {
+            try
+            {
+                string fileExtension = Path.GetExtension(BannerImage.PostedFile.FileName.ToLower()), ImageGuid1 = Guid.NewGuid().ToString();
+                if ((fileExtension == ".jpg" || fileExtension == ".jpeg" || fileExtension == ".png" || fileExtension == ".gif" || fileExtension == ".webp"))
+                {
+                    System.Drawing.Bitmap bitimg = new System.Drawing.Bitmap(BannerImage.PostedFile.InputStream);
+                    if ((bitimg.PhysicalDimension.Height != 720) || (bitimg.PhysicalDimension.Width != 1080))
+                    {
+                        return "Size";
+                    }
+                }
+                else
+                {
+
+                    return "Format";
+                }
+            }
+            catch (Exception ex)
+            {
+                ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "CheckBannerFormat", ex.Message);
+
+            }
+        }
+        #endregion
+        return thumbImg;
+    }
+    public string UploadBannerImage()
+    {
+        #region upload file
+        string thumbfile = "";
+        try
+        {
+            if (BannerImage.HasFile)
+            {
+                string fileExtension = Path.GetExtension(BannerImage.PostedFile.FileName.ToLower()), ImageGuid1 = Guid.NewGuid().ToString() + "-banner".Replace(" ", "-").Replace(".", "");
+                string iconPath = Server.MapPath(".") + "\\../UploadImages\\" + ImageGuid1 + "" + fileExtension;
+                try
+                {
+                    if (File.Exists(Server.MapPath("~/" + Convert.ToString(lblBanner.Text))))
+                    {
+                        File.Delete(Server.MapPath("~/" + Convert.ToString(lblBanner.Text)));
+                    }
+                }
+                catch (Exception eeex)
+                {
+                    ExceptionCapture.CaptureException(Request.Url.PathAndQuery, "UploadBannerImage", eeex.Message);
+                    return lblBanner.Text;
+                }
+                BannerImage.SaveAs(iconPath);
+                thumbfile = "UploadImages/" + ImageGuid1 + "" + fileExtension;
+            }
+            else
+            {
+                thumbfile = lblBanner.Text;
             }
         }
         catch (Exception ex)

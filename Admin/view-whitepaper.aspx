@@ -35,6 +35,7 @@
                                         <th>Thumb Image</th>
                                         <th>Detail Image</th>
                                         <th>Banner Image</th>
+                                        <th>Capability</th>
                                         <th>WhitePaper Title</th>
                                         <th>Posted By</th>
                                         <th>Added On</th>
@@ -50,6 +51,7 @@
                                         <th>Thumb Image</th>
                                         <th>Detail Image</th>
                                         <th>Banner Image</th>
+                                        <th>Capability</th>
                                         <th>WhitePaper Title</th>
                                         <th>Posted By</th>
                                         <th>Added On</th>

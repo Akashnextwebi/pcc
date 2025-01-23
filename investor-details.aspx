@@ -124,13 +124,13 @@ padding:0.5rem 2.5rem;
                         <table class="table table-bordered table-striped">
                             <thead class="table-primary">
                                 <tr>
-                                    <th style="width: 80%" class="py-2 px-10 fs-5">QUARTERLY RESULTS</th>
+                                    <th style="width: 80%" class="py-2 px-10 fs-5"><%=strTitle %></th>
                                     <th class="py-2 fs-5 text-center">Download</th>
                                 </tr>
                             </thead>
                             <tbody>
-
-                                <tr>
+                                <%=strInvestor %>
+                                <%--<tr>
                                     <td class="align-middle px-10 text-body-emphasis">Quarter Result 30-June-2024   </td>
                                     <td class="">
                                         <a href="#" class="btn btn-dark w-100 btn-hover-bg-primary btn-hover-border-primary btn-sm py-4" target="_blank" contenteditable="false" style="cursor: pointer;">
@@ -616,7 +616,7 @@ padding:0.5rem 2.5rem;
                                             Download PDF
                                         </a>
                                     </td>
-                                </tr>
+                                </tr>--%>
                             </tbody>
                         </table>
                     </div>

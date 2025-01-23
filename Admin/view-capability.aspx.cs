@@ -29,9 +29,10 @@ public partial class Admin_view_capability : System.Web.UI.Page
             for (int i = 0; i < BD.Count; i++)
             {
 
-                
+                var image = "<a href='/" + BD[i].BannerImage + @"' target='_blank'><img src='/" + BD[i].BannerImage + @"' alt='' class='rounded-circle avatar-xs shadow'></a>";
                 strCapability += @"<tr>
                                         <td>" + (i + 1) + @"</td>
+                                        <td>"+ image + @"</td>
                                         <td>" + BD[i].CapabilityName + @"</td>
                                         <td>" + BD[i].CapabilityUrl + @"</td>
                                          <td>" + BD[i].AddedOn.ToString("dd/MMM/yyyy") + @"</td>

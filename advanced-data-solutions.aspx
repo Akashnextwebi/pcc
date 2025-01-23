@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="./MasterPage.master" AutoEventWireup="true" CodeFile="advanced-data-solutions.aspx.cs" Inherits="advanced_data_solutions" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
-    <link href="css/breadcrums.css" rel="stylesheet" />
+    <link href="/css/breadcrums.css" rel="stylesheet" />
     <style>
         .service-card p {
             font-size: 16px !important;
@@ -333,16 +333,16 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <main class="wrapper">
-        <div class="breadcrumb-section" style="background-image: linear-gradient(270deg, rgba(0, 0, 0, .55), rgba(0, 0, 0, 0.55) 101.02%), url(image/data-solution.png);">
+        <div class="breadcrumb-section" style="background-image: linear-gradient(270deg, rgba(0, 0, 0, .55), rgba(0, 0, 0, 0.55) 101.02%), url(/<%=strBanner%>);">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="banner-content">
-                            <h1>Advance Data Solutions</h1>
+                            <h1><%=strBannertitle %></h1>
                             <div class="">
-                                <ul class="breadcrumb-list">
-                                    <li><a href="Default.aspx">Home</a></li>
-                                    <li>Advance Data Solutions</li>
+                                <ul class="/breadcrumb-list">
+                                    <li><a href="/Default.aspx">Home</a></li>
+                                    <li><%=strBannertitle %></li>
                                 </ul>
                             </div>
 
@@ -359,10 +359,10 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-10">
-                        <h2>Advance Data Solutions: Revolutionizing Park Control and Communications
+                        <h2><%=strDesctitle %>
 
                         </h2>
-                        <p>Advance Data Solutions is at the forefront of developing advanced technologies for park control and communication systems. With a focus on innovation, the company delivers seamless, integrated solutions that enhance efficiency, safety, and user experience. From managing traffic flow in parking facilities to ensuring robust communication networks, Advance Data Solutions combines cutting-edge technology with industry expertise to meet the demands of modern infrastructure. Their solutions are tailored to optimize operations, reduce downtime, and provide reliable, scalable systems for diverse applications.</p>
+                        <p><%=strDesc %></p>
                     </div>
                 </div>
 
@@ -371,18 +371,19 @@
         <section class="section-padding">
             <div class="container">
                 <div class="row gy-4">
-                    <div class="col-lg-4 col-md-6">
+                    <%=strsubcapability %>
+                   <%-- <div class="col-lg-4 col-md-6">
                         <div class="eg-card3 three">
                             <div class="card-img">
-                                <img src="image/sub1/1.png" alt="">
+                                <img src="/image/sub1/1.png" alt="">
                             </div>
                             <div class="card-content">
-                                <a class="view-btn" href="product-lisitng.aspx">
-                                    <img src="image/sub1/right-arrow2.png" alt="">
+                                <a class="view-btn" href="/product-lisitng.aspx">
+                                    <img src="/image/sub1/right-arrow2.png" alt="">
                                 </a>
                                 <div class="catgory-and-title">
                                     <a href="product-lisitng.aspx">Technology</a>
-                                    <h5><a href="product-lisitng.aspx">Management Consulting</a></h5>
+                                    <h5><a href="/product-lisitng.aspx">Management Consulting</a></h5>
                                 </div>
                             </div>
                         </div>
@@ -390,15 +391,15 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="eg-card3 three">
                             <div class="card-img">
-                                <img src="image/sub1/2.png" alt="">
+                                <img src="/image/sub1/2.png" alt="">
                             </div>
                             <div class="card-content">
                                 <a class="view-btn" href="product-lisitng.aspx">
-                                    <img src="image/sub1/right-arrow2.png" alt="">
+                                    <img src="/image/sub1/right-arrow2.png" alt="">
                                 </a>
                                 <div class="catgory-and-title">
                                     <a href="product-lisitng.aspx">Technology</a>
-                                    <h5><a href="product-lisitng.aspx">Management Consulting</a></h5>
+                                    <h5><a href="/product-lisitng.aspx">Management Consulting</a></h5>
                                 </div>
                             </div>
                         </div>
@@ -406,15 +407,15 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="eg-card3 three">
                             <div class="card-img">
-                                <img src="image/sub1/3.png" alt="">
+                                <img src="/image/sub1/3.png" alt="">
                             </div>
                             <div class="card-content">
                                 <a class="view-btn" href="product-lisitng.aspx">
-                                    <img src="image/sub1/right-arrow2.png" alt="">
+                                    <img src="/image/sub1/right-arrow2.png" alt="">
                                 </a>
                                 <div class="catgory-and-title">
-                                    <a href="product-lisitng.aspx">Technology</a>
-                                    <h5><a href="product-lisitng.aspx">Management Consulting</a></h5>
+                                    <a href="/product-lisitng.aspx">Technology</a>
+                                    <h5><a href="/product-lisitng.aspx">Management Consulting</a></h5>
                                 </div>
                             </div>
                         </div>
@@ -422,15 +423,15 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="eg-card3 three">
                             <div class="card-img">
-                                <img src="image/sub1/4.png" alt="">
+                                <img src="/image/sub1/4.png" alt="">
                             </div>
                             <div class="card-content">
                                 <a class="view-btn" href="product-lisitng.aspx">
-                                    <img src="image/sub1/right-arrow2.png" alt="">
+                                    <img src="/image/sub1/right-arrow2.png" alt="">
                                 </a>
                                 <div class="catgory-and-title">
-                                    <a href="product-lisitng.aspx">Technology</a>
-                                    <h5><a href="product-lisitng.aspx">Management Consulting</a></h5>
+                                    <a href="/product-lisitng.aspx">Technology</a>
+                                    <h5><a href="/product-lisitng.aspx">Management Consulting</a></h5>
                                 </div>
                             </div>
                         </div>
@@ -438,15 +439,15 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="eg-card3 three">
                             <div class="card-img">
-                                <img src="image/sub1/5.png" alt="">
+                                <img src="/image/sub1/5.png" alt="">
                             </div>
                             <div class="card-content">
-                                <a class="view-btn" href="product-lisitng.aspx">
-                                    <img src="image/sub1/right-arrow2.png" alt="">
+                                <a class="view-btn" href="/product-lisitng.aspx">
+                                    <img src="/image/sub1/right-arrow2.png" alt="">
                                 </a>
                                 <div class="catgory-and-title">
-                                    <a href="product-lisitng.aspx">Technology</a>
-                                    <h5><a href="product-lisitng.aspx">Management Consulting</a></h5>
+                                    <a href="/product-lisitng.aspx">Technology</a>
+                                    <h5><a href="/product-lisitng.aspx">Management Consulting</a></h5>
                                 </div>
                             </div>
                         </div>
@@ -454,24 +455,24 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="eg-card3 three">
                             <div class="card-img">
-                                <img src="image/sub1/6.png" alt="">
+                                <img src="/image/sub1/6.png" alt="">
                             </div>
                             <div class="card-content">
                                 <a class="view-btn" href="product-lisitng.aspx">
-                                    <img src="image/sub1/right-arrow2.png" alt="">
+                                    <img src="/image/sub1/right-arrow2.png" alt="">
                                 </a>
                                 <div class="catgory-and-title">
-                                    <a href="product-lisitng.aspx">Technology</a>
-                                    <h5><a href="product-lisitng.aspx">Management Consulting</a></h5>
+                                    <a href="/product-lisitng.aspx">Technology</a>
+                                    <h5><a href="/product-lisitng.aspx">Management Consulting</a></h5>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div>--%>
                 </div>
             </div>
         </section>
         <div class="horizontal-scrolling-section ">
-            <div class="single-scroll-container" style="background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%), url(image/scroll-bg-1.jpg);">
+            <div class="single-scroll-container" style="background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%), url(/image/scroll-bg-1.jpg);">
                 <div class="container-fluid one pl--95">
                     <div class="horizontal-scrolling-content">
                         <div class="section-title1 two">
@@ -505,7 +506,7 @@
                     <div class="col-lg-3">
                         <div class="broacher-card">
                             <div class="broacher-img">
-                                <img src="image/brochure/1.png" alr="img" />
+                                <img src="/image/brochure/1.png" alr="img" />
 
                             </div>
                             <div class="broacher-content">
@@ -520,7 +521,7 @@
                       <div class="col-lg-3">
       <div class="broacher-card">
           <div class="broacher-img">
-              <img src="image/brochure/1.png" alr="img" />
+              <img src="/image/brochure/1.png" alr="img" />
 
           </div>
           <div class="broacher-content">
@@ -534,7 +535,7 @@
   </div>  <div class="col-lg-3">
       <div class="broacher-card">
           <div class="broacher-img">
-              <img src="image/brochure/1.png" alr="img" />
+              <img src="/image/brochure/1.png" alr="img" />
 
           </div>
           <div class="broacher-content">
@@ -548,7 +549,7 @@
   </div>  <div class="col-lg-3">
       <div class="broacher-card">
           <div class="broacher-img">
-              <img src="image/brochure/1.png" alr="img" />
+              <img src="/image/brochure/1.png" alr="img" />
 
           </div>
           <div class="broacher-content">
