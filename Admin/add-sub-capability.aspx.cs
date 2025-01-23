@@ -197,7 +197,7 @@ public partial class Admin_add_sub_capability : System.Web.UI.Page
                     {
                         
                         ScriptManager.RegisterStartupScript(this, this.GetType(), "Message", "Snackbar.show({pos: 'top-right',text: 'SubCapability Added successfully.',actionTextColor: '#fff',backgroundColor: '#008a3d'});", true);
-                        txtsubcapability.Text = txttag.Text = txtUrl.Text  = ddlCapability.SelectedValue = "";
+                        txtsubcapability.Text = txttag.Text = txtUrl.Text  = ddlCapability.SelectedValue = txtbtitle.Text= txtheading.Text= txtfulldesc.Text="";
                     }
                     else
                     {
