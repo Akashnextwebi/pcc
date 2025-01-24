@@ -218,6 +218,7 @@ public partial class Admin_manage_product_galleries : System.Web.UI.Page
                 var sub = ProductGallery.GetAllProductGalleryWithGuid(conSQ, Gid);
                 if (sub != null)
                 {
+                    strImage = "";
                     for (int i = 0; i < sub.Count; i++)
                     {
                         strImage += @"<tr>

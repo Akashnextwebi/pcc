@@ -128,6 +128,7 @@ public partial class Admin_manage_capabilities : System.Web.UI.Page
                 var cap = manageCapabilities.GetAllCapabilitiesWithGuid(conSQ, pid);
                 if (cap != null)
                 {
+                    strcap="";
                     for (int i = 0; i < cap.Count; i++)
                     {
                         var image = "<a href='/" + cap[i].ThumbImage + @"' target='_blank'><img src='/" + cap[i].ThumbImage + @"' alt='' class='rounded-circle avatar-xs shadow'></a>";

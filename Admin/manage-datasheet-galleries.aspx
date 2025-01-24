@@ -51,7 +51,7 @@
                             <thead>
                                 <tr>
                                     <th>#</th>
-                                    <th>Product Image</th>
+                                    <th>Dtasheet Image</th>
                                     <th>Added On</th>
                                     <th class="text-center">Action</th>
                                 </tr>
@@ -62,7 +62,7 @@
                             <tfoot>
                                 <tr>
                                     <th>#</th>
-                                    <th>Product Image</th>
+                                    <th>Dtasheet Image</th>
                                     <th>Added On</th>
                                     <th class="text-center">Action</th>
                                 </tr>

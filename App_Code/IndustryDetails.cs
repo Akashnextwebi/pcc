@@ -17,8 +17,12 @@ public class IndustryDetails
         //
     }
     public int Id { get; set; }
+    public string IndustryGuid {  get; set; }
     public string IndustryName { get; set; }
     public string IndustryUrl { get; set; }
+    public string BannerImage { get; set; }
+    public string DescHeading {  get; set; }
+    public string FullDesc {  get; set; }
     public DateTime AddedOn { get; set; }
     public string AddedIp { get; set; }
     public string AddedBy { get; set; }
@@ -42,6 +46,9 @@ public class IndustryDetails
                            Id = Convert.ToInt32(Convert.ToString(dr["Id"])),
                            IndustryName = Convert.ToString(dr["IndustryName"]),
                            IndustryUrl = Convert.ToString(dr["IndustryUrl"]),
+                           BannerImage = Convert.ToString(dr["BannerImage"]),
+                           DescHeading = Convert.ToString(dr["DescHeading"]),
+                           FullDesc = Convert.ToString(dr["FullDesc"]),
                            AddedOn = Convert.ToDateTime(Convert.ToString(dr["AddedOn"])),
                            AddedIp = Convert.ToString(dr["AddedIp"]),
                            AddedBy = Convert.ToString(dr["AddedBy"]),
@@ -60,11 +67,16 @@ public class IndustryDetails
         int result = 0;
         try
         {
-            string query = "Insert Into IndustryDetails (IndustryName,IndustryUrl,AddedOn,AddedBy,AddedIp,Status) values (@IndustryName,@IndustryUrl,@AddedOn,@AddedBy,@AddedIp,@Status) select SCOPE_IDENTITY()";
+            string query = "Insert Into IndustryDetails (IndustryGuid,IndustryName,IndustryUrl,BannerImage,DescHeading,FullDesc,AddedOn,AddedBy,AddedIp,Status) values (@IndustryGuid,@IndustryName,@IndustryUrl,@BannerImage,@DescHeading,@FullDesc,@AddedOn,@AddedBy,@AddedIp,@Status) select SCOPE_IDENTITY()";
             using (SqlCommand cmd = new SqlCommand(query, conSQ))
+
             {
+                cmd.Parameters.AddWithValue("@IndustryGuid", SqlDbType.NVarChar).Value = Cat.IndustryGuid;
                 cmd.Parameters.AddWithValue("@IndustryName", SqlDbType.NVarChar).Value = Cat.IndustryName;
                 cmd.Parameters.AddWithValue("@IndustryUrl", SqlDbType.NVarChar).Value = Cat.IndustryUrl;
+                cmd.Parameters.AddWithValue("@BannerImage", SqlDbType.NVarChar).Value = Cat.BannerImage;
+                cmd.Parameters.AddWithValue("@DescHeading", SqlDbType.NVarChar).Value = Cat.DescHeading;
+                cmd.Parameters.AddWithValue("@FullDesc", SqlDbType.NVarChar).Value = Cat.FullDesc;
                 cmd.Parameters.AddWithValue("@AddedOn", SqlDbType.NVarChar).Value = DateTime.UtcNow;
                 cmd.Parameters.AddWithValue("@AddedBy", SqlDbType.NVarChar).Value = Cat.AddedBy;
                 cmd.Parameters.AddWithValue("@AddedIp", SqlDbType.NVarChar).Value = CommonModel.IPAddress();
@@ -86,12 +98,16 @@ public class IndustryDetails
         int result = 0;
         try
         {
-            string query = "Update IndustryDetails Set IndustryName=@IndustryName,IndustryUrl=@IndustryUrl,AddedBy=@AddedBy,AddedOn=@AddedOn,AddedIp=@AddedIp ,Status=@Status Where Id=@Id ";
+            string query = "Update IndustryDetails Set IndustryName=@IndustryName,IndustryGuid=@IndustryGuid,IndustryUrl=@IndustryUrl,BannerImage=@BannerImage,DescHeading=@DescHeading,FullDesc=@FullDesc,AddedBy=@AddedBy,AddedOn=@AddedOn,AddedIp=@AddedIp ,Status=@Status Where Id=@Id ";
             using (SqlCommand cmd = new SqlCommand(query, conSQ))
             {
                 cmd.Parameters.AddWithValue("@Id", SqlDbType.NVarChar).Value = Cat.Id;
+                cmd.Parameters.AddWithValue("@IndustryGuid", SqlDbType.NVarChar).Value = Cat.IndustryGuid;
                 cmd.Parameters.AddWithValue("@IndustryName", SqlDbType.NVarChar).Value = Cat.IndustryName;
                 cmd.Parameters.AddWithValue("@IndustryUrl", SqlDbType.NVarChar).Value = Cat.IndustryUrl;
+                cmd.Parameters.AddWithValue("@BannerImage", SqlDbType.NVarChar).Value = Cat.BannerImage;
+                cmd.Parameters.AddWithValue("@DescHeading", SqlDbType.NVarChar).Value = Cat.DescHeading;
+                cmd.Parameters.AddWithValue("@FullDesc", SqlDbType.NVarChar).Value = Cat.FullDesc;
                 cmd.Parameters.AddWithValue("@AddedOn", SqlDbType.NVarChar).Value = DateTime.UtcNow;
                 cmd.Parameters.AddWithValue("@AddedBy", SqlDbType.NVarChar).Value = Cat.AddedBy;
                 cmd.Parameters.AddWithValue("@AddedIp", SqlDbType.NVarChar).Value = CommonModel.IPAddress();
@@ -124,8 +140,12 @@ public class IndustryDetails
                                    {
 
                                        Id = Convert.ToInt32(Convert.ToString(dr["Id"])),
+                                       IndustryGuid = Convert.ToString(dr["IndustryGuid"]),
                                        IndustryName = Convert.ToString(dr["IndustryName"]),
                                        IndustryUrl = Convert.ToString(dr["IndustryUrl"]),
+                                       BannerImage = Convert.ToString(dr["BannerImage"]),
+                                       DescHeading = Convert.ToString(dr["DescHeading"]),
+                                       FullDesc = Convert.ToString(dr["FullDesc"]),
                                        AddedOn = Convert.ToDateTime(Convert.ToString(dr["AddedOn"])),
                                        AddedIp = Convert.ToString(dr["AddedIp"]),
                                        AddedBy = Convert.ToString(dr["AddedBy"]),
@@ -180,6 +200,9 @@ public class IndustryDetails
                                         Id = Convert.ToInt32(Convert.ToString(dr["Id"])),
                                         IndustryName = Convert.ToString(dr["IndustryName"]),
                                         IndustryUrl = Convert.ToString(dr["IndustryUrl"]),
+                                        BannerImage = Convert.ToString(dr["BannerImage"]),
+                                        DescHeading = Convert.ToString(dr["DescHeading"]),
+                                        FullDesc = Convert.ToString(dr["FullDesc"]),
                                         AddedOn = Convert.ToDateTime(Convert.ToString(dr["AddedOn"])),
                                         AddedIp = Convert.ToString(dr["AddedIp"]),
                                         AddedBy = Convert.ToString(dr["AddedBy"]),
@@ -224,6 +247,77 @@ public class IndustryDetails
             return 0;
         }
     }
+    public static List<IndustryDetails> GetIndustryDetails(SqlConnection conSQ)
+    {
+        List<IndustryDetails> categories = new List<IndustryDetails>();
+        try
+        {
+            string query = "Select * from IndustryDetails where status = 'Active' Order by Id Desc";
+            using (SqlCommand cmd = new SqlCommand(query, conSQ))
+            {
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                categories = (from DataRow dr in dt.Rows
+                              select new IndustryDetails()
+                              {
+                                  Id = Convert.ToInt32(Convert.ToString(dr["Id"])),
+                                  IndustryGuid = Convert.ToString(dr["IndustryGuid"]),
+                                  IndustryName = Convert.ToString(dr["IndustryName"]),
+                                  IndustryUrl = Convert.ToString(dr["IndustryUrl"]),
+                                  BannerImage = Convert.ToString(dr["BannerImage"]),
+                                  DescHeading = Convert.ToString(dr["DescHeading"]),
+                                  FullDesc = Convert.ToString(dr["FullDesc"]),
+                                  AddedOn = Convert.ToDateTime(Convert.ToString(dr["AddedOn"])),
+                                  AddedIp = Convert.ToString(dr["AddedIp"]),
+                                  AddedBy = Convert.ToString(dr["AddedBy"]),
+                                  Status = Convert.ToString(dr["Status"])
+                              }).ToList();
+            }
+        }
+        catch (Exception ex)
+        {
+            ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "GetIndustryDetails", ex.Message);
+        }
+        return categories;
+    }
+    public static IndustryDetails GetAllIndustryWithUrl(SqlConnection conSQ, string Url)
+    {
+        var Ind = new IndustryDetails();
+        try
+        {
+            string query = "Select * from IndustryDetails where Status!=@Status and IndustryUrl=@IndustryUrl ";
+            using (SqlCommand cmd = new SqlCommand(query, conSQ))
+            {
+                cmd.Parameters.AddWithValue("@IndustryUrl", SqlDbType.Int).Value = Url;
+                cmd.Parameters.AddWithValue("@Status", SqlDbType.NVarChar).Value = "Deleted";
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                Ind = (from DataRow dr in dt.Rows
+                       select new IndustryDetails()
+                       {
+                           Id = Convert.ToInt32(Convert.ToString(dr["Id"])),
+                           IndustryGuid = Convert.ToString(dr["IndustryGuid"]),
+                           IndustryName = Convert.ToString(dr["IndustryName"]),
+                           IndustryUrl = Convert.ToString(dr["IndustryUrl"]),
+                           BannerImage = Convert.ToString(dr["BannerImage"]),
+                           DescHeading = Convert.ToString(dr["DescHeading"]),
+                           FullDesc = Convert.ToString(dr["FullDesc"]),
+                           AddedOn = Convert.ToDateTime(Convert.ToString(dr["AddedOn"])),
+                           AddedIp = Convert.ToString(dr["AddedIp"]),
+                           AddedBy = Convert.ToString(dr["AddedBy"]),
+                           Status = Convert.ToString(dr["Status"])
+                       }).FirstOrDefault();
+            }
+        }
+        catch (Exception ex)
+        {
+            ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "GetAllIndustryWithUrl", ex.Message);
+        }
+        return Ind;
+    }
 }
+
 
 

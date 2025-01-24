@@ -195,10 +195,11 @@
                  <li class="has-sub">
                    <a href="#">Industries</a>
                    <ul>
-                     <li><a href="/air.aspx">Air</a></li>
+                       <%=strIndustries %>
+                     <%--<li><a href="/air.aspx">Air</a></li>
                      <li><a href="/land.aspx">Land</a></li>
                      <li><a href="/sea.aspx">Sea</a></li>
-                     <li><a href="/space.aspx">Space</a></li>
+                     <li><a href="/space.aspx">Space</a></li>--%>
                    </ul>
                  </li>
                  <li class="has-sub">

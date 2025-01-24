@@ -269,10 +269,10 @@
                                 </ul>
                                 
                                 <div class="product_zoom_container">
-                                
-                                    <div class="product_zoom_info selected">
-                                        <div class="product_image_zoom">
-                                            <img src="/image/shop/pro3.png" alt="img">
+                                <%=strMainImg %>
+                                   <%-- <div class='product_zoom_info selected'>
+                                        <div class='product_image_zoom'>
+                                            <img src='/image/shop/pro3.png' alt='img'>
                                         </div>
                                     </div>
 
@@ -292,7 +292,7 @@
                                         <div class="product_image_zoom">
                                             <img src="/image/shop/pro3.png" alt="img">
                                         </div>
-                                    </div>
+                                    </div>--%>
                                 </div>
                             </div>
                         </div>

@@ -4,26 +4,22 @@ using System.Configuration;
 using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Web;
 using System.Web.Services;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class Admin_manage_datasheet_galleries : System.Web.UI.Page
+public partial class Admin_manage_feature : System.Web.UI.Page
 {
     SqlConnection conSQ = new SqlConnection(ConfigurationManager.ConnectionStrings["conSQ"].ConnectionString);
-
-    public string strImage = "", StrThumbImage = "", StrProductname="";
+    public string StrThumbImage = "", strFeature="";
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (!IsPostBack)
+        GetFeatureList();
+        if (Request.QueryString["id"] != null)
         {
-            GetProductName();
-            GetImageList();
-            if (Request.QueryString["id"] != null)
-            {
-                GetImageDetails();
-            }
+            GetFeatureDetails();
         }
     }
     protected void btnSave_Click(object sender, EventArgs e)
@@ -44,25 +40,26 @@ public partial class Admin_manage_datasheet_galleries : System.Web.UI.Page
                     return;
                 }
                 string aid = Request.Cookies["bmw_aid"].Value;
-                DatasheetGallery st = new DatasheetGallery()
+                ManageFeature st = new ManageFeature()
                 {
-
-                    ImageUrl = UploadImage(),
-                    ProductGuid = Convert.ToString(Request.QueryString["Pid"]),
+                    Title = txtheading.Text,
+                    FullDesc= txtfulldesc.Text,
+                    ThumbImage = UploadImage(),
+                    IndustryGuid = Convert.ToString(Request.QueryString["Pid"]),
                     AddedBy = aid,
                     Status = "Active",
                     Id = Request.QueryString["id"] == null ? 0 : Convert.ToInt32(Request.QueryString["id"]),
                 };
-                if (st.ImageUrl != "")
+                if (st.ThumbImage != "")
                 {
 
                     if (btnSave.Text == "Update")
                     {
-                        int result = DatasheetGallery.UpdateImage(conSQ, st);
+                        int result = ManageFeature.UpdateFeature(conSQ, st);
                         if (result > 0)
                         {
-                            GetImageDetails();
-                            ScriptManager.RegisterStartupScript(this, this.GetType(), "Message", "Snackbar.show({pos: 'top-right',text: 'Image details Updated successfully.',actionTextColor: '#fff',backgroundColor: '#008a3d'});", true);
+                            GetFeatureDetails();
+                            ScriptManager.RegisterStartupScript(this, this.GetType(), "Message", "Snackbar.show({pos: 'top-right',text: 'Feature Updated successfully.',actionTextColor: '#fff',backgroundColor: '#008a3d'});", true);
                         }
                         else
                         {
@@ -72,10 +69,12 @@ public partial class Admin_manage_datasheet_galleries : System.Web.UI.Page
                     }
                     else
                     {
-                        int result = DatasheetGallery.AddImage(conSQ, st);
+                        int result = ManageFeature.AddFeature(conSQ, st);
                         if (result > 0)
                         {
-                            ScriptManager.RegisterStartupScript(this, this.GetType(), "Message", "Snackbar.show({pos: 'top-right',text: 'Image details added successfully.',actionTextColor: '#fff',backgroundColor: '#008a3d'});", true);
+                            ScriptManager.RegisterStartupScript(this, this.GetType(), "Message", "Snackbar.show({pos: 'top-right',text: 'Feature added successfully.',actionTextColor: '#fff',backgroundColor: '#008a3d'});", true);
+                            txtheading.Text = txtfulldesc.Text = "";
+
                         }
                         else
                         {
@@ -88,7 +87,7 @@ public partial class Admin_manage_datasheet_galleries : System.Web.UI.Page
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "Message", "Snackbar.show({pos: 'top-right',text: 'Please select image to upload',actionTextColor: '#fff',backgroundColor: '#ea1c1c'});", true);
 
                 }
-                GetImageList();
+                GetFeatureList();
             }
             catch (Exception ex)
             {
@@ -96,7 +95,97 @@ public partial class Admin_manage_datasheet_galleries : System.Web.UI.Page
             }
         }
     }
+    public void GetFeatureDetails()
+    {
+        try
+        {
+            var feature = ManageFeature.GetAllFeatureDetailsWithId(conSQ, Convert.ToInt32(Request.QueryString["id"]));
+            if (feature != null)
+            {
+                btnNew.Visible = true;
+                btnSave.Text = "Update";
+                txtheading.Text = feature.Title;
+                if (feature.ThumbImage != "")
+                {
+                    lblThumb.Text = feature.ThumbImage;
+                    StrThumbImage = @"<a href='/" + feature.ThumbImage + @"' target='_blank'><img src='/" + feature.ThumbImage + @"' width='60px'></a>";
 
+                }
+
+            }
+        }
+        catch (Exception ex)
+        {
+            ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "GetFeatureDetails", ex.Message);
+        }
+    }
+    public void GetFeatureList()
+    {
+        try
+        {
+            var Pid = Convert.ToString(Request.QueryString["Pid"]);
+            if (Pid != null && Pid.Count() > 0)
+            {
+                var Feature = ManageFeature.GetAllFeatureWithGuid(conSQ, Pid);
+                if (Feature != null)
+                {
+                    strFeature = "";
+                    for (int i = 0; i < Feature.Count; i++)
+                    {
+                        strFeature += @"<tr>
+                                        <td>" + (i + 1) + @"</td>
+                                        <td><a href='/" + Feature[i].ThumbImage + @"' target='_blank'><img src='/" + Feature[i].ThumbImage + @"' width='60'></a></td>
+                                         <td>" + Feature[i].Title + @"</td>
+                                        <td>" + Convert.ToDateTime(Feature[i].AddedOn).ToString("dd MMM yyyy") + @"</td>
+                                        <td class='text-center'>
+                                                <a href='javascript:void(0);' class='bs-tooltip deleteItem warning confirm text-danger fs-18' data-id='" + Feature[i].Id + @"' data-pid='" + Feature[i].IndustryGuid + @"' data-toggle='tooltip' data-placement='top' title='Delete' data-original-title='Delete'>
+                                               <i class='mdi mdi-delete-forever'></i></a>
+                                        </td>
+                                    </tr>";
+                    }
+                }
+            }
+
+        }
+        catch (Exception ex)
+        {
+            ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "GetAllFeatureWithGuid", ex.Message);
+
+        }
+    }
+    [WebMethod(EnableSession = true)]
+    public static string Delete(string id)
+    {
+        string x = "";
+        try
+        {
+            SqlConnection conSQ = new SqlConnection(ConfigurationManager.ConnectionStrings["conSQ"].ConnectionString);
+            ManageFeature Feature = new ManageFeature();
+            Feature.Id = Convert.ToInt32(id);
+            Feature.AddedOn = DateTime.UtcNow;
+            Feature.AddedIp = CommonModel.IPAddress();
+            int exec = ManageFeature.DeleteFeature(conSQ, Feature);
+            if (exec > 0)
+            {
+                x = "Success";
+            }
+            else
+            {
+                x = "W";
+            }
+        }
+        catch (Exception ex)
+        {
+            x = "W";
+            ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "Delete", ex.Message);
+        }
+        return x;
+    }
+    protected void btnNew_Click(object sender, EventArgs e)
+    {
+        var Pid = Convert.ToString(Request.QueryString["Pid"]);
+        Response.Redirect("/adminmanage-feature.aspx?Pid=" + Pid, false);
+    }
     private string CheckImageFormat()
     {
         #region upload image
@@ -184,118 +273,5 @@ public partial class Admin_manage_datasheet_galleries : System.Web.UI.Page
 
         #endregion
         return thumbImage;
-    }
-    public void GetImageDetails()
-    {
-        try
-        {
-            var Image = DatasheetGallery.GetAllProductGalleryDetailsWithId(conSQ, Convert.ToInt32(Request.QueryString["id"]));
-            if (Image != null)
-            {
-                btnNew.Visible = true;
-                btnSave.Text = "Update";
-                if (Image.ImageUrl != "")
-                {
-                    lblThumb.Text = Image.ImageUrl;
-                    StrThumbImage = @"<a href='/" + Image.ImageUrl + @"' target='_blank'><img src='/" + Image.ImageUrl + @"' width='60px'></a>";
-
-                }
-
-            }
-        }
-        catch (Exception ex)
-        {
-            ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "GetImageDetails", ex.Message);
-        }
-    }
-    public void GetImageList()
-    {
-        try
-        {
-            var pid = Convert.ToString(Request.QueryString["Pid"]);
-            if (pid != null && pid.Count() > 0)
-            {
-                var sub = DatasheetGallery.GetAllProductGalleryWithGuid(conSQ, pid);
-                if (sub != null)
-                {
-                    strImage = "";
-                    for (int i = 0; i < sub.Count; i++)
-                    {
-                        strImage += @"<tr>
-                                        <td>" + (i + 1) + @"</td>
-                                        <td><a href='/" + sub[i].ImageUrl + @"' target='_blank'><img src='/" + sub[i].ImageUrl + @"' width='60'></a></td>
-                                        <td>" + Convert.ToDateTime(sub[i].AddedOn).ToString("dd MMM yyyy") + @"</td>
-                                        <td class='text-center'>
-                                                <a href='javascript:void(0);' class='bs-tooltip deleteItem warning confirm text-danger fs-18' data-id='" + sub[i].Id + @"' data-pid='" + sub[i].ProductGuid + @"' data-toggle='tooltip' data-placement='top' title='Delete' data-original-title='Delete'>
-                                               <i class='mdi mdi-delete-forever'></i></a>
-                                        </td>
-                                    </tr>";
-                    }
-                }
-            }
-
-        }
-        catch (Exception ex)
-        {
-            ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "GetImageList", ex.Message);
-
-        }
-    }
-    [WebMethod(EnableSession = true)]
-    public static string Delete(string id)
-    {
-        string x = "";
-        try
-        {
-            SqlConnection conSQ = new SqlConnection(ConfigurationManager.ConnectionStrings["conSQ"].ConnectionString);
-            DatasheetGallery BD = new DatasheetGallery();
-            BD.Id = Convert.ToInt32(id);
-            BD.AddedOn = DateTime.UtcNow;
-            BD.AddedIp = CommonModel.IPAddress();
-            int exec = DatasheetGallery.DeleteImage(conSQ, BD);
-            if (exec > 0)
-            {
-                x = "Success";
-            }
-            else
-            {
-                x = "W";
-            }
-        }
-        catch (Exception ex)
-        {
-            x = "W";
-            ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "Delete", ex.Message);
-        }
-        return x;
-    }
-    protected void btnNew_Click(object sender, EventArgs e)
-    {
-        var pid = Convert.ToString(Request.QueryString["Pid"]);
-        Response.Redirect("/adminmanage-datasheet-galleries.aspx?Pid=" + pid, false);
-    }
-    public void GetProductName()
-    {
-        try
-        {
-            var pid = Convert.ToString(Request.QueryString["Pid"]);
-            if (pid != null && pid != "")
-            {
-                var sub = ProductDetails.GetProductnameWithGuid(conSQ, pid);
-                if (sub != null)
-                {
-                    for (int i = 0; i < sub.Count; i++)
-                    {
-                        StrProductname = sub[i].ProductName;
-                    }
-                }
-            }
-
-        }
-        catch (Exception ex)
-        {
-            ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "GetProductName", ex.Message);
-
-        }
     }
 }

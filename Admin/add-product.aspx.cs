@@ -18,9 +18,9 @@ public partial class Admin_add_product : System.Web.UI.Page
     {
         if (!IsPostBack)
         {
-            BindIndustry();
             BindCapability();
             BindSubCapability();
+            BindIndustry();
             if (!string.IsNullOrEmpty(Request.QueryString["id"]))
             {
                 bindProducts();

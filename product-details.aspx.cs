@@ -13,7 +13,7 @@ using System.Web.UI.WebControls;
 public partial class product_details : System.Web.UI.Page
 {
     SqlConnection conSQ = new SqlConnection(ConfigurationManager.ConnectionStrings["conSQ"].ConnectionString);
-    public string strName = "", strSKU = "",strId="", strdesc = "", strpdf = "", StrGallery = "", strCapabilities = "", strSpecification = "",strDatasheet="";
+    public string strName = "", strSKU, strMainImg = "",strId="", strdesc = "", strpdf = "", StrGallery = "", strCapabilities = "", strSpecification = "",strDatasheet="";
     protected void Page_Load(object sender, EventArgs e)
     {
         var purl = Convert.ToString(RouteData.Values["purl"]);
@@ -141,6 +141,11 @@ public partial class product_details : System.Web.UI.Page
                            StrGallery += @"<li class='product_zoom_button'>
     <a class='selected' href='#' style='background-image: url(/" + PG[i].ImageUrl + @");'></a>
 </li>";
+                        strMainImg += @"<div class='product_zoom_info selected'>
+                                        <div class='product_image_zoom'>
+                                            <img src='/"+ PG[i].ImageUrl + @"' alt='img'>
+                                        </div>
+                                    </div>";
                     }
 
                 }

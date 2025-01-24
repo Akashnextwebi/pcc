@@ -10,10 +10,11 @@ using System.Web.UI.WebControls;
 public partial class MasterPage : System.Web.UI.MasterPage
 {
     SqlConnection conSQ = new SqlConnection(ConfigurationManager.ConnectionStrings["conSQ"].ConnectionString);
-    public string strsolution = "";
+    public string strsolution = "",strIndustries="";
     protected void Page_Load(object sender, EventArgs e)
     {
         BindCompetencies();
+        BindIndustries();
     }
     public void BindCompetencies()
     {
@@ -39,6 +40,33 @@ public partial class MasterPage : System.Web.UI.MasterPage
         catch (Exception ex)
         {
             ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "BindCompetencies", ex.Message);
+
+        }
+    }
+    public void BindIndustries()
+    {
+        try
+        {
+            strIndustries = "";
+            List<IndustryDetails> loc = IndustryDetails.GetIndustryDetails(conSQ);
+
+            if (loc.Count > 0)
+            {
+                List<IndustryDetails> ind = loc;
+
+                for (int i = 0; i < ind.Count; i++)
+                {
+
+                    strIndustries += @"<li><a href='/industries/" + ind[i].IndustryUrl + @"'>" + ind[i].IndustryName +@"</a></li>";
+
+
+                }
+
+            }
+        }
+        catch (Exception ex)
+        {
+            ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "BindIndustries", ex.Message);
 
         }
     }

@@ -497,6 +497,52 @@ FETCH NEXT @pageLength ROWS ONLY;";
         }
         return pro;
     }
+    public static List<ProductDetails> GetAllProduct(SqlConnection conSQ, string name)
+    {
+        List<ProductDetails> categories = new List<ProductDetails>();
+        try
+        {
+            string query = @"select * from ProductDetails Where Industry=@Industry and status='Active'";
+            using (SqlCommand cmd = new SqlCommand(query, conSQ))
+            {
+                // cmd.Parameters.AddWithValue("@id", SqlDbType.NVarChar).Value = id;
+                cmd.Parameters.AddWithValue("@Industry", SqlDbType.NVarChar).Value = name;
+                cmd.Parameters.AddWithValue("@Status", SqlDbType.NVarChar).Value = "Active";
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                categories = (from DataRow dr in dt.Rows
+                              select new ProductDetails()
+                              {
+                                  Id = Convert.ToInt32(Convert.ToString(dr["Id"])),
+                                  ProductGuid = Convert.ToString(dr["ProductGuid"]),
+                                  ProductName = Convert.ToString(dr["ProductName"]),
+                                  ProductUrl = Convert.ToString(dr["ProductUrl"]),
+                                  ThumbImage = Convert.ToString(dr["ThumbImage"]),
+                                  SKUCode = Convert.ToString(dr["SKUCode"]),
+                                  Broucher = Convert.ToString(dr["Broucher"]),
+                                  DatasheetName = Convert.ToString(dr["DatasheetName"]),
+                                  DatasheetLink = Convert.ToString(dr["DatasheetLink"]),
+                                  Enquiry = Convert.ToString(dr["Enquiry"]),
+                                  Capability = Convert.ToString(dr["Capability"]),
+                                  SubCapability = Convert.ToString(dr["SubCapability"]),
+                                  Industry = Convert.ToString(dr["Industry"]),
+                                  FullDesc = Convert.ToString(dr["FullDesc"]),
+                                  PageTitle = Convert.ToString(dr["PageTitle"]),
+                                  MetaKeys = Convert.ToString(dr["MetaKeys"]),
+                                  MetaDesc = Convert.ToString(dr["MetaDesc"]),
+                                  AddedOn = Convert.ToDateTime(Convert.ToString(dr["AddedOn"])),
+                                  AddedBy = Convert.ToString(dr["AddedBy"]),
+                                  AddedIp = Convert.ToString(dr["AddedIp"]),
+                              }).ToList();
+            }
+        }
+        catch (Exception ex)
+        {
+            ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "GetAllProduct", ex.Message);
+        }
+        return categories;
+    }
 }
 
 
