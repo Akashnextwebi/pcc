@@ -79,7 +79,7 @@ public partial class Admin_add_whitepaper : System.Web.UI.Page
                 ddlCapability.DataTextField = "CapabilityName";
                 ddlCapability.DataValueField = "Id";
                 ddlCapability.DataBind();
-                ddlCapability.Items.Insert(0, new ListItem { Value = "0", Text = "Select Capability" });
+               
             }
         }
         catch (Exception ex)

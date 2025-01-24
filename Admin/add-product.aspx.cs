@@ -207,7 +207,7 @@ public partial class Admin_add_product : System.Web.UI.Page
                 ddlSubcapability.DataTextField = "SubCapabilityName";
                 ddlSubcapability.DataValueField = "Id";
                 ddlSubcapability.DataBind();
-                ddlSubcapability.Items.Insert(0, new ListItem { Value = "0", Text = "Select Subcapability" });
+                
             }
         }
         catch (Exception ex)
