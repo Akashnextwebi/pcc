@@ -828,7 +828,7 @@ Pellentesque habitant morbi tristique senectus et netus et malesuada.--%>
                                                 <div class="form-group">
                                                    <%-- <input type="text" name="password" class="form-control" placeholder="Corporate E-mail ID--%>
                                                     <asp:TextBox ID="txtemailAdress" class="form-control txtemailAdress" runat="server" MaxLength="100" placeholder="Corporate E-mail ID"></asp:TextBox>
-">
+
                                                 </div>
                                             </div>
 

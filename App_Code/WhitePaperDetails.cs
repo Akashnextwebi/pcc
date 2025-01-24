@@ -348,4 +348,50 @@ public class WhitePaperDetails
         }
         return wp;
     }
+    public static List<WhitePaperDetails> GetAllWhitepaper(SqlConnection conSQ, string name)
+    {
+        List<WhitePaperDetails> categories = new List<WhitePaperDetails>();
+        try
+        {
+            string query = @"select * from WhitePaperDetails Where Capability=@Capability and status='Active'";
+            using (SqlCommand cmd = new SqlCommand(query, conSQ))
+            {
+                // cmd.Parameters.AddWithValue("@id", SqlDbType.NVarChar).Value = id;
+                cmd.Parameters.AddWithValue("@Capability", SqlDbType.NVarChar).Value = name;
+                cmd.Parameters.AddWithValue("@Status", SqlDbType.NVarChar).Value = "Active";
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                categories = (from DataRow dr in dt.Rows
+                              select new WhitePaperDetails()
+                              {
+                                  Id = Convert.ToInt32(Convert.ToString(dr["Id"])),
+                                  WhitePaperTitle = Convert.ToString(dr["WhitePaperTitle"]),
+                                  WhitePaperUrl = Convert.ToString(dr["WhitePaperUrl"]),
+                                  Tag = Convert.ToString(dr["Tag"]),
+                                  Capability = Convert.ToString(dr["Capability"]),
+                                  PostedOn = Convert.ToString(dr["PostedOn"]),
+                                  PostedBy = Convert.ToString(dr["PostedBy"]),
+                                  WhitePaperHeading = Convert.ToString(dr["WhitePaperHeading"]),
+                                  FullDesc = Convert.ToString(dr["FullDesc"]),
+                                  ThumbImage = Convert.ToString(dr["ThumbImage"]),
+                                  DetailImage = Convert.ToString(dr["DetailImage"]),
+                                  BannerImage = Convert.ToString(dr["BannerImage"]),
+                                  PageTitle = Convert.ToString(dr["PageTitle"]),
+                                  MetaKeys = Convert.ToString(dr["MetaKeys"]),
+                                  MetaDesc = Convert.ToString(dr["MetaDesc"]),
+                                  AddedOn = Convert.ToDateTime(Convert.ToString(dr["AddedOn"])),
+                                  AddedBy = Convert.ToString(dr["AddedBy"]),
+                                  AddedIp = Convert.ToString(dr["AddedIp"]),
+                                  Status = Convert.ToString(dr["Status"])
+                              }).ToList();
+            }
+        }
+        catch (Exception ex)
+        {
+            ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "GetAllWhitepaper", ex.Message);
+        }
+        return categories;
+    }
+
 }
