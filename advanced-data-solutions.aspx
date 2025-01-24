@@ -344,7 +344,7 @@
                         <div class="banner-content">
                             <h1><%=strBannertitle %></h1>
                             <div class="">
-                                <ul class="/breadcrumb-list">
+                                <ul class="breadcrumb-list">
                                     <li><a href="/Default.aspx">Home</a></li>
                                     <li><%=strBannertitle %></li>
                                 </ul>
