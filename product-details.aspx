@@ -269,10 +269,10 @@
                                 </ul>
                                 
                                 <div class="product_zoom_container">
-                                
-                                    <div class="product_zoom_info selected">
-                                        <div class="product_image_zoom">
-                                            <img src="/image/shop/pro3.png" alt="img">
+                                <%=strMainImg %>
+                                   <%-- <div class='product_zoom_info selected'>
+                                        <div class='product_image_zoom'>
+                                            <img src='/image/shop/pro3.png' alt='img'>
                                         </div>
                                     </div>
 
@@ -292,7 +292,7 @@
                                         <div class="product_image_zoom">
                                             <img src="/image/shop/pro3.png" alt="img">
                                         </div>
-                                    </div>
+                                    </div>--%>
                                 </div>
                             </div>
                         </div>
@@ -808,39 +808,41 @@ Pellentesque habitant morbi tristique senectus et netus et malesuada.--%>
                         <div class="row">
                             <div class="col-lg-12 ">
 
-
                                 <div class="wptb-form" action="contact.php" method="post">
                                     <div class="wptb-form--inner">
                                         <div class="row">
                                             <div class="col-lg-12 col-md-12 mb-4">
+                                                <%--<lable class="error-message text-danger d-none"></lable>--%>
                                                 <div class="form-group">
                                                    <%-- <input type="text" name="name" class="form-control" placeholder="Enter Your Name" required>--%>
                                                     <asp:TextBox ID="textFname" runat="server" class="form-control textFname" MaxLength="100" placeholder="Enter Your Name"></asp:TextBox>
+                                                    <span class="spnfname text-danger ms-2"></span>
                                                 </div>
                                             </div>
                                             <div class="col-lg-12 col-md-12 mb-4">
                                                 <div class="form-group">
                                                     <%--<input type="text" name="password" class="form-control" placeholder="Mobile Number">--%>
                                                     <asp:TextBox ID="txtContact" class="form-control txtContact" runat="server" MaxLength="15" placeholder="Mobile Number"></asp:TextBox>
+                                                    <span class="spnContact text-danger ms-2"></span>
                                                 </div>
                                             </div>
                                             <div class="col-lg-12 col-md-12 mb-4">
                                                 <div class="form-group">
                                                    <%-- <input type="text" name="password" class="form-control" placeholder="Corporate E-mail ID--%>
                                                     <asp:TextBox ID="txtemailAdress" class="form-control txtemailAdress" runat="server" MaxLength="100" placeholder="Corporate E-mail ID"></asp:TextBox>
-">
+                                                    <span class="spnemail text-danger ms-2"></span>
                                                 </div>
                                             </div>
 
-                                            <div class="col-md-12 col-lg-12">
+                                            <div class="col-md-12 col-lg-12 ">
 
-                                                <div class="slider-btn error-message ">
+                                                <div class="slider-btn">
                                                     <%--<a
                                                         href="#"
                                                         class="btn ss-btn mr-15"
                                                         data-animation="fadeInLeft"
                                                         data-delay=".4s"><i class="fa-solid fa-cloud-arrow-down "></i>Download</a>--%>
-                                                   <a><asp:LinkButton runat="server" ID="BtnSubmit" CssClass="btn ss-btn mr-15  BtnSubmit" ValidationGroup="Save">Download<i class="fa-solid fa-cloud-arrow-down"></i></asp:LinkButton></a>
+                                                   <asp:LinkButton runat="server" ID="BtnSubmit" CssClass="btn ss-btn BtnSubmit" ValidationGroup="Save">Download<i class="fa-solid fa-cloud-arrow-down"></i></asp:LinkButton>
                                                 </div>
                                             </div>
                                         </div>

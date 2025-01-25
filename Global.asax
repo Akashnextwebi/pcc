@@ -50,8 +50,7 @@
         routes.MapPageRoute("SubCapability", "subcapability/{surl}", "~/product-lisitng.aspx");
         routes.MapPageRoute("Product", "product/{purl}", "~/product-details.aspx");
         routes.MapPageRoute("Investor", "investor/{iurl}", "~/investor-details.aspx");
-
-
+        routes.MapPageRoute("Industries", "industries/{indurl}", "~/air.aspx");
     }
 
 </script>

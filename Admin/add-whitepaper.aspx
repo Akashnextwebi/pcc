@@ -39,8 +39,8 @@
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtUrl" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Field can't be empty"></asp:RequiredFieldValidator>
                                 </div>
                                 <div class="col-lg-6 mb-3">
-                                    <label class="">Capability<sup class="text-danger">*</sup></label>
-                                    <asp:DropDownList runat="server" ID="ddlCapability" CssClass="form-select" AutoPostBack="true"></asp:DropDownList>
+                                    <label class="text-muted">Capability<sup class="text-danger">*</sup></label>
+                                    <asp:ListBox runat="server" SelectionMode="Multiple" ID="ddlCapability" CssClass="form-control fSelect"></asp:ListBox>
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="ddlCapability" InitialValue="0" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Field can't be empty"></asp:RequiredFieldValidator>
                                 </div>
                                 <div class="col-lg-6">

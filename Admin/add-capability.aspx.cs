@@ -114,7 +114,7 @@ public partial class Admin_add_capability : System.Web.UI.Page
                     if (result > 0)
                     {
                         ScriptManager.RegisterStartupScript(this, this.GetType(), "Message", "Snackbar.show({pos: 'top-right',text: 'Capability Added successfully.',actionTextColor: '#fff',backgroundColor: '#008a3d'});", true);
-                        txtcapability.Text = txtUrl.Text = "";
+                        txtcapability.Text = txtUrl.Text = txtbtitle.Text= txtheading.Text= txtfulldesc.Text="";
                     }
                     else
                     {

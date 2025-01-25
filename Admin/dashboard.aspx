@@ -213,7 +213,7 @@
                                     </div>
                                 </div>
                                 <div class="col-xl-3 col-md-6">
-                                    <div class="card card-animate bg-soft-light">
+                                    <div class="card card-animate bg-soft-info">
                                         <div class="card-body">
                                             <div class="d-flex align-items-center">
                                                 <div class="flex-grow-1 overflow-hidden">
@@ -226,7 +226,7 @@
                                                     <a href="/Admin/view-contact.aspx" class="text-decoration-underline">View Contact Request</a>
                                                 </div>
                                                 <div class="avatar-sm flex-shrink-0">
-                                                    <span class="avatar-title bg-success rounded fs-3">
+                                                    <span class="avatar-title bg-info rounded fs-3">
                                                         <i class="mdi mdi-email text-light"></i>
                                                     </span>
                                                 </div>

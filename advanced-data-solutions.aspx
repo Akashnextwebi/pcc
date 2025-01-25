@@ -137,7 +137,7 @@
             position: relative;
             padding: 0;
             height: 100%;
-            overflow:hidden;
+            overflow: hidden;
             transition: 0.5s;
         }
 
@@ -159,9 +159,11 @@
                 flex-direction: column;
                 transition: 0.5s;
             }
-            .eg-card3.three:hover img{
-                transform:scale(1.15)
+
+            .eg-card3.three:hover img {
+                transform: scale(1.15)
             }
+
             .eg-card3.three .card-img img {
                 min-height: 350px;
                 height: 100%;
@@ -304,31 +306,33 @@
         }
 
         .broacher-card {
-    padding: 10px;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-}
+            padding: 10px;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        }
+
         .broacher-content {
-            margin-top:15px;
+            margin-top: 15px;
+        }
 
-        }
-        .broacher-content span {
-            border-bottom:1px solid #000;
-            color:#79010c;
-            font-weight:600;
-            font-size:18px !important;
-        }
+            .broacher-content span {
+                border-bottom: 1px solid #000;
+                color: #79010c;
+                font-weight: 600;
+                font-size: 18px !important;
+            }
+
         .breadcrumb-section {
-    background-size: 100% 90%;
-    background-repeat: no-repeat;
-    background-position: right;
-    padding: 305px 0 200px;
-    position: relative;
-}
+            background-size: 100% 90%;
+            background-repeat: no-repeat;
+            background-position: right;
+            padding: 305px 0 200px;
+            position: relative;
+        }
 
-          .broacher-content h4 {
-    font-size:24px;
-              margin-top:10px;
-  }
+        .broacher-content h4 {
+            font-size: 24px;
+            margin-top: 10px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
@@ -340,14 +344,14 @@
                         <div class="banner-content">
                             <h1><%=strBannertitle %></h1>
                             <div class="">
-                                <ul class="/breadcrumb-list">
+                                <ul class="breadcrumb-list">
                                     <li><a href="/Default.aspx">Home</a></li>
                                     <li><%=strBannertitle %></li>
                                 </ul>
                             </div>
 
                             <div class="slider-btn mt-30 ">
-                               <%-- <a href="#" class="btn ss-btn mr-15" data-animation="fadeInLeft" data-delay=".4s" tabindex="0" contenteditable="false" style="animation-delay: 0.4s; cursor: pointer;"><i class="fal fa fa-download"></i>Download the broacher</a>--%>
+                                <%-- <a href="#" class="btn ss-btn mr-15" data-animation="fadeInLeft" data-delay=".4s" tabindex="0" contenteditable="false" style="animation-delay: 0.4s; cursor: pointer;"><i class="fal fa fa-download"></i>Download the broacher</a>--%>
                             </div>
                         </div>
                     </div>
@@ -372,7 +376,7 @@
             <div class="container">
                 <div class="row gy-4">
                     <%=strsubcapability %>
-                   <%-- <div class="col-lg-4 col-md-6">
+                    <%-- <div class="col-lg-4 col-md-6">
                         <div class="eg-card3 three">
                             <div class="card-img">
                                 <img src="/image/sub1/1.png" alt="">
@@ -490,6 +494,7 @@
                 </div>
             </div>
         </div>
+       
         <section class="section-padding">
 
             <div class="container">
@@ -498,11 +503,27 @@
                         <div class="pcc-section-heading mb-0">
                             <span>Our Core Competence</span>
                             <h2>Brochure for Advance Data Solutions
-</h2>
+                            </h2>
                         </div>
                     </div>
                 </div>
                 <div class="row mt-4">
+                    <%=StrWhitepaper %>
+                   <%-- <div class="col-lg-3">
+                        <div class="broacher-card">
+                            <div class="broacher-img">
+                                <img src="/image/brochure/1.png" alr="img" />
+
+                            </div>
+                            <div class="broacher-content">
+                                <span>White Paper</span>
+                                <h4>Innovative Jet Control Communication Solutions
+                                </h4>
+                                <p>Jet control and communication systems are critical for ensuring safe and efficient aviation operations. Advanced technologies enable seamless coordination between pilots, ground crews, and air traffic.</p>
+                            </div>
+                        </div>
+
+                    </div>
                     <div class="col-lg-3">
                         <div class="broacher-card">
                             <div class="broacher-img">
@@ -518,53 +539,41 @@
                         </div>
 
                     </div>
-                      <div class="col-lg-3">
-      <div class="broacher-card">
-          <div class="broacher-img">
-              <img src="/image/brochure/1.png" alr="img" />
+                    <div class="col-lg-3">
+                        <div class="broacher-card">
+                            <div class="broacher-img">
+                                <img src="/image/brochure/1.png" alr="img" />
 
-          </div>
-          <div class="broacher-content">
-              <span>White Paper</span>
-              <h4>Innovative Jet Control Communication Solutions
-              </h4>
-              <p>Jet control and communication systems are critical for ensuring safe and efficient aviation operations. Advanced technologies enable seamless coordination between pilots, ground crews, and air traffic.</p>
-          </div>
-      </div>
+                            </div>
+                            <div class="broacher-content">
+                                <span>White Paper</span>
+                                <h4>Innovative Jet Control Communication Solutions
+                                </h4>
+                                <p>Jet control and communication systems are critical for ensuring safe and efficient aviation operations. Advanced technologies enable seamless coordination between pilots, ground crews, and air traffic.</p>
+                            </div>
+                        </div>
 
-  </div>  <div class="col-lg-3">
-      <div class="broacher-card">
-          <div class="broacher-img">
-              <img src="/image/brochure/1.png" alr="img" />
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="broacher-card">
+                            <div class="broacher-img">
+                                <img src="/image/brochure/1.png" alr="img" />
 
-          </div>
-          <div class="broacher-content">
-              <span>White Paper</span>
-              <h4>Innovative Jet Control Communication Solutions
-              </h4>
-              <p>Jet control and communication systems are critical for ensuring safe and efficient aviation operations. Advanced technologies enable seamless coordination between pilots, ground crews, and air traffic.</p>
-          </div>
-      </div>
+                            </div>
+                            <div class="broacher-content">
+                                <span>White Paper</span>
+                                <h4>Innovative Jet Control Communication Solutions
+                                </h4>
+                                <p>Jet control and communication systems are critical for ensuring safe and efficient aviation operations. Advanced technologies enable seamless coordination between pilots, ground crews, and air traffic.</p>
+                            </div>
+                        </div>
 
-  </div>  <div class="col-lg-3">
-      <div class="broacher-card">
-          <div class="broacher-img">
-              <img src="/image/brochure/1.png" alr="img" />
-
-          </div>
-          <div class="broacher-content">
-              <span>White Paper</span>
-              <h4>Innovative Jet Control Communication Solutions
-              </h4>
-              <p>Jet control and communication systems are critical for ensuring safe and efficient aviation operations. Advanced technologies enable seamless coordination between pilots, ground crews, and air traffic.</p>
-          </div>
-      </div>
-
-  </div>
+                    </div>--%>
                 </div>
             </div>
-
+            
         </section>
+            
     </main>
 </asp:Content>
 

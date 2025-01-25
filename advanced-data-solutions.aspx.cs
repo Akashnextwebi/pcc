@@ -11,7 +11,7 @@ using System.Xml.Linq;
 public partial class advanced_data_solutions :  System.Web.UI.Page
 {
     SqlConnection conSQ = new SqlConnection(ConfigurationManager.ConnectionStrings["conSQ"].ConnectionString);
-    public string strBanner = "", strBannertitle = "", strDesctitle = "", strDesc = "", strsubcapability="";
+    public string strBanner = "", strBannertitle = "", strDesctitle = "", strDesc = "", strsubcapability="", StrWhitepaper="";
     protected void Page_Load(object sender, EventArgs e)
     {
        
@@ -33,7 +33,8 @@ public partial class advanced_data_solutions :  System.Web.UI.Page
                 strBannertitle=CA.BannerTitle;
                 strDesctitle = CA.DescHeading;
                 strDesc = CA.FullDesc;
-                BindSubcapability(Convert.ToString(CA.Id)); 
+                BindSubcapability(Convert.ToString(CA.Id));
+                BindWhitepaper(Convert.ToString(CA.Id));
             }
 
 
@@ -75,6 +76,36 @@ public partial class advanced_data_solutions :  System.Web.UI.Page
         catch (Exception ex)
         {
             ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "BindSubcapability", ex.Message);
+        }
+    }
+    public void BindWhitepaper(string name)
+    {
+        try
+        {
+            var Wp = WhitePaperDetails.GetAllWhitepaper(conSQ, name);
+            if (Wp.Count > 0)
+            {
+                for (int i = 0; i < Wp.Count; i++)
+                {
+                    StrWhitepaper += @"<div class='col-lg-3'>
+    <div class='broacher-card'>
+        <div class='broacher-img'>
+            <img src='/"+ Wp[i].ThumbImage + @"' alr='img' />
+        </div>
+        <div class='broacher-content'>
+            <span>White Paper</span>
+          <h5>" + Wp[i].WhitePaperHeading +@"
+                                </h5>
+        </div>
+    </div>
+
+</div>";
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "BindWhitepaper", ex.Message);
         }
     }
 }

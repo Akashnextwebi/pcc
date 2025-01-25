@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Services;
@@ -12,7 +13,7 @@ public partial class Admin_manage_industries : System.Web.UI.Page
 {
     SqlConnection conSQ = new SqlConnection(ConfigurationManager.ConnectionStrings["conSQ"].ConnectionString);
 
-    public string strIndustry = "";
+    public string strIndustry = "", strThumbImage="";
     protected void Page_Load(object sender, EventArgs e)
     {
 
@@ -37,7 +38,14 @@ public partial class Admin_manage_industries : System.Web.UI.Page
                 btnSave.Text = "Update";
                 txtname.Text = lnk.IndustryName;
                 txtUrl.Text = lnk.IndustryUrl;
+                txtheading.Text = lnk.DescHeading;
+                txtfulldesc.Text = lnk.FullDesc;
+                if (lnk.BannerImage != "")
+                {
+                    lblThumb.Text = lnk.BannerImage;
+                    strThumbImage = @"<a href='/" + lnk.BannerImage + @"' target='_blank'><img src='/" + lnk.BannerImage + @"' width='60px'></a>";
 
+                }
 
             }
         }
@@ -65,8 +73,12 @@ public partial class Admin_manage_industries : System.Web.UI.Page
                 string aid = Request.Cookies["bmw_aid"].Value;
                 IndustryDetails st = new IndustryDetails()
                 {
+                    IndustryGuid = Guid.NewGuid().ToString(),
                     IndustryName = txtname.Text,
                     IndustryUrl = txtUrl.Text,
+                    BannerImage = UploadBannerImage(),
+                    DescHeading= txtheading.Text,
+                    FullDesc= txtfulldesc.Text,
                     AddedOn = DateTime.Now,
                     AddedBy = aid,
                     AddedIp = CommonModel.IPAddress(),
@@ -92,7 +104,7 @@ public partial class Admin_manage_industries : System.Web.UI.Page
                     int result = IndustryDetails.AddIndustry(conSQ, st);
                     if (result > 0)
                     {
-                        txtname.Text = txtUrl.Text = "";
+                        txtname.Text = txtUrl.Text = txtheading.Text= txtfulldesc.Text="";
 
                         ScriptManager.RegisterStartupScript(this, this.GetType(), "Message", "Snackbar.show({pos: 'top-right',text: 'Industry added successfully.',actionTextColor: '#fff',backgroundColor: '#008a3d'});", true);
                     }
@@ -120,11 +132,15 @@ public partial class Admin_manage_industries : System.Web.UI.Page
                 strIndustry = "";
                 for (int i = 0; i < lnk.Count; i++)
                 {
-
+                    var Feacount = 0;
+                    Feacount = ManageFeature.GetAllFeaturecntWithGuid(conSQ, lnk[i].IndustryGuid).Count;
+                    var image = "<a href='/" + lnk[i].BannerImage + @"' target='_blank'><img src='/" + lnk[i].BannerImage + @"' alt='' class='rounded-circle avatar-xs shadow'></a>";
                     strIndustry += @"<tr>
                                         <td>" + (i + 1) + @"</td>
+                                        <td>" + image + @"</td>
                                         <td>" + lnk[i].IndustryName + @"</td>
                                         <td>" + lnk[i].IndustryUrl + @"</td>
+                                        <td><a href='manage-feature.aspx?Pid=" + lnk[i].IndustryGuid + @"' class='text-success fw-bold' target='_blank'>Features(" + Feacount + @")</a></td>
                                         <td>" + Convert.ToDateTime(lnk[i].AddedOn).ToString("dd MMM yyyy") + @"</td>
                                         <td class='text-center'>
                                             <a href='manage-industries.aspx?id=" + lnk[i].Id + @"' class='bs-tooltip text-info fs-18' data-id='" + lnk[i].Id + @"' data-toggle='tooltip' data-placement='top' title='Edit' data-original-title='Edit'>
@@ -141,6 +157,77 @@ public partial class Admin_manage_industries : System.Web.UI.Page
             ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "GetIndustryList", ex.Message);
 
         }
+    }
+    private string CheckThumbFormat()
+    {
+        #region ThumbImage
+        string thumbImg = "";
+        if (ThumbImage.HasFile)
+        {
+            try
+            {
+                string fileExtension = Path.GetExtension(ThumbImage.PostedFile.FileName.ToLower()), ImageGuid1 = Guid.NewGuid().ToString();
+                if ((fileExtension == ".jpg" || fileExtension == ".jpeg" || fileExtension == ".png" || fileExtension == ".gif" || fileExtension == ".webp"))
+                {
+                    System.Drawing.Bitmap bitimg = new System.Drawing.Bitmap(ThumbImage.PostedFile.InputStream);
+                    if ((bitimg.PhysicalDimension.Height != 720) || (bitimg.PhysicalDimension.Width != 1080))
+                    {
+                        return "Size";
+                    }
+                }
+                else
+                {
+
+                    return "Format";
+                }
+            }
+            catch (Exception ex)
+            {
+                ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "CheckThumbFormat", ex.Message);
+
+            }
+        }
+        #endregion
+        return thumbImg;
+    }
+    public string UploadBannerImage()
+    {
+        #region upload file
+        string thumbfile = "";
+        try
+        {
+            if (ThumbImage.HasFile)
+            {
+                string fileExtension = Path.GetExtension(ThumbImage.PostedFile.FileName.ToLower()), ImageGuid1 = Guid.NewGuid().ToString() + "-banner".Replace(" ", "-").Replace(".", "");
+                string iconPath = Server.MapPath(".") + "\\../UploadImages\\" + ImageGuid1 + "" + fileExtension;
+                try
+                {
+                    if (File.Exists(Server.MapPath("~/" + Convert.ToString(lblThumb.Text))))
+                    {
+                        File.Delete(Server.MapPath("~/" + Convert.ToString(lblThumb.Text)));
+                    }
+                }
+                catch (Exception eeex)
+                {
+                    ExceptionCapture.CaptureException(Request.Url.PathAndQuery, "UploadBannerImage", eeex.Message);
+                    return lblThumb.Text;
+                }
+                ThumbImage.SaveAs(iconPath);
+                thumbfile = "UploadImages/" + ImageGuid1 + "" + fileExtension;
+            }
+            else
+            {
+                thumbfile = lblThumb.Text;
+            }
+        }
+        catch (Exception ex)
+        {
+            ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "UploadThumbImage", ex.Message);
+
+        }
+
+        #endregion
+        return thumbfile;
     }
     [WebMethod(EnableSession = true)]
     public static string Delete(string id)
@@ -171,6 +258,7 @@ public partial class Admin_manage_industries : System.Web.UI.Page
         }
         return x;
     }
+
     protected void btnNew_Click(object sender, EventArgs e)
     {
         Response.Redirect("manage-industries.aspx");

@@ -43,9 +43,10 @@ public partial class Admin_manage_datasheet_galleries : System.Web.UI.Page
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "Message", "Snackbar.show({pos: 'top-right',text: 'Invalid image size,please add required size image.',actionTextColor: '#fff',backgroundColor: '#ea1c1c'});", true);
                     return;
                 }
-                string aid = Request.Cookies["vs_aid"].Value;
+                string aid = Request.Cookies["bmw_aid"].Value;
                 DatasheetGallery st = new DatasheetGallery()
                 {
+
                     ImageUrl = UploadImage(),
                     ProductGuid = Convert.ToString(Request.QueryString["Pid"]),
                     AddedBy = aid,
@@ -217,6 +218,7 @@ public partial class Admin_manage_datasheet_galleries : System.Web.UI.Page
                 var sub = DatasheetGallery.GetAllProductGalleryWithGuid(conSQ, pid);
                 if (sub != null)
                 {
+                    strImage = "";
                     for (int i = 0; i < sub.Count; i++)
                     {
                         strImage += @"<tr>
