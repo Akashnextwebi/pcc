@@ -812,8 +812,8 @@
         <!-- blog-area-end -->
         <section class="our-partners pt-50 pb-50">
             <div class="container">
-                <div class="row">
-                    <div class="col-12 col-md-12">
+                <div class="row align-items-center">
+                    <div class="col-12 col-md-4">
                         <div
                             class="pcc-section-heading wow fadeInDown animated"
                             data-animation="fadeInDown"
@@ -821,7 +821,7 @@
                             <h2 class="mb-0">Our Partners</h2>
                         </div>
                     </div>
-                    <div class="col-12 col-md-12">
+                    <div class="col-12 col-md-8">
                         <div class="partner-slider">
                             <%--  <div class="partner-logo">
                                 <img src="image/partners/anash.png" alt="" />

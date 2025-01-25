@@ -554,3 +554,11 @@ p {
         padding: 30px;
     }
 }
+.service-card {
+    position: relative;
+    padding: 30px 25px 30px;
+    background: rgb(255 255 255);
+    border: 1px solid #d9d9d9;
+    text-align: center;
+    height: 100%;
+}
