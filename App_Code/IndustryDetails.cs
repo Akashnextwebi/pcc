@@ -98,11 +98,10 @@ public class IndustryDetails
         int result = 0;
         try
         {
-            string query = "Update IndustryDetails Set IndustryName=@IndustryName,IndustryGuid=@IndustryGuid,IndustryUrl=@IndustryUrl,BannerImage=@BannerImage,DescHeading=@DescHeading,FullDesc=@FullDesc,AddedBy=@AddedBy,AddedOn=@AddedOn,AddedIp=@AddedIp ,Status=@Status Where Id=@Id ";
+            string query = "Update IndustryDetails Set IndustryName=@IndustryName,IndustryUrl=@IndustryUrl,BannerImage=@BannerImage,DescHeading=@DescHeading,FullDesc=@FullDesc,AddedBy=@AddedBy,AddedOn=@AddedOn,AddedIp=@AddedIp ,Status=@Status Where Id=@Id ";
             using (SqlCommand cmd = new SqlCommand(query, conSQ))
             {
                 cmd.Parameters.AddWithValue("@Id", SqlDbType.NVarChar).Value = Cat.Id;
-                cmd.Parameters.AddWithValue("@IndustryGuid", SqlDbType.NVarChar).Value = Cat.IndustryGuid;
                 cmd.Parameters.AddWithValue("@IndustryName", SqlDbType.NVarChar).Value = Cat.IndustryName;
                 cmd.Parameters.AddWithValue("@IndustryUrl", SqlDbType.NVarChar).Value = Cat.IndustryUrl;
                 cmd.Parameters.AddWithValue("@BannerImage", SqlDbType.NVarChar).Value = Cat.BannerImage;

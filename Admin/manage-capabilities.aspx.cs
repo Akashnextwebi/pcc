@@ -138,7 +138,8 @@ public partial class Admin_manage_capabilities : System.Web.UI.Page
                                         <td>" + cap[i].Title + @"</td>  
                                         <td>" + Convert.ToDateTime(cap[i].AddedOn).ToString("dd MMM yyyy") + @"</td>
                                         <td class='text-center'>
-                                        
+                                        <a href='manage-capabilities.aspx?Pid=" + cap[i].ProductGuid + @"&id=" + cap[i].Id + @"' class='bs-tooltip text-info fs-18' data-id='" + cap[i].Id + @"' data-toggle='tooltip' data-placement='top' title='Edit' data-original-title='Edit'>
+                                               <i class='mdi mdi-pencil'></i></a>
                                                 <a href='javascript:void(0);' class='bs-tooltip deleteItem warning confirm text-danger fs-18' data-id='" + cap[i].Id + @"' data-toggle='tooltip' data-placement='top' title='Delete' data-original-title='Delete'>
                                                <i class='mdi mdi-delete-forever'></i></a>
                                         </td>

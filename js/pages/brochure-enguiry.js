@@ -10,36 +10,35 @@ $(document.body).on("click", ".BtnSubmit", function (e) {
         var name = $(".textFname").val().trim();
         var email = $(".txtemailAdress").val().trim();
         var contact = $(".txtContact").val().trim();
-        $(".spnname").empty();
-        $(".spnemail").empty();
-        $(".spnsport").empty();
-        $(".spnpax").empty();
-        $(".spnphone").empty();
-        if (name == "" || name == null) {
-            $(".spnname").html("field can't be empty");
-            count = 0;
-        }
-        else if (/^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,}$/.test(name) === false) {
-            $(".spnname").html("Enter valid name");
-            count = 0;
-        }
-        if (contact == "" || contact == null) {
-            $(".spnphone").html("field can't be empty");
-            count = 0;
-        }
-        else if (/^[0-9]\d{9}$/.test(contact) === false) {
-            $(".spnphone").html("Invalid mobile number");
-            count = 0;
-        }
-        if (email == "" || email == null) {
-            $(".spnemail").html("field can't be empty");
-            count = 0;
-        }
-        else if (/^\S+@\S+\.\S+$/.test(email) === false) {
-            $(".spnemail").html("Invalid email address");
-            count = 0;
-        }
-        if (count === 1) {
+
+        //$(".spnfname").empty();
+        //$(".spnemail").empty();
+        //$(".spncontact").empty();
+        //if (name == "" || name == null) {
+        //    $(".spnfname").html("field can't be empty");
+        //    count = 0;
+        //}
+        //else if (/^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,}$/.test(name) === false) {
+        //    $(".spnfname").html("Enter valid name");
+        //    count = 0;
+        //}
+        //if (contact == "" || contact == null) {
+        //    $(".spncontact").html("field can't be empty");
+        //    count = 0;
+        //}
+        //else if (/^[0-9]\d{9}$/.test(contact) === false) {
+        //    $(".spncontact").html("Invalid Contact number");
+        //    count = 0;
+        //}
+        //if (email == "" || email == null) {
+        //    $(".spnemail").html("field can't be empty");
+        //    count = 0;
+        //}
+        //else if (/^\S+@\S+\.\S+$/.test(email) === false) {
+        //    $(".spnemail").html("Invalid email address");
+        //    count = 0;
+        //}
+        /*if (count === 1) {*/
             $.ajax({
                 type: 'POST',
                 url: "/product-details.aspx/SaveDownloadBroucherEnquiry",
@@ -78,7 +77,7 @@ $(document.body).on("click", ".BtnSubmit", function (e) {
                 }
             });
 
-        }
+        
     }
     else {
         $('.error-message').removeClass("d-none");

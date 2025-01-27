@@ -69,6 +69,10 @@ public partial class product_details : System.Web.UI.Page
                     }
 
                 }
+                else
+                {
+                    divsheet.Visible = false;
+                }
                 var cap = manageCapabilities.GetAllCapabilitiesProductGuid(conSQ, Pro.ProductGuid);
                 if (cap.Count > 0)
                 {
@@ -117,6 +121,8 @@ public partial class product_details : System.Web.UI.Page
                         }
                     }
                 }
+               
+               
                 var spe = SpecificationDetails.GetAllSpecificationProductGuid(conSQ, Pro.ProductGuid);
                 if (spe.Count > 0)
                 {

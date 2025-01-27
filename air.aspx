@@ -10,10 +10,10 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="banner-content">
-                        <h1 class="mb-3">Air</h1>
+                        <h1 class="mb-3"><%=strIndustryName %></h1>
                         <ul class="breadcrumb-list">
                             <li><a href="/Default.aspx">Home</a></li>
-                            <li>Air</li>
+                            <li><%=strIndustryName %></li>
                         </ul>
                     </div>
                 </div>

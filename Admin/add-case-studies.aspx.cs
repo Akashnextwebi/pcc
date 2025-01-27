@@ -650,7 +650,7 @@ public partial class Admin_add_case_studies : System.Web.UI.Page
 
     protected void btnNew_Click(object sender, EventArgs e)
     {
-        Response.Redirect("write-case-studie.aspx", false);
+        Response.Redirect("add-case-studies.aspx", false);
     }
 
 }

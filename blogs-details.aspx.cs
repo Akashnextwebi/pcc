@@ -29,6 +29,24 @@ public partial class blogs_details : System.Web.UI.Page
             BlogDetails BD = BlogDetails.GetAllBlogDetailsWithUrl(conSQ, strBlogURL).FirstOrDefault();
             if (BD != null)
             {
+                #region SEO
+                if (!string.IsNullOrEmpty(BD.PageTitle))
+                {
+                    Page.Title = BD.PageTitle;
+                }
+                else
+                {
+                    Page.Title = BD.BlogTitle + " | Park Control and Communication";
+                }
+                if (!string.IsNullOrEmpty(BD.MetaDescription))
+                {
+                    Page.MetaDescription = BD.MetaDescription;
+                }
+                if (!string.IsNullOrEmpty(BD.MetaKeys))
+                {
+                    Page.MetaKeywords = BD.MetaKeys;
+                }
+                #endregion
                 StrBlogDesc = BD.FullDescription;
                 StrBlogTitle = BD.BlogTitle;
                 StrDetailImage = BD.ThumbImage;

@@ -10,7 +10,7 @@ using System.Web.UI.WebControls;
 public partial class air : System.Web.UI.Page
 {
     SqlConnection conSQ = new SqlConnection(ConfigurationManager.ConnectionStrings["conSQ"].ConnectionString);
-    public string strBannerImage = "", strDescHeading = "", strfullDesc = "", strProduct="", strFeature="";
+    public string strBannerImage = "", strDescHeading = "", strIndustryName="", strfullDesc = "", strProduct="", strFeature="";
     protected void Page_Load(object sender, EventArgs e)
     {
         if (RouteData.Values["indurl"] != null)
@@ -29,6 +29,7 @@ public partial class air : System.Web.UI.Page
                 strBannerImage = ind.BannerImage;
                 strDescHeading = ind.DescHeading;
                 strfullDesc = ind.FullDesc;
+                strIndustryName = ind.IndustryName;
                 BindProduct(Convert.ToString(ind.Id));
                 var Fea = ManageFeature.GetAllFeatureGuid(conSQ, ind.IndustryGuid);
                 if (Fea.Count > 0)
