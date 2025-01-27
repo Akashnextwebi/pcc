@@ -226,6 +226,8 @@ public partial class Admin_manage_datasheet_galleries : System.Web.UI.Page
                                         <td><a href='/" + sub[i].ImageUrl + @"' target='_blank'><img src='/" + sub[i].ImageUrl + @"' width='60'></a></td>
                                         <td>" + Convert.ToDateTime(sub[i].AddedOn).ToString("dd MMM yyyy") + @"</td>
                                         <td class='text-center'>
+                                        <a href='manage-datasheet-galleries.aspx?Pid=" + sub[i].ProductGuid + @"&id=" + sub[i].Id + @"' class='bs-tooltip text-info fs-18' data-id='" + sub[i].Id + @"' data-toggle='tooltip' data-placement='top' title='Edit' data-original-title='Edit'>
+                                               <i class='mdi mdi-pencil'></i></a>
                                                 <a href='javascript:void(0);' class='bs-tooltip deleteItem warning confirm text-danger fs-18' data-id='" + sub[i].Id + @"' data-pid='" + sub[i].ProductGuid + @"' data-toggle='tooltip' data-placement='top' title='Delete' data-original-title='Delete'>
                                                <i class='mdi mdi-delete-forever'></i></a>
                                         </td>
@@ -272,7 +274,7 @@ public partial class Admin_manage_datasheet_galleries : System.Web.UI.Page
     protected void btnNew_Click(object sender, EventArgs e)
     {
         var pid = Convert.ToString(Request.QueryString["Pid"]);
-        Response.Redirect("/adminmanage-datasheet-galleries.aspx?Pid=" + pid, false);
+        Response.Redirect("/admin/manage-datasheet-galleries.aspx?Pid=" + pid, false);
     }
     public void GetProductName()
     {

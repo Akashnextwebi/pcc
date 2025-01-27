@@ -14,7 +14,7 @@ public partial class Admin_manage_product_galleries : System.Web.UI.Page
 {
     SqlConnection conSQ = new SqlConnection(ConfigurationManager.ConnectionStrings["conSQ"].ConnectionString);
 
-    public string strImage = "", StrThumbImage = "", StrProductname="";
+    public string strImage = "", StrThumbImage = "", StrProductname = "";
     protected void Page_Load(object sender, EventArgs e)
     {
         if (!IsPostBack)
@@ -226,6 +226,8 @@ public partial class Admin_manage_product_galleries : System.Web.UI.Page
                                         <td><a href='/" + sub[i].ImageUrl + @"' target='_blank'><img src='/" + sub[i].ImageUrl + @"' width='60'></a></td>
                                         <td>" + Convert.ToDateTime(sub[i].AddedOn).ToString("dd MMM yyyy") + @"</td>
                                         <td class='text-center'>
+                                        <a href='manage-product-galleries.aspx?Gid=" + sub[i].ProductGuid + @"&id=" + sub[i].Id + @"' class='bs-tooltip text-info fs-18' data-id='" + sub[i].Id + @"' data-toggle='tooltip' data-placement='top' title='Edit' data-original-title='Edit'>
+                                               <i class='mdi mdi-pencil'></i></a>
                                                 <a href='javascript:void(0);' class='bs-tooltip deleteItem warning confirm text-danger fs-18' data-id='" + sub[i].Id + @"' data-pid='" + sub[i].ProductGuid + @"' data-toggle='tooltip' data-placement='top' title='Delete' data-original-title='Delete'>
                                                <i class='mdi mdi-delete-forever'></i></a>
                                         </td>

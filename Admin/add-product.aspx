@@ -12,6 +12,7 @@
                         <div class="page-title-right">
                             <ol class="breadcrumb m-0">
                                 <li class="breadcrumb-item"><a href="javascript: void(0);">Dashboards</a></li>
+                                  <li class="breadcrumb-item"><a href="javascript: void(0);">Product</a></li>
                                 <li class="breadcrumb-item active"><%=Request.QueryString["id"] !=null?"Update":"Add" %> Product</li>
                             </ol>
                         </div>
@@ -25,7 +26,7 @@
                 <div class="col-lg-8">
                     <div class="card">
                         <div class="card-header">
-                            <h5 class="card-title"><%=Request.QueryString["id"] !=null?"Update":"Add" %> Product Detail</h5>
+                            <h5 class="card-title"><%=Request.QueryString["id"] !=null?"Update":"Add" %> Product</h5>
                         </div>
                         <div class="card-body">
                             <div class="row mb-2">
@@ -150,7 +151,7 @@
             </div>
             <div class="mb-3">
                 <asp:Button runat="server" ID="btnSave" CssClass="btn btn-success" Text="Save" OnClick="btnSave_Click" OnClientClick="tinyMCE.triggerSave(false,true);" ValidationGroup="Save" Style="margin-top: 10px;" />
-                <asp:Button runat="server" ID="btnNew" CssClass="btn btn-success" Visible="false" Text="Add New Product" OnClick="btnNew_Click" Style="margin-top: 10px;" />
+                <asp:Button runat="server" ID="btnNew" CssClass="btn btn-outline-success" Visible="false" Text="Clear" OnClick="btnNew_Click" Style="margin-top: 10px;" />
                 <asp:Label ID="lblThumb" runat="server" Visible="false"></asp:Label>
                 <asp:Label ID="lblPDF" runat="server" Visible="false"></asp:Label>
             </div>

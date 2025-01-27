@@ -12,8 +12,8 @@
                         <div class="page-title-right">
                             <ol class="breadcrumb m-0">
                                 <li class="breadcrumb-item"><a href="/Admin/">Dashboard</a></li>
-                                <li class="breadcrumb-item"><a href="javascript: void(0);">Videos</a></li>
-                                <li class="breadcrumb-item active">Add Video</li>
+                                <li class="breadcrumb-item"><a href="javascript: void(0);">Video</a></li>
+                                <li class="breadcrumb-item active">Manage Videos</li>
                             </ol>
                         </div>
                     </div>
@@ -41,7 +41,7 @@
                                 </div>
                                 <div class="col-lg-4 mb-3">
                                     <asp:Button ID="btnSave" runat="server" Text="Save" ValidationGroup="Save" CssClass="btn btn-success waves-effect waves-light" Style="margin-top: 28px" OnClick="btnSave_Click" />
-                                    <asp:Button ID="btnNew" runat="server" Text="Add New Video" CssClass="btn btn-success waves-effect waves-light" Style="margin-top: 28px" OnClick="btnNew_Click" Visible="false" />
+                                    <asp:Button ID="btnNew" runat="server" Text="Clear" CssClass="btn btn-outline-success waves-effect waves-light" Style="margin-top: 28px" OnClick="btnNew_Click" Visible="false" />
                                     <asp:Label runat="server" ID="lblThumb" Visible="false"></asp:Label>
                                 </div>
                             </div>

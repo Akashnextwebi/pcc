@@ -13,7 +13,7 @@
                             <ol class="breadcrumb m-0">
                                 <li class="breadcrumb-item"><a href="/Admin/">Dashboard</a></li>
                                 <li class="breadcrumb-item"><a href="javascript: void(0);">InvestorPDF</a></li>
-                                <li class="breadcrumb-item active">Add InvestorPDF</li>
+                                <li class="breadcrumb-item active">Manage InvestorPDF</li>
                             </ol>
                         </div>
                     </div>
@@ -52,7 +52,7 @@
 
                             <div class="col-lg-4 mb-3">
                                 <asp:Button ID="btnSave" runat="server" Text="Save" ValidationGroup="Save" CssClass="btn btn-success waves-effect waves-light" Style="margin-top: 28px" OnClick="btnSave_Click" />
-                                <asp:Button ID="btnNew" runat="server" Text="Add New Investor" CssClass="btn btn-success waves-effect waves-light" Style="margin-top: 28px" OnClick="btnNew_Click" Visible="false" />
+                                <asp:Button ID="btnNew" runat="server" Text="Clear" CssClass="btn btn-outline-success waves-effect waves-light" Style="margin-top: 28px" OnClick="btnNew_Click" Visible="false" />
                                 <asp:Label ID="lblPdf" runat="server" Visible="false"></asp:Label>
                             </div>
                         </div>

@@ -9,13 +9,13 @@
             <div class="row">
                 <div class="col-12">
                     <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                        <h4 class="mb-sm-0">Seminar</h4>
+                        <h4 class="mb-sm-0">Add Seminar</h4>
 
                         <div class="page-title-right">
                             <ol class="breadcrumb m-0">
                                 <li class="breadcrumb-item"><a href="javascript: void(0);">Dashboard</a></li>
                                 <li class="breadcrumb-item"><a href="javascript: void(0);">Seminar</a></li>
-                                <li class="breadcrumb-item active"><%=Request.QueryString["id"] == null ? "Add" : "Update" %> Seminar</li>
+                                <li class="breadcrumb-item active"><%=Request.QueryString["id"] == null ? "Add" : "Update" %> Add Seminar</li>
                             </ol>
                         </div>
                     </div>
@@ -26,7 +26,7 @@
                 <div class="col-lg-12 mb-2">
                     <div class="card">
                         <div class="card-header">
-                            <h5 class="card-title mb-0">Seminar</h5>
+                            <h5 class="card-title mb-0">Add Seminar</h5>
                         </div>
                         <div class="card-body">
                             <div class="row">
@@ -56,7 +56,7 @@
                             <div class="col-lg-12 mb-2">
                                 <div>
                                     <asp:Button ID="btnSave" runat="server" Text="Save" ValidationGroup="Save" CssClass="btn btn-success waves-effect waves-light " OnClientClick="tinyMCE.triggerSave(false,true);" OnClick="btnSave_Click" />
-                                    <asp:Button ID="btnNew" runat="server" Text="Add New Seminar" Visible="false" CssClass="btn btn-success waves-effect waves-light" OnClick="btnNew_Click" />
+                                    <asp:Button ID="btnNew" runat="server" Text="Clear" Visible="false" CssClass="btn btn-outline-success waves-effect waves-light" OnClick="btnNew_Click" />
                                     <asp:Label ID="lblThumb" runat="server" Visible="false"></asp:Label>
 
                                 </div>

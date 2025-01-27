@@ -338,7 +338,7 @@ Pellentesque habitant morbi tristique senectus et netus et malesuada.--%>
                 </div>
         </section>
 
-        <div class="product_details_section section-padding bg-light">
+        <div class="product_details_section section-padding bg-light" >
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
@@ -355,7 +355,7 @@ Pellentesque habitant morbi tristique senectus et netus et malesuada.--%>
                             </ul>
                             <div class="tab-content">
 
-                                <div class="tab-pane fade show active  " id="Capabilities" tabindex="0">
+                                <div class="tab-pane fade show active " id="Capabilities"  tabindex="0">
                                     <div class="row justify-content-center gy-4">
                                         <%=strCapabilities %>
                                         <!-- Iconbox -->
@@ -505,7 +505,7 @@ Pellentesque habitant morbi tristique senectus et netus et malesuada.--%>
                                         </div>--%>
                                     </div>
                                 </div>
-                                <div class="tab-pane " id="Specifications" tabindex="0">
+                                <div class="tab-pane " id="Specifications " tabindex="0">
                                     <div class="row justify-content-center">
                                         <div class="col-lg-8">
                                             <div class="wptb-accordion wptb-accordion1 ">
@@ -565,7 +565,7 @@ Pellentesque habitant morbi tristique senectus et netus et malesuada.--%>
 
             </div>
         </div>
-        <section class="section-padding">
+        <section class="section-padding " id="divsheet" runat="server">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8">
@@ -823,7 +823,7 @@ Pellentesque habitant morbi tristique senectus et netus et malesuada.--%>
                                                 <div class="form-group">
                                                     <%--<input type="text" name="password" class="form-control" placeholder="Mobile Number">--%>
                                                     <asp:TextBox ID="txtContact" class="form-control txtContact" runat="server" MaxLength="15" placeholder="Mobile Number"></asp:TextBox>
-                                                    <span class="spnContact text-danger ms-2"></span>
+                                                    <span class="spncontact text-danger ms-2"></span>
                                                 </div>
                                             </div>
                                             <div class="col-lg-12 col-md-12 mb-4">

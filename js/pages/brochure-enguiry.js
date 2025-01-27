@@ -10,25 +10,24 @@ $(document.body).on("click", ".BtnSubmit", function (e) {
         var name = $(".textFname").val().trim();
         var email = $(".txtemailAdress").val().trim();
         var contact = $(".txtContact").val().trim();
-        $(".spnname").empty();
+
+        $(".spnfname").empty();
         $(".spnemail").empty();
-        $(".spnsport").empty();
-        $(".spnpax").empty();
-        $(".spnphone").empty();
+        $(".spncontact").empty();
         if (name == "" || name == null) {
-            $(".spnname").html("field can't be empty");
+            $(".spnfname").html("field can't be empty");
             count = 0;
         }
         else if (/^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,}$/.test(name) === false) {
-            $(".spnname").html("Enter valid name");
+            $(".spnfname").html("Enter valid name");
             count = 0;
         }
         if (contact == "" || contact == null) {
-            $(".spnphone").html("field can't be empty");
+            $(".spncontact").html("field can't be empty");
             count = 0;
         }
         else if (/^[0-9]\d{9}$/.test(contact) === false) {
-            $(".spnphone").html("Invalid mobile number");
+            $(".spncontact").html("Invalid Contact number");
             count = 0;
         }
         if (email == "" || email == null) {

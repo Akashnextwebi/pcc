@@ -12,6 +12,7 @@
                         <div class="page-title-right">
                             <ol class="breadcrumb m-0">
                                 <li class="breadcrumb-item"><a href="javascript: void(0);">Dashboards</a></li>
+                                 <li class="breadcrumb-item"><a href="javascript: void(0);">Blog</a></li>
                                 <li class="breadcrumb-item active"><%=Request.QueryString["id"] !=null?"Update":"Add" %> Blog</li>
                             </ol>
                         </div>
@@ -119,7 +120,7 @@
                 </div>
                 <div class="col-lg-12 mb-3">
                     <asp:Button runat="server" ID="btnSave" CssClass="btn btn-success" Text="Save" OnClick="btnSave_Click" OnClientClick="tinyMCE.triggerSave(false,true);" ValidationGroup="Save" />
-                    <asp:Button runat="server" ID="btnNew" CssClass="btn btn-success" Visible="false" Text="Add New Blog" OnClick="btnNew_Click" />
+                    <asp:Button runat="server" ID="btnNew" CssClass="btn btn-outline-success" Visible="false" Text="Clear" OnClick="btnNew_Click" />
                     <asp:Label ID="lblThumb" runat="server" Visible="false"></asp:Label>
                     <asp:Label ID="lblBlog" runat="server" Visible="false"></asp:Label>
                 </div>

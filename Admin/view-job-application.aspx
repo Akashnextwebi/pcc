@@ -14,6 +14,7 @@
                         <ol class="breadcrumb m-0">
                             <li class="breadcrumb-item"><a href="/javascript: void(0);">Dashboard</a></li>
                             <li class="breadcrumb-item"><a href="/javascript: void(0);">Career</a></li>
+                            <li class="breadcrumb-item active">View Job Application</li>
                             
                         </ol>
                     </div>

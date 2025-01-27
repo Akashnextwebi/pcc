@@ -138,6 +138,8 @@ public partial class Admin_manage_feature : System.Web.UI.Page
                                          <td>" + Feature[i].Title + @"</td>
                                         <td>" + Convert.ToDateTime(Feature[i].AddedOn).ToString("dd MMM yyyy") + @"</td>
                                         <td class='text-center'>
+                                        <a href='manage-feature.aspx?Pid=" + Feature[i].IndustryGuid + @"&id=" + Feature[i].Id + @"' class='bs-tooltip text-info fs-18' data-id='" + Feature[i].Id + @"' data-toggle='tooltip' data-placement='top' title='Edit' data-original-title='Edit'>
+                                               <i class='mdi mdi-pencil'></i></a>
                                                 <a href='javascript:void(0);' class='bs-tooltip deleteItem warning confirm text-danger fs-18' data-id='" + Feature[i].Id + @"' data-pid='" + Feature[i].IndustryGuid + @"' data-toggle='tooltip' data-placement='top' title='Delete' data-original-title='Delete'>
                                                <i class='mdi mdi-delete-forever'></i></a>
                                         </td>
@@ -184,7 +186,7 @@ public partial class Admin_manage_feature : System.Web.UI.Page
     protected void btnNew_Click(object sender, EventArgs e)
     {
         var Pid = Convert.ToString(Request.QueryString["Pid"]);
-        Response.Redirect("/adminmanage-feature.aspx?Pid=" + Pid, false);
+        Response.Redirect("/admin/manage-feature.aspx?Pid=" + Pid, false);
     }
     private string CheckImageFormat()
     {
