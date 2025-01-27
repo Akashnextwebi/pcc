@@ -12202,3 +12202,22 @@ blockquote cite {
 .modal-title{
     font-size:18px;
 }
+
+.has-submenu > a:before {
+    content: "\f078";
+    position: absolute;
+    font-family: "Font Awesome 6 Pro";
+    right: 0px;
+    top: 0px;
+}
+li.has-submenu {
+    padding-right:20px;
+}
+
+.single-testimonial p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 4;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}

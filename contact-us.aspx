@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#"  MasterPageFile="./MasterPage.master" AutoEventWireup="true" CodeFile="contact-us.aspx.cs" Inherits="contact_us" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="./MasterPage.master" AutoEventWireup="true" CodeFile="contact-us.aspx.cs" Inherits="contact_us" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <link href="css/breadcrums.css" rel="stylesheet" />
@@ -302,11 +302,14 @@ Singapore 169877</a></h5>
                     </div>
                 </div>
 
-                <div class="gmapbox wow fadeInUp">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d242.99987728533415!2d77.65786535202425!3d12.971977128157983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae16aa33b27567%3A0x8f953033d4356f!2sPark%20Controls%20%26%20Communications%20Private%20Limited!5e0!3m2!1sen!2sin!4v1732866597618!5m2!1sen!2sin" width="600" height="450" style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
+              
 
-                <div class="wptb-contact-form-two mr-top-100 section-padding">
+
+            </div>
+        </section>
+        <section class="bg-light">
+            <div class="container">
+                <div class="wptb-contact-form-two mr-top-100  section-padding">
                     <div class="wptb-form--wrapper">
                         <div class="row">
                             <div class="col-lg-5 col-md-6">
@@ -315,7 +318,7 @@ Singapore 169877</a></h5>
                                         <h6 class="wptb-item--subtitle">SEND US MAIL
                                         </h6>
                                         <h1 class="wptb-item--title">Feel Free To Ask Anything
-                                                For Car Servicing</h1>
+                                For Car Servicing</h1>
                                         <div class="wptb-item--divider"></div>
                                         <div class="wptb-item--description">
                                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse interdum nulla eu posuere scelerisque. Donec sagittis adipiscing elit.
@@ -365,17 +368,17 @@ Singapore 169877</a></h5>
                                         <div class="col-md-12 col-lg-12">
                                             <div class="wptb-item--button">
                                                 <%--  <asp:LinkButton ID="lnkSendMail" runat="server" CssClass="btn-two white" OnClick="SendMail_Click" CausesValidation="true" ValidationGroup="Save">
-                                                <div class="btn-wrap">
-                                          <span class="text-first">Send Mail</span>
-                                                  </div>
-                                              </asp:LinkButton>--%>
-                                           <asp:LinkButton ID="lnkSendMail" runat="server" CssClass="btn-two white" Text="Send Mail" OnClick="SendMail_Click" ValidationGroup="Save" />
-<%--                                                <asp:Button runat="server" ID="BtnSave" OnClick="BtnSave_Click" OnClientClick="false" ValidationGroup="Save" CssClass="btn-two white" Text="Submit" />--%>
+                                <div class="btn-wrap">
+                          <span class="text-first">Send Mail</span>
+                                  </div>
+                              </asp:LinkButton>--%>
+                                                <asp:LinkButton ID="lnkSendMail" runat="server" CssClass="btn2 mt-35" OnClick="SendMail_Click" ValidationGroup="Save">Send Mail<i class="fal fa-long-arrow-right"></i></asp:LinkButton>
+                                                <%--                                                <asp:Button runat="server" ID="BtnSave" OnClick="BtnSave_Click" OnClientClick="false" ValidationGroup="Save" CssClass="btn-two white" Text="Submit" />--%>
                                                 <%--<button class="btn-two white" type="submit">
-                                                        <div class="btn-wrap">
-                                                            <span class="text-first">Send Mail </span>
-                                                        </div>
-                                                    </button>--%>
+                                        <div class="btn-wrap">
+                                            <span class="text-first">Send Mail </span>
+                                        </div>
+                                    </button>--%>
                                             </div>
                                         </div>
                                     </div>
@@ -384,6 +387,13 @@ Singapore 169877</a></h5>
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
+        <section class="section-padding">
+            <div class="container">
+                  <div class="gmapbox wow fadeInUp">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d242.99987728533415!2d77.65786535202425!3d12.971977128157983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae16aa33b27567%3A0x8f953033d4356f!2sPark%20Controls%20%26%20Communications%20Private%20Limited!5e0!3m2!1sen!2sin!4v1732866597618!5m2!1sen!2sin" width="600" height="450" style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
 
             </div>
         </section>

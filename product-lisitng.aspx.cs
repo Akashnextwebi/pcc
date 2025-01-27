@@ -53,11 +53,12 @@ public partial class product_lisitng :  System.Web.UI.Page
                         <div class='magnetic-wrap'>
                             <div class='people-card2 magnetic-item' style=''>
                                 <div class='people-img'>
-                                    <img src='/"+ pro[i].ThumbImage + @"' alt=''>
+<a href='/product/" + pro[i].ProductUrl + @"'>
+                                    <img src='/"+ pro[i].ThumbImage + @"' alt=''></a>
                                 </div>
                                 <div class='people-content'>
                                     <div class='name-deg'>
-                                        <h5 class='d-flex justify-content-between'><a href='/product/" + pro[i].ProductUrl + @"'>" + pro[i].ProductName + @"</a><span class='text-danger fw-bold'>" + pro[i].SKUCode + @"</span></h5>
+                                        <h5 class=''><a href='/product/" + pro[i].ProductUrl + @"'>" + pro[i].ProductName + @"</a></h5>
 
 
 
@@ -67,7 +68,8 @@ public partial class product_lisitng :  System.Web.UI.Page
                                     <div class='contact-area'>
                                         <div class='contact-number'>
                                             <div class='icon'>
-                                                View Product
+<a href='/product/" + pro[i].ProductUrl + @"'>
+                                                View Product</a>
                                             </div>
 
                                         </div>

@@ -72,7 +72,7 @@
             font-size: .875rem;
             font-weight: 500;
             color: #000;
-            border-radius: 50px;
+            border-radius: 0px;
             padding: 5px 21px;
             background: #f3e8c1;
         }
@@ -145,12 +145,12 @@
                 </div>
             </div>
         </section>
-        <section class="section-padding bg-dark">
+        <section class="section-padding ">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="text-center mb-50">
-                            <h2 class="text-white">Current Job Opening</h2>
+                            <h2 class="">Current Job Opening</h2>
                         </div>
 
 

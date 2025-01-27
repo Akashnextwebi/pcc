@@ -49,11 +49,11 @@
 
         </div>
     </div>
-    <div class="section-padding bg-dark event-details-page">
-        <div class="container">
+    <div class="section-padding bg-new event-details-page">
+        <div class="container-fluid one pl--95">
             <div class="service-details-solution-area mb-70 ">
-                <div class="row g-md-4 gy-5">
-                    <div class="col-lg-8">
+                <div class="row  justify-content-start ">
+                    <div class="col-lg-7">
                         <div class="">
 
 
@@ -67,7 +67,7 @@
                                 <ul class="feature-list">
                                     <li>
                                     Inventory: Identify all existing components—controllers, sensors, communication hardware, and software.
-/li>
+</li>
                                 <li>Compatibility Check: Evaluate how the legacy components interact and where there are gaps in performance or integration with newer technologies.
                                 </li>
                                     <li>Risk Assessment: Consider safety, operational risks, and regulatory compliance during the upgrade.

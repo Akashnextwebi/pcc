@@ -122,7 +122,7 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8">
-                    <div class="text-center our-approach">
+                    <div class="text-center our-approach mb-50">
                         <h2>Our Approach to Safety</h2>
                         <p>
                             At PCC,We operate a number of industrial sites and our manufacturing activities present a range of risks. These include work in confined spaces, machinery operation, working at height, and slips, trips and falls among others. Our 2022 safety performance showed a small improvement in recordable and major injuries from 2021. We monitor and aim to eliminate, mitigate and manage workplace safety risks. Our approach to identifying and assessing safety risks is embedded within our approach to risk management.

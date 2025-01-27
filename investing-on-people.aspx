@@ -75,9 +75,12 @@
     <section class="bg-light section-padding">
         <div class="container">
             <div class="row">
+                 <div class="col-lg-6">
 
+     <img src="image/pcc.png">
+ </div>
                 <div class="col-lg-6">
-                    <div class="inveast-card">
+                    <div class="inveast-card pl-50">
                         <h2>How we support our people
                         </h2>
                         <p>
@@ -91,10 +94,7 @@
                     </div>
 
                 </div>
-                <div class="col-lg-6">
-
-                    <img src="image/pcc.png">
-                </div>
+               
 
             </div>
             <div class="row mt-5">
