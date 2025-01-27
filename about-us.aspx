@@ -107,12 +107,12 @@
         <div class="container">
 
 
-            <div class="row justify-content-center  align-content-center">
+            <div class="row justify-content-center  align-items-center">
                 <div class="col-lg-6">
                     <img src="image/about-us.jpg" alt="img">
                 </div>
                 <div class="col-lg-6 pl-50">
-                    <div class="row gy-4  justify-content-center  align-content-center">
+                    <div class="row gy-4   justify-content-center align-items-center">
                         <div class="col-lg-12">
                             <div class="service-card">
                                 <div class="card-inner">
@@ -128,14 +128,12 @@
 
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-lg-12">
                             <div class="service-card">
                                 <div class="card-inner">
                                     <div class="title mb-0">
                                         <h3>Our Vision
 
-                               
+   
                                         </h3>
                                         <p>
                                             To be a globally recognized leader in the development of cutting-edge solutions for Defence and Aerospace applications, driving technological progress and contributing to national and international advancements in these critical sectors.
@@ -149,6 +147,7 @@
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
 

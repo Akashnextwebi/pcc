@@ -29,7 +29,7 @@
 
 .wptb-why-choose-one .wptb-icon-box2 {
     display: inline-block;
-    background: #112652;
+    background: #222222;
     padding: 60px;
     margin-bottom: 30px;
     transition: var(--transition-base);
@@ -178,7 +178,7 @@ p {
 }
 
 .wptb-why-choose-one {
-    background: #112652;
+    background: #222222;
     overflow: hidden;
 }
 
@@ -545,10 +545,11 @@ p {
         text-transform: uppercase;
         margin: 0px 0px 10px 0px;
     }
+.wptb-why-choose-one .wptb-icon-box2
 
-    .wptb-icon-box4 .wptb-item--description {
-        margin-bottom: 0px;
-    }
+.wptb-icon-box4 .wptb-item--description {
+    margin-bottom: 0px;
+}
 
 @media screen and (max-width: 991px) {
     .wptb-icon-box4 .wptb-item--inner {
@@ -563,7 +564,8 @@ p {
     background: unset;
     border: unset !important;
     text-align: start;
-    height: 100%;
+    height: unset !important;
+    margin-bottom:30px;
 }
     .service-card h3{
         color:#fff;

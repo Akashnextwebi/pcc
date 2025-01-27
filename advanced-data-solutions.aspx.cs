@@ -90,12 +90,15 @@ public partial class advanced_data_solutions :  System.Web.UI.Page
                     StrWhitepaper += @"<div class='col-lg-3'>
     <div class='broacher-card'>
         <div class='broacher-img'>
-            <img src='/"+ Wp[i].ThumbImage + @"' alr='img' />
+<a href=''>
+            <img src='/"+ Wp[i].ThumbImage + @"' alr='img' /></a>
         </div>
-        <div class='broacher-content'>
+        <div class='broacher-content '>
             <span>White Paper</span>
-          <h5>" + Wp[i].WhitePaperHeading +@"
+          <h5 class='mt-2'><a href=''></a> " + Wp[i].WhitePaperHeading +@"
                                 </h5>
+<p>test</p>
+
         </div>
     </div>
 

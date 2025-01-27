@@ -331,7 +331,12 @@
 
         .broacher-content h4 {
             font-size: 24px;
+           
             margin-top: 10px;
+        }
+        .broacher-content h5 {
+            font-size:24px;
+            line-height:30px;
         }
     </style>
 </asp:Content>
@@ -509,66 +514,7 @@
                 </div>
                 <div class="row mt-4">
                     <%=StrWhitepaper %>
-                   <%-- <div class="col-lg-3">
-                        <div class="broacher-card">
-                            <div class="broacher-img">
-                                <img src="/image/brochure/1.png" alr="img" />
-
-                            </div>
-                            <div class="broacher-content">
-                                <span>White Paper</span>
-                                <h4>Innovative Jet Control Communication Solutions
-                                </h4>
-                                <p>Jet control and communication systems are critical for ensuring safe and efficient aviation operations. Advanced technologies enable seamless coordination between pilots, ground crews, and air traffic.</p>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="broacher-card">
-                            <div class="broacher-img">
-                                <img src="/image/brochure/1.png" alr="img" />
-
-                            </div>
-                            <div class="broacher-content">
-                                <span>White Paper</span>
-                                <h4>Innovative Jet Control Communication Solutions
-                                </h4>
-                                <p>Jet control and communication systems are critical for ensuring safe and efficient aviation operations. Advanced technologies enable seamless coordination between pilots, ground crews, and air traffic.</p>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="broacher-card">
-                            <div class="broacher-img">
-                                <img src="/image/brochure/1.png" alr="img" />
-
-                            </div>
-                            <div class="broacher-content">
-                                <span>White Paper</span>
-                                <h4>Innovative Jet Control Communication Solutions
-                                </h4>
-                                <p>Jet control and communication systems are critical for ensuring safe and efficient aviation operations. Advanced technologies enable seamless coordination between pilots, ground crews, and air traffic.</p>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="broacher-card">
-                            <div class="broacher-img">
-                                <img src="/image/brochure/1.png" alr="img" />
-
-                            </div>
-                            <div class="broacher-content">
-                                <span>White Paper</span>
-                                <h4>Innovative Jet Control Communication Solutions
-                                </h4>
-                                <p>Jet control and communication systems are critical for ensuring safe and efficient aviation operations. Advanced technologies enable seamless coordination between pilots, ground crews, and air traffic.</p>
-                            </div>
-                        </div>
-
-                    </div>--%>
+               
                 </div>
             </div>
             
