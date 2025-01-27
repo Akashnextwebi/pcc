@@ -49,7 +49,7 @@
             }
 
             .history-section .image-box .link-box a {
-                background: #e4492e;
+                background: #79010c;
             }
 
         .history-section .content-box {

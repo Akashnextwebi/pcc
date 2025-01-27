@@ -50,10 +50,10 @@
           <div class="row">
               <div class="col-lg-12">
                   <div class="banner-content">
-                      <h1>Quality And Accreditations</h1>
+                      <h1>Quality and Accreditations</h1>
                       <ul class="breadcrumb-list">
                           <li><a href="Default.aspx">Home</a></li>
-                          <li>Quality And Accreditations</li>
+                          <li>Quality and Accreditations</li>
                       </ul>
                   </div>
               </div>
@@ -64,22 +64,22 @@
         <div class="container">
             <div class="sec-title centred">
                 <span class="sub-title">Certification</span>
-                <h2>Quality And Accreditations</h2>
+                <h2>Quality and Accreditations</h2>
             </div>
-            <div class="row">
-                <div class="col-lg-4">
+            <div class="row justify-content-center">
+                <div class="col-lg-3">
                     <div class="certificate-img">
                         <img src="image/certificate/Appreciation-letter-from-BDL-for-Telemetry-Ground-System-1-216x300.jpg" class="img-fluid w-100" />
                     </div>
 
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-3">
                     <div class="certificate-img">
                         <img src="image/certificate/pcc-astra-letter--215x300.jpg" class="img-fluid w-100" />
                     </div>
 
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-3">
                     <div class="certificate-img">
                         <img src="image/certificate/Appreciation-letter-from-BDL-for-Telemetry-Ground-System-1-216x300.jpg" class="img-fluid w-100" />
                     </div>

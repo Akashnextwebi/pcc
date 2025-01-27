@@ -53,7 +53,7 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8">
-                    <div class="cyber-warpper text-center">
+                    <div class="cyber-warpper text-center mb-50">
                         <h2>Cybersecurity Best Practices for Personal Computing Clusters (PCC)
 
  </h2>

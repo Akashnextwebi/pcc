@@ -51,11 +51,11 @@
 
         </div>
     </div>
-    <div class="section-padding bg-dark event-details-page">
-        <div class="container">
-            <div class="service-details-solution-area mb-70 ">
-                <div class="row g-md-4 gy-5">
-                    <div class="col-lg-8">
+   <div class="section-padding bg-new event-details-page">
+    <div class="container-fluid one pl--95">
+        <div class="service-details-solution-area mb-70 ">
+            <div class="row  justify-content-start ">
+                    <div class="col-lg-7">
                         <div class="">
 
 

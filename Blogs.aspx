@@ -82,7 +82,7 @@
         <section id="blog" class="blog-area p-relative fix pt-100 pb-100" style="background: #f3f3f3">
             <div class="container">
 
-                <div class="row Bloglist">
+                <div class="row gy-4 Bloglist">
                    <%-- <div class="col-12 col-md-4">
                         <a class="blog-card" href="blogs-details.aspx">
                             <div class="image">

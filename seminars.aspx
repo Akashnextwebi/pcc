@@ -18,7 +18,7 @@
             font-size: 12px;
             font-weight: 500;
             border: 1px solid #0d1720;
-            border-radius: 15px;
+            border-radius:0px;
             line-height: 1;
             display: inline-flex;
             padding: 4px 12px;

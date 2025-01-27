@@ -35,114 +35,123 @@
 
                     </p>
                     <p class="wptb-item--description">Founded in 1989, PCC has spent 35 years creating and improving a wide range of products and services. We have built up a diverse portfolio of products including Telemetry Data Acquisition Systems, Precision Timing & Control Systems, and various other components for the Air Force, Navy, and Military Ground Forces. PCC gained a good reputation quickly thanks to our future-ready approach and the ability to completely customize products for highly specific requirements in the defence sector.</p>
-                     <p class="wptb-item--description">
-     As we look to the future, we hope to build a legacy of trust, collaboration, and progress—one that will continue to inspire and empower the industry and nation.                        
- </p>
+                    <p class="wptb-item--description">
+                        As we look to the future, we hope to build a legacy of trust, collaboration, and progress—one that will continue to inspire and empower the industry and nation.                        
+                    </p>
                     <div class="text-center mt-4">
-                    <h5 class="text-one mt-2 mb-4 " style="font-style:italic">"Scientists discover that which exists. An engineer creates that which never was."
-                    </h5>
-                    <h5 class="text-one mt-2 mb-4"><span class="text-dark">Theodore Von Karman - <span class="fw-lighter">Mathematician, aerospace engineer, physicist.</span></span></h5>
-                   </div>
+                        <h5 class="text-one mt-2 mb-4 " style="font-style: italic">"Scientists discover that which exists. An engineer creates that which never was."
+                        </h5>
+                        <h5 class="text-one mt-2 mb-4"><span class="text-dark">Theodore Von Karman - <span class="fw-lighter">Mathematician, aerospace engineer, physicist.</span></span></h5>
+                    </div>
                 </div>
             </div>
-            <section class="wptb-funfacts-one has-before-bg py-0">
-                <div class="container">
-                    <div class="wptb-funfacts--inner">
-                        <div class="row">
-                            <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
-                                <div class="wptb-counter1 style1 wow skewIn animated" style="visibility: visible;">
-                                    <div class="wptb-item--inner">
-                                        <div class="wptb-item--icon">
-                                            <img src="image/icons/supply-chain.png" alt="">
-                                        </div>
-                                        <div class="wptb-item--holder">
-                                            <div class="wptb-item--text">Products Introduced</div>
-                                            <div class="wptb-item--value">
-                                                <span class="odometer"></span><span class="suffix">300+</span>
-                                            </div>
-                                        </div>
+
+        </div>
+    </section>
+    <section class="wptb-funfacts-one has-before-bg py-0">
+        <div class="container">
+            <div class="wptb-funfacts--inner">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+                        <div class="wptb-counter1 style1 wow skewIn">
+                            <div class="wptb-item--inner">
+                                <div class="wptb-item--icon">
+                                    <img src="image/icons/supply-chain.png" alt="" />
+                                </div>
+                                <div class="wptb-item--holder">
+                                    <div class="wptb-item--text">Products Introduced</div>
+                                    <div class="wptb-item--value">
+                                        <span class="odometer"></span><span class="suffix">300+</span>
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
 
-                            <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
-                                <div class="wptb-counter1 style1 wow skewIn animated" style="visibility: visible;">
-                                    <div class="wptb-item--inner">
-                                        <div class="wptb-item--icon">
-                                            <img src="image/icons/client.png" alt="">
-                                        </div>
-                                        <div class="wptb-item--holder">
-                                            <div class="wptb-item--text">Engineering Partners</div>
-                                            <div class="wptb-item--value">
-                                                <span class="odometer"></span><span class="suffix">275+</span>
-                                            </div>
-                                        </div>
+                    <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+                        <div class="wptb-counter1 style1 wow skewIn">
+                            <div class="wptb-item--inner">
+                                <div class="wptb-item--icon">
+                                    <img src="image/icons/client.png" alt="" />
+                                </div>
+                                <div class="wptb-item--holder">
+                                    <div class="wptb-item--text">Products Introduced</div>
+                                    <div class="wptb-item--value">
+                                        <span class="odometer"></span><span class="suffix">275+</span>
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
 
-                            <div class="col-lg-4 col-md-6">
-                                <div class="wptb-counter1 style1 wow skewIn animated" style="visibility: visible;">
-                                    <div class="wptb-item--inner">
-                                        <div class="wptb-item--icon">
-                                            <img src="image/icons/experience.png" alt="">
-                                        </div>
-                                        <div class="wptb-item--holder">
-                                            <div class="wptb-item--text">Years of Experties</div>
-                                            <div class="wptb-item--value">
-                                                <span class="odometer"></span><span class="suffix">35+</span>
-                                            </div>
-                                        </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="wptb-counter1 style1 wow skewIn">
+                            <div class="wptb-item--inner">
+                                <div class="wptb-item--icon">
+                                    <img src="image/icons/experience.png" alt="" />
+                                </div>
+                                <div class="wptb-item--holder">
+                                    <div class="wptb-item--text">Years of Experties</div>
+                                    <div class="wptb-item--value">
+                                        <span class="odometer"></span><span class="suffix">35+</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
         </div>
     </section>
-    <section class="section-padding new-bg">
+    <section class="section-padding bg-new mt-50">
         <div class="container">
 
 
-            <div class="row">
+            <div class="row justify-content-center  align-content-center">
                 <div class="col-lg-6">
-                    <div class="service-card">
-                        <div class="card-inner">
-                            <div class="title mb-0">
-                                <h3>Our Mission
-                                </h3>
-                                <p>
-                                    To deliver innovative, customized, and high-quality solutions for the Defence, Aerospace, Space, and Industrial sectors, ensuring reliability and precision in every product we create. We strive to empower our clients by advancing technology and meeting their unique requirements with agility, excellence, and integrity.
+                    <img src="image/about-us.jpg" alt="img">
+                </div>
+                <div class="col-lg-6 pl-50">
+                    <div class="row gy-4  justify-content-center  align-content-center">
+                        <div class="col-lg-12">
+                            <div class="service-card">
+                                <div class="card-inner">
+                                    <div class="title mb-0">
+                                        <h3>Our Mission
+                                        </h3>
+                                        <p>
+                                            To deliver innovative, customized, and high-quality solutions for the Defence, Aerospace, Space, and Industrial sectors, ensuring reliability and precision in every product we create. We strive to empower our clients by advancing technology and meeting their unique requirements with agility, excellence, and integrity.
 
 
-                                </p>
+                                        </p>
+                                    </div>
+
+                                </div>
                             </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="service-card">
+                                <div class="card-inner">
+                                    <div class="title mb-0">
+                                        <h3>Our Vision
 
+                               
+                                        </h3>
+                                        <p>
+                                            To be a globally recognized leader in the development of cutting-edge solutions for Defence and Aerospace applications, driving technological progress and contributing to national and international advancements in these critical sectors.
+
+
+
+                           
+                                        </p>
+                                    </div>
+
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <div class="service-card">
-                        <div class="card-inner">
-                            <div class="title mb-0">
-                                <h3>Our Vision
 
-                                           
-                                </h3>
-                                <p>
-                                    To be a globally recognized leader in the development of cutting-edge solutions for Defence and Aerospace applications, driving technological progress and contributing to national and international advancements in these critical sectors.
-
-
-
-                                       
-                                </p>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>

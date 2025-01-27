@@ -4,54 +4,79 @@
     <link href="css/breadcrums.css" rel="stylesheet" />
     <style>
         .magnetic-wrap {
-    position: relative;
+            position: relative;
+        }
 
-}
         .people-card3 .people-content {
-    padding: 25px 30px;
-    border: 1px solid #eee;
-    border-top: none;
-    display: flex
-;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px;
-}
+            padding: 25px 30px;
+            border: 1px solid #eee;
+            border-top: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
             .people-card3 .people-content .name-degi {
                 line-height: 1;
-            }.people-card3 .people-content .name-degi h5 {
-    margin-bottom: 5px;
-}
-             .people-card3 .people-content .name-degi span {
-    color: #566064;
-    font-size: 14px;
-    font-weight: 500;
-}.people-card3 .people-content .social-icon {
-    display: flex
-;
-    align-items: center;
-    justify-content: center;
-    width: 120px;
-    border: 1px solid #eee;
-    border-radius: 20px;
-    padding: 7px;
-}
- .people-card3 .people-content .social-icon li a {
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    background-color: #dfebf7;
-    display: flex
-;
-    align-items: center;
-    justify-content: center;
-    transition: 0.35s;
-}
- .people-card3 .people-content .social-icon li a i {
-    font-size: 15px;
-    color: #0094ff;
-    transition: 0.35s;
-}
+            }
+
+                .people-card3 .people-content .name-degi h5 {
+                    margin-bottom: 5px;
+                }
+
+                .people-card3 .people-content .name-degi span {
+                    color: #566064;
+                    font-size: 14px;
+                    font-weight: 500;
+                }
+
+            .people-card3 .people-content .social-icon {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 120px;
+                border: 1px solid #eee;
+                border-radius: 0px;
+                padding: 7px;
+            }
+
+                .people-card3 .people-content .social-icon li a {
+                    width: 24px;
+                    height: 24px;
+                    border-radius: 50%;
+                    background-color: #dfebf7;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    transition: 0.35s;
+                }
+
+                    .people-card3 .people-content .social-icon li a i {
+                        font-size: 15px;
+                        color: #0094ff;
+                        transition: 0.35s;
+                    }
+
+        .custom-btn {
+            position: relative;
+            width: auto;
+            min-width: auto;
+            height: 40px;
+            padding: 8px 15px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            border-width: 0px;
+            background: #000;
+            color: #fff;
+            font-family: "Bai Jamjuree", sans-serif;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-size: 14px;
+        }
     </style>
 
 </asp:Content>
@@ -74,7 +99,7 @@
     <div class="section-padding">
         <div class="container">
             <div class="row g-4">
-                <div class="col-md-6">
+                <div class="col-md-4">
                     <div class="magnetic-wrap">
                         <div class="people-card3 magnetic-item" style="">
                             <div class="people-img">
@@ -85,14 +110,14 @@
                                     <h5><a href="#">Mr. Harbard Mack</a></h5>
                                     <span>Senior Consultant</span>
                                 </div>
-                               <div class="social-icon">
-View Profile
-  </div>
+                                <div class="custom-btn">
+                                    View Profile
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-4">
                     <div class="magnetic-wrap">
                         <div class="people-card3 magnetic-item">
                             <div class="people-img">
@@ -103,14 +128,14 @@ View Profile
                                     <h5><a href="#">Mr. DF Daniel Scoot</a></h5>
                                     <span>Senior Consultant</span>
                                 </div>
-                              <div class="social-icon">
-View Profile
-  </div>
+                                <div class="custom-btn">
+                                    View Profile
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-4">
                     <div class="magnetic-wrap">
                         <div class="people-card3 magnetic-item" style="">
                             <div class="people-img">
@@ -121,14 +146,14 @@ View Profile
                                     <h5><a href="#">Mrs. Hanrry Ghust</a></h5>
                                     <span>Senior Consultant</span>
                                 </div>
-                                <div class="social-icon">
-View Profile
-  </div>
+                                <div class="custom-btn">
+                                    View Profile
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-4">
                     <div class="magnetic-wrap">
                         <div class="people-card3 magnetic-item">
                             <div class="people-img">
@@ -139,8 +164,8 @@ View Profile
                                     <h5><a href="#">Mr. Dr Richard Joseph</a></h5>
                                     <span>Senior Consultant</span>
                                 </div>
-                                <div class="social-icon">
-                              View Profile
+                                <div class="custom-btn">
+                                    View Profile
                                 </div>
                             </div>
                         </div>

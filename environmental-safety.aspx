@@ -3,26 +3,66 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <link href="css/breadcrums.css" rel="stylesheet" />
     <style>
-        .new-ul {
-            padding-left: 30px;
-            margin-bottom: 20px;
-        }
+        .career-page .section-title1 h2 {
+     padding-top: 0;
+ }
 
-            .new-ul li {
-                position: relative;
-                padding-left: 20px;
-            }
+ .section-title1.two h2 {
+     margin-top: 0;
+     padding-top: 10px;
+ }
 
-                .new-ul li::before {
-                    height: 8px;
-                    width: 8px;
-                    border-radius: 50%;
-                    background-color: #000;
-                    content: "";
-                    position: absolute;
-                    left: 0;
-                    top: 8px;
-                }
+ .section-title1 h2 {
+     color: #000;
+     font-size: 40px;
+     font-weight: 400;
+     margin-bottom: 0;
+     margin-top: -10px;
+ }
+
+ .pr--95 {
+     padding-right: 70px;
+ }
+
+ .our-approach {
+ }
+
+ .item-box {
+     background-color: #FFF;
+     border-radius: 5px;
+     overflow: hidden;
+     height:100%;
+     position: relative;
+ }
+
+     .item-box i {
+         float: left;
+         line-height: 1.3;
+         font-size: 45px;
+         color: #F57009;
+         position: relative;
+     }
+
+
+
+     .item-box .content-box h4 {
+         font-size: 22px;
+         font-weight: 600;
+         line-height: 1.3;
+         margin-bottom: 15px;
+         text-transform: capitalize;
+         position: relative;
+     }
+
+     .item-box .content-box p {
+         margin-bottom: 0;
+         position: relative;
+     }
+
+ .item-box, .item-box {
+     position: relative;
+     padding: 50px 35px;
+ }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
@@ -87,47 +127,58 @@
                                 <img src="image/env/2.png" />
                             </div>
                         </div>
-                        <div class="new-form mt-5">
-                            <h2 class=" mb-4">Key Considerations for Environmental Safety in PCCs:</h2>
+                        
 
-                            <h3>Temperature Control:</h3>
-                            <ul class="new-ul">
-                                <li>Maintain an optimal operating temperature for the hardware by using efficient cooling systems.</li>
-                                <li>Install air conditioning or ventilation to prevent overheating.</li>
-                            </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-padding bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="text-center our-approach mb-50">
+                        <h2>Key Considerations for Environmental Safety in PCC
+</h2>
+                        <p>
+                            At PCC,We operate a number of industrial sites and our manufacturing activities present a range of risks.
 
-                            <h3>Power Management:</h3>
-                            <ul class="new-ul">
-                                <li>Use Uninterruptible Power Supplies (UPS) to protect against power surges and outages.</li>
-                                <li>Ensure proper grounding to avoid electrical hazards.</li>
-                            </ul>
+                        </p>
+                    </div>
 
-                            <h3>Fire Safety:</h3>
-                            <ul class="new-ul">
-                                <li>Equip the area with fire suppression systems, such as gas-based or water mist extinguishers, to minimize damage to sensitive equipment.</li>
-                                <li>Conduct regular inspections and keep fire exits clear.</li>
-                            </ul>
-
-                            <h3>Physical Security:</h3>
-                            <ul class="new-ul">
-                                <li>Protect the PCC environment with secure locks, surveillance systems, and restricted access areas.</li>
-                                <li>Ensure racks and equipment are properly secured to prevent accidents.</li>
-                            </ul>
-
-                            <h3>Hazardous Material Management:</h3>
-                            <ul class="new-ul">
-                                <li>Dispose of electronic waste (e-waste) responsibly, complying with local environmental regulations.</li>
-                                <li>Avoid using materials that could emit harmful substances under stress.</li>
-                            </ul>
-
-                            <h3>Environmental Sustainability:</h3>
-                            <ul class="new-ul">
-                                <li>Implement energy-efficient hardware to reduce power consumption.</li>
-                                <li>Consider renewable energy sources to support the computing infrastructure.</li>
-                            </ul>
-
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="item-box">
+                        <img src="image/checked.png" width="48" class="mb-3">
+                        <div class="content-box">
+                            <h4>Temperature Control</h4>
+                            <p>We focus on identifying potential risks before they become issues. Through rigorous safety assessments, hazard analysis, and continuous monitoring, we take preventive actions to ensure that all operations are safe and compliant with industry standards.</p>
                         </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="item-box">
+                        <img src="image/checked.png" width="48" class="mb-3">
 
+                        <div class="content-box">
+                            <h4>Power Management
+</h4>
+                            <p>Our employees receive continuous safety training, equipping them with the knowledge and skills needed to recognize and address safety concerns. We empower our teams to make safety a priority at all levels, fostering a culture where every individual takes ownership of their safety and the safety of others.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="item-box">
+                        <img src="image/checked.png" width="48" class="mb-3">
+
+                        <i class="ar-icons-tank"></i>
+                        <div class="content-box">
+                            <h4>Fire Safety</h4>
+                            <p>We are committed to constantly improving our safety practices. By reviewing safety data, learning from incidents, and staying updated on best practices, we strive to enhance our safety performance and create a work environment that is always evolving towards greater safety standards.</p>
+                        </div>
                     </div>
                 </div>
             </div>

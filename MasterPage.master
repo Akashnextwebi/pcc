@@ -52,9 +52,7 @@
    .header-top {
      border-bottom: 1px solid #dfdfdf;
    }
-   .pcc-header.sticky-menu .header-top {
-     display: none;
-   }
+  
    .wptb-funfacts-one .wptb-funfacts--inner,
    .wptb-funfacts-one.has-before-bg .wptb-funfacts--inner::before {
      background-color: var(--pcc-primary-theme);

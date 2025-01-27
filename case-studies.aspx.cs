@@ -41,11 +41,9 @@ public partial class case_studies : System.Web.UI.Page
                                         <h4><a href='/casestudy/" + cs[i].CaseStudyUrl + @"'>" + cs[i].CaseStudyName + @"</a></h4>
                                     </div>
                                     <div class='details-btn'>
-                                        <a class='primary-btn2 btn-hover' href='/casestudy/" + cs[i].CaseStudyUrl + @"'>Read More
-                     <svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'>
-                         <path fill-rule='evenodd' clip-rule='evenodd' d='M10.1865 1.06237L0 11.2484L0.751627 12L10.9376 1.81347V8.85645H12V0H3.14355V1.06237H10.1865Z'></path>
-                     </svg>
-                                            <span style='top: 51.7875px; left: 100.853px;'></span>
+                                        <a class='btn ss-btn mr-15' href='/casestudy/" + cs[i].CaseStudyUrl + @"'>
+                   <i class='fal fa-long-arrow-right'></i>Read more
+                                    
                                         </a>
                                     </div>
                                 </div>

@@ -815,7 +815,7 @@
                 <div class="row align-items-center">
                     <div class="col-12 col-md-4">
                         <div
-                            class="pcc-section-heading wow fadeInDown animated"
+                            class="pcc-section-heading mb-0 wow fadeInDown animated"
                             data-animation="fadeInDown"
                             data-delay=".4s">
                             <h2 class="mb-0">Our Partners</h2>

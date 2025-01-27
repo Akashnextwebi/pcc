@@ -107,7 +107,7 @@
             }
 
                 .case-study-card2 .case-content .category-and-title > a {
-                    border-radius: 16px;
+                    border-radius: 0px;
                     border: 1px solid rgba(255, 255, 255, 0.5);
                     background: 0 0;
                     display: inline-block;

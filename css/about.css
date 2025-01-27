@@ -136,17 +136,10 @@
 }
 
 .text-one {
-    color: #0a8dff;
+    color: #79010c;
     font-size: 22px;
 }
 
-.wptb-funfacts-one .wptb-funfacts--inner {
-    position: relative;
-    padding: 48px 39px;
-    width: 100%;
-    margin-top: 50px;
-    background-color: #112652;
-}
 
 p {
     font-size: 16px !important;
@@ -180,6 +173,8 @@ p {
     font-size: 16px !important;
     line-height: 28px !important;
     opacity: 1 !important;
+    padding:0px;
+    color:#fff;
 }
 
 .wptb-why-choose-one {
@@ -210,16 +205,20 @@ p {
     width: 100%;
     object-fit: cover;
 }
+.bg-new{
+    background:#222222;
 
+}
 .instructor__content .title {
     margin-bottom: 8px;
     font-size: 20px;
+    line-height: 30px;
     font-weight: 600;
 }
 
 .instructor__content .designation {
     display: block;
-    color: #0c5397;
+    color: #79010c;
     line-height: 1.2;
     margin-bottom: 12px;
 }
@@ -259,6 +258,10 @@ p {
     .wptb-accordion1 .wptb--item + .wptb--item {
         border-top: 0px;
     }
+
+.wptb-funfacts-one .wptb-funfacts--inner, .wptb-funfacts-one.has-before-bg .wptb-funfacts--inner::before {
+    background-color: #79010c;
+}
 
 .wptb-accordion1 .wptb-item-title {
     position: relative;
@@ -557,8 +560,11 @@ p {
 .service-card {
     position: relative;
     padding: 30px 25px 30px;
-    background: rgb(255 255 255);
-    border: 1px solid #d9d9d9;
-    text-align: center;
+    background: unset;
+    border: unset !important;
+    text-align: start;
     height: 100%;
 }
+    .service-card h3{
+        color:#fff;
+    }
