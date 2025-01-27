@@ -65,7 +65,7 @@ public partial class Admin_manage_video_gallery : System.Web.UI.Page
                 }
                 if (ThumbImg == "Size")
                 {
-                    ScriptManager.RegisterStartupScript(this, this.GetType(), "Message", "Snackbar.show({pos: 'top-right',text: 'Invalid image size.Please upload correct resolution image for blog image',actionTextColor: '#fff',backgroundColor: '#ea1c1c'});", true);
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "Message", "Snackbar.show({pos: 'top-right',text: 'Invalid image size.Please upload correct resolution image for Video Gallery Image image',actionTextColor: '#fff',backgroundColor: '#ea1c1c'});", true);
                     return;
                 }
 

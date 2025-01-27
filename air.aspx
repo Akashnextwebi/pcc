@@ -78,7 +78,7 @@
             <div class="row g-4">
                 <div class="col-lg-12 ">
                     <div class="sub-title  text-start">
-                        <h2>Spotlight on Air Capabilities
+                        <h2>Spotlight on <%=strIndustryName %> Capabilities
                         </h2>
                     </div>
 
@@ -220,7 +220,7 @@
             <div class="container-fluid one pl--95">
                 <div class="horizontal-scrolling-content">
                     <div class="section-title1 two">
-                        <span>Air</span>
+                        <span><%=strIndustryName %></span>
                         <h2>Protecting the Sky, Securing the Future
 
                         </h2>

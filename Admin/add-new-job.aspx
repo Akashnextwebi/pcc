@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/MasterPage.master" AutoEventWireup="true" CodeFile="add-new-job.aspx.cs" Inherits="Admin_add_new_job" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+    
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <div class="page-content">

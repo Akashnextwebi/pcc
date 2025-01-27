@@ -355,7 +355,7 @@ Pellentesque habitant morbi tristique senectus et netus et malesuada.--%>
                             </ul>
                             <div class="tab-content">
 
-                                <div class="tab-pane fade show active " id="Capabilities"  tabindex="0">
+                                <div class="tab-pane fade show active" id="Capabilities"  tabindex="0">
                                     <div class="row justify-content-center gy-4" >
                                         <%=strCapabilities %>
                                         <!-- Iconbox -->
@@ -505,7 +505,7 @@ Pellentesque habitant morbi tristique senectus et netus et malesuada.--%>
                                         </div>--%>
                                     </div>
                                 </div>
-                                <div class="tab-pane " id="Specifications " tabindex="0">
+                                <div class="tab-pane" id="Specifications" tabindex="0">
                                     <div class="row justify-content-center">
                                         <div class="col-lg-8">
                                             <div class="wptb-accordion wptb-accordion1 ">

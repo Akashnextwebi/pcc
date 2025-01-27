@@ -132,8 +132,8 @@ public partial class product_details : System.Web.UI.Page
 
                         strSpecification += @"<div class='wptb--item active'>
                                                     <h6 class='wptb-item-title'><span><span class='wptb-item--number'></span>" + spe[i].Title + @"</span> <i class='fa-solid fa-angle-down'></i></h6>
-                                                    <div class='wptb-item--content' style='display: block;'>
-                                                        " + spe[i].FullDesc + @"
+                                                    <div class='wptb-item--content'>
+                                                        " + spe[i].FullDesc +@"
                                                     </div>
                                                 </div>";
                     }
