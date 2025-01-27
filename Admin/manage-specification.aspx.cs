@@ -119,6 +119,7 @@ public partial class Admin_manage_specification : System.Web.UI.Page
                 var sub = SpecificationDetails.GetAllSpecificationWithGuid(conSQ, pid);
                 if (sub != null)
                 {
+                    strSpecification = "";
                     for (int i = 0; i < sub.Count; i++)
                     {
                         strSpecification += @"<tr>

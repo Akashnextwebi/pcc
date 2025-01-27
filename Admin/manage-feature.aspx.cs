@@ -105,6 +105,7 @@ public partial class Admin_manage_feature : System.Web.UI.Page
                 btnNew.Visible = true;
                 btnSave.Text = "Update";
                 txtheading.Text = feature.Title;
+                txtfulldesc.Text = feature.FullDesc;
                 if (feature.ThumbImage != "")
                 {
                     lblThumb.Text = feature.ThumbImage;
