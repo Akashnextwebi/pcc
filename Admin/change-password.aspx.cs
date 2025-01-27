@@ -22,9 +22,9 @@ public partial class Admin_change_password : System.Web.UI.Page
         {
             Session.Abandon();
             Session.Clear();
-            if (Request.Cookies["bmw_aid"] != null)
+            if (Request.Cookies["pcc_aid"] != null)
             {
-                Response.Cookies["bmw_aid"].Expires = TimeStamps.UTCTime().AddDays(-10);
+                Response.Cookies["pcc_aid"].Expires = TimeStamps.UTCTime().AddDays(-10);
             } 
             if (Request.Cookies["bmw_apkv"] != null)
             {
@@ -44,11 +44,11 @@ public partial class Admin_change_password : System.Web.UI.Page
             string pageName = Path.GetFileName(Request.Path);
             if (Page.IsValid)
             {
-                if (CreateUser.CheckAccess(conSQ, pageName, "Edit", Request.Cookies["bmw_aid"].Value))
+                if (CreateUser.CheckAccess(conSQ, pageName, "Edit", Request.Cookies["pcc_aid"].Value))
                 {
 
                     CreateUser inputs = new CreateUser();
-                    inputs.UserId = Request.Cookies["bmw_aid"].Value;
+                    inputs.UserId = Request.Cookies["pcc_aid"].Value;
                     inputs.Password = CommonModel.Encrypt(txtCurrent.Text.Trim());
                     CreateUser logins = CreateUser.Login2(conSQ, inputs);
                     if (logins.UserGuid != null)

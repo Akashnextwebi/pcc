@@ -151,7 +151,7 @@ public partial class Admin_page_group : System.Web.UI.Page
         try
         {
             SqlConnection conSQ = new SqlConnection(ConfigurationManager.ConnectionStrings["conSQ"].ConnectionString);
-            if (CreateUser.CheckAccess(conSQ, "page-group.aspx", "Delete", HttpContext.Current.Request.Cookies["bmw_aid"].Value))
+            if (CreateUser.CheckAccess(conSQ, "page-group.aspx", "Delete", HttpContext.Current.Request.Cookies["pcc_aid"].Value))
             {
                 PageGroup cat = new PageGroup();
                 cat.Id = Convert.ToInt32(id);

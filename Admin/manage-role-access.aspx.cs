@@ -101,7 +101,7 @@ public partial class Admin_manage_role_access : System.Web.UI.Page
             UserRolesAccess ua = new UserRolesAccess();
             if (users.Count > 0)
             {
-                if (CreateUser.CheckAccess(conSQ, "manage-role-access.aspx", "Edit", HttpContext.Current.Request.Cookies["bmw_aid"].Value))
+                if (CreateUser.CheckAccess(conSQ, "manage-role-access.aspx", "Edit", HttpContext.Current.Request.Cookies["pcc_aid"].Value))
                 {
                     ua.PageId = pid;
                     ua.RoleId = rid;
@@ -124,7 +124,7 @@ public partial class Admin_manage_role_access : System.Web.UI.Page
             }
             else
             {
-                if (CreateUser.CheckAccess(conSQ, "manage-role-access.aspx", "Add", HttpContext.Current.Request.Cookies["bmw_aid"].Value))
+                if (CreateUser.CheckAccess(conSQ, "manage-role-access.aspx", "Add", HttpContext.Current.Request.Cookies["pcc_aid"].Value))
                 {
                     ua.PageId = pid;
                     ua.RoleId = rid;

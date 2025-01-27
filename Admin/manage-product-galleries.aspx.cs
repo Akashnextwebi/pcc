@@ -44,7 +44,7 @@ public partial class Admin_manage_product_galleries : System.Web.UI.Page
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "Message", "Snackbar.show({pos: 'top-right',text: 'Invalid image size,please add required size image.',actionTextColor: '#fff',backgroundColor: '#ea1c1c'});", true);
                     return;
                 }
-                string aid = Request.Cookies["bmw_aid"].Value;
+                string aid = Request.Cookies["pcc_aid"].Value;
                 ProductGallery st = new ProductGallery()
                 {
                     ImageUrl = UploadImage(),

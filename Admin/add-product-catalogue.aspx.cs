@@ -65,7 +65,7 @@ public partial class Admin_add_product_catalogue : System.Web.UI.Page
                     return;
                 }
 
-                var aid = Request.Cookies["bmw_aid"].Value;
+                var aid = Request.Cookies["pcc_aid"].Value;
                 ProductCatalogue BD = new ProductCatalogue();
                 BD.CatalogueName = txtcatalogue.Text;
                 BD.PDFLink = txtlink.Text;

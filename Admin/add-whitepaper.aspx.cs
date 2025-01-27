@@ -173,7 +173,7 @@ public partial class Admin_add_whitepaper : System.Web.UI.Page
                     return;
                 }
 
-                var aid = Request.Cookies["bmw_aid"].Value;
+                var aid = Request.Cookies["pcc_aid"].Value;
                 WhitePaperDetails WD = new WhitePaperDetails();
                 WD.WhitePaperTitle = txtName.Text;
                 WD.WhitePaperUrl = txtUrl.Text;

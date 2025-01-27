@@ -80,7 +80,7 @@ public partial class Admin_add_capability : System.Web.UI.Page
                     return;
                 }
 
-                var aid = Request.Cookies["bmw_aid"].Value;
+                var aid = Request.Cookies["pcc_aid"].Value;
                 Capability BD = new Capability();
                 BD.CapabilityName = txtcapability.Text.Trim();
                 BD.CapabilityUrl = txtUrl.Text.Trim();

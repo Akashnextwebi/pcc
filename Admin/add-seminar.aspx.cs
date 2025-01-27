@@ -68,7 +68,7 @@ public partial class Admin_add_seminar : System.Web.UI.Page
                     return;
                 }
 
-                var aid = Request.Cookies["bmw_aid"].Value;
+                var aid = Request.Cookies["pcc_aid"].Value;
                 SeminarDetails BD = new SeminarDetails();
                 BD.SeminarTitle = txttitle.Text;
                 BD.Tag = txttag.Text;

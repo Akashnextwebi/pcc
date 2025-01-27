@@ -144,7 +144,7 @@ public partial class Admin_manage_investorpdf : System.Web.UI.Page
                 
                 #endregion
 
-                var aid = Request.Cookies["bmw_aid"].Value;
+                var aid = Request.Cookies["pcc_aid"].Value;
 
                 InvestorPdf inv = new InvestorPdf();
 

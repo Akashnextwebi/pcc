@@ -174,7 +174,7 @@ public partial class Admin_add_case_studies : System.Web.UI.Page
 
 
 
-                var aid = Request.Cookies["bmw_aid"].Value;
+                var aid = Request.Cookies["pcc_aid"].Value;
 
                 CaseStudy CS = new CaseStudy();
 

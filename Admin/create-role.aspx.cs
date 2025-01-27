@@ -58,7 +58,7 @@ public partial class Admin_create_role : System.Web.UI.Page
                 UserRoles ca = new UserRoles();
                 if (btnSave.Text == "Update")
                 {
-                    if (CreateUser.CheckAccess(conSQ, pageName, "Edit", Request.Cookies["bmw_aid"].Value))
+                    if (CreateUser.CheckAccess(conSQ, pageName, "Edit", Request.Cookies["pcc_aid"].Value))
                     {
                         ca.RoleName = txtName.Text;
                         ca.Id = Convert.ToInt32(Request.QueryString["id"]);
@@ -86,7 +86,7 @@ public partial class Admin_create_role : System.Web.UI.Page
                 }
                 else
                 {
-                    if (CreateUser.CheckAccess(conSQ, pageName, "Add", Request.Cookies["bmw_aid"].Value))
+                    if (CreateUser.CheckAccess(conSQ, pageName, "Add", Request.Cookies["pcc_aid"].Value))
                     {
                         ca.RoleName = txtName.Text;
                         ca.UpdatedOn = TimeStamps.UTCTime();
@@ -157,7 +157,7 @@ public partial class Admin_create_role : System.Web.UI.Page
         try
         {
             SqlConnection conSQ = new SqlConnection(ConfigurationManager.ConnectionStrings["conSQ"].ConnectionString);
-            if (CreateUser.CheckAccess(conSQ, "create-role.aspx", "Delete", HttpContext.Current.Request.Cookies["bmw_aid"].Value))
+            if (CreateUser.CheckAccess(conSQ, "create-role.aspx", "Delete", HttpContext.Current.Request.Cookies["pcc_aid"].Value))
             {
                 UserRoles cat = new UserRoles();
                 cat.Id = Convert.ToInt32(id);

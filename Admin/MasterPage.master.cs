@@ -17,7 +17,7 @@ public partial class Admin_MasterPage : System.Web.UI.MasterPage
     {
         CheckPassKeyChanged();
         //check if admin login is valid
-        if (Request.Cookies["bmw_aid"] == null)
+        if (Request.Cookies["pcc_aid"] == null)
         {
             Response.Redirect("Default.aspx");
         }
@@ -35,7 +35,7 @@ public partial class Admin_MasterPage : System.Web.UI.MasterPage
             if (Request.Cookies["bmw_apkv"] != null)
             {
                 string stored_pass_key = Request.Cookies["bmw_apkv"].Value;
-                var udetails = CreateUser.GetUserDetails(conSQ, Request.Cookies["bmw_aid"].Value);
+                var udetails = CreateUser.GetUserDetails(conSQ, Request.Cookies["pcc_aid"].Value);
                 if (udetails != null)
                 {
                     strUserName = udetails.UserName;
@@ -48,9 +48,9 @@ public partial class Admin_MasterPage : System.Web.UI.MasterPage
                     {
                         Session.Abandon();
                         Session.Clear();
-                        if (Request.Cookies["bmw_aid"] != null)
+                        if (Request.Cookies["pcc_aid"] != null)
                         {
-                            Response.Cookies["bmw_aid"].Expires = TimeStamps.UTCTime().AddDays(-10);
+                            Response.Cookies["pcc_aid"].Expires = TimeStamps.UTCTime().AddDays(-10);
                         }
                         if (Request.Cookies["bmw_apkv"] != null)
                         {
@@ -63,9 +63,9 @@ public partial class Admin_MasterPage : System.Web.UI.MasterPage
                 {
                     Session.Abandon();
                     Session.Clear();
-                    if (Request.Cookies["bmw_aid"] != null)
+                    if (Request.Cookies["pcc_aid"] != null)
                     {
-                        Response.Cookies["bmw_aid"].Expires = TimeStamps.UTCTime().AddDays(-10);
+                        Response.Cookies["pcc_aid"].Expires = TimeStamps.UTCTime().AddDays(-10);
                     }
                     if (Request.Cookies["bmw_apkv"] != null)
                     {
@@ -78,9 +78,9 @@ public partial class Admin_MasterPage : System.Web.UI.MasterPage
             {
                 Session.Abandon();
                 Session.Clear();
-                if (Request.Cookies["bmw_aid"] != null)
+                if (Request.Cookies["pcc_aid"] != null)
                 {
-                    Response.Cookies["bmw_aid"].Expires = TimeStamps.UTCTime().AddDays(-10);
+                    Response.Cookies["pcc_aid"].Expires = TimeStamps.UTCTime().AddDays(-10);
                 }
                 if (Request.Cookies["bmw_apkv"] != null)
                 {
@@ -102,9 +102,9 @@ public partial class Admin_MasterPage : System.Web.UI.MasterPage
         {
             Session.Abandon();
             Session.Clear();
-            if (Request.Cookies["bmw_aid"] != null)
+            if (Request.Cookies["pcc_aid"] != null)
             {
-                Response.Cookies["bmw_aid"].Expires = TimeStamps.UTCTime().AddDays(-10);
+                Response.Cookies["pcc_aid"].Expires = TimeStamps.UTCTime().AddDays(-10);
             }
             if (Request.Cookies["bmw_apkv"] != null)
             {
@@ -122,10 +122,10 @@ public partial class Admin_MasterPage : System.Web.UI.MasterPage
     {
         try
         {
-            if (Request.Cookies["bmw_aid"] != null)
+            if (Request.Cookies["pcc_aid"] != null)
             {
-                string uid = Request.Cookies["bmw_aid"].Value;
-                Response.Cookies["bmw_aid"].Expires = TimeStamps.UTCTime().AddDays(-10);
+                string uid = Request.Cookies["pcc_aid"].Value;
+                Response.Cookies["pcc_aid"].Expires = TimeStamps.UTCTime().AddDays(-10);
                 HttpCookie cookie = new HttpCookie("ary_lid");
                 cookie.Value = uid;
                 cookie.Expires = TimeStamps.UTCTime().AddDays(15);
@@ -145,7 +145,7 @@ public partial class Admin_MasterPage : System.Web.UI.MasterPage
         {
             int mNo = 0;
             string pageName = Path.GetFileName(Request.Path);
-            if (CreateUser.CheckIfAdmin(conSQ, Request.Cookies["bmw_aid"].Value) == true)
+            if (CreateUser.CheckIfAdmin(conSQ, Request.Cookies["pcc_aid"].Value) == true)
             {
                 strDashLink = "dashboard.aspx";
                 List<UserAccess> ua = CreateUser.LinkIfAdmin(conSQ).OrderBy(x => x.GroupOrder).ToList();
@@ -199,7 +199,7 @@ public partial class Admin_MasterPage : System.Web.UI.MasterPage
             }
             else
             {
-                List<UserAccess> ua = CreateUser.GetAllUserAccess(conSQ, Request.Cookies["bmw_aid"].Value).OrderBy(x => x.GroupOrder).ToList();
+                List<UserAccess> ua = CreateUser.GetAllUserAccess(conSQ, Request.Cookies["pcc_aid"].Value).OrderBy(x => x.GroupOrder).ToList();
                 var ud = ua.Where(x => x.PageName.ToLower() == "dashboard" && x.ViewAccess == "1").FirstOrDefault();
                 if (ud != null)
                 {

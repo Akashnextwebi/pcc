@@ -62,7 +62,7 @@ public partial class Admin_manage_investor : System.Web.UI.Page
                     return;
                 }
 
-                string aid = Request.Cookies["bmw_aid"].Value;
+                string aid = Request.Cookies["pcc_aid"].Value;
                 ManageInvestor st = new ManageInvestor()
                 {
                     InvestorTitle = txttitle.Text,

@@ -51,7 +51,7 @@ public partial class Admin_add_testimonial : System.Web.UI.Page
             if (Page.IsValid)
             {              
 
-                var aid = Request.Cookies["bmw_aid"].Value;
+                var aid = Request.Cookies["pcc_aid"].Value;
                 TestimonialDetails BD = new TestimonialDetails();
                 BD.Name = txtPName.Text;
                 BD.Designation = txtdesignation.Text;

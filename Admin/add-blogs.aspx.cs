@@ -97,7 +97,7 @@ public partial class Admin_add_blogs : System.Web.UI.Page
                     return;
                 }
 
-                var aid = Request.Cookies["bmw_aid"].Value;
+                var aid = Request.Cookies["pcc_aid"].Value;
                 BlogDetails BD = new BlogDetails();
                 BD.BlogTitle = txtName.Text;
                 BD.BlogURL = txtUrl.Text;

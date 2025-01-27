@@ -73,14 +73,14 @@ public partial class Admin_view_admin_users : System.Web.UI.Page
         try
         {
             SqlConnection conSQ = new SqlConnection(ConfigurationManager.ConnectionStrings["conSQ"].ConnectionString);
-            if (CreateUser.CheckAccess(conSQ, "view-admin-users.aspx", "Delete", HttpContext.Current.Request.Cookies["bmw_aid"].Value))
+            if (CreateUser.CheckAccess(conSQ, "view-admin-users.aspx", "Delete", HttpContext.Current.Request.Cookies["pcc_aid"].Value))
             {
                 CreateUser cat = new CreateUser();
                 cat.Id = Convert.ToInt32(id);
                 cat.Status = "Deleted";
                 cat.AddedOn = TimeStamps.UTCTime();
                 cat.AddedIP = CommonModel.IPAddress();
-                cat.AddedBy = HttpContext.Current.Request.Cookies["bmw_aid"].Value;
+                cat.AddedBy = HttpContext.Current.Request.Cookies["pcc_aid"].Value;
                 int exec = CreateUser.DeleteUser(conSQ, cat);
                 if (exec > 0)
                 {
@@ -112,18 +112,18 @@ public partial class Admin_view_admin_users : System.Web.UI.Page
         try
         {
             SqlConnection conGV = new SqlConnection(ConfigurationManager.ConnectionStrings["conSQ"].ConnectionString);
-            if (CreateUser.CheckAccess(conGV, "view-admin-users.aspx", "Edit", HttpContext.Current.Request.Cookies["bmw_aid"].Value))
+            if (CreateUser.CheckAccess(conGV, "view-admin-users.aspx", "Edit", HttpContext.Current.Request.Cookies["pcc_aid"].Value))
             {
                 int exec = 0;
                 CreateUser pro = new CreateUser();
                 if (ftr == "Yes")
                 {
-                    exec = CreateUser.BlockUser(conGV, id, HttpContext.Current.Request.Cookies["bmw_aid"].Value);
+                    exec = CreateUser.BlockUser(conGV, id, HttpContext.Current.Request.Cookies["pcc_aid"].Value);
                     vali = "Blocked";
                 }
                 else
                 {
-                    exec = CreateUser.UnBlockUser(conGV, id, HttpContext.Current.Request.Cookies["bmw_aid"].Value);
+                    exec = CreateUser.UnBlockUser(conGV, id, HttpContext.Current.Request.Cookies["pcc_aid"].Value);
                     vali = "UnBlocked";
                 }
 

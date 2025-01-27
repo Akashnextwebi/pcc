@@ -140,7 +140,7 @@ public partial class Admin_my_profile : System.Web.UI.Page
                 if (btnSave.Text == "Update")
                 {
 
-                    if (CreateUser.CheckAccess(conSQ, pageName, "Edit", Request.Cookies["bmw_aid"].Value))
+                    if (CreateUser.CheckAccess(conSQ, pageName, "Edit", Request.Cookies["pcc_aid"].Value))
                     {
                         var upload = UploadProfileImage();
                         if (upload == "Format")
@@ -159,7 +159,7 @@ public partial class Admin_my_profile : System.Web.UI.Page
                         ca.AddedIP = CommonModel.IPAddress();
                         ca.AddedOn = TimeStamps.UTCTime();
                         ca.Status = "Active";
-                        ca.AddedBy = Request.Cookies["bmw_aid"].Value;
+                        ca.AddedBy = Request.Cookies["pcc_aid"].Value;
                         int result = CreateUser.UpdateUser(conSQ, ca);
                         if (result > 0)
                         {
@@ -179,7 +179,7 @@ public partial class Admin_my_profile : System.Web.UI.Page
                 }
                 else
                 {
-                    if (CreateUser.CheckAccess(conSQ, pageName, "Add", Request.Cookies["bmw_aid"].Value))
+                    if (CreateUser.CheckAccess(conSQ, pageName, "Add", Request.Cookies["pcc_aid"].Value))
                     {
                         var upload = UploadProfileImage();
                         if (upload == "Format")
@@ -198,7 +198,7 @@ public partial class Admin_my_profile : System.Web.UI.Page
                         ca.AddedIP = CommonModel.IPAddress();
                         ca.AddedOn = TimeStamps.UTCTime();
                         ca.Status = "Active";
-                        ca.AddedBy = Request.Cookies["bmw_aid"].Value;
+                        ca.AddedBy = Request.Cookies["pcc_aid"].Value;
                         int result = CreateUser.InsertUser(conSQ, ca);
                         if (result > 0)
                         {

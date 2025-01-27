@@ -70,7 +70,7 @@ public partial class Admin_manage_capabilities : System.Web.UI.Page
                     return;
                 }
 
-                string aid = Request.Cookies["bmw_aid"].Value;
+                string aid = Request.Cookies["pcc_aid"].Value;
                 manageCapabilities st = new manageCapabilities()
                 {
                     Title = txttitle.Text,

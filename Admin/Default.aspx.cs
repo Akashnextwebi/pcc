@@ -13,7 +13,7 @@ public partial class Admin_Default : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
        
-        if (Request.Cookies["bmw_aid"] != null)
+        if (Request.Cookies["pcc_aid"] != null)
         {
             Response.Redirect("dashboard.aspx");
         }
@@ -42,7 +42,7 @@ public partial class Admin_Default : System.Web.UI.Page
                         lblStatus.Text = "<strong>Success !</strong> Login success";
                         lblStatus.Attributes.Add("class", "alert alert-success d-block");
 
-                        HttpCookie cookie = new HttpCookie("bmw_aid");
+                        HttpCookie cookie = new HttpCookie("pcc_aid");
                         cookie.Value = logins.UserGuid;
 
                         //this cookie is to validate password key

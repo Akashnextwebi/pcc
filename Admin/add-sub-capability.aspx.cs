@@ -160,7 +160,7 @@ public partial class Admin_add_sub_capability : System.Web.UI.Page
                     return;
                 }
 
-                var aid = Request.Cookies["bmw_aid"].Value;
+                var aid = Request.Cookies["pcc_aid"].Value;
                 SubCapability BD = new SubCapability();
                 BD.Capabilities = SaveCapability();
                 BD.SubCapabilityName= txtsubcapability.Text;

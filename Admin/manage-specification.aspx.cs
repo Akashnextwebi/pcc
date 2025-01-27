@@ -13,7 +13,7 @@ public partial class Admin_manage_specification : System.Web.UI.Page
 {
     SqlConnection conSQ = new SqlConnection(ConfigurationManager.ConnectionStrings["conSQ"].ConnectionString);
 
-    public string strSpecification = "", StrProductname="";
+    public string strSpe = "", StrProductname="";
     protected void Page_Load(object sender, EventArgs e)
     {
         GetProductName();
@@ -34,7 +34,7 @@ public partial class Admin_manage_specification : System.Web.UI.Page
             try
             {
                 
-                string aid = Request.Cookies["bmw_aid"].Value;
+                string aid = Request.Cookies["pcc_aid"].Value;
                 SpecificationDetails st = new SpecificationDetails()
                 {
                     Title = txttitle.Text,
@@ -119,10 +119,10 @@ public partial class Admin_manage_specification : System.Web.UI.Page
                 var sub = SpecificationDetails.GetAllSpecificationWithGuid(conSQ, pid);
                 if (sub != null)
                 {
-                    strSpecification = "";
+                    strSpe = "";
                     for (int i = 0; i < sub.Count; i++)
                     {
-                        strSpecification += @"<tr>
+                        strSpe += @"<tr>
                                         <td>" + (i + 1) + @"</td>
                                         <td>" + sub[i].Title +@"</td>
                                         <td>" + sub[i].FullDesc + @"</td>  

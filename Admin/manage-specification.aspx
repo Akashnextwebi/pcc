@@ -63,7 +63,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <%=strSpecification %>
+                                    <%=strSpe %>
                                 </tbody>                              
                             </table>
                         </div>

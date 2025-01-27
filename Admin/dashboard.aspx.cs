@@ -11,7 +11,7 @@ public partial class Admin_dashboard : System.Web.UI.Page
     public string Strusername = "", StrBlogsCnt="",strCasestudycnt="",strProductcnt="",strInvestorcnt="", strJobcnt="",strContacts="",strWhitepapercnt="", strApplicationcnt="", strContactcnt="";
     protected void Page_Load(object sender, EventArgs e)
     {//check if admin login is valid
-        if (Request.Cookies["bmw_aid"] == null)
+        if (Request.Cookies["pcc_aid"] == null)
         {
             Response.Redirect("Default.aspx", false);
         }
@@ -35,7 +35,7 @@ public partial class Admin_dashboard : System.Web.UI.Page
     {
         try
         {
-            Strusername = CreateUser.GetLoggedUserName(conSQ, Request.Cookies["bmw_aid"].Value);
+            Strusername = CreateUser.GetLoggedUserName(conSQ, Request.Cookies["pcc_aid"].Value);
         }
         catch (Exception ex)
         {

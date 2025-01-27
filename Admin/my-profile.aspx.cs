@@ -14,7 +14,7 @@ public partial class Admin_my_profile : System.Web.UI.Page
     public string strThumbImage = "";
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (Request.Cookies["bmw_aid"] == null)
+        if (Request.Cookies["pcc_aid"] == null)
         {
             Response.Redirect("dashboard.aspx");
         }
@@ -31,7 +31,7 @@ public partial class Admin_my_profile : System.Web.UI.Page
     {
         try
         {
-            List<CreateUser> comps = CreateUser.GetAllUser(conSQ).Where(x => x.UserGuid == Request.Cookies["bmw_aid"].Value).ToList();
+            List<CreateUser> comps = CreateUser.GetAllUser(conSQ).Where(x => x.UserGuid == Request.Cookies["pcc_aid"].Value).ToList();
             if (comps.Count > 0)
             {
                 btnSave.Text = "Update";
@@ -119,7 +119,7 @@ public partial class Admin_my_profile : System.Web.UI.Page
             if (Page.IsValid)
             {
                 string pageName = Path.GetFileName(Request.Path);
-                if (CreateUser.CheckAccess(conSQ, pageName, "Edit", Request.Cookies["bmw_aid"].Value))
+                if (CreateUser.CheckAccess(conSQ, pageName, "Edit", Request.Cookies["pcc_aid"].Value))
                 {
                     var upload = UploadProfileImage();
                     if(upload == "Format")
@@ -128,8 +128,8 @@ public partial class Admin_my_profile : System.Web.UI.Page
                         return;
                     }
                     CreateUser comp = new CreateUser();
-                    comp.UserGuid = Request.Cookies["bmw_aid"].Value;
-                    comp.AddedBy = Request.Cookies["bmw_aid"].Value;
+                    comp.UserGuid = Request.Cookies["pcc_aid"].Value;
+                    comp.AddedBy = Request.Cookies["pcc_aid"].Value;
                     comp.ContactNo = txtContactNo.Text.Trim();
                     comp.EmailId = txtEmail.Text.Trim();
                     comp.UserName = txtName.Text.Trim();
