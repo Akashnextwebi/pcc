@@ -122,6 +122,7 @@ public partial class product_details : System.Web.UI.Page
                     }
                 }
                
+               
                 var spe = SpecificationDetails.GetAllSpecificationProductGuid(conSQ, Pro.ProductGuid);
                 if (spe.Count > 0)
                 {

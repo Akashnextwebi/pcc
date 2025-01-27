@@ -338,7 +338,7 @@ Pellentesque habitant morbi tristique senectus et netus et malesuada.--%>
                 </div>
         </section>
 
-        <div class="product_details_section section-padding bg-light" >
+        <div class="product_details_section section-padding bg-light"  >
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
@@ -356,7 +356,7 @@ Pellentesque habitant morbi tristique senectus et netus et malesuada.--%>
                             <div class="tab-content">
 
                                 <div class="tab-pane fade show active " id="Capabilities"  tabindex="0">
-                                    <div class="row justify-content-center gy-4">
+                                    <div class="row justify-content-center gy-4" >
                                         <%=strCapabilities %>
                                         <!-- Iconbox -->
 
