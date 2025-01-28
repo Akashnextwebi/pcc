@@ -335,7 +335,7 @@ OFFSET @PageNumber ROWS FETCH NEXT @PageLength ROWS ONLY;";
         List<BlogDetails> categories = new List<BlogDetails>();
         try
         {
-            string query = "Select * from BlogDetails where Status=@Status and BlogURL=@BlogURL ";
+            string query = "Select  * from BlogDetails where Status=@Status and BlogURL=@BlogURL ";
             using (SqlCommand cmd = new SqlCommand(query, conSQ))
             {
                 cmd.Parameters.AddWithValue("@BlogURL", SqlDbType.Int).Value = Url;
@@ -377,7 +377,7 @@ OFFSET @PageNumber ROWS FETCH NEXT @PageLength ROWS ONLY;";
         BlogDetails categories = new BlogDetails();
         try
         {
-            string query = "Select BlogTitle,BlogURL from BlogDetails where Status=@Status and id < @Id Order by Id Desc ";
+            string query = "Select BlogTitle,BlogURL from BlogDetails where Status=@Status and id < @Id Order by Id Desc";
             using (SqlCommand cmd = new SqlCommand(query, conSQ))
             {
                 cmd.Parameters.AddWithValue("@Status", SqlDbType.NVarChar).Value = "Active";

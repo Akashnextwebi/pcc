@@ -23,6 +23,9 @@ public class IndustryDetails
     public string BannerImage { get; set; }
     public string DescHeading {  get; set; }
     public string FullDesc {  get; set; }
+    public string BannerImage2 {  get; set; }
+    public string DescHeading2 {  get; set; }
+    public string FullDesc2 {  get; set; }
     public string PageTitle { get; set; }
     public string MetaKeys { get; set; }
     public string MetaDesc { get; set; }
@@ -52,6 +55,9 @@ public class IndustryDetails
                            BannerImage = Convert.ToString(dr["BannerImage"]),
                            DescHeading = Convert.ToString(dr["DescHeading"]),
                            FullDesc = Convert.ToString(dr["FullDesc"]),
+                           BannerImage2 = Convert.ToString(dr["BannerImage2"]),
+                           DescHeading2 = Convert.ToString(dr["DescHeading2"]),
+                           FullDesc2 = Convert.ToString(dr["FullDesc2"]),
                            PageTitle = Convert.ToString(dr["PageTitle"]),
                            MetaKeys = Convert.ToString(dr["MetaKeys"]),
                            MetaDesc = Convert.ToString(dr["MetaDesc"]),
@@ -73,7 +79,7 @@ public class IndustryDetails
         int result = 0;
         try
         {
-            string query = "Insert Into IndustryDetails (IndustryGuid,IndustryName,IndustryUrl,BannerImage,DescHeading,FullDesc,PageTitle,MetaKeys,MetaDesc,AddedOn,AddedBy,AddedIp,Status) values (@IndustryGuid,@IndustryName,@IndustryUrl,@BannerImage,@DescHeading,@FullDesc,@PageTitle,@MetaKeys,@MetaDesc,@AddedOn,@AddedBy,@AddedIp,@Status) select SCOPE_IDENTITY()";
+            string query = "Insert Into IndustryDetails (IndustryGuid,IndustryName,IndustryUrl,BannerImage,DescHeading,FullDesc,BannerImage2,DescHeading2,FullDesc2,PageTitle,MetaKeys,MetaDesc,AddedOn,AddedBy,AddedIp,Status) values (@IndustryGuid,@IndustryName,@IndustryUrl,@BannerImage,@DescHeading,@FullDesc,@BannerImage2,@DescHeading2,@FullDesc2,@PageTitle,@MetaKeys,@MetaDesc,@AddedOn,@AddedBy,@AddedIp,@Status) select SCOPE_IDENTITY()";
             using (SqlCommand cmd = new SqlCommand(query, conSQ))
 
             {
@@ -83,6 +89,9 @@ public class IndustryDetails
                 cmd.Parameters.AddWithValue("@BannerImage", SqlDbType.NVarChar).Value = Cat.BannerImage;
                 cmd.Parameters.AddWithValue("@DescHeading", SqlDbType.NVarChar).Value = Cat.DescHeading;
                 cmd.Parameters.AddWithValue("@FullDesc", SqlDbType.NVarChar).Value = Cat.FullDesc;
+                cmd.Parameters.AddWithValue("@BannerImage2", SqlDbType.NVarChar).Value = Cat.BannerImage2;
+                cmd.Parameters.AddWithValue("@DescHeading2", SqlDbType.NVarChar).Value = Cat.DescHeading2;
+                cmd.Parameters.AddWithValue("@FullDesc2", SqlDbType.NVarChar).Value = Cat.FullDesc2;
                 cmd.Parameters.AddWithValue("@PageTitle", SqlDbType.NVarChar).Value = Cat.PageTitle;
                 cmd.Parameters.AddWithValue("@MetaKeys", SqlDbType.NVarChar).Value = Cat.MetaKeys;
                 cmd.Parameters.AddWithValue("@MetaDesc", SqlDbType.NVarChar).Value = Cat.MetaDesc;
@@ -107,7 +116,7 @@ public class IndustryDetails
         int result = 0;
         try
         {
-            string query = "Update IndustryDetails Set IndustryName=@IndustryName,IndustryUrl=@IndustryUrl,BannerImage=@BannerImage,DescHeading=@DescHeading,FullDesc=@FullDesc,PageTitle=@PageTitle,MetaKeys=@MetaKeys,MetaDesc=@MetaDesc,AddedBy=@AddedBy,AddedOn=@AddedOn,AddedIp=@AddedIp ,Status=@Status Where Id=@Id ";
+            string query = "Update IndustryDetails Set IndustryName=@IndustryName,IndustryUrl=@IndustryUrl,BannerImage=@BannerImage,DescHeading=@DescHeading,FullDesc=@FullDesc,BannerImage2=@BannerImage2,DescHeading2=@DescHeading2,FullDesc2=@FullDesc2,PageTitle=@PageTitle,MetaKeys=@MetaKeys,MetaDesc=@MetaDesc,AddedBy=@AddedBy,AddedOn=@AddedOn,AddedIp=@AddedIp ,Status=@Status Where Id=@Id ";
             using (SqlCommand cmd = new SqlCommand(query, conSQ))
             {
                 cmd.Parameters.AddWithValue("@Id", SqlDbType.NVarChar).Value = Cat.Id;
@@ -116,6 +125,9 @@ public class IndustryDetails
                 cmd.Parameters.AddWithValue("@BannerImage", SqlDbType.NVarChar).Value = Cat.BannerImage;
                 cmd.Parameters.AddWithValue("@DescHeading", SqlDbType.NVarChar).Value = Cat.DescHeading;
                 cmd.Parameters.AddWithValue("@FullDesc", SqlDbType.NVarChar).Value = Cat.FullDesc;
+                cmd.Parameters.AddWithValue("@BannerImage2", SqlDbType.NVarChar).Value = Cat.BannerImage2;
+                cmd.Parameters.AddWithValue("@DescHeading2", SqlDbType.NVarChar).Value = Cat.DescHeading2;
+                cmd.Parameters.AddWithValue("@FullDesc2", SqlDbType.NVarChar).Value = Cat.FullDesc2;
                 cmd.Parameters.AddWithValue("@PageTitle", SqlDbType.NVarChar).Value = Cat.PageTitle;
                 cmd.Parameters.AddWithValue("@MetaKeys", SqlDbType.NVarChar).Value = Cat.MetaKeys;
                 cmd.Parameters.AddWithValue("@MetaDesc", SqlDbType.NVarChar).Value = Cat.MetaDesc;
@@ -157,6 +169,9 @@ public class IndustryDetails
                                        BannerImage = Convert.ToString(dr["BannerImage"]),
                                        DescHeading = Convert.ToString(dr["DescHeading"]),
                                        FullDesc = Convert.ToString(dr["FullDesc"]),
+                                       BannerImage2 = Convert.ToString(dr["BannerImage2"]),
+                                       DescHeading2 = Convert.ToString(dr["DescHeading2"]),
+                                       FullDesc2 = Convert.ToString(dr["FullDesc2"]),
                                        PageTitle = Convert.ToString(dr["PageTitle"]),
                                        MetaKeys = Convert.ToString(dr["MetaKeys"]),
                                        MetaDesc = Convert.ToString(dr["MetaDesc"]),
@@ -217,6 +232,9 @@ public class IndustryDetails
                                         BannerImage = Convert.ToString(dr["BannerImage"]),
                                         DescHeading = Convert.ToString(dr["DescHeading"]),
                                         FullDesc = Convert.ToString(dr["FullDesc"]),
+                                        BannerImage2 = Convert.ToString(dr["BannerImage2"]),
+                                        DescHeading2 = Convert.ToString(dr["DescHeading2"]),
+                                        FullDesc2 = Convert.ToString(dr["FullDesc2"]),
                                         PageTitle = Convert.ToString(dr["PageTitle"]),
                                         MetaKeys = Convert.ToString(dr["MetaKeys"]),
                                         MetaDesc = Convert.ToString(dr["MetaDesc"]),
@@ -285,6 +303,9 @@ public class IndustryDetails
                                   BannerImage = Convert.ToString(dr["BannerImage"]),
                                   DescHeading = Convert.ToString(dr["DescHeading"]),
                                   FullDesc = Convert.ToString(dr["FullDesc"]),
+                                  BannerImage2 = Convert.ToString(dr["BannerImage2"]),
+                                  DescHeading2 = Convert.ToString(dr["DescHeading2"]),
+                                  FullDesc2 = Convert.ToString(dr["FullDesc2"]),
                                   PageTitle = Convert.ToString(dr["PageTitle"]),
                                   MetaKeys = Convert.ToString(dr["MetaKeys"]),
                                   MetaDesc = Convert.ToString(dr["MetaDesc"]),
@@ -324,6 +345,9 @@ public class IndustryDetails
                            BannerImage = Convert.ToString(dr["BannerImage"]),
                            DescHeading = Convert.ToString(dr["DescHeading"]),
                            FullDesc = Convert.ToString(dr["FullDesc"]),
+                           BannerImage2 = Convert.ToString(dr["BannerImage2"]),
+                           DescHeading2 = Convert.ToString(dr["DescHeading2"]),
+                           FullDesc2 = Convert.ToString(dr["FullDesc2"]),
                            PageTitle = Convert.ToString(dr["PageTitle"]),
                            MetaKeys = Convert.ToString(dr["MetaKeys"]),
                            MetaDesc = Convert.ToString(dr["MetaDesc"]),

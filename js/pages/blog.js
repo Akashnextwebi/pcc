@@ -1,6 +1,4 @@
-﻿var pNo = 1;
-var pSize = 6;
-$(document).ready(function () {
+﻿$(document).ready(function () {
 
     BindBlogs();
     $(document.body).on('click', ".pVClick", function () {
@@ -26,10 +24,12 @@ $(document).ready(function () {
 });
 function BindBlogs() {
 
-    //var pNo = "1";
-    //if ($(".pPagination .page-number").hasClass("current")) {
-    //    pNo = $(".pPagination .page-number.current").attr('id').split('_')[1];
-    //}
+    var pNo = 1;
+    var pSize = 6;
+    if ($(".vPagination a").hasClass("current")) {
+        pNo = $(".vPagination .current").attr('id').split('_')[1];
+    }
+
     
     $('.Bloglist').html("");
     
@@ -46,10 +46,10 @@ function BindBlogs() {
             if (data2.d != null && data2.d != "") {
                 result = data2.d;
                 var Bloglist = "";
-               
+                //var pLength = "";
                 var TotalCount = 0;
                 for (var i = 0; i < result.length; i++) {
-
+                    //pLength = result[i].TotalCount;
                     TotalCount = result[i].TotalCount == "" ? 0 : parseInt(result[i].TotalCount);
 
                     Bloglist += "<div class='col-12 col-md-4'>"; 
