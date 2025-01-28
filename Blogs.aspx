@@ -64,26 +64,26 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <main class="wrapper">
 
-         <div class="breadcrumb-section" style="background-image: linear-gradient(270deg, rgba(0, 0, 0, .55), rgba(0, 0, 0, 0.55) 101.02%), url(image/blog/braadcrumb-bg3.jpg);">
-      <div class="container-fluid one pl--95">
-          <div class="row">
-              <div class="col-lg-12">
-                  <div class="banner-content">
-                      <h1>Blogs</h1>
-                      <ul class="breadcrumb-list">
-                          <li><a href="Default.aspx">Home</a></li>
-                          <li>Blogs</li>
-                      </ul>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
+        <div class="breadcrumb-section" style="background-image: linear-gradient(270deg, rgba(0, 0, 0, .55), rgba(0, 0, 0, 0.55) 101.02%), url(image/blog/braadcrumb-bg3.jpg);">
+            <div class="container-fluid one pl--95">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="banner-content">
+                            <h1>Blogs</h1>
+                            <ul class="breadcrumb-list">
+                                <li><a href="Default.aspx">Home</a></li>
+                                <li>Blogs</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <section id="blog" class="blog-area p-relative fix pt-100 pb-100" style="background: #f3f3f3">
             <div class="container">
 
                 <div class="row gy-4 Bloglist">
-                   <%-- <div class="col-12 col-md-4">
+                    <%-- <div class="col-12 col-md-4">
                         <a class="blog-card" href="blogs-details.aspx">
                             <div class="image">
                                 <div class="tag">Defence</div>
@@ -138,7 +138,7 @@
                     </div>--%>
                     <siv class="col-lg-12">
                         <div class="wptb-pagination-wrap text-center">
-                            <ul class="pagination vPagination">
+                            <ul class="pagination pPagination">
                                 <%--<li><a class="disabled page-number previous" href="#"><i class="fa-solid fa-chevron-left"></i></a></li>
                                 <li><span class="page-number current">1</span></li>
                                 <li><a class="page-number" href="#">2</a></li>
@@ -148,12 +148,13 @@
                             </ul>
                         </div>
                     </siv>
+                   
                 </div>
             </div>
         </section>
     </main>
-     <script src="js/vendor/jquery-3.6.0.min.js"></script>
+    <script src="js/vendor/jquery-3.6.0.min.js"></script>
     <script src="js/pages/blog.js"></script>
-   
+
 </asp:Content>
 

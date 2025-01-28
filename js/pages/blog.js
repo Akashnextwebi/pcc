@@ -1,33 +1,52 @@
-﻿$(document).ready(function () {
+﻿var pNo = 1;
+var pSize = 6;
+$(document).ready(function () {
+
 
     BindBlogs();
-    $(document.body).on('click', ".pVClick", function () {
+    $(document.body).on('click', ".pPVClick", function () {
         var ele = $(this);
-        $(".vPagination span").removeClass("current");
-        ele.addClass("current");
-        BindBlogs();
-    });
-    $(document.body).on('click', ".prVClick", function () {
-        var ele = $(this);
-        $(".vPagination span").removeClass("current");
+        $(".pPagination a").removeClass("current");
         ele.addClass("current");
         BindBlogs();
 
     });
-    $(document.body).on('click', ".nxVClick", function () {
+    $(document.body).on('click', ".prPVClick", function () {
         var ele = $(this);
-        $(".vPagination span").removeClass("current");
+        var activeIndex = $(".pPagination li.current a").attr("id").split('_')[1];
+        var currentIndex = ele.attr("id").split('_')[1];
+        if (activeIndex == currentIndex) {
+            $(".pPagination li a.dNonePrev").css("display", "none");
+            return;
+        }
+        $(".pPagination a").removeClass("current");
         ele.addClass("current");
         BindBlogs();
     });
+    $(document.body).on('click', ".nxPVClick", function () {
+        $(".pPagination li.dNonePrev").css("display", "flex");
+        var ele = $(this);
+
+        var currentIndex = ele.attr("id").split('_')[1];
+        var activeIndex = $(".pPagination li.current a").attr("id").split('_')[1];
+
+        if (currentIndex == activeIndex) {
+            $(".pPagination li a.dNoneNext").css("display", "none");
+            return;
+        }
+
+        $(".pPagination a").removeClass("current");
+        ele.addClass("current");
+        BindBlogs();
+
+    })
     
 });
 function BindBlogs() {
 
-    var pNo = 1;
-    var pSize = 6;
-    if ($(".vPagination a").hasClass("current")) {
-        pNo = $(".vPagination .current").attr('id').split('_')[1];
+    var pNo = "1";
+    if ($(".pPagination .page-number").hasClass("current")) {
+        pNo = $(".pPagination .page-number.current").attr('id').split('_')[1];
     }
 
     
@@ -71,7 +90,7 @@ function BindBlogs() {
                     Bloglist += "</div>";
                 }
 
-                BindLPage(pSize, parseInt(pNo), TotalCount);
+                BindPPage(pSize, pNo, TotalCount);
 
                 $('.Bloglist').append(Bloglist);
 
@@ -90,13 +109,13 @@ function BindBlogs() {
 
 
 
-function BindLPage(pageS, cPage, pCount) {
+function BindPPage(pageS, cPage, pCount) {
     var noOfPagesCreated = ~~(parseFloat(pCount) / parseInt(pageS));
     var isExtra = (parseFloat(pCount) % parseInt(pageS)) === 0 ? 0 : 1;
 
     noOfPagesCreated = noOfPagesCreated + isExtra;
 
-    $(".vPagination").empty();
+    $(".pPagination").empty();
 
     var pagesss = "";
 
@@ -107,26 +126,31 @@ function BindLPage(pageS, cPage, pCount) {
 
 
     for (var i = startPage; i <= pLength; i++) {
-
-        if (i === parseInt(cPage)) {
-            pagesss += "<li><span class='page-numbers current' id='pno_" + (i) + "'>" + (i) + "</span></li>";
-        }
-        else {
-            pagesss += "<li><a class='page-numbers pVClick' href='javascript:void();' id='pno_" + (i) + "'>" + (i) + "</a></li>";
-        }
-
+        var activ = i === parseInt(cPage) ? "active" : "";
+        var LastIndex = i === pLength ? "LastIndex" : "";
+        pagesss += "<li class='page-item'><a class='page-link pPVClick " + activ + " " + LastIndex + "' href='javascript:void(0);' id='pno_" + (i) + "'>" + (i) + "</a></li>";
     }
     if (noOfPagesCreated > pLength) {
-        pagesss += "<li><a class='page-numbers pVClick' href='javascript:void();' id='pno_" + (pLength + 1) + "'>...</a></li>";
-        pagesss += "<li><a class='page-numbers pVClick' href='javascript:void();' id='pno_" + (noOfPagesCreated) + "'>" + (noOfPagesCreated) + "</a></li>";
+        pagesss += "<li class='page-item'><a class='page-link pPVClick' href='javascript:void(0);' id='pno_" + (pLength + 1) + "'>...</a></li>";
+        pagesss += "<li class='page-item'><a class='page-link pPVClick LastIndex' href='javascript:void(0);' id='pno_" + (noOfPagesCreated) + "'>" + (noOfPagesCreated) + "</a></li>";
     }
 
     var prvPg = startPage === 1 ? 1 : startPage - 1;
     var nxtPg = noOfPagesCreated > pLength ? (pLength + 1) : pLength;
 
-    var pgnPrev = "<li><a id='pnon_" + prvPg + "' class='prev page-numbers prVClick' href='javascript:void();' aria-label='Previous'></a></li>";
-    var pgnNext = "<li><a class='next page-numbers nxVClick' href='javascript:void();' id='pnon_" + nxtPg + "' aria-label='Next'></a></li>";
+    if (noOfPagesCreated <= 5) {
+        prvPg = parseInt(cPage) === 1 ? 1 : parseInt(cPage) - 1;
+        nxtPg = parseInt(cPage) === pLength ? pLength : parseInt(cPage) + 1;
+    }
 
-    $(".vPagination").append(pgnPrev + pagesss + pgnNext);
+    var dNonePrev = parseInt(cPage) === 1 ? "dNonePrev" : "";
+    var dNoneNext = parseInt(cPage) === nxtPg ? "dNoneNext" : "";
+
+    var pgnPrev = "<li class='page-item " + dNonePrev + "'><a id='pnon_" + prvPg + "' class='page-link prPVClick' href='javascript:void(0);' aria-label='Previous'><i class='fa-solid fa-angle-left'></i></a></li>";
+
+    var pgnNext = "<li class='page-item " + dNoneNext + "'><a class='page-link nxPVClick ' href='javascript:void(0);' id='pnon_" + nxtPg + "' aria-label='Next'><i class='fa-solid fa-chevron-right'></i></a></li>";
+
+    $(".pPagination").append(pgnPrev + pagesss + pgnNext);
+
 
 }

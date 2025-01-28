@@ -51,6 +51,7 @@
                                         <tr>
                                             <th>#</th>
                                             <th>Thumb Image</th>
+                                            <th>Banner Image</th>
                                             <th>Capabilities</th>
                                             <th>SubCapability Name</th>
                                             <th>Tag</th>
