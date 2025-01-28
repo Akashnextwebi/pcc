@@ -19,95 +19,120 @@
                     </div>
                 </div>
             </div>
-
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="card">
-                        <div class="card-header">
-                            <h4 class="mb-sm-0 card-title"><%=Request.QueryString["id"] ==null?"Add New":"Update"%> Industries</h4>
+        </div>
+        </div>
+    <div class="row">
+        <div class="col-lg-8">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title"><%=Request.QueryString["id"] !=null?"Update":"Add" %> Industries</h5>
+                </div>
+                <div class="card-body">
+                    <div class="row mb-2">
+                        <div class="col-lg-4">
+                            <label class="">Industry Name<sup class="text-danger">*</sup></label>
+                            <asp:TextBox runat="server" class="form-control mb-2 mr-sm-2 txtname" ID="txtname" placeholder="Industry Name" />
+                            <asp:RequiredFieldValidator ID="req1" runat="server" ControlToValidate="txtname" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Field can't be empty"></asp:RequiredFieldValidator>
                         </div>
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-lg-4">
-                                    <label class="">Industry Name<sup class="text-danger">*</sup></label>
-                                    <asp:TextBox runat="server" class="form-control mb-2 mr-sm-2 txtname" ID="txtname" placeholder="Industry Name" />
-                                    <asp:RequiredFieldValidator ID="req1" runat="server" ControlToValidate="txtname" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Field can't be empty"></asp:RequiredFieldValidator>
-                                </div>
-                                <div class="col-lg-4">
-                                    <label class="">Industry URL<sup class="text-danger">*</sup></label>
-                                    <asp:TextBox runat="server" class="form-control mb-2 mr-sm-2 txtUrl" ID="txtUrl" placeholder="Industry Url" />
-                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtUrl" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Field can't be empty"></asp:RequiredFieldValidator>
-                                </div>
-                                <div class="col-lg-4 mb-2">
-                                    <label class="">Banner Image <sup class="text-danger">*</sup></label>
-                                    <asp:FileUpload runat="server" ID="ThumbImage" CssClass="form-control" />
-                                    <small class="text-danger fw-bold">Image format .png, .jpeg, .jpg, .webp with 1080 × 720 px is recommended.</small><br />
-                                    <%=strThumbImage %>
-                                </div>
-                                <div class="row mb-2">
-                                    <div class="col-lg-12 mb-3">
-                                        <label class="">Desc Heading<sup>*</sup></label>
-                                        <asp:TextBox runat="server" MaxLength="100" class="form-control mb-2 mr-sm-2 txtheading onlyAlpha" ID="txtheading" placeholder="Enter Desc Heading" />
-                                        <asp:RequiredFieldValidator ID="rfv14" runat="server" ControlToValidate="txtheading" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Field can't be empty"></asp:RequiredFieldValidator>
-                                    </div>
+                        <div class="col-lg-4">
+                            <label class="">Industry URL<sup class="text-danger">*</sup></label>
+                            <asp:TextBox runat="server" class="form-control mb-2 mr-sm-2 txtUrl" ID="txtUrl" placeholder="Industry Url" />
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtUrl" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Field can't be empty"></asp:RequiredFieldValidator>
+                        </div>
+                        <div class="col-lg-4 mb-2">
+                            <label class="">Banner Image <sup class="text-danger">*</sup></label>
+                            <asp:FileUpload runat="server" ID="ThumbImage" CssClass="form-control" />
+                            <small class="text-danger fw-bold">Image format .png, .jpeg, .jpg, .webp with 1080 × 720 px is recommended.</small><br />
+                            <%=strThumbImage %>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-lg-12 mb-3">
+                                <label class="">Desc Heading<sup>*</sup></label>
+                                <asp:TextBox runat="server" MaxLength="100" class="form-control mb-2 mr-sm-2 txtheading onlyAlpha" ID="txtheading" placeholder="Enter Desc Heading" />
+                                <asp:RequiredFieldValidator ID="rfv14" runat="server" ControlToValidate="txtheading" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Field can't be empty"></asp:RequiredFieldValidator>
+                            </div>
 
-                                    <div class="col-lg-12">
-                                        <label class="">Full Description <sup>*</sup></label>
-                                        <asp:TextBox runat="server" TextMode="MultiLine" class="form-control mb-2  summernote" ID="txtfulldesc" Placeholder="Enter Full Description ....." />
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 mb-3">
-                                    <asp:Button ID="btnSave" runat="server" Text="Save" ValidationGroup="Save" CssClass="btn btn-success waves-effect waves-light" Style="margin-top: 28px" OnClick="btnSave_Click" />
-                                    <asp:Button ID="btnNew" runat="server" Text="Clear" CssClass="btn btn-outline-success " Style="margin-top: 28px" OnClick="btnNew_Click" Visible="false" />
-                                    <asp:Label runat="server" ID="lblThumb" Visible="false"></asp:Label>
-                                </div>
+                            <div class="col-lg-12">
+                                <label class="">Full Description <sup>*</sup></label>
+                                <asp:TextBox runat="server" TextMode="MultiLine" class="form-control mb-2  summernote" ID="txtfulldesc" Placeholder="Enter Full Description ....." />
                             </div>
                         </div>
+
                     </div>
-                    <div class="container-fluid">
-                        <div class="card">
-                            <div class="card-header">
-                                <h5 class="card-title">View Industries</h5>
-                            </div>
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col-lg-12">
-                                        <table id="alternative-pagination" class="table nowrap align-middle table-striped table-bordered myTable" style="width: 100%">
-                                            <thead>
-                                                <tr>
-                                                    <th>#</th>
-                                                    <th>Banner Image</th>
-                                                    <th>Industry Name</th>
-                                                    <th>Industry Url</th>
-                                                    <th>Features</th>
-                                                    <th>Added On</th>
-                                                    <th class="text-center">Action</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <%=strIndustry%>
-                                            </tbody>
-                                            <tfoot>
-                                                <tr>
-                                                    <th>#</th>
-                                                    <th>Banner Image</th>
-                                                    <th>Industry Name</th>
-                                                    <th>Industry Url</th>
-                                                    <th>Features</th>
-                                                    <th>Added On</th>
-                                                    <th class="text-center">Action</th>
-                                                </tr>
-                                            </tfoot>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title">Add Seo Details</h5>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <label class="">Page Title</label>
+                            <asp:TextBox runat="server" MaxLength="100" class="form-control mb-2 mr-sm-2" ID="txtPageTitle" placeholder="Page Title" />
+                        </div>
+                        <div class="col-lg-12">
+                            <label class="">Meta Keys</label>
+                            <asp:TextBox ID="txtMetaKey" class="form-control mb-2 mr-sm-2" runat="server" placeholder="Meta Keys"></asp:TextBox>
+                        </div>
+                        <div class="col-lg-12">
+                            <label class="">Meta Description</label>
+                            <asp:TextBox ID="txtMetaDesc" TextMode="MultiLine" class="form-control mb-2 mr-sm-2" Rows="3" runat="server" placeholder="Meta Description"></asp:TextBox>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <div class="col-lg-4 mb-3">
+        <asp:Button ID="btnSave" runat="server" Text="Save" ValidationGroup="Save" CssClass="btn btn-success waves-effect waves-light" Style="margin-top: 28px" OnClick="btnSave_Click" />
+        <asp:Button ID="btnNew" runat="server" Text="Clear" CssClass="btn btn-outline-success " Style="margin-top: 28px" OnClick="btnNew_Click" Visible="false" />
+        <asp:Label runat="server" ID="lblThumb" Visible="false"></asp:Label>
+    </div>
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title">View Industries</h5>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <table id="alternative-pagination" class="table nowrap align-middle table-striped table-bordered myTable" style="width: 100%">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Banner Image</th>
+                                    <th>Industry Name</th>
+                                    <th>Industry Url</th>
+                                    <th>Features</th>
+                                    <th>Added On</th>
+                                    <th class="text-center">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <%=strIndustry%>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Banner Image</th>
+                                    <th>Industry Name</th>
+                                    <th>Industry Url</th>
+                                    <th>Features</th>
+                                    <th>Added On</th>
+                                    <th class="text-center">Action</th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <script src="assets/js/jquery-3.6.0.min.js"></script>
     <script>
         $(document).ready(function () {

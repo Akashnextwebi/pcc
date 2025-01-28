@@ -138,7 +138,7 @@
                     </div>--%>
                     <siv class="col-lg-12">
                         <div class="wptb-pagination-wrap text-center">
-                            <ul class="pagination pPagination">
+                            <ul class="pagination vPagination">
                                 <%--<li><a class="disabled page-number previous" href="#"><i class="fa-solid fa-chevron-left"></i></a></li>
                                 <li><span class="page-number current">1</span></li>
                                 <li><a class="page-number" href="#">2</a></li>

@@ -26,6 +26,24 @@ public partial class air : System.Web.UI.Page
             var ind = IndustryDetails.GetAllIndustryWithUrl(conSQ, url);
             if (ind != null)
             {
+                #region SEO
+                if (!string.IsNullOrEmpty(ind.PageTitle))
+                {
+                    Page.Title = ind.PageTitle;
+                }
+                else
+                {
+                    Page.Title = ind.IndustryName + " | Park Control and Communication";
+                }
+                if (!string.IsNullOrEmpty(ind.MetaDesc))
+                {
+                    Page.MetaDescription = ind.MetaDesc;
+                }
+                if (!string.IsNullOrEmpty(ind.MetaKeys))
+                {
+                    Page.MetaKeywords = ind.MetaKeys;
+                }
+                #endregion
                 strBannerImage = ind.BannerImage;
                 strDescHeading = ind.DescHeading;
                 strfullDesc = ind.FullDesc;

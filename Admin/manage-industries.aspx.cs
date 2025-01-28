@@ -40,6 +40,9 @@ public partial class Admin_manage_industries : System.Web.UI.Page
                 txtUrl.Text = lnk.IndustryUrl;
                 txtheading.Text = lnk.DescHeading;
                 txtfulldesc.Text = lnk.FullDesc;
+                txtPageTitle.Text = lnk.PageTitle;
+                txtMetaKey.Text = lnk.MetaKeys;
+                txtMetaDesc.Text = lnk.MetaDesc;
                 if (lnk.BannerImage != "")
                 {
                     lblThumb.Text = lnk.BannerImage;
@@ -79,6 +82,9 @@ public partial class Admin_manage_industries : System.Web.UI.Page
                     BannerImage = UploadBannerImage(),
                     DescHeading= txtheading.Text,
                     FullDesc= txtfulldesc.Text,
+                    PageTitle= txtPageTitle.Text,
+                    MetaKeys= txtMetaKey.Text,
+                    MetaDesc= txtMetaDesc.Text,
                     AddedOn = DateTime.Now,
                     AddedBy = aid,
                     AddedIp = CommonModel.IPAddress(),
@@ -104,7 +110,7 @@ public partial class Admin_manage_industries : System.Web.UI.Page
                     int result = IndustryDetails.AddIndustry(conSQ, st);
                     if (result > 0)
                     {
-                        txtname.Text = txtUrl.Text = txtheading.Text= txtfulldesc.Text="";
+                        txtname.Text = txtUrl.Text = txtheading.Text= txtfulldesc.Text= txtPageTitle.Text= txtMetaKey.Text= txtMetaDesc.Text="";
 
                         ScriptManager.RegisterStartupScript(this, this.GetType(), "Message", "Snackbar.show({pos: 'top-right',text: 'Industry added successfully.',actionTextColor: '#fff',backgroundColor: '#008a3d'});", true);
                     }
