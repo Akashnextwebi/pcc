@@ -335,7 +335,7 @@ Singapore 169877</a></h5>
                                         <div class="col-lg-6 col-md-6 mb-4">
                                             <div class="form-group">
                                                 <%-- <input type="text" name="name" class="form-control" placeholder="Name*" required>--%>
-                                                <asp:TextBox ID="txtname" class="form-control" runat="server" placeholder="Name*"></asp:TextBox>
+                                                <asp:TextBox ID="txtname" class="form-control" runat="server" placeholder="Name"></asp:TextBox>
                                                 <asp:RequiredFieldValidator ID="req1" runat="server" ControlToValidate="txtname" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Field can't be empty"></asp:RequiredFieldValidator>
                                             </div>
                                         </div>
@@ -343,7 +343,7 @@ Singapore 169877</a></h5>
                                         <div class="col-lg-6 col-md-6 mb-4">
                                             <div class="form-group">
                                                 <%-- <input type="email" name="email" class="form-control" placeholder="E-mail*" required>--%>
-                                                <asp:TextBox ID="txtemail" class="form-control" runat="server" placeholder="E-mail*"></asp:TextBox>
+                                                <asp:TextBox ID="txtemail" class="form-control" runat="server" placeholder="E-mail"></asp:TextBox>
                                                 <asp:RequiredFieldValidator ID="rfv2" runat="server" ControlToValidate="txtemail" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Field can't be empty"></asp:RequiredFieldValidator>
                                                 <asp:RegularExpressionValidator runat="server" ControlToValidate="txtemail" ErrorMessage="Please Enter valid EmailIdAddress" ForeColor="Red" ValidationGroup="Save" SetFocusOnError="True" Display="Dynamic" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
                                             </div>

@@ -121,6 +121,10 @@ public partial class product_details : System.Web.UI.Page
                         }
                     }
                 }
+                else
+                {
+                    divcap.Visible = false;
+                }
                
                
                 var spe = SpecificationDetails.GetAllSpecificationProductGuid(conSQ, Pro.ProductGuid);
@@ -138,6 +142,10 @@ public partial class product_details : System.Web.UI.Page
                                                 </div>";
                     }
 
+                }
+                else
+                {
+                    divspe.Visible = false;
                 }
                 var PG = ProductGallery.GetAllProductGalleryProductGuid(conSQ, Pro.ProductGuid);
                 if (PG.Count > 0)

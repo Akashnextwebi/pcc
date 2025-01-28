@@ -345,10 +345,10 @@ Pellentesque habitant morbi tristique senectus et netus et malesuada.--%>
                         <div class="product_details_tab">
                             <ul class="nav">
 
-                                <li class="nav-item">
+                                <li class="nav-item" id="divcap" runat="server">
                                     <a class="active" data-bs-toggle="tab" href="#Capabilities">Capabilities</a>
                                 </li>
-                                <li class="nav-item">
+                                <li class="nav-item" id="divspe" runat="server">
                                     <a data-bs-toggle="tab" href="#Specifications">Specifications</a>
                                 </li>
 

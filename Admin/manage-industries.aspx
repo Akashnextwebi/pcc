@@ -40,13 +40,13 @@
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtUrl" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Field can't be empty"></asp:RequiredFieldValidator>
                                 </div>
                                 <div class="col-lg-6 mb-2">
-                                    <label class="">Banner Image1 <sup class="text-danger">*</sup></label>
+                                    <label class="">Banner Image1 <sup class="text-danger"></sup></label>
                                     <asp:FileUpload runat="server" ID="ThumbImage" CssClass="form-control" />
                                     <small class="text-danger fw-bold">Image format .png, .jpeg, .jpg, .webp with 1080 × 720 px is recommended.</small><br />
                                     <%=strThumbImage %>
                                 </div>
                                 <div class="col-lg-6 mb-2">
-                                    <label class="">Banner Image2 <sup class="text-danger">*</sup></label>
+                                    <label class="">Banner Image2 <sup class="text-danger"></sup></label>
                                     <asp:FileUpload runat="server" ID="BannerImage" CssClass="form-control" />
                                     <small class="text-danger fw-bold">Image format .png, .jpeg, .jpg, .webp with 1080 × 720 px is recommended.</small><br />
                                     <%=strbanner %>
@@ -61,17 +61,17 @@
                                     <div class="col-lg-12">
                                         <label class="">Full Description <sup>*</sup></label>
                                         <asp:TextBox runat="server" TextMode="MultiLine" class="form-control mb-2  summernote" ID="txtfulldesc" Placeholder="Enter Full Description ....." />
+                                         <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtfulldesc" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Field can't be empty"></asp:RequiredFieldValidator>
                                     </div>
                                 </div>
                                 <div class="row mb-2">
                                     <div class="col-lg-12 mb-3">
-                                        <label class="">Desc Heading2<sup>*</sup></label>
+                                        <label class="">Desc Heading2<sup></sup></label>
                                         <asp:TextBox runat="server" MaxLength="100" class="form-control mb-2 mr-sm-2 txtheading2 onlyAlpha" ID="txtheading2" placeholder="Enter Desc Heading" />
-                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtheading" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Field can't be empty"></asp:RequiredFieldValidator>
                                     </div>
 
                                     <div class="col-lg-12">
-                                        <label class="">Full Description2 <sup>*</sup></label>
+                                        <label class="">Full Description2 <sup></sup></label>
                                         <asp:TextBox runat="server" TextMode="MultiLine" class="form-control mb-2  summernote" ID="txtfdesc2" Placeholder="Enter Full Description ....." />
                                     </div>
                                 </div>
