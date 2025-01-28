@@ -91,7 +91,7 @@ public partial class case_study_details : System.Web.UI.Page
     </a>
     <div class='content'>
         <a href='/Casestudy/" + prev.CaseStudyUrl + @"'>Prev Post</a>
-        <h6><a href='/Casestudy/" + prev.CaseStudyUrl + @"'>Consulting vs. In-House Expertise: Finding the Right Balance</a></h6>
+        <h6><a href='/Casestudy/" + prev.CaseStudyUrl + @"'>" + prev.CaseStudyName + @"</a></h6>
     </div>
 </div>";
             }
@@ -100,7 +100,7 @@ public partial class case_study_details : System.Web.UI.Page
                 StrNext += @"<div class='single-navigation two text-end'>
      <div class='content'>
          <a href='/Casestudy/" + next.CaseStudyUrl + @"'>Next Post</a>
-         <h6><a href='/Casestudy/" + next.CaseStudyUrl + @"'>Consulting Industry Adapts to the Changing Business Landscape</a></h6>
+         <h6><a href='/Casestudy/" + next.CaseStudyUrl + @"'>"+next.CaseStudyName+@"</a></h6>
      </div>
      <a class='arrow' href='/Casestudy/" + next.CaseStudyUrl + @"'>
          <svg width='9' height='15' viewBox='0 0 8 13' xmlns='http://www.w3.org/2000/svg'>

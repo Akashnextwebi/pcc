@@ -76,7 +76,7 @@ public partial class blogs_details : System.Web.UI.Page
     </a>
     <div class='content'>
         <a href='/blog/" + prev.BlogURL + @"'>Prev Post</a>
-        <h6><a href='/blog/" + prev.BlogURL + @"'>Consulting vs. In-House Expertise: Finding the Right Balance</a></h6>
+        <h6><a href='/blog/" + prev.BlogURL + @"'>"+prev.BlogTitle + @"</a></h6>
     </div>
 </div>";
             }
@@ -85,7 +85,7 @@ public partial class blogs_details : System.Web.UI.Page
                 StrNext += @"<div class='single-navigation two text-end'>
      <div class='content'>
          <a href='/blog/" + next.BlogURL + @"'>Next Post</a>
-         <h6><a href='/blog/" + next.BlogURL + @"'>Consulting Industry Adapts to the Changing Business Landscape</a></h6>
+         <h6><a href='/blog/" + next.BlogURL + @"'>"+next.BlogTitle + @"</a></h6>
      </div>
      <a class='arrow' href='/blog/" + next.BlogURL + @"'>
          <svg width='9' height='15' viewBox='0 0 8 13' xmlns='http://www.w3.org/2000/svg'>
