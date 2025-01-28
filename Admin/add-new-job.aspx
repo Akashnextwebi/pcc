@@ -71,7 +71,7 @@
                                 <div class="col-lg-4 mb-2">
                                     <label class="">Company Image <sup class="text-danger">*</sup></label>
                                     <asp:FileUpload runat="server" ID="companyimage" CssClass="form-control" />
-                                    <small class="text-danger fw-bold">Image format .png, .jpeg, .jpg, .webp with 60px w X 60px h is recommended.</small><br />
+                                    <small class="text-danger">.png, .jpeg, .jpg, .gif formats are required, Image Size Should be 60 × 60 px</small><br />
                                     <%=strCompanyImage %>
                                 </div>
 
