@@ -661,7 +661,8 @@
             <div class="container">
 
                 <div class="row g-4">
-                    <div class="col-lg-3">
+                    <%=StrWhitepaper %>
+                   <%-- <div class="col-lg-3">
 
 
                         <div class="broacher-card">
@@ -730,7 +731,7 @@
                                 </a>
                             </div>
                         </div>
-                    </div>
+                    </div>--%>
                   
 
                 </div>

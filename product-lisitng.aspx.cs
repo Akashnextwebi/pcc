@@ -10,7 +10,7 @@ using System.Web.UI.WebControls;
 public partial class product_lisitng :  System.Web.UI.Page
 {
     SqlConnection conSQ = new SqlConnection(ConfigurationManager.ConnectionStrings["conSQ"].ConnectionString);
-    public string strBanner = "", strBannertitle = "", strDesctitle = "", strDesc = "",strProduct="";
+    public string strBanner = "", strBannertitle = "", strDesctitle = "", strDesc = "",strProduct="",StrWhitepaper="";
     protected void Page_Load(object sender, EventArgs e)
     {
         if (RouteData.Values["surl"] != null)
@@ -32,6 +32,7 @@ public partial class product_lisitng :  System.Web.UI.Page
                 strDesctitle = SC.DescHeading;
                 strDesc = SC.FullDesc;
                 BindProducts(Convert.ToString(SC.Id));
+                BindWhitepaper(Convert.ToString(SC.Id));
             }
         }
         catch (Exception ex)
@@ -87,6 +88,39 @@ public partial class product_lisitng :  System.Web.UI.Page
         catch (Exception ex)
         {
             ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "BindProducts", ex.Message);
+        }
+    }
+    public void BindWhitepaper(string name)
+    {
+        try
+        {
+            var Wp = WhitePaperDetails.GetAllWhitepaper(conSQ, name);
+            if (Wp.Count > 0)
+            {
+                for (int i = 0; i < Wp.Count; i++)
+                {
+                    StrWhitepaper += @"<div class='col-lg-3'>
+    <div class='broacher-card'>
+        <div class='broacher-img'>
+<a href='/whitepaper/" + Wp[i].WhitePaperUrl + @"'>
+            <img src='/" + Wp[i].ThumbImage + @"' alr='img' /></a>
+        </div>
+        <div class='broacher-content '>
+            <span>White Paper</span>
+          <h5 class='mt-2'><a href='/whitepaper/" + Wp[i].WhitePaperUrl + @"'> " + Wp[i].WhitePaperHeading + @"
+                                </h5></a>
+<p>test</p>
+
+        </div>
+    </div>
+
+</div>";
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "BindWhitepaper", ex.Message);
         }
     }
 }
