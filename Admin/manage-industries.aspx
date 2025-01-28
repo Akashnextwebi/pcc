@@ -57,7 +57,7 @@
                                 <asp:TextBox runat="server" TextMode="MultiLine" class="form-control mb-2  summernote" ID="txtfulldesc" Placeholder="Enter Full Description ....." />
                             </div>
                         </div>
-
+                        
                     </div>
                 </div>
             </div>
