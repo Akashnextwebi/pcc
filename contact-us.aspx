@@ -335,7 +335,7 @@ Singapore 169877</a></h5>
                                         <div class="col-lg-6 col-md-6 mb-4">
                                             <div class="form-group">
                                                 <%-- <input type="text" name="name" class="form-control" placeholder="Name*" required>--%>
-                                                <asp:TextBox ID="txtname" class="form-control" runat="server" placeholder="Name"></asp:TextBox>
+                                                <asp:TextBox ID="txtname" class="form-control" runat="server" placeholder="Enter Your Name*"></asp:TextBox>
                                                 <asp:RequiredFieldValidator ID="req1" runat="server" ControlToValidate="txtname" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Field can't be empty"></asp:RequiredFieldValidator>
                                             </div>
                                         </div>
@@ -343,7 +343,7 @@ Singapore 169877</a></h5>
                                         <div class="col-lg-6 col-md-6 mb-4">
                                             <div class="form-group">
                                                 <%-- <input type="email" name="email" class="form-control" placeholder="E-mail*" required>--%>
-                                                <asp:TextBox ID="txtemail" class="form-control" runat="server" placeholder="E-mail"></asp:TextBox>
+                                                <asp:TextBox ID="txtemail" class="form-control" runat="server" placeholder="Enter Your E-mail*"></asp:TextBox>
                                                 <asp:RequiredFieldValidator ID="rfv2" runat="server" ControlToValidate="txtemail" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Field can't be empty"></asp:RequiredFieldValidator>
                                                 <asp:RegularExpressionValidator runat="server" ControlToValidate="txtemail" ErrorMessage="Please Enter valid EmailIdAddress" ForeColor="Red" ValidationGroup="Save" SetFocusOnError="True" Display="Dynamic" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
                                             </div>
@@ -352,7 +352,7 @@ Singapore 169877</a></h5>
                                         <div class="col-lg-12 col-md-12 mb-4">
                                             <div class="form-group">
                                                 <%--<input type="text    name="subject" class="form-control" placeholder="Subject">--%>
-                                                <asp:TextBox ID="txtsubject" runat="server" class="form-control" placeholder="Subject"></asp:TextBox>
+                                                <asp:TextBox ID="txtsubject" runat="server" class="form-control" placeholder="Enter Subject*"></asp:TextBox>
                                                 <asp:RequiredFieldValidator ID="rfv3" runat="server" ControlToValidate="txtsubject" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Field can't be empty"></asp:RequiredFieldValidator>
                                             </div>
                                         </div>
@@ -360,7 +360,7 @@ Singapore 169877</a></h5>
                                         <div class="col-md-12 col-lg-12 mb-4">
                                             <div class="form-group">
                                                 <%-- <textarea name="message" class="form-control" placeholder="Text"></textarea>--%>
-                                                <asp:TextBox ID="txtmsg" runat="server" TextMode="MultiLine" Rows="6" class="form-control" placeholder="Text"></asp:TextBox>
+                                                <asp:TextBox ID="txtmsg" runat="server" TextMode="MultiLine" Rows="6" class="form-control" placeholder="Enter Message*"></asp:TextBox>
                                                 <asp:RequiredFieldValidator ID="rfv4" runat="server" ControlToValidate="txtmsg" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Field can't be empty"></asp:RequiredFieldValidator>
                                             </div>
                                         </div>
