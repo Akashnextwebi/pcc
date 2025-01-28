@@ -109,6 +109,10 @@ public partial class air : System.Web.UI.Page
                         </div>";
                 }
             }
+            else
+            {
+                divpro.Visible = false;
+            }
            
         }
         catch (Exception ex)

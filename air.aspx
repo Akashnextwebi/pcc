@@ -77,7 +77,7 @@
         <div class="container">
             <div class="row g-4">
                 <div class="col-lg-12 ">
-                    <div class="sub-title  text-start">
+                    <div class="sub-title  text-start" id="divpro" runat="server">
                         <h2>Spotlight on <%=strIndustryName %> Capabilities
                         </h2>
                     </div>
