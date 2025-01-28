@@ -43,7 +43,7 @@
                                 <div class="col-lg-6 mb-2">
                                     <label class="">Thumb Image <sup class="text-danger">*</sup></label>
                                     <asp:FileUpload runat="server" ID="ThumbImage" CssClass="form-control" />
-                                    <small class="text-danger fw-bold">Image format .png, .jpeg, .jpg, .webp with 650px w X 430px h is recommended.</small><br />
+                                    <small class="text-danger">.png, .jpeg, .jpg, .gif formats are required, Image Size Should be 650 × 430 px</small><br />
                                     <%=strThumbImage %>
                                 </div>
                             </div>

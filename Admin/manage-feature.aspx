@@ -31,7 +31,7 @@
                                 <div class="col-lg-6 mb-3">
                                     <label class="form-label">Feature Image <sup class="text-danger">*</sup></label>
                                     <asp:FileUpload runat="server" CssClass="form-control mb-2 mr-sm-2" ID="updImg"></asp:FileUpload>
-                                    <small class="text-danger fw-bold">Image format .png, .jpeg, .jpg, .webp with 128px w X 128px h is recommended.</small><br />
+                                    <small class="text-danger">.png, .jpeg, .jpg, .gif formats are required, Image Size Should be 128 × 128 px</small><br />
                                     <%=StrThumbImage %>
                                 </div>
                                 <div class="row mb-2">

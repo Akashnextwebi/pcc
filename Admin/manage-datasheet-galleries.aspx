@@ -31,7 +31,7 @@
                             <div class="col-lg-4 mb-3">
                                 <label class="form-label">DataSheet Image<sup class="text-danger">*</sup></label>
                                 <asp:FileUpload runat="server" CssClass="form-control mb-2 mr-sm-2" ID="updImg"></asp:FileUpload>
-                                <small class="text-danger fw-bold">Image format .png, .jpeg, .jpg, .webp with 1920px w X 1080px h is recommended.</small><br />
+                                <small class="text-danger">.png, .jpeg, .jpg, .gif formats are required, Image Size Should be 1920 × 1080 px</small><br />
                                 <%=StrThumbImage %>
                             </div>
                             <div class="col-lg-4 mb-3">

@@ -42,13 +42,13 @@
                                 <div class="col-lg-6 mb-2">
                                     <label class="">Banner Image1 <sup class="text-danger"></sup></label>
                                     <asp:FileUpload runat="server" ID="ThumbImage" CssClass="form-control" />
-                                    <small class="text-danger fw-bold">Image format .png, .jpeg, .jpg, .webp with 1080 × 720 px is recommended.</small><br />
+                                    <small class="text-danger">.png, .jpeg, .jpg, .gif formats are required, Image Size Should be 1080 × 720 px</small><br />
                                     <%=strThumbImage %>
                                 </div>
                                 <div class="col-lg-6 mb-2">
                                     <label class="">Banner Image2 <sup class="text-danger"></sup></label>
                                     <asp:FileUpload runat="server" ID="BannerImage" CssClass="form-control" />
-                                    <small class="text-danger fw-bold">Image format .png, .jpeg, .jpg, .webp with 1080 × 720 px is recommended.</small><br />
+                                    <small class="text-danger">.png, .jpeg, .jpg, .gif formats are required, Image Size Should be 1080 × 720 px</small><br />
                                     <%=strbanner %>
                                 </div>
                                 <div class="row mb-2">
