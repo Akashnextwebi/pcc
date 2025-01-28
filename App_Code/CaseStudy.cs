@@ -23,6 +23,7 @@ public class CaseStudy
     public string UploadPDF { get; set; }
     public string CaseStudyName { get; set; }
     public string CaseStudyUrl { get; set; }
+    public string Tag {  get; set; }
     public string Category { get; set; }
     public DateTime PostedOn { get; set; }
     public string Location { get; set; }
@@ -55,13 +56,14 @@ public class CaseStudy
 
         try
         {
-            string query = "Insert Into CaseStudy (CSThumbImage,CSDetailImage,UploadPDF,CaseStudyName,CaseStudyUrl,Category,PostedOn,Client,Location,PageTitle,MetaKeys,MetaDesc,OverviewTitle,OVDesc,PSTitle,PSDesc,PSImages,OATitle,OADesc,OAImages,TUTitle,TUDesc,CETitle,CEDesc,DBPTitle,DBPDesc,AddedBy,AddedOn,AddedIP,Status) values" +
-                           "(@CSThumbImage,@CSDetailImage,@UploadPDF,@CaseStudyName,@CaseStudyUrl,@Category,@PostedOn,@Client,@Location,@PageTitle,@MetaKeys,@MetaDesc,@OverviewTitle,@OVDesc,@PSTitle,@PSDesc,@PSImages,@OATitle,@OADesc,@OAImages,@TUTitle,@TUDesc,@CETitle,@CEDesc,@DBPTitle,@DBPDesc,@AddedBy,@AddedOn,@AddedIP,@Status)";
+            string query = "Insert Into CaseStudy (CSThumbImage,CSDetailImage,UploadPDF,Tag,CaseStudyName,CaseStudyUrl,Category,PostedOn,Client,Location,PageTitle,MetaKeys,MetaDesc,OverviewTitle,OVDesc,PSTitle,PSDesc,PSImages,OATitle,OADesc,OAImages,TUTitle,TUDesc,CETitle,CEDesc,DBPTitle,DBPDesc,AddedBy,AddedOn,AddedIP,Status) values" +
+                           "(@CSThumbImage,@CSDetailImage,@UploadPDF,@Tag,@CaseStudyName,@CaseStudyUrl,@Category,@PostedOn,@Client,@Location,@PageTitle,@MetaKeys,@MetaDesc,@OverviewTitle,@OVDesc,@PSTitle,@PSDesc,@PSImages,@OATitle,@OADesc,@OAImages,@TUTitle,@TUDesc,@CETitle,@CEDesc,@DBPTitle,@DBPDesc,@AddedBy,@AddedOn,@AddedIP,@Status)";
             using (SqlCommand cmd = new SqlCommand(query, _con))
             {
                 cmd.Parameters.AddWithValue("@CSThumbImage", SqlDbType.NVarChar).Value = cat.CSThumbImage;
                 cmd.Parameters.AddWithValue("@CSDetailImage", SqlDbType.NVarChar).Value = cat.CSDetailImage;
                 cmd.Parameters.AddWithValue("@UploadPDF", SqlDbType.NVarChar).Value = cat.UploadPDF;
+                cmd.Parameters.AddWithValue("@Tag", SqlDbType.NVarChar).Value = cat.Tag;
                 cmd.Parameters.AddWithValue("@CaseStudyName", SqlDbType.NVarChar).Value = cat.CaseStudyName;
                 cmd.Parameters.AddWithValue("@CaseStudyUrl", SqlDbType.NVarChar).Value = cat.CaseStudyUrl;
                 cmd.Parameters.AddWithValue("@Category", SqlDbType.NVarChar).Value = cat.Category;
@@ -105,12 +107,13 @@ public class CaseStudy
         int result = 0;
         try
         {
-            string query = "Update CaseStudy Set CSThumbImage=@CSThumbImage,CSDetailImage=@CSDetailImage,OverviewTitle=@OverviewTitle,OVDesc=@OVDesc,DBPTitle=@DBPTitle,DBPDesc=@DBPDesc,UploadPDF=@UploadPDF,CaseStudyName=@CaseStudyName,CaseStudyUrl=@CaseStudyUrl,CEDesc=@CEDesc,Category=@Category,PageTitle=@PageTitle,MetaKeys=@MetaKeys,Location=@Location,Client=@Client,PSDesc=@PSDesc,PStitle=@PStitle,OAImages=@OAImages,OATitle=@OATitle,TUTitle=@TUTitle,TUDesc=@TUDesc,CETitle=@CETitle,OADesc=@OADesc, PSImages=@PSImages, MetaDesc=@MetaDesc,PostedOn=@PostedOn,AddedOn=@AddedOn,AddedBy=@AddedBy,AddedIP=@AddedIP Where Id=@Id ";
+            string query = "Update CaseStudy Set CSThumbImage=@CSThumbImage,CSDetailImage=@CSDetailImage,Tag=@Tag,OverviewTitle=@OverviewTitle,OVDesc=@OVDesc,DBPTitle=@DBPTitle,DBPDesc=@DBPDesc,UploadPDF=@UploadPDF,CaseStudyName=@CaseStudyName,CaseStudyUrl=@CaseStudyUrl,CEDesc=@CEDesc,Category=@Category,PageTitle=@PageTitle,MetaKeys=@MetaKeys,Location=@Location,Client=@Client,PSDesc=@PSDesc,PStitle=@PStitle,OAImages=@OAImages,OATitle=@OATitle,TUTitle=@TUTitle,TUDesc=@TUDesc,CETitle=@CETitle,OADesc=@OADesc, PSImages=@PSImages, MetaDesc=@MetaDesc,PostedOn=@PostedOn,AddedOn=@AddedOn,AddedBy=@AddedBy,AddedIP=@AddedIP Where Id=@Id ";
             using (SqlCommand cmd = new SqlCommand(query, _con))
             {
                 cmd.Parameters.AddWithValue("@Id", SqlDbType.Int).Value = cat.Id;
                 cmd.Parameters.AddWithValue("@CSThumbImage", SqlDbType.NVarChar).Value = cat.CSThumbImage;
                 cmd.Parameters.AddWithValue("@CSDetailImage", SqlDbType.NVarChar).Value = cat.CSDetailImage;
+                cmd.Parameters.AddWithValue("@Tag", SqlDbType.NVarChar).Value = cat.Tag;
                 cmd.Parameters.AddWithValue("@UploadPDF", SqlDbType.NVarChar).Value = cat.UploadPDF;
                 cmd.Parameters.AddWithValue("@CaseStudyName", SqlDbType.NVarChar).Value = cat.CaseStudyName;
                 cmd.Parameters.AddWithValue("@CaseStudyUrl", SqlDbType.NVarChar).Value = cat.CaseStudyUrl;
@@ -168,6 +171,7 @@ public class CaseStudy
                     Case.CSThumbImage = Convert.ToString(dt.Rows[0]["CSThumbImage"]);
                     Case.CSDetailImage = Convert.ToString(dt.Rows[0]["CSDetailImage"]);
                     Case.UploadPDF = Convert.ToString(dt.Rows[0]["UploadPDF"]);
+                    Case.Tag = Convert.ToString(dt.Rows[0]["Tag"]);
                     Case.CaseStudyName = Convert.ToString(dt.Rows[0]["CaseStudyName"]);
                     Case.CaseStudyUrl = Convert.ToString(dt.Rows[0]["CaseStudyUrl"]);
                     Case.PageTitle = Convert.ToString(dt.Rows[0]["PageTitle"]);
@@ -231,6 +235,7 @@ public class CaseStudy
                                   CSThumbImage = Convert.ToString(dr["CSThumbImage"]),
                                   CSDetailImage = Convert.ToString(dr["CSDetailImage"]),
                                   UploadPDF = Convert.ToString(dr["UploadPDF"]),
+                                  Tag = Convert.ToString(dr["Tag"]),
                                   CaseStudyName = Convert.ToString(dr["CaseStudyName"]),
                                   CaseStudyUrl = Convert.ToString(dr["CaseStudyUrl"]),
                                   PageTitle = Convert.ToString(dr["PageTitle"]),
@@ -311,6 +316,7 @@ public class CaseStudy
                           UploadPDF = Convert.ToString(dr["UploadPDF"]),
                           CaseStudyName = Convert.ToString(dr["CaseStudyName"]),
                           CaseStudyUrl = Convert.ToString(dr["CaseStudyUrl"]),
+                          Tag = Convert.ToString(dr["Tag"]),
                           PageTitle = Convert.ToString(dr["PageTitle"]),
                           MetaKeys = Convert.ToString(dr["MetaKeys"]),
                           MetaDesc = Convert.ToString(dr["MetaDesc"]),
@@ -365,6 +371,7 @@ public class CaseStudy
                     cs.UploadPDF = Convert.ToString(dt.Rows[0]["UploadPDF"]);
                     cs.CaseStudyName = Convert.ToString(dt.Rows[0]["CaseStudyName"]);
                     cs.CaseStudyUrl = Convert.ToString(dt.Rows[0]["CaseStudyUrl"]);
+                    cs.Tag = Convert.ToString(dt.Rows[0]["Tag"]);
                     cs.PageTitle = Convert.ToString(dt.Rows[0]["PageTitle"]);
                     cs.MetaKeys = Convert.ToString(dt.Rows[0]["MetaKeys"]);
                     cs.MetaDesc = Convert.ToString(dt.Rows[0]["MetaDesc"]);

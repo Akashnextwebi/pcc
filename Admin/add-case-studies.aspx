@@ -8,7 +8,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                        <h4 class="mb-sm-0"><%=Request.QueryString["id"] !=null?"Update":"Add New" %>Case Study</h4>
+                        <h4 class="mb-sm-0"><%=Request.QueryString["id"] !=null?"Update":"Add New" %> Case Study</h4>
                         <div class="page-title-right">
                             <ol class="breadcrumb m-0">
                                 <li class="breadcrumb-item"><a href="javascript: void(0);">Dashboard</a></li>
@@ -29,15 +29,20 @@
                         </div>
                         <div class="card-body">
                             <div class="row mb-2">
-                                <div class="col-lg-6">
+                                <div class="col-lg-4">
                                     <label class="">Case Study Name<sup>*</sup></label>
                                     <asp:TextBox runat="server" MaxLength="100" class="form-control mb-2 mr-sm-2 txtName onlyAlpha" ID="txtCasestudyName" placeholder="Enter Case Study Name" />
                                     <asp:RequiredFieldValidator ID="rfv1" runat="server" ControlToValidate="txtCasestudyName" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Field can't be empty"></asp:RequiredFieldValidator>
                                 </div>
-                                <div class="col-lg-6">
+                                <div class="col-lg-4">
                                     <label class="">Case Studie URL <sup>*</sup></label>
-                                    <asp:TextBox runat="server" MaxLength="100" class="form-control mb-2 mr-sm-2 txtUrl" ID="txtUrl"  placeholder="Auto-Generated" />
+                                    <asp:TextBox runat="server" MaxLength="100" class="form-control mb-2 mr-sm-2 txtUrl" ID="txtUrl" placeholder="Auto-Generated" />
                                     <asp:RequiredFieldValidator ID="rfv2" runat="server" ControlToValidate="txtUrl" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Field can't be empty"></asp:RequiredFieldValidator>
+                                </div>
+                                <div class="col-lg-4 mb-3">
+                                    <label>Tag <sup style="color: red;">*</sup></label>
+                                    <asp:TextBox runat="server" class="form-control mb-2 mr-sm-2" ID="txttag" placeholder="Enter Tag " />
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txttag" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Field can't be empty"></asp:RequiredFieldValidator>
                                 </div>
                             </div>
                             <div class="row mb-2">
@@ -120,7 +125,7 @@
                                 </div>
 
                                 <div class="col-lg-6 mb-3">
-                                    <label class=""> Problem Statement Image<sup>*</sup></label>
+                                    <label class="">Problem Statement Image<sup>*</sup></label>
                                     <asp:FileUpload ID="ImgPS" runat="server" ToolTip="Maxmimum 1 MB file size" CssClass="form-control"></asp:FileUpload>
                                     <small class="text-danger">.png, .jpeg, .jpg, .gif formats are required, Image Size Should be 463 × 306 px</small><br />
 

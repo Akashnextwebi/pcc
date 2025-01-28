@@ -34,6 +34,7 @@ public partial class Admin_add_case_studies : System.Web.UI.Page
                 btnNew.Visible = true;
                 txtCasestudyName.Text = Case.CaseStudyName;
                 txtUrl.Text = Case.CaseStudyUrl;
+                txttag.Text = Case.Tag;
                 txtCategory.Text = Case.Category;
                 txtPostedOn.Text = Case.PostedOn.ToString("dd MMM yyyy");
                 txtLocation.Text = Case.Location;
@@ -182,6 +183,7 @@ public partial class Admin_add_case_studies : System.Web.UI.Page
                 CS.CaseStudyUrl = txtUrl.Text.Trim();
                 CS.Category = txtCategory.Text.Trim();
                 CS.Location = txtLocation.Text.Trim();
+                CS.Tag= txttag.Text.Trim();
                 CS.Client = txtClient.Text.Trim();
                 CS.PostedOn= Convert.ToDateTime(txtPostedOn.Text.Trim());
                 CS.MetaDesc = txtMetaDesc.Text.Trim();

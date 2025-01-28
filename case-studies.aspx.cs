@@ -37,7 +37,7 @@ public partial class case_studies : System.Web.UI.Page
                                 </div>
                                 <div class='case-content'>
                                     <div class='category-and-title'>
-                                        <a href='/casestudy/" + cs[i].CaseStudyUrl + @"'>Marketing</a>
+                                        <a href='/casestudy/" + cs[i].CaseStudyUrl + @"'>"+ cs[i].Tag + @"</a>
                                         <h4><a href='/casestudy/" + cs[i].CaseStudyUrl + @"'>" + cs[i].CaseStudyName + @"</a></h4>
                                     </div>
                                     <div class='details-btn'>
