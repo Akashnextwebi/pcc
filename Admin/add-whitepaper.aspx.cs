@@ -7,6 +7,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Xml.Linq;
 
 public partial class Admin_add_whitepaper : System.Web.UI.Page
 {
@@ -216,8 +217,9 @@ public partial class Admin_add_whitepaper : System.Web.UI.Page
                         if (result > 0)
                         {
                             ScriptManager.RegisterStartupScript(this, this.GetType(), "Message", "Snackbar.show({pos: 'top-right',text: 'Whitepaper Added successfully.',actionTextColor: '#fff',backgroundColor: '#008a3d'});", true);
-                            txtDesc.Text = txtMetaDesc.Text = txtName.Text = txtUrl.Text = txtPageTitle.Text = txtMetaKey.Text = "";
-                            strThumbImage = strDetailImage = strBannerImage= "";
+                            txtName.Text = txtUrl.Text = txtPostedBy.Text = txtPostedOn.Text = txtheading.Text = txttag.Text = txtDesc.Text = txtMetaDesc.Text = txtMetaKey.Text = txtPageTitle.Text = "";
+                             strThumbImage = strDetailImage = strBannerImage= "";
+                            ddlCapability.ClearSelection();
                         }
                         else
                         {

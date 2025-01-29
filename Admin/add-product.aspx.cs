@@ -377,8 +377,12 @@ public partial class Admin_add_product : System.Web.UI.Page
                         if (result > 0)
                         {
                             ScriptManager.RegisterStartupScript(this, this.GetType(), "Message", "Snackbar.show({pos: 'top-right',text: 'Product Added successfully.',actionTextColor: '#fff',backgroundColor: '#008a3d'});", true);
-                            txtproductName.Text = txtUrl.Text = txtcode.Text =  txtDesc.Text = txtMetaDesc.Text = txtMetaKey.Text = txtPageTitle.Text = ddlCapabilityType.SelectedValue = ddlSubcapability.SelectedValue = "";
+                            txtproductName.Text = txtUrl.Text = txtcode.Text =  txtDesc.Text = txtMetaDesc.Text = txtMetaKey.Text = txtPageTitle.Text =  "";
+                            strThumbImage = "";
                             chkenquiry.Checked = false;
+                            ddlCapabilityType.ClearSelection();
+                            ddlSubcapability.ClearSelection();
+                            ddlindustry.ClearSelection();   
                         }
                         else
                         {

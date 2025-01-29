@@ -807,7 +807,7 @@ Pellentesque habitant morbi tristique senectus et netus et malesuada.--%>
                     <div class="modal-body bg-light">
                         <div class="row">
                             <div class="col-lg-12 ">
-
+                                <%--<lable class="danger error-message" id="data-id"></lable>--%>
                                 <div class="wptb-form" action="contact.php" method="post">
                                     <div class="wptb-form--inner">
                                         <div class="row">
