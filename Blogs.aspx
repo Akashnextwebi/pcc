@@ -56,9 +56,14 @@
                 }
 
                 .pagination li .page-number {
-                    background: #f1f1f1 !important;
+                    background: #f1f1f1 ;
                     color: #000;
                 }
+             .pagination li .page-number.active{
+                    BACKGROUND: #000 !important;
+    COLOR: #FFF;
+}
+                
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
@@ -136,20 +141,21 @@
                             </div>
                         </a>
                     </div>--%>
-                    <siv class="col-lg-12">
-                        <div class="wptb-pagination-wrap text-center">
-                            <ul class="pagination pPagination">
-                                <%--<li><a class="disabled page-number previous" href="#"><i class="fa-solid fa-chevron-left"></i></a></li>
-                                <li><span class="page-number current">1</span></li>
-                                <li><a class="page-number" href="#">2</a></li>
-                                <li><a class="page-number" href="#">3</a></li>
-                                <li><a class="page-number" href="#">9</a></li>
-                                <li><a class="page-number next" href="#"><i class="fa-solid fa-chevron-right"></i></a></li>--%>
-                            </ul>
-                        </div>
-                    </siv>
+                   
                    
                 </div>
+                 <siv class="col-lg-12">
+     <div class="wptb-pagination-wrap text-center ">
+         <ul class="pagination pPagination">
+             <%--<li><a class="disabled page-number previous" href="#"><i class="fa-solid fa-chevron-left"></i></a></li>
+             <li><span class="page-number current">1</span></li>
+             <li><a class="page-number" href="#">2</a></li>
+             <li><a class="page-number" href="#">3</a></li>
+             <li><a class="page-number" href="#">9</a></li>
+             <li><a class="page-number next" href="#"><i class="fa-solid fa-chevron-right"></i></a></li>--%>
+         </ul>
+     </div>
+ </siv>
             </div>
         </section>
     </main>

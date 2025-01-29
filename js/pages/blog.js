@@ -65,10 +65,8 @@ function BindBlogs() {
             if (data2.d != null && data2.d != "") {
                 result = data2.d;
                 var Bloglist = "";
-                //var pLength = "";
                 var TotalCount = 0;
                 for (var i = 0; i < result.length; i++) {
-                    //pLength = result[i].TotalCount;
                     TotalCount = result[i].TotalCount == "" ? 0 : parseInt(result[i].TotalCount);
 
                     Bloglist += "<div class='col-12 col-md-4'>"; 
@@ -128,11 +126,11 @@ function BindPPage(pageS, cPage, pCount) {
     for (var i = startPage; i <= pLength; i++) {
         var activ = i === parseInt(cPage) ? "active" : "";
         var LastIndex = i === pLength ? "LastIndex" : "";
-        pagesss += "<li class='page-item'><a class='page-link pPVClick " + activ + " " + LastIndex + "' href='javascript:void(0);' id='pno_" + (i) + "'>" + (i) + "</a></li>";
+        pagesss += "<li class='page-number'><a class='page-number pPVClick " + activ + " " + LastIndex + "' href='javascript:void(0);' id='pno_" + (i) + "'>" + (i) + "</a></li>";
     }
     if (noOfPagesCreated > pLength) {
-        pagesss += "<li class='page-item'><a class='page-link pPVClick' href='javascript:void(0);' id='pno_" + (pLength + 1) + "'>...</a></li>";
-        pagesss += "<li class='page-item'><a class='page-link pPVClick LastIndex' href='javascript:void(0);' id='pno_" + (noOfPagesCreated) + "'>" + (noOfPagesCreated) + "</a></li>";
+        pagesss += "<li class='page-number'><a class='page-number pPVClick' href='javascript:void(0);' id='pno_" + (pLength + 1) + "'>...</a></li>";
+        pagesss += "<li class='page-number'><a class='page-number pPVClick LastIndex' href='javascript:void(0);' id='pno_" + (noOfPagesCreated) + "'>" + (noOfPagesCreated) + "</a></li>";
     }
 
     var prvPg = startPage === 1 ? 1 : startPage - 1;
@@ -146,9 +144,9 @@ function BindPPage(pageS, cPage, pCount) {
     var dNonePrev = parseInt(cPage) === 1 ? "dNonePrev" : "";
     var dNoneNext = parseInt(cPage) === nxtPg ? "dNoneNext" : "";
 
-    var pgnPrev = "<li class='page-item " + dNonePrev + "'><a id='pnon_" + prvPg + "' class='page-link prPVClick' href='javascript:void(0);' aria-label='Previous'><i class='fa-solid fa-angle-left'></i></a></li>";
+    var pgnPrev = "<li class='page-number " + dNonePrev + "'><a id='pnon_" + prvPg + "' class='page-number prPVClick' href='javascript:void(0);' aria-label='Previous'><i class='fa-solid fa-chevron-left'></i></a></li>";
 
-    var pgnNext = "<li class='page-item " + dNoneNext + "'><a class='page-link nxPVClick ' href='javascript:void(0);' id='pnon_" + nxtPg + "' aria-label='Next'><i class='fa-solid fa-chevron-right'></i></a></li>";
+    var pgnNext = "<li class='page-number " + dNoneNext + "'><a class='page-number nxPVClick ' href='javascript:void(0);' id='pnon_" + nxtPg + "' aria-label='Next'><i class='fa-solid fa-chevron-right'></i></a></li>";
 
     $(".pPagination").append(pgnPrev + pagesss + pgnNext);
 
