@@ -349,4 +349,46 @@ public class SubCapability
         }
         return Scap;
     }
+    //public static List<SubCapability> GetSubCapabilityByUrl(SqlConnection conSQ, string url)
+    //{
+    //    List<SubCapability> categories = new List<SubCapability>();
+    //    try
+    //    {
+    //        string query = "Select *,(SELECT TOP 1 CapabilityName FROM Capability WHERE id = SubCapability.Capabilities) AS Capabilities from SubCapability Where Status='Active' and SubCapabilityUrl=@SubCapabilityUrl";
+    //        using (SqlCommand cmd = new SqlCommand(query, conSQ))
+    //        {
+    //            DataTable dt = new DataTable();
+    //            cmd.Parameters.AddWithValue("@SubCapabilityUrl", SqlDbType.NVarChar).Value = url;
+    //            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+    //            sda.Fill(dt);
+    //            if (dt.Rows.Count > 0)
+    //            {
+    //                for (int i = 0; i < dt.Rows.Count; i++)
+    //                {
+    //                    SubCapability cat = new SubCapability();
+    //                    cat.Id = Convert.ToInt32(Convert.ToString(dt.Rows[i]["Id"]));
+    //                    cat.Capabilities = Convert.ToString(dt.Rows[i]["Capabilities"]);
+    //                    cat.SubCapabilityName = Convert.ToString(dt.Rows[i]["SubCapabilityName"]);
+    //                    cat.SubCapabilityUrl = Convert.ToString(dt.Rows[i]["SubCapabilityUrl"]);
+    //                    cat.ThumbImage = Convert.ToString(dt.Rows[i]["ThumbImage"]);
+    //                    cat.Tag = Convert.ToString(dt.Rows[i]["Tag"]);
+    //                    cat.BannerTitle = Convert.ToString(dt.Rows[i]["BannerTitle"]);
+    //                    cat.DescHeading = Convert.ToString(dt.Rows[i]["DescHeading"]);
+    //                    cat.FullDesc = Convert.ToString(dt.Rows[i]["FullDesc"]);
+    //                    cat.BannerImage = Convert.ToString(dt.Rows[i]["BannerImage"]);
+    //                    cat.AddedIp = Convert.ToString(dt.Rows[i]["AddedIP"]);
+    //                    cat.AddedBy = Convert.ToString(dt.Rows[i]["AddedBy"]);
+    //                    cat.AddedOn = Convert.ToDateTime(Convert.ToString(dt.Rows[i]["AddedOn"]));
+    //                    cat.Status = Convert.ToString(dt.Rows[i]["Status"]);
+    //                    categories.Add(cat);
+    //                }
+    //            }
+    //        }
+    //    }
+    //    catch (Exception ex)
+    //    {
+    //        CommonModel.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "GetSubCapabilityByUrl", ex.Message);
+    //    }
+    //    return categories;
+    //}
 }

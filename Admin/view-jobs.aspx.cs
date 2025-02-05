@@ -26,10 +26,9 @@ public partial class Admin_view_jobs : System.Web.UI.Page
 
             for (int i = 0; i < BD.Count; i++)
             {
-                 var image = "<a href='/" + BD[i].ThumbImage + @"' target='_blank'><img src='/" + BD[i].ThumbImage + @"' alt='' class='rounded-circle avatar-xs shadow'></a>";
+                 //var image = "<a href='/" + BD[i].ThumbImage + @"' target='_blank'><img src='/" + BD[i].ThumbImage + @"' alt='' class='rounded-circle avatar-xs shadow'></a>";
                 strJobs += @"<tr>
                                         <td>" + (i + 1) + @"</td>
-                                        <td>"+ image + @"</td>
                                         <td>" + BD[i].JobTitle + @"</td>
                                         <td>" + BD[i].JobLocation + @"</td>
                                         <td>" + BD[i].EmploymentType + @"</td>

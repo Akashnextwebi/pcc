@@ -81,7 +81,7 @@ public partial class Admin_add_testimonial : System.Web.UI.Page
                     if (result > 0)
                     {
                         ScriptManager.RegisterStartupScript(this, this.GetType(), "Message", "Snackbar.show({pos: 'top-right',text: 'Testimonial Added successfully.',actionTextColor: '#fff',backgroundColor: '#008a3d'});", true);
-                        txtPName.Text = ddlrating.Text = TxtTdesc.Text="";
+                        txtPName.Text = ddlrating.Text = TxtTdesc.Text= txtdesignation.Text="";
                     }
                     else
                     {

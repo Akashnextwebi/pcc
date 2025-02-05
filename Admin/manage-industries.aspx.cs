@@ -13,7 +13,7 @@ public partial class Admin_manage_industries : System.Web.UI.Page
 {
     SqlConnection conSQ = new SqlConnection(ConfigurationManager.ConnectionStrings["conSQ"].ConnectionString);
 
-    public string strIndustry = "", strThumbImage="", strbanner="";
+    public string strIndustry = "", strThumbImage = "", strbanner = "";
     protected void Page_Load(object sender, EventArgs e)
     {
 
@@ -40,7 +40,7 @@ public partial class Admin_manage_industries : System.Web.UI.Page
                 txtUrl.Text = lnk.IndustryUrl;
                 txtheading.Text = lnk.DescHeading;
                 txtfulldesc.Text = lnk.FullDesc;
-                txtheading2.Text= lnk.DescHeading2;
+                txtheading2.Text = lnk.DescHeading2;
                 txtfdesc2.Text = lnk.FullDesc2;
                 txtPageTitle.Text = lnk.PageTitle;
                 txtMetaKey.Text = lnk.MetaKeys;
@@ -80,6 +80,30 @@ public partial class Admin_manage_industries : System.Web.UI.Page
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "Message", "Snackbar.show({pos: 'top-right',text: 'Industry with title,url already exist.',actionTextColor: '#fff',backgroundColor: '#ea1c1c'});", true);
                     return;
                 }
+                var thumbimg = CheckThumbFormat();
+
+                if (thumbimg == "Format")
+                {
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "Message", "Snackbar.show({pos: 'top-right',text: 'Invalid image format. Please upload .png, .jpeg, .jpg, .webp, .gif for BannerImage1',actionTextColor: '#fff',backgroundColor: '#ea1c1c'});", true);
+                    return;
+                }
+                if (thumbimg == "Size")
+                {
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "Message", "Snackbar.show({pos: 'top-right',text: 'Invalid image size.Please upload correct resolution image for BannerImage1',actionTextColor: '#fff',backgroundColor: '#ea1c1c'});", true);
+                    return;
+                }
+                var thumbImg = CheckBannerFormat();
+
+                if (thumbimg == "Format")
+                {
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "Message", "Snackbar.show({pos: 'top-right',text: 'Invalid image format. Please upload .png, .jpeg, .jpg, .webp, .gif for BannerImage2',actionTextColor: '#fff',backgroundColor: '#ea1c1c'});", true);
+                    return;
+                }
+                if (thumbimg == "Size")
+                {
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "Message", "Snackbar.show({pos: 'top-right',text: 'Invalid image size.Please upload correct resolution image for BannerImage2',actionTextColor: '#fff',backgroundColor: '#ea1c1c'});", true);
+                    return;
+                }
 
                 string aid = Request.Cookies["pcc_aid"].Value;
                 IndustryDetails st = new IndustryDetails()
@@ -90,12 +114,12 @@ public partial class Admin_manage_industries : System.Web.UI.Page
                     BannerImage = UploadBannerImage(),
                     BannerImage2 = UploadBannerImage2(),
                     DescHeading = txtheading.Text,
-                    FullDesc= txtfulldesc.Text,
-                    FullDesc2= txtfdesc2.Text,
-                    DescHeading2= txtheading2.Text,
+                    FullDesc = txtfulldesc.Text,
+                    FullDesc2 = txtfdesc2.Text,
+                    DescHeading2 = txtheading2.Text,
                     PageTitle = txtPageTitle.Text,
-                    MetaKeys= txtMetaKey.Text,
-                    MetaDesc= txtMetaDesc.Text,
+                    MetaKeys = txtMetaKey.Text,
+                    MetaDesc = txtMetaDesc.Text,
                     AddedOn = DateTime.Now,
                     AddedBy = aid,
                     AddedIp = CommonModel.IPAddress(),
@@ -121,7 +145,7 @@ public partial class Admin_manage_industries : System.Web.UI.Page
                     int result = IndustryDetails.AddIndustry(conSQ, st);
                     if (result > 0)
                     {
-                        txtname.Text = txtUrl.Text = txtheading.Text= txtfulldesc.Text= txtPageTitle.Text= txtMetaKey.Text= txtMetaDesc.Text= txtheading2.Text= txtfdesc2.Text="";
+                        txtname.Text = txtUrl.Text = txtheading.Text = txtfulldesc.Text = txtPageTitle.Text = txtMetaKey.Text = txtMetaDesc.Text = txtheading2.Text = txtfdesc2.Text = "";
 
                         ScriptManager.RegisterStartupScript(this, this.GetType(), "Message", "Snackbar.show({pos: 'top-right',text: 'Industry added successfully.',actionTextColor: '#fff',backgroundColor: '#008a3d'});", true);
                     }

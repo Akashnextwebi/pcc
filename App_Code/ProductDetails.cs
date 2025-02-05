@@ -31,6 +31,7 @@ public class ProductDetails
     public string SubCapability { get; set; }
     public string Industry { get; set; }
     public string FullDesc { get; set; }
+    public string RelatedProducts { get; set; }
     public string PageTitle { get; set; }
     public string MetaKeys { get; set; }
     public string MetaDesc { get; set; }
@@ -475,6 +476,7 @@ FETCH NEXT @pageLength ROWS ONLY;";
                     pro.Capability = Convert.ToString(dt.Rows[0]["Capability"]);
                     pro.SubCapability = Convert.ToString(dt.Rows[0]["SubCapability"]);
                     pro.Industry = Convert.ToString(dt.Rows[0]["Industry"]);
+                    pro.RelatedProducts= Convert.ToString(dt.Rows[0]["RelatedProducts"]);
                     pro.FullDesc = Convert.ToString(dt.Rows[0]["FullDesc"]);
                     pro.PageTitle = Convert.ToString(dt.Rows[0]["PageTitle"]);
                     pro.MetaKeys = Convert.ToString(dt.Rows[0]["MetaKeys"]);
@@ -542,6 +544,76 @@ FETCH NEXT @pageLength ROWS ONLY;";
         }
         return categories;
     }
+    public static List<ProductDetails> GetAllProducts(SqlConnection conSQ)
+    {
+        List<ProductDetails> productDetails = new List<ProductDetails>();
+        try
+        {
+            string query = "SELECT pd.*, (SELECT TOP 1 CapabilityName FROM Capability WHERE id = pd.Capability) AS CapabilityName, (SELECT TOP 1 UserName FROM CreateUser WHERE UserGuid = pd.AddedBy) AS UpdatedBy1 FROM ProductDetails AS pd WHERE pd.Status != 'Deleted';";
+            using (SqlCommand cmd = new SqlCommand(query, conSQ))
+            {
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                productDetails = (from DataRow dr in dt.Rows
+                                  select new ProductDetails()
+                                  {
+                                      Id = Convert.ToInt32(Convert.ToString(dr["Id"])),
+                                      ProductGuid = Convert.ToString(dr["ProductGuid"]),
+                                      ProductName = Convert.ToString(dr["ProductName"]),
+                                      ProductUrl = Convert.ToString(dr["ProductUrl"]),
+                                      ThumbImage = Convert.ToString(dr["ThumbImage"]),
+                                      SKUCode = Convert.ToString(dr["SKUCode"]),
+                                      Broucher = Convert.ToString(dr["Broucher"]),
+                                      DatasheetName = Convert.ToString(dr["DatasheetName"]),
+                                      DatasheetLink = Convert.ToString(dr["DatasheetLink"]),
+                                      Enquiry = Convert.ToString(dr["Enquiry"]),
+                                      Capability = Convert.ToString(dr["Capability"]),
+                                      SubCapability = Convert.ToString(dr["SubCapability"]),
+                                      Industry = Convert.ToString(dr["Industry"]),
+                                      FullDesc = Convert.ToString(dr["FullDesc"]),
+                                      PageTitle = Convert.ToString(dr["PageTitle"]),
+                                      MetaKeys = Convert.ToString(dr["MetaKeys"]),
+                                      MetaDesc = Convert.ToString(dr["MetaDesc"]),
+                                      AddedOn = Convert.ToDateTime(Convert.ToString(dr["AddedOn"])),
+                                      AddedBy = Convert.ToString(dr["AddedBy"]),
+                                      AddedIp = Convert.ToString(dr["AddedIp"]),
+                                      RelatedProducts = Convert.ToString(dr["RelatedProducts"])
+                                  }).ToList();
+            }
+        }
+        catch (Exception ex)
+        {
+            ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "GetAllProducts", ex.Message);
+        }
+        return productDetails;
+    }
+    public static int UpdateAlternateProducts(SqlConnection conSQ, ProductDetails cat)
+    {
+        int result = 0;
+        try
+        {
+            string query = "Update ProductDetails Set RelatedProducts=@RelatedProducts Where Id=@Id ";
+            using (SqlCommand cmd = new SqlCommand(query, conSQ))
+            {
+                cmd.Parameters.AddWithValue("@Id", SqlDbType.NVarChar).Value = cat.Id;
+                cmd.Parameters.AddWithValue("@RelatedProducts", SqlDbType.NVarChar).Value = cat.RelatedProducts;
+                conSQ.Open();
+                result = cmd.ExecuteNonQuery();
+                conSQ.Close();
+            }
+        }
+        catch (Exception ex)
+        {
+            ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "DeleteProductDetails", ex.Message);
+        }
+        finally
+        {
+            conSQ.Close();
+        }
+        return result;
+    }
+   
 }
 
 

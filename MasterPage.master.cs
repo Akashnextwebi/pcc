@@ -30,7 +30,7 @@ public partial class MasterPage : System.Web.UI.MasterPage
                 for (int i = 0; i < ca.Count; i++)
                 {
 
-                    strsolution += @"<li><a class='dropdown-item' href='/capability/" + ca[i].CapabilityUrl + @"'><i class='las la-angle-double-right'></i>" + ca[i].CapabilityName + @"</a></li>";
+                    strsolution += @"<li><a class='dropdown-item' href='/competencies/" + ca[i].CapabilityUrl + @"'><i class='las la-angle-double-right'></i>" + ca[i].CapabilityName + @"</a></li>";
                     
 
                 }

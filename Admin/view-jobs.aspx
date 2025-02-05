@@ -33,7 +33,6 @@
                                 <thead>
                                     <tr>
                                         <th>#</th>
-                                        <th>Company Image</th>
                                         <th>Job Title</th>
                                         <th>Location</th>
                                         <th>Employment Type</th>
@@ -47,7 +46,6 @@
                                 <tfoot>
                                     <tr>
                                         <th>#</th>
-                                        <th>Company Image</th>
                                         <th>Job Title</th>
                                         <th>Location</th>
                                         <th>Employment Type</th>

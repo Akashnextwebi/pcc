@@ -662,15 +662,15 @@ Pellentesque habitant morbi tristique senectus et netus et malesuada.--%>
 
         </section>
 
-        <section class="section-padding bg-light">
+        <section class="section-padding bg-light" id="divpro" runat="server">
             <div class="container">
                 <div class="">
                     <h2 class="mb-30">Related Products
                     </h2>
                 </div>
                 <div class="row">
-
-                    <div class="col-lg-3">
+                    <%=strRelatedProducts %>
+                    <%--<div class="col-lg-3">
                         <div class="magnetic-wrap">
                             <div class="people-card2 magnetic-item" style="">
                                 <div class="people-img">
@@ -789,7 +789,7 @@ Pellentesque habitant morbi tristique senectus et netus et malesuada.--%>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div>--%>
                 </div>
             </div>
 
@@ -807,30 +807,29 @@ Pellentesque habitant morbi tristique senectus et netus et malesuada.--%>
                     <div class="modal-body bg-light">
                         <div class="row">
                             <div class="col-lg-12 ">
-                                <%--<lable class="danger error-message" id="data-id"></lable>--%>
                                 <div class="wptb-form" action="contact.php" method="post">
                                     <div class="wptb-form--inner">
                                         <div class="row">
                                             <div class="col-lg-12 col-md-12 mb-4">
-                                                <%--<lable class="error-message text-danger d-none"></lable>--%>
+                                               <%-- <lable class="error-message text-danger d-none"></lable>--%>
                                                 <div class="form-group">
                                                    <%-- <input type="text" name="name" class="form-control" placeholder="Enter Your Name" required>--%>
                                                     <asp:TextBox ID="textFname" runat="server" class="form-control textFname" MaxLength="100" placeholder="Enter Your Name"></asp:TextBox>
-                                                    <span class="spnfname text-danger ms-2"></span>
+                                                    <lable class="spnfname text-danger ms-2"></lable>
                                                 </div>
                                             </div>
                                             <div class="col-lg-12 col-md-12 mb-4">
                                                 <div class="form-group">
                                                     <%--<input type="text" name="password" class="form-control" placeholder="Mobile Number">--%>
                                                     <asp:TextBox ID="txtContact" class="form-control txtContact" runat="server" MaxLength="15" placeholder="Mobile Number"></asp:TextBox>
-                                                    <span class="spncontact text-danger ms-2"></span>
+                                                    <lable class="spncontact text-danger ms-2"></lable>
                                                 </div>
                                             </div>
                                             <div class="col-lg-12 col-md-12 mb-4">
                                                 <div class="form-group">
                                                    <%-- <input type="text" name="password" class="form-control" placeholder="Corporate E-mail ID--%>
                                                     <asp:TextBox ID="txtemailAdress" class="form-control txtemailAdress" runat="server" MaxLength="100" placeholder="Corporate E-mail ID"></asp:TextBox>
-                                                    <span class="spnemail text-danger ms-2"></span>
+                                                    <lable class="spnemail text-danger ms-2"></lable>
                                                 </div>
                                             </div>
 

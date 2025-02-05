@@ -53,19 +53,19 @@ public partial class advanced_data_solutions :  System.Web.UI.Page
             {
                 for (int i = 0; i < ca.Count; i++)
                 {
-                    var url = "SubCapability/" + ca[i].SubCapabilityUrl;
+                    var url = "/subcompetencies/" + ca[i].SubCapabilityUrl;
                     strsubcapability += @"<div class='col-lg-4 col-md-6'>
                         <div class='eg-card3 three'>
                             <div class='card-img'>
                                 <img src='/" + ca[i].ThumbImage + @"' alt=''>
                             </div>
                             <div class='card-content'>
-                                <a class='view-btn' href='/SubCapability/" + ca[i].SubCapabilityUrl + @"'>
+                                <a class='view-btn' href='" + url + @"'>
                                     <img src='image/sub1/right-arrow2.png' alt=''>
                                 </a>
                                 <div class='catgory-and-title'>
-                                    <a href='/SubCapability/" + ca[i].SubCapabilityUrl + @"'>" + ca[i].Tag + @"</a>
-                                    <h5><a href='/SubCapability/" + ca[i].SubCapabilityUrl + @"'>" + ca[i].SubCapabilityName + @"</a></h5>
+                                    <a href='" + url+ @"'>" + ca[i].Tag + @"</a>
+                                    <h5><a href='" + url + @"'>" + ca[i].SubCapabilityName + @"</a></h5>
                                 </div>
                             </div>
                         </div>
@@ -95,7 +95,7 @@ public partial class advanced_data_solutions :  System.Web.UI.Page
         </div>
         <div class='broacher-content '>
             <span>White Paper</span>
-          <h5 class='mt-2'><a href='/whitepaper/" + Wp[i].WhitePaperUrl + @"'> " + Wp[i].WhitePaperHeading +@"
+          <h5 class='mt-2'><a href='/whitepaper/" + Wp[i].WhitePaperUrl + @"'> " + Wp[i].WhitePaperTitle + @"
                                 </h5></a>
 <p>test</p>
 

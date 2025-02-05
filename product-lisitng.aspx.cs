@@ -49,7 +49,7 @@ public partial class product_lisitng :  System.Web.UI.Page
             {
                 for (int i = 0; i < pro.Count; i++)
                 {
-                    var url = "product/" + pro[i].ProductUrl;
+                    //var url = "product/" + pro[i].ProductUrl;
                     strProduct += @"<div class='col-lg-3'>
                         <div class='magnetic-wrap'>
                             <div class='people-card2 magnetic-item' style=''>
@@ -107,7 +107,7 @@ public partial class product_lisitng :  System.Web.UI.Page
         </div>
         <div class='broacher-content '>
             <span>White Paper</span>
-          <h5 class='mt-2'><a href='/whitepaper/" + Wp[i].WhitePaperUrl + @"'> " + Wp[i].WhitePaperHeading + @"
+          <h5 class='mt-2'><a href='/whitepaper/" + Wp[i].WhitePaperUrl + @"'> " + Wp[i].WhitePaperTitle + @"
                                 </h5></a>
 <p>test</p>
 

@@ -13,8 +13,8 @@ $(document).ready(function () {
     });
     $(document.body).on('click', ".prPVClick", function () {
         var ele = $(this);
-        var activeIndex = $(".pPagination li.current a").attr("id").split('_')[1];
-        var currentIndex = ele.attr("id").split('_')[1];
+        var activeIndex = $(".pPagination li.current a").attr("id");
+        var currentIndex = ele.attr("id");
         if (activeIndex == currentIndex) {
             $(".pPagination li a.dNonePrev").css("display", "none");
             return;
@@ -27,8 +27,8 @@ $(document).ready(function () {
         $(".pPagination li.dNonePrev").css("display", "flex");
         var ele = $(this);
 
-        var currentIndex = ele.attr("id").split('_')[1];
-        var activeIndex = $(".pPagination li.current a").attr("id").split('_')[1];
+        var currentIndex = ele.attr("id");
+        var activeIndex = $(".pPagination li.current a").attr("id");
 
         if (currentIndex == activeIndex) {
             $(".pPagination li a.dNoneNext").css("display", "none");
@@ -144,9 +144,9 @@ function BindPPage(pageS, cPage, pCount) {
     var dNonePrev = parseInt(cPage) === 1 ? "dNonePrev" : "";
     var dNoneNext = parseInt(cPage) === nxtPg ? "dNoneNext" : "";
 
-    var pgnPrev = "<li class='page-number " + dNonePrev + "'><a id='pnon_" + prvPg + "' class='page-number prPVClick' href='javascript:void(0);' aria-label='Previous'><i class='fa-solid fa-chevron-left'></i></a></li>";
+    var pgnPrev = "<li class='page-number " + dNonePrev + "'><a id='pnon_" + prvPg + "' class='page-number prPVClick' href='javascript:void(0);' aria-label='Previous'><i class='fa-solid fa-chevron-left prPVClick'></i></a></li>";
 
-    var pgnNext = "<li class='page-number " + dNoneNext + "'><a class='page-number nxPVClick ' href='javascript:void(0);' id='pnon_" + nxtPg + "' aria-label='Next'><i class='fa-solid fa-chevron-right'></i></a></li>";
+    var pgnNext = "<li class='page-number " + dNoneNext + "'><a class='page-number nxPVClick ' href='javascript:void(0);' id='pnon_" + nxtPg + "' aria-label='Next'><i class='fa-solid fa-chevron-right nxPVClick'></i></a></li>";
 
     $(".pPagination").append(pgnPrev + pagesss + pgnNext);
 

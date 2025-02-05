@@ -8,7 +8,7 @@ using System.Web;
 public partial class Admin_dashboard : System.Web.UI.Page
 {
     SqlConnection conSQ = new SqlConnection(ConfigurationManager.ConnectionStrings["conSQ"].ConnectionString);
-    public string Strusername = "", StrBlogsCnt="",strCasestudycnt="",strProductcnt="",strInvestorcnt="", strJobcnt="",strContacts="",strWhitepapercnt="", strApplicationcnt="", strContactcnt="";
+    public string Strusername = "", StrBlogsCnt = "", strCasestudycnt = "", strProductcnt = "", strInvestorcnt = "", strJobcnt = "", strContacts = "", strWhitepapercnt = "", strApplicationcnt = "", strContactcnt = "";
     protected void Page_Load(object sender, EventArgs e)
     {//check if admin login is valid
         if (Request.Cookies["pcc_aid"] == null)
@@ -24,7 +24,7 @@ public partial class Admin_dashboard : System.Web.UI.Page
             strProductcnt = DashBoard.NoOfProducts(conSQ).ToString();
             strInvestorcnt = DashBoard.NoOfInvestors(conSQ).ToString();
             strJobcnt = DashBoard.NoOfJobs(conSQ).ToString();
-            strWhitepapercnt= DashBoard.NoOfWhitePapers(conSQ).ToString();
+            strWhitepapercnt = DashBoard.NoOfWhitePapers(conSQ).ToString();
             strApplicationcnt = DashBoard.NoOfApplications(conSQ).ToString();
             strContactcnt = DashBoard.NoOfContacts(conSQ).ToString();
         }
