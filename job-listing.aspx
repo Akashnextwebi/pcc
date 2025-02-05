@@ -89,6 +89,11 @@
             border-radius: 17px;
             background: #31795a;
         }
+        .career-image{
+           border:1px solid #eee;
+           box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+           padding:4px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
@@ -116,30 +121,24 @@
                         <div class="text-center mb-100">
                             <h2>About Career at PCC</h2>
                             <p>
-                                Park Controls and Communications Ltd. (ParkControls) is an Indian company specializing in defense and aerospace technologies. They are known for developing cutting-edge systems like flight data recorders, telemetry systems, and other high-tech solutions for the defense and aviation sectors.
+Park Controls and Communications Private Limited, (PCC) is a company of three and half decades standing within the Defence and Aerospace Industry.  The company holds a monopoly status for the supply of products to the many Aircraft, Missiles, Unmanned Air Vehicles, Bombs and Satellite programs of the Government of India and Private suppliers to Defence and Aerospace.
 
                             </p>
+                            <p>
+PCC is on a fast track growth trajectory and is aiming to be the top player within the Industry and therefore, is continuously on the lookout for young and efficient problem solvers and go-getters, who have the ability to deliver from the first day of joining the organization. The positions are high pressure in nature with expectations that are very high and top notch.
+</p>
+                            <p>Rewards and compensation are the best in the Industry. 
+</p>
+                            <p><strong>Come! Join us!! We are making a new high-tech world.
+
+</strong></p>
                         </div>
                     </div>
                 </div>
                 <div class="row justify-content-center align-items-center ">
-                    <div class="col-lg-3">
-                        <div class="career__gallery-img">
-                            <img src="image/career/11.png" class="img-fluid w-100" alt="Image">
-                        </div>
-                    </div>
-                    <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-5 d-none d-md-block">
-                        <div class="career__gallery-img img-anim">
-                            <img src="image/career/111.png" alt="Image" class="img-fluid w-100" data-speed="auto" data-lag="0">
-                        </div>
-                    </div>
-                    <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 d-none d-lg-block">
-                        <div class="career__gallery-img">
-                            <div class="mb-30">
-                                <img src="image/career/1111.png" class="img-fluid w-100" alt="Image">
-                            </div>
-                            <img src="image/career/2222.png" class="img-fluid w-100" alt="Image">
-                        </div>
+                    <div class="col-lg-10">
+                        <div class="career-image">
+                        <img src="image/career/c1.jpg" /></div>
                     </div>
 
                 </div>
