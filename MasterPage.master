@@ -15,7 +15,7 @@
    content="Park Controls & Communications offers advanced test and measurement solutions for aerospace, defense, and industrial sectors. Specializing in automatic test equipment (ATE), data acquisition, signal conditioning, and hardware-in-the-loop simulation, we deliver high-quality, custom solutions to support mission-critical operations."
  />
  <meta name="viewport" content="width=device-width, initial-scale=1" />
- <link rel="shortcut icon" type="image/x-icon" href="/image/fav-icon.png" />
+ <link rel="shortcut icon" type="image/x-icon" href="/image/logo/fav.png" />
 
  <!-- CSS here -->
  <link rel="stylesheet" href="/css/bootstrap.min.css" />
@@ -151,7 +151,7 @@
          <div class="col-lg-3 col-md-12 d-none d-md-block">
            <div class="logo">
              <a href="/Default.aspx"
-               ><img src="/image/park-control-logo.png" alt="logo"
+               ><img src="/image/logo/PCC%20Logo%20(No%20Background)(9.12.24)-01.png" alt="logo"
              /></a>
            </div>
          </div>
