@@ -36,7 +36,7 @@ public partial class job_listing : System.Web.UI.Page
                                 <a href='job-details-v2' class='save-btn text-center rounded-circle tran3s' title='Save Job'><i class='bi bi-bookmark-dash'></i></a>
                                 <div class='list-header d-flex align-items-center'>
                                     <a href='/job/" + Jobs[i].JobUrl + @"' class='logo'>
-                                        <img src='/" + Jobs[i].ThumbImage + @"' data-src='/" + Jobs[i].ThumbImage + @"' alt='' class='lazy-img m-auto'></a>
+                                       <img src='/image/media_37.png' data-src='/image/media_37.png' alt='' class='lazy-img m-auto'></a>
                                     <div class='info-wrapper'>
                                         <a href='/job/" + Jobs[i].JobUrl + @"' class='title fw-500 tran3s'>" + Jobs[i].JobTitle + @"</a>
                                         <ul class='style-none d-flex flex-wrap info-data'>

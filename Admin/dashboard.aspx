@@ -43,7 +43,7 @@
                                 <div class="d-flex align-items-lg-center flex-lg-row flex-column">
                                     <div class="flex-grow-1">
                                         <h4 class="fs-16 mb-0">Hello, <%=Strusername %>!</h4>
-                                        <p class="text-muted mb-1">Here's what's happening with your store today.</p>
+                                        <%--<p class="text-muted mb-1">Here's what's happening with your store today.</p>--%>
                                     </div>
                                     <div class="mt-3 mt-lg-0 d-none">
                                         <div class="row g-3 mb-0 align-items-center">
@@ -65,12 +65,15 @@
                                             </div>
                                             <div class="d-flex align-items-end justify-content-between mt-4">
                                                 <div>
-                                                    <h4 class="fs-22 fw-semibold ff-secondary mb-4"><span class="counter-value" data-target="<%=StrBlogsCnt %>"><%=StrBlogsCnt %></span> </h4>
+                                                    <h4 class="fs-22 fw-semibold ff-secondary mb-4">
+                                                        <span class="counter-value" data-target="<%=StrBlogsCnt %>"><%=StrBlogsCnt %></span>
+
+                                                    </h4>
                                                     <a href="view-blogs.aspx" class="text-decoration-underline">View All Blogs</a>
                                                 </div>
                                                 <div class="avatar-sm flex-shrink-0">
                                                     <span class="avatar-title bg-info rounded fs-3">
-                                                        <i class="mdi mdi-image text-light "></i>
+                                                        <i class="mdi mdi-image text-light"></i>
                                                     </span>
                                                 </div>
 
@@ -276,30 +279,30 @@
             </div>
         </div>
     </div>
-            <div id="fadeInRightModal" class="modal zoomIn" tabindex="-1" aria-labelledby="fadeInRightModalLabel" style="display: none;" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="fadeInRightModalLabel">Message Information</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="table-responsive" id="Contactinfosingle">
+    <div id="fadeInRightModal" class="modal zoomIn" tabindex="-1" aria-labelledby="fadeInRightModalLabel" style="display: none;" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="fadeInRightModalLabel">Message Information</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="table-responsive" id="Contactinfosingle">
+                            </div>
                         </div>
+                        <!--end col-->
                     </div>
-                    <!--end col-->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-success" data-bs-dismiss="modal">Close</button>
-            </div>
+            <!-- /.modal-content -->
         </div>
-        <!-- /.modal-content -->
+        <!-- /.modal-dialog -->
     </div>
-    <!-- /.modal-dialog -->
-</div>
     <script src="assets/js/jquery-3.6.0.min.js"></script>
     <script src="assets/js/pages/view-contact-enquire.js"></script>
 

@@ -41,12 +41,13 @@ public partial class Admin_add_whitepaper : System.Web.UI.Page
                 txtPostedOn.Text = WD.PostedOn;
                 txtPostedOn.Text= WD.PostedOn;
                 txttag.Text= WD.Tag;
-                ddlCapability.SelectedValue = WD.Capability;
+                //ddlCapability.SelectedValue = WD.Capability;
                 txtheading.Text = WD.WhitePaperHeading;
                 txtDesc.Text = WD.FullDesc;
                 txtPageTitle.Text = WD.PageTitle;
                 txtMetaKey.Text = WD.MetaKeys;
                 txtMetaDesc.Text= WD.MetaDesc;
+                GetCapability(WD.Capability);
                 if (WD.ThumbImage != "")
                 {
                     strThumbImage = "<img src='/" + WD.ThumbImage + "' style='max-height:60px;' />";

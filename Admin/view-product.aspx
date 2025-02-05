@@ -31,12 +31,12 @@
             <div class="row">
                 <div class="col-12">
                     <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                        <h4 class="mb-sm-0">View Orders</h4>
+                        <h4 class="mb-sm-0">View Product</h4>
                         <div class="page-title-right">
                             <ol class="breadcrumb m-0">
                                 <li class="breadcrumb-item"><a href="/Admin/">Dashboard</a></li>
-                                <li class="breadcrumb-item"><a href="javascript: void(0);">Orders</a></li>
-                                <li class="breadcrumb-item active">View Orders</li>
+                                <li class="breadcrumb-item"><a href="javascript: void(0);">Product</a></li>
+                                <li class="breadcrumb-item active">View Product</li>
                             </ol>
                         </div>
 

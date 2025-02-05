@@ -28,22 +28,21 @@ public partial class _Default : System.Web.UI.Page
                 {
 
 
-                    strtestimonial += @"<div class='testimonial-box slick-slide slick-cloned' data-slick-index='4' id='' aria-hidden='true' tabindex='-1' style='width: 412px;'>
-                                <div class='single-testimonial'>
-                                    <div class='review-icon'>
-                                        <img src='image/icons/review-icon.png' alt='img'>
-                                    </div>
-                                    <p>
-                                       "+ Testimonial[i].TestimonialDesc + @"
-                                    </p>
-                                    <div class='testi-author'>
-                                        <div class='ta-info'>
-                                            <h6>"+ Testimonial[i].Name + @"<span>/"+ Testimonial[i].Designation + @"</span>
-                                            </h6>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>";
+                    strtestimonial += @"<div class='testimonial-box'>
+              <div class='single-testimonial'>
+                  <div class='review-icon'>
+                      <img src='image/icons/review-icon.png' alt='img' />
+                  </div>
+                  <p>
+                      "+ Testimonial[i].TestimonialDesc + @"
+                  </p>
+                  <div class='testi-author'>
+                      <div class='ta-info'>
+                          <h6>"+ Testimonial[i].Name + @" <span>/"+ Testimonial[i].Designation + @"</span></h6>
+                      </div>
+                  </div>
+              </div>
+          </div>";
 
                 }
             }

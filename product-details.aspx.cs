@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Activities.Expressions;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
@@ -13,7 +14,7 @@ using System.Web.UI.WebControls;
 public partial class product_details : System.Web.UI.Page
 {
     SqlConnection conSQ = new SqlConnection(ConfigurationManager.ConnectionStrings["conSQ"].ConnectionString);
-    public string strName = "", strSKU, strMainImg = "",strId="", strdesc = "", strpdf = "", StrGallery = "", strCapabilities = "", strSpecification = "",strDatasheet="";
+    public string strName = "", strSKU, strMainImg = "", strId = "", strdesc = "", strpdf = "", StrGallery = "", strCapabilities = "", strSpecification = "", strDatasheet = "", strRelatedProducts = "";
     protected void Page_Load(object sender, EventArgs e)
     {
         var purl = Convert.ToString(RouteData.Values["purl"]);
@@ -23,6 +24,7 @@ public partial class product_details : System.Web.UI.Page
         }
 
     }
+
     private void BindProductDetails(string purl)
     {
         try
@@ -49,11 +51,12 @@ public partial class product_details : System.Web.UI.Page
                 }
                 #endregion
 
-                strName = Pro.ProductName;
-                strSKU = Pro.SKUCode;
-                strdesc = Pro.FullDesc;
-                strpdf = Pro.Broucher;
-                strId = Pro.Id.ToString();
+                strName = Pro.ProductName; 
+                strSKU = Pro.SKUCode; 
+                strdesc = Pro.FullDesc; 
+                strpdf = Pro.Broucher; 
+                strId = Pro.Id.ToString(); 
+                BindRelatedProduct(Convert.ToString(Pro.RelatedProducts)); 
                 var DS = DatasheetGallery.GetAllDatasheetGalleryProductGuid(conSQ, Pro.ProductGuid);
                 if (DS.Count > 0)
                 {
@@ -125,8 +128,8 @@ public partial class product_details : System.Web.UI.Page
                 {
                     divcap.Visible = false;
                 }
-               
-               
+
+
                 var spe = SpecificationDetails.GetAllSpecificationProductGuid(conSQ, Pro.ProductGuid);
                 if (spe.Count > 0)
                 {
@@ -137,7 +140,7 @@ public partial class product_details : System.Web.UI.Page
                         strSpecification += @"<div class='wptb--item active'>
                                                     <h6 class='wptb-item-title'><span><span class='wptb-item--number'></span>" + spe[i].Title + @"</span> <i class='fa-solid fa-angle-down'></i></h6>
                                                     <div class='wptb-item--content'>
-                                                        " + spe[i].FullDesc +@"
+                                                        " + spe[i].FullDesc + @"
                                                     </div>
                                                 </div>";
                     }
@@ -152,12 +155,12 @@ public partial class product_details : System.Web.UI.Page
                 {
                     for (int i = 0; i < PG.Count; i++)
                     {
-                           StrGallery += @"<li class='product_zoom_button'>
+                        StrGallery += @"<li class='product_zoom_button'>
     <a class='selected' href='#' style='background-image: url(/" + PG[i].ImageUrl + @");'></a>
 </li>";
                         strMainImg += @"<div class='product_zoom_info selected'>
                                         <div class='product_image_zoom'>
-                                            <img src='/"+ PG[i].ImageUrl + @"' alt='img'>
+                                            <img src='/" + PG[i].ImageUrl + @"' alt='img'>
                                         </div>
                                     </div>";
                     }
@@ -174,14 +177,14 @@ public partial class product_details : System.Web.UI.Page
     [WebMethod(EnableSession = true)]
     public static string SaveDownloadBroucherEnquiry(string name, string email, string contact, int Id)
     {
-        SqlConnection conSQ= new SqlConnection(ConfigurationManager.ConnectionStrings["conSQ"].ConnectionString);
+        SqlConnection conSQ = new SqlConnection(ConfigurationManager.ConnectionStrings["conSQ"].ConnectionString);
 
         try
         {
             BrochureEnguiry BE = new BrochureEnguiry();
 
 
-            var ResPDF ="";
+            var ResPDF = "";
 
             BE.FullName = name;
             BE.Email = email;
@@ -206,6 +209,68 @@ public partial class product_details : System.Web.UI.Page
         {
             ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "SaveDownloadBroucherEnquiry", ex.Message);
             return "Error";
+        }
+    }
+    public void BindRelatedProduct(string pros)
+    {
+        try
+        {
+            if (pros != "")
+            {
+                var pro = pros.Split('|').ToList();
+                int Pid = 0;
+                for (int i = 0; i < pro.Count; i++)
+                {
+
+                    int.TryParse(pro[i], out Pid);
+                    if (Pid != 0)
+                    {
+                        var rp = ProductDetails.getProductsById(conSQ, Pid);
+
+                        var url = "/product/" + rp.ProductUrl;
+
+                        strRelatedProducts += @"<div class='col-lg-3'>
+                        <div class='magnetic-wrap'>
+                            <div class='people-card2 magnetic-item' style=''>
+                                <div class='people-img'>
+                                    <img src='/" + rp.ThumbImage + @"' alt=''>
+                                </div>
+                                <div class='people-content'>
+                                    <div class='name-deg'>
+                                        <h5 class='d-flex justify-content-between'><a href='" + url + @"'>" + rp.ProductName + @"</a><span class='text-danger fw-bold'>" + rp.SKUCode + @"</span></h5>
+
+
+
+
+
+                                    </div>
+                                    <div class='contact-area'>
+                                        <div class='contact-number'>
+                                            <div class='icon'>
+                                                View Product
+                                            </div>
+
+                                        </div>
+                                        <ul class='social-icon'>
+                                            <li><a href='" + url + @"'><i class='fa-solid fa-arrow-right-long'></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>";
+                    }
+                }
+            }
+            else
+            {
+                divpro.Visible = false;
+            }
+            
+        }
+        catch (Exception ex)
+        {
+            ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "BindRelatedProduct", ex.Message);
         }
     }
 }

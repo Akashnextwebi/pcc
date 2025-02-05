@@ -264,7 +264,8 @@ public class CommonModel
         return resulturl;
     }
 
-   
-
-
+    public static void CaptureException(string pathAndQuery, string v, string message)
+    {
+        throw new NotImplementedException();
+    }
 }

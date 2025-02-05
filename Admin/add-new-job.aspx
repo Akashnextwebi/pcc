@@ -57,23 +57,23 @@
                                     <asp:TextBox runat="server" MaxLength="100" class="form-control gap-2 mr-sm-2 onlyAlpha" ID="txtLocation" placeholder="Job Location" />
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtLocation" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Field can't be empty"></asp:RequiredFieldValidator>
                                 </div>
-                                <div class="col-lg-4">
-                                    <label class="">Salary (In LPA) <sup>*</sup></label>
+                                <div class="col-lg-6">
+                                    <label class="">Salary (In LPA) <sup></sup></label>
                                     <asp:TextBox runat="server" class="form-control gap-2 mr-sm-2" MaxLength="100" ID="txtSalary" placeholder="Enter Salary (In LPA)" />
-                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtSalary" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Field can't be empty"></asp:RequiredFieldValidator>
+                                   <%-- <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtSalary" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Field can't be empty"></asp:RequiredFieldValidator>--%>
 
                                 </div>
-                                <div class="col-lg-4 mb-2">
+                                <div class="col-lg-6 mb-2">
                                     <label class="">Education<sup>*</sup></label>
                                     <asp:TextBox runat="server" MaxLength="100" class="form-control gap-2 mr-sm-2" ID="txtEducation" placeholder="Enter Education" />
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtEducation" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Field can't be empty"></asp:RequiredFieldValidator>
                                 </div>
-                                <div class="col-lg-4 mb-2">
+                                <%--<div class="col-lg-4 mb-2">
                                     <label class="">Company Image <sup class="text-danger">*</sup></label>
                                     <asp:FileUpload runat="server" ID="companyimage" CssClass="form-control" />
                                     <small class="text-danger">.png, .jpeg, .jpg, .gif formats are required, Image Size Should be 60 × 60 px</small><br />
                                     <%=strCompanyImage %>
-                                </div>
+                                </div>--%>
 
                             </div>
                             <div class="col-lg-12">
@@ -83,21 +83,21 @@
                             </div>
                             <div class="row mb-2">
                                 <div class="col-lg-12">
-                                    <label class="">Job Description<sup class="text-danger"></sup></label>
+                                    <label class="">Job Description<sup class="text-danger">*</sup></label>
                                     <asp:TextBox runat="server" TextMode="MultiLine" class="form-control mb-2 mr-sm-2 summernote" ID="txtDesc" Placeholder="Job Description ....." />
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="txtDesc" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Field can't be empty"></asp:RequiredFieldValidator>
                                 </div>
                             </div>
                             <div class="row mb-2">
                                 <div class="col-lg-12">
-                                    <label class="">Key Responsibilities<sup class="text-danger"></sup></label>
+                                    <label class="">Key Responsibilities<sup class="text-danger">*</sup></label>
                                     <asp:TextBox runat="server" TextMode="MultiLine" class="form-control mb-2 mr-sm-2 summernote" ID="txtkey" Placeholder="Key Responsibilities ....." />
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtkey" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Field can't be empty"></asp:RequiredFieldValidator>
                                 </div>
                             </div>
                             <div class="row mb-2">
                                 <div class="col-lg-12">
-                                    <label class="">Skills & Experience<sup class="text-danger"></sup></label>
+                                    <label class="">Skills & Experience<sup class="text-danger">*</sup></label>
                                     <asp:TextBox runat="server" TextMode="MultiLine" class="form-control mb-2 mr-sm-2 summernote" ID="txtskills" Placeholder="Skills & Experience ....." />
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtskills" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Field can't be empty"></asp:RequiredFieldValidator>
                                 </div>

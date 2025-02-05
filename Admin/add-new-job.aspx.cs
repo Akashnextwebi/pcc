@@ -13,7 +13,6 @@ using System.Xml.Linq;
 public partial class Admin_add_new_job : System.Web.UI.Page
 {
     SqlConnection conSQ = new SqlConnection(ConfigurationManager.ConnectionStrings["conSQ"].ConnectionString);
-    public string strCompanyImage = "";
     protected void Page_Load(object sender, EventArgs e)
     {
         if (!IsPostBack)
@@ -49,12 +48,12 @@ public partial class Admin_add_new_job : System.Web.UI.Page
                 txtLocation.Text = job.JobLocation;
                 txtSalary.Text= job.Salary;
 
-                if (job.ThumbImage != "")
-                {
-                    lblThumb.Text = job.ThumbImage;
-                    strCompanyImage = @"<a href='/" + job.ThumbImage + @"' target='_blank'><img src='/" + job.ThumbImage + @"' width='60px'></a>";
+                //if (job.ThumbImage != "")
+                //{
+                //    lblThumb.Text = job.ThumbImage;
+                //    strCompanyImage = @"<a href='/" + job.ThumbImage + @"' target='_blank'><img src='/" + job.ThumbImage + @"' width='60px'></a>";
 
-                }
+                //}
             }
         }
         catch (Exception ex)
@@ -68,17 +67,17 @@ public partial class Admin_add_new_job : System.Web.UI.Page
         {
             if (Page.IsValid)
             {
-                var ThumbImg = CheckThumbFormat();
-                if (ThumbImg == "Format")
-                {
-                    ScriptManager.RegisterStartupScript(this, this.GetType(), "Message", "Snackbar.show({pos: 'top-right',text: 'Invalid image format. Please upload .png, .jpeg, .jpg, .webp, .gif for blog image',actionTextColor: '#fff',backgroundColor: '#ea1c1c'});", true);
-                    return;
-                }
-                if (ThumbImg == "Size")
-                {
-                    ScriptManager.RegisterStartupScript(this, this.GetType(), "Message", "Snackbar.show({pos: 'top-right',text: 'Invalid image size.Please upload correct resolution image for blog image',actionTextColor: '#fff',backgroundColor: '#ea1c1c'});", true);
-                    return;
-                }
+                //var ThumbImg = CheckThumbFormat();
+                //if (ThumbImg == "Format")
+                //{
+                //    ScriptManager.RegisterStartupScript(this, this.GetType(), "Message", "Snackbar.show({pos: 'top-right',text: 'Invalid image format. Please upload .png, .jpeg, .jpg, .webp, .gif for blog image',actionTextColor: '#fff',backgroundColor: '#ea1c1c'});", true);
+                //    return;
+                //}
+                //if (ThumbImg == "Size")
+                //{
+                //    ScriptManager.RegisterStartupScript(this, this.GetType(), "Message", "Snackbar.show({pos: 'top-right',text: 'Invalid image size.Please upload correct resolution image for blog image',actionTextColor: '#fff',backgroundColor: '#ea1c1c'});", true);
+                //    return;
+                //}
                 var aid = Request.Cookies["pcc_aid"].Value;
 
                 JobDetails job = new JobDetails();
@@ -94,7 +93,7 @@ public partial class Admin_add_new_job : System.Web.UI.Page
                 job.JobDescription = txtDesc.Text.Trim();
                 job.KeyResponsibilities = txtkey.Text.Trim();
                 job.Experience = txtskills.Text.Trim();
-                job.ThumbImage = UploadThumbImage();
+                job.ThumbImage = "";
                 job.MetaDesc = txtMetaDesc.Text.Trim();
                 job.MetaKeys = txtMetaKey.Text.Trim();
                 job.PageTitle = txtPageTitle.Text.Trim();
@@ -142,77 +141,77 @@ public partial class Admin_add_new_job : System.Web.UI.Page
             ScriptManager.RegisterStartupScript(this, this.GetType(), "Message", "Snackbar.show({pos: 'top-right',text: 'Oops! Something went wrong. Please try after some time',actionTextColor: '#fff',backgroundColor: '#ea1c1c'});", true);
         }
     }
-    private string CheckThumbFormat()
-    {
-        #region ThumbImage
-        string thumbImg = "";
-        if (companyimage.HasFile)
-        {
-            try
-            {
-                string fileExtension = Path.GetExtension(companyimage.PostedFile.FileName.ToLower()), ImageGuid1 = Guid.NewGuid().ToString();
-                if ((fileExtension == ".jpg" || fileExtension == ".jpeg" || fileExtension == ".png" || fileExtension == ".gif" || fileExtension == ".webp"))
-                {
-                    System.Drawing.Bitmap bitimg = new System.Drawing.Bitmap(companyimage.PostedFile.InputStream);
-                    if ((bitimg.PhysicalDimension.Height != 60) || (bitimg.PhysicalDimension.Width != 60))
-                    {
-                        return "Size";
-                    }
-                }
-                else
-                {
+    //private string CheckThumbFormat()
+    //{
+    //    #region ThumbImage
+    //    string thumbImg = "";
+    //    if (companyimage.HasFile)
+    //    {
+    //        try
+    //        {
+    //            string fileExtension = Path.GetExtension(companyimage.PostedFile.FileName.ToLower()), ImageGuid1 = Guid.NewGuid().ToString();
+    //            if ((fileExtension == ".jpg" || fileExtension == ".jpeg" || fileExtension == ".png" || fileExtension == ".gif" || fileExtension == ".webp"))
+    //            {
+    //                System.Drawing.Bitmap bitimg = new System.Drawing.Bitmap(companyimage.PostedFile.InputStream);
+    //                if ((bitimg.PhysicalDimension.Height != 60) || (bitimg.PhysicalDimension.Width != 60))
+    //                {
+    //                    return "Size";
+    //                }
+    //            }
+    //            else
+    //            {
 
-                    return "Format";
-                }
-            }
-            catch (Exception ex)
-            {
-                ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "CheckThumbFormat", ex.Message);
+    //                return "Format";
+    //            }
+    //        }
+    //        catch (Exception ex)
+    //        {
+    //            ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "CheckThumbFormat", ex.Message);
 
-            }
-        }
-        #endregion
-        return thumbImg;
-    }
-    public string UploadThumbImage()
-    {
-        #region upload file
-        string thumbfile = "";
-        try
-        {
-            if (companyimage.HasFile)
-            {
-                string fileExtension = Path.GetExtension(companyimage.PostedFile.FileName.ToLower()), ImageGuid1 = Guid.NewGuid().ToString() + "-banner".Replace(" ", "-").Replace(".", "");
-                string iconPath = Server.MapPath(".") + "\\../UploadImages\\" + ImageGuid1 + "" + fileExtension;
-                try
-                {
-                    if (File.Exists(Server.MapPath("~/" + Convert.ToString(lblThumb.Text))))
-                    {
-                        File.Delete(Server.MapPath("~/" + Convert.ToString(lblThumb.Text)));
-                    }
-                }
-                catch (Exception eeex)
-                {
-                    ExceptionCapture.CaptureException(Request.Url.PathAndQuery, "UploadThumbImage", eeex.Message);
-                    return lblThumb.Text;
-                }
-                companyimage.SaveAs(iconPath);
-                thumbfile = "UploadImages/" + ImageGuid1 + "" + fileExtension;
-            }
-            else
-            {
-                thumbfile = lblThumb.Text;
-            }
-        }
-        catch (Exception ex)
-        {
-            ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "UploadThumbImage", ex.Message);
+    //        }
+    //    }
+    //    #endregion
+    //    return thumbImg;
+    //}
+    //public string UploadThumbImage()
+    //{
+    //    #region upload file
+    //    string thumbfile = "";
+    //    try
+    //    {
+    //        if (companyimage.HasFile)
+    //        {
+    //            string fileExtension = Path.GetExtension(companyimage.PostedFile.FileName.ToLower()), ImageGuid1 = Guid.NewGuid().ToString() + "-banner".Replace(" ", "-").Replace(".", "");
+    //            string iconPath = Server.MapPath(".") + "\\../UploadImages\\" + ImageGuid1 + "" + fileExtension;
+    //            try
+    //            {
+    //                if (File.Exists(Server.MapPath("~/" + Convert.ToString(lblThumb.Text))))
+    //                {
+    //                    File.Delete(Server.MapPath("~/" + Convert.ToString(lblThumb.Text)));
+    //                }
+    //            }
+    //            catch (Exception eeex)
+    //            {
+    //                ExceptionCapture.CaptureException(Request.Url.PathAndQuery, "UploadThumbImage", eeex.Message);
+    //                return lblThumb.Text;
+    //            }
+    //            companyimage.SaveAs(iconPath);
+    //            thumbfile = "UploadImages/" + ImageGuid1 + "" + fileExtension;
+    //        }
+    //        else
+    //        {
+    //            thumbfile = lblThumb.Text;
+    //        }
+    //    }
+    //    catch (Exception ex)
+    //    {
+    //        ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "UploadThumbImage", ex.Message);
 
-        }
+    //    }
 
-        #endregion
-        return thumbfile;
-    }
+    //    #endregion
+    //    return thumbfile;
+    //}
 
     protected void btnNew_Click(object sender, EventArgs e)
     {
