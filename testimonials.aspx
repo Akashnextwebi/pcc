@@ -38,7 +38,7 @@
     -webkit-box-orient: unset;
 }
 .ta-info span{
-    color:#1f1f1f;
+    color:#999;
 }
     </style>
 </asp:Content>
