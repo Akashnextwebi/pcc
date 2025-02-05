@@ -1,6 +1,9 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="./MasterPage.master" AutoEventWireup="true" CodeFile="quality-and-accreditations.aspx.cs" Inherits="quality_and_accreditations" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+        <link href="
+https://cdn.jsdelivr.net/npm/lightbox2@2.11.5/dist/css/lightbox.min.css" rel="stylesheet">
+  
     <link href="css/breadcrums.css" rel="stylesheet" />
     <style>
         .certificate-img {
@@ -69,24 +72,32 @@
             <div class="row justify-content-center">
                 <div class="col-lg-3">
                     <div class="certificate-img">
-                        <img src="image/certificate/Appreciation-letter-from-BDL-for-Telemetry-Ground-System-1-216x300.jpg" class="img-fluid w-100" />
+                        <a href="image/certificate/Appreciation-letter-from-BDL-for-Telemetry-Ground-System-1-216x300.jpg" data-lightbox="image-1" data-title="My caption">
+                        <img src="image/certificate/Appreciation-letter-from-BDL-for-Telemetry-Ground-System-1-216x300.jpg" class="img-fluid w-100" /></a>
                     </div>
 
                 </div>
                 <div class="col-lg-3">
                     <div class="certificate-img">
-                        <img src="image/certificate/pcc-astra-letter--215x300.jpg" class="img-fluid w-100" />
+                                                <a href="image/certificate/pcc-astra-letter--215x300.jpg" data-lightbox="image-1" data-title="My caption">
+
+                        <img src="image/certificate/pcc-astra-letter--215x300.jpg" class="img-fluid w-100" /></a>
                     </div>
 
                 </div>
                 <div class="col-lg-3">
                     <div class="certificate-img">
-                        <img src="image/certificate/Appreciation-letter-from-BDL-for-Telemetry-Ground-System-1-216x300.jpg" class="img-fluid w-100" />
+                                                <a href="images/image-1.jpg" data-lightbox="image-1" data-title="My caption">
+
+                        <img src="image/certificate/Appreciation-letter-from-BDL-for-Telemetry-Ground-System-1-216x300.jpg" class="img-fluid w-100" /></a>
                     </div>
 
                 </div>
             </div>
         </div>
     </section>
+        <script src="
+https://cdn.jsdelivr.net/npm/lightbox2@2.11.5/dist/js/lightbox.min.js
+"></script>
 </asp:Content>
 

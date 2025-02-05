@@ -157,8 +157,8 @@
                     </div>
                 </div>
                 <div class="row gy-4">
-                    <%=strJobs %>
-                   <%-- <div class="col-lg-6">
+                 
+                  <div class="col-lg-6">
                         <div class="job-list-three d-flex h-100 w-100">
                             <div class="main-wrapper h-100 w-100">
                                 <a href="job-details-v2" class="save-btn text-center rounded-circle tran3s" title="Save Job"><i class="bi bi-bookmark-dash"></i></a>
@@ -273,7 +273,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>--%>
+                    </div>
                    
                 </div>
             </div>
