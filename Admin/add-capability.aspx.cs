@@ -68,13 +68,13 @@ public partial class Admin_add_capability : System.Web.UI.Page
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "Message", "Snackbar.show({pos: 'top-right',text: 'Cpability with title,url already exist.',actionTextColor: '#fff',backgroundColor: '#ea1c1c'});", true);
                     return;
                 }
-                var ThumbImg = CheckThumbFormat();
-                if (ThumbImg == "Format")
+                var thumbImg = CheckThumbFormat();
+                if (thumbImg == "Format")
                 {
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "Message", "Snackbar.show({pos: 'top-right',text: 'Invalid image format. Please upload .png, .jpeg, .jpg, .webp, .gif for blog image',actionTextColor: '#fff',backgroundColor: '#ea1c1c'});", true);
                     return;
                 }
-                if (ThumbImg == "Size")
+                if (thumbImg == "Size")
                 {
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "Message", "Snackbar.show({pos: 'top-right',text: 'Invalid image size.Please upload correct resolution image for blog image',actionTextColor: '#fff',backgroundColor: '#ea1c1c'});", true);
                     return;
