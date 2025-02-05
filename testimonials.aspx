@@ -2,6 +2,45 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
     <link href="css/breadcrums.css" rel="stylesheet" />
+    <style>
+        .single-testimonial {
+  position: relative;
+  background-color: #fff;
+  padding: 30px;
+  margin: 0 0 9px;
+  box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.07);
+  border-radius: 0;
+  height:100%;
+}
+
+
+.single-testimonial  .testi-img {
+  float: left;
+  margin-bottom: 20px;
+  position: absolute;
+  left: 0;
+  top: 80px;
+}
+.single-testimonial  .ta-info {
+  overflow: hidden;
+  float: left;
+  padding-left: 0;
+  margin-top: 35px;
+}
+.ta-info h6{
+    color:#000;
+}
+.single-testimonial p{
+  overflow: unset;
+    text-overflow: unset;
+    -webkit-line-clamp: unset;
+    display: unset;
+    -webkit-box-orient: unset;
+}
+.ta-info span{
+    color:#1f1f1f;
+}
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
         <div class="breadcrumb-section" style="background-image: linear-gradient(270deg, rgba(0, 0, 0, .55), rgba(0, 0, 0, 0.55) 101.02%), url(image/blog/braadcrumb-bg3.jpg);">
@@ -37,8 +76,10 @@
         </div>
       </div>
       <div class="col-lg-12">
+
+          
         <div
-          class="testimonial-active wow fadeInUp animated"
+          class="row gy-4"
           data-animation="fadeInUp"
           data-delay=".4s"
         >
@@ -120,8 +161,8 @@
               </div>
             </div>
           </div>--%>
+            </div>
         </div>
-      </div>
     </div>
   </div>
 </section>

@@ -29,7 +29,7 @@ public partial class testimonials : System.Web.UI.Page
                 {
 
 
-                    strtestimonial += @"<div class='testimonial-box slick-slide slick-active' data-slick-index='2' aria-hidden='false' tabindex='0' style='width: 412px;'>
+                    strtestimonial += @"<div class='col-lg-4'>
                                 <div class='single-testimonial'>
                                     <div class='review-icon'>
                                         <img src='image/icons/review-icon.png' alt='img'>

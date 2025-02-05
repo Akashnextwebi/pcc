@@ -314,14 +314,18 @@
                                     <div class="wptb-item--inner">
                                         <div class="wptb-item--holder">
 
-                                            <h3 class="wptb-item--title text-white">Our History
+                                            <h3 class="wptb-item--title text-white">Our Young Legacy – A Journey of Innovation and Excellence
+
 
 
                                             </h3>
-                                            <p class="text-white">PCC started with the aim of servicing the Indian Defence, Aerospace and other Industrial applications with their products and services that include Telemetry, Data Acquisition, Timing & Control Systems apart from undertaking turnkey projects that include integration of third party sub systems.</p>
-                                            <p class="text-white">PCC works with many of the ambitious indigenization projects of the Government of India and has successfully designed, developed, supplied and retrofitted many products for Airborne, Mobile and Lab applications. </p>
-                                            <p class="text-white">The company is known for their skills and expertise in the design and development of products that are import alternatives and also for legacy upgrade of products with extension of life by more than 15 years. The company initially worked with a few customers but is working with almost all indigenization projects of the Indian Government within the Defence, Aerospace and Industrial Applications. </p>
-                                            <p class="text-white">PCC is currently known for their Airborne Flight Instrumentation Systems, Current generation Airborne Transmitters, GPS/Glonass based Time Reference Systems and Control Systems for Aero Engines, Aero Generators, Turret Control of Military Tanks and Control Guidance of Laser Guided bombs.</p>
+                                            <p class="text-white">Founded in 1989, Park Controls and Communications Private Limited. (PCC) has been a pioneering force in aerospace, defense, and industrial automation for over three decades. Established with a vision to deliver cutting-edge technology in telemetry, control systems, and mission-critical solutions, PCC has evolved into a trusted name in the industry, providing indigenous, high-reliability solutions for airborne, ground, and naval applications.</p>
+                                            <p class="text-white">
+                                                Our relentless pursuit of excellence has led us to achieve prestigious certifications such as AS9100D, ISO 9001:2015, and CEMILAC approvals, reinforcing our commitment to quality and innovation. Recognized by the Government of India as an R&D unit, PCC has played a key role in advancing indigenous technologies for defense and aerospace programs, catering to the Indian Armed Forces, DRDO, ISRO, HAL, and global clients.
+                                            </p>
+                                            <p class="text-white">
+                                                From pioneering telemetry solutions to delivering state-of-the-art control & monitoring systems, our journey has been defined by innovation, precision, and customer-centric approach. As we continue to expand our capabilities, PCC remains committed to delivering world-class solutions for the Global sector while contributing to India’s self-reliance (Atmanirbhar Bharat) in defense and aerospace technologies.
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
@@ -340,7 +344,7 @@
             <div class="wptb-heading">
                 <div class="wptb-item--inner text-center">
 
-                    <h1 class="wptb-item--title">Our Team</h1>
+                    <h1 class="wptb-item--title">Our Motivators</h1>
                     <div class="wptb-item--divider"></div>
                 </div>
             </div>
@@ -425,18 +429,21 @@
                     <div class="instructor__item">
                         <div class="instructor__thumb">
                             <a href="javascript:void(0)" contenteditable="false" style="cursor: pointer;">
-                                <img src="image/team/jalaramiah-300x200.jpg" alt="img"></a>
+                                <img src="image/team/thomous.png" alt="img"></a>
                         </div>
                         <div class="instructor__content">
-                            <h2 class="title"><a href="javascript:void(0)" contenteditable="false" style="cursor: pointer;">V Jalaramiah
+                            <h2 class="title"><a href="javascript:void(0)" contenteditable="false" style="cursor: pointer;">Thomas Vengal
+
+
 
                             </a></h2>
-                            <span class="designation">Associate VP
+                            <span class="designation">Head-Process Excellence
+
                             </span>
 
 
                             <p>
-                                Mr. V Jalaramiah, B.E from Andhra University and the Associate VP (Telemetry & Checkout Systems) has an illustrious experience of having worked for 32 years in ISTRAC (ISRO) Telemetry, Tracking & Command Network) of ISRO. He established telemetry network consisting of 10 stations in India & abroad. All the stations are connected using satellite links. All the stations are remotely controlled from control center at Bangalore. 
+                                Sri. Thomas Vengal is responsible for developing process excellence in PCC. He is an MBA graduate from IIT Madras. He has 38 years of experience in various divisions of HAL. During his regime in HAL he has developed a process performance management tool which automatically draws information from the ERP system. He has worked as a Consultant- Process Performance Management System, in HAL Corporate Office, post his retirement.
 
 
 

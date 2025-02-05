@@ -133,25 +133,16 @@
                                         </div>
                                         <h2>Empowered Vision.
                                             <br />
-                                            Embedded Values.</h2>
+                                            Embedded Values</h2>
                                     </div>
                                     <p>
-                                        Park Controls & Communications (PCC), with over 25 years
-                  of experience, is an agile and innovative leader in
-                  customized solutions for <strong>Defence</strong>,
-                  <strong>Aerospace</strong>, <strong>Space</strong>, and
-                  <strong>Industrial applications</strong>. Serving clients
-                  within and outside India, PCC delivers precise, tailored
-                  products meeting rigorous AS9100C, ISO 9001:2008, and
-                  CEMILAC standards.
+                                        <strong>Park Controls and Communications Private Limited (PCC)</strong>, with over 3 decades of experience, is an agile and innovative leader in standard, customized and COTS (Commercial Off The Shelf) solutions for Defence, Aerospace, Space, and Industrial applications. Our commitment to innovation and precision enables us to serve clients across India and beyond. PCC delivers precise, tailored products meeting rigorous AS9100D, ISO 9001:2015 , and CEMILAC standards.
                                     </p>
                                     <p>
-                                        As a Government of India-recognized R&D unit, PCC is
-                  registered with the National Small Industries Corporation
-                  and licensed to produce Defence LRUs.
+                                      The company was awarded with the Government of India recognition as an R & D unit a decade ago. PCC is registered with the National Small Industries Corporation and licensed to produce Defence LRUs, ensuring reliability and compliance with the most stringent requirements.
                                     </p>
                                     <a
-                                        href="#"
+                                        href="about-us.aspx"
                                         class="btn2 mt-35"
                                         data-animation="fadeInLeft"
                                         data-delay=".4s">Read More <i class="fal fa-long-arrow-right"></i></a>
@@ -331,7 +322,7 @@
                                         <img src="image/icons/client.png" alt="" />
                                     </div>
                                     <div class="wptb-item--holder">
-                                        <div class="wptb-item--text">Products Introduced</div>
+                                        <div class="wptb-item--text">Engineer Partner</div>
                                         <div class="wptb-item--value">
                                             <span class="odometer"></span><span class="suffix">275+</span>
                                         </div>
@@ -463,33 +454,30 @@
                             data-animation="fadeInRight"
                             data-delay=".4s">
                             <div class="pcc-section-heading">
-                                <span class="text-white">#1 in Control Systems</span>
+                                <span class="text-white">#1 in Customer Satisfaction</span>
                                 <h2 class="text-white">Why Choose Us</h2>
                             </div>
                             <p class="text-white">
-                                Our cutting-edge technologies and customizable solutions
-              streamline production processes, optimize supply chains, and
-              enhance overall productivity. Whether it's automotive,
-              aerospace.
+                                Trusted by leading organizations, our technology-driven approach ensures superior functionality in the most demanding environments. We specialize in advanced telemetry solutions, control systems, and data acquisition units designed for mission-critical applications. Irrespective of the application used for aerospace, defense or industrial sectors.
                             </p>
                             <div class="mt-20">
                                 <div
                                     class="skills pt-50 pb-50"
                                     style="background-image: url(image/skills-img.png); background-repeat: repeat-y;">
                                     <div class="skill mb-30">
-                                        <div class="skill-name">Constant Innovation</div>
+                                        <div class="skill-name">CONSTANT INNOVATION</div>
                                         <div class="skill-bar">
                                             <div class="skill-per" id="80"></div>
                                         </div>
                                     </div>
                                     <div class="skill mb-30">
-                                        <div class="skill-name">Telemetry RF Transmitters</div>
+                                        <div class="skill-name">IN-HOUSE EXPERTISEs</div>
                                         <div class="skill-bar">
                                             <div class="skill-per" id="90"></div>
                                         </div>
                                     </div>
                                     <div class="skill">
-                                        <div class="skill-name">Common USP</div>
+                                        <div class="skill-name">ENGINEERING REVOLUTION</div>
                                         <div class="skill-bar">
                                             <div class="skill-per" id="100"></div>
                                         </div>
@@ -531,10 +519,10 @@
                             <li>
                                 <div class="service-box-slider">
                                     <div class="text">
-                                        <span>Land</span>
-                                        <h3>Ground Telemetry Reception & Data Processing Systems</h3>
+                                       <%-- <span>Land</span>--%>
+                                        <h3 class="fw-bold">Land</h3>
                                         <p>
-                                            Ground Telemetry Reception & Data Processing Systems are integral for capturing and processing real-time telemetry data from airborne or satellite systems. Using advanced signal processing, data compression, and error correction techniques, these systems ensure efficient data transmission and high reliability. Ruggedized and designed for high-performance environments, these systems are essential for mission-critical operations where precision is paramount. The Ground Telemetry Data systems aim to accurately provide real-time insights for operational efficiency and reliability.
+PCC prides in the supply of many products that are used for surface applications; Range Systems that include Telemetry Ground Stations, Time Synchronization Systems, Automated Test Equipment, Digital Engine Control Unit, Heavy Vehicle Dashboard Display, etc.
                                         </p>
                                         <a
                                             href="#"
@@ -544,7 +532,7 @@
                                     </div>
                                     <div class="img">
                                         <div class="product-card-img">
-                                            <img src="image/ITD-Unit.png" alt="img" />
+                                            <img src="image/hpro/l1.png" alt="img" />
                                         </div>
                                     </div>
                                 </div>
@@ -552,10 +540,9 @@
                             <li>
                                 <div class="service-box-slider">
                                     <div class="text">
-                                        <span>Air</span>
-                                        <h3>Engine Instrumentation Unit</h3>
+                                        <h3 class="fw-bold">Air</h3>
                                         <p>
-                                            The PARK - Engine Instrumentation Unit (EIU) enhances reliability and safety by providing real-time engine parameter monitoring. It comes with a range of advanced data acquisition capabilities and supports predictive maintenance while minimizing downtime and maximizing operational efficiency. Equipped with robust diagnostics, it optimizes engine performance and extends its lifecycle, making it an indispensable tool for modern propulsion systems. It is a highly useful unit in the field of aviation and defence. 
+Airborne products that are technology intense and unique is the hallmark of the PCC portfolio; Data Acquisition Unit for Flight Test Instrumentation and Health & Usage Monitoring Systems, Full Authority Digital Engine Control, Control & Guidance Electronics, Fuel Flow Meter Unit, etc.
                                         </p>
                                         <a
                                             href="#"
@@ -565,7 +552,7 @@
                                     </div>
                                     <div class="img">
                                         <div class="product-card-img">
-                                            <img src="image/EIU.png" alt="img" />
+                                            <img src="image/hpro/l2.png" alt="img" />
                                         </div>
                                     </div>
                                 </div>
@@ -573,10 +560,9 @@
                             <li>
                                 <div class="service-box-slider">
                                     <div class="text">
-                                        <span>Sea</span>
-                                        <h3>PARK PGMCLK-24E </h3>
+                                        <h3 class="fw-bold">Sea </h3>
                                         <p>
-                                            There are different kinds of Countdown Timing Systems and Countdown Generators that are suitable for land-based and ship-based launch applications, or ground check out applications. On a battleship or naval cruiser that has multiple computers and hardware, it is essential that they all generate or display the same time, synchronized down to the millisecond. These Clocks and Timers can be connected by Ethernet or by analogue systems, they are also compact and ruggedized making them highly suitable for transport to remote locations.
+PCC works closely with Naval vessels in supplying products and solutions for Torpedoes, Fire Control Systems, Ship based landing and takeoff, etc.
                                         </p>
                                         <a
                                             href="#"
@@ -586,7 +572,27 @@
                                     </div>
                                     <div class="img">
                                         <div class="product-card-img">
-                                            <img src="image/PGM-CLK.png" class="img-fluid" alt="img" />
+                                            <img src="image/hpro/l3.png" alt="img" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="service-box-slider">
+                                    <div class="text">
+                                        <h3 class="fw-bold">Space </h3>
+                                        <p>
+The Satellite launches by the Indian Space Research Organization have been supported by PCC to a great extent with their Telemetry Solutions, Timing Solutions, etc.
+                                        </p>
+                                        <a
+                                            href="#"
+                                            class="btn2 mt-35"
+                                            data-animation="fadeInLeft"
+                                            data-delay=".4s">Read More <i class="fal fa-long-arrow-right"></i></a>
+                                    </div>
+                                    <div class="img">
+                                        <div class="product-card-img">
+                                            <img src="image/hpro/l4.png" alt="img" />
                                         </div>
                                     </div>
                                 </div>
