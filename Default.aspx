@@ -192,7 +192,7 @@
                                         <img src="image/data-solution.jpg" alt="" />
                                     </div>
                                     <div class="product-link">
-                                        <a href="#" class="custom-btn">View Products</a>
+                                        <a href="/competencies/advanced-avionics-solutions" class="custom-btn">View Products</a>
                                     </div>
                                 </div>
                             </div>
@@ -214,7 +214,7 @@
                                         <img src="image/time-solution.jpg" alt="" />
                                     </div>
                                     <div class="product-link">
-                                        <a href="#" class="custom-btn">View Products</a>
+                                        <a href="/competencies/precise--time-and-frequency-solution" class="custom-btn">View Products</a>
                                     </div>
                                 </div>
                             </div>
@@ -240,7 +240,7 @@
                                         <img src="image/power-generation.jpg" alt="" />
                                     </div>
                                     <div class="product-link">
-                                        <a href="#" class="custom-btn">View Products</a>
+                                        <a href="/competencies/control-solution" class="custom-btn">View Products</a>
                                     </div>
                                 </div>
                             </div>
@@ -265,7 +265,7 @@
                                         <img src="image/indigenization.jpg" alt="" />
                                     </div>
                                     <div class="product-link">
-                                        <a href="#" class="custom-btn">View Products</a>
+                                        <a href="/competencies/select-custom-solution" class="custom-btn">View Products</a>
                                     </div>
                                 </div>
                             </div>
