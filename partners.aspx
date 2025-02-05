@@ -2,7 +2,63 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <link href="css/breadcrums.css" rel="stylesheet" />
+    <style>
+        .pl--95 {
+            padding-left: 70px;
+        }
 
+        .section-title1 {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            max-width: 1066px;
+            width: 100%;
+            gap: 25px;
+        }
+
+            .section-title1.w-890 h2 {
+                max-width: 890px;
+            }
+
+            .section-title1 h2 {
+                color: #000;
+                font-size: 40px;
+                font-weight: 400;
+                margin-bottom: 0;
+                max-width: 740px;
+                margin-top: -10px;
+            }
+
+        .mission-content-top p {
+            font-size: 24px;
+            font-weight: 400;
+            line-height: normal;
+            margin-bottom: 30px;
+            padding-top: 25px;
+        }
+
+        .mission-img {
+            height:100%;
+            padding: 20px;
+            background: #fff;
+            border:1px solid #eee;
+            transition:.3s ease-in;
+        }
+        .mission-img:hover{
+                        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+
+        }
+          .mission-img  h4{
+              margin-top:10px;
+          }
+             .mission-img img {
+                 width:150px;
+                 height:150px;
+                 object-fit:contain;
+                 
+
+             }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <div class="breadcrumb-section" style="background-image: linear-gradient(270deg, rgba(0, 0, 0, .55), rgba(0, 0, 0, 0.55) 101.02%), url(image/blog/braadcrumb-bg3.jpg);">
@@ -21,92 +77,49 @@
         </div>
     </div>
     <div class="section-padding">
-        <div class="container">
-            <div class="client-logo-wrap">
-                <div class="client-card">
-                    <img src="image/partners/anash.png" alt="">
+        <div class="container-fluid one pl--95">
+            <div class="row align-items-center">
+                <div class="col-lg-3">
+                    <div class="mission-img">
+                        <img src="image/partners/bhe.jpg" alt="">
+                        <h4>Bonn Hungary 
+Electronics
+                        </h4>
+                        <p>
+                            Design, development 
+& sales, installation and maintenance of 
+RF systems in India
+                        </p>
+                    </div>
                 </div>
-                <div class="client-card">
-                    <img src="image/partners/bhe.jpg" alt="">
+                <div class="col-lg-3">
+                    <div class="mission-img">
+                        <img src="image/partners/gdp.jpg" alt="">
+                        <h4>GDP Space Systems
+
+                        </h4>
+                        <p>
+                            Designs, sales, marketing, installation and maintenance 
+in India
+
+                        </p>
+                    </div>
                 </div>
-                <div class="client-card">
-                    <img src="image/partners/envinode.png" alt="">
+                <div class="col-lg-3">
+                    <div class="mission-img">
+                        <img src="image/partners/systel.png" alt="">
+                        <h4>AA Systel, France
+
+                        </h4>
+                        <p>
+                            Designs, sales, marketing, installation and maintenance in India
+
+                        </p>
+                    </div>
                 </div>
-                <div class="client-card">
-                    <img src="image/partners/gdp.jpg" alt="">
-                </div>
-                <div class="client-card">
-                    <img src="image/partners/ontime.png" alt="">
-                </div>
-                <div class="client-card">
-                    <img src="image/partners/rockwell.jpg" alt="">
-                </div>
-                <div class="client-card">
-                    <img src="image/partners/systel.png" alt="">
-                </div>   <div class="client-card">
-       <img src="image/partners/anash.png" alt="">
-   </div>
-   <div class="client-card">
-       <img src="image/partners/bhe.jpg" alt="">
-   </div>
-   <div class="client-card">
-       <img src="image/partners/envinode.png" alt="">
-   </div>
-   <div class="client-card">
-       <img src="image/partners/gdp.jpg" alt="">
-   </div>
-   <div class="client-card">
-       <img src="image/partners/ontime.png" alt="">
-   </div>
-   <div class="client-card">
-       <img src="image/partners/rockwell.jpg" alt="">
-   </div>
-   <div class="client-card">
-       <img src="image/partners/systel.png" alt="">
-   </div>   <div class="client-card">
-       <img src="image/partners/anash.png" alt="">
-   </div>
-   <div class="client-card">
-       <img src="image/partners/bhe.jpg" alt="">
-   </div>
-   <div class="client-card">
-       <img src="image/partners/envinode.png" alt="">
-   </div>
-   <div class="client-card">
-       <img src="image/partners/gdp.jpg" alt="">
-   </div>
-   <div class="client-card">
-       <img src="image/partners/ontime.png" alt="">
-   </div>
-   <div class="client-card">
-       <img src="image/partners/rockwell.jpg" alt="">
-   </div>
-   <div class="client-card">
-       <img src="image/partners/systel.png" alt="">
-   </div>   <div class="client-card">
-       <img src="image/partners/anash.png" alt="">
-   </div>
-   <div class="client-card">
-       <img src="image/partners/bhe.jpg" alt="">
-   </div>
-   <div class="client-card">
-       <img src="image/partners/envinode.png" alt="">
-   </div>
-   <div class="client-card">
-       <img src="image/partners/gdp.jpg" alt="">
-   </div>
-   <div class="client-card">
-       <img src="image/partners/ontime.png" alt="">
-   </div>
-   <div class="client-card">
-       <img src="image/partners/rockwell.jpg" alt="">
-   </div>
-   <div class="client-card">
-       <img src="image/partners/systel.png" alt="">
-   </div>
             </div>
-       
         </div>
     </div>
+
 </asp:Content>
 

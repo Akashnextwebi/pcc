@@ -29,21 +29,22 @@ public partial class testimonials : System.Web.UI.Page
                 {
 
 
-                    strtestimonial += @"<div class='testimonial-box'>
-  <div class='single-testimonial'>
-    <div class='review-icon'>
-      <img src='image/icons/review-icon.png' alt='img' />
-    </div>
-    <p>
-     "+ Testimonial[i].TestimonialDesc + @"
-    </p>
-    <div class='testi-author'>
-      <div class='ta-info'>
-        <h6>"+ Testimonial[i].Name + @" <span>/"+ Testimonial[i].Designation + @"</span></h6>
-      </div>
-    </div>
-  </div>
-</div>";
+                    strtestimonial += @"<div class='col-lg-4'>
+                                <div class='single-testimonial'>
+                                    <div class='review-icon'>
+                                        <img src='image/icons/review-icon.png' alt='img'>
+                                    </div>
+                                    <p>
+                                        "+ Testimonial[i].TestimonialDesc + @"
+                                    </p>
+                                    <div class='testi-author'>
+                                        <div class='ta-info'>
+                                            <h6>"+ Testimonial[i].Name + @"<span>/"+ Testimonial[i].Designation + @"</span>
+                                            </h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>";
 
                 }
             }

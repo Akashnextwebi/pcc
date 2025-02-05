@@ -12221,3 +12221,12 @@ li.has-submenu {
     display: -webkit-box;
     -webkit-box-orient: vertical;
 }
+.testimonial-box .single-testimonial{
+    height:100% !important;
+}
+.testimonial-box  {
+    height: 100% !important;
+}
+.testimonial-active .ta-info h6 {
+ min-height:40px;
+}
