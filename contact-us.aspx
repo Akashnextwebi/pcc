@@ -345,7 +345,7 @@ Singapore 169877</a></h5>
                                                 <%-- <input type="email" name="email" class="form-control" placeholder="E-mail*" required>--%>
                                                 <asp:TextBox ID="txtemail" class="form-control" runat="server" placeholder="Enter Your E-mail*"></asp:TextBox>
                                                 <asp:RequiredFieldValidator ID="rfv2" runat="server" ControlToValidate="txtemail" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Field can't be empty"></asp:RequiredFieldValidator>
-                                                <asp:RegularExpressionValidator runat="server" ControlToValidate="txtemail" ErrorMessage="Please Enter valid EmailIdAddress" ForeColor="Red" ValidationGroup="Save" SetFocusOnError="True" Display="Dynamic" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
+                                                <asp:RegularExpressionValidator runat="server" ControlToValidate="txtemail" ErrorMessage="Please Enter Valid Email Id" ForeColor="Red" ValidationGroup="Save" SetFocusOnError="True" Display="Dynamic" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
                                             </div>
                                         </div>
 

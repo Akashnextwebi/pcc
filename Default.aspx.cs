@@ -34,11 +34,11 @@ public partial class _Default : System.Web.UI.Page
                       <img src='image/icons/review-icon.png' alt='img' />
                   </div>
                   <p>
-                      "+ Testimonial[i].TestimonialDesc + @"
+                     <a href='testimonials.aspx'>" + Testimonial[i].TestimonialDesc + @"</a>
                   </p>
                   <div class='testi-author'>
                       <div class='ta-info'>
-                          <h6>"+ Testimonial[i].Name + @" <span>/"+ Testimonial[i].Designation + @"</span></h6>
+                          <a href='testimonials.aspx'<h6>" + Testimonial[i].Name + @" <span>/"+ Testimonial[i].Designation + @"</span></h6></a>
                       </div>
                   </div>
               </div>
