@@ -229,36 +229,23 @@ public partial class product_details : System.Web.UI.Page
 
                         var url = "/product/" + rp.ProductUrl;
 
-                        strRelatedProducts += @"<div class='col-lg-3'>
-                        <div class='magnetic-wrap'>
-                            <div class='people-card2 magnetic-item' style=''>
-                                <div class='people-img'>
-                                    <img src='/" + rp.ThumbImage + @"' alt=''>
-                                </div>
-                                <div class='people-content'>
-                                    <div class='name-deg'>
-                                        <h5 class='d-flex justify-content-between'><a href='" + url + @"'>" + rp.ProductName + @"</a><span class='text-danger fw-bold'>" + rp.SKUCode + @"</span></h5>
+                        strRelatedProducts += @"<div class='col-lg-4'>
+                            <div class='card1'>
+                                <a href='/"+url+@"' contenteditable='false' style='cursor: pointer;'>
+                                    <img src='/" + rp.ThumbImage + @"' class='img1'>
+                                    <div class='intro1'>
+                                        <h4 class='text-h1'>" + rp.ProductName +@"
 
+</h4>
 
-
-
-
+                                        <p class='text-p'>
+                                           " + rp.FullDesc +@"          
+                                        </p>
                                     </div>
-                                    <div class='contact-area'>
-                                        <div class='contact-number'>
-                                            <div class='icon'>
-                                                View Product
-                                            </div>
+                                </a>
 
-                                        </div>
-                                        <ul class='social-icon'>
-                                            <li><a href='" + url + @"'><i class='fa-solid fa-arrow-right-long'></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
                             </div>
-                        </div>
-                    </div>";
+                        </div>";
                     }
                 }
             }

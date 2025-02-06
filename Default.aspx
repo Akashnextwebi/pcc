@@ -163,14 +163,14 @@
                 <div class="row">
                     <div class="col-12">
                         <div
-                            class="d-flex justify-content-between align-items-center mb-50">
+                            class="d-flex new-flex justify-content-between align-items-center mb-50">
                             <div class="pcc-section-heading mb-0">
                                 <span>Our Core Competence</span>
                                 <h2>Delivering Excellence in
                                     <br />
                                     Defence & Aerospace</h2>
                             </div>
-                            <div class="service-btn">
+                            <div class="service-btn d-lg-block d-none">
                                 <a href="#" class="btn2">Read More<i class="fal fa-long-arrow-right"></i></a>
                             </div>
                         </div>
@@ -359,8 +359,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-12 col-sm-6 col-md-3">
+                <div class="row gy-4">
+                    <div class="col-6 col-sm-6 col-md-3">
                         <div class="industry-card">
                             <div class="image">
                                 <img src="image/air-industry.jpg" alt="" />
@@ -368,7 +368,7 @@
                             <div class="image-caption">Air</div>
                         </div>
                     </div>
-                    <div class="col-12 col-sm-6 col-md-3">
+                    <div class="col-6 col-sm-6 col-md-3">
                         <div class="industry-card">
                             <div class="image">
                                 <img src="image/land-industry.jpg" alt="" />
@@ -376,7 +376,7 @@
                             <div class="image-caption">Land</div>
                         </div>
                     </div>
-                    <div class="col-12 col-sm-6 col-md-3">
+                    <div class="col-6 col-sm-6 col-md-3">
                         <div class="industry-card">
                             <div class="image">
                                 <img src="image/sea-industry.jpg" alt="" />
@@ -384,7 +384,7 @@
                             <div class="image-caption">Sea</div>
                         </div>
                     </div>
-                    <div class="col-12 col-sm-6 col-md-3">
+                    <div class="col-6 col-sm-6 col-md-3">
                         <div class="industry-card">
                             <div class="image">
                                 <img src="image/space-industry.jpg" alt="" />

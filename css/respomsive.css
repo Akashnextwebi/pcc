@@ -1,0 +1,141 @@
+﻿@media (min-width: 320px) and (max-width: 767px) {
+    .pcc-header .header-mid {
+        padding: 30px 0px !important;
+    }
+    .client-logo-wrap {
+        display: grid;
+        grid-template-columns: repeat(3, 33%) !important;
+    }
+    .logo img {
+        width: 240px !important;
+    }
+    .mb-105 {
+        margin-bottom: 0px !important;
+    }
+    .slider-bg {
+        min-height:720px !important;
+      
+    }
+    .slider-content{
+        margin-bottom:0px !important;
+        margin-top:0px !important;
+        padding-top:0px !important;
+    }
+    .float{
+        display:none !important;
+    }
+    .about-title h2 {
+        font-size: 24px !important;
+        line-height:30px !important;
+        letter-spacing: -1px;
+    }
+    .slider-content h2 {
+        font-size: 32px;
+        letter-spacing: 0;
+        line-height: 28px;
+        margin-bottom: 30px;
+    }
+    p{
+        font-size:14px !important;
+        line-height:20px !important
+    }
+    .single-slider:before {
+      
+        background: linear-gradient(90deg, rgb(0 0 0) 100%, #00000000 100%);
+      
+    }
+    .pb-120 {
+        padding-bottom: 60px !important;
+    }
+
+    .pt-120 {
+        padding-top: 60px !important;
+    }
+    .about-area .nav.nav-tabs li span:hover, .about-area .nav.nav-tabs li span.active{
+        display:none !important;
+    }
+    .badge img {
+        width: 100px !important;
+    }
+    .badge .make-in-india{
+        width:50px !important;
+    }
+    .new-flex{
+        flex-direction:column;
+        text-align:start !important;
+        align-items:start !important;
+    }
+    .pcc-section-heading h2 {
+        font-size: 24px !important;
+        line-height:30px !important;
+        font-weight:600 !important; 
+        margin-bottom: 0;
+    }
+    .services-slider-pcc .service-card {
+        margin-right: 0px !important;
+        height:100% !important;
+        margin-left:0px !important;   
+
+    }
+    .service-card h3 {
+        font-size: 20px !important;
+        line-height:26px !important;
+        font-weight: 700 !important;
+    }
+    .wptb-funfacts-one .wptb-funfacts--inner{
+        padding:40px 20px !important;
+    }
+    .wptb-counter1.style1 .wptb-item--value{
+        font-size:32px !important;
+        font-weight:600 !important; 
+        line-height:40px !important;
+    }
+ .wptb-funfacts-one.has-before-bg .wptb-funfacts--inner::before{
+        background-color:unset !important;  
+    }
+    .pt-80 {
+        padding-top: 60px !important;
+    }
+    .industry-card {
+        position: relative;
+        z-index: 1;
+        margin-bottom: 20px;
+    }
+        .industry-card .image-caption {
+            font-size:20px !important;
+        }
+    .client-logo-wrap .client-card{
+        padding:20px !important;
+        height:unset!important;
+    }
+    .pr-30 {
+        padding-right: 15px !important;
+
+    }
+    .pcc-section-heading {
+        margin-bottom: 20px !important;
+    }
+    .skills {
+        margin-top:20px !important;
+    }
+    .service-box-slider .text{
+        padding:30px 0px 30px !important;
+    }
+    .wptb-counter1.style1 .wptb-item--icon{
+        width:54px !important;
+        height:54px !important;
+    }
+    .service-box-slider h3 {
+        font-size: 24px !important;
+        line-height:30px !important;
+        font-weight:600 !important;
+        margin-bottom: 20px;
+    }
+    .product-card-img {
+        width:100% !important;
+    }
+    .service li {
+        margin-bottom: 0px;
+    }
+
+}

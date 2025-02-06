@@ -1374,7 +1374,7 @@ label {
   bottom: 100px;
 }
 .slider-bg {
-  min-height: 100dvh !important;
+  min-height: 100vh ;
   background-position: center bottom;
   background-size: cover;
   position: relative;
@@ -2534,7 +2534,7 @@ section:hover .section-title h2::before {
 .service-box-slider h3 {
   font-size: 36px;
   margin-bottom: 20px;
-  font-weight: 500 !important;
+  font-weight: 600 !important;
   text-transform: uppercase;
 }
 

@@ -5,6 +5,8 @@
     <link href="/css/about.css" rel="stylesheet" />
     <link href="/css/light.css" rel="stylesheet" />
     <link href="/snackbar/snackbar.min.css" rel="stylesheet" />
+            <link href="/css/industries.css" rel="stylesheet" />
+
     <link
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
