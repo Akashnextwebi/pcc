@@ -49,39 +49,24 @@ public partial class product_lisitng :  System.Web.UI.Page
             {
                 for (int i = 0; i < pro.Count; i++)
                 {
-                    //var url = "product/" + pro[i].ProductUrl;
-                    strProduct += @"<div class='col-lg-3'>
-                        <div class='magnetic-wrap'>
-                            <div class='people-card2 magnetic-item' style=''>
-                                <div class='people-img'>
-<a href='/product/" + pro[i].ProductUrl + @"'>
-                                    <img src='/"+ pro[i].ThumbImage + @"' alt=''></a>
-                                </div>
-                                <div class='people-content'>
-                                    <div class='name-deg'>
-                                        <h5 class=''><a href='/product/" + pro[i].ProductUrl + @"'>" + pro[i].ProductName + @"</a></h5>
+                   var url = "product/" + pro[i].ProductUrl;
+                    strProduct += @"<div class='col-lg-4'>
+                            <div class='card1'>
+                                <a href='/"+url+@"' contenteditable='false' style='cursor: pointer;'>
+                                    <img src='/" + pro[i].ThumbImage + @"' class='img1'>
+                                    <div class='intro1'>
+                                        <h4 class='text-h1'>" + pro[i].ProductName +@"
 
+</h4>
 
-
-
-
+                                        <p class='text-p'>
+                                           " + pro[i].FullDesc +@"          
+                                        </p>
                                     </div>
-                                    <div class='contact-area'>
-                                        <div class='contact-number'>
-                                            <div class='icon'>
-<a href='/product/" + pro[i].ProductUrl + @"'>
-                                                View Product</a>
-                                            </div>
+                                </a>
 
-                                        </div>
-                                        <ul class='social-icon'>
-                                            <li><a href='/product/" + pro[i].ProductUrl + @"'><i class='fa-solid fa-arrow-right-long'></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
                             </div>
-                        </div>
-                    </div>";
+                        </div>";
                 }
             }
         }

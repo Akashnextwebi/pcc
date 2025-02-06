@@ -8,7 +8,9 @@
             background-repeat: repeat;
             background-position: center center;
             padding: 200px 0 100px;
-        }
+        }.statement-content-bottom h6{
+             font-size:22px;
+         }
 
             .banner-area6 .banner-left-content {
                 max-width: 1035px;
@@ -511,14 +513,15 @@
             <div class="row">
                 <div class="col-lg-12 d-flex flex-lg-row flex-column align-items-xxl-end align-items-lg-center justify-content-between gap-5">
                     <div class="banner-left-content">
-                        <h1>Introduction to Make in India
+                        <h1>Make in India  
+
                         </h1>
                         <div class="quate-text1 w-50">
                             <h3 class="mb-3">The Make in India Initiative
                             </h3>
                             <div class="content">
                                 <p>
-                                    Launched in September 2014, the Make in India campaign is a flagship initiative of the Government of India aimed at transforming the country into a global manufacturing hub. Its key goals include:
+Launched in September 2014, the Make in India campaign is a flagship initiative of the Government of India aimed at transforming the country into a global manufacturing hub. Its key goals include:
 
 
                                 </p>
@@ -542,6 +545,21 @@
             </div>
         </div>
     </div>
+    <section class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2>
+                        Make in India – Driving Self-Reliance & Sustainability
+
+                    </h2>
+                    <p>At Park Controls and Communications Private Limited (PCC), we proudly align with the Make in India initiative, fostering indigenous innovation and self-reliance in defense, aerospace, and industrial sectors. Our commitment to local manufacturing not only strengthens India’s technological capabilities but also contributes to a sustainable and resilient supply chain.</p>
+                    <p>By designing, developing, and producing advanced telemetry, control systems, and mission-critical electronics within India, we reduce dependency on imports, enhance operational efficiency, and support environmental sustainability through optimized resource utilization. PCC remains dedicated to eco-friendly manufacturing practices, ensuring a greener, self-sufficient future while delivering world-class solutions.
+</p>
+                </div>
+            </div>
+        </div>
+    </section>
     <div class="section-padding">
 
         <div class="container">
@@ -555,11 +573,12 @@
                     <div class="statement-content pl-50">
                         <div class="details-section-title mb-30">
 
-                            <h2>About Park Controls’ Contribution
+                            <h2>About Contribution by Park Controls and Communications Private Limited (PCC)
+
                             </h2>
                         </div>
                         <p>
-                            Park Controls has been at the forefront of India’s Make in India movement, dedicated to building advanced, high-quality systems locally. With a vision to reduce dependency on imports, the company emphasizes in-house design, engineering, and manufacturing processes.
+PCC has been at the forefront of India’s Make in India movement, Atmanirbhar Bharat, dedicated to building advanced, high-quality systems locally. With a vision to reduce dependency on imports, the company emphasizes in-house design, engineering, and manufacturing processes.
 
                         </p>
                         <div class="statement-content-bottom">
@@ -576,13 +595,13 @@
                                     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
                                         <path d="M12.1223 3.1903C12.1631 3.23094 12.1954 3.27922 12.2174 3.33237C12.2395 3.38552 12.2508 3.4425 12.2508 3.50005C12.2508 3.5576 12.2395 3.61458 12.2174 3.66773C12.1954 3.72088 12.1631 3.76916 12.1223 3.8098L5.99731 9.9348C5.95667 9.97554 5.9084 10.0079 5.85524 10.0299C5.80209 10.052 5.74511 10.0633 5.68756 10.0633C5.63002 10.0633 5.57304 10.052 5.51988 10.0299C5.46673 10.0079 5.41845 9.97554 5.37781 9.9348L2.31531 6.8723C2.23316 6.79015 2.18701 6.67873 2.18701 6.56255C2.18701 6.44637 2.23316 6.33495 2.31531 6.2528C2.39747 6.17065 2.50889 6.1245 2.62506 6.1245C2.74124 6.1245 2.85266 6.17065 2.93481 6.2528L5.68756 9.00642L11.5028 3.1903C11.5435 3.14956 11.5917 3.11723 11.6449 3.09518C11.698 3.07312 11.755 3.06177 11.8126 3.06177C11.8701 3.06177 11.9271 3.07312 11.9802 3.09518C12.0334 3.11723 12.0817 3.14956 12.1223 3.1903Z"></path>
                                     </svg>
-                                    Domestic Manufacturing: Over 80% of components used in production are sourced from Indian suppliers, demonstrating the company’s strong reliance on local industries.
+Domestic Manufacturing: Over 60% of components used in production are sourced from Indian suppliers, demonstrating the company’s strong reliance on local industries.
                                 </li>
                                 <li>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
                                         <path d="M12.1223 3.1903C12.1631 3.23094 12.1954 3.27922 12.2174 3.33237C12.2395 3.38552 12.2508 3.4425 12.2508 3.50005C12.2508 3.5576 12.2395 3.61458 12.2174 3.66773C12.1954 3.72088 12.1631 3.76916 12.1223 3.8098L5.99731 9.9348C5.95667 9.97554 5.9084 10.0079 5.85524 10.0299C5.80209 10.052 5.74511 10.0633 5.68756 10.0633C5.63002 10.0633 5.57304 10.052 5.51988 10.0299C5.46673 10.0079 5.41845 9.97554 5.37781 9.9348L2.31531 6.8723C2.23316 6.79015 2.18701 6.67873 2.18701 6.56255C2.18701 6.44637 2.23316 6.33495 2.31531 6.2528C2.39747 6.17065 2.50889 6.1245 2.62506 6.1245C2.74124 6.1245 2.85266 6.17065 2.93481 6.2528L5.68756 9.00642L11.5028 3.1903C11.5435 3.14956 11.5917 3.11723 11.6449 3.09518C11.698 3.07312 11.755 3.06177 11.8126 3.06177C11.8701 3.06177 11.9271 3.07312 11.9802 3.09518C12.0334 3.11723 12.0817 3.14956 12.1223 3.1903Z"></path>
                                     </svg>
-                                    Vendor Partnerships: Collaborations with Indian SMEs and vendors ensure a robust supply chain and encourage the growth of allied industries.
+Vendor Partnerships: Collaborations with Indian SMEs and vendors ensure a robust supply chain and encourage the growth of allied industries.
                                 </li>
 
                             </ul>
@@ -603,13 +622,13 @@
                                     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
                                         <path d="M12.1223 3.1903C12.1631 3.23094 12.1954 3.27922 12.2174 3.33237C12.2395 3.38552 12.2508 3.4425 12.2508 3.50005C12.2508 3.5576 12.2395 3.61458 12.2174 3.66773C12.1954 3.72088 12.1631 3.76916 12.1223 3.8098L5.99731 9.9348C5.95667 9.97554 5.9084 10.0079 5.85524 10.0299C5.80209 10.052 5.74511 10.0633 5.68756 10.0633C5.63002 10.0633 5.57304 10.052 5.51988 10.0299C5.46673 10.0079 5.41845 9.97554 5.37781 9.9348L2.31531 6.8723C2.23316 6.79015 2.18701 6.67873 2.18701 6.56255C2.18701 6.44637 2.23316 6.33495 2.31531 6.2528C2.39747 6.17065 2.50889 6.1245 2.62506 6.1245C2.74124 6.1245 2.85266 6.17065 2.93481 6.2528L5.68756 9.00642L11.5028 3.1903C11.5435 3.14956 11.5917 3.11723 11.6449 3.09518C11.698 3.07312 11.755 3.06177 11.8126 3.06177C11.8701 3.06177 11.9271 3.07312 11.9802 3.09518C12.0334 3.11723 12.0817 3.14956 12.1223 3.1903Z"></path>
                                     </svg>
-                                    The company actively invests in upskilling Indian workers, providing training in advanced manufacturing techniques and cutting-edge technology applications.
+The company actively invests in upskilling Indian workers, providing training in advanced manufacturing techniques and cutting-edge technology applications.
                                 </li>
                                 <li>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
                                         <path d="M12.1223 3.1903C12.1631 3.23094 12.1954 3.27922 12.2174 3.33237C12.2395 3.38552 12.2508 3.4425 12.2508 3.50005C12.2508 3.5576 12.2395 3.61458 12.2174 3.66773C12.1954 3.72088 12.1631 3.76916 12.1223 3.8098L5.99731 9.9348C5.95667 9.97554 5.9084 10.0079 5.85524 10.0299C5.80209 10.052 5.74511 10.0633 5.68756 10.0633C5.63002 10.0633 5.57304 10.052 5.51988 10.0299C5.46673 10.0079 5.41845 9.97554 5.37781 9.9348L2.31531 6.8723C2.23316 6.79015 2.18701 6.67873 2.18701 6.56255C2.18701 6.44637 2.23316 6.33495 2.31531 6.2528C2.39747 6.17065 2.50889 6.1245 2.62506 6.1245C2.74124 6.1245 2.85266 6.17065 2.93481 6.2528L5.68756 9.00642L11.5028 3.1903C11.5435 3.14956 11.5917 3.11723 11.6449 3.09518C11.698 3.07312 11.755 3.06177 11.8126 3.06177C11.8701 3.06177 11.9271 3.07312 11.9802 3.09518C12.0334 3.11723 12.0817 3.14956 12.1223 3.1903Z"></path>
                                     </svg>
-                                    It promotes innovation-driven growth by encouraging employees to engage in research and development activities, fostering a culture of creativity and problem-solving within the organization.
+It promotes innovation-driven growth by encouraging employees to engage in research and development activities, fostering a culture of creativity and problem-solving within the organization.
                                 </li>
 
                             </ul>
@@ -620,256 +639,6 @@
             </div>
         </div>
     </div>
-    <div class="feature-card-section section-padding" style="background: #f4f9fd;">
-        <div class="container">
-            <div class="row g-4">
-
-                <div class="col-lg-12">
-                    <div class="row">
-                        <div class="col-lg-12 gap-lg-5 gap-4 d-flex flex-lg-nowrap flex-wrap align-items-start justify-content-between mb-60">
-                            <div class="section-title1 one">
-                                <h2>Industry We Serve</h2>
-                            </div>
-
-                        </div>
-                        <div class="col-lg-12">
-                            <div class="row g-4">
-                                <div class="col-xxl-6 col-sm-6">
-                                    <div class="eg-card-2">
-                                        <div class="icon">
-                                            <img src="image/india/airplane.png" />
-                                        </div>
-                                        <div class="content">
-                                            <h5>Air</h5>
-                                            <p>Providing advanced solutions for avionics and flight testing to ensure safety and efficiency in aviation operations.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xxl-6 col-sm-6">
-                                    <div class="eg-card-2">
-                                        <div class="icon">
-                                            <img src="image/india/startup.png" />
-                                        </div>
-                                        <div class="content">
-                                            <h5>Space</h5>
-                                            <p>Supporting space exploration and satellite systems with state-of-the-art testing and simulation technologies.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xxl-6 col-sm-6">
-                                    <div class="eg-card-2">
-                                        <div class="icon">
-                                            <img src="image/india/defence.png" />
-                                        </div>
-                                        <div class="content">
-                                            <h5>Defence</h5>
-                                            <p>Delivering mission-critical systems for communication, radar, and weapons testing to enhance national security.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xxl-6 col-sm-6">
-                                    <div class="eg-card-2">
-                                        <div class="icon">
-                                            <img src="image/india/cruise.png" />
-                                        </div>
-                                        <div class="content">
-                                            <h5>Sea</h5>
-                                            <p>Enabling maritime advancements through cutting-edge navigation and surveillance technologies for naval operations.</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="home5-protfolio-section  section-padding">
-        <div class="container">
-            <div class="row mb-5 align-items-center ">
-                <div class="col-lg-8 ">
-                    <div class="section-title1 d-flex justify-content-between two">
-                        <h2>Products Designed and Manufactured in India</h2>
-
-                    </div>
-                </div>
-                <div class="col-lg-4 text-end">
-                    <div class="slider-btn ">
-                        <a
-                            href="#"
-                            class="btn ss-btn mr-15"
-                            data-animation="fadeInLeft"
-                            data-delay=".4s"><i class="fal fa-long-arrow-right"></i>Explore More</a>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12 ">
-                    <div class="row gy-4">
-
-                        <div class="col-lg-4">
-                            <div class="magnetic-wrap">
-                                <div class="people-card2 magnetic-item" style="">
-                                    <div class="people-img">
-                                        <img src="image/shop/1.jpg" alt="">
-                                    </div>
-                                    <div class="people-content">
-                                        <div class="name-deg">
-                                            <h5><a href="#">Air Product 1</a></h5>
-                                        </div>
-                                        <div class="contact-area">
-                                            <div class="contact-number">
-                                                <div class="icon">
-                                                    View Product
-                                                </div>
-
-                                            </div>
-                                            <ul class="social-icon">
-                                                <li><a href="product-details.aspx"><i class="fa-solid fa-arrow-right-long"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="magnetic-wrap">
-                                <div class="people-card2 magnetic-item" style="">
-                                    <div class="people-img">
-                                        <img src="image/shop/1.jpg" alt="">
-                                    </div>
-                                    <div class="people-content">
-                                        <div class="name-deg">
-                                            <h5><a href="#">Air Product 1</a></h5>
-                                        </div>
-                                        <div class="contact-area">
-                                            <div class="contact-number">
-                                                <div class="icon">
-                                                    View Product
-                                                </div>
-
-                                            </div>
-                                            <ul class="social-icon">
-                                                <li><a href="product-details.aspx"><i class="fa-solid fa-arrow-right-long"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="magnetic-wrap">
-                                <div class="people-card2 magnetic-item" style="">
-                                    <div class="people-img">
-                                        <img src="image/shop/1.jpg" alt="">
-                                    </div>
-                                    <div class="people-content">
-                                        <div class="name-deg">
-                                            <h5><a href="#">Air Product 1</a></h5>
-                                        </div>
-                                        <div class="contact-area">
-                                            <div class="contact-number">
-                                                <div class="icon">
-                                                    View Product
-                                                </div>
-
-                                            </div>
-                                            <ul class="social-icon">
-                                                <li><a href="product-details.aspx"><i class="fa-solid fa-arrow-right-long"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="magnetic-wrap">
-                                <div class="people-card2 magnetic-item" style="">
-                                    <div class="people-img">
-                                        <img src="image/shop/1.jpg" alt="">
-                                    </div>
-                                    <div class="people-content">
-                                        <div class="name-deg">
-                                            <h5><a href="#">Air Product 1</a></h5>
-                                        </div>
-                                        <div class="contact-area">
-                                            <div class="contact-number">
-                                                <div class="icon">
-                                                    View Product
-                                                </div>
-
-                                            </div>
-                                            <ul class="social-icon">
-                                                <li><a href="product-details.aspx"><i class="fa-solid fa-arrow-right-long"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="col-lg-4">
-                            <div class="magnetic-wrap">
-                                <div class="people-card2 magnetic-item" style="">
-                                    <div class="people-img">
-                                        <img src="image/shop/1.jpg" alt="">
-                                    </div>
-                                    <div class="people-content">
-                                        <div class="name-deg">
-                                            <h5><a href="#">Air Product 1</a></h5>
-                                        </div>
-                                        <div class="contact-area">
-                                            <div class="contact-number">
-                                                <div class="icon">
-                                                    View Product
-                                                </div>
-
-                                            </div>
-                                            <ul class="social-icon">
-                                                <li><a href="product-details.aspx"><i class="fa-solid fa-arrow-right-long"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="magnetic-wrap">
-                                <div class="people-card2 magnetic-item" style="">
-                                    <div class="people-img">
-                                        <img src="image/shop/1.jpg" alt="">
-                                    </div>
-                                    <div class="people-content">
-                                        <div class="name-deg">
-                                            <h5><a href="#">Air Product 1</a></h5>
-                                        </div>
-                                        <div class="contact-area">
-                                            <div class="contact-number">
-                                                <div class="icon">
-                                                    View Product
-                                                </div>
-
-                                            </div>
-                                            <ul class="social-icon">
-                                                <li><a href="product-details.aspx"><i class="fa-solid fa-arrow-right-long"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-
-
-                        <!-- Sidebar  -->
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    
 </asp:Content>
 

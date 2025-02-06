@@ -3,6 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 
     <link href="/css/breadcrums.css" rel="stylesheet" />
+        <link href="/css/industries.css" rel="stylesheet" />
 
     <style>
         .magnetic-wrap {
@@ -338,7 +339,7 @@
 
             </div>
         </section>
-        <div class="horizontal-scrolling-section ">
+    <%--    <div class="horizontal-scrolling-section ">
             <div class="single-scroll-container" style="background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%), url(/image/scroll-bg-1.jpg);">
                 <div class="container-fluid one pl--95">
                     <div class="horizontal-scrolling-content">
@@ -351,12 +352,11 @@
                             Explore Curtiss-Wright's mission-critical solutions based on the latest technologies and open standards. These innovative solutions are trusted and proven for aerospace and defense applications.
                         </p>
                         <div class="slider-btn mt-30 ">
-                            <%--<a href="#" class="btn ss-btn mr-15" data-animation="fadeInLeft" data-delay=".4s" tabindex="0" contenteditable="false" style="animation-delay: 0.4s; cursor: pointer;"><i class="fal fa fa-download"></i>Download the product guide</a>--%>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </div>--%>
         <section class="wptb-shop section-padding">
             <div class="container">
                 <div class="row gy-4">
@@ -644,7 +644,7 @@
         </section>
 
 
-        <div class="industry-details-blog-section" id="latestInsight">
+<%--        <div class="industry-details-blog-section" id="latestInsight">
             <div class="container">
                 <div class="row">
                     <div
@@ -662,76 +662,7 @@
 
                 <div class="row g-4">
                     <%=StrWhitepaper %>
-                   <%-- <div class="col-lg-3">
-
-
-                        <div class="broacher-card">
-                            <div class="broacher-img">
-                                <a href="#">
-                                    <img src="/image/brochure/1.png" alr="img" /></a>
-
-                            </div>
-                            <div class="broacher-content">
-                                <a href="#">
-                                    <span>Whitepaper</span>
-                                    <h4>Innovative Jet Control Communication Solutions
-                                    </h4>
-                                    <p>Jet control and communication systems are critical for ensuring safe and efficient aviation operations. Advanced technologies enable seamless coordination between pilots, ground crews, and air traffic.</p>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="broacher-card">
-                            <div class="broacher-img">
-                                <a href="#">
-                                    <img src="/image/brochure/1.png" alr="img" /></a>
-
-                            </div>
-                            <div class="broacher-content">
-                                <a href="#">
-                                    <span>Whitepaper</span>
-                                    <h4>Innovative Jet Control Communication Solutions
-                                    </h4>
-                                    <p>Jet control and communication systems are critical for ensuring safe and efficient aviation operations. Advanced technologies enable seamless coordination between pilots, ground crews, and air traffic.</p>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="broacher-card">
-                            <div class="broacher-img">
-                                <a href="#">
-                                    <img src="/image/brochure/1.png" alr="img" /></a>
-
-                            </div>
-                            <div class="broacher-content">
-                                <a href="#">
-                                    <span>Whitepaper</span>
-                                    <h4>Innovative Jet Control Communication Solutions
-                                    </h4>
-                                    <p>Jet control and communication systems are critical for ensuring safe and efficient aviation operations. Advanced technologies enable seamless coordination between pilots, ground crews, and air traffic.</p>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="broacher-card">
-                            <div class="broacher-img">
-                                <a href="#">
-                                    <img src="/image/brochure/1.png" alr="img" /></a>
-
-                            </div>
-                            <div class="broacher-content">
-                                <a href="#">
-                                    <span>Whitepaper</span>
-                                    <h4>Innovative Jet Control Communication Solutions
-                                    </h4>
-                                    <p>Jet control and communication systems are critical for ensuring safe and efficient aviation operations. Advanced technologies enable seamless coordination between pilots, ground crews, and air traffic.</p>
-                                </a>
-                            </div>
-                        </div>
-                    </div>--%>
+                   
                   
 
                 </div>
@@ -739,7 +670,7 @@
 
        
       
-        </div>
+        </div>--%>
     </main>
 </asp:Content>
 

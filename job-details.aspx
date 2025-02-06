@@ -8,11 +8,7 @@
 
             .job-detail-section .upper-box {
                 position: relative;
-                background-image: url(image/bg-4.png);
-                background-repeat: no-repeat;
-                background-position: center;
-                background-size: cover;
-                background-size: cover;
+             background:#eee;
                 padding: 80px 0 70px;
             }
 
