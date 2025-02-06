@@ -137,5 +137,8 @@
     .service li {
         margin-bottom: 0px;
     }
-
+    .cta .cta__row .cta__col:first-child {
+        /* width: calc(100% - 300px); */
+        width:unset !important;
+    }
 }

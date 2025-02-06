@@ -75,7 +75,7 @@
                                     <img src="image/icons/client.png" alt="" />
                                 </div>
                                 <div class="wptb-item--holder">
-                                    <div class="wptb-item--text">Products Introduced</div>
+                                    <div class="wptb-item--text">Engineer Partner</div>
                                     <div class="wptb-item--value">
                                         <span class="odometer"></span><span class="suffix">275+</span>
                                     </div>
