@@ -5,7 +5,6 @@
 $(document.body).on("click", ".BtnSubmit", function (e) {
     e.preventDefault();
 
-
     var count = 1;
     var id = $('.BtnSubmit').attr('data-id');
     var name = $(".textFname").val().trim();
