@@ -185,7 +185,7 @@ public partial class product_details : System.Web.UI.Page
 
 
             var ResPDF = "";
-
+            //var IndPDF = "";
             BE.FullName = name;
             BE.Email = email;
             BE.Contact = contact;
@@ -198,6 +198,8 @@ public partial class product_details : System.Web.UI.Page
             if (result > 0)
             {
                 ResPDF = BrochureEnguiry.GetBroucherPDF(conSQ, Id);
+
+               // IndPDF = BrochureEnguiry.GetIndustryPDF(conSQ,)
                 return "Success | " + ResPDF;
             }
             else

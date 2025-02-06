@@ -87,6 +87,7 @@ public partial class Admin_add_capability : System.Web.UI.Page
                 BD.BannerTitle = txtbtitle.Text.Trim();
                 BD.DescHeading = txtheading.Text.Trim();
                 BD.FullDesc = txtfulldesc.Text.Trim();
+                BD.CompetenciesOrder = "0";
                 BD.BannerImage = UploadBannerImage();
                 BD.AddedIp = CommonModel.IPAddress();
                 BD.AddedOn = TimeStamps.UTCTime();

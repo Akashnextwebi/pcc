@@ -4,120 +4,127 @@
 
 <html>
 <head runat="server">
-   <meta charset="utf-8" />
- <meta http-equiv="x-ua-compatible" content="ie=edge" />
- <title>
-   Park Controls | Aerospace Solutions | Defense Solutions | Custom Test
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Park Controls | Aerospace Solutions | Defense Solutions | Custom Test
    Equipment
- </title>
- <meta
-   name="description"
-   content="Park Controls & Communications offers advanced test and measurement solutions for aerospace, defense, and industrial sectors. Specializing in automatic test equipment (ATE), data acquisition, signal conditioning, and hardware-in-the-loop simulation, we deliver high-quality, custom solutions to support mission-critical operations."
- />
- <meta name="viewport" content="width=device-width, initial-scale=1" />
- <link rel="shortcut icon" type="image/x-icon" href="/image/logo/fav.png" />
+    </title>
+    <meta
+        name="description"
+        content="Park Controls & Communications offers advanced test and measurement solutions for aerospace, defense, and industrial sectors. Specializing in automatic test equipment (ATE), data acquisition, signal conditioning, and hardware-in-the-loop simulation, we deliver high-quality, custom solutions to support mission-critical operations." />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" type="image/x-icon" href="/image/logo/fav.png" />
 
- <!-- CSS here -->
- <link rel="stylesheet" href="/css/bootstrap.min.css" />
- <link rel="stylesheet" href="/css/animate.min.css" />
- <link rel="stylesheet" href="/css/magnific-popup.css" />
- <link rel="stylesheet" href="/fontawesome/css/all.min.css" />
- <link rel="stylesheet" href="/fontawesome-pro/css/all.min.css" />
- <link rel="stylesheet" href="/css/dripicons.css" />
- <link rel="stylesheet" href="/css/slick.css" />
- <link rel="stylesheet" href="/css/meanmenu.css" />
- <link rel="stylesheet" href="/css/swiper.min.css" />
- <link rel="stylesheet" href="/css/default.css" />
- <link rel="stylesheet" href="/css/style.css" />
- <link rel="stylesheet" href="/css/custom.css" />
- <link rel="stylesheet" href="/css/responsive.css" />
- <style>
-   :root {
-     --pcc-primary-theme: rgb(121, 1, 12);
-   }
-   .pcc-header {
-     background: #fff;
-   }
-   .pcc-header .logo img {
-     filter: none;
-   }
+    <!-- CSS here -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/animate.min.css" />
+    <link rel="stylesheet" href="/css/magnific-popup.css" />
+    <link rel="stylesheet" href="/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="/fontawesome-pro/css/all.min.css" />
+    <link rel="stylesheet" href="/css/dripicons.css" />
+    <link rel="stylesheet" href="/css/slick.css" />
+    <link rel="stylesheet" href="/css/meanmenu.css" />
+    <link rel="stylesheet" href="/css/swiper.min.css" />
+    <link rel="stylesheet" href="/css/default.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/custom.css" />
+    <link rel="stylesheet" href="/css/responsive.css" />
+    
+    <style>
+        :root {
+            --pcc-primary-theme: rgb(121, 1, 12);
+        }
 
-   .header-three .main-menu ul li a,
-   .header-top .header-top-link-list a,
-   .header-top__row .header-top__col-right .social-link-list a {
-     color: rgb(0 0 0);
-     font-weight: 500;
-     font-family: "Roboto", sans-serif;
-   }
-   .header-top {
-     border-bottom: 1px solid #dfdfdf;
-   }
-  
-   .wptb-funfacts-one .wptb-funfacts--inner,
-   .wptb-funfacts-one.has-before-bg .wptb-funfacts--inner::before {
-     background-color: var(--pcc-primary-theme);
-   }
-   .why-choose-us {
-     background: #222222;
-   }
-   .skill-per {
-     background: linear-gradient(270deg, rgb(255 255 255) 0%, #222222 100%);
-   }
+        .pcc-header {
+            background: #fff;
+        }
 
-   .skills {
-     background-image: none !important;
-   }
-   .cta .cta__row:before {
-     background: #000;
-   }
-   .footer-link ul li h3,
-   .copy-text a {
-     color: #fff;
-   }
-   .single-slider:before {
-     content: "";
-     position: absolute;
-     left: 0;
-     top: 0;
-     width: 100%;
-     height: 100%;
-     background: linear-gradient(90deg, rgb(0 0 0) 46%, transparent 66%);
-     opacity: 0.7;
-     z-index: -1;
-   }
+            .pcc-header .logo img {
+                filter: none;
+            }
 
-   .single-slider {
-     position: relative;
-   }
- </style>
-    <asp:ContentPlaceHolder id="head" runat="server">
+        .header-three .main-menu ul li a,
+        .header-top .header-top-link-list a,
+        .header-top__row .header-top__col-right .social-link-list a {
+            color: rgb(0 0 0);
+            font-weight: 500;
+            font-family: "Roboto", sans-serif;
+        }
+
+        .header-top {
+            border-bottom: 1px solid #dfdfdf;
+        }
+
+        .wptb-funfacts-one .wptb-funfacts--inner,
+        .wptb-funfacts-one.has-before-bg .wptb-funfacts--inner::before {
+            background-color: var(--pcc-primary-theme);
+        }
+
+        .why-choose-us {
+            background: #222222;
+        }
+
+        .skill-per {
+            background: linear-gradient(270deg, rgb(255 255 255) 0%, #222222 100%);
+        }
+
+        .skills {
+            background-image: none !important;
+        }
+
+        .cta .cta__row:before {
+            background: #000;
+        }
+
+        .footer-link ul li h3,
+        .copy-text a {
+            color: #fff;
+        }
+
+        .single-slider:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, rgb(0 0 0) 46%, transparent 66%);
+            opacity: 0.7;
+            z-index: -1;
+        }
+
+        .single-slider {
+            position: relative;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="form1" runat="server">
-         <header class="header-area header-three pcc-header" id="header-sticky">
-   <div class="header-top">
-     <div class="container">
-       <div class="header-top__row">
-         <div class="header-top__col-left">
-           <ul class="header-top-link-list">
-             <li>
-               <a href="#">
-                 <i class="fa fa-phone"></i>
-                 +91 80252 92513
-               </a>
-             </li>
-             <li>
-               <a href="#">
-                 <i class="fa fa-envelope"></i>
-                 info@parkcontrols.com
-               </a>
-             </li>
-           </ul>
-         </div>
-         <div class="header-top__col-right">
-           <ul class="header-top-link-list">
-            <%-- <li><a href="/investors.aspx">Investor</a></li>
+        <header class="header-area header-three pcc-header" id="header-sticky">
+            <div class="header-top">
+                <div class="container">
+                    <div class="header-top__row">
+                        <div class="header-top__col-left">
+                            <ul class="header-top-link-list">
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-phone"></i>
+                                        +91 80252 92513
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-envelope"></i>
+                                        info@parkcontrols.com
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="header-top__col-right">
+                            <ul class="header-top-link-list">
+                                <%-- <li><a href="/investors.aspx">Investor</a></li>
              <li class="has-submenu">Singapore Office
 
                <a href="#">Resources</a>
@@ -130,54 +137,53 @@
                  <li><a href="/seminars.aspx">Seminars</a></li>
                </ul>
              </li>--%>
-             <li><a href="/job-listing.aspx">Career</a></li>
-           </ul>
-           <div class="social-media-links">
-             <ul class="social-link-list">
-               <li>
-                 <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-               </li>
-               <li>
-                 <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-               </li>
-             </ul>
-           </div>
-         </div>
-       </div>
-     </div>
-   </div>
-   <div class="header-mid d-none d-md-block">
-     <div class="container">
-       <div class="row align-items-center">
-         <div class="col-lg-3 col-md-12 d-none d-md-block">
-           <div class="logo">
-             <a href="/Default.aspx"
-               ><img src="/image/logo/PCC%20Logo%20(No%20Background)(9.12.24)-01.png" alt="logo"
-             /></a>
-           </div>
-         </div>
-         <div class="col-lg-9 col-md-10 text-right d-none d-lg-block">
-           <div class="main-menu">
-             <nav id="mobile-menu">
-               <ul>
-                 <li class="has-sub">
-                   <a href="#">Company</a>
-                   <ul>
-                     <li><a href="/about-us.aspx">About Us</a></li>
-                     <li><a href="/evolution.aspx">Evolution</a></li>
-<%--                     <li><a href="/board-of-directors.aspx">Board of Directors</a></li>--%>
-                     <li><a href="/our-team.aspx">Our Team</a></li>
-                     <li><a href="/clientele.aspx">Clientele</a></li>
-                     <li><a href="/partners.aspx">Partners</a></li>
-                     <li><a href="/testimonials.aspx">Testimonials</a></li>
-                     <li><a href="/quality-and-accreditations.aspx">Quality and Accreditations</a></li>
-                   </ul>
-                 </li>
-                 <li class="has-sub">
-                   <a href="#">Core Competencies</a>
-                   <ul>
-                       <%=strsolution %>
-                     <%--<li><a href="/advanced-data-solutions.aspx">Advance Data Solutions</a></li>
+                                <li><a href="/job-listing.aspx">Career</a></li>
+                            </ul>
+                            <div class="social-media-links">
+                                <ul class="social-link-list">
+                                    <li>
+                                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-mid d-none d-md-block">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-3 col-md-12 d-none d-md-block">
+                            <div class="logo">
+                                <a href="/Default.aspx">
+                                    <img src="/image/logo/PCC%20Logo%20(No%20Background)(9.12.24)-01.png" alt="logo" /></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-9 col-md-10 text-right d-none d-lg-block">
+                            <div class="main-menu">
+                                <nav id="mobile-menu">
+                                    <ul>
+                                        <li class="has-sub">
+                                            <a href="#">Company</a>
+                                            <ul>
+                                                <li><a href="/about-us.aspx">About Us</a></li>
+                                                <li><a href="/evolution.aspx">Evolution</a></li>
+                                                <%--                     <li><a href="/board-of-directors.aspx">Board of Directors</a></li>--%>
+                                                <li><a href="/our-team.aspx">Our Team</a></li>
+                                                <li><a href="/clientele.aspx">Clientele</a></li>
+                                                <li><a href="/partners.aspx">Partners</a></li>
+                                                <li><a href="/testimonials.aspx">Testimonials</a></li>
+                                                <li><a href="/quality-and-accreditations.aspx">Quality and Accreditations</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="has-sub">
+                                            <a href="#">Core Competencies</a>
+                                            <ul>
+                                                <%=strsolution %>
+                                                <%--<li><a href="/advanced-data-solutions.aspx">Advance Data Solutions</a></li>
                      <li>
                        <a href="#">Advance Time & Frequency Solutions</a>
                      </li>
@@ -189,86 +195,84 @@
                      <li>
                        <a href="#">Advance Indigenization & Customization</a>
                      </li>--%>
-                   </ul>
-                 </li>
-                 <li class="has-sub">
-                   <a href="#">Industries</a>
-                   <ul>
-                       <%=strIndustries %>
-                     <%--<li><a href="/air.aspx">Air</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="has-sub">
+                                            <a href="#">Industries</a>
+                                            <ul>
+                                                <%=strIndustries %>
+                                                <%--<li><a href="/air.aspx">Air</a></li>
                      <li><a href="/land.aspx">Land</a></li>
                      <li><a href="/sea.aspx">Sea</a></li>
                      <li><a href="/space.aspx">Space</a></li>--%>
-                   </ul>
-                 </li>
-                 <li class="has-sub">
-                   <a href="#">Services</a>
-                   <ul>
-                     <li><a href="/legacy-upgrade.aspx">Legacy Upgrade</a></li>
-                     <li>
-                       <a href="/concept-to-realization-of-futuristic-products.aspx"
-                         >Concept to Realization of Futuristic Products
-</a
-                       >
-                     </li>
-                     <li><a href="tunkey-solution.aspx">Turnkey Solution</a></li>
-                   </ul>
-                 </li>
-                 <li class="has-sub">
-                   <a href="#">Sustainability</a>
-                   <ul>
-                     <li><a href="/make-in-india.aspx">Make in India</a></li>
-                     <li><a href="/safety-first.aspx">Safety First</a></li>
-                     <li><a href="/investing-on-people.aspx">Investing on People</a></li>
-                     <li><a href="/cyber-security.aspx">Cyber Security</a></li>
-                     <li><a href="/environmental-safety.aspx">Environmental Safety</a></li>
-                   </ul>
-                 </li>
-                 <li><a href="/contact-us.aspx">Contact Us</a></li>
-               </ul>
-             </nav>
-           </div>
-         </div>
-       </div>
-     </div>
-   </div>
- </header>
- <!-- header-end -->
- <!-- offcanvas-area -->
- <div class="offcanvas-menu">
-   <span class="menu-close"><i class="fas fa-times"></i></span>
-  
-   <div id="cssmenu3" class="menu-one-page-menu-container">
-     <ul class="menu">
-       <li class="menu-item menu-item-type-custom menu-item-object-custom">
-         <a href="#">Home</a>
-       </li>
-       <li class="menu-item menu-item-type-custom menu-item-object-custom">
-         <a href="#">About Us</a>
-       </li>
-       <li class="menu-item menu-item-type-custom menu-item-object-custom">
-         <a href="#">Services</a>
-       </li>
-       <li class="menu-item menu-item-type-custom menu-item-object-custom">
-         <a href="#">Pricing </a>
-       </li>
-       <li class="menu-item menu-item-type-custom menu-item-object-custom">
-         <a href="#">Team </a>
-       </li>
+                                            </ul>
+                                        </li>
+                                        <li class="has-sub">
+                                            <a href="#">Services</a>
+                                            <ul>
+                                                <li><a href="/legacy-upgrade.aspx">Legacy Upgrade</a></li>
+                                                <li>
+                                                    <a href="/concept-to-realization-of-futuristic-products.aspx">Concept to Realization of Futuristic Products
+                                                    </a>
+                                                </li>
+                                                <li><a href="tunkey-solution.aspx">Turnkey Solution</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="has-sub">
+                                            <a href="#">Sustainability</a>
+                                            <ul>
+                                                <li><a href="/make-in-india.aspx">Make in India</a></li>
+                                                <li><a href="/safety-first.aspx">Safety First</a></li>
+                                                <li><a href="/investing-on-people.aspx">Investing on People</a></li>
+                                                <li><a href="/cyber-security.aspx">Cyber Security</a></li>
+                                                <li><a href="/environmental-safety.aspx">Environmental Safety</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="/contact-us.aspx">Contact Us</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- header-end -->
+        <!-- offcanvas-area -->
+        <div class="offcanvas-menu">
+            <span class="menu-close"><i class="fas fa-times"></i></span>
 
-       <li class="menu-item menu-item-type-custom menu-item-object-custom">
-         <a href="#">Cases Study</a>
-       </li>
-       <li class="menu-item menu-item-type-custom menu-item-object-custom">
-         <a href="#">Blog</a>
-       </li>
-       <li class="menu-item menu-item-type-custom menu-item-object-custom">
-         <a href="#">Contact</a>
-       </li>
-     </ul>
-   </div>
+            <div id="cssmenu3" class="menu-one-page-menu-container">
+                <ul class="menu">
+                    <li class="menu-item menu-item-type-custom menu-item-object-custom">
+                        <a href="#">Home</a>
+                    </li>
+                    <li class="menu-item menu-item-type-custom menu-item-object-custom">
+                        <a href="#">About Us</a>
+                    </li>
+                    <li class="menu-item menu-item-type-custom menu-item-object-custom">
+                        <a href="#">Services</a>
+                    </li>
+                    <li class="menu-item menu-item-type-custom menu-item-object-custom">
+                        <a href="#">Pricing </a>
+                    </li>
+                    <li class="menu-item menu-item-type-custom menu-item-object-custom">
+                        <a href="#">Team </a>
+                    </li>
 
-   <!-- <div id="cssmenu2" class="menu-one-page-menu-container">
+                    <li class="menu-item menu-item-type-custom menu-item-object-custom">
+                        <a href="#">Cases Study</a>
+                    </li>
+                    <li class="menu-item menu-item-type-custom menu-item-object-custom">
+                        <a href="#">Blog</a>
+                    </li>
+                    <li class="menu-item menu-item-type-custom menu-item-object-custom">
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- <div id="cssmenu2" class="menu-one-page-menu-container">
      <ul id="menu-one-page-menu-12" class="menu">
        <li class="menu-item menu-item-type-custom menu-item-object-custom">
          <a href="#home"><span>+8 12 3456897</span></a>
@@ -278,168 +282,165 @@
        </li>
      </ul>
    </div> -->
- </div>
- <div class="offcanvas-overly"></div>
-    <div>
-        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
-        
-        </asp:ContentPlaceHolder>
-    </div>
-         <!-- footer -->
- <footer class="footer-bg footer-p" style="background-color: #222222">
-   <div class="footer-top pt-100 pb-100">
-     <div class="container">
-       <div class="row justify-content-between">
-         <div class="col-xl-4 col-lg-3 col-sm-4">
-           <div class="footer-widget">
-             <div class="f-about">
-               <div class="f-widget-title">
-                 <h2><img src="/image/park-control-logo.png" alt="img" /></h2>
-               </div>
-               <p>
-                 A pioneer in extending customized solutions and supply of
+        </div>
+        <div class="offcanvas-overly"></div>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <!-- footer -->
+        <footer class="footer-bg footer-p" style="background-color: #222222">
+            <div class="footer-top pt-100 pb-100">
+                <div class="container">
+                    <div class="row justify-content-between">
+                        <div class="col-xl-4 col-lg-3 col-sm-4">
+                            <div class="footer-widget">
+                                <div class="f-about">
+                                    <div class="f-widget-title">
+                                        <h2>
+                                            <img src="/image/park-control-logo.png" alt="img" /></h2>
+                                    </div>
+                                    <p>
+                                        A pioneer in extending customized solutions and supply of
                  products for the Indian Defence, Aerospace, Space and other
                  Industrial applications. Park Controls and Communications Private Limited (PCC), PCC for short is well known within the Indian Defence
                  and Aerospace sector.
-               </p>
-               <img
-                 src="/image/Signature-PARK-CONTROLS-COMMUNICATIONS-P-LTD-3.jpg"
-                 alt=""
-               />
-             </div>
-           </div>
-         </div>
-         <div class="col-xl-3 col-lg-3 col-sm-6">
-           <div class="footer-widget">
-             <div class="f-widget-title">
-               <h2>Locations</h2>
-             </div>
-             <div class="footer-link">
-               <ul>
-                 <li>
-                   <h3>India Office</h3>
-                   <a href="#"
-                     >2716, Suranjan Das Rd, Rd, HAL 3rd Stage, Bhoomi Reddy
-                     Colony, New Tippasandra, Bengaluru, Karnataka 560075</a
-                   >
-                 </li>
-                 <%--<li>
+                                    </p>
+                                    <img
+                                        src="/image/Signature-PARK-CONTROLS-COMMUNICATIONS-P-LTD-3.jpg"
+                                        alt="" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-sm-6">
+                            <div class="footer-widget">
+                                <div class="f-widget-title">
+                                    <h2>Locations</h2>
+                                </div>
+                                <div class="footer-link">
+                                    <ul>
+                                        <li>
+                                            <h3>India Office</h3>
+                                            <a href="#">2716, Suranjan Das Rd, Rd, HAL 3rd Stage, Bhoomi Reddy
+                     Colony, New Tippasandra, Bengaluru, Karnataka 560075</a>
+                                        </li>
+                                        <%--<li>
                    <h3>Singapore Office</h3>
                    <a href="#">
                      171 Chin Swee Road, #02-02 CES Centre, Singapore
                      169877</a
                    >
                  </li>--%>
-               </ul>
-             </div>
-           </div>
-         </div>
-         <div class="col-xl-2 col-lg-3 col-sm-6">
-           <div class="footer-widget">
-             <div class="f-widget-title">
-               <h2>Contact US</h2>
-             </div>
-             <div class="footer-link">
-               <ul>
-                 <li>
-                   <div class="contact-wrap">
-                     <h3>Email</h3>
-                     <a href="mailto:info@parkcontrols.com">
-                       info@parkcontrols.com
-                     </a>
-                   </div>
-                 </li>
-                 <li>
-                   <div class="contact-wrap">
-                     <h3>Phone</h3>
-                     <a href="tel:+918025292513"> +91 80252 92513</a>
-                   </div>
-                 </li>
-                 <li class="business-hours">
-                   <div class="contact-wrap">
-                     <h3>Business Hours</h3>
-                     <p>9:00AM – 5:30PM Mon – Fri</p>
-                     <p>9:00AM – 1:00PM Sat</p>
-                     <p>Dayoff – Second Sat & Sun</p>
-                   </div>
-                 </li>
-               </ul>
-             </div>
-           </div>
-         </div>
-         <div class="col-xl-2 col-lg-3 col-sm-6">
-           <div class="footer-widget">
-             <div class="f-widget-title">
-               <h2>Our Services</h2>
-             </div>
-             <div class="footer-link">
-               <ul class="quick-links">
-                 <li><a href="#">Excellence Solutions</a></li>
-                 <li><a href="#"> Industrial Services</a></li>
-                 <li><a href="#"> TitanTech Solutions </a></li>
-                 <li><a href="#"> Innovations Group</a></li>
-                 <li><a href="#">PowerEdge Services </a></li>
-               </ul>
-             </div>
-           </div>
-         </div>
-       </div>
-     </div>
-   </div>
-   <div class="copyright-wrap">
-     <div class="container">
-       <div class="row align-items-center">
-         <div class="col-lg-12">
-           <div class="copy-text text-center">
-             Copyright &copy; 2024 All rights reserved by Park Controls &
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-3 col-sm-6">
+                            <div class="footer-widget">
+                                <div class="f-widget-title">
+                                    <h2>Contact US</h2>
+                                </div>
+                                <div class="footer-link">
+                                    <ul>
+                                        <li>
+                                            <div class="contact-wrap">
+                                                <h3>Email</h3>
+                                                <a href="mailto:info@parkcontrols.com">info@parkcontrols.com
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="contact-wrap">
+                                                <h3>Phone</h3>
+                                                <a href="tel:+918025292513">+91 80252 92513</a>
+                                            </div>
+                                        </li>
+                                        <li class="business-hours">
+                                            <div class="contact-wrap">
+                                                <h3>Business Hours</h3>
+                                                <p>9:00AM – 5:30PM Mon – Fri</p>
+                                                <p>9:00AM – 1:00PM Sat</p>
+                                                <p>Dayoff – Second Sat & Sun</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-3 col-sm-6">
+                            <div class="footer-widget">
+                                <div class="f-widget-title">
+                                    <h2>Our Services</h2>
+                                </div>
+                                <div class="footer-link">
+                                    <ul class="quick-links">
+                                        <li><a href="#">Excellence Solutions</a></li>
+                                        <li><a href="#">Industrial Services</a></li>
+                                        <li><a href="#">TitanTech Solutions </a></li>
+                                        <li><a href="#">Innovations Group</a></li>
+                                        <li><a href="#">PowerEdge Services </a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright-wrap">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-12">
+                            <div class="copy-text text-center">
+                                Copyright &copy; 2024 All rights reserved by Park Controls &
              Communications. | Design By
              <a href="https://www.nextwebi.com/" target="_blank">NextWebi</a>
-           </div>
-         </div>
-       </div>
-     </div>
-   </div>
- </footer>
- <!-- footer-end -->
-        <a href="#" class="float" >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer-end -->
+        <a href="#" class="float">
             <img src="/image/chat.png" />
-</a>
+        </a>
 
 
- <!-- JS here -->
- <script src="/js/vendor/modernizr-3.5.0.min.js"></script>
- <script src="/js/vendor/jquery-3.6.0.min.js"></script>
- <script src="/js/popper.min.js"></script>
- <script src="/js/bootstrap.min.js"></script>
- <script src="/js/slick.min.js"></script>
-<%-- <script src="js/ajax-form.js"></script>--%>
- <script src="/js/paroller.js"></script>
- <script src="/js/wow.min.js"></script>
- <script src="/js/js_isotope.pkgd.min.js"></script>
- <script src="/js/imagesloaded.min.js"></script>
- <script src="/js/parallax.min.js"></script>
- <script src="/js/jquery.waypoints.min.js"></script>
- <script src="/js/jquery.counterup.min.js"></script>
- <script src="/js/jquery.scrollUp.min.js"></script>
- <script src="/js/jquery.meanmenu.min.js"></script>
- <script src="/js/parallax-scroll.js"></script>
- <script src="/js/swiper.min.js"></script>
- <script src="/js/jquery.magnific-popup.min.js"></script>
- <script src="/js/element-in-view.js"></script>
- <script src="/js/vanilla-tilt.js"></script>
- <script src="/js/main.js"></script>
+        <!-- JS here -->
+        <script src="/js/vendor/modernizr-3.5.0.min.js"></script>
+        <script src="/js/vendor/jquery-3.6.0.min.js"></script>
+        <script src="/js/popper.min.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+        <script src="/js/slick.min.js"></script>
+        <%-- <script src="js/ajax-form.js"></script>--%>
+        <script src="/js/paroller.js"></script>
+        <script src="/js/wow.min.js"></script>
+        <script src="/js/js_isotope.pkgd.min.js"></script>
+        <script src="/js/imagesloaded.min.js"></script>
+        <script src="/js/parallax.min.js"></script>
+        <script src="/js/jquery.waypoints.min.js"></script>
+        <script src="/js/jquery.counterup.min.js"></script>
+        <script src="/js/jquery.scrollUp.min.js"></script>
+        <script src="/js/jquery.meanmenu.min.js"></script>
+        <script src="/js/parallax-scroll.js"></script>
+        <script src="/js/swiper.min.js"></script>
+        <script src="/js/jquery.magnific-popup.min.js"></script>
+        <script src="/js/element-in-view.js"></script>
+        <script src="/js/vanilla-tilt.js"></script>
+        <script src="/js/main.js"></script>
+       
         <script>
-            $(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
-    event.preventDefault();
-    $(this).ekkoLightbox();
-});
+            $(document).delegate('*[data-toggle="lightbox"]', 'click', function (event) {
+                event.preventDefault();
+                $(this).ekkoLightbox();
+            });
         </script>
         <script>
             var swiper = new Swiper(".bolg-slider", {
                 speed: 1500,
                 slidesPerView: 4,
                 spaceBetween: 30,
-               
+
                 navigation: {
                     nextEl: ".next-5",
                     prevEl: ".prev-5",
@@ -482,28 +483,28 @@
             //    swiper.slidePrev(); // Move slider to the previous slide
             //});
         </script>
-     <script>
-         var swiper = new Swiper(".mySwiper", {
-             spaceBetween: 10,
-             slidesPerView: 4,
-             freeMode: true,
-             watchSlidesProgress: true,
-         });
-         var swiper2 = new Swiper(".mySwiper2", {
-             spaceBetween: 10,
-             navigation: {
-                 nextEl: ".swiper-button-next",
-                 prevEl: ".swiper-button-prev",
-             },
-             thumbs: {
-                 swiper: swiper,
-             },
-         });
+        <script>
+            var swiper = new Swiper(".mySwiper", {
+                spaceBetween: 10,
+                slidesPerView: 4,
+                freeMode: true,
+                watchSlidesProgress: true,
+            });
+            var swiper2 = new Swiper(".mySwiper2", {
+                spaceBetween: 10,
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                thumbs: {
+                    swiper: swiper,
+                },
+            });
 
 
 
-     </script>
-         
+        </script>
+
 
     </form>
 </body>

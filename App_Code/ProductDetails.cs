@@ -24,11 +24,13 @@ public class ProductDetails
     public string ThumbImage { get; set; }
     public string SKUCode { get; set; }
     public string Broucher { get; set; }
+    public string IndustryPDF {  get; set; }
     public string DatasheetName { get; set; }
     public string DatasheetLink { get; set; }
     public string Enquiry {  get; set; }
     public string Capability {  get; set; }
     public string SubCapability { get; set; }
+    public string ProductOrder { get; set; }
     public string Industry { get; set; }
     public string FullDesc { get; set; }
     public string RelatedProducts { get; set; }
@@ -65,8 +67,10 @@ public class ProductDetails
                     pro.ThumbImage = Convert.ToString(dt.Rows[0]["ThumbImage"]);
                     pro.SKUCode = Convert.ToString(dt.Rows[0]["SKUCode"]);
                     pro.Broucher = Convert.ToString(dt.Rows[0]["Broucher"]);
+                    pro.IndustryPDF = Convert.ToString(dt.Rows[0]["IndustryPDF"]);
                     pro.DatasheetName = Convert.ToString(dt.Rows[0]["DatasheetName"]);
                     pro.DatasheetLink = Convert.ToString(dt.Rows[0]["DatasheetLink"]);
+                    pro.ProductOrder = Convert.ToString(dt.Rows[0]["ProductOrder"]);
                     pro.Enquiry = Convert.ToString(dt.Rows[0]["Enquiry"]);
                     pro.Capability = Convert.ToString(dt.Rows[0]["Capability"]);
                     pro.SubCapability = Convert.ToString(dt.Rows[0]["SubCapability"]);
@@ -99,7 +103,7 @@ public class ProductDetails
         int result = 0;
         try
         {
-            string query = "Update ProductDetails Set ProductName=@ProductName,ProductUrl=@ProductUrl,Industry=@Industry,ThumbImage=@ThumbImage,SKUCode=@SKUCode,Broucher=@Broucher,DatasheetName=@DatasheetName,DatasheetLink=@DatasheetLink,Enquiry=@Enquiry,Capability=@Capability,SubCapability=@SubCapability,FullDesc=@FullDesc,PageTitle=@PageTitle,MetaKeys=@MetaKeys,MetaDesc=@MetaDesc,AddedOn=@AddedOn,AddedBy=@AddedBy,AddedIp=@AddedIp,Status=@Status Where Id=@Id ";
+            string query = "Update ProductDetails Set ProductName=@ProductName,ProductUrl=@ProductUrl,Industry=@Industry,ThumbImage=@ThumbImage,SKUCode=@SKUCode,Broucher=@Broucher,IndustryPDF=@IndustryPDF,DatasheetName=@DatasheetName,DatasheetLink=@DatasheetLink,ProductOrder=@ProductOrder,Enquiry=@Enquiry,Capability=@Capability,SubCapability=@SubCapability,FullDesc=@FullDesc,PageTitle=@PageTitle,MetaKeys=@MetaKeys,MetaDesc=@MetaDesc,AddedOn=@AddedOn,AddedBy=@AddedBy,AddedIp=@AddedIp,Status=@Status Where Id=@Id ";
             using (SqlCommand cmd = new SqlCommand(query, _con))
             {
                 cmd.Parameters.AddWithValue("@Id", SqlDbType.Int).Value = cat.Id;
@@ -108,8 +112,10 @@ public class ProductDetails
                 cmd.Parameters.AddWithValue("@ThumbImage", SqlDbType.NVarChar).Value = cat.ThumbImage;
                 cmd.Parameters.AddWithValue("@SKUCode", SqlDbType.NVarChar).Value = cat.SKUCode;
                 cmd.Parameters.AddWithValue("@Broucher", SqlDbType.NVarChar).Value = cat.Broucher;
+                cmd.Parameters.AddWithValue("@IndustryPDF", SqlDbType.NVarChar).Value = cat.IndustryPDF;
                 cmd.Parameters.AddWithValue("@DatasheetName", SqlDbType.NVarChar).Value = cat.DatasheetName;
                 cmd.Parameters.AddWithValue("@DatasheetLink", SqlDbType.NVarChar).Value = cat.DatasheetLink;
+                cmd.Parameters.AddWithValue("@ProductOrder", SqlDbType.NVarChar).Value = cat.ProductOrder;
                 cmd.Parameters.AddWithValue("@Enquiry", SqlDbType.NVarChar).Value = cat.Enquiry;
                 cmd.Parameters.AddWithValue("@Capability", SqlDbType.NVarChar).Value = cat.Capability;
                 cmd.Parameters.AddWithValue("@SubCapability", SqlDbType.NVarChar).Value = cat.SubCapability;
@@ -140,8 +146,8 @@ public class ProductDetails
 
         try
         {
-            string query = "Insert Into ProductDetails (ProductGuid,ProductName,ProductUrl,ThumbImage,SKUCode,Broucher,DatasheetName,DatasheetLink,Enquiry,Capability,SubCapability,Industry,FullDesc,PageTitle,MetaKeys,MetaDesc,AddedBy,AddedOn,AddedIp,Status) values" +
-                           "(@ProductGuid,@ProductName,@ProductUrl,@ThumbImage,@SKUCode,@Broucher,@DatasheetName,@DatasheetLink,@Enquiry,@Capability,@SubCapability,@Industry,@FullDesc,@PageTitle,@MetaKeys,@MetaDesc,@AddedBy,@AddedOn,@AddedIp,@Status)";
+            string query = "Insert Into ProductDetails (ProductGuid,ProductName,ProductUrl,ThumbImage,SKUCode,Broucher,IndustryPDF,DatasheetName,DatasheetLink,ProductOrder,Enquiry,Capability,SubCapability,Industry,FullDesc,PageTitle,MetaKeys,MetaDesc,AddedBy,AddedOn,AddedIp,Status) values" +
+                           "(@ProductGuid,@ProductName,@ProductUrl,@ThumbImage,@SKUCode,@Broucher,@IndustryPDF,@DatasheetName,@DatasheetLink,@Enquiry,@Capability,@SubCapability,@Industry,@FullDesc,@PageTitle,@MetaKeys,@MetaDesc,@AddedBy,@AddedOn,@AddedIp,@Status)";
             using (SqlCommand cmd = new SqlCommand(query, _con))
             {
                 cmd.Parameters.AddWithValue("@ProductName", SqlDbType.NVarChar).Value = cat.ProductName;
@@ -150,8 +156,10 @@ public class ProductDetails
                 cmd.Parameters.AddWithValue("@ThumbImage", SqlDbType.NVarChar).Value = cat.ThumbImage;
                 cmd.Parameters.AddWithValue("@SKUCode", SqlDbType.NVarChar).Value = cat.SKUCode;
                 cmd.Parameters.AddWithValue("@Broucher", SqlDbType.NVarChar).Value = cat.Broucher;
+                cmd.Parameters.AddWithValue("@IndustryPDF", SqlDbType.NVarChar).Value = cat.IndustryPDF;
                 cmd.Parameters.AddWithValue("@DatasheetName", SqlDbType.NVarChar).Value = cat.DatasheetName;
                 cmd.Parameters.AddWithValue("@DatasheetLink", SqlDbType.NVarChar).Value = cat.DatasheetLink;
+                cmd.Parameters.AddWithValue("@ProductOrder", SqlDbType.NVarChar).Value = cat.ProductOrder;
                 cmd.Parameters.AddWithValue("@Enquiry", SqlDbType.NVarChar).Value = cat.Enquiry;
                 cmd.Parameters.AddWithValue("@Capability", SqlDbType.NVarChar).Value = cat.Capability;
                 cmd.Parameters.AddWithValue("@SubCapability", SqlDbType.NVarChar).Value = cat.SubCapability;
@@ -198,8 +206,10 @@ public class ProductDetails
                             ThumbImage = Convert.ToString(dr["ThumbImage"]),
                             SKUCode = Convert.ToString(dr["SKUCode"]),
                             Broucher = Convert.ToString(dr["Broucher"]),
+                            IndustryPDF = Convert.ToString(dr["IndustryPDF"]),
                             DatasheetName = Convert.ToString(dr["DatasheetName"]),
                             DatasheetLink = Convert.ToString(dr["DatasheetLink"]),
+                            ProductOrder = Convert.ToString(dr["ProductOrder"]),
                             Enquiry = Convert.ToString(dr["Enquiry"]),
                             Capability = Convert.ToString(dr["Capability"]),
                             SubCapability = Convert.ToString(dr["SubCapability"]),
@@ -270,8 +280,10 @@ public class ProductDetails
                                  ThumbImage = Convert.ToString(dr["ThumbImage"]),
                                  SKUCode = Convert.ToString(dr["SKUCode"]),
                                  Broucher = Convert.ToString(dr["Broucher"]),
+                                 IndustryPDF = Convert.ToString(dr["IndustryPDF"]),
                                  DatasheetName = Convert.ToString(dr["DatasheetName"]),
                                  DatasheetLink = Convert.ToString(dr["DatasheetLink"]),
+                                 ProductOrder = Convert.ToString(dr["ProductOrder"]),
                                  Enquiry = Convert.ToString(dr["Enquiry"]),
                                  Capability = Convert.ToString(dr["Capability"]),
                                  SubCapability = Convert.ToString(dr["SubCapability"]),
@@ -376,8 +388,10 @@ FETCH NEXT @pageLength ROWS ONLY;";
                           ThumbImage = Convert.ToString(dr["ThumbImage"]),
                           SKUCode = Convert.ToString(dr["SKUCode"]),
                           Broucher = Convert.ToString(dr["Broucher"]),
+                          IndustryPDF = Convert.ToString(dr["IndustryPDF"]),
                           DatasheetName = Convert.ToString(dr["DatasheetName"]),
                           DatasheetLink = Convert.ToString(dr["DatasheetLink"]),
+                          ProductOrder = Convert.ToString(dr["ProductOrder"]),
                           Enquiry = Convert.ToString(dr["Enquiry"]),
                           Capability = Convert.ToString(dr["Capability"]),
                           SubCapability = Convert.ToString(dr["SubCapability"]),
@@ -407,7 +421,7 @@ FETCH NEXT @pageLength ROWS ONLY;";
         List<ProductDetails> pro = new List<ProductDetails>();
         try
         {
-            string query = @"select * from ProductDetails Where SubCapability=@SubCapability and status='Active'";
+            string query = @"select * from ProductDetails Where SubCapability=@SubCapability and status='Active' Order By Try_Convert(int,ProductOrder)";
             using (SqlCommand cmd = new SqlCommand(query, conSQ))
             {
                 // cmd.Parameters.AddWithValue("@id", SqlDbType.NVarChar).Value = id;
@@ -426,8 +440,10 @@ FETCH NEXT @pageLength ROWS ONLY;";
                                   ThumbImage = Convert.ToString(dr["ThumbImage"]),
                                   SKUCode = Convert.ToString(dr["SKUCode"]),
                                   Broucher = Convert.ToString(dr["Broucher"]),
+                                  IndustryPDF = Convert.ToString(dr["IndustryPDF"]),
                                   DatasheetName = Convert.ToString(dr["DatasheetName"]),
                                   DatasheetLink = Convert.ToString(dr["DatasheetLink"]),
+                                  ProductOrder = Convert.ToString(dr["ProductOrder"]),
                                   Enquiry = Convert.ToString(dr["Enquiry"]),
                                   Capability = Convert.ToString(dr["Capability"]),
                                   SubCapability = Convert.ToString(dr["SubCapability"]),
@@ -470,8 +486,10 @@ FETCH NEXT @pageLength ROWS ONLY;";
                     pro.ThumbImage = Convert.ToString(dt.Rows[0]["ThumbImage"]);
                     pro.SKUCode = Convert.ToString(dt.Rows[0]["SKUCode"]);
                     pro.Broucher = Convert.ToString(dt.Rows[0]["Broucher"]);
+                    pro.IndustryPDF = Convert.ToString(dt.Rows[0]["IndustryPDF"]);
                     pro.DatasheetName = Convert.ToString(dt.Rows[0]["DatasheetName"]);
                     pro.DatasheetLink = Convert.ToString(dt.Rows[0]["DatasheetLink"]);
+                    pro.ProductOrder = Convert.ToString(dt.Rows[0]["ProductOrder"]);
                     pro.Enquiry = Convert.ToString(dt.Rows[0]["Enquiry"]);
                     pro.Capability = Convert.ToString(dt.Rows[0]["Capability"]);
                     pro.SubCapability = Convert.ToString(dt.Rows[0]["SubCapability"]);
@@ -522,8 +540,10 @@ FETCH NEXT @pageLength ROWS ONLY;";
                                   ThumbImage = Convert.ToString(dr["ThumbImage"]),
                                   SKUCode = Convert.ToString(dr["SKUCode"]),
                                   Broucher = Convert.ToString(dr["Broucher"]),
+                                  IndustryPDF = Convert.ToString(dr["IndustryPDF"]),
                                   DatasheetName = Convert.ToString(dr["DatasheetName"]),
                                   DatasheetLink = Convert.ToString(dr["DatasheetLink"]),
+                                  ProductOrder = Convert.ToString(dr["ProductOrder"]),
                                   Enquiry = Convert.ToString(dr["Enquiry"]),
                                   Capability = Convert.ToString(dr["Capability"]),
                                   SubCapability = Convert.ToString(dr["SubCapability"]),
@@ -565,8 +585,10 @@ FETCH NEXT @pageLength ROWS ONLY;";
                                       ThumbImage = Convert.ToString(dr["ThumbImage"]),
                                       SKUCode = Convert.ToString(dr["SKUCode"]),
                                       Broucher = Convert.ToString(dr["Broucher"]),
+                                      IndustryPDF = Convert.ToString(dr["IndustryPDF"]),
                                       DatasheetName = Convert.ToString(dr["DatasheetName"]),
                                       DatasheetLink = Convert.ToString(dr["DatasheetLink"]),
+                                      ProductOrder = Convert.ToString(dr["ProductOrder"]),
                                       Enquiry = Convert.ToString(dr["Enquiry"]),
                                       Capability = Convert.ToString(dr["Capability"]),
                                       SubCapability = Convert.ToString(dr["SubCapability"]),
@@ -613,7 +635,81 @@ FETCH NEXT @pageLength ROWS ONLY;";
         }
         return result;
     }
-   
+    public static int UpdateProductOrder(SqlConnection conSQ, ProductDetails cat)
+    {
+        int result = 0;
+        try
+        {
+            string query = "Update ProductDetails Set AddedOn=@AddedOn,AddedIp=@AddedIp,ProductOrder=@ProductOrder Where Id=@Id ";
+            using (SqlCommand cmd = new SqlCommand(query, conSQ))
+            {
+                cmd.Parameters.AddWithValue("@Id", SqlDbType.NVarChar).Value = cat.Id;
+                cmd.Parameters.AddWithValue("@ProductOrder", SqlDbType.NVarChar).Value = cat.ProductOrder;
+                cmd.Parameters.AddWithValue("@AddedOn", SqlDbType.NVarChar).Value = TimeStamps.UTCTime();
+                cmd.Parameters.AddWithValue("@AddedIp", SqlDbType.NVarChar).Value = CommonModel.IPAddress();
+                conSQ.Open();
+                result = cmd.ExecuteNonQuery();
+                conSQ.Close();
+            }
+        }
+        catch (Exception ex)
+        {
+            ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "UpdateProductOrder", ex.Message);
+        }
+        return result;
+    }
+    public static List<ProductDetails> GetAllProductDetails(SqlConnection conSQ)
+    {
+        var ListOfBolgs = new List<ProductDetails>();
+        try
+        {
+            string query = "Select * from ProductDetails where Status !='Deleted' Order by Id desc ";
+            using (SqlCommand cmd = new SqlCommand(query, conSQ))
+            {
+                cmd.Parameters.AddWithValue("@Status", SqlDbType.NVarChar).Value = "Deleted";
+
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                ListOfBolgs = (from DataRow dr in dt.Rows
+                               select new ProductDetails()
+                               {
+                                   Id = Convert.ToInt32(Convert.ToString(dr["Id"])),
+                                   ProductGuid = Convert.ToString(dr["ProductGuid"]),
+                                   ProductName = Convert.ToString(dr["ProductName"]),
+                                   ProductUrl = Convert.ToString(dr["ProductUrl"]),
+                                   ThumbImage = Convert.ToString(dr["ThumbImage"]),
+                                   SKUCode = Convert.ToString(dr["SKUCode"]),
+                                   Broucher = Convert.ToString(dr["Broucher"]),
+                                   IndustryPDF = Convert.ToString(dr["IndustryPDF"]),
+                                   DatasheetName = Convert.ToString(dr["DatasheetName"]),
+                                   DatasheetLink = Convert.ToString(dr["DatasheetLink"]),
+                                   ProductOrder = Convert.ToString(dr["ProductOrder"]),
+                                   Enquiry = Convert.ToString(dr["Enquiry"]),
+                                   Capability = Convert.ToString(dr["Capability"]),
+                                   SubCapability = Convert.ToString(dr["SubCapability"]),
+                                   //CapabilityTitle = Convert.ToString(dr["CapabilityTitle"]),
+                                   //SubcapabilityTitle = Convert.ToString(dr["SubcapabilityTitle"]),
+                                   //IndustryTitle = Convert.ToString(dr["IndustryTitle"]),
+                                   Industry = Convert.ToString(dr["Industry"]),
+                                   FullDesc = Convert.ToString(dr["FullDesc"]),
+                                   PageTitle = Convert.ToString(dr["PageTitle"]),
+                                   MetaKeys = Convert.ToString(dr["MetaKeys"]),
+                                   MetaDesc = Convert.ToString(dr["MetaDesc"]),
+                                   AddedOn = Convert.ToDateTime(Convert.ToString(dr["AddedOn"])),
+                                   AddedBy = Convert.ToString(dr["AddedBy"]),
+                                   AddedIp = Convert.ToString(dr["AddedIp"]),
+                                   Status = Convert.ToString(dr["Status"])
+
+                               }).ToList();
+            }
+        }
+        catch (Exception ex)
+        {
+            ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "GetAllProductDetails", ex.Message);
+        }
+        return ListOfBolgs;
+    }
 }
 
 

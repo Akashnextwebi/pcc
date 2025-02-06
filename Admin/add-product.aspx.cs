@@ -13,7 +13,7 @@ using System.Web.UI.WebControls;
 public partial class Admin_add_product : System.Web.UI.Page
 {
     SqlConnection conSQ = new SqlConnection(ConfigurationManager.ConnectionStrings["conSQ"].ConnectionString);
-    public string strThumbImage = "", strUploadPDF = "";
+    public string strThumbImage = "", strUploadPDF = "", strIndustryPDF="";
     protected void Page_Load(object sender, EventArgs e)
     {
         if (!IsPostBack)
@@ -43,8 +43,9 @@ public partial class Admin_add_product : System.Web.UI.Page
                 ddlCapabilityType.SelectedValue = pro.Capability;
                 BindSubCapability();
                 ddlSubcapability.SelectedValue = pro.SubCapability;
-                ddlindustry.SelectedValue= pro.Industry;
-               // txtlink.Text = pro.DatasheetLink;
+                GetIndustry(pro.Industry);
+                // ddlindustry.SelectedValue= pro.Industry;
+                // txtlink.Text = pro.DatasheetLink;
                 txtDesc.Text = pro.FullDesc;
                 txtMetaDesc.Text = pro.MetaDesc;
                 txtMetaKey.Text = pro.MetaKeys;
@@ -61,6 +62,12 @@ public partial class Admin_add_product : System.Web.UI.Page
                 {
                     strUploadPDF = "<a href='/" + pro.Broucher + @"'><img src='assets/images/PDF.png' style='max-height:60px;' class='img-fluid'/></a>";
                     lblPDF.Text = pro.Broucher;
+
+                }
+                if (pro.IndustryPDF != "")
+                {
+                    strIndustryPDF = "<a href='/" + pro.IndustryPDF + @"'><img src='assets/images/PDF.png' style='max-height:60px;' class='img-fluid'/></a>";
+                    lblindustry.Text = pro.IndustryPDF;
 
                 }
                 divimg.Visible = true;
@@ -145,7 +152,7 @@ public partial class Admin_add_product : System.Web.UI.Page
                 ddlindustry.DataTextField = "IndustryName";
                 ddlindustry.DataValueField = "Id";
                 ddlindustry.DataBind();
-                ddlindustry.Items.Insert(0, new ListItem { Value = "0", Text = "Select Industry Name" });
+                ddlindustry.Items.Insert(0, new ListItem { Value = "",  });
             }
         }
         catch (Exception ex)
@@ -318,7 +325,18 @@ public partial class Admin_add_product : System.Web.UI.Page
                 }
                 if (Uploadpdf == "Size")
                 {
-                    ScriptManager.RegisterStartupScript(this, this.GetType(), "Message", "Snackbar.show({pos: 'top-right',text: 'Invalid image size.Please upload correct PDF Size',actionTextColor: '#fff',backgroundColor: '#ea1c1c'});", true);
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "Message", "Snackbar.show({pos: 'top-right',text: 'Invalid Broucherpdf size.Please upload correct PDF Size',actionTextColor: '#fff',backgroundColor: '#ea1c1c'});", true);
+                    return;
+                }
+                var Industrypdf = CheckIndustryPDFFormat();
+                if (Industrypdf == "Format")
+                {
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "Message", "Snackbar.show({pos: 'top-right',text: 'Invalid PDF format. Please upload .pdf, .doc, for PDF',actionTextColor: '#fff',backgroundColor: '#ea1c1c'});", true);
+                    return;
+                }
+                if (Industrypdf == "Size")
+                {
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "Message", "Snackbar.show({pos: 'top-right',text: 'Invalid IndustryPdf size.Please upload correct PDF Size',actionTextColor: '#fff',backgroundColor: '#ea1c1c'});", true);
                     return;
                 }
 
@@ -333,6 +351,7 @@ public partial class Admin_add_product : System.Web.UI.Page
                 pro.SKUCode = txtcode.Text.Trim();
                 pro.DatasheetName = "";
                 pro.DatasheetLink = "";
+                pro.ProductOrder = "0";
                 pro.Enquiry = chkenquiry.Checked ? "Yes" : "No";
                 pro.Capability = SaveCapability();
                 pro.SubCapability = SaveSubCapability();
@@ -343,6 +362,7 @@ public partial class Admin_add_product : System.Web.UI.Page
                 pro.PageTitle = txtPageTitle.Text.Trim();
                 pro.ThumbImage = UploadThumbImage();
                 pro.Broucher = UploadPDFSheet();
+                pro.IndustryPDF = UploadIndustryPDFSheet();
                 pro.AddedIp = CommonModel.IPAddress();
                 pro.AddedOn = TimeStamps.UTCTime();
                 pro.AddedBy = aid;
@@ -541,6 +561,75 @@ public partial class Admin_add_product : System.Web.UI.Page
 
         #endregion
         return Uploadpdf;
+    }
+    //IndustryPDF
+    private string CheckIndustryPDFFormat()
+    {
+        #region PDF
+        string Industrypdf = "";
+        if (IndustryPDF.HasFile)
+        {
+            try
+            {
+                string fileExtension = Path.GetExtension(IndustryPDF.PostedFile.FileName.ToLower()), ImageGuid1 = Guid.NewGuid().ToString();
+                if ((fileExtension == ".pdf" || fileExtension == ".doc"))
+                {
+                    string iconPath = Server.MapPath(".") + "\\../Uploadpdf\\" + ImageGuid1 + "-AprImg" + fileExtension;
+                    System.Drawing.Bitmap bitimg = new System.Drawing.Bitmap(IndustryPDF.PostedFile.InputStream);
+                }
+                else
+                {
+
+                    return "Format";
+                }
+            }
+            catch (Exception ex)
+            {
+                ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "CheckIndustryPDFFormat", ex.Message);
+
+            }
+        }
+        #endregion
+        return Industrypdf;
+    }
+    public string UploadIndustryPDFSheet()
+    {
+        #region PDF file
+        string Industrypdf = "";
+        try
+        {
+            if (IndustryPDF.HasFile)
+            {
+                string fileExtension = Path.GetExtension(IndustryPDF.PostedFile.FileName.ToLower()), ImageGuid1 = Guid.NewGuid().ToString() + "-pdf".Replace(" ", "-").Replace(".", "");
+                string iconPath = Server.MapPath(".") + "\\../Uploadpdf\\" + ImageGuid1 + "" + fileExtension;
+                try
+                {
+                    if (File.Exists(Server.MapPath("~/" + Convert.ToString(lblindustry.Text))))
+                    {
+                        File.Delete(Server.MapPath("~/" + Convert.ToString(lblindustry.Text)));
+                    }
+                }
+                catch (Exception eeex)
+                {
+                    ExceptionCapture.CaptureException(Request.Url.PathAndQuery, "UploadIndustryPDFSheet", eeex.Message);
+                    return lblindustry.Text;
+                }
+                IndustryPDF.SaveAs(iconPath);
+                Industrypdf = "Uploadpdf/" + ImageGuid1 + "" + fileExtension;
+            }
+            else
+            {
+                Industrypdf = lblindustry.Text;
+            }
+        }
+        catch (Exception ex)
+        {
+            ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "UploadIndustryPDFSheet", ex.Message);
+
+        }
+
+        #endregion
+        return Industrypdf;
     }
     protected void btnNew_Click(object sender, EventArgs e)
     {

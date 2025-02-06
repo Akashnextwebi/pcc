@@ -22,6 +22,7 @@ public class Capability
     public string BannerTitle {  get; set; }
     public string DescHeading {  get; set; }
     public string FullDesc { get; set; }
+    public string CompetenciesOrder {  get; set; }
     public string BannerImage { get; set; }
     public DateTime AddedOn { get; set; }
     public string AddedIp {  get; set; }
@@ -53,6 +54,7 @@ public class Capability
                                   BannerTitle = Convert.ToString(dr["BannerTitle"]),
                                   DescHeading = Convert.ToString(dr["DescHeading"]),
                                   FullDesc = Convert.ToString(dr["FullDesc"]),
+                                  CompetenciesOrder = Convert.ToString(dr["CompetenciesOrder"]),
                                   BannerImage = Convert.ToString(dr["BannerImage"]),
                                   AddedOn = Convert.ToDateTime(Convert.ToString(dr["AddedOn"])),
                                   AddedBy = Convert.ToString(dr["AddedBy"]),
@@ -74,7 +76,7 @@ public class Capability
         int result = 0;
         try
         {
-            string query = "Update Capability Set CapabilityName=@CapabilityName,CapabilityUrl=@CapabilityUrl,BannerTitle=@BannerTitle,DescHeading=@DescHeading,FullDesc=@FullDesc,BannerImage=@BannerImage,AddedOn=@AddedOn,AddedIp=@AddedIp,AddedBy=@AddedBy,Status=@Status Where Id=@Id ";
+            string query = "Update Capability Set CapabilityName=@CapabilityName,CapabilityUrl=@CapabilityUrl,BannerTitle=@BannerTitle,DescHeading=@DescHeading,FullDesc=@FullDesc,CompetenciesOrder=@CompetenciesOrder,BannerImage=@BannerImage,AddedOn=@AddedOn,AddedIp=@AddedIp,AddedBy=@AddedBy,Status=@Status Where Id=@Id ";
             using (SqlCommand cmd = new SqlCommand(query, conSQ))
             {
                 cmd.Parameters.AddWithValue("@id", SqlDbType.Int).Value = cat.Id;
@@ -83,6 +85,7 @@ public class Capability
                 cmd.Parameters.AddWithValue("@BannerTitle", SqlDbType.NVarChar).Value = cat.BannerTitle;
                 cmd.Parameters.AddWithValue("@DescHeading", SqlDbType.NVarChar).Value = cat.DescHeading;
                 cmd.Parameters.AddWithValue("@FullDesc", SqlDbType.NVarChar).Value = cat.FullDesc;
+                cmd.Parameters.AddWithValue("@CompetenciesOrder", SqlDbType.NVarChar).Value = cat.CompetenciesOrder;
                 cmd.Parameters.AddWithValue("@BannerImage", SqlDbType.NVarChar).Value = cat.BannerImage;
                 cmd.Parameters.AddWithValue("@AddedOn", SqlDbType.NVarChar).Value = cat.AddedOn;
                 cmd.Parameters.AddWithValue("@AddedIp", SqlDbType.NVarChar).Value = cat.AddedIp;
@@ -105,7 +108,7 @@ public class Capability
 
         try
         {
-            string query = "Insert Into Capability (CapabilityName,CapabilityUrl,BannerTitle,DescHeading,FullDesc,BannerImage,AddedOn,AddedBy, AddedIp,Status) values(@CapabilityName,@CapabilityUrl,@BannerTitle,@DescHeading,@FullDesc,@BannerImage,@AddedOn,@AddedBy,@AddedIp,@Status) ";
+            string query = "Insert Into Capability (CapabilityName,CapabilityUrl,BannerTitle,DescHeading,FullDesc,CompetenciesOrder,BannerImage,AddedOn,AddedBy, AddedIp,Status) values(@CapabilityName,@CapabilityUrl,@BannerTitle,@DescHeading,@FullDesc,@CompetenciesOrder,@BannerImage,@AddedOn,@AddedBy,@AddedIp,@Status) ";
             using (SqlCommand cmd = new SqlCommand(query, conSQ))
             {
                 cmd.Parameters.AddWithValue("@CapabilityName", SqlDbType.NVarChar).Value = cat.CapabilityName;
@@ -113,6 +116,7 @@ public class Capability
                 cmd.Parameters.AddWithValue("@BannerTitle", SqlDbType.NVarChar).Value = cat.BannerTitle;
                 cmd.Parameters.AddWithValue("@DescHeading", SqlDbType.NVarChar).Value = cat.DescHeading;
                 cmd.Parameters.AddWithValue("@FullDesc", SqlDbType.NVarChar).Value = cat.FullDesc;
+                cmd.Parameters.AddWithValue("@CompetenciesOrder", SqlDbType.NVarChar).Value = cat.CompetenciesOrder;
                 cmd.Parameters.AddWithValue("@BannerImage", SqlDbType.NVarChar).Value = cat.BannerImage;
                 cmd.Parameters.AddWithValue("@AddedOn", SqlDbType.NVarChar).Value = cat.AddedOn;
                 cmd.Parameters.AddWithValue("@AddedIp", SqlDbType.NVarChar).Value = cat.AddedIp;
@@ -150,6 +154,7 @@ public class Capability
                             BannerTitle = Convert.ToString(dr["BannerTitle"]),
                             DescHeading = Convert.ToString(dr["DescHeading"]),
                             FullDesc = Convert.ToString(dr["FullDesc"]),
+                            CompetenciesOrder = Convert.ToString(dr["CompetenciesOrder"]),
                             BannerImage = Convert.ToString(dr["BannerImage"]),
                             AddedOn = Convert.ToDateTime(Convert.ToString(dr["AddedOn"])),
                             AddedBy = Convert.ToString(dr["AddedBy"]),
@@ -239,6 +244,7 @@ public class Capability
                                        BannerTitle = Convert.ToString(dr["BannerTitle"]),
                                        DescHeading = Convert.ToString(dr["DescHeading"]),
                                        FullDesc = Convert.ToString(dr["FullDesc"]),
+                                       CompetenciesOrder = Convert.ToString(dr["CompetenciesOrder"]),
                                        BannerImage = Convert.ToString(dr["BannerImage"]),
                                        AddedOn = Convert.ToDateTime(Convert.ToString(dr["AddedOn"])),
                                        AddedBy = Convert.ToString(dr["AddedBy"]),
@@ -258,7 +264,7 @@ public class Capability
         List<Capability> categories = new List<Capability>();
         try
         {
-            string query = "Select * from Capability where status = 'Active' Order by Id Desc";
+            string query = "Select * from Capability where status = 'Active' Order By Try_Convert(int,CompetenciesOrder) ";
             using (SqlCommand cmd = new SqlCommand(query, conSQ))
             {
                 SqlDataAdapter sda = new SqlDataAdapter(cmd);
@@ -273,6 +279,7 @@ public class Capability
                                   BannerTitle = Convert.ToString(dr["BannerTitle"]),
                                   DescHeading = Convert.ToString(dr["DescHeading"]),
                                   FullDesc = Convert.ToString(dr["FullDesc"]),
+                                  CompetenciesOrder = Convert.ToString(dr["CompetenciesOrder"]),
                                   BannerImage = Convert.ToString(dr["BannerImage"]),
                                   AddedOn = Convert.ToDateTime(Convert.ToString(dr["AddedOn"])),
                                   AddedBy = Convert.ToString(dr["AddedBy"]),
@@ -309,6 +316,7 @@ public class Capability
                                   BannerTitle = Convert.ToString(dr["BannerTitle"]),
                                   DescHeading = Convert.ToString(dr["DescHeading"]),
                                   FullDesc = Convert.ToString(dr["FullDesc"]),
+                                  CompetenciesOrder = Convert.ToString(dr["CompetenciesOrder"]),
                                   BannerImage = Convert.ToString(dr["BannerImage"]),
                                   AddedOn = Convert.ToDateTime(Convert.ToString(dr["AddedOn"])),
                                   AddedBy = Convert.ToString(dr["AddedBy"]),
@@ -322,5 +330,66 @@ public class Capability
             ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "GetAllCapabilityWithUrl", ex.Message);
         }
         return Cap;
+    }
+    public static int UpdateCompetenciesOrder(SqlConnection conSQ, Capability cat)
+    {
+        int result = 0;
+        try
+        {
+            string query = "Update Capability Set AddedOn=@AddedOn,AddedIp=@AddedIp,CompetenciesOrder=@CompetenciesOrder Where Id=@Id ";
+            using (SqlCommand cmd = new SqlCommand(query, conSQ))
+            {
+                cmd.Parameters.AddWithValue("@Id", SqlDbType.NVarChar).Value = cat.Id;
+                cmd.Parameters.AddWithValue("@CompetenciesOrder", SqlDbType.NVarChar).Value = cat.CompetenciesOrder;
+                cmd.Parameters.AddWithValue("@AddedOn", SqlDbType.NVarChar).Value = TimeStamps.UTCTime();
+                cmd.Parameters.AddWithValue("@AddedIp", SqlDbType.NVarChar).Value = CommonModel.IPAddress();
+                conSQ.Open();
+                result = cmd.ExecuteNonQuery();
+                conSQ.Close();
+            }
+        }
+        catch (Exception ex)
+        {
+            ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "UpdateCompetenciesOrder", ex.Message);
+        }
+        return result;
+    }
+    public static List<Capability> GetAllCompetenciesDetails(SqlConnection conSQ)
+    {
+        var ListOfBolgs = new List<Capability>();
+        try
+        {
+            string query = "Select * from Capability where Status !='Deleted' Order by Id desc ";
+            using (SqlCommand cmd = new SqlCommand(query, conSQ))
+            {
+                cmd.Parameters.AddWithValue("@Status", SqlDbType.NVarChar).Value = "Deleted";
+
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                ListOfBolgs = (from DataRow dr in dt.Rows
+                               select new Capability()
+                               {
+                                   Id = Convert.ToInt32(Convert.ToString(dr["Id"])),
+                                   CapabilityName = Convert.ToString(dr["CapabilityName"]),
+                                   CapabilityUrl = Convert.ToString(dr["CapabilityUrl"]),
+                                   BannerTitle = Convert.ToString(dr["BannerTitle"]),
+                                   DescHeading = Convert.ToString(dr["DescHeading"]),
+                                   FullDesc = Convert.ToString(dr["FullDesc"]),
+                                   CompetenciesOrder = Convert.ToString(dr["CompetenciesOrder"]),
+                                   BannerImage = Convert.ToString(dr["BannerImage"]),
+                                   AddedOn = Convert.ToDateTime(Convert.ToString(dr["AddedOn"])),
+                                   AddedBy = Convert.ToString(dr["AddedBy"]),
+                                   AddedIp = Convert.ToString(dr["AddedIp"]),
+                                   Status = Convert.ToString(dr["Status"])
+
+                               }).ToList();
+            }
+        }
+        catch (Exception ex)
+        {
+            ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "GetAllCompetenciesDetails", ex.Message);
+        }
+        return ListOfBolgs;
     }
 }
