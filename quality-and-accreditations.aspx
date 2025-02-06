@@ -1,9 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="./MasterPage.master" AutoEventWireup="true" CodeFile="quality-and-accreditations.aspx.cs" Inherits="quality_and_accreditations" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
-    <link href="
-https://cdn.jsdelivr.net/npm/lightbox2@2.11.5/dist/css/lightbox.min.css"
-        rel="stylesheet">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.5/css/lightbox.css" integrity="sha512-DKdRaC0QGJ/kjx0U0TtJNCamKnN4l+wsMdION3GG0WVK6hIoJ1UPHRHeXNiGsXdrmq19JJxgIubb/Z7Og2qJww==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link href="css/breadcrums.css" rel="stylesheet" />
     <style>
@@ -87,7 +85,7 @@ https://cdn.jsdelivr.net/npm/lightbox2@2.11.5/dist/css/lightbox.min.css"
                 <div class="col-lg-3">
                     <div class="cc1">
                         <div class="certificate-img">
-                            <a href="image/c1.jpg" data-lightbox="image-1" data-title="My caption">
+                            <a href="image/c1.jpg" data-lightbox="image-1" data-title="AS9100 Rev D Certificate 2024">
                                 <img src="image/c1.jpg" class="img-fluid w-100" /></a>
                         </div>
                         <h4>AS9100 Rev D Certificate 2024</h4>
@@ -98,7 +96,7 @@ https://cdn.jsdelivr.net/npm/lightbox2@2.11.5/dist/css/lightbox.min.css"
                      <div class="cc1">
                     <div class="certificate-img">
                        
-                            <a href="image/c2.jpg" data-lightbox="image-1" data-title="My caption">
+                            <a href="image/c2.jpg" data-lightbox="image-1" data-title="NSIC Certificate">
 
                                 <img src="image/c2.jpg" class="img-fluid w-100" /></a>
                         </div>
@@ -109,7 +107,7 @@ https://cdn.jsdelivr.net/npm/lightbox2@2.11.5/dist/css/lightbox.min.css"
                 <div class="col-lg-3">
                     <div class="cc1">
                         <div class="certificate-img">
-                            <a href="image/c3.jpg" data-lightbox="image-1" data-title="My caption">
+                            <a href="image/c3.jpg" data-lightbox="image-1" data-title="NSIC Certificate">
 
                                 <img src="image/c3.jpg" class="img-fluid w-100" /></a>
                         </div>
@@ -121,8 +119,14 @@ https://cdn.jsdelivr.net/npm/lightbox2@2.11.5/dist/css/lightbox.min.css"
             </div>
         </div>
     </section>
-    <script src="
-https://cdn.jsdelivr.net/npm/lightbox2@2.11.5/dist/js/lightbox.min.js
-"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.5/js/lightbox.js" integrity="sha512-wvPoH20loGkctRFnd9QMpyFzw/HyHVg8iBEvvXZgtbOk88UPEjvavqp2DEldr/Nwj8w1uCzLZDig+BzhbrXgJg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+    lightbox.option({
+      'resizeDuration': 200,
+      'wrapAround': true
+    })
+    </script>
 </asp:Content>
 

@@ -8,7 +8,9 @@
             background-repeat: repeat;
             background-position: center center;
             padding: 200px 0 100px;
-        }
+        }.statement-content-bottom h6{
+             font-size:22px;
+         }
 
             .banner-area6 .banner-left-content {
                 max-width: 1035px;
@@ -543,6 +545,21 @@ Launched in September 2014, the Make in India campaign is a flagship initiative 
             </div>
         </div>
     </div>
+    <section class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2>
+                        Make in India – Driving Self-Reliance & Sustainability
+
+                    </h2>
+                    <p>At Park Controls and Communications Private Limited (PCC), we proudly align with the Make in India initiative, fostering indigenous innovation and self-reliance in defense, aerospace, and industrial sectors. Our commitment to local manufacturing not only strengthens India’s technological capabilities but also contributes to a sustainable and resilient supply chain.</p>
+                    <p>By designing, developing, and producing advanced telemetry, control systems, and mission-critical electronics within India, we reduce dependency on imports, enhance operational efficiency, and support environmental sustainability through optimized resource utilization. PCC remains dedicated to eco-friendly manufacturing practices, ensuring a greener, self-sufficient future while delivering world-class solutions.
+</p>
+                </div>
+            </div>
+        </div>
+    </section>
     <div class="section-padding">
 
         <div class="container">
@@ -622,256 +639,6 @@ It promotes innovation-driven growth by encouraging employees to engage in resea
             </div>
         </div>
     </div>
-    <div class="feature-card-section section-padding" style="background: #f4f9fd;">
-        <div class="container">
-            <div class="row g-4">
-
-                <div class="col-lg-12">
-                    <div class="row">
-                        <div class="col-lg-12 gap-lg-5 gap-4 d-flex flex-lg-nowrap flex-wrap align-items-start justify-content-between mb-60">
-                            <div class="section-title1 one">
-                                <h2>Industry We Serve</h2>
-                            </div>
-
-                        </div>
-                        <div class="col-lg-12">
-                            <div class="row g-4">
-                                <div class="col-xxl-6 col-sm-6">
-                                    <div class="eg-card-2">
-                                        <div class="icon">
-                                            <img src="image/india/airplane.png" />
-                                        </div>
-                                        <div class="content">
-                                            <h5>Air</h5>
-                                            <p>Providing advanced solutions for avionics and flight testing to ensure safety and efficiency in aviation operations.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xxl-6 col-sm-6">
-                                    <div class="eg-card-2">
-                                        <div class="icon">
-                                            <img src="image/india/startup.png" />
-                                        </div>
-                                        <div class="content">
-                                            <h5>Space</h5>
-                                            <p>Supporting space exploration and satellite systems with state-of-the-art testing and simulation technologies.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xxl-6 col-sm-6">
-                                    <div class="eg-card-2">
-                                        <div class="icon">
-                                            <img src="image/india/defence.png" />
-                                        </div>
-                                        <div class="content">
-                                            <h5>Defence</h5>
-                                            <p>Delivering mission-critical systems for communication, radar, and weapons testing to enhance national security.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xxl-6 col-sm-6">
-                                    <div class="eg-card-2">
-                                        <div class="icon">
-                                            <img src="image/india/cruise.png" />
-                                        </div>
-                                        <div class="content">
-                                            <h5>Sea</h5>
-                                            <p>Enabling maritime advancements through cutting-edge navigation and surveillance technologies for naval operations.</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </div>
-    <div class="home5-protfolio-section  section-padding">
-        <div class="container">
-            <div class="row mb-5 align-items-center ">
-                <div class="col-lg-8 ">
-                    <div class="section-title1 d-flex justify-content-between two">
-                        <h2>Products Designed and Manufactured in India</h2>
-
-                    </div>
-                </div>
-                <div class="col-lg-4 text-end">
-                    <div class="slider-btn ">
-                        <a
-                            href="#"
-                            class="btn ss-btn mr-15"
-                            data-animation="fadeInLeft"
-                            data-delay=".4s"><i class="fal fa-long-arrow-right"></i>Explore More</a>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12 ">
-                    <div class="row gy-4">
-
-                        <div class="col-lg-4">
-                            <div class="magnetic-wrap">
-                                <div class="people-card2 magnetic-item" style="">
-                                    <div class="people-img">
-                                        <img src="image/shop/1.jpg" alt="">
-                                    </div>
-                                    <div class="people-content">
-                                        <div class="name-deg">
-                                            <h5><a href="#">Air Product 1</a></h5>
-                                        </div>
-                                        <div class="contact-area">
-                                            <div class="contact-number">
-                                                <div class="icon">
-                                                    View Product
-                                                </div>
-
-                                            </div>
-                                            <ul class="social-icon">
-                                                <li><a href="product-details.aspx"><i class="fa-solid fa-arrow-right-long"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="magnetic-wrap">
-                                <div class="people-card2 magnetic-item" style="">
-                                    <div class="people-img">
-                                        <img src="image/shop/1.jpg" alt="">
-                                    </div>
-                                    <div class="people-content">
-                                        <div class="name-deg">
-                                            <h5><a href="#">Air Product 1</a></h5>
-                                        </div>
-                                        <div class="contact-area">
-                                            <div class="contact-number">
-                                                <div class="icon">
-                                                    View Product
-                                                </div>
-
-                                            </div>
-                                            <ul class="social-icon">
-                                                <li><a href="product-details.aspx"><i class="fa-solid fa-arrow-right-long"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="magnetic-wrap">
-                                <div class="people-card2 magnetic-item" style="">
-                                    <div class="people-img">
-                                        <img src="image/shop/1.jpg" alt="">
-                                    </div>
-                                    <div class="people-content">
-                                        <div class="name-deg">
-                                            <h5><a href="#">Air Product 1</a></h5>
-                                        </div>
-                                        <div class="contact-area">
-                                            <div class="contact-number">
-                                                <div class="icon">
-                                                    View Product
-                                                </div>
-
-                                            </div>
-                                            <ul class="social-icon">
-                                                <li><a href="product-details.aspx"><i class="fa-solid fa-arrow-right-long"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="magnetic-wrap">
-                                <div class="people-card2 magnetic-item" style="">
-                                    <div class="people-img">
-                                        <img src="image/shop/1.jpg" alt="">
-                                    </div>
-                                    <div class="people-content">
-                                        <div class="name-deg">
-                                            <h5><a href="#">Air Product 1</a></h5>
-                                        </div>
-                                        <div class="contact-area">
-                                            <div class="contact-number">
-                                                <div class="icon">
-                                                    View Product
-                                                </div>
-
-                                            </div>
-                                            <ul class="social-icon">
-                                                <li><a href="product-details.aspx"><i class="fa-solid fa-arrow-right-long"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="col-lg-4">
-                            <div class="magnetic-wrap">
-                                <div class="people-card2 magnetic-item" style="">
-                                    <div class="people-img">
-                                        <img src="image/shop/1.jpg" alt="">
-                                    </div>
-                                    <div class="people-content">
-                                        <div class="name-deg">
-                                            <h5><a href="#">Air Product 1</a></h5>
-                                        </div>
-                                        <div class="contact-area">
-                                            <div class="contact-number">
-                                                <div class="icon">
-                                                    View Product
-                                                </div>
-
-                                            </div>
-                                            <ul class="social-icon">
-                                                <li><a href="product-details.aspx"><i class="fa-solid fa-arrow-right-long"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="magnetic-wrap">
-                                <div class="people-card2 magnetic-item" style="">
-                                    <div class="people-img">
-                                        <img src="image/shop/1.jpg" alt="">
-                                    </div>
-                                    <div class="people-content">
-                                        <div class="name-deg">
-                                            <h5><a href="#">Air Product 1</a></h5>
-                                        </div>
-                                        <div class="contact-area">
-                                            <div class="contact-number">
-                                                <div class="icon">
-                                                    View Product
-                                                </div>
-
-                                            </div>
-                                            <ul class="social-icon">
-                                                <li><a href="product-details.aspx"><i class="fa-solid fa-arrow-right-long"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-
-
-                        <!-- Sidebar  -->
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    
 </asp:Content>
 
