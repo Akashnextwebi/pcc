@@ -234,7 +234,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4 pe-md-0">
+                        <div class="col-md-6 pe-md-0">
                             <div class="widget">
                                 <h2 class="widget-title">Address</h2>
 
@@ -252,7 +252,7 @@
                         </div>
 
 
-                        <div class="col-md-4 p-md-0">
+                        <div class="col-md-6 p-md-0">
                             <div class="widget">
                                 <h2 class="widget-title">Business Hours:
 
@@ -263,10 +263,11 @@
 
                                         <h5 class="wptb-item--title"><a href="mailto:info@parkcontrols.com
 
-">9:00 AM – 5:30 PM Monday – Friday
+">9:00 AM – 6:00 PM Monday – Friday
                                             <br />
-                                            9:00 AM – 1:00 PM Saturday<br />
-                                            Dayoff – Second Saturday & Sunday
+                                           Non-Working Day – Saturday<br />
+                                           Day Off – Sunday
+
 
 
 
@@ -277,28 +278,7 @@
                             </div>
                         </div>
 
-                        <div class="col-md-4 p-md-0">
-                            <div class="widget">
-                                <h2 class="widget-title">Singapore Office:
-
-                                </h2>
-
-                                <div class="wptb-office">
-                                    <div class="wptb-item--inner">
-                                        <div class="wptb-item--subtitle">
-                                            PARK CONTROLS & COMMUNICATIONS PTE LTD.,
-
-
-
-
-                                        </div>
-                                        <h5 class="wptb-item--title"><a href="#">171 Chin Swee Road,
-#02-02 CES Centre,
-Singapore 169877</a></h5>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
 
@@ -317,12 +297,10 @@ Singapore 169877</a></h5>
                                     <div class="wptb-item--inner">
                                         <h6 class="wptb-item--subtitle">SEND US MAIL
                                         </h6>
-                                        <h1 class="wptb-item--title">Feel Free To Ask Anything
-                                For Car Servicing</h1>
+                                        <h1 class="wptb-item--title">Get in Touch</h1>
                                         <div class="wptb-item--divider"></div>
                                         <div class="wptb-item--description">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse interdum nulla eu posuere scelerisque. Donec sagittis adipiscing elit.
-                                        </div>
+Have questions or need assistance? Reach out to us, and our team will be happy to help!                                        </div>
                                     </div>
                                 </div>
 

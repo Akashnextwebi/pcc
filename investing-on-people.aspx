@@ -59,10 +59,10 @@
                 <div class="col-lg-6">
                     <div class="new-invest">
                         <h2>Employees’ expectations about where, when and how they work have changed
+
                         </h2>
                         <p>
-                            We know our people can thrive when their daily experience matches what they value and makes them happy — meaningful relationships, a varied workload, support for flexibility, and a sense of purpose and belonging. Our brand-defining people experience is designed to fundamentally rethink the work experience in our profession to attract, retain and develop leading talent so that we can serve our clients, fuel our growth and set a new standard for the business community. Just as we are relentlessly client focused, we are unwavering in our ongoing investment in our people. That’s why we’ve announced My+.
-
+We know our people can thrive when their daily experience matches what they value and makes them happy — meaningful relationships, a varied workload, support for flexibility, and a sense of purpose and belonging. Our brand-defining people experience is designed to fundamentally rethink the work experience in our profession to attract, retain and develop leading talent so that we can serve our clients, fuel our growth and set a new standard for the business community. Just as we are relentlessly client focused, we are unwavering in our ongoing investment in our people.
                         </p>
                     </div>
                 </div>
@@ -104,8 +104,7 @@
                         <h4>Well-being
                         </h4>
                         <p>
-                            Our people will be supported by different career paths, development curricula and pay, including longer-term incentives, and protected time off to recharge between workload or career sprints.
-
+Our people will be supported by different career paths, development curricula and pay, including longer-term incentives, and protected time off to recharge between workload or career sprints.
                         </p>
                     </div>
                 </div>
@@ -115,7 +114,7 @@
                         <h4>Development
                         </h4>
                         <p>
-                            Our people will have greater opportunities to grow, to practice new skills, and to then work on different teams and new assignments of interest. We will elevate leadership and coaching skills for everyone at all levels.
+Our people will have greater opportunities to grow, to practice new skills, and to then work on different teams and new assignments of interest. We will elevate leadership and coaching skills for everyone at all levels.
 
 
                         </p>
@@ -127,7 +126,7 @@
                         <h4>Rewards
                         </h4>
                         <p>
-                            Our people easily access and choose from a menu of benefits and perks, with options for every stage of their life and career, that support their physical and mental health, financial, social, spiritual and emotional well-being.
+Our people easily access and choose from a menu of benefits and perks, with options for every stage of their life and career, that support their physical and mental health, financial, social, spiritual and emotional well-being.
 
 
                         </p>
@@ -140,8 +139,7 @@
 
                         </h4>
                         <p>
-                            Our people can pursue professional paths that excite them — whether that’s inside or outside our firm, and we will invest in the incredible community of individuals who have worked at PCC.
-
+Our people can pursue professional paths that excite them — whether that’s inside or outside our firm, and we will invest in the incredible community of individuals who have worked at PCC.
 
                         </p>
                     </div>

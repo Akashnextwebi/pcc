@@ -39,7 +39,7 @@
                 </div>
             </div>
 
-            <div class="row mt-5">
+            <div class="">
                 <%=strFeature %>
                <%-- <div class="col-lg-4">
                     <div class="content-card">

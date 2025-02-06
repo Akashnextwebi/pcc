@@ -71,7 +71,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="banner-content">
-                        <h1>Safety First</h1>
+                        <h1>Safety First – A Commitment to Excellence</h1>
                         <ul class="breadcrumb-list">
                             <li><a href="Default.aspx">Home</a></li>
                             <li>Safety First</li>
@@ -88,7 +88,7 @@
                     <div class="row g-lg-4 gy-5 mb-70">
                         <div class="col-lg-12 ">
                             <div class="section-title1 two">
-                                <h2>PCC Safety First: Committed to Protecting Lives, Promoting Workplace Safety.
+                                <h2>Safety First – A Commitment to Excellence
 
 
 
@@ -100,7 +100,7 @@
                         </div>
                         <div class="col-lg-12">
                             <p>
-                                PCC Safety First is our unwavering commitment to fostering a safe and secure environment across all operations. We prioritize the well-being of our employees, partners, and stakeholders by adhering to the highest safety standards. By proactively identifying and mitigating risks, we ensure a workplace free from hazards. Safety is not just a policy but a shared responsibility embedded in our culture. Through rigorous training programs, regular audits, and innovative safety practices, we strive to prevent accidents and incidents. Our goal is to protect lives, preserve resources, and maintain operational excellence. Every team member plays a vital role in upholding our safety values. We believe that a safe workplace is the foundation for success. At PCC, safety always comes first because it is essential for achieving our mission and sustaining growth. Together, we build a future where safety drives performance and innovation.
+At Park Controls and Communications Private Limited (PCC), safety is at the core of everything we do. From designing mission-critical systems for defense and aerospace to ensuring robust quality standards in industrial applications, we prioritize safety, reliability, and compliance at every stage.
 
 
 
@@ -108,6 +108,9 @@
 
 
                             </p>
+                            <p>Our products undergo rigorous testing to meet global safety and sustainability standards, ensuring flawless performance in extreme environments. By integrating cutting-edge safety protocols in our design, manufacturing, and operational processes, we protect not only our workforce but also the end-users who rely on our technology.
+</p>
+                           <p> <strong>At PCC, safety isn’t just a priority—it’s a responsibility.</strong></p>
                         </div>
 
                     </div>
@@ -123,46 +126,14 @@
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div class="text-center our-approach mb-50">
-                        <h2>Our Approach to Safety</h2>
+                        <h2>PCC Safety First: Committed to Protecting Lives, Promoting Workplace Safety.</h2>
                         <p>
-                            At PCC,We operate a number of industrial sites and our manufacturing activities present a range of risks. These include work in confined spaces, machinery operation, working at height, and slips, trips and falls among others. Our 2022 safety performance showed a small improvement in recordable and major injuries from 2021. We monitor and aim to eliminate, mitigate and manage workplace safety risks. Our approach to identifying and assessing safety risks is embedded within our approach to risk management.
-                        </p>
+PCC Safety First is our unwavering commitment to fostering a safe and secure environment across all operations. We prioritize the well-being of our employees, partners, and stakeholders by adhering to the highest safety standards. By proactively identifying and mitigating risks, we ensure a workplace free from hazards. Safety is not just a policy but a shared responsibility embedded in our culture. Our goal is to protect lives, preserve resources, and maintain operational excellence. Every team member plays a vital role in upholding our safety values. We believe that a safe workplace is the foundation for success. At PCC, safety always comes first because it is essential for achieving our mission and sustaining growth. Together, we build a future where safety drives performance and innovation.                        </p>
                     </div>
 
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="item-box">
-                        <img src="image/checked.png"  width="48" class="mb-3"/>
-                        <div class="content-box">
-                            <h4>Prevention</h4>
-                            <p>We focus on identifying potential risks before they become issues. Through rigorous safety assessments, hazard analysis, and continuous monitoring, we take preventive actions to ensure that all operations are safe and compliant with industry standards.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="item-box">
-                        <img src="image/checked.png" width="48" class="mb-3" />
-
-                        <div class="content-box">
-                            <h4>Training and Empowerment</h4>
-                            <p>Our employees receive continuous safety training, equipping them with the knowledge and skills needed to recognize and address safety concerns. We empower our teams to make safety a priority at all levels, fostering a culture where every individual takes ownership of their safety and the safety of others.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="item-box">
-                        <img src="image/checked.png" width="48" class="mb-3" />
-
-                        <i class="ar-icons-tank"></i>
-                        <div class="content-box">
-                            <h4>Continuous Improvement</h4>
-                            <p>We are committed to constantly improving our safety practices. By reviewing safety data, learning from incidents, and staying updated on best practices, we strive to enhance our safety performance and create a work environment that is always evolving towards greater safety standards.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
         </div>
     </section>
 </asp:Content>

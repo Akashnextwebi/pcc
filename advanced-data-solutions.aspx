@@ -480,7 +480,7 @@
                 </div>
             </div>
         </section>
-        <div class="horizontal-scrolling-section ">
+    <%--    <div class="horizontal-scrolling-section ">
             <div class="single-scroll-container" style="background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%), url(/image/scroll-bg-1.jpg);">
                 <div class="container-fluid one pl--95">
                     <div class="horizontal-scrolling-content">
@@ -493,14 +493,13 @@
                             Explore Curtiss-Wright's mission-critical solutions based on the latest technologies and open standards. These innovative solutions are trusted and proven for aerospace and defense applications.
                         </p>
                         <div class="slider-btn mt-30 ">
-                            <%--<a href="#" class="btn ss-btn mr-15" data-animation="fadeInLeft" data-delay=".4s" tabindex="0" contenteditable="false" style="animation-delay: 0.4s; cursor: pointer;"><i class="fal fa fa-download"></i>Download the product guide</a>--%>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </div>--%>
        
-        <section class="section-padding">
+       <%-- <section class="section-padding">
 
             <div class="container">
                 <div class="row">
@@ -518,7 +517,7 @@
                 </div>
             </div>
             
-        </section>
+        </section>--%>
             
     </main>
 </asp:Content>

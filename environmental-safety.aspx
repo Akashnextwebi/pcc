@@ -87,13 +87,15 @@
                 <div class="col-lg-12">
                     <div class="Environmental-wrapper">
                         <div class="row">
-                            <div class="col-lg-6">
-                                <p>
-                                    If you're looking for guidance on Environmental Safety related to a Personal Computing Cluster (PCC) or another context, here’s an overview tailored to computing environments:
+                            <div class="col-lg-12">
+                                                        <h2>Environmental Safety – Sustainable Innovation for a Greener Future
 
+</h2>
+                                <p>
+At Park Controls and Communications Private Limited (PCC), we are committed to minimizing our environmental footprint while delivering high-performance solutions for aerospace, defense, and industrial applications. Our approach to environmental safety integrates sustainable manufacturing practices, energy-efficient technologies, and eco-friendly materials to reduce waste and emissions.
                                 </p>
                                 <p>
-                                    Environmental safety for Personal Computing Clusters (PCC) is crucial for both operational efficiency and sustainability. Proper temperature control through efficient cooling systems prevents overheating and hardware damage. Power management with Uninterruptible Power Supplies (UPS) protects against outages and surges, while secure grounding avoids electrical hazards. Fire safety measures, such as gas-based suppression systems, minimize risks without harming equipment. Responsible e-waste disposal and the use of energy-efficient hardware contribute to environmental sustainability. Finally, physical security measures, including restricted access and secure racks, ensure a safe and organized workspace.
+We adhere to global environmental standards and implement green initiatives across our operations, ensuring responsible resource utilization and compliance with regulations. By continuously innovating, we strive to create safer, cleaner, and more sustainable solutions that contribute to a healthier planet.
 
 
 
@@ -101,21 +103,14 @@
 
 
                                 </p>
-                            </div>
-                            <div class="col-lg-6">
-                                 <p>
-     If you're looking for guidance on Environmental Safety related to a Personal Computing Cluster (PCC) or another context, here’s an overview tailored to computing environments:
+                           
+                                 <p><strong>
+                                     At PCC, we believe in advancing technology without compromising the environment.
+
+                                    </strong>
 
  </p>
- <p>
-     Environmental safety for Personal Computing Clusters (PCC) is crucial for both operational efficiency and sustainability. Proper temperature control through efficient cooling systems prevents overheating and hardware damage. Power management with Uninterruptible Power Supplies (UPS) protects against outages and surges, while secure grounding avoids electrical hazards. Fire safety measures, such as gas-based suppression systems, minimize risks without harming equipment. Responsible e-waste disposal and the use of energy-efficient hardware contribute to environmental sustainability. Finally, physical security measures, including restricted access and secure racks, ensure a safe and organized workspace.
 
-
-
-
-
-
- </p>
                             </div>
                         </div>
 
