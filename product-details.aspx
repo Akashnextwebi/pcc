@@ -512,7 +512,7 @@ Pellentesque habitant morbi tristique senectus et netus et malesuada.--%>
                                 <div class="tab-pane" id="Specifications" tabindex="0">
                                     <div class="row justify-content-center">
                                         <div class="col-lg-8">
-                                            <div class="wptb-accordion wptb-accordion1 ">
+                                            <div class="wptb-accordion wptb-accordion1">
                                                 <%=strSpecification %>
                                                 <%-- <div class="wptb--item active">
                                                     <h6 class="wptb-item-title"><span><span class="wptb-item--number"></span>Physical Characteristics</span> <i class="fa-solid fa-angle-down"></i></h6>
