@@ -12,7 +12,7 @@
                         <div class="page-title-right">
                             <ol class="breadcrumb m-0">
                                 <li class="breadcrumb-item"><a href="javascript: void(0);">Dashboards</a></li>
-                                  <li class="breadcrumb-item"><a href="javascript: void(0);">Product</a></li>
+                                <li class="breadcrumb-item"><a href="javascript: void(0);">Product</a></li>
                                 <li class="breadcrumb-item active"><%=Request.QueryString["id"] !=null?"Update":"Add" %> Product</li>
                             </ol>
                         </div>
@@ -20,7 +20,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-8">
@@ -52,10 +52,15 @@
                                     <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="ddlsdetination" InitialValue="0" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Field can't be empty"></asp:RequiredFieldValidator>--%>
                                 </div>
                                 <div class="col-lg-4 mb-3">
+                                    <label class="text-muted">Industry<sup class="text-danger">*</sup></label>
+                                    <asp:ListBox runat="server" SelectionMode="Multiple" ID="ddlindustry" CssClass="form-control fSelect"></asp:ListBox>
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="ddlindustry" InitialValue="0" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Field can't be empty"></asp:RequiredFieldValidator>
+                                </div>
+                                <%--<div class="col-lg-4 mb-3">
                                     <label class="">Industry<sup class="text-danger">*</sup></label>
                                     <asp:DropDownList runat="server" ID="ddlindustry" CssClass="form-select" AutoPostBack="true"></asp:DropDownList>
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="ddlindustry" InitialValue="0" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Field can't be empty"></asp:RequiredFieldValidator>
-                                </div>
+                                </div>--%>
                             </div>
                             <div class="row mb-2">
                                 <div class="col-lg-4">
@@ -119,7 +124,7 @@
                     </div>
                     <div class="card">
                         <div class="card-header">
-                            <h5 class="card-title">Add Image Details</h5>
+                            <h5 class="card-title">Add Other Details</h5>
                         </div>
                         <div class="card-body">
                             <div class="row">
@@ -133,6 +138,11 @@
                                     <asp:FileUpload ID="UploadPDF" runat="server" CssClass="form-control"></asp:FileUpload>
                                     <small class="text-danger">.pdf, .doc, formats are required.</small><br />
                                 </div>
+                                <div class="col-lg-12 mb-3">
+                                    <label class="">Datasheet PDF <sup>*</sup></label>
+                                    <asp:FileUpload ID="IndustryPDF" runat="server" CssClass="form-control"></asp:FileUpload>
+                                    <small class="text-danger">.pdf, .doc, formats are required.</small><br />
+                                </div>
 
                                 <div runat="server" id="divimg" class="col-lg-12 d-flex justify-content-around" visible="false">
                                     <div class="col-lg-3 text-center">
@@ -141,7 +151,11 @@
                                     </div>
                                     <div>
                                         <%=strUploadPDF %><br />
-                                        <h6 class=" mt-1">Check PDF</h6>
+                                        <h6 class=" mt-1">Check Broucher PDF</h6>
+                                    </div>
+                                    <div>
+                                        <%=strIndustryPDF %><br />
+                                        <h6 class=" mt-1">Check Datasheet PDF</h6>
                                     </div>
                                 </div>
                             </div>
@@ -154,6 +168,7 @@
                 <asp:Button runat="server" ID="btnNew" CssClass="btn btn-outline-success" Visible="false" Text="Clear" OnClick="btnNew_Click" Style="margin-top: 10px;" />
                 <asp:Label ID="lblThumb" runat="server" Visible="false"></asp:Label>
                 <asp:Label ID="lblPDF" runat="server" Visible="false"></asp:Label>
+                <asp:Label ID="lblindustry" runat="server" Visible="false"></asp:Label>
             </div>
         </div>
     </div>

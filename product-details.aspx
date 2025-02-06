@@ -15,28 +15,7 @@
         section.product_view {
             background: #fff;
         }
-        .contact-btn {
-    position: fixed;
-    right: 0;
-    top: 250px;
-    rotate: -90deg;
-    z-index: 1;
-    transform: translateY(26px);
-    text-transform: uppercase;
-    z-index: 9999;
-}.contact-btn button {
-    padding: 12px;
-    background: #c72329;
-    font-size: 16px;
-    border: 0;
-    color: #fff;
-}textarea, textarea.form-control{
-     background:#fff;
- }
- textarea:focus, textarea.form-control:focus{
-     background:#fff;
-     color:#000;
- }
+
         .campus-slider .swiper-button-prev {
             color: #fff;
             background: #0000005c;
@@ -171,6 +150,7 @@
             align-items: center;
             justify-content: space-between;
         }
+
         .btn i {
             margin-left: 10px;
             font-size: 16px;
@@ -179,41 +159,42 @@
             background: var(--pcc-primary-theme);
             top: 1px;
         }
-            .people-card2 .people-content .contact-area .social-icon {
-                display: flex;
-                align-items: center;
-            }
 
-                .people-card2 .people-content .contact-area .social-icon li {
-                    line-height: 1;
-                    border-left: 1px solid #eee;
-                }
-
-            .people-card2 .people-content .contact-area .contact-number .icon {
-                width: max-content;
-                height: 45px;
-                padding-right: 24px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                background-color: #e8f1fb;
-                transition: 0.35s;
-                padding-left: 20px;
-            }
+        .people-card2 .people-content .contact-area .social-icon {
+            display: flex;
+            align-items: center;
+        }
 
             .people-card2 .people-content .contact-area .social-icon li {
                 line-height: 1;
                 border-left: 1px solid #eee;
             }
 
-                .people-card2 .people-content .contact-area .social-icon li a {
-                    height: 45px;
-                    width: 45px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    transition: 0.35s;
-                }
+        .people-card2 .people-content .contact-area .contact-number .icon {
+            width: max-content;
+            height: 45px;
+            padding-right: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #e8f1fb;
+            transition: 0.35s;
+            padding-left: 20px;
+        }
+
+        .people-card2 .people-content .contact-area .social-icon li {
+            line-height: 1;
+            border-left: 1px solid #eee;
+        }
+
+            .people-card2 .people-content .contact-area .social-icon li a {
+                height: 45px;
+                width: 45px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: 0.35s;
+            }
 
         .contact-area li {
             display: inline-block;
@@ -290,10 +271,10 @@
                                         <a href="#" style="background-image: url('/image/shop/pro3.png');"></a>
                                     </li>--%>
                                 </ul>
-                                
+
                                 <div class="product_zoom_container">
-                                <%=strMainImg %>
-                                   <%-- <div class='product_zoom_info selected'>
+                                    <%=strMainImg %>
+                                    <%-- <div class='product_zoom_info selected'>
                                         <div class='product_image_zoom'>
                                             <img src='/image/shop/pro3.png' alt='img'>
                                         </div>
@@ -361,7 +342,7 @@ Pellentesque habitant morbi tristique senectus et netus et malesuada.--%>
                 </div>
         </section>
 
-        <div class="product_details_section section-padding bg-light"  >
+        <div class="product_details_section section-padding bg-light">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
@@ -378,8 +359,8 @@ Pellentesque habitant morbi tristique senectus et netus et malesuada.--%>
                             </ul>
                             <div class="tab-content">
 
-                                <div class="tab-pane fade show active" id="Capabilities"  tabindex="0">
-                                    <div class="row justify-content-center gy-4" >
+                                <div class="tab-pane fade show active" id="Capabilities" tabindex="0">
+                                    <div class="row justify-content-center gy-4">
                                         <%=strCapabilities %>
                                         <!-- Iconbox -->
 
@@ -533,7 +514,7 @@ Pellentesque habitant morbi tristique senectus et netus et malesuada.--%>
                                         <div class="col-lg-8">
                                             <div class="wptb-accordion wptb-accordion1 ">
                                                 <%=strSpecification %>
-                                               <%-- <div class="wptb--item active">
+                                                <%-- <div class="wptb--item active">
                                                     <h6 class="wptb-item-title"><span><span class="wptb-item--number"></span>Physical Characteristics</span> <i class="fa-solid fa-angle-down"></i></h6>
                                                     <div class="wptb-item--content">
                                                         <p><strong>Dimensions:</strong> 130mm (D) x 140mm (H) (D does not include mounting flanges)</p>
@@ -571,7 +552,6 @@ Pellentesque habitant morbi tristique senectus et netus et malesuada.--%>
                                                         <p><strong>Mil-STD-1553B Interface (MT/RT):</strong> 1 (Dual redundant bus)</p>
                                                     </div>
                                                 </div>--%>
-
                                             </div>
                                         </div>
 
@@ -590,28 +570,86 @@ Pellentesque habitant morbi tristique senectus et netus et malesuada.--%>
         </div>
         <section class="section-padding " id="divsheet" runat="server">
             <div class="container">
-                <div class="row justify-content-center">
-                    
-                    <div class="col-lg-4">
-                         <a href="javascript:void(0);"  class="btn-three w-100 hidenId" data-id="<%=strId %>" data-bs-toggle="modal" data-bs-target="#exampleModal">
-     <div class="btn-wrap">
-         <span class="text-first"><i class="fa-solid fa-cloud-arrow-down me-2"></i>
-             Download Datasheet</span>
-         <span class="text-second"><i class="fa-solid fa-cloud-arrow-down me-2 "></i>Download <b></b>Brochure</span>
-     </div>
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="text-start">
 
- </a>
+
+                            <h2 class="mb-30 text-white">Full Datasheet Screenshots
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <a href="javascript:void(0);" class="btn-three w-100 hidenId" data-id="<%=strId %>" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <div class="btn-wrap">
+                                <span class="text-first"><i class="fa-solid fa-cloud-arrow-down me-2"></i>
+                                    Download Brochure</span>
+                                <span class="text-second"><i class="fa-solid fa-cloud-arrow-down me-2 "></i>Download <b></b>Brochure</span>
+                            </div>
+
+                        </a>
                     </div>
 
                 </div>
-               
-                <%--<div class="row">
+
+                <div class="row">
                     <div class="col-lg-12">
                         <div class="swiper campus-slider ">
+                            <!-- Additional required wrapper -->
                             <div class="swiper-wrapper">
                                 <%=strDatasheet %>
-                                
+                                <!-- Slides -->
+                                <%--<div class="swiper-slide">
+                                    <div class="data-sheet">
+                                        <img src="/image/datasheet/1.png" />
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="data-sheet">
+                                        <img src="/image/datasheet/2.png" />
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="data-sheet">
+                                        <img src="/image/datasheet/3.png" />
+                                    </div>
+                                </div>
 
+                                <div class="swiper-slide">
+                                    <div class="data-sheet">
+                                        <img src="/image/datasheet/4.png" />
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="data-sheet">
+                                        <img src="/image/datasheet/5.png" />
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="data-sheet">
+                                        <img src="/image/datasheet/6.png" />
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="data-sheet">
+                                        <img src="/image/datasheet/3.png" />
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="data-sheet">
+                                        <img src="image/datasheet/4.png" />
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="data-sheet">
+                                        <img src="/image/datasheet/5.png" />
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="data-sheet">
+                                        <img src="/image/datasheet/6.png" />
+                                    </div>
+                                </div>--%>
                             </div>
                             <div class="swiper-button-prev"></div>
                             <div class="swiper-button-next"></div>
@@ -621,7 +659,7 @@ Pellentesque habitant morbi tristique senectus et netus et malesuada.--%>
 
                     </div>
 
-                </div>--%>
+                </div>
             </div>
 
         </section>
@@ -775,9 +813,9 @@ Pellentesque habitant morbi tristique senectus et netus et malesuada.--%>
                                     <div class="wptb-form--inner">
                                         <div class="row">
                                             <div class="col-lg-12 col-md-12 mb-4">
-                                               <%-- <lable class="error-message text-danger d-none"></lable>--%>
+                                                <%-- <lable class="error-message text-danger d-none"></lable>--%>
                                                 <div class="form-group">
-                                                   <%-- <input type="text" name="name" class="form-control" placeholder="Enter Your Name" required>--%>
+                                                    <%-- <input type="text" name="name" class="form-control" placeholder="Enter Your Name" required>--%>
                                                     <asp:TextBox ID="textFname" runat="server" class="form-control textFname" MaxLength="100" placeholder="Enter Your Name"></asp:TextBox>
                                                     <lable class="spnfname text-danger ms-2"></lable>
                                                 </div>
@@ -791,7 +829,7 @@ Pellentesque habitant morbi tristique senectus et netus et malesuada.--%>
                                             </div>
                                             <div class="col-lg-12 col-md-12 mb-4">
                                                 <div class="form-group">
-                                                   <%-- <input type="text" name="password" class="form-control" placeholder="Corporate E-mail ID--%>
+                                                    <%-- <input type="text" name="password" class="form-control" placeholder="Corporate E-mail ID--%>
                                                     <asp:TextBox ID="txtemailAdress" class="form-control txtemailAdress" runat="server" MaxLength="100" placeholder="Corporate E-mail ID"></asp:TextBox>
                                                     <lable class="spnemail text-danger ms-2"></lable>
                                                 </div>
@@ -805,7 +843,7 @@ Pellentesque habitant morbi tristique senectus et netus et malesuada.--%>
                                                         class="btn ss-btn mr-15"
                                                         data-animation="fadeInLeft"
                                                         data-delay=".4s"><i class="fa-solid fa-cloud-arrow-down "></i>Download</a>--%>
-                                                   <asp:LinkButton runat="server" ID="BtnSubmit" CssClass="btn ss-btn BtnSubmit" ValidationGroup="Save">Download<i class="fa-solid fa-cloud-arrow-down"></i></asp:LinkButton>
+                                                    <asp:LinkButton runat="server" ID="BtnSubmit" CssClass="btn ss-btn BtnSubmit" ValidationGroup="Save">Download<i class="fa-solid fa-cloud-arrow-down"></i></asp:LinkButton>
                                                 </div>
                                             </div>
                                         </div>
@@ -818,72 +856,9 @@ Pellentesque habitant morbi tristique senectus et netus et malesuada.--%>
                 </div>
             </div>
         </div>
-        <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg	">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel1">Enquiry Now
-                </h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body bg-light">
-                <div class="row">
-                    <div class="col-lg-12 ">
-                        <div class="wptb-form" action="contact.php" method="post">
-                            <div class="wptb-form--inner">
-                                <div class="row">
-                                    <div class="col-lg-12 col-md-12 mb-4">
-                                       <lable class="error-message text-danger d-none"></lable>
-                                        <div class="form-group">
-                                         <input type="text" name="name" class="form-control" placeholder="Enter Your Name" required>
-                                         
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12 col-md-12 mb-4">
-                                        <div class="form-group">
-                                           <input type="text" name="password" class="form-control" placeholder="Mobile Number">
-                                     
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12 col-md-12 mb-4">
-                                        <div class="form-group">
-                                            <input type="text" name="Phoneno" class="form-control" placeholder="Phone No">
-                                           
-                                        </div>
-                                    </div>
-                                     <div class="col-lg-12 col-md-12 mb-4">
-     <div class="form-group">
-         <textarea name="message" class="form-control" placeholder="Message"></textarea>
-        
-     </div>
- </div>
-                                    
 
-                                    <div class="col-md-12 col-lg-12 ">
-
-                                        <div class="slider-btn">
-                                         
-                                            <a href="#" class="btn ss-btn BtnSubmit" data-animation="fadeInLeft" data-delay=".4s" contenteditable="false" style="cursor: pointer;">Submit  <i class="fal fa-long-arrow-right"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</div>
-         <div class="contact-btn">
-        <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal1">
-            Enquiry Now
-     
-        </button>
-    </div>
     </main>
-    
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="/snackbar/snackbar.min.js"></script>
@@ -916,8 +891,8 @@ Pellentesque habitant morbi tristique senectus et netus et malesuada.--%>
                 },
             },
         });
-</script>
+    </script>
     <script src="/js/vendor/jquery-3.6.0.min.js"></script>
- <script src="/js/pages/brochure-enguiry.js"></script>
+    <script src="/js/pages/brochure-enguiry.js"></script>
 </asp:Content>
 
