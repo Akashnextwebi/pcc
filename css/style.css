@@ -6392,7 +6392,7 @@ section:hover .section-title h2::before {
   color: var(--pcc-primary-theme);
 }
 .f-widget-title img {
-  height: 40px;
+  height: 65px;
   max-width: inherit;
   filter: grayscale(100) brightness(1000);
 }

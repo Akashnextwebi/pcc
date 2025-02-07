@@ -169,7 +169,7 @@
                      <li><a href="/about-us.aspx">About Us</a></li>
                      <li><a href="/evolution.aspx">Evolution</a></li>
 <%--                     <li><a href="/board-of-directors.aspx">Board of Directors</a></li>--%>
-                     <li><a href="/our-team.aspx">Our Team</a></li>
+                     <li><a href="/our-motivators.aspx">Our Motivators</a></li>
                      <li><a href="/clientele.aspx">Clientele</a></li>
                      <li><a href="/partners.aspx">Partners</a></li>
                      <li><a href="/testimonials.aspx">Testimonials</a></li>
@@ -300,7 +300,7 @@
            <div class="footer-widget">
              <div class="f-about">
                <div class="f-widget-title">
-                 <h2><img src="/image/park-control-logo.png" alt="img" /></h2>
+                 <h2><img src="/image/logo/PCC%20Logo%20(No%20Background)(9.12.24)-01.png" alt="img" /></h2>
                </div>
                <p>
                  A pioneer in extending customized solutions and supply of

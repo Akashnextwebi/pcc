@@ -9,7 +9,7 @@
             <div class="slider-active" style="background: #101010">
                 <div
                     class="single-slider slider-bg d-flex align-items-center"
-                    style="background-image: url(image/banner-3.png); background-size: cover;">
+                    style="background-image: url(image/b1.png); background-size: cover;">
                     <div class="container">
                         <div class="row justify-content-start align-items-start">
                             <div class="col-lg-9 col-md-5">
@@ -118,7 +118,7 @@
                                     class="s-about-img p-relative wow fadeInLeft animated"
                                     data-animation="fadeInLeft"
                                     data-delay=".4s">
-                                    <img src="image/about-us.jpg" alt="img" />
+                                    <img src="image/habo/2.png" alt="img" />
                                 </div>
                             </div>
 
