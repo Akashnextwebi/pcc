@@ -553,4 +553,7 @@
     .services-slider-pcc .service-card {
         padding: 30px 25px 30px !important;
     }
+    .d-flex.new-flex.justify-content-between.align-items-center.mb-50 {
+        margin-bottom:0px !important;
+    }
 }

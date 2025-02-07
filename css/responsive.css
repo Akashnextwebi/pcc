@@ -1745,14 +1745,16 @@
   .menu .children li {
     border-bottom: 1px solid rgba(217, 217, 217, 0.5);
   }
-  .mean-container .mean-nav {
-    background: #ffffff 0% 0% no-repeat padding-box;
-    box-shadow: unset !important;
-    position: fixed;
-    left:0px !important;
-    right:0px !important;
-    top:65px !important;
-  }
+    .mean-container .mean-nav {
+        background: #ffffff 0% 0% no-repeat padding-box;
+        box-shadow: unset !important;
+        position: fixed;
+        overflow: scroll;
+        left: 0px !important;
+        width: 80%;
+        right: 0px !important;
+        top: 0px !important;
+    }
   .mean-container .mean-nav ul li a.mean-expand {
     text-align: right;
     top: 0;
