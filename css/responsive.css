@@ -1732,7 +1732,7 @@
     padding: 10px 5%;
     text-align: left;
     text-decoration: none;
-    text-transform: uppercase;
+    text-transform: capitalize;
     width: 90%;
     font-size: 15px;
     font-weight: 600;
@@ -1747,10 +1747,11 @@
   }
   .mean-container .mean-nav {
     background: #ffffff 0% 0% no-repeat padding-box;
-    box-shadow: 3px 4px 15px #0000001a;
+    box-shadow: unset !important;
     position: fixed;
     left:0px !important;
     right:0px !important;
+    top:65px !important;
   }
   .mean-container .mean-nav ul li a.mean-expand {
     text-align: right;
