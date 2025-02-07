@@ -64,7 +64,7 @@
 >
   <div class="container">
     
-    <div class="row">
+    <div class="row gy-4">
       <div class="col-lg-12">
         <div
           class="pcc-section-heading wow fadeInDown animated"
@@ -75,14 +75,7 @@
           <h2>What Our Client's Say</h2>
         </div>
       </div>
-      <div class="col-lg-12">
-
-          
-        <div
-          class="row gy-4"
-          data-animation="fadeInUp"
-          data-delay=".4s"
-        >
+    
             <%=strtestimonial %>
          <%-- <div class="testimonial-box">
             <div class="single-testimonial">
@@ -162,8 +155,7 @@
             </div>
           </div>--%>
             </div>
-        </div>
-    </div>
+      
   </div>
 </section>
 </asp:Content>

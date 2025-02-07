@@ -115,10 +115,10 @@
                         <div class="row justify-content-center align-items-center">
                             <div class="col-lg-6 col-md-12 col-sm-12">
                                 <div
-                                    class="s-about-img p-relative wow fadeInLeft animated"
+                                    class="s-about-img p-relative new-about wow fadeInLeft animated"
                                     data-animation="fadeInLeft"
                                     data-delay=".4s">
-                                    <img src="image/habo/2.png" alt="img" />
+                                    <img src="image/habo/3.png" alt="img" />
                                 </div>
                             </div>
 

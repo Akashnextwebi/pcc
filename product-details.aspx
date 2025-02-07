@@ -31,7 +31,7 @@
     z-index: 1;
     transform: translateY(26px);
     text-transform: uppercase;
-    z-index: 9999;
+    z-index: 9;
 }
             .contact-btn button {
         padding: 15px;

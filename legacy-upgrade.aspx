@@ -35,7 +35,7 @@
             </div>
 
 
-            <div class="row">
+            <div class="row gy-4">
                 <div class="col-lg-6">
                     <img src="image/ls/1.png" />
                 </div>

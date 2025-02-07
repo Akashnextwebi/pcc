@@ -127,8 +127,8 @@
 }
 
 .wptb-item--title {
-    font-size: 42px !important;
-    margin-bottom: 30px !important;
+    font-size: 42px ;
+    margin-bottom: 30px ;
 }
 
 .wptb-intro-one .wptb-heading {
@@ -155,14 +155,14 @@ p {
 }
 
 .wptb-service-two .wptb-item--title {
-    font-size: 42px !important;
-    margin-bottom: 50px !important;
+    font-size: 42px ;
+    margin-bottom: 50px ;
 }
 
 .wptb-icon-box2 .wptb-item--title {
-    font-size: 28px !important;
-    line-height: 35px !important;
-    margin-bottom: 15px !important;
+    font-size: 28px ;
+    line-height: 35px ;
+    margin-bottom: 15px ;
 }
 
 .wptb-item--icon {

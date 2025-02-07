@@ -145,7 +145,7 @@
         .history-section .inner-box:nth-child(8) .content-box .text:before,
         .history-section .inner-box:nth-child(10) .content-box .text:before,
         .history-section .inner-box:nth-child(12) .content-box .text:before {
-            left: 50px;
+            right: 50px;
         }
 
         .history-section .inner-box:nth-child(2) .content-box .text,
@@ -462,7 +462,7 @@ PCAMi-1000 Flight Instrumentation & Recording System
                                 </h2>
                                 <div class="text">
                                     <p>
-                                        Indigenization of the GURT Test Equipment Complex
+                                        Indigenization of the GURT Test Equipment Complex</p><p>
 Health & Utility Management System DAU for Aircraft
 
 
@@ -502,12 +502,21 @@ Health & Utility Management System DAU for Aircraft
                                 </h2>
                                 <div class="text">
                                     <p>
-                                        D&D and supply of Full Authority Digital Engine Control (FADEC) unit for Airworthy Diesel Engine
+Fuel Flow Metering Unit for the Sukhoi Aircraft</p>
+<p>Engine Control Unit for Military Ground Vehicles from 300 Hp to 1500 Hp</p>
+<p>Integrated Demodulation System for Telemetry Ground Station</p>
+
+
+<p>Heavy Vehicles Digital Display Units for Armoured carriers and other surface vehicles
+
+
+
 
 
 
 
                                     </p>
+                                    
                                 </div>
                             </div>
                         </div>

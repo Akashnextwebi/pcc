@@ -12230,3 +12230,7 @@ li.has-submenu {
 .testimonial-active .ta-info h6 {
  min-height:40px;
 }
+.new-about img {
+    border: 2px solid #eee;
+    padding:2px;
+}

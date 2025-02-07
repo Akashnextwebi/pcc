@@ -78,7 +78,7 @@
     </div>
     <div class="section-padding">
         <div class="container-fluid one pl--95">
-            <div class="row align-items-center">
+            <div class="row  gy-4 align-items-center">
                 <div class="col-lg-3">
                     <div class="mission-img">
                         <img src="image/partners/bhe.jpg" alt="">

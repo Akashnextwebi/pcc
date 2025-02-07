@@ -1141,7 +1141,6 @@
     padding: 10px 5%;
     text-align: left;
     text-decoration: none;
-    text-transform: uppercase;
     width: 90%;
     font-size: 15px;
     font-weight: 600;
@@ -1158,6 +1157,7 @@
     background: #ffffff 0% 0% no-repeat padding-box;
     box-shadow: 3px 4px 15px #0000001a;
     position: absolute;
+
   }
   .mean-container .mean-nav ul li a.mean-expand {
     text-align: right;
@@ -1748,7 +1748,9 @@
   .mean-container .mean-nav {
     background: #ffffff 0% 0% no-repeat padding-box;
     box-shadow: 3px 4px 15px #0000001a;
-    position: absolute;
+    position: fixed;
+    left:0px !important;
+    right:0px !important;
   }
   .mean-container .mean-nav ul li a.mean-expand {
     text-align: right;
