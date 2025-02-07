@@ -15,6 +15,8 @@ public partial class product_details : System.Web.UI.Page
 {
     SqlConnection conSQ = new SqlConnection(ConfigurationManager.ConnectionStrings["conSQ"].ConnectionString);
     public string strName = "", strSKU, strMainImg = "", strId = "", strdesc = "", strpdf = "", StrGallery = "", strCapabilities = "", strSpecification = "", strDatasheet = "", strRelatedProducts = "";
+
+    public string strBroucher = "";
     protected void Page_Load(object sender, EventArgs e)
     {
         var purl = Convert.ToString(RouteData.Values["purl"]);
@@ -51,12 +53,33 @@ public partial class product_details : System.Web.UI.Page
                 }
                 #endregion
 
-                strName = Pro.ProductName; 
-                strSKU = Pro.SKUCode; 
-                strdesc = Pro.FullDesc; 
-                strpdf = Pro.Broucher; 
-                strId = Pro.Id.ToString(); 
-                BindRelatedProduct(Convert.ToString(Pro.RelatedProducts)); 
+                if (!string.IsNullOrEmpty(Pro.Broucher))
+                {
+                    strBroucher = @"<a href='javascript:void(0);' id='hidenId' class='btn-three w-100 hidenId' data-id='" + Pro.Id + @"' data-bs-toggle='modal' data-bs-target='#exampleModal'>
+                                        <div class='btn-wrap'>
+                                            <span class='text-first'><i class='fa-solid fa-cloud-arrow-down me-2'></i>
+                                                Download Brochure</span>
+                                            <span class='text-second'><i class='fa-solid fa-cloud-arrow-down me-2'></i>Download <b></b>Brochure</span>
+                                        </div>
+                                    </a>";
+                }
+                else
+                {
+                    strBroucher = @"<a href='javascript:void(0);' id='btnEnqury' class='btn-three w-100' data-bs-toggle='modal' data-bs-target='#exampleModal1'>
+                                        <div class='btn-wrap'>
+                                            <span class='text-first'><i class='fa-solid fa-message me-2'></i>
+                                                Enquery</span>
+                                            <span class='text-second'><i class='fa-solid fa-message me-2'></i>Download <b></b>Brochure</span>
+                                        </div>
+                                    </a>";
+                }
+
+                strName = Pro.ProductName;
+                strSKU = Pro.SKUCode;
+                strdesc = Pro.FullDesc;
+                strpdf = Pro.Broucher;
+                strId = Pro.Id.ToString();
+                BindRelatedProduct(Convert.ToString(Pro.RelatedProducts));
                 var DS = DatasheetGallery.GetAllDatasheetGalleryProductGuid(conSQ, Pro.ProductGuid);
                 if (DS.Count > 0)
                 {
@@ -65,10 +88,10 @@ public partial class product_details : System.Web.UI.Page
 
 
                         strDatasheet += @"<div class='swiper-slide'>
-    <div class='data-sheet'>
-        <img src='/" + DS[i].ImageUrl + @"' />
-    </div>
-</div>";
+                                            <div class='data-sheet'>
+                                                <img src='/" + DS[i].ImageUrl + @"' />
+                                            </div>
+                                        </div>";
                     }
 
                 }
@@ -199,7 +222,7 @@ public partial class product_details : System.Web.UI.Page
             {
                 ResPDF = BrochureEnguiry.GetBroucherPDF(conSQ, Id);
 
-               // IndPDF = BrochureEnguiry.GetIndustryPDF(conSQ,)
+                // IndPDF = BrochureEnguiry.GetIndustryPDF(conSQ,)
                 return "Success | " + ResPDF;
             }
             else
@@ -233,15 +256,15 @@ public partial class product_details : System.Web.UI.Page
 
                         strRelatedProducts += @"<div class='col-lg-4'>
                             <div class='card1'>
-                                <a href='/"+url+@"' contenteditable='false' style='cursor: pointer;'>
+                                <a href='/" + url + @"' contenteditable='false' style='cursor: pointer;'>
                                     <img src='/" + rp.ThumbImage + @"' class='img1'>
                                     <div class='intro1'>
-                                        <h4 class='text-h1'>" + rp.ProductName +@"
+                                        <h4 class='text-h1'>" + rp.ProductName + @"
 
 </h4>
 
                                         <p class='text-p'>
-                                           " + rp.FullDesc +@"          
+                                           " + rp.FullDesc + @"          
                                         </p>
                                     </div>
                                 </a>
@@ -255,11 +278,42 @@ public partial class product_details : System.Web.UI.Page
             {
                 divpro.Visible = false;
             }
-            
+
         }
         catch (Exception ex)
         {
             ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "BindRelatedProduct", ex.Message);
         }
+    }
+    [WebMethod(EnableSession = true)]
+    public static string GetEnquiry(string Name, string Phone, string emailid, string message)
+    {
+        SqlConnection conSQ = new SqlConnection(ConfigurationManager.ConnectionStrings["conSQ"].ConnectionString);
+        string x = "";
+        try
+        {
+            var result = new EnquiryDetails()
+            {
+
+                Fullname = Name,
+                Contact = Phone,
+                Email = emailid,
+                Message = message,
+                AddedIp = CommonModel.IPAddress(),
+                AddedOn = TimeStamps.UTCTime(),
+                Status = "Active"
+            };
+            var exe = EnquiryDetails.InsertEnquiry(conSQ, result);
+            if (exe > 0)
+            {
+                var mail = Emails.EnqueiryRequest(result);
+                return "Success";
+            }
+        }
+        catch (Exception ex)
+        {
+            ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "GetEnquiry", ex.Message);
+        }
+        return x;
     }
 }

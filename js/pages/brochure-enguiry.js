@@ -84,3 +84,66 @@ $(document.body).on("click", ".BtnSubmit", function (e) {
     //    $('.error-message').append('Please fill all the fields.');
     //}
 });
+
+//Enquiry Form
+$(".btnsubmit").on('click', function (e) {
+    e.preventDefault();
+    var count = 1;
+    var Name = $("#txtname").val();
+    var Phone = $("#txtcontact").val();
+    var emailid = $("#txtemail").val();
+    var message = $("#txtmessage").val();
+    $(".spnname").empty();
+    $(".spnemail").empty();
+    $(".spncontact").empty();
+    $(".spnmessage").empty();
+    
+    if (Name == "" || Name == null) {
+        $(".spnname").html("field can't be empty");
+        count = 0;
+    }
+    else if (/^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,}$/.test(Name) === false) {
+        $(".spnname").html("Enter valid name");
+        count = 0;
+    }
+    if (Phone == "" || Phone == null) {
+        $(".spncontact").html("field can't be empty");
+        count = 0;
+    }
+    else if (/^[0-9]\d{9}$/.test(Phone) === false) {
+        $(".spncontact").html("Invalid mobile number");
+        count = 0;
+    }
+    if (emailid == "" || emailid == null) {
+        $(".spnemail").html("field can't be empty");
+        count = 0;
+    }
+    else if (/^\S+@\S+\.\S+$/.test(emailid) === false) {
+        $(".spnemail").html("Invalid email address");
+        count = 0;
+    }
+    if (message == "" || message == null) {
+        $(".spnmessage").html("field can't be empty");
+        count = 0;
+    }
+    
+   
+    if (count == 1) {
+        $.ajax({
+            type: 'POST',
+            url: "/product-details.aspx/GetEnquiry",
+            data: "{Name:'" + Name + "',Phone:'" + Phone + "',emailid:'" + emailid + "',message:'" + message + "'}",
+            contentType: 'application/json; charset=utf-8',
+            dataType: "json",
+            success: function (data2) {
+                if (data2.d == "Success") {
+                    window.location.href = "/thankyou.aspx";
+                }
+                else {
+                    $(".lblstatus").removeClass("d-none");
+                    $(".lblstatus").html("there is some problem right now please try again later");
+                }
+            }
+        });
+    }
+});

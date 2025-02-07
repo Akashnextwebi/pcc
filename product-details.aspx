@@ -5,7 +5,7 @@
     <link href="/css/about.css" rel="stylesheet" />
     <link href="/css/light.css" rel="stylesheet" />
     <link href="/snackbar/snackbar.min.css" rel="stylesheet" />
-            <link href="/css/industries.css" rel="stylesheet" />
+    <link href="/css/industries.css" rel="stylesheet" />
 
     <link
         rel="stylesheet"
@@ -23,32 +23,37 @@
             padding: 20px;
             border-radius: 50%;
         }
+
         .contact-btn {
-    position: fixed;
-    right: -20px;
-    top: 250px;
-    rotate: -90deg;
-    z-index: 1;
-    transform: translateY(26px);
-    text-transform: uppercase;
-    z-index: 9;
-}
+            position: fixed;
+            right: -20px;
+            top: 250px;
+            rotate: -90deg;
+            z-index: 1;
+            transform: translateY(26px);
+            text-transform: uppercase;
+            z-index: 9999;
+        }
+
             .contact-btn button {
-        padding: 15px;
-        background: #c72329;
-        font-size: 18px;
-        line-height: 20px;
-        border: 0;
-        color: #fff;
-    }
-           textarea.form-control{
-                background:#fff;
-                color:#000;
+                padding: 15px;
+                background: #c72329;
+                font-size: 18px;
+                line-height: 20px;
+                border: 0;
+                color: #fff;
             }
-      textarea.form-control:focus{
-    background:#fff;
-    color:#000;
-}
+
+        textarea.form-control {
+            background: #fff;
+            color: #000;
+        }
+
+            textarea.form-control:focus {
+                background: #fff;
+                color: #000;
+            }
+
         .campus-slider .swiper-button-next {
             color: #fff;
             background: #000;
@@ -350,14 +355,14 @@ Pellentesque habitant morbi tristique senectus et netus et malesuada.--%>
 
 
                                 <div class="cart_button">
-                                    <a href="javascript:void(0);" id="hidenId" class="btn-three w-100 hidenId" data-id="<%=strId %>" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                        <div class="btn-wrap">
-                                            <span class="text-first"><i class="fa-solid fa-cloud-arrow-down me-2"></i>
+                                    <%--<a href='javascript:void(0);' id='hidenId' class='btn-three w-100 hidenId' data-id='1' data-bs-toggle='modal' data-bs-target='#exampleModal'>
+                                        <div class='btn-wrap'>
+                                            <span class='text-first'><i class='fa-solid fa-cloud-arrow-down me-2'></i>
                                                 Download Brochure</span>
-                                            <span class="text-second"><i class="fa-solid fa-cloud-arrow-down me-2"></i>Download <b></b>Brochure</span>
+                                            <span class='text-second'><i class='fa-solid fa-cloud-arrow-down me-2'></i>Download <b></b>Brochure</span>
                                         </div>
-
-                                    </a>
+                                    </a>--%>
+                                    <%=strBroucher %>
                                 </div>
 
 
@@ -378,7 +383,7 @@ Pellentesque habitant morbi tristique senectus et netus et malesuada.--%>
                                     <a class="active" data-bs-toggle="tab" href="#Capabilities">Capabilities</a>
                                 </li>
                                 <li class="nav-item" id="divspe" runat="server">
-                                    <a data-bs-toggle="tab" href="#Specifications">Specifications</a>
+                                    <a  data-bs-toggle="tab" href="#Specifications">Specifications</a>
                                 </li>
 
                             </ul>
@@ -534,7 +539,7 @@ Pellentesque habitant morbi tristique senectus et netus et malesuada.--%>
                                         </div>--%>
                                     </div>
                                 </div>
-                                <div class="tab-pane" id="Specifications" tabindex="0">
+                                <div class="tab-pane show active" id="Specifications" tabindex="0">
                                     <div class="row justify-content-center">
                                         <div class="col-lg-8">
                                             <div class="wptb-accordion wptb-accordion1">
@@ -596,7 +601,7 @@ Pellentesque habitant morbi tristique senectus et netus et malesuada.--%>
         <section class="section-padding " id="divsheet" runat="server">
             <div class="container">
                 <div class="row justify-content-center">
-                   
+
                     <div class="col-lg-4">
                         <a href="javascript:void(0);" class="btn-three w-100 hidenId" data-id="<%=strId %>" data-bs-toggle="modal" data-bs-target="#exampleModal">
                             <div class="btn-wrap">
@@ -610,7 +615,7 @@ Pellentesque habitant morbi tristique senectus et netus et malesuada.--%>
 
                 </div>
 
-               <%-- <div class="row">
+                <%-- <div class="row">
                     <div class="col-lg-12">
                         <div class="swiper campus-slider ">
                           
@@ -639,8 +644,7 @@ Pellentesque habitant morbi tristique senectus et netus et malesuada.--%>
                 </div>
                 <div class="row">
                     <%=strRelatedProducts %>
-         
-                         </div>
+                </div>
             </div>
 
         </section>
@@ -705,72 +709,77 @@ Pellentesque habitant morbi tristique senectus et netus et malesuada.--%>
             </div>
         </div>
         <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg	">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel1">Enquiry Now
-                </h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body bg-light">
-                <div class="row">
-                    <div class="col-lg-12 ">
-                        <div class="wptb-form"  method="post">
-                            <div class="wptb-form--inner">
-                                <div class="row">
-                                    <div class="col-lg-12 col-md-12 mb-4">
-                                      <lable class="error-message text-danger d-none"></lable>
-                                        <div class="form-group">
-                                            <input type="text" name="name" class="form-control" placeholder="Enter Your Name" required>
-                                           
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12 col-md-12 mb-4">
-                                        <div class="form-group">
-                                           <input type="text" name="password" class="form-control" placeholder="Mobile Number">
-                                            
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12 col-md-12 mb-4">
-                                        <div class="form-group">
-                                           <input type="text" name="password" class="form-control" placeholder="Phone No" />
-                                         
-                                        </div>
-                                    </div>
-                                     <div class="col-lg-12 col-md-12 mb-4">
-     <div class="form-group">
-        <textarea type="text" name="message" class="form-control" placeholder="Message" ></textarea>
-      
-     </div>
- </div>
+            <div class="modal-dialog modal-dialog-centered modal-lg	">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel1">Enquiry Now
+                        </h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body bg-light">
+                        <div class="row">
+                            <div class="col-lg-12 ">
+                                <div class="wptb-form" method="post">
+                                    <div class="wptb-form--inner">
+                                        <div class="row">
+                                            <div class="col-lg-12 col-md-12 mb-4">
+                                                <lable class="error-message text-danger d-none"></lable>
+                                                <div class="form-group">
+                                                    <input type="text" name="name" class="form-control" id="txtname" placeholder="Enter Your Name" required>
+                                                    <span class="spnname text-danger ms-2"></span>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12 col-md-12 mb-4">
+                                                <div class="form-group">
+                                                    <input type="text" name="password" class="form-control" id="txtcontact" placeholder="Mobile Number">
+                                                    <span class="spncontact text-danger ms-2"></span>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12 col-md-12 mb-4">
+                                                <div class="form-group">
+                                                    <input type="text" name="password" class="form-control" id="txtemail" placeholder="Email" />
+                                                    <span class="spnemail text-danger ms-2"></span>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12 col-md-12 mb-4">
+                                                <div class="form-group">
+                                                    <textarea type="text" name="message" class="form-control" id="txtmessage" placeholder="Message"></textarea>
+                                                    <span class="spnmessage text-danger ms-2"></span>
+                                                </div>
+                                            </div>
 
-                                    <div class="col-md-12 col-lg-12 ">
+                                            <div class="col-md-12 col-lg-12 ">
 
-                                        <div class="slider-btn">
-                                            <a
+                                                <div class="slider-btn">
+                                                    <%-- <a
                                                 href="#"
                                                 class="btn ss-btn mr-15"
                                                 data-animation="fadeInLeft"
-                                                data-delay=".4s">Submit<i class="fal fa-long-arrow-right"></i></a>
+                                                data-delay=".4s">Submit<i class="fal fa-long-arrow-right"></i></a>--%>
+                                                    <%--<input type="button" value="Submit" class="btn ss-btn mr-15" data-animation="fadeInLeft" data-delay=".4s" onclick="submitFunction()"><i class="fal fa-long-arrow-right"></i>--%>
+                                                    <button class="btn ss-btn mr-15 btnsubmit" data-animation="fadeInLeft" data-delay=".4s">
+                                                        Submit<i class="fal fa-long-arrow-right"></i>
+                                                    </button>
+
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
-
         </div>
-    </div>
-</div>
-        
+
         <div class="contact-btn">
-        <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal1">
-           Enquiry Now
+            <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+                Enquiry Now
      
-        </button>
-    </div>
+            </button>
+        </div>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -808,5 +817,6 @@ Pellentesque habitant morbi tristique senectus et netus et malesuada.--%>
     </script>
     <script src="/js/vendor/jquery-3.6.0.min.js"></script>
     <script src="/js/pages/brochure-enguiry.js"></script>
+
 </asp:Content>
 
