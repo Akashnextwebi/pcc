@@ -17,7 +17,7 @@
         }
 
         .wptb-office-address .widget {
-            padding-left: 40px !important;
+            padding-left: 40px ;
             padding-right: 15px;
             margin-right: -1px;
             height: 100%;
@@ -50,7 +50,7 @@
 
         .widget .widget-title {
             position: relative;
-            margin-bottom: 30px !important;
+            margin-bottom: 30px ;
         }
 
             .widget .widget-title::after {
@@ -153,9 +153,9 @@
         }
 
         .wptb-item--title {
-            font-size: 42px !important;
-            margin-bottom: 30px !important;
-            line-height: 48px !important;
+            font-size: 42px ;
+            margin-bottom: 30px ;
+            line-height: 48px ;
             font-weight: 800;
         }
 
@@ -190,7 +190,7 @@
         <section class="pd-bottom-300 section-padding">
             <div class="container">
                 <div class="wptb-office-address mr-bottom-90">
-                    <div class="row">
+                    <div class="row gy-lg-0 gy-4">
                         <div class="col-md-4 pe-md-0">
                             <div class="widget">
                                 <h2 class="widget-title">Phone No</h2>
