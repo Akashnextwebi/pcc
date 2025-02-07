@@ -1530,5 +1530,41 @@ Your password remains unchanged.</p></td> </tr> <tr>
             return 0;
         }
     }
+    public static async Task<int> EnqueiryRequest(EnquiryDetails contact)
+    {
+        try
+        {
+            string Pageurl = HttpContext.Current.Request.Url.AbsoluteUri.ToString();
+            MailMessage mail = new MailMessage();
+            mail.To.Add(ConfigurationManager.AppSettings["ToMail"]);
+            //mail.CC.Add(ConfigurationManager.AppSettings["CCMail"]);
+            mail.From = new MailAddress(ConfigurationManager.AppSettings["from"], ConfigurationManager.AppSettings["fromName"]);
+            mail.Subject = "Park Control And Communication Enquiry Request";
+            mail.Body = @"Hi Admin, <br><br>You have received an request from " + contact.Fullname + @".<br>
+                            <br><b>Details:</b>
+                            <br><b>Full Name: </b>" + contact.Fullname + @"
+                            <br><b>Contact:</b> " + contact.Contact + @"
+                            <br><b>Email Id: </b>" + contact.Email + @"
+                            <br><b>Message: </b>" + contact.Message + @"
+                            <a><br><b>Pageurl: </b>"+ Pageurl + @"</a>
+                            </br><br>Regards,<br>Park Control And Communication";
+            mail.IsBodyHtml = true;
+            SmtpClient smtp = new SmtpClient();
+            smtp.Host = ConfigurationManager.AppSettings["host"];
+            smtp.Port = Convert.ToInt32(ConfigurationManager.AppSettings["port"]);
+            smtp.Credentials = new System.Net.NetworkCredential
+                           (ConfigurationManager.AppSettings["userName"], ConfigurationManager.AppSettings["password"]);
+
+            smtp.EnableSsl = Convert.ToBoolean(ConfigurationManager.AppSettings["enableSsl"]);
+            Task.Run(() => smtp.Send(mail));
+            //smtp.Send(mail);
+            return 1;
+        }
+        catch (Exception ex)
+        {
+            ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "EnqueiryRequest", ex.Message);
+            return 0;
+        }
+    }
 
 }
