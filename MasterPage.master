@@ -382,10 +382,10 @@
              </div>
              <div class="footer-link">
                <ul class="quick-links">
-                 <li><a href="#">Air</a></li>
-                 <li><a href="#"> Land</a></li>
-                 <li><a href="#"> Sea </a></li>
-                 <li><a href="#"> Space</a></li>
+                 <li><a href="/industries/air">Air</a></li>
+                 <li><a href="/industries/land"> Land</a></li>
+                 <li><a href="/industries/sea"> Sea </a></li>
+                 <li><a href="/industries/space"> Space</a></li>
                </ul>
              </div>
            </div>
