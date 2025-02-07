@@ -99,9 +99,13 @@ public partial class product_details : System.Web.UI.Page
                 {
                     divsheet.Visible = false;
                 }
+
+                #region Capablities
                 var cap = manageCapabilities.GetAllCapabilitiesProductGuid(conSQ, Pro.ProductGuid);
                 if (cap.Count > 0)
                 {
+                    Capabilities.Attributes.Add("class", "show active");
+                    divcap.Attributes.Add("class", "active");
                     for (int i = 0; i < cap.Count; i++)
                     {
 
@@ -149,17 +153,22 @@ public partial class product_details : System.Web.UI.Page
                 }
                 else
                 {
+                    Capabilities.Visible = false;
                     divcap.Visible = false;
                 }
 
-
+                #endregion
+                #region Specification
                 var spe = SpecificationDetails.GetAllSpecificationProductGuid(conSQ, Pro.ProductGuid);
                 if (spe.Count > 0)
                 {
+                    if (strCapabilities == "")
+                    {
+                        Specifications.Attributes.Add("class", "show active");
+                        divspe.Attributes.Add("class", "active");
+                    }
                     for (int i = 0; i < spe.Count; i++)
                     {
-
-
                         strSpecification += @"<div class='wptb--item active'>
                                                     <h6 class='wptb-item-title'><span><span class='wptb-item--number'></span>" + spe[i].Title + @"</span> <i class='fa-solid fa-angle-down'></i></h6>
                                                     <div class='wptb-item--content'>
@@ -171,8 +180,10 @@ public partial class product_details : System.Web.UI.Page
                 }
                 else
                 {
+                    Specifications.Visible = false;
                     divspe.Visible = false;
                 }
+                #endregion
                 var PG = ProductGallery.GetAllProductGalleryProductGuid(conSQ, Pro.ProductGuid);
                 if (PG.Count > 0)
                 {
