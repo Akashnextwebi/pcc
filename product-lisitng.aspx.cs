@@ -7,10 +7,10 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class product_lisitng :  System.Web.UI.Page
+public partial class product_lisitng : System.Web.UI.Page
 {
     SqlConnection conSQ = new SqlConnection(ConfigurationManager.ConnectionStrings["conSQ"].ConnectionString);
-    public string strBanner = "", strBannertitle = "", strDesctitle = "", strDesc = "",strProduct="",StrWhitepaper="";
+    public string strBanner = "", strBannertitle = "", strDesctitle = "", strDesc = "", strProduct = "", StrWhitepaper = "";
     protected void Page_Load(object sender, EventArgs e)
     {
         if (RouteData.Values["surl"] != null)
@@ -49,18 +49,18 @@ public partial class product_lisitng :  System.Web.UI.Page
             {
                 for (int i = 0; i < pro.Count; i++)
                 {
-                   var url = "product/" + pro[i].ProductUrl;
-                    strProduct += @"<div class='col-lg-4 col-md-6'>
+                    var url = "product/" + pro[i].ProductUrl;
+                    strProduct += @"<div class='col-lg-4'>
                             <div class='card1'>
-                                <a href='/"+url+@"' contenteditable='false' style='cursor: pointer;'>
+                                <a href='/" + url + @"' contenteditable='false' style='cursor: pointer;'>
                                     <img src='/" + pro[i].ThumbImage + @"' class='img1'>
                                     <div class='intro1'>
-                                        <h4 class='text-h1'>" + pro[i].ProductName +@"
+                                        <h4 class='text-h1'>" + pro[i].ProductName + @"
 
 </h4>
 
                                         <p class='text-p'>
-                                           " + pro[i].FullDesc +@"          
+                                           " + pro[i].FullDesc + @"          
                                         </p>
                                     </div>
                                 </a>
@@ -68,6 +68,10 @@ public partial class product_lisitng :  System.Web.UI.Page
                             </div>
                         </div>";
                 }
+            }
+            else
+            {
+                divpro.Visible = false;
             }
         }
         catch (Exception ex)
@@ -102,7 +106,7 @@ public partial class product_lisitng :  System.Web.UI.Page
 </div>";
                 }
             }
-            
+
         }
         catch (Exception ex)
         {

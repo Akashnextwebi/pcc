@@ -371,7 +371,7 @@
                 </div>
             </div>
         </section>
-        <section class="section-padding">
+        <section class="section-padding" id="divCap" runat="server" >
             <div class="container">
                 <div class="row gy-4"><%=strsubcapability %></div>
             </div>
