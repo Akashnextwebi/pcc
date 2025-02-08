@@ -25,7 +25,7 @@
         <div class="container">
 
             <div class="row gy-4">
-    <div class="col-lg-4">
+    <div class="col-lg-4 col-md-6">
         <div class="instructor__item">
             <div class="instructor__thumb">
                 <a href="javascript:void(0)" contenteditable="false" style="cursor: pointer;">
@@ -47,14 +47,14 @@
 
         </div>
     </div>
-    <div class="col-lg-4">
+    <div class="col-lg-4 col-md-6">
         <div class="instructor__item">
             <div class="instructor__thumb">
                 <a href="javascript:void(0)" contenteditable="false" style="cursor: pointer;">
                     <img src="image/team/noble-300x200.jpg" alt="img"></a>
             </div>
             <div class="instructor__content">
-                <h2 class="title"><a href="javascript:void(0)" contenteditable="false" style="cursor: pointer;">M P Sastri</a></h2>
+                <h2 class="title"><a href="javascript:void(0)" contenteditable="false" style="cursor: pointer;">PJB Noble</a></h2>
                 <span class="designation">Director (Commercial)
 
 
@@ -72,15 +72,15 @@
 
         </div>
     </div>
-    <div class="col-lg-4">
+    <div class="col-lg-4 col-md-6">
         <div class="instructor__item">
             <div class="instructor__thumb">
                 <a href="javascript:void(0)" contenteditable="false" style="cursor: pointer;">
                     <img src="image/team/satya-300x200.jpg" alt="img"></a>
             </div>
             <div class="instructor__content">
-                <h2 class="title"><a href="javascript:void(0)" contenteditable="false" style="cursor: pointer;">T Satyanarayana
-                </a></h2>
+                <h3 class="title"><a href="javascript:void(0)" contenteditable="false" style="cursor: pointer;">T Satyanarayana
+                </a></h3>
                 <span class="designation">Sr. Vice President (Systems)
 
 
@@ -101,18 +101,18 @@
 
         </div>
     </div>
-    <div class="col-lg-4">
+    <div class="col-lg-4 col-md-6">
         <div class="instructor__item">
             <div class="instructor__thumb">
                 <a href="javascript:void(0)" contenteditable="false" style="cursor: pointer;">
                     <img src="image/team/thomous.png" alt="img"></a>
             </div>
             <div class="instructor__content">
-                <h2 class="title"><a href="javascript:void(0)" contenteditable="false" style="cursor: pointer;">Thomas Vengal
+                <h3 class="title"><a href="javascript:void(0)" contenteditable="false" style="cursor: pointer;">Thomas Vengal
 
 
 
-                </a></h2>
+                </a></h3>
                 <span class="designation">Head-Process Excellence
 
                 </span>
@@ -130,17 +130,17 @@
 
         </div>
     </div>
-    <div class="col-lg-4">
+    <div class="col-lg-4 col-md-6">
         <div class="instructor__item">
             <div class="instructor__thumb">
                 <a href="javascript:void(0)" contenteditable="false" style="cursor: pointer;">
                     <img src="image/team/kantarao-1-300x200.jpg" alt="img"></a>
             </div>
             <div class="instructor__content">
-                <h2 class="title"><a href="javascript:void(0)" contenteditable="false" style="cursor: pointer;">TVL Kantha Rao
+                <h3 class="title"><a href="javascript:void(0)" contenteditable="false" style="cursor: pointer;">TVL Kantha Rao
 
 
-                </a></h2>
+                </a></h3>
                 <span class="designation">Vice President (Technology Solutions)
                 </span>
 
