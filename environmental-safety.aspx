@@ -86,8 +86,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="Environmental-wrapper">
-                        <div class="row">
-                            <div class="col-lg-12">
+                     
                                                         <h2>Environmental Safety – Sustainable Innovation for a Greener Future
 
 </h2>
@@ -111,8 +110,7 @@ We adhere to global environmental standards and implement green initiatives acro
 
  </p>
 
-                            </div>
-                        </div>
+                            
 
                         <div class="row mt-5">
                             <div class="col-lg-6">
@@ -129,55 +127,6 @@ We adhere to global environmental standards and implement green initiatives acro
             </div>
         </div>
     </section>
-    <section class="section-padding bg-light">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="text-center our-approach mb-50">
-                        <h2>Key Considerations for Environmental Safety in PCC
-</h2>
-                        <p>
-                            At PCC,We operate a number of industrial sites and our manufacturing activities present a range of risks.
-
-                        </p>
-                    </div>
-
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="item-box">
-                        <img src="image/checked.png" width="48" class="mb-3">
-                        <div class="content-box">
-                            <h4>Temperature Control</h4>
-                            <p>We focus on identifying potential risks before they become issues. Through rigorous safety assessments, hazard analysis, and continuous monitoring, we take preventive actions to ensure that all operations are safe and compliant with industry standards.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="item-box">
-                        <img src="image/checked.png" width="48" class="mb-3">
-
-                        <div class="content-box">
-                            <h4>Power Management
-</h4>
-                            <p>Our employees receive continuous safety training, equipping them with the knowledge and skills needed to recognize and address safety concerns. We empower our teams to make safety a priority at all levels, fostering a culture where every individual takes ownership of their safety and the safety of others.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="item-box">
-                        <img src="image/checked.png" width="48" class="mb-3">
-
-                        <i class="ar-icons-tank"></i>
-                        <div class="content-box">
-                            <h4>Fire Safety</h4>
-                            <p>We are committed to constantly improving our safety practices. By reviewing safety data, learning from incidents, and staying updated on best practices, we strive to enhance our safety performance and create a work environment that is always evolving towards greater safety standards.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    
 </asp:Content>
 

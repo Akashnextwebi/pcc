@@ -170,9 +170,9 @@
                                     <br />
                                     Defence & Aerospace</h2>
                             </div>
-                            <div class="service-btn d-lg-block d-none">
+                            <%--<div class="service-btn d-lg-block d-none">
                                 <a href="#" class="btn2">Read More<i class="fal fa-long-arrow-right"></i></a>
-                            </div>
+                            </div>--%>
                         </div>
                     </div>
                     <div class="services-slider-pcc">
@@ -362,10 +362,10 @@
                 <div class="row gy-4">
                     <div class="col-6 col-sm-6 col-md-3">
                         <div class="industry-card">
-                            <div class="image">
-                                <img src="image/air-industry.jpg" alt="" />
-                            </div>
-                            <div class="image-caption">Air</div>
+                             <a href="/industries/air"><div class="image">
+                                <a href="/industries/air"><img src="image/air-industry.jpg" alt="" /></a>
+                            </div></a>
+                            <a href="/industries/air"><div class="image-caption">Air</div></a>
                         </div>
                     </div>
                     <div class="col-6 col-sm-6 col-md-3">
@@ -373,7 +373,7 @@
                             <div class="image">
                                 <img src="image/land-industry.jpg" alt="" />
                             </div>
-                            <div class="image-caption">Land</div>
+                            <a href="/industries/land"><div class="image-caption">Land</div></a>
                         </div>
                     </div>
                     <div class="col-6 col-sm-6 col-md-3">
@@ -381,7 +381,7 @@
                             <div class="image">
                                 <img src="image/sea-industry.jpg" alt="" />
                             </div>
-                            <div class="image-caption">Sea</div>
+                            <a href="/industries/sea"><div class="image-caption">Sea</div></a>
                         </div>
                     </div>
                     <div class="col-6 col-sm-6 col-md-3">
@@ -389,7 +389,7 @@
                             <div class="image">
                                 <img src="image/space-industry.jpg" alt="" />
                             </div>
-                            <div class="image-caption">Space</div>
+                            <a href="/industries/space"><div class="image-caption">Space</div></a>
                         </div>
                     </div>
                 </div>
@@ -525,7 +525,7 @@
 PCC prides in the supply of many products that are used for surface applications; Range Systems that include Telemetry Ground Stations, Time Synchronization Systems, Automated Test Equipment, Digital Engine Control Unit, Heavy Vehicle Dashboard Display, etc.
                                         </p>
                                         <a
-                                            href="#"
+                                            href="/industries/land"
                                             class="btn2 mt-35"
                                             data-animation="fadeInLeft"
                                             data-delay=".4s">Read More <i class="fal fa-long-arrow-right"></i></a>
@@ -545,7 +545,7 @@ PCC prides in the supply of many products that are used for surface applications
 Airborne products that are technology intense and unique is the hallmark of the PCC portfolio; Data Acquisition Unit for Flight Test Instrumentation and Health & Usage Monitoring Systems, Full Authority Digital Engine Control, Control & Guidance Electronics, Fuel Flow Meter Unit, etc.
                                         </p>
                                         <a
-                                            href="#"
+                                            href="/industries/air"
                                             class="btn2 mt-35"
                                             data-animation="fadeInLeft"
                                             data-delay=".4s">Read More <i class="fal fa-long-arrow-right"></i></a>
@@ -565,7 +565,7 @@ Airborne products that are technology intense and unique is the hallmark of the 
 PCC works closely with Naval vessels in supplying products and solutions for Torpedoes, Fire Control Systems, Ship based landing and takeoff, etc.
                                         </p>
                                         <a
-                                            href="#"
+                                            href="/industries/sea"
                                             class="btn2 mt-35"
                                             data-animation="fadeInLeft"
                                             data-delay=".4s">Read More <i class="fal fa-long-arrow-right"></i></a>
@@ -585,7 +585,7 @@ PCC works closely with Naval vessels in supplying products and solutions for Tor
 The Satellite launches by the Indian Space Research Organization have been supported by PCC to a great extent with their Telemetry Solutions, Timing Solutions, etc.
                                         </p>
                                         <a
-                                            href="#"
+                                            href="/industries/space"
                                             class="btn2 mt-35"
                                             data-animation="fadeInLeft"
                                             data-delay=".4s">Read More <i class="fal fa-long-arrow-right"></i></a>
@@ -737,7 +737,7 @@ The Satellite launches by the Indian Space Research Organization have been suppo
                         </h2>
                     </div>
                     <div class="cta__col">
-                        <a href="#" class="custom-btn">Let's Connect</a>
+                        <a href="contact-us.aspx" class="custom-btn">Let's Connect</a>
                     </div>
                 </div>
             </div>

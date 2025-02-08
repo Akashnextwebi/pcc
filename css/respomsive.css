@@ -1,6 +1,6 @@
 ﻿@media (min-width: 320px) and (max-width: 767px) {
     .pcc-header .header-mid {
-        padding: 30px 0px !important;
+        padding: 20px 0px !important;
     }
 
     .client-logo-wrap {
@@ -276,77 +276,97 @@
     }
 
     .history-section .inner-box:first-child .image-box, .history-section .inner-box:nth-child(3) .image-box, .history-section .inner-box:nth-child(5) .image-box, .history-section .inner-box:nth-child(7) .image-box, .history-section .inner-box:nth-child(9) .image-box, .history-section .inner-box:nth-child(11) .image-box {
-  display:none;
+        display: none;
     }
-    .history-section .inner-box:first-child .image-box, .history-section .inner-box:nth-child(3) .image-box, .history-section .inner-box:nth-child(5) .image-box, .history-section .inner-box:nth-child(7) .image-box, .history-section .inner-box:nth-child(9) .image-box, .history-section .inner-box:nth-child(11) .image-box{
-        display:none;
+
+    .history-section .inner-box:first-child .image-box, .history-section .inner-box:nth-child(3) .image-box, .history-section .inner-box:nth-child(5) .image-box, .history-section .inner-box:nth-child(7) .image-box, .history-section .inner-box:nth-child(9) .image-box, .history-section .inner-box:nth-child(11) .image-box {
+        display: none;
     }
-    .history-section .inner-box:nth-child(2) .image-box, .history-section .inner-box:nth-child(4) .image-box, .history-section .inner-box:nth-child(6) .image-box, .history-section .inner-box:nth-child(8) .image-box, .history-section .inner-box:nth-child(10) .image-box, .history-section .inner-box:nth-child(12) .image-box{
-        display:none !important;
+
+    .history-section .inner-box:nth-child(2) .image-box, .history-section .inner-box:nth-child(4) .image-box, .history-section .inner-box:nth-child(6) .image-box, .history-section .inner-box:nth-child(8) .image-box, .history-section .inner-box:nth-child(10) .image-box, .history-section .inner-box:nth-child(12) .image-box {
+        display: none !important;
     }
+
     .history-section .content-box h2 {
         font-size: 24px !important;
         line-height: 30px !important;
         color: #e12121 !important;
     }
-    .history-section .content-box .text:before{
-        content:unset!important ;
 
+    .history-section .content-box .text:before {
+        content: unset !important;
     }
-    .history-section .content-box .text{
-        padding:10px 0px 0px !important;
+
+    .history-section .content-box .text {
+        padding: 10px 0px 0px !important;
     }
-    .history-section .content-box h2{
-        border-top:1px solid #e2e2e2;
-        border-bottom:unset !important;
-        padding-top:20px !important;
-        padding-bottom:0px !important;
+
+    .history-section .content-box h2 {
+        border-top: 1px solid #e2e2e2;
+        border-bottom: unset !important;
+        padding-top: 20px !important;
+        padding-bottom: 0px !important;
     }
-    .single-testimonial{
-        padding:20px !important;
+
+    .single-testimonial {
+        padding: 20px !important;
     }
+
     .ta-info h6 {
         font-size: 16px !important;
         margin-bottom: 5px;
         color: #fff;
     }
+
     .ta-info span {
         color: #fff;
         font-size: 14px !important;
     }
+
     .sec-title h2 {
         font-size: 28px !important;
         line-height: 34px !important
-    }h2{
-         font-size:28px !important;
-         line-height:34px !important
-     }
+    }
+
+    h2 {
+        font-size: 28px !important;
+        line-height: 34px !important;
+        margin-bottom: 20px !important;
+    }
+
     .section-padding {
         padding: 40px 0px !important;
     }
-    .eg-card3.three .card-content{
-        padding:40px 20px !important;
+
+    .eg-card3.three .card-content {
+        padding: 40px 20px !important;
     }
+
         .eg-card3.three .card-content .catgory-and-title h5 a {
             font-size: 20px !important;
         }
-    .text-h1{
-        font-size:18px !important;
-        line-height:26px !important;
-        margin-bottom:0px !important;
+
+    .text-h1 {
+        font-size: 18px !important;
+        line-height: 26px !important;
+        margin-bottom: 0px !important;
     }
-    .card1:hover .intro1{
-       height:120px !important;
+
+    .card1:hover .intro1 {
+        height: 120px !important;
     }
+
     .product_left .product_zoom {
         display: flex !important;
         flex-direction: column-reverse !important;
         gap: 1rem !important;
     }
+
         .product_left .product_zoom .product_zoom_button_group li a {
             width: 80px !important;
             height: 80px !important;
         }
+
     .contact-btn button {
         padding: 15px;
         background: #c72329;
@@ -355,21 +375,27 @@
         border: 0;
         color: #fff;
     }
+
     .mt-100 {
-         margin-top: 0px !important; 
+        margin-top: 0px !important;
     }
+
     .section-padding {
         padding: 40px 0px !important;
     }
-    .wptb-icon-box2.style3{
-        padding:20px !important;
+
+    .wptb-icon-box2.style3 {
+        padding: 20px !important;
     }
+
     .modal-body {
         padding: 20px 0px !important;
     }
-    input[type="submit"], .btn{
-        height:45px !important;
+
+    input[type="submit"], .btn {
+        height: 45px !important;
     }
+
         .btn i {
             margin-left: 10px;
             font-size: 16px;
@@ -382,36 +408,45 @@
             height: 100%;
             line-height: 48px !important;
         }
-    .product_details_tab .nav{
-        gap:unset  !important;
-        flex-wrap:unset !important;
+
+    .product_details_tab .nav {
+        gap: unset !important;
+        flex-wrap: unset !important;
     }
-    .wptb-accordion1 .wptb--item .wptb-item--content{
-        padding:20px 10px !important;
+
+    .wptb-accordion1 .wptb--item .wptb-item--content {
+        padding: 20px 10px !important;
     }
-    .wptb-accordion1 .wptb-item-title{
-        padding:10px 10px !important;
+
+    .wptb-accordion1 .wptb-item-title {
+        padding: 10px 10px !important;
     }
-        .wptb-accordion1 .wptb-item-title i{
-           right:0px !important;
+
+        .wptb-accordion1 .wptb-item-title i {
+            right: 0px !important;
         }
+
         .wptb-accordion1 .wptb-item-title > span {
             padding-right: 20px !important;
         }
-    .card1{
-        height:250px !important;
-    }
-    .solution-section h2{
-        font-size:24px !important;
-        line-height:32px !important;
 
+    .card1 {
+        height: 250px !important;
     }
-    .card1 .img1{
-        padding-bottom:50px;
+
+    .solution-section h2 {
+        font-size: 24px !important;
+        line-height: 32px !important;
     }
-    .intro1{
-        height:50px !important;
+
+    .card1 .img1 {
+        padding-bottom: 50px;
     }
+
+    .intro1 {
+        height: 50px !important;
+    }
+
     .pt-130 {
         padding-top: 60px !important;
     }
@@ -419,29 +454,37 @@
     .pt-130 {
         padding-top: 60px !important;
     }
-    .btn{
-        line-height:9px !important;
+
+    .btn {
+        line-height: 9px !important;
     }
+
     .sticky-menu .header-mid {
-        padding:0px 0px !important;
+        padding: 20px 0px !important;
     }
-    .banner-area6{
-        padding:50px 0px 50px !important;
+
+    .banner-area6 {
+        padding: 50px 0px 50px !important;
     }
-        .banner-area6 .banner-left-content h1{
-            font-size:20px !important;
-            line-height:26px !important;
+
+        .banner-area6 .banner-left-content h1 {
+            font-size: 20px !important;
+            line-height: 26px !important;
         }
+
     .w-50 {
         width: 100% !important;
     }
-    .banner-area6 .banner-left-content .btn-group{
-        gap:15px !important;
-        padding-top:20px !important;
+
+    .banner-area6 .banner-left-content .btn-group {
+        gap: 15px !important;
+        padding-top: 20px !important;
     }
-        .banner-area6 .banner-left-content .btn-group li.success-rate{
-            gap:10px !important;
+
+        .banner-area6 .banner-left-content .btn-group li.success-rate {
+            gap: 10px !important;
         }
+
     .badge .make-in-india {
         animation: none;
         position: absolute;
@@ -453,6 +496,7 @@
         margin: 0 auto;
         z-index: 1;
     }
+
     .magnetic-wrap {
         position: relative;
         display: flex;
@@ -460,13 +504,53 @@
         align-items: center;
         margin-top: -172px;
     }
-    .banner-area6 .banner-left-content h1{
-        margin-bottom:10px !important;
-     
+
+    .banner-area6 .banner-left-content h1 {
+        margin-bottom: 10px !important;
     }
-    .statement-content-bottom ul li{
-        font-weight:500 !important;
-        font-size:14px !important;
+
+    .statement-content-bottom ul li {
+        font-weight: 500 !important;
+        font-size: 14px !important;
     }
-    
+
+    .statement-content.pl-50 {
+        padding: 0px !important;
+    }
+
+    .advantage-img.two {
+        margin-top: -50px !important;
+    }
+
+    .mb-130 {
+        margin-bottom: 60px !important;
+    }
+
+    .wptb-office-address .widget {
+        padding-left:20px !important;
+    }
+        .wptb-office-address .widget .widget-title{
+            font-size:20px !important;
+            line-height:26px !important;
+        }
+    .widget .widget-title {
+        position: relative;
+        margin-bottom: 16px !important;
+    }
+    .wptb-office .wptb-item--inner .wptb-item--title{
+        margin-bottom:0px !important;
+    }
+    .widget {
+        padding:0px 30px 20px 30px !important;
+    }
+    .mr-bottom-90 {
+        margin-bottom: 0px !important;
+    }
+    .wptb-item--title{
+        font-size:28px ;
+        line-height:34px ;
+    }
+    .services-slider-pcc .service-card {
+        padding: 30px 25px 30px !important;
+    }
 }
