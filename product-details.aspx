@@ -316,7 +316,7 @@
                                             <span class='text-second'><i class='fa-solid fa-cloud-arrow-down me-2'></i>Download <b></b>Brochure</span>
                                         </div>
                                     </a>--%>
-                                    <%=strBroucher %>
+                                    <%=strDatasheet%>
                                 </div>
 
 
