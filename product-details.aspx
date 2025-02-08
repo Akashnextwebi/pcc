@@ -406,22 +406,22 @@
                                 <div class="wptb-form" method="post">
                                     <div class="wptb-form--inner">
                                         <div class="row">
-                                            <div class="col-lg-12 col-md-12 mb-4">
+                                            <div class="col-lg-12 col-md-12 mb-2">
                                                 <div class="form-group">
                                                     <asp:TextBox ID="textFname" runat="server" class="form-control textFname" MaxLength="100" placeholder="Enter Your Name"></asp:TextBox>
-                                                    <lable class="spnfname text-danger ms-2"></lable>
+                                                    <span class="spnfname text-danger ms-2"></span>
                                                 </div>
                                             </div>
-                                            <div class="col-lg-12 col-md-12 mb-4">
+                                            <div class="col-lg-12 col-md-12 mb-2">
                                                 <div class="form-group">
                                                     <asp:TextBox ID="txtContact" class="form-control txtContact" runat="server" MaxLength="15" placeholder="Mobile Number"></asp:TextBox>
-                                                    <lable class="spncontact text-danger ms-2"></lable>
+                                                    <span class="spncontact text-danger ms-2"></span>
                                                 </div>
                                             </div>
-                                            <div class="col-lg-12 col-md-12 mb-4">
+                                            <div class="col-lg-12 col-md-12 mb-2">
                                                 <div class="form-group">
                                                     <asp:TextBox ID="txtemailAdress" class="form-control txtemailAdress" runat="server" MaxLength="100" placeholder="Corporate E-mail ID"></asp:TextBox>
-                                                    <lable class="spnemail text-danger ms-2"></lable>
+                                                    <span class="spnemail text-danger ms-2"></span>
                                                 </div>
                                             </div>
 
