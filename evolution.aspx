@@ -206,7 +206,7 @@
             grid-auto-columns: max-content;
             column-gap: var(--col-gap);
             list-style: none;
-            width: min(60rem, 90%);
+            width: min(60rem, 100%);
             margin-inline: auto;
         }
 
