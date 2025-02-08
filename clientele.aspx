@@ -50,7 +50,12 @@
                 <div class="client-card">
                     <img src="image/cliential/c10.jpg" alt="">
                 </div>
-              
+               <div class="client-card">
+     <img src="Img/cc/adano.png" alt="">
+ </div>
+ <div class="client-card">
+     <img src="Img/cc/download.jpg" alt="">
+ </div>
                
             </div>
 

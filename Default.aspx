@@ -211,7 +211,7 @@
                                         <div class="icon">
                                             <img src="image/icons/time.png" alt="" />
                                         </div>
-                                        <img src="image/time-solution.jpg" alt="" />
+                                        <img src="Img/cc/pt.png" alt="" />
                                     </div>
                                     <div class="product-link">
                                         <a href="/competencies/precise--time-and-frequency-solution" class="custom-btn">View Products</a>
@@ -237,7 +237,7 @@
                                         <div class="icon">
                                             <img src="image/icons/power-generation.png" alt="" />
                                         </div>
-                                        <img src="image/power-generation.jpg" alt="" />
+                                        <img src="Img/cc/Control.png" alt="" />
                                     </div>
                                     <div class="product-link">
                                         <a href="/competencies/control-solution" class="custom-btn">View Products</a>

@@ -109,7 +109,7 @@
 
             <div class="row justify-content-center  align-items-center">
                 <div class="col-lg-6">
-                    <img src="image/about-us.jpg" alt="img">
+                    <img src="Img/cc/mission.png" alt="img">
                 </div>
                 <div class="col-lg-6 pl-50">
                     <div class="row gy-4   justify-content-center align-items-center">

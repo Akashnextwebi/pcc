@@ -1,4 +1,4 @@
-﻿    <%@ Page Title="" Language="C#" MasterPageFile="./MasterPage.master" AutoEventWireup="true" CodeFile="product-details.aspx.cs" Inherits="product_details" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="./MasterPage.master" AutoEventWireup="true" CodeFile="product-details.aspx.cs" Inherits="product_details" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <link href="/css/shop.css" rel="stylesheet" />
@@ -12,292 +12,369 @@
         href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link href="/css/globel.css" rel="stylesheet" />
     <style>
-        section.product_view {
-            background: #fff;
-        }
-
-        .campus-slider .swiper-button-prev {
-            color: #fff;
-            background: #0000005c;
-            z-index: 10;
-            padding: 20px;
-            border-radius: 50%;
-        }
-
-      
-
-           .contact-btn {
-       position: fixed;
-       right: -20px;
-       top: 250px;
-       rotate: -90deg;
-       z-index: 1;
-       transform: translateY(26px);
-       text-transform: uppercase;
-       z-index: 9;
-   }
-   .wptb-accordion1 .wptb--item .wptb-item--content{
-       color:#000 !important;
-   }
-            .contact-btn button {
-                padding: 15px;
-                background: #c72329;
-                font-size: 18px;
-                line-height: 20px;
-                border: 0;
-                color: #fff;
-            }
-            .product_details_tab .nav li a.active {
-    background: unset !important;
-    color: #000  !important;
-    font-size: 32px;
-    font-weight:600;
-    position: relative;
+    section.product_view {
+        background: #fff;
+    }
+    .product_left .product_zoom {
+    display: flex
+;
+    align-items: flex-start;
+    flex-direction: column-reverse;
 }
+    .product_left .product_zoom .product_zoom_button_group li{
+        margin:00px 0px !important;
+    }
+    .product_left .product_zoom .product_zoom_button_group{
+        margin-top:20px !important;
+    }
+    .product_left .product_zoom .product_zoom_button_group{
+        display:flex !important;
+        justify-content:start !important;
+        gap:1rem;
 
-            .product_details_tab .nav li a.active::after{
-                content:none;
-                border-color:unset !important;
-                background:unset !important;
-                border-style:unset !important;
-            }
-        textarea.form-control {
+    }
+    .campus-slider .swiper-button-prev {
+        color: #fff;
+        background: #0000005c;
+        z-index: 10;
+        padding: 20px;
+        border-radius: 50%;
+    }
+
+
+
+    .contact-btn {
+        position: fixed;
+        right: -20px;
+        top: 250px;
+        rotate: -90deg;
+        z-index: 1;
+        transform: translateY(26px);
+        text-transform: uppercase;
+        z-index: 9;
+    }
+
+    .wptb-accordion1 .wptb--item .wptb-item--content {
+        color: #000 !important;
+    }
+
+    .contact-btn button {
+        padding: 15px;
+        background: #c72329;
+        font-size: 18px;
+        line-height: 20px;
+        border: 0;
+        color: #fff;
+    }
+
+    .product_details_tab .nav li a.active {
+        background: unset !important;
+        color: #000 !important;
+        font-size: 32px;
+        font-weight: 600;
+        position: relative;
+    }
+
+        .product_details_tab .nav li a.active::after {
+            content: none;
+            border-color: unset !important;
+            background: unset !important;
+            border-style: unset !important;
+        }
+
+    textarea.form-control {
+        background: #fff;
+        color: #000;
+    }
+
+        textarea.form-control:focus {
             background: #fff;
             color: #000;
         }
 
-            textarea.form-control:focus {
-                background: #fff;
-                color: #000;
-            }
+    .campus-slider .swiper-button-next {
+        color: #fff;
+        background: #000;
+        z-index: 10;
+        padding: 20px;
+        border-radius: 50%;
+    }
 
-        .campus-slider .swiper-button-next {
-            color: #fff;
-            background: #000;
-            z-index: 10;
-            padding: 20px;
-            border-radius: 50%;
-        }
-
-        .campus-slider .swiper-button-prev:after {
-            font-size: 18px;
-            content: 'prev';
-        }
+    .campus-slider .swiper-button-prev:after {
+        font-size: 18px;
+        content: 'prev';
+    }
 
 
-        .campus-slider .swiper-button-next:after {
-            content: 'next';
-            font-size: 18px;
-        }
+    .campus-slider .swiper-button-next:after {
+        content: 'next';
+        font-size: 18px;
+    }
 
-        .pcc-header .header-mid {
-            padding: 10px 40px;
-            border-bottom: 1px solid #000;
-        }
+    .pcc-header .header-mid {
+        padding: 10px 40px;
+        border-bottom: 1px solid #000;
+    }
 
-        .product_right .product_price {
-            color: #000;
-        }
+    .product_right .product_price {
+        color: #000;
+    }
 
-        .swiper-button-next,
-        .swiper-button-prev {
-            color: #000; /* Make sure the arrows are visible */
-            z-index: 10; /* Ensure the buttons are above the slides */
-        }
+    .swiper-button-next,
+    .swiper-button-prev {
+        color: #000; /* Make sure the arrows are visible */
+        z-index: 10; /* Ensure the buttons are above the slides */
+    }
 
-        .new-color {
-            color: #f00;
-            font-size: 18px;
-            margin-bottom: 20px;
-        }
+    .new-color {
+        color: #f00;
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
 
-        .product_details_tab .nav {
-            justify-content: center;
-        }
+    .product_details_tab .nav {
+        justify-content: center;
+    }
 
-        li.nav-item a {
-            padding: 10px 20px;
-            border: 1px solid #ff1717;
-        }
+    li.nav-item a {
+        padding: 10px 20px;
+        border: 1px solid #ff1717;
+    }
 
-        .product_details_tab .nav li a.active {
-            background: #d70006;
-            color: #fff;
-            position: relative;
-        }
+    .product_details_tab .nav li a.active {
+        background: #d70006;
+        color: #fff;
+        position: relative;
+    }
 
-            .product_details_tab .nav li a.active::after {
-                content: '';
-                position: absolute;
-                top: 100%;
-                left: 50%;
-                transform: translateX(-50%);
-                width: 0px;
-                height: 0px;
-                border-width: 8px;
-                border-style: solid;
-                border-color: #d70006 transparent transparent transparent;
-                opacity: 1;
-                transition: all 0.5s ease-in-out;
-            }
-
-        .btn-three:hover {
-            border: 1px solid #d70006;
-        }
-
-        .people-card2 .people-content .name-deg {
-            border: 1px solid #eee;
-            padding: 22px 20px;
-        }
-
-            .people-card2 .people-content .name-deg h5 {
-                margin-bottom: 0;
-            }
-
-            .people-card2 .people-content .name-deg span {
-                color: #000;
-                font-size: 14px;
-                font-weight: 500;
-            }
-
-        .people-card2 .people-content .contact-area {
-            border-bottom: 1px solid #eee;
-            border-right: 1px solid #eee;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-            .people-card2 .people-content .contact-area .contact-number {
-                display: flex;
-                align-items: center;
-            }
-
-                .people-card2 .people-content .contact-area .contact-number .icon {
-                    width: 50px;
-                    height: 45px;
-                    display: flex;
-                    color: #000;
-                    align-items: center;
-                    justify-content: center;
-                    background-color: #e8f1fb;
-                    transition: 0.35s;
-                }
-
-                .people-card2 .people-content .contact-area .contact-number .content {
-                    line-height: 1;
-                    padding-left: 15px;
-                    padding-right: 15px;
-                }
-
-        .people-card2 .people-content .contact-area {
-            border-bottom: 1px solid #eee;
-            border-right: 1px solid #eee;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .btn i {
-            margin-left: 10px;
-            font-size: 16px;
+        .product_details_tab .nav li a.active::after {
+            content: '';
             position: absolute;
-            left: -10px;
-            background: var(--pcc-primary-theme);
-            top: 1px;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0px;
+            height: 0px;
+            border-width: 8px;
+            border-style: solid;
+            border-color: #d70006 transparent transparent transparent;
+            opacity: 1;
+            transition: all 0.5s ease-in-out;
         }
 
-        .people-card2 .people-content .contact-area .social-icon {
+    .btn-three:hover {
+        border: 1px solid #d70006;
+    }
+
+    .people-card2 .people-content .name-deg {
+        border: 1px solid #eee;
+        padding: 22px 20px;
+    }
+
+        .people-card2 .people-content .name-deg h5 {
+            margin-bottom: 0;
+        }
+
+        .people-card2 .people-content .name-deg span {
+            color: #000;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+    .people-card2 .people-content .contact-area {
+        border-bottom: 1px solid #eee;
+        border-right: 1px solid #eee;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+        .people-card2 .people-content .contact-area .contact-number {
             display: flex;
             align-items: center;
         }
 
-            .people-card2 .people-content .contact-area .social-icon li {
-                line-height: 1;
-                border-left: 1px solid #eee;
+            .people-card2 .people-content .contact-area .contact-number .icon {
+                width: 50px;
+                height: 45px;
+                display: flex;
+                color: #000;
+                align-items: center;
+                justify-content: center;
+                background-color: #e8f1fb;
+                transition: 0.35s;
             }
 
-        .people-card2 .people-content .contact-area .contact-number .icon {
-            width: max-content;
-            height: 45px;
-            padding-right: 24px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: #e8f1fb;
-            transition: 0.35s;
-            padding-left: 20px;
-        }
+            .people-card2 .people-content .contact-area .contact-number .content {
+                line-height: 1;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+
+    .people-card2 .people-content .contact-area {
+        border-bottom: 1px solid #eee;
+        border-right: 1px solid #eee;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .btn i {
+        margin-left: 10px;
+        font-size: 16px;
+        position: absolute;
+        left: -10px;
+        background: var(--pcc-primary-theme);
+        top: 1px;
+    }
+
+    .people-card2 .people-content .contact-area .social-icon {
+        display: flex;
+        align-items: center;
+    }
 
         .people-card2 .people-content .contact-area .social-icon li {
             line-height: 1;
             border-left: 1px solid #eee;
         }
 
-            .people-card2 .people-content .contact-area .social-icon li a {
-                height: 45px;
-                width: 45px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
+    .people-card2 .people-content .contact-area .contact-number .icon {
+        width: max-content;
+        height: 45px;
+        padding-right: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #e8f1fb;
+        transition: 0.35s;
+        padding-left: 20px;
+    }
+
+    .people-card2 .people-content .contact-area .social-icon li {
+        line-height: 1;
+        border-left: 1px solid #eee;
+    }
+
+        .people-card2 .people-content .contact-area .social-icon li a {
+            height: 45px;
+            width: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.35s;
+        }
+
+    .contact-area li {
+        display: inline-block;
+        margin: 0px 0px 0px 0 !important;
+    }
+
+    .people-card2 .people-content .contact-area .social-icon {
+        display: flex;
+        align-items: center;
+        background: #fff;
+    }
+
+    .wptb-icon-box2 .wptb-item--title {
+        font-size: 20px !important;
+        line-height: 30px !important;
+        margin-bottom: 15px !important;
+    }
+
+    .product_details_tab .tab-content p {
+        font-size: 16px !important;
+        line-height: 26px !important;
+    }
+
+    .people-card2 .people-content .contact-area {
+        border-bottom: 1px solid #eee;
+        border-right: 1px solid #eee;
+        display: flex;
+        background: #e8f1fb;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .wptb-accordion1 .wptb-item-title .wptb-item--number {
+        margin-right: 0px !important;
+    }
+
+    input[type="text"] {
+        background-color: #fff !important;
+        color: #000 !important;
+    }
+
+    .btn i {
+        margin-left: 10px;
+        font-size: 16px;
+        position: absolute;
+        left: -10px;
+        background: var(--pcc-primary-theme);
+        top: 2px;
+        color: #fff;
+        width: 50px;
+        height: 100%;
+        line-height: 57px;
+    }
+    .breadcrumb-list li:first-child::before {
+    display: none;
+}
+    .breadcrumb-list {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 20px;
+        flex-wrap: wrap;
+    }
+   
+        .breadcrumb-list li:first-child {
+            padding-left: 0;
+        }
+
+        .breadcrumb-list li {
+            line-height: 1;
+            color: #fff;
+            font-size: 16px;
+            font-weight: 500;
+            padding-left: 16px;
+            position: relative;
+        }
+
+            .breadcrumb-list li a {
+                color: #fff;
                 transition: 0.35s;
             }
 
-        .contact-area li {
-            display: inline-block;
-            margin: 0px 0px 0px 0 !important;
-        }
+            .breadcrumb-list li::before {
+                content: "";
+                width: 6px;
+                height: 6px;
+                border-radius: 50%;
+                background-color: #cacaca;
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+            }
 
-        .people-card2 .people-content .contact-area .social-icon {
-            display: flex;
-            align-items: center;
-            background: #fff;
-        }
-
-        .wptb-icon-box2 .wptb-item--title {
-            font-size: 20px !important;
-            line-height: 30px !important;
-            margin-bottom: 15px !important;
-        }
-
-        .product_details_tab .tab-content p {
-            font-size: 16px !important;
-            line-height: 26px !important;
-        }
-
-        .people-card2 .people-content .contact-area {
-            border-bottom: 1px solid #eee;
-            border-right: 1px solid #eee;
-            display: flex;
-            background: #e8f1fb;
-            align-items: center;
-            justify-content: space-between;
-        }.wptb-accordion1 .wptb-item-title .wptb-item--number{
-             margin-right:0px !important;
-         }
-
-        input[type="text"] {
-            background-color: #fff !important;
-            color: #000 !important;
-        }
-
-        .btn i {
-            margin-left: 10px;
-            font-size: 16px;
-            position: absolute;
-            left: -10px;
-            background: var(--pcc-primary-theme);
-            top: 2px;
-            color: #fff;
-            width: 50px;
-            height: 100%;
-            line-height: 57px;
-        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <main class="wrapper">
+        <div class="strip">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <ul class="breadcrumb-list">
+                            <li><a href="/Default.aspx">Home</a></li>
+                            <li><a href="/Default.aspx">Home</a></li>
+                            <li><a href="/Default.aspx">Home</a></li>
 
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <section class="product_view section-padding mt-100">
             <div class="container">
@@ -307,7 +384,6 @@
                             <div class="product_zoom">
                                 <ul class="product_zoom_button_group">
                                     <%=StrGallery %>
-                                   
                                 </ul>
 
                                 <div class="product_zoom_container">
@@ -336,6 +412,7 @@
                         </div>
                     </div>
                 </div>
+            </div>
         </section>
 
         <div class="product_details_section section-padding bg-light" id="divspeccon" runat="server">
@@ -348,7 +425,7 @@
                                     <a data-bs-toggle="tab" href="#Capabilities">Capabilities</a>
                                 </li>
                                 <li class="nav-item" id="divspe" runat="server">
-                                    <a class="active"  data-bs-toggle="tab" href="#Specifications">Specifications</a>
+                                    <a class="active" data-bs-toggle="tab" href="#Specifications">Specifications</a>
                                 </li>
 
                             </ul>
@@ -374,7 +451,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                 </div>
 
             </div>
