@@ -220,8 +220,6 @@ public partial class product_details : System.Web.UI.Page
         try
         {
             BrochureEnguiry BE = new BrochureEnguiry();
-
-
             var ResPDF = "";
             //var IndPDF = "";
             BE.FullName = name;
