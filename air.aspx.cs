@@ -59,7 +59,7 @@ public partial class air : System.Web.UI.Page
                     {
 
 
-                        strFeature += @"<div class='col-lg-4'>
+                        strFeature += @"<div class='col-lg-4 col-md-4 col-12'>
                     <div class='content-card'>
                         <img src='/" + Fea[i].ThumbImage + @"' width='48' class='content-img'>
 
