@@ -55,7 +55,7 @@ public partial class product_details : System.Web.UI.Page
 
                 if (!string.IsNullOrEmpty(Pro.IndustryPDF))
                 {
-                    strpdf = @"<a href='/"+ Pro.IndustryPDF + @"' id='hidenId' class='btn-three w-100 hidenId' download data-id='" + Pro.Id + @"'>
+                    strpdf = @"<a href='/" + Pro.IndustryPDF + @"' id='hidenId' class='btn-three w-100 hidenId' download data-id='" + Pro.Id + @"'>
                                         <div class='btn-wrap'>
                                             <span class='text-first'><i class='fa-solid fa-cloud-arrow-down me-2'></i>
                                                 Download Datasheet</span>
@@ -169,7 +169,7 @@ public partial class product_details : System.Web.UI.Page
                     }
                     for (int i = 0; i < spe.Count; i++)
                     {
-                        strSpecification += @"<div class='wptb--item active'>
+                        strSpecification += @"<div class='wptb--item " + (i == 0 ? "active" : "") + @"'>
                                                     <h6 class='wptb-item-title'><span><span class='wptb-item--number'></span>" + spe[i].Title + @"</span> <i class='fa-solid fa-angle-down'></i></h6>
                                                     <div class='wptb-item--content'>
                                                         " + spe[i].FullDesc + @"
