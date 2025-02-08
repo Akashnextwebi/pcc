@@ -184,6 +184,10 @@ public partial class product_details : System.Web.UI.Page
                     divspe.Visible = false;
                 }
                 #endregion
+                if (strCapabilities == "" && strSpecification == "")
+                {
+                    divspeccon.Visible = false;
+                }
                 var PG = ProductGallery.GetAllProductGalleryProductGuid(conSQ, Pro.ProductGuid);
                 if (PG.Count > 0)
                 {
