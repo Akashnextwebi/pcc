@@ -507,7 +507,7 @@
 }
 
 .card1:hover .intro1 {
-    height: 150px;
+    height: 135px;
     bottom: 0;
     background-color: #000;
 }

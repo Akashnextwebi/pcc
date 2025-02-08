@@ -361,7 +361,7 @@
                                 </div>
                                 <div class="tab-pane fade show active" id="Specifications" runat="server" tabindex="0">
                                     <div class="row justify-content-center">
-                                        <div class="col-lg-8 p-0">
+                                        <div class="col-lg-8 p-0 p-md-3">
                                             <div class="wptb-accordion wptb-accordion1">
                                                 <%=strSpecification %>
                                             </div>
@@ -470,10 +470,10 @@
                     </div>
                     <div class="modal-body bg-light">
                         <div class="row">
-                            <div class="col-lg-12  gy-3">
+                            <div class="col-lg-12  ">
                                 <div class="wptb-form" method="post">
                                     <div class="wptb-form--inner">
-                                        <div class="row">
+                                        <div class="row gy-3">
                                             <div class="col-lg-12 col-md-12">
                                                 <div class="form-group">
                                                     <input type="text" name="name" class="form-control" id="txtname" placeholder="Enter Your Name" required>
