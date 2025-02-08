@@ -90,7 +90,7 @@ public partial class air : System.Web.UI.Page
                 for (int i = 0; i < ca.Count; i++)
                 {
                     var url = "product/" + ca[i].ProductUrl;
-                    strProduct += @"<div class='col-lg-4'>
+                    strProduct += @"<div class='col-lg-4 col-md-6'>
                             <div class='card1'>
                                 <a href='/"+url+@"' contenteditable='false' style='cursor: pointer;'>
                                     <img src='/" + ca[i].ThumbImage + @"' class='img1'>

@@ -4,7 +4,21 @@
     .pcc-header .header-mid {
         padding: 10px 0px !important;
     }
-
+    .card1:hover .intro1 {
+        height: 110px !important;
+    }
+    .product_left .product_zoom .product_zoom_button_group {
+        width: 100% !important;
+        padding-right: 0px !important;
+        overflow-x: scroll !important;
+        display: flex !important;
+    }
+        .product_left .product_zoom .product_zoom_button_group li:first-child {
+            margin-left: 0px  !important;
+        }
+        .product_left .product_zoom .product_zoom_button_group li {
+            margin: 0px 5px !important;
+        }
     .client-logo-wrap {
         display: grid;
         grid-template-columns: repeat(6, 16%) !important
@@ -224,7 +238,7 @@
         margin-bottom: 40px !important;
     }
     .breadcrumb-section {
-        padding: 85px 20px 85px !important;
+        padding: 85px 40px 85px !important;
         height:250px !important;
        
     }
@@ -245,7 +259,7 @@
 
 
     .breadcrumb-section .banner-content h1 {
-        font-size: 26px !important;
+        font-size: 30px !important;
     }
     .mb-70 {
         margin-bottom: 40px !important;
@@ -288,7 +302,7 @@
     }
 
     .wptb-why-choose-one .wptb-icon-box2 {
-        padding: 30px 15px !important
+        padding: 30px 45px !important
     }
 
     .wptb-video-player1 {
@@ -389,8 +403,8 @@
         margin-bottom: 0px !important;
     }
 
-    .card1:hover .intro1 {
-        height: 120px !important;
+    .product_left .product_zoom .product_zoom_button_group{
+        margin-bottom:0px !important;
     }
 
     .product_left .product_zoom {
@@ -620,7 +634,9 @@
     .logo img {
         width: 240px !important;
     }
-
+    .product_left .product_zoom .product_zoom_button_group {
+        margin-bottom: 0px !important;
+    }
     .mb-105 {
         margin-bottom: 0px !important;
     }
