@@ -24,17 +24,21 @@
             border-radius: 50%;
         }
 
-        .contact-btn {
-            position: fixed;
-            right: -20px;
-            top: 250px;
-            rotate: -90deg;
-            z-index: 1;
-            transform: translateY(26px);
-            text-transform: uppercase;
-            z-index: 9999;
-        }
+      
 
+           .contact-btn {
+       position: fixed;
+       right: -20px;
+       top: 250px;
+       rotate: -90deg;
+       z-index: 1;
+       transform: translateY(26px);
+       text-transform: uppercase;
+       z-index: 9;
+   }
+   .wptb-accordion1 .wptb--item .wptb-item--content{
+       color:#000 !important;
+   }
             .contact-btn button {
                 padding: 15px;
                 background: #c72329;

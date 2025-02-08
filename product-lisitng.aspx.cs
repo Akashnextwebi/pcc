@@ -50,7 +50,7 @@ public partial class product_lisitng : System.Web.UI.Page
                 for (int i = 0; i < pro.Count; i++)
                 {
                     var url = "product/" + pro[i].ProductUrl;
-                    strProduct += @"<div class='col-lg-4'>
+                    strProduct += @"<div class='col-lg-4 col-md-6'>
                             <div class='card1'>
                                 <a href='/" + url + @"' contenteditable='false' style='cursor: pointer;'>
                                     <img src='/" + pro[i].ThumbImage + @"' class='img1'>
