@@ -3,7 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 
     <link href="/css/breadcrums.css" rel="stylesheet" />
-        <link href="/css/industries.css" rel="stylesheet" />
+    <link href="/css/industries.css" rel="stylesheet" />
 
     <style>
         .magnetic-wrap {
@@ -309,7 +309,6 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <main class="wrapper">
-
         <div class="breadcrumb-section" style="background-image: linear-gradient(270deg, rgba(0, 0, 0, .55), rgba(0, 0, 0, 0.55) 101.02%), url(/<%=strBanner%>);">
             <div class="container">
                 <div class="row">
@@ -325,7 +324,6 @@
                 </div>
             </div>
         </div>
-
         <section class="section-padding">
             <div class="container">
                 <div class="row">
@@ -336,341 +334,16 @@
                         <p><%=strDesc %></p>
                     </div>
                 </div>
-
             </div>
         </section>
-    <%--    <div class="horizontal-scrolling-section ">
-            <div class="single-scroll-container" style="background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%), url(/image/scroll-bg-1.jpg);">
-                <div class="container-fluid one pl--95">
-                    <div class="horizontal-scrolling-content">
-                        <div class="section-title1 two">
-                            <span>PCC</span>
-                            <h2>Defense Solutions Product Guide
-                            </h2>
-                        </div>
-                        <p>
-                            Explore Curtiss-Wright's mission-critical solutions based on the latest technologies and open standards. These innovative solutions are trusted and proven for aerospace and defense applications.
-                        </p>
-                        <div class="slider-btn mt-30 ">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>--%>
         <section class="wptb-shop section-padding">
             <div class="container">
                 <div class="row gy-4">
                     <%=strProduct %>
-
-                    <%--<div class="col-lg-3">
-                        <div class="magnetic-wrap">
-                            <div class="people-card2 magnetic-item" style="">
-                                <div class="people-img">
-                                    <img src="/image/shop/1.jpg" alt="">
-                                </div>
-                                <div class="people-content">
-                                    <div class="name-deg">
-                                        <h5 class="d-flex justify-content-between"><a href="#">Air Product 1</a><span class="text-danger fw-bold">PARK-RTD-02</span></h5>
-
-
-
-
-
-                                    </div>
-                                    <div class="contact-area">
-                                        <div class="contact-number">
-                                            <div class="icon">
-                                                View Product
-                                            </div>
-
-                                        </div>
-                                        <ul class="social-icon">
-                                            <li><a href="product-details.aspx"><i class="fa-solid fa-arrow-right-long"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="magnetic-wrap">
-                            <div class="people-card2 magnetic-item" style="">
-                                <div class="people-img">
-                                    <img src="/image/shop/1.jpg" alt="">
-                                </div>
-                                <div class="people-content">
-                                    <div class="name-deg">
-                                        <h5 class="d-flex justify-content-between"><a href="#">Air Product 1</a><span class="text-danger fw-bold">PARK-RTD-02</span></h5>
-
-
-
-
-
-                                    </div>
-                                    <div class="contact-area">
-                                        <div class="contact-number">
-                                            <div class="icon">
-                                                View Product
-                                            </div>
-
-                                        </div>
-                                        <ul class="social-icon">
-                                            <li><a href="/product-details.aspx"><i class="fa-solid fa-arrow-right-long"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="magnetic-wrap">
-                            <div class="people-card2 magnetic-item" style="">
-                                <div class="people-img">
-                                    <img src="/image/shop/1.jpg" alt="">
-                                </div>
-                                <div class="people-content">
-                                    <div class="name-deg">
-                                        <h5 class="d-flex justify-content-between"><a href="#">Air Product 1</a><span class="text-danger fw-bold">PARK-RTD-02</span></h5>
-
-
-
-
-
-                                    </div>
-                                    <div class="contact-area">
-                                        <div class="contact-number">
-                                            <div class="icon">
-                                                View Product
-                                            </div>
-
-                                        </div>
-                                        <ul class="social-icon">
-                                            <li><a href="/product-details.aspx"><i class="fa-solid fa-arrow-right-long"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="magnetic-wrap">
-                            <div class="people-card2 magnetic-item" style="">
-                                <div class="people-img">
-                                    <img src="/image/shop/1.jpg" alt="">
-                                </div>
-                                <div class="people-content">
-                                    <div class="name-deg">
-                                        <h5 class="d-flex justify-content-between"><a href="#">Air Product 1</a><span class="text-danger fw-bold">PARK-RTD-02</span></h5>
-
-
-
-
-
-                                    </div>
-                                    <div class="contact-area">
-                                        <div class="contact-number">
-                                            <div class="icon">
-                                                View Product
-                                            </div>
-
-                                        </div>
-                                        <ul class="social-icon">
-                                            <li><a href="/product-details.aspx"><i class="fa-solid fa-arrow-right-long"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="col-lg-3">
-                        <div class="magnetic-wrap">
-                            <div class="people-card2 magnetic-item" style="">
-                                <div class="people-img">
-                                    <img src="/image/shop/1.jpg" alt="">
-                                </div>
-                                <div class="people-content">
-                                    <div class="name-deg">
-                                        <h5 class="d-flex justify-content-between"><a href="#">Air Product 1</a><span class="text-danger fw-bold">PARK-RTD-02</span></h5>
-
-
-
-
-
-                                    </div>
-                                    <div class="contact-area">
-                                        <div class="contact-number">
-                                            <div class="icon">
-                                                View Product
-                                            </div>
-
-                                        </div>
-                                        <ul class="social-icon">
-                                            <li><a href="/product-details.aspx"><i class="fa-solid fa-arrow-right-long"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="magnetic-wrap">
-                            <div class="people-card2 magnetic-item" style="">
-                                <div class="people-img">
-                                    <img src="/image/shop/1.jpg" alt="">
-                                </div>
-                                <div class="people-content">
-                                    <div class="name-deg">
-                                        <h5 class="d-flex justify-content-between"><a href="#">Air Product 1</a><span class="text-danger fw-bold">PARK-RTD-02</span></h5>
-
-
-
-
-
-                                    </div>
-                                    <div class="contact-area">
-                                        <div class="contact-number">
-                                            <div class="icon">
-                                                View Product
-                                            </div>
-
-                                        </div>
-                                        <ul class="social-icon">
-                                            <li><a href="/product-details.aspx"><i class="fa-solid fa-arrow-right-long"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="magnetic-wrap">
-                            <div class="people-card2 magnetic-item" style="">
-                                <div class="people-img">
-                                    <img src="/image/shop/1.jpg" alt="">
-                                </div>
-                                <div class="people-content">
-                                    <div class="name-deg">
-                                        <h5 class="d-flex justify-content-between"><a href="#">Air Product 1</a><span class="text-danger fw-bold">PARK-RTD-02</span></h5>
-
-
-
-
-
-                                    </div>
-                                    <div class="contact-area">
-                                        <div class="contact-number">
-                                            <div class="icon">
-                                                View Product
-                                            </div>
-
-                                        </div>
-                                        <ul class="social-icon">
-                                            <li><a href="/product-details.aspx"><i class="fa-solid fa-arrow-right-long"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="magnetic-wrap">
-                            <div class="people-card2 magnetic-item" style="">
-                                <div class="people-img">
-                                    <img src="/image/shop/1.jpg" alt="">
-                                </div>
-                                <div class="people-content">
-                                    <div class="name-deg">
-                                        <h5 class="d-flex justify-content-between"><a href="#">Air Product 1</a><span class="text-danger fw-bold">PARK-RTD-02</span></h5>
-
-
-
-
-
-                                    </div>
-                                    <div class="contact-area">
-                                        <div class="contact-number">
-                                            <div class="icon">
-                                                View Product
-                                            </div>
-
-                                        </div>
-                                        <ul class="social-icon">
-                                            <li><a href="/product-details.aspx"><i class="fa-solid fa-arrow-right-long"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="magnetic-wrap">
-                            <div class="people-card2 magnetic-item" style="">
-                                <div class="people-img">
-                                    <img src="/image/shop/1.jpg" alt="">
-                                </div>
-                                <div class="people-content">
-                                    <div class="name-deg">
-                                        <h5 class="d-flex justify-content-between"><a href="#">Air Product 1</a><span class="text-danger fw-bold">PARK-RTD-02</span></h5>
-
-
-
-
-
-                                    </div>
-                                    <div class="contact-area">
-                                        <div class="contact-number">
-                                            <div class="icon">
-                                                View Product
-                                            </div>
-
-                                        </div>
-                                        <ul class="social-icon">
-                                            <li><a href="/product-details.aspx"><i class="fa-solid fa-arrow-right-long"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>--%>
-
-
-                    <!-- Sidebar  -->
-
                 </div>
 
             </div>
         </section>
-
-
-<%--        <div class="industry-details-blog-section" id="latestInsight">
-            <div class="container">
-                <div class="row">
-                    <div
-                        class="col-lg-12  gap-lg-5 gap-4 d-flex flex-lg-nowrap flex-wrap align-items-end justify-content-between">
-                        <div class="section-title1 two white">
-                            <h2>Product Brochure for Automatic Solution</h2>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="industry-details-blog-card mb-130">
-            <div class="container">
-
-                <div class="row g-4">
-                    <%=StrWhitepaper %>
-                   
-                  
-
-                </div>
-            </div>
-
-       
-      
-        </div>--%>
     </main>
 </asp:Content>
 

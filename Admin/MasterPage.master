@@ -29,6 +29,22 @@
     <link href="assets/css/custom.css" rel="stylesheet" type="text/css" />
     <link href="assets/libs/drag-and-drop/dragula/dragula.css" rel="stylesheet" />
     <link href="assets/libs/drag-and-drop/dragula/example.css" rel="stylesheet" />
+    <style>
+        .fs-option:hover {
+            background-color: #426cb4 !important;
+            color: white !important;
+        }
+
+        .fs-wrap.multiple .fs-option {
+            background: White;
+            color: #000;
+        }
+
+        .fs-option.selected {
+            background-color: #426cb4 !important;
+            color: white !important;
+        }
+    </style>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>

@@ -18,17 +18,17 @@ public class ProductDetails
         //
     }
     public int Id { get; set; }
-    public string ProductGuid { get; set; }    
+    public string ProductGuid { get; set; }
     public string ProductName { get; set; }
     public string ProductUrl { get; set; }
     public string ThumbImage { get; set; }
     public string SKUCode { get; set; }
     public string Broucher { get; set; }
-    public string IndustryPDF {  get; set; }
+    public string IndustryPDF { get; set; }
     public string DatasheetName { get; set; }
     public string DatasheetLink { get; set; }
-    public string Enquiry {  get; set; }
-    public string Capability {  get; set; }
+    public string Enquiry { get; set; }
+    public string Capability { get; set; }
     public string SubCapability { get; set; }
     public string ProductOrder { get; set; }
     public string Industry { get; set; }
@@ -42,8 +42,8 @@ public class ProductDetails
     public string AddedBy { get; set; }
     public string Status { get; set; }
     public string SubcapabilityTitle { get; set; }
-    public string CapabilityTitle {  get; set; }
-    public string IndustryTitle {  get; set; }
+    public string CapabilityTitle { get; set; }
+    public string IndustryTitle { get; set; }
 
     public string TotalCount { set; get; }
     public static ProductDetails getProductsById(SqlConnection _con, int id)
@@ -83,7 +83,7 @@ public class ProductDetails
                     pro.AddedBy = Convert.ToString(dt.Rows[0]["AddedBy"]);
                     pro.AddedIp = Convert.ToString(dt.Rows[0]["AddedIp"]);
                     pro.Status = Convert.ToString(dt.Rows[0]["Status"]);
-                   
+
 
                 }
                 else
@@ -123,7 +123,7 @@ public class ProductDetails
                 cmd.Parameters.AddWithValue("@FullDesc", SqlDbType.NVarChar).Value = cat.FullDesc;
                 cmd.Parameters.AddWithValue("@PageTitle", SqlDbType.NVarChar).Value = cat.PageTitle;
                 cmd.Parameters.AddWithValue("@MetaKeys", SqlDbType.NVarChar).Value = cat.MetaKeys;
-                cmd.Parameters.AddWithValue("@MetaDesc", SqlDbType.NVarChar).Value = cat.MetaDesc;               
+                cmd.Parameters.AddWithValue("@MetaDesc", SqlDbType.NVarChar).Value = cat.MetaDesc;
                 cmd.Parameters.AddWithValue("@AddedBy", SqlDbType.NVarChar).Value = cat.AddedBy;
                 cmd.Parameters.AddWithValue("@AddedOn", SqlDbType.DateTime).Value = cat.AddedOn;
                 cmd.Parameters.AddWithValue("@AddedIp", SqlDbType.NVarChar).Value = cat.AddedIp;
@@ -271,34 +271,34 @@ public class ProductDetails
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
                 ListOfnames = (from DataRow dr in dt.Rows
-                             select new ProductDetails()
-                             {
-                                 Id = Convert.ToInt32(Convert.ToString(dr["Id"])),
-                                 ProductGuid = Convert.ToString(dr["ProductGuid"]),
-                                 ProductName = Convert.ToString(dr["ProductName"]),
-                                 ProductUrl = Convert.ToString(dr["ProductUrl"]),
-                                 ThumbImage = Convert.ToString(dr["ThumbImage"]),
-                                 SKUCode = Convert.ToString(dr["SKUCode"]),
-                                 Broucher = Convert.ToString(dr["Broucher"]),
-                                 IndustryPDF = Convert.ToString(dr["IndustryPDF"]),
-                                 DatasheetName = Convert.ToString(dr["DatasheetName"]),
-                                 DatasheetLink = Convert.ToString(dr["DatasheetLink"]),
-                                 ProductOrder = Convert.ToString(dr["ProductOrder"]),
-                                 Enquiry = Convert.ToString(dr["Enquiry"]),
-                                 Capability = Convert.ToString(dr["Capability"]),
-                                 SubCapability = Convert.ToString(dr["SubCapability"]),
-                                 Industry = Convert.ToString(dr["Industry"]),
-                                 //CapabilityTitle = Convert.ToString(dr["CapabilityTitle"]),
-                                 //SubcapabilityTitle = Convert.ToString(dr["SubcapabilityTitle"]),
-                                 FullDesc = Convert.ToString(dr["FullDesc"]),
-                                 PageTitle = Convert.ToString(dr["PageTitle"]),
-                                 MetaKeys = Convert.ToString(dr["MetaKeys"]),
-                                 MetaDesc = Convert.ToString(dr["MetaDesc"]),
-                                 AddedOn = Convert.ToDateTime(Convert.ToString(dr["AddedOn"])),
-                                 AddedBy = Convert.ToString(dr["AddedBy"]),
-                                 AddedIp = Convert.ToString(dr["AddedIp"]),
-                                 Status = Convert.ToString(dr["Status"])
-                             }).ToList();
+                               select new ProductDetails()
+                               {
+                                   Id = Convert.ToInt32(Convert.ToString(dr["Id"])),
+                                   ProductGuid = Convert.ToString(dr["ProductGuid"]),
+                                   ProductName = Convert.ToString(dr["ProductName"]),
+                                   ProductUrl = Convert.ToString(dr["ProductUrl"]),
+                                   ThumbImage = Convert.ToString(dr["ThumbImage"]),
+                                   SKUCode = Convert.ToString(dr["SKUCode"]),
+                                   Broucher = Convert.ToString(dr["Broucher"]),
+                                   IndustryPDF = Convert.ToString(dr["IndustryPDF"]),
+                                   DatasheetName = Convert.ToString(dr["DatasheetName"]),
+                                   DatasheetLink = Convert.ToString(dr["DatasheetLink"]),
+                                   ProductOrder = Convert.ToString(dr["ProductOrder"]),
+                                   Enquiry = Convert.ToString(dr["Enquiry"]),
+                                   Capability = Convert.ToString(dr["Capability"]),
+                                   SubCapability = Convert.ToString(dr["SubCapability"]),
+                                   Industry = Convert.ToString(dr["Industry"]),
+                                   //CapabilityTitle = Convert.ToString(dr["CapabilityTitle"]),
+                                   //SubcapabilityTitle = Convert.ToString(dr["SubcapabilityTitle"]),
+                                   FullDesc = Convert.ToString(dr["FullDesc"]),
+                                   PageTitle = Convert.ToString(dr["PageTitle"]),
+                                   MetaKeys = Convert.ToString(dr["MetaKeys"]),
+                                   MetaDesc = Convert.ToString(dr["MetaDesc"]),
+                                   AddedOn = Convert.ToDateTime(Convert.ToString(dr["AddedOn"])),
+                                   AddedBy = Convert.ToString(dr["AddedBy"]),
+                                   AddedIp = Convert.ToString(dr["AddedIp"]),
+                                   Status = Convert.ToString(dr["Status"])
+                               }).ToList();
             }
         }
         catch (Exception ex)
@@ -338,39 +338,41 @@ public class ProductDetails
             return 0;
         }
     }
-    public static List<ProductDetails> GetProductListing(SqlConnection conSQ, string PageNo, string PLenght, string Key,string Capability,string Industry)
+    public static DataTable GetProductListing(SqlConnection conSQ, string PageNo, string PLenght, string Key, string Capability, string Industry)
     {
+        DataTable dt = new DataTable();
         int page = (Convert.ToInt32(PageNo) - 1) * Convert.ToInt32(PLenght);
         var result = new List<ProductDetails>();
         try
         {
-            DataTable dt = new DataTable();
 
-            var query = @"SELECT 
-
-    pd.*, 
-	(   Select Count(ID) from productdetails 
-    WHERE   
-    Status !='Deleted' And
-    (@Key = '' OR pd.ProductName LIKE '%' + @Key + '%') AND
-    (@capability = '' OR pd.Capability = @capability) AND
-    (@Industry = '' OR pd.Industry = @Industry)
-) as TotalCount,
-    (SELECT CapabilityName FROM Capability WHERE TRY_CONVERT(nvarchar, Capability.Id) = pd.Capability) AS CapabilityTitle,
-    (SELECT IndustryName FROM IndustryDetails WHERE TRY_CONVERT(nvarchar, IndustryDetails.Id) = pd.Industry) AS IndustryTitle,
-    (SELECT SubCapabilityName  FROM SubCapability  WHERE TRY_CONVERT(nvarchar, SubCapability .Id) = pd.SubCapability) AS SubCapabilityTitle
-FROM productdetails pd
-WHERE 
-    Status != 'Deleted' AND  
-    (@Key = '' OR pd.ProductName LIKE '%' + @Key + '%') AND
-    (@capability = '' OR pd.Capability = @capability) AND
-    (@Industry = '' OR pd.Industry = @Industry)
-ORDER BY 
-    id DESC
-OFFSET @page ROWS
-FETCH NEXT @pageLength ROWS ONLY;";
+            var query = @"SELECT pd.ThumbImage,pd.ProductName,pd.ProductGuid,pd.Id,Pd.AddedOn,
+	                    (Select Count(ID) from productdetails 
+                        WHERE   
+                        Status !='Deleted' And
+                        (@Key = '' OR pd.ProductName LIKE '%' + @Key + '%') AND
+                        (@capability = '' OR pd.Capability = @capability) AND
+                        (@Industry = '' OR pd.Industry = @Industry)) as TotalCnt,
+	                    (Select Top 1 CapabilityName from Capability c Where c.ID=pd.Capability) as CapabilityTitle,
+	                    (Select Top 1 SubCapabilityName from SubCapability sc Where sc.ID=pd.SubCapability) as SubCapabilityTitle,
+	                    (Select Count(c.ID) from manageCapabilities c Where c.ProductGuid=pd.ProductGuid) as CapCnt,
+	                    (Select Count(sd.ID) from SpecificationDetails sd Where sd.ProductGuid=pd.ProductGuid) as SpecCnt,
+	                    (Select Count(dg.ID) from DatasheetGallery dg Where dg.ProductGuid=pd.ProductGuid) as GalleryCnt,
+	                    (Select Count(pg.ID) from ProductGallery pg Where pg.ProductGuid=pd.ProductGuid) as ProductCnt,
+	                    (
+                            SELECT STRING_AGG(ind.IndustryName, ',') AS Industries
+                            FROM IndustryDetails ind
+                            WHERE ind.Id IN (
+                            SELECT value
+                            FROM STRING_SPLIT(pd.Industry, '|')
+                         )) AS Industries 
+	                    FROM productdetails pd WHERE 
+                        pd.Status != 'Deleted' AND  
+                        (@Key = '' OR pd.ProductName LIKE '%' + @Key + '%') AND
+                        (@capability = '' OR pd.Capability = @capability) AND
+                        (@Industry = '' OR pd.Industry = @Industry)
+                    ORDER BY id DESC OFFSET @page ROWS FETCH NEXT @pageLength ROWS ONLY;";
             SqlCommand cmd = new SqlCommand(query, conSQ);
-            //cmd.Parameters.AddWithValue("@ProductGuid", SqlDbType.NVarChar).Value = uid;
             cmd.Parameters.AddWithValue("@Page", SqlDbType.Int).Value = page;
             cmd.Parameters.AddWithValue("@PageLength", SqlDbType.Int).Value = Convert.ToInt32(PLenght);
             cmd.Parameters.AddWithValue("@Key", SqlDbType.NVarChar).Value = Convert.ToString(Key);
@@ -378,43 +380,12 @@ FETCH NEXT @pageLength ROWS ONLY;";
             cmd.Parameters.AddWithValue("@Industry", SqlDbType.NVarChar).Value = Convert.ToString(Industry);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(dt);
-            result = (from DataRow dr in dt.Rows
-                      select new ProductDetails()
-                      {
-                          Id = Convert.ToInt32(Convert.ToString(dr["Id"])),
-                          ProductGuid = Convert.ToString(dr["ProductGuid"]),
-                          ProductName = Convert.ToString(dr["ProductName"]),
-                          ProductUrl = Convert.ToString(dr["ProductUrl"]),
-                          ThumbImage = Convert.ToString(dr["ThumbImage"]),
-                          SKUCode = Convert.ToString(dr["SKUCode"]),
-                          Broucher = Convert.ToString(dr["Broucher"]),
-                          IndustryPDF = Convert.ToString(dr["IndustryPDF"]),
-                          DatasheetName = Convert.ToString(dr["DatasheetName"]),
-                          DatasheetLink = Convert.ToString(dr["DatasheetLink"]),
-                          ProductOrder = Convert.ToString(dr["ProductOrder"]),
-                          Enquiry = Convert.ToString(dr["Enquiry"]),
-                          Capability = Convert.ToString(dr["Capability"]),
-                          SubCapability = Convert.ToString(dr["SubCapability"]),
-                          CapabilityTitle = Convert.ToString(dr["CapabilityTitle"]),
-                          SubcapabilityTitle = Convert.ToString(dr["SubcapabilityTitle"]),
-                          IndustryTitle = Convert.ToString(dr["IndustryTitle"]),
-                          Industry = Convert.ToString(dr["Industry"]),
-                          FullDesc = Convert.ToString(dr["FullDesc"]),
-                          PageTitle = Convert.ToString(dr["PageTitle"]),
-                          MetaKeys = Convert.ToString(dr["MetaKeys"]),
-                          MetaDesc = Convert.ToString(dr["MetaDesc"]),
-                          AddedOn = Convert.ToDateTime(Convert.ToString(dr["AddedOn"])),
-                          AddedBy = Convert.ToString(dr["AddedBy"]),
-                          AddedIp = Convert.ToString(dr["AddedIp"]),
-                          Status = Convert.ToString(dr["Status"]),
-                          TotalCount = Convert.ToString(dr["TotalCount"])
-                      }).ToList();
         }
         catch (Exception ex)
         {
             ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "GetProductListing", ex.Message);
         }
-        return result;
+        return dt;
     }
     public static List<ProductDetails> GetAllProducts(SqlConnection conSQ, string name)
     {
@@ -431,32 +402,32 @@ FETCH NEXT @pageLength ROWS ONLY;";
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
                 pro = (from DataRow dr in dt.Rows
-                              select new ProductDetails()
-                              {
-                                  Id = Convert.ToInt32(Convert.ToString(dr["Id"])),
-                                  ProductGuid = Convert.ToString(dr["ProductGuid"]),
-                                  ProductName = Convert.ToString(dr["ProductName"]),
-                                  ProductUrl = Convert.ToString(dr["ProductUrl"]),
-                                  ThumbImage = Convert.ToString(dr["ThumbImage"]),
-                                  SKUCode = Convert.ToString(dr["SKUCode"]),
-                                  Broucher = Convert.ToString(dr["Broucher"]),
-                                  IndustryPDF = Convert.ToString(dr["IndustryPDF"]),
-                                  DatasheetName = Convert.ToString(dr["DatasheetName"]),
-                                  DatasheetLink = Convert.ToString(dr["DatasheetLink"]),
-                                  ProductOrder = Convert.ToString(dr["ProductOrder"]),
-                                  Enquiry = Convert.ToString(dr["Enquiry"]),
-                                  Capability = Convert.ToString(dr["Capability"]),
-                                  SubCapability = Convert.ToString(dr["SubCapability"]),
-                                  Industry = Convert.ToString(dr["Industry"]),
-                                  FullDesc = Convert.ToString(dr["FullDesc"]),
-                                  PageTitle = Convert.ToString(dr["PageTitle"]),
-                                  MetaKeys = Convert.ToString(dr["MetaKeys"]),
-                                  MetaDesc = Convert.ToString(dr["MetaDesc"]),
-                                  AddedOn = Convert.ToDateTime(Convert.ToString(dr["AddedOn"])),
-                                  AddedBy = Convert.ToString(dr["AddedBy"]),
-                                  AddedIp = Convert.ToString(dr["AddedIp"]),
+                       select new ProductDetails()
+                       {
+                           Id = Convert.ToInt32(Convert.ToString(dr["Id"])),
+                           ProductGuid = Convert.ToString(dr["ProductGuid"]),
+                           ProductName = Convert.ToString(dr["ProductName"]),
+                           ProductUrl = Convert.ToString(dr["ProductUrl"]),
+                           ThumbImage = Convert.ToString(dr["ThumbImage"]),
+                           SKUCode = Convert.ToString(dr["SKUCode"]),
+                           Broucher = Convert.ToString(dr["Broucher"]),
+                           IndustryPDF = Convert.ToString(dr["IndustryPDF"]),
+                           DatasheetName = Convert.ToString(dr["DatasheetName"]),
+                           DatasheetLink = Convert.ToString(dr["DatasheetLink"]),
+                           ProductOrder = Convert.ToString(dr["ProductOrder"]),
+                           Enquiry = Convert.ToString(dr["Enquiry"]),
+                           Capability = Convert.ToString(dr["Capability"]),
+                           SubCapability = Convert.ToString(dr["SubCapability"]),
+                           Industry = Convert.ToString(dr["Industry"]),
+                           FullDesc = Convert.ToString(dr["FullDesc"]),
+                           PageTitle = Convert.ToString(dr["PageTitle"]),
+                           MetaKeys = Convert.ToString(dr["MetaKeys"]),
+                           MetaDesc = Convert.ToString(dr["MetaDesc"]),
+                           AddedOn = Convert.ToDateTime(Convert.ToString(dr["AddedOn"])),
+                           AddedBy = Convert.ToString(dr["AddedBy"]),
+                           AddedIp = Convert.ToString(dr["AddedIp"]),
 
-                              }).ToList();
+                       }).ToList();
             }
         }
         catch (Exception ex)
@@ -494,7 +465,7 @@ FETCH NEXT @pageLength ROWS ONLY;";
                     pro.Capability = Convert.ToString(dt.Rows[0]["Capability"]);
                     pro.SubCapability = Convert.ToString(dt.Rows[0]["SubCapability"]);
                     pro.Industry = Convert.ToString(dt.Rows[0]["Industry"]);
-                    pro.RelatedProducts= Convert.ToString(dt.Rows[0]["RelatedProducts"]);
+                    pro.RelatedProducts = Convert.ToString(dt.Rows[0]["RelatedProducts"]);
                     pro.FullDesc = Convert.ToString(dt.Rows[0]["FullDesc"]);
                     pro.PageTitle = Convert.ToString(dt.Rows[0]["PageTitle"]);
                     pro.MetaKeys = Convert.ToString(dt.Rows[0]["MetaKeys"]);
@@ -516,17 +487,62 @@ FETCH NEXT @pageLength ROWS ONLY;";
         }
         return pro;
     }
-    public static List<ProductDetails> GetAllProduct(SqlConnection conSQ, string name)
+    public static List<ProductDetails> GetAllIndustryProduct(SqlConnection conSQ, string IndID)
     {
         List<ProductDetails> categories = new List<ProductDetails>();
         try
         {
-            string query = @"select * from ProductDetails Where Industry=@Industry and status='Active'";
+            string query = @"select * from ProductDetails Where @Industry  IN (Select value from string_split(Industry,'|')) and status='Active'";
             using (SqlCommand cmd = new SqlCommand(query, conSQ))
             {
                 // cmd.Parameters.AddWithValue("@id", SqlDbType.NVarChar).Value = id;
-                cmd.Parameters.AddWithValue("@Industry", SqlDbType.NVarChar).Value = name;
-                cmd.Parameters.AddWithValue("@Status", SqlDbType.NVarChar).Value = "Active";
+                cmd.Parameters.AddWithValue("@Industry", SqlDbType.NVarChar).Value = IndID;
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                categories = (from DataRow dr in dt.Rows
+                              select new ProductDetails()
+                              {
+                                  Id = Convert.ToInt32(Convert.ToString(dr["Id"])),
+                                  ProductGuid = Convert.ToString(dr["ProductGuid"]),
+                                  ProductName = Convert.ToString(dr["ProductName"]),
+                                  ProductUrl = Convert.ToString(dr["ProductUrl"]),
+                                  ThumbImage = Convert.ToString(dr["ThumbImage"]),
+                                  SKUCode = Convert.ToString(dr["SKUCode"]),
+                                  Broucher = Convert.ToString(dr["Broucher"]),
+                                  IndustryPDF = Convert.ToString(dr["IndustryPDF"]),
+                                  DatasheetName = Convert.ToString(dr["DatasheetName"]),
+                                  DatasheetLink = Convert.ToString(dr["DatasheetLink"]),
+                                  ProductOrder = Convert.ToString(dr["ProductOrder"]),
+                                  Enquiry = Convert.ToString(dr["Enquiry"]),
+                                  Capability = Convert.ToString(dr["Capability"]),
+                                  SubCapability = Convert.ToString(dr["SubCapability"]),
+                                  Industry = Convert.ToString(dr["Industry"]),
+                                  FullDesc = Convert.ToString(dr["FullDesc"]),
+                                  PageTitle = Convert.ToString(dr["PageTitle"]),
+                                  MetaKeys = Convert.ToString(dr["MetaKeys"]),
+                                  MetaDesc = Convert.ToString(dr["MetaDesc"]),
+                                  AddedOn = Convert.ToDateTime(Convert.ToString(dr["AddedOn"])),
+                                  AddedBy = Convert.ToString(dr["AddedBy"]),
+                                  AddedIp = Convert.ToString(dr["AddedIp"]),
+                              }).ToList();
+            }
+        }
+        catch (Exception ex)
+        {
+            ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "GetAllProduct", ex.Message);
+        }
+        return categories;
+    }
+    public static List<ProductDetails> GetAllCompentensisProduct(SqlConnection conSQ, string CapID)
+    {
+        List<ProductDetails> categories = new List<ProductDetails>();
+        try
+        {
+            string query = @"select * from ProductDetails Where Capability=@Capability and status='Active'";
+            using (SqlCommand cmd = new SqlCommand(query, conSQ))
+            {
+                cmd.Parameters.AddWithValue("@Industry", SqlDbType.NVarChar).Value = CapID;
                 SqlDataAdapter sda = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 sda.Fill(dt);

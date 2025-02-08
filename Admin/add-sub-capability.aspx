@@ -14,8 +14,8 @@
                         <div class="page-title-right">
                             <ol class="breadcrumb m-0">
                                 <li class="breadcrumb-item"><a href="javascript: void(0);">Dashboard</a></li>
-                                <li class="breadcrumb-item"><a href="javascript: void(0);">Sub Capability</a></li>
-                                <li class="breadcrumb-item active"><%=Request.QueryString["id"] == null ? "Add" : "Update" %> Sub Capability</li>
+                                <li class="breadcrumb-item"><a href="javascript: void(0);">Sub Competencies</a></li>
+                                <li class="breadcrumb-item active"><%=Request.QueryString["id"] == null ? "Add" : "Update" %> Sub Competencies</li>
                             </ol>
                         </div>
                     </div>
@@ -26,22 +26,22 @@
                 <div class="col-lg-12 mb-2">
                     <div class="card">
                         <div class="card-header">
-                            <h5 class="card-title mb-0">Add Sub Capability</h5>
+                            <h5 class="card-title mb-0">Add Sub Competencies</h5>
                         </div>
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-lg-4 mb-3">
-                                    <label class="">Capability<sup class="text-danger">*</sup></label>
+                                    <label class="">Competencies<sup class="text-danger">*</sup></label>
                                     <asp:DropDownList runat="server" ID="ddlCapability" CssClass="form-select" AutoPostBack="true"></asp:DropDownList>
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="ddlCapability" InitialValue="0" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Field can't be empty"></asp:RequiredFieldValidator>
                                 </div>
                                 <div class="col-lg-4">
-                                    <label class="">Sub Capability Name<sup class="text-danger">*</sup></label>
-                                    <asp:TextBox runat="server" class="form-control mb-2 mr-sm-2 txtsubcapability" ID="txtsubcapability" placeholder="Sub Capability Name" />
+                                    <label class="">Sub Competencies Name<sup class="text-danger">*</sup></label>
+                                    <asp:TextBox runat="server" class="form-control mb-2 mr-sm-2 txtsubcapability" ID="txtsubcapability" placeholder="Sub Competencies Name" />
                                     <asp:RequiredFieldValidator ID="req1" runat="server" ControlToValidate="txtsubcapability" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Field can't be empty"></asp:RequiredFieldValidator>
                                 </div>
                                 <div class="col-lg-4">
-                                    <label class="">Sub Capability URL<sup class="text-danger">*</sup></label>
+                                    <label class="">Sub Competencies URL<sup class="text-danger">*</sup></label>
                                     <asp:TextBox runat="server" class="form-control mb-2 mr-sm-2 txtUrl" ID="txtUrl" placeholder="Auto-Generate" />
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtUrl" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Field can't be empty"></asp:RequiredFieldValidator>
                                 </div>
@@ -87,7 +87,7 @@
                                     <asp:Button ID="btnSave" runat="server" Text="Save" ValidationGroup="Save" CssClass="btn btn-success waves-effect waves-light " OnClientClick="tinyMCE.triggerSave(false,true);" OnClick="btnSave_Click" />
                                     <asp:Button ID="btnNew" runat="server" Text="Clear" Visible="false" CssClass="btn btn-outline-success waves-effect waves-light" OnClick="btnNew_Click" />
                                     <asp:Label ID="lblThumb" runat="server" Visible="false"></asp:Label>
-                                     <asp:Label ID="lblBanner" runat="server" Visible="false"></asp:Label>
+                                    <asp:Label ID="lblBanner" runat="server" Visible="false"></asp:Label>
 
                                 </div>
                             </div>

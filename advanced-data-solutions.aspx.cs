@@ -72,6 +72,38 @@ public partial class advanced_data_solutions :  System.Web.UI.Page
                     </div>";
                 }
             }
+            else
+            {
+                var pro = ProductDetails.GetAllCompentensisProduct(conSQ, name);
+                if(pro.Count > 0)
+                {
+                    for(int i = 0;i < pro.Count; i++)
+                    {
+                        var url = "product/" + pro[i].ProductUrl;
+                        strsubcapability += @"<div class='col-lg-4'>
+                            <div class='card1'>
+                                <a href='/" + url + @"' contenteditable='false' style='cursor: pointer;'>
+                                    <img src='/" + pro[i].ThumbImage + @"' class='img1'>
+                                    <div class='intro1'>
+                                        <h4 class='text-h1'>" + pro[i].ProductName + @"
+
+</h4>
+
+                                        <p class='text-p'>
+                                           " + pro[i].FullDesc + @"          
+                                        </p>
+                                    </div>
+                                </a>
+
+                            </div>
+                        </div>";
+                    }
+                }
+                else
+                {
+                    strsubcapability = "<div class='text-center'>No Data to show...</div>";
+                }
+            }
         }
         catch (Exception ex)
         {
