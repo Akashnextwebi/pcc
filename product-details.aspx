@@ -424,23 +424,23 @@
                             <div class="col-lg-12 ">
                                 <div class="wptb-form" method="post">
                                     <div class="wptb-form--inner">
-                                        <div class="row">
-                                            <div class="col-lg-12 col-md-12 mb-4">
+                                        <div class="row gy-3">
+                                            <div class="col-lg-12 col-md-12">
                                                 <div class="form-group">
                                                     <asp:TextBox ID="textFname" runat="server" class="form-control textFname" MaxLength="100" placeholder="Enter Your Name"></asp:TextBox>
-                                                    <lable class="spnfname text-danger ms-2"></lable>
+                                                    <span class="spnfname text-danger"></span>
                                                 </div>
                                             </div>
-                                            <div class="col-lg-12 col-md-12 mb-4">
+                                            <div class="col-lg-12 col-md-12">
                                                 <div class="form-group">
                                                     <asp:TextBox ID="txtContact" class="form-control txtContact" runat="server" MaxLength="15" placeholder="Mobile Number"></asp:TextBox>
-                                                    <lable class="spncontact text-danger ms-2"></lable>
+                                                    <span class="spncontact text-danger"></span>
                                                 </div>
                                             </div>
-                                            <div class="col-lg-12 col-md-12 mb-4">
+                                            <div class="col-lg-12 col-md-12">
                                                 <div class="form-group">
                                                     <asp:TextBox ID="txtemailAdress" class="form-control txtemailAdress" runat="server" MaxLength="100" placeholder="Corporate E-mail ID"></asp:TextBox>
-                                                    <lable class="spnemail text-danger ms-2"></lable>
+                                                    <span class="spnemail text-danger"></span>
                                                 </div>
                                             </div>
 
@@ -470,38 +470,36 @@
                     </div>
                     <div class="modal-body bg-light">
                         <div class="row">
-                            <div class="col-lg-12 ">
+                            <div class="col-lg-12  gy-3">
                                 <div class="wptb-form" method="post">
                                     <div class="wptb-form--inner">
                                         <div class="row">
-                                            <div class="col-lg-12 col-md-12 mb-4">
-                                                <lable class="error-message text-danger d-none"></lable>
+                                            <div class="col-lg-12 col-md-12">
                                                 <div class="form-group">
                                                     <input type="text" name="name" class="form-control" id="txtname" placeholder="Enter Your Name" required>
-                                                    <span class="spnname text-danger ms-2"></span>
+                                                    <span class="spnname text-danger"></span>
                                                 </div>
                                             </div>
-                                            <div class="col-lg-12 col-md-12 mb-4">
+                                            <div class="col-lg-12 col-md-12">
                                                 <div class="form-group">
                                                     <input type="text" name="password" class="form-control" id="txtcontact" placeholder="Mobile Number">
-                                                    <span class="spncontact text-danger ms-2"></span>
+                                                    <span class="spncontact text-danger"></span>
                                                 </div>
                                             </div>
-                                            <div class="col-lg-12 col-md-12 mb-4">
+                                            <div class="col-lg-12 col-md-12">
                                                 <div class="form-group">
                                                     <input type="text" name="password" class="form-control" id="txtemail" placeholder="Email" />
-                                                    <span class="spnemail text-danger ms-2"></span>
+                                                    <span class="spnemail text-danger"></span>
                                                 </div>
                                             </div>
-                                            <div class="col-lg-12 col-md-12 mb-4">
+                                            <div class="col-lg-12 col-md-12">
                                                 <div class="form-group">
                                                     <textarea type="text" name="message" class="form-control" id="txtmessage" placeholder="Message"></textarea>
-                                                    <span class="spnmessage text-danger ms-2"></span>
+                                                    <span class="spnmessage text-danger"></span>
                                                 </div>
                                             </div>
 
-                                            <div class="col-md-12 col-lg-12 ">
-
+                                            <div class="col-md-12 col-lg-12">
                                                 <div class="slider-btn">
                                                     <%-- <a
                                                 href="#"
