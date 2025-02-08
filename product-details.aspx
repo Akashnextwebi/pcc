@@ -47,7 +47,22 @@
                 border: 0;
                 color: #fff;
             }
-
+            .product_details_tab .nav li a.active {
+    background: unset !important;
+    color: #000  !important;
+    font-size: 32px;
+    font-weight:600;
+    position: relative;
+}
+    .wptb-item--content {
+    overflow: scroll;
+}
+            .product_details_tab .nav li a.active::after{
+                content:none;
+                border-color:unset !important;
+                background:unset !important;
+                border-style:unset !important;
+            }
         textarea.form-control {
             background: #fff;
             color: #000;
