@@ -53,7 +53,7 @@ public partial class product_details : System.Web.UI.Page
                 }
                 #endregion
 
-                if (!string.IsNullOrEmpty(Pro.Broucher))
+                if (!string.IsNullOrEmpty(Pro.IndustryPDF))
                 {
                     strBroucher = @"<a href='javascript:void(0);' id='hidenId' class='btn-three w-100 hidenId' data-id='" + Pro.Id + @"' data-bs-toggle='modal' data-bs-target='#exampleModal'>
                                         <div class='btn-wrap'>

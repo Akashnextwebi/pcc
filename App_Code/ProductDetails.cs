@@ -146,8 +146,8 @@ public class ProductDetails
 
         try
         {
-            string query = "Insert Into ProductDetails (ProductGuid,ProductName,ProductUrl,ThumbImage,SKUCode,Broucher,IndustryPDF,DatasheetName,DatasheetLink,ProductOrder,Enquiry,Capability,SubCapability,Industry,FullDesc,PageTitle,MetaKeys,MetaDesc,AddedBy,AddedOn,AddedIp,Status) values" +
-                           "(@ProductGuid,@ProductName,@ProductUrl,@ThumbImage,@SKUCode,@Broucher,@IndustryPDF,@DatasheetName,@DatasheetLink,@Enquiry,@Capability,@SubCapability,@Industry,@FullDesc,@PageTitle,@MetaKeys,@MetaDesc,@AddedBy,@AddedOn,@AddedIp,@Status)";
+            string query = "Insert Into ProductDetails (ProductGuid,ProductName,ProductUrl,ProductOrder,ThumbImage,SKUCode,Broucher,IndustryPDF,DatasheetName,DatasheetLink,Enquiry,Capability,SubCapability,Industry,FullDesc,PageTitle,MetaKeys,MetaDesc,AddedBy,AddedOn,AddedIp,Status) values" +
+                           "(@ProductGuid,@ProductName,@ProductUrl,@ProductOrder,@ThumbImage,@SKUCode,@Broucher,@IndustryPDF,@DatasheetName,@DatasheetLink,@Enquiry,@Capability,@SubCapability,@Industry,@FullDesc,@PageTitle,@MetaKeys,@MetaDesc,@AddedBy,@AddedOn,@AddedIp,@Status)";
             using (SqlCommand cmd = new SqlCommand(query, _con))
             {
                 cmd.Parameters.AddWithValue("@ProductName", SqlDbType.NVarChar).Value = cat.ProductName;
@@ -355,10 +355,10 @@ public class ProductDetails
                         (@Industry = '' OR pd.Industry = @Industry)) as TotalCnt,
 	                    (Select Top 1 CapabilityName from Capability c Where c.ID=pd.Capability) as CapabilityTitle,
 	                    (Select Top 1 SubCapabilityName from SubCapability sc Where sc.ID=pd.SubCapability) as SubCapabilityTitle,
-	                    (Select Count(c.ID) from manageCapabilities c Where c.ProductGuid=pd.ProductGuid) as CapCnt,
-	                    (Select Count(sd.ID) from SpecificationDetails sd Where sd.ProductGuid=pd.ProductGuid) as SpecCnt,
-	                    (Select Count(dg.ID) from DatasheetGallery dg Where dg.ProductGuid=pd.ProductGuid) as GalleryCnt,
-	                    (Select Count(pg.ID) from ProductGallery pg Where pg.ProductGuid=pd.ProductGuid) as ProductCnt,
+	                    (Select Count(c.ID) from manageCapabilities c Where c.ProductGuid=pd.ProductGuid and c.status !='Deleted') as CapCnt,
+	                    (Select Count(sd.ID) from SpecificationDetails sd Where sd.ProductGuid=pd.ProductGuid and sd.status !='Deleted') as SpecCnt,
+	                    (Select Count(dg.ID) from DatasheetGallery dg Where dg.ProductGuid=pd.ProductGuid and dg.status !='Deleted') as GalleryCnt,
+	                    (Select Count(pg.ID) from ProductGallery pg Where pg.ProductGuid=pd.ProductGuid and pg.status !='Deleted') as ProductCnt,
 	                    (
                             SELECT STRING_AGG(ind.IndustryName, ',') AS Industries
                             FROM IndustryDetails ind

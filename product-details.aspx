@@ -316,7 +316,7 @@
                                             <span class='text-second'><i class='fa-solid fa-cloud-arrow-down me-2'></i>Download <b></b>Brochure</span>
                                         </div>
                                     </a>--%>
-                                    <%=strDatasheet%>
+                                    <%=strpdf%>
                                 </div>
 
 
@@ -326,7 +326,7 @@
                 </div>
         </section>
 
-        <div class="product_details_section section-padding bg-light" id="divspeccon">
+        <div class="product_details_section section-padding bg-light" id="divspeccon" runat="server">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">

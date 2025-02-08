@@ -116,7 +116,7 @@
                                     <small class="text-danger">.png, .jpeg, .jpg, .gif formats are required, Image Size Should be 500 × 334 px</small><br />
                                 </div>
                                 <div class="col-lg-12 mb-3">
-                                    <label class="">Broucher PDF <sup>*</sup></label>
+                                    <label class="">Broucher PDF</label>
                                     <asp:FileUpload ID="UploadPDF" runat="server" CssClass="form-control"></asp:FileUpload>
                                     <small class="text-danger">.pdf, .doc, formats are required.</small><br />
                                 </div>

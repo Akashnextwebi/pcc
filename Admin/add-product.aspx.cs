@@ -369,7 +369,7 @@ public partial class Admin_add_product : System.Web.UI.Page
                 pro.Status = "Active";
                 
 
-                if (pro.ThumbImage != "" && pro.Broucher != "")
+                if (pro.ThumbImage != "")
                 {
                     if (btnSave.Text == "Update")
                     {
@@ -388,11 +388,11 @@ public partial class Admin_add_product : System.Web.UI.Page
 
                     else
                     {
-                        if (string.IsNullOrEmpty(pro.Broucher))
-                        {
-                            ScriptManager.RegisterStartupScript(this, this.GetType(), "Message", "Snackbar.show({pos: 'top-right',text: 'Please upload PDF.',actionTextColor: '#fff',backgroundColor: '#ea1c1c'});", true);
-                            return;
-                        }
+                        //if (string.IsNullOrEmpty(pro.Broucher))
+                        //{
+                        //    ScriptManager.RegisterStartupScript(this, this.GetType(), "Message", "Snackbar.show({pos: 'top-right',text: 'Please upload PDF.',actionTextColor: '#fff',backgroundColor: '#ea1c1c'});", true);
+                        //    return;
+                        //}
                         int result = ProductDetails.InsertProducts(conSQ, pro);
                         if (result > 0)
                         {
@@ -409,6 +409,10 @@ public partial class Admin_add_product : System.Web.UI.Page
                             ScriptManager.RegisterStartupScript(this, this.GetType(), "Message", "Snackbar.show({pos: 'top-right',text: 'Oops! Something went wrong. Please try after some time',actionTextColor: '#fff',backgroundColor: '#ea1c1c'});", true);
                         }
                     }
+                }
+                else
+                {
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "Message", "Snackbar.show({pos: 'top-right',text: 'please upload all the required images and pdfs.',actionTextColor: '#fff',backgroundColor: '#ea1c1c'});", true);
                 }
             }
             else
