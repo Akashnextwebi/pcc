@@ -101,6 +101,7 @@ public partial class advanced_data_solutions :  System.Web.UI.Page
                 }
                 else
                 {
+                    divCap.Visible = false;
                     strsubcapability = "<div class='text-center'>No Data to show...</div>";
                 }
             }
