@@ -309,13 +309,6 @@
 
 
                                 <div class="cart_button">
-                                    <%--<a href='javascript:void(0);' id='hidenId' class='btn-three w-100 hidenId' data-id='1' data-bs-toggle='modal' data-bs-target='#exampleModal'>
-                                        <div class='btn-wrap'>
-                                            <span class='text-first'><i class='fa-solid fa-cloud-arrow-down me-2'></i>
-                                                Download Brochure</span>
-                                            <span class='text-second'><i class='fa-solid fa-cloud-arrow-down me-2'></i>Download <b></b>Brochure</span>
-                                        </div>
-                                    </a>--%>
                                     <%=strpdf%>
                                 </div>
 
@@ -332,23 +325,22 @@
                     <div class="col-lg-12">
                         <div class="product_details_tab">
                             <ul class="nav">
-
                                 <li class="nav-item" id="divcap" runat="server">
-                                    <a class="active" data-bs-toggle="tab" href="#Capabilities">Capabilities</a>
+                                    <a data-bs-toggle="tab" href="#Capabilities">Capabilities</a>
                                 </li>
                                 <li class="nav-item" id="divspe" runat="server">
-                                    <a data-bs-toggle="tab" href="#Specifications">Specifications</a>
+                                    <a class="active"  data-bs-toggle="tab" href="#Specifications">Specifications</a>
                                 </li>
 
                             </ul>
                             <div class="tab-content">
 
-                                <div class="tab-pane fade show" id="Capabilities" runat="server" tabindex="0">
+                                <div class="tab-pane fade" id="Capabilities" runat="server" tabindex="0">
                                     <div class="row justify-content-center gy-4">
                                         <%=strCapabilities %>
                                     </div>
                                 </div>
-                                <div class="tab-pane show" id="Specifications" runat="server" tabindex="0">
+                                <div class="tab-pane fade show active" id="Specifications" runat="server" tabindex="0">
                                     <div class="row justify-content-center">
                                         <div class="col-lg-8">
                                             <div class="wptb-accordion wptb-accordion1">
@@ -379,29 +371,9 @@
                                     Download Datasheet</span>
                                 <span class="text-second"><i class="fa-solid fa-cloud-arrow-down me-2 "></i>Download <b></b>Datasheet</span>
                             </div>
-
                         </a>
                     </div>
-
                 </div>
-
-                <%-- <div class="row">
-                    <div class="col-lg-12">
-                        <div class="swiper campus-slider ">
-                          
-                            <div class="swiper-wrapper">
-                                <%=strDatasheet %>
-                             
-                            </div>
-                            <div class="swiper-button-prev"></div>
-                            <div class="swiper-button-next"></div>
-
-                        </div>
-
-
-                    </div>
-
-                </div>--%>
             </div>
 
         </section>
@@ -435,23 +407,19 @@
                                     <div class="wptb-form--inner">
                                         <div class="row">
                                             <div class="col-lg-12 col-md-12 mb-4">
-                                                <%-- <lable class="error-message text-danger d-none"></lable>--%>
                                                 <div class="form-group">
-                                                    <%-- <input type="text" name="name" class="form-control" placeholder="Enter Your Name" required>--%>
                                                     <asp:TextBox ID="textFname" runat="server" class="form-control textFname" MaxLength="100" placeholder="Enter Your Name"></asp:TextBox>
                                                     <lable class="spnfname text-danger ms-2"></lable>
                                                 </div>
                                             </div>
                                             <div class="col-lg-12 col-md-12 mb-4">
                                                 <div class="form-group">
-                                                    <%--<input type="text" name="password" class="form-control" placeholder="Mobile Number">--%>
                                                     <asp:TextBox ID="txtContact" class="form-control txtContact" runat="server" MaxLength="15" placeholder="Mobile Number"></asp:TextBox>
                                                     <lable class="spncontact text-danger ms-2"></lable>
                                                 </div>
                                             </div>
                                             <div class="col-lg-12 col-md-12 mb-4">
                                                 <div class="form-group">
-                                                    <%-- <input type="text" name="password" class="form-control" placeholder="Corporate E-mail ID--%>
                                                     <asp:TextBox ID="txtemailAdress" class="form-control txtemailAdress" runat="server" MaxLength="100" placeholder="Corporate E-mail ID"></asp:TextBox>
                                                     <lable class="spnemail text-danger ms-2"></lable>
                                                 </div>
@@ -460,11 +428,6 @@
                                             <div class="col-md-12 col-lg-12 ">
 
                                                 <div class="slider-btn">
-                                                    <%--<a
-                                                        href="#"
-                                                        class="btn ss-btn mr-15"
-                                                        data-animation="fadeInLeft"
-                                                        data-delay=".4s"><i class="fa-solid fa-cloud-arrow-down "></i>Download</a>--%>
                                                     <asp:LinkButton runat="server" ID="BtnSubmit" CssClass="btn ss-btn BtnSubmit" ValidationGroup="Save">Download<i class="fa-solid fa-cloud-arrow-down"></i></asp:LinkButton>
                                                 </div>
                                             </div>

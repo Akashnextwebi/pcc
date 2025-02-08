@@ -55,21 +55,21 @@ public partial class product_details : System.Web.UI.Page
 
                 if (!string.IsNullOrEmpty(Pro.IndustryPDF))
                 {
-                    strBroucher = @"<a href='javascript:void(0);' id='hidenId' class='btn-three w-100 hidenId' data-id='" + Pro.Id + @"' data-bs-toggle='modal' data-bs-target='#exampleModal'>
+                    strpdf = @"<a href='/"+ Pro.IndustryPDF + @"' id='hidenId' class='btn-three w-100 hidenId' download data-id='" + Pro.Id + @"'>
                                         <div class='btn-wrap'>
                                             <span class='text-first'><i class='fa-solid fa-cloud-arrow-down me-2'></i>
-                                                Download Brochure</span>
-                                            <span class='text-second'><i class='fa-solid fa-cloud-arrow-down me-2'></i>Download <b></b>Brochure</span>
+                                                Download Datasheet</span>
+                                            <span class='text-second'><i class='fa-solid fa-cloud-arrow-down me-2'></i>Download Datasheet</span>
                                         </div>
                                     </a>";
                 }
                 else
                 {
-                    strBroucher = @"<a href='javascript:void(0);' id='btnEnqury' class='btn-three w-100' data-bs-toggle='modal' data-bs-target='#exampleModal1'>
+                    strpdf = @"<a href='javascript:void(0);' id='btnEnqury' class='btn-three w-100' data-bs-toggle='modal' data-bs-target='#exampleModal1'>
                                         <div class='btn-wrap'>
                                             <span class='text-first'><i class='fa-solid fa-message me-2'></i>
-                                                Enquery</span>
-                                            <span class='text-second'><i class='fa-solid fa-message me-2'></i>Download <b></b>Brochure</span>
+                                                Download Datasheet</span>
+                                            <span class='text-second'><i class='fa-solid fa-message me-2'></i>Download Datasheet</span>
                                         </div>
                                     </a>";
                 }
@@ -77,7 +77,7 @@ public partial class product_details : System.Web.UI.Page
                 strName = Pro.ProductName;
                 strSKU = Pro.SKUCode;
                 strdesc = Pro.FullDesc;
-                strpdf = Pro.Broucher;
+                //strpdf = Pro.Broucher;
                 strId = Pro.Id.ToString();
                 BindRelatedProduct(Convert.ToString(Pro.RelatedProducts));
                 var DS = DatasheetGallery.GetAllDatasheetGalleryProductGuid(conSQ, Pro.ProductGuid);
@@ -220,8 +220,6 @@ public partial class product_details : System.Web.UI.Page
         try
         {
             BrochureEnguiry BE = new BrochureEnguiry();
-
-
             var ResPDF = "";
             //var IndPDF = "";
             BE.FullName = name;
