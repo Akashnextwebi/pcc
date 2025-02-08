@@ -618,7 +618,9 @@
     .d-flex.new-flex.justify-content-between.align-items-center.mb-50 {
         margin-bottom: 0px !important;
     }
-}
+    .cc1 h4 {
+        font-size:14px !important;
+    }}
 
 
 @media (min-width: 320px) and (max-width: 767px) {

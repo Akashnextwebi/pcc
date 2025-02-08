@@ -52,7 +52,7 @@
             .cc1 h4{
                 background:#f1f1f1;
                 padding:10px 0px;
-                font-size:18px !important;
+                font-size:18px ;
               text-align:center;    
 
 
@@ -82,7 +82,7 @@
                 <h2>Quality and Accreditations</h2>
             </div>
             <div class="row justify-content-center">
-                <div class="col-lg-3">
+                <div class="col-lg-3 col-md-4">
                     <div class="cc1">
                         <div class="certificate-img">
                             <a href="image/c1.jpg" data-lightbox="image-1" data-title="AS9100 Rev D Certificate 2024">
@@ -92,7 +92,7 @@
                     </div>
 
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-3 col-md-4">
                      <div class="cc1">
                     <div class="certificate-img">
                        
@@ -104,7 +104,7 @@
                     </div>
 
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-3 col-md-4">
                     <div class="cc1">
                         <div class="certificate-img">
                             <a href="image/c3.jpg" data-lightbox="image-1" data-title="NSIC Certificate">
