@@ -32,7 +32,7 @@
                     <img src="image/team/sastri-300x200.jpg" alt="img"></a>
             </div>
             <div class="instructor__content">
-                <h2 class="title"><a href="javascript:void(0)" contenteditable="false" style="cursor: pointer;">M P Sastri</a></h2>
+                <h3 class="title"><a href="javascript:void(0)" contenteditable="false" style="cursor: pointer;">M P Sastri</a></h3>
                 <span class="designation">Director (Technical)
 
                 </span>
@@ -54,7 +54,7 @@
                     <img src="image/team/noble-300x200.jpg" alt="img"></a>
             </div>
             <div class="instructor__content">
-                <h2 class="title"><a href="javascript:void(0)" contenteditable="false" style="cursor: pointer;">PJB Noble</a></h2>
+                <h3 class="title"><a href="javascript:void(0)" contenteditable="false" style="cursor: pointer;">PJB Noble</a></h3>
                 <span class="designation">Director (Commercial)
 
 

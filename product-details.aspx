@@ -24,17 +24,21 @@
             border-radius: 50%;
         }
 
-        .contact-btn {
-            position: fixed;
-            right: -20px;
-            top: 250px;
-            rotate: -90deg;
-            z-index: 1;
-            transform: translateY(26px);
-            text-transform: uppercase;
-            z-index: 9999;
-        }
+      
 
+           .contact-btn {
+       position: fixed;
+       right: -20px;
+       top: 250px;
+       rotate: -90deg;
+       z-index: 1;
+       transform: translateY(26px);
+       text-transform: uppercase;
+       z-index: 9;
+   }
+   .wptb-accordion1 .wptb--item .wptb-item--content{
+       color:#000 !important;
+   }
             .contact-btn button {
                 padding: 15px;
                 background: #c72329;
@@ -43,7 +47,22 @@
                 border: 0;
                 color: #fff;
             }
-
+            .product_details_tab .nav li a.active {
+    background: unset !important;
+    color: #000  !important;
+    font-size: 32px;
+    font-weight:600;
+    position: relative;
+}
+    .wptb-item--content {
+    overflow: scroll;
+}
+            .product_details_tab .nav li a.active::after{
+                content:none;
+                border-color:unset !important;
+                background:unset !important;
+                border-style:unset !important;
+            }
         textarea.form-control {
             background: #fff;
             color: #000;
@@ -255,7 +274,9 @@
             background: #e8f1fb;
             align-items: center;
             justify-content: space-between;
-        }
+        }.wptb-accordion1 .wptb-item-title .wptb-item--number{
+             margin-right:0px !important;
+         }
 
         input[type="text"] {
             background-color: #fff !important;
@@ -342,7 +363,7 @@
                                 </div>
                                 <div class="tab-pane fade show active" id="Specifications" runat="server" tabindex="0">
                                     <div class="row justify-content-center">
-                                        <div class="col-lg-8">
+                                        <div class="col-lg-8 p-0">
                                             <div class="wptb-accordion wptb-accordion1">
                                                 <%=strSpecification %>
                                             </div>

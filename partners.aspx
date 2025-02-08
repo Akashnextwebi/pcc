@@ -79,7 +79,7 @@
     <div class="section-padding">
         <div class="container-fluid one pl--95">
             <div class="row justify-content-center  gy-4 align-items-center">
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-4">
                     <div class="mission-img">
                         <img src="image/partners/bhe.jpg" alt="">
                         <h4>Bonn Hungary 
@@ -88,7 +88,7 @@ Electronics
                       
                     </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-4">
                     <div class="mission-img">
                         <img src="image/partners/gdp.jpg" alt="">
                         <h4>GDP Space Systems
@@ -97,7 +97,7 @@ Electronics
                       
                     </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-4">
                     <div class="mission-img">
                         <img src="image/partners/systel.png" alt="">
                         <h4>AA Systel, France
