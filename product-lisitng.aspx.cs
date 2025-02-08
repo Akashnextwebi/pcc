@@ -88,7 +88,7 @@ public partial class product_lisitng : System.Web.UI.Page
             {
                 for (int i = 0; i < Wp.Count; i++)
                 {
-                    StrWhitepaper += @"<div class='col-lg-3'>
+                    StrWhitepaper += @"<div class='col-lg-3 col-md-6'>
     <div class='broacher-card'>
         <div class='broacher-img'>
 <a href='/whitepaper/" + Wp[i].WhitePaperUrl + @"'>
