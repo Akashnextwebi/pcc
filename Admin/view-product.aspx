@@ -55,28 +55,20 @@
                             <div class="row">
                                 <div class="col-lg-3 mb-3">
                                     <label class="">Product Name<sup class="text-danger"></sup></label>
-                                    <%--<asp:TextBox runat="server" MaxLength="100" class="form-control mb-3 " placeholder="Search by Product name" ID="txtSearch" />--%>
                                     <input id="txtSearch" class="form-control mb-3" placeholder="Search by Product name">
                                 </div>
                                 <div class="col-lg-3 mb-3">
                                     <label class="">Capability<sup class="text-danger"></sup></label>
-                                    <%-- <asp:DropDownList runat="server" ID="ddlCapabilityType" CssClass="form-select" ></asp:DropDownList>--%>
-
+                                  
                                     <select id="ddlCapabilityType" class="form-select"></select>
-                                    <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="ddlCapabilityType" InitialValue="0" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Field can't be empty"></asp:RequiredFieldValidator>--%>
-                                </div>
+                                  </div>
                                 <div class="col-lg-3 mb-3">
                                     <label class="">Industry<sup class="text-danger"></sup></label>
                                     <select id="ddlindustry" class="form-select"></select>
-                                    <%--<asp:DropDownList runat="server" ID="ddlindustry" CssClass="form-select" AutoPostBack="true"></asp:DropDownList>
-                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="ddlindustry" InitialValue="0" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" ValidationGroup="Save" ErrorMessage="Field can't be empty"></asp:RequiredFieldValidator>--%>
-                                </div>
+                                     </div>
                                 <div class="col-lg-3 mb-3">
                                     <div class="col-lg-1">
-                                        <%--<asp:Button runat="server" name="btnSearch" Text="Search" ID="btnSearch" class="btn btn-success waves-effect waves-light m-t-25  btnSearch" />--%>
-                                       <a id="btnSearch" class="btn btn-primary m-t-25 btnSearch" href="javascript:void(0);">Search</a>
-                                        
-
+                                        <a id="btnSearch" class="btn btn-primary m-t-25 btnSearch" href="javascript:void(0);">Search</a>
                                     </div>
 
                                 </div>
@@ -107,15 +99,12 @@
                                     <tr>
                                         <th>#</th>
                                         <th>Thumb Image</th>
-                                        <th>Broucher PDF</th>
-                                        <th>Product Name</th>
+                                        <th>Product details</th>
+                                        <th>Industry</th>
                                         <th>Manage Capabilities</th>
                                         <th>Specification</th>
                                         <th>Datasheet Gallery</th>
                                         <th>Product Galleries</th>
-                                        <th>Capability</th>
-                                        <th>SubCapability</th>
-                                        <th>Industry</th>
                                         <th>Added On</th>
                                         <th class="text-center">Action</th>
                                     </tr>

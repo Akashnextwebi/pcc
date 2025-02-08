@@ -348,177 +348,34 @@
                     <div class="col-lg-12">
                         <div class="banner-content">
                             <h1><%=strBannertitle %></h1>
-                            <div class="">
+                            <div>
                                 <ul class="breadcrumb-list">
-                                    <li><a href="/Default.aspx">Home</a></li>
+                                    <li><a href="/">Home</a></li>
                                     <li><%=strBannertitle %></li>
                                 </ul>
                             </div>
-
                             <div class="slider-btn mt-30 ">
-                                <%-- <a href="#" class="btn ss-btn mr-15" data-animation="fadeInLeft" data-delay=".4s" tabindex="0" contenteditable="false" style="animation-delay: 0.4s; cursor: pointer;"><i class="fal fa fa-download"></i>Download the broacher</a>--%>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
         <section class="section-padding pb-0">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-10">
-                        <h2><%=strDesctitle %>
-
-                        </h2>
+                        <h2><%=strDesctitle %></h2>
                         <p><%=strDesc %></p>
                     </div>
                 </div>
-
             </div>
         </section>
         <section class="section-padding">
             <div class="container">
-                <div class="row gy-4">
-                    <%=strsubcapability %>
-                    <%-- <div class="col-lg-4 col-md-6">
-                        <div class="eg-card3 three">
-                            <div class="card-img">
-                                <img src="/image/sub1/1.png" alt="">
-                            </div>
-                            <div class="card-content">
-                                <a class="view-btn" href="/product-lisitng.aspx">
-                                    <img src="/image/sub1/right-arrow2.png" alt="">
-                                </a>
-                                <div class="catgory-and-title">
-                                    <a href="product-lisitng.aspx">Technology</a>
-                                    <h5><a href="/product-lisitng.aspx">Management Consulting</a></h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="eg-card3 three">
-                            <div class="card-img">
-                                <img src="/image/sub1/2.png" alt="">
-                            </div>
-                            <div class="card-content">
-                                <a class="view-btn" href="product-lisitng.aspx">
-                                    <img src="/image/sub1/right-arrow2.png" alt="">
-                                </a>
-                                <div class="catgory-and-title">
-                                    <a href="product-lisitng.aspx">Technology</a>
-                                    <h5><a href="/product-lisitng.aspx">Management Consulting</a></h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="eg-card3 three">
-                            <div class="card-img">
-                                <img src="/image/sub1/3.png" alt="">
-                            </div>
-                            <div class="card-content">
-                                <a class="view-btn" href="product-lisitng.aspx">
-                                    <img src="/image/sub1/right-arrow2.png" alt="">
-                                </a>
-                                <div class="catgory-and-title">
-                                    <a href="/product-lisitng.aspx">Technology</a>
-                                    <h5><a href="/product-lisitng.aspx">Management Consulting</a></h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="eg-card3 three">
-                            <div class="card-img">
-                                <img src="/image/sub1/4.png" alt="">
-                            </div>
-                            <div class="card-content">
-                                <a class="view-btn" href="product-lisitng.aspx">
-                                    <img src="/image/sub1/right-arrow2.png" alt="">
-                                </a>
-                                <div class="catgory-and-title">
-                                    <a href="/product-lisitng.aspx">Technology</a>
-                                    <h5><a href="/product-lisitng.aspx">Management Consulting</a></h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="eg-card3 three">
-                            <div class="card-img">
-                                <img src="/image/sub1/5.png" alt="">
-                            </div>
-                            <div class="card-content">
-                                <a class="view-btn" href="/product-lisitng.aspx">
-                                    <img src="/image/sub1/right-arrow2.png" alt="">
-                                </a>
-                                <div class="catgory-and-title">
-                                    <a href="/product-lisitng.aspx">Technology</a>
-                                    <h5><a href="/product-lisitng.aspx">Management Consulting</a></h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="eg-card3 three">
-                            <div class="card-img">
-                                <img src="/image/sub1/6.png" alt="">
-                            </div>
-                            <div class="card-content">
-                                <a class="view-btn" href="product-lisitng.aspx">
-                                    <img src="/image/sub1/right-arrow2.png" alt="">
-                                </a>
-                                <div class="catgory-and-title">
-                                    <a href="/product-lisitng.aspx">Technology</a>
-                                    <h5><a href="/product-lisitng.aspx">Management Consulting</a></h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>--%>
-                </div>
+                <div class="row gy-4"><%=strsubcapability %></div>
             </div>
         </section>
-    <%--    <div class="horizontal-scrolling-section ">
-            <div class="single-scroll-container" style="background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%), url(/image/scroll-bg-1.jpg);">
-                <div class="container-fluid one pl--95">
-                    <div class="horizontal-scrolling-content">
-                        <div class="section-title1 two">
-                            <span>PCC</span>
-                            <h2>Defense Solutions Product Guide
-                            </h2>
-                        </div>
-                        <p>
-                            Explore Curtiss-Wright's mission-critical solutions based on the latest technologies and open standards. These innovative solutions are trusted and proven for aerospace and defense applications.
-                        </p>
-                        <div class="slider-btn mt-30 ">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>--%>
-       
-       <%-- <section class="section-padding">
-
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="pcc-section-heading mb-0">
-                            <span>Our Core Competence</span>
-                            <h2>Brochure for Advance Data Solutions
-                            </h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="row mt-4">
-                    <%=StrWhitepaper %>
-               
-                </div>
-            </div>
-            
-        </section>--%>
-            
     </main>
 </asp:Content>
 

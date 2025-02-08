@@ -73,7 +73,7 @@ public partial class Admin_add_sub_capability : System.Web.UI.Page
                 ddlCapability.DataTextField = "CapabilityName";
                 ddlCapability.DataValueField = "Id";
                 ddlCapability.DataBind();
-                ddlCapability.Items.Insert(0, new ListItem { Value = "0", Text = "Select Capability" });
+                ddlCapability.Items.Insert(0, new ListItem { Value = "0", Text = "Select Competencies" });
             }
         }
         catch (Exception ex)

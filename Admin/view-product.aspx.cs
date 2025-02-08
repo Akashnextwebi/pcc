@@ -21,101 +21,58 @@ public partial class Admin_view_product : System.Web.UI.Page
     {
         if (!IsPostBack)
         {
-            //BindIndustry();
-            //BindCapability();
         }
     }
-    //public void BindCapability()
-    //{
-    //    try
-    //    {
-    //        List<Capability> loc = Capability.GetAllCapability(conSQ);
-    //        if (loc != null && loc.Count() > 0)
-    //        {
-    //            ddlCapabilityType.DataSource = loc;
-    //            ddlCapabilityType.DataTextField = "CapabilityName";
-    //            ddlCapabilityType.DataValueField = "Id";
-    //            ddlCapabilityType.DataBind();
-    //            ddlCapabilityType.Items.Insert(0, new ListItem { Value = "0", Text = "Select Capability" });
-    //        }
-    //    }
-    //    catch (Exception ex)
-    //    {
-    //        ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "BindCapability", ex.Message);
-    //    }
-    //}
-    //public void BindIndustry()
-    //{
-    //    try
-    //    {
-    //        List<IndustryDetails> loc = IndustryDetails.GetAllIndustries(conSQ);
-    //        if (loc != null && loc.Count() > 0)
-    //        {
-    //            ddlindustry.DataSource = loc;
-    //            ddlindustry.DataTextField = "IndustryName";
-    //            ddlindustry.DataValueField = "Id";
-    //            ddlindustry.DataBind();
-    //            ddlindustry.Items.Insert(0, new ListItem { Value = "0", Text = "Select Industry Name" });
-    //        }
-    //    }
-    //    catch (Exception ex)
-    //    {
-    //        ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "BindIndustry", ex.Message);
-    //    }
-    //}
-    
+
+
     [WebMethod(EnableSession = true)]
-    public static string Getproducts(string PageNo, string PageLenght, string Key,string Capability,string Industry)
+    public static string Getproducts(string PageNo, string PageLenght, string Key, string Capability, string Industry)
     {
         SqlConnection conSQ = new SqlConnection(ConfigurationManager.ConnectionStrings["conSQ"].ConnectionString);
         try
         {
 
             var result = "";
-            var pro = ProductDetails.GetProductListing(conSQ, PageNo, PageLenght, Key, Capability,Industry);
-            if (pro != null && pro.Count() > 0)
+            var pro = ProductDetails.GetProductListing(conSQ, PageNo, PageLenght, Key, Capability, Industry);
+            if (pro != null && pro.Rows.Count > 0)
             {
-                for (int i = 0; i < pro.Count(); i++)
+                for (int i = 0; i < pro.Rows.Count; i++)
                 {
-                    var specount = 0;
-                    specount = SpecificationDetails.GetAllSpecificationcntWithGuid(conSQ, pro[i].ProductGuid).Count;
-                    var capcount = 0;
-                    capcount = manageCapabilities.GetAllcapabilitiesWithGuid(conSQ, pro[i].ProductGuid).Count;
-                    var Gallerycount = 0;
-                    Gallerycount = DatasheetGallery.GetAllGallerytWithGuid(conSQ, pro[i].ProductGuid).Count;
-                    var ProductGallerycount = 0;
-                    ProductGallerycount = ProductGallery.GetAllProductGallerytWithGuid(conSQ, pro[i].ProductGuid).Count;
-                    var image = "<a href='/" + pro[i].ThumbImage + @"' target='_blank'><img src='/" + pro[i].ThumbImage + @"' alt='' class='rounded-circle avatar-xs shadow'></a>";
-                    var pdfIcon = "<img src='assets/images/pdf.png' alt='PDF' class='pdf-icon' style='width:30px; height:30px; vertical-align:middle;'>";
-                    var PDF = "<a href='/" + pro[i].Broucher + "' target='_blank'>" + pdfIcon + "PDF</a>";
+                    //var specount = 0;
+                    //specount = SpecificationDetails.GetAllSpecificationcntWithGuid(conSQ, pro.Rows[i]["ProductGuid"]).Count;
+                    //var capcount = 0;
+                    //capcount = manageCapabilities.GetAllcapabilitiesWithGuid(conSQ, pro.Rows[i]["ProductGuid"]).Count;
+                    //var Gallerycount = 0;
+                    //Gallerycount = DatasheetGallery.GetAllGallerytWithGuid(conSQ, pro.Rows[i]["ProductGuid"]).Count;
+                    //var ProductGallerycount = 0;
+                    //ProductGallerycount = ProductGallery.GetAllProductGallerytWithGuid(conSQ, pro.Rows[i]["ProductGuid"]).Count;
+                    var image = "<a href='/" + pro.Rows[i]["ThumbImage"] + @"' target='_blank'><img src='/" + pro.Rows[i]["ThumbImage"] + @"' alt='' class='avatar-md shadow'></a>";
 
 
                     result += @"<tr>
-                                       <td>" + (i + 1) + @"</td>
-                                        <td>" + image + @"</td>
-                                       <td>" + PDF + @"</td> 
-                                       <td>" + pro[i].ProductName + @"</td>
-                                      <td><a href='manage-capabilities.aspx?Pid=" + pro[i].ProductGuid + @"' class='text-success fw-bold' target='_blank'>Capabilities(" + capcount + @")</a></td>
-                                        <td><a href='manage-specification.aspx?Pid=" + pro[i].ProductGuid + @"' class='text-success fw-bold' target='_blank'>Specification(" + specount + @")</a></td>
-                                       <td><a href='manage-datasheet-galleries.aspx?Pid=" + pro[i].ProductGuid + @"' class='text-success fw-bold' target='_blank'>Datasheet Gallery(" + Gallerycount + @")</a></td>
-                                         <td><a href='manage-product-galleries.aspx?Gid=" + pro[i].ProductGuid + @"' class='text-success fw-bold' target='_blank'>Product Gallery(" + ProductGallerycount + @")</a></td>
-                                        <td>" + pro[i].CapabilityTitle + @"</td>
-                                       <td>" + pro[i].SubcapabilityTitle + @"</td>    
-                                       <td>" + pro[i].IndustryTitle + @"</td>  
-                                         <td>" + pro[i].AddedOn.ToString("dd/MMM/yyyy") + @"</td>
-                                        <td class='text-center'> 
-                                            <a href='add-product.aspx?id=" + pro[i].Id + @"' class='bs-tooltip text-info fs-18' data-id='" + pro[i].Id + @"' data-toggle='tooltip' data-placement='top' title='Edit' data-original-title='Edit'>
-                                             <i class='mdi mdi-pencil'></i></a>
-                                            <a href='javascript:void(0);' class='bs-tooltip deleteItem warning confirm text-danger fs-18' data-id='" + pro[i].Id + @"' data-toggle='tooltip' data-placement='top' title='Delete' data-original-title='Delete'>
-                                               <i class='mdi mdi-delete-forever'></i></a></a>    </td>
-                                          </tr>";
+                                    <td>" + (i + 1) + @"</td>
+                                    <td>" + image + @"</td>
+                                    <td class='text-primary fw-bold'>" + pro.Rows[i]["ProductName"] + @",</br>" + pro.Rows[i]["CapabilityTitle"] + @",</br>" + (Convert.ToString(pro.Rows[i]["SubcapabilityTitle"]) == "" ? "<span class='text-muted'>Not Applicable</span>" : Convert.ToString(pro.Rows[i]["SubcapabilityTitle"])) + @"</td>
+                                    <td>" + pro.Rows[i]["Industries"] + @"</td>
+                                    <td><a href='manage-capabilities.aspx?Pid=" + pro.Rows[i]["ProductGuid"] + @"' class='text-secondary fw-bold' target='_blank'>Capabilities(" + pro.Rows[i]["CapCnt"] + @")</a></td>
+                                    <td><a href='manage-specification.aspx?Pid=" + pro.Rows[i]["ProductGuid"] + @"' class='text-secondary fw-bold' target='_blank'>Specification(" + pro.Rows[i]["SpecCnt"] + @")</a></td>
+                                    <td><a href='manage-datasheet-galleries.aspx?Pid=" + pro.Rows[i]["ProductGuid"] + @"' class='text-secondary fw-bold' target='_blank'>Datasheet Gallery(" + pro.Rows[i]["GalleryCnt"] + @")</a></td>
+                                    <td><a href='manage-product-galleries.aspx?Gid=" + pro.Rows[i]["ProductGuid"] + @"' class='text-secondary fw-bold' target='_blank'>Product Gallery(" + pro.Rows[i]["ProductCnt"] + @")</a></td>
+                                    <td>" + Convert.ToDateTime(pro.Rows[i]["AddedOn"]).ToString("dd/MMM/yyyy") + @"</td>
+                                    <td class='text-center'> 
+                                        <a href='add-product.aspx?id=" + pro.Rows[i]["Id"] + @"' class='bs-tooltip text-info fs-18' data-id='" + pro.Rows[i]["Id"] + @"' data-toggle='tooltip' data-placement='top' title='Edit' data-original-title='Edit'>
+                                            <i class='mdi mdi-pencil'></i></a>
+                                        <a href='javascript:void(0);' class='bs-tooltip deleteItem warning confirm text-danger fs-18' data-id='" + pro.Rows[i]["Id"] + @"' data-toggle='tooltip' data-placement='top' title='Delete' data-original-title='Delete'>
+                                            <i class='mdi mdi-delete-forever'></i></a>
+                                    </td>
+                                </tr>";
                 }
             }
             else
             {
                 result = "<tr><td class='text-center' colspan='6'>No data to show.</td></tr>";
             }
-            return JsonConvert.SerializeObject(new { table = result, count = pro[0].TotalCount });
+            return JsonConvert.SerializeObject(new { table = result, count = pro.Rows[0]["TotalCnt"] });
         }
         catch (Exception ex)
         {

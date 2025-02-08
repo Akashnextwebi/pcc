@@ -190,7 +190,7 @@ public class WhitePaperDetails
         List<WhitePaperDetails> categories = new List<WhitePaperDetails>();
         try
         {
-            string query = "Select *,(Select UserName from CreateUser Where UserGuid=WhitePaperDetails.AddedBy) as UpdatedBy ,(select CapabilityName from Capability where try_convert (nvarchar,Capability.Id) = WhitePaperDetails.Capability )as  CapabilityTitle from WhitePaperDetails where Status ='Active'  Order by Id Desc";
+            string query = "Select *,(Select UserName from CreateUser Where UserGuid=WhitePaperDetails.AddedBy) as UpdatedBy from WhitePaperDetails where Status ='Active'  Order by Id Desc";
             using (SqlCommand cmd = new SqlCommand(query, conSQ))
             {
                 cmd.Parameters.AddWithValue("@Status", SqlDbType.NVarChar).Value = "Active";
@@ -205,7 +205,6 @@ public class WhitePaperDetails
                                   WhitePaperUrl = Convert.ToString(dr["WhitePaperUrl"]),
                                   Tag = Convert.ToString(dr["Tag"]),
                                   Capability = Convert.ToString(dr["Capability"]),
-                                  CapabilityTitle = Convert.ToString(dr["CapabilityTitle"]),
                                   PostedOn = Convert.ToString(dr["PostedOn"]),
                                   PostedBy = Convert.ToString(dr["PostedBy"]),
                                   WhitePaperHeading = Convert.ToString(dr["WhitePaperHeading"]),
@@ -348,16 +347,16 @@ public class WhitePaperDetails
         }
         return wp;
     }
-    public static List<WhitePaperDetails> GetAllWhitepaper(SqlConnection conSQ, string name)
+    public static List<WhitePaperDetails> GetAllWhitepaper(SqlConnection conSQ, string Cid)
     {
         List<WhitePaperDetails> categories = new List<WhitePaperDetails>();
         try
         {
-            string query = @"select * from WhitePaperDetails Where Capability=@Capability and status='Active'";
+            string query = @"select * from WhitePaperDetails Where  @Capability  IN (Select value from string_split(Capability,'|')) and status=@Status";
             using (SqlCommand cmd = new SqlCommand(query, conSQ))
             {
                 // cmd.Parameters.AddWithValue("@id", SqlDbType.NVarChar).Value = id;
-                cmd.Parameters.AddWithValue("@Capability", SqlDbType.NVarChar).Value = name;
+                cmd.Parameters.AddWithValue("@Capability", SqlDbType.NVarChar).Value = Cid;
                 cmd.Parameters.AddWithValue("@Status", SqlDbType.NVarChar).Value = "Active";
                 SqlDataAdapter sda = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();

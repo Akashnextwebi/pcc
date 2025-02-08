@@ -80,11 +80,11 @@ public partial class air : System.Web.UI.Page
             ExceptionCapture.CaptureException(HttpContext.Current.Request.Url.PathAndQuery, "BindIndustryDetails", ex.Message);
         }
     }
-    public void BindProduct(string name)
+    public void BindProduct(string Indid)
     {
         try
         {
-            var ca = ProductDetails.GetAllProduct(conSQ, name);
+            var ca = ProductDetails.GetAllIndustryProduct(conSQ, Indid);
             if (ca.Count > 0)
             {
                 for (int i = 0; i < ca.Count; i++)
