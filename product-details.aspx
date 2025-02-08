@@ -274,7 +274,9 @@
             background: #e8f1fb;
             align-items: center;
             justify-content: space-between;
-        }
+        }.wptb-accordion1 .wptb-item-title .wptb-item--number{
+             margin-right:0px !important;
+         }
 
         input[type="text"] {
             background-color: #fff !important;
@@ -361,7 +363,7 @@
                                 </div>
                                 <div class="tab-pane fade show active" id="Specifications" runat="server" tabindex="0">
                                     <div class="row justify-content-center">
-                                        <div class="col-lg-8">
+                                        <div class="col-lg-8 p-0">
                                             <div class="wptb-accordion wptb-accordion1">
                                                 <%=strSpecification %>
                                             </div>
