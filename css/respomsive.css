@@ -238,9 +238,7 @@
         margin-bottom: 40px !important;
     }
     .breadcrumb-section {
-        padding: 85px 40px 85px !important;
-        height:250px !important;
-       
+        padding: 150px 40px 150px !important;
     }
     .job-list-three .main-wrapper p {
         overflow: hidden;
@@ -628,6 +626,9 @@
     .history-section h1{
         font-size:30px !important;
     }
+    .wptb-item--content {
+        overflow: auto;
+    }
 }
 
 
@@ -635,10 +636,13 @@
     .pcc-header .header-mid {
         padding: 20px 0px !important;
     }
+
     .history-section h1 {
         font-size: 24px !important;
     }
-
+    .wptb-item--content {
+        overflow: auto;
+    } 
     .client-logo-wrap {
         display: grid;
         grid-template-columns: repeat(3, 33%) !important;

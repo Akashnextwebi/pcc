@@ -54,9 +54,7 @@
     font-weight:600;
     position: relative;
 }
-    .wptb-item--content {
-    overflow: scroll;
-}
+
             .product_details_tab .nav li a.active::after{
                 content:none;
                 border-color:unset !important;
