@@ -689,7 +689,7 @@
     margin-top: 50px;
   }
   .header-mid {
-    display: none !important;
+    display: block !important;
   }
   .header-top .header-cta ul li {
     margin-right: 0;
@@ -1732,7 +1732,7 @@
     padding: 10px 5%;
     text-align: left;
     text-decoration: none;
-    text-transform: capitalize;
+    text-transform: uppercase;
     width: 90%;
     font-size: 15px;
     font-weight: 600;
@@ -1745,16 +1745,14 @@
   .menu .children li {
     border-bottom: 1px solid rgba(217, 217, 217, 0.5);
   }
-    .mean-container .mean-nav {
-        background: #ffffff 0% 0% no-repeat padding-box;
-        box-shadow: unset !important;
-        position: fixed;
-        overflow: scroll;
-        left: 0px !important;
-        width: 80%;
-        right: 0px !important;
-        top: 0px !important;
-    }
+  .mean-container .mean-nav {
+    background: #ffffff 0% 0% no-repeat padding-box;
+    box-shadow: unset !important;
+    position: fixed;
+    left:0px !important;
+    right:0px !important;
+    top:65px !important;
+  }
   .mean-container .mean-nav ul li a.mean-expand {
     text-align: right;
     top: 0;
@@ -1766,14 +1764,18 @@
     background: rgba(0, 0, 0, 0);
   }
   .mean-container .mean-nav ul {
-    overflow: hidden;
+    overflow: scroll;
     display: block;
+
   }
-  .menu .page_item_has_children > ul > .page_item_has_children:hover > ul {
-    margin-left: 0;
-    margin-top: 0;
-    top: 0;
-  }
+    .mean-nav > ul {
+        height: 350px;
+    }
+    .menu .page_item_has_children > ul > .page_item_has_children:hover > ul {
+        margin-left: 0;
+        margin-top: 0;
+        top: 0;
+    }
   .menu .sub-menu {
     position: relative;
     height: auto;

@@ -38,7 +38,7 @@
                     <p class="wptb-item--description">
                         As we look to the future, we hope to build a legacy of trust, collaboration, and progress—one that will continue to inspire and empower the industry and nation.                        
                     </p>
-                    <div class="text-center mt-4">
+                    <div class="text-start mt-4">
                         <h5 class="text-one mt-2 mb-4 " style="font-style: italic">"Scientists discover that which exists. An engineer creates that which never was."
                         </h5>
                         <h5 class="text-one mt-2 mb-4"><span class="text-dark">Theodore Von Karman - <span class="fw-lighter">Mathematician, aerospace engineer, physicist.</span></span></h5>
@@ -75,7 +75,7 @@
                                     <img src="image/icons/client.png" alt="" />
                                 </div>
                                 <div class="wptb-item--holder">
-                                    <div class="wptb-item--text">Engineer Partner</div>
+                                    <div class="wptb-item--text">Engineering Partners</div>
                                     <div class="wptb-item--value">
                                         <span class="odometer"></span><span class="suffix">275+</span>
                                     </div>

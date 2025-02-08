@@ -78,43 +78,32 @@
     </div>
     <div class="section-padding">
         <div class="container-fluid one pl--95">
-            <div class="row  gy-4 align-items-center">
-                <div class="col-lg-3">
+            <div class="row justify-content-center  gy-4 align-items-center">
+                <div class="col-lg-4">
                     <div class="mission-img">
                         <img src="image/partners/bhe.jpg" alt="">
                         <h4>Bonn Hungary 
 Electronics
                         </h4>
-                        <p>
-                            Design, development 
-& sales, installation and maintenance of 
-RF systems in India
-                        </p>
+                      
                     </div>
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-4">
                     <div class="mission-img">
                         <img src="image/partners/gdp.jpg" alt="">
                         <h4>GDP Space Systems
 
                         </h4>
-                        <p>
-                            Designs, sales, marketing, installation and maintenance 
-in India
-
-                        </p>
+                      
                     </div>
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-4">
                     <div class="mission-img">
                         <img src="image/partners/systel.png" alt="">
                         <h4>AA Systel, France
 
                         </h4>
-                        <p>
-                            Designs, sales, marketing, installation and maintenance in India
-
-                        </p>
+                       
                     </div>
                 </div>
             </div>

@@ -77,9 +77,9 @@
             font-weight: 600;
             letter-spacing: -0.2px;
             word-break: break-word;
-            font-size: 16px !important;
-            margin-bottom: 10px !important;
-            line-height: 30px !important;
+            font-size: 16px ;
+            margin-bottom: 10px ;
+            line-height: 30px ;
         }
 
         .wptb-heading {
@@ -292,7 +292,7 @@
                 <div class="wptb-contact-form-two mr-top-100  section-padding">
                     <div class="wptb-form--wrapper">
                         <div class="row">
-                            <div class="col-lg-5 col-md-6">
+                            <div class="col-lg-5 col-md-12">
                                 <div class="wptb-heading">
                                     <div class="wptb-item--inner">
                                         <h6 class="wptb-item--subtitle">SEND US MAIL
@@ -306,7 +306,7 @@ Have questions or need assistance? Reach out to us, and our team will be happy t
 
                             </div>
 
-                            <div class="col-lg-7 col-md-6">
+                            <div class="col-lg-7 col-md-12">
                                 <div class="wptb-form--inner">
                                     <asp:Label ID="lblStatus" runat="server" Width="100%" Visible="false"></asp:Label>
                                     <div class="row">

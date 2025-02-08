@@ -21,7 +21,7 @@
         </div>
     </div>
     <div class="service-details-wrapper pt-130 mb-40">
-        <div class="container-fluid one pl--95">
+        <div class="container one pl--95">
             <div class="details-page-content mb-70">
                 <h2>Legacy Upgrade in PCC</h2>
                 <div class="row g-lg-4 gy-2">

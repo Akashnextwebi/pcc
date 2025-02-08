@@ -99,7 +99,7 @@
 <body>
     <form id="form1" runat="server">
          <header class="header-area header-three pcc-header" id="header-sticky">
-   <div class="header-top d-lg-block d-none">
+   <div class="header-top d-md-block d-none">
      <div class="container">
        <div class="header-top__row">
          <div class="header-top__col-left">
@@ -227,6 +227,7 @@
                      <li><a href="/environmental-safety.aspx">Environmental Safety</a></li>
                    </ul>
                  </li>
+                      <li class="d-lg-none d-block"><a href="/job-listing.aspx">Career</a></li>
                  <li><a href="/contact-us.aspx">Contact Us</a></li>
                </ul>
              </nav>
@@ -296,7 +297,7 @@
    <div class="footer-top pt-100 pb-100">
      <div class="container">
        <div class="row justify-content-between">
-         <div class="col-xl-4 col-lg-3 col-sm-4">
+         <div class="col-xl-4 col-lg-3 col-md-6">
            <div class="footer-widget">
              <div class="f-about">
                <div class="f-widget-title">
@@ -305,7 +306,7 @@
                <p>
                  A pioneer in extending customized solutions and supply of
                  products for the Indian Defence, Aerospace, Space and other
-                 Industrial applications. Park Controls and Communications Private Limited (PCC), PCC for short is well known within the Indian Defence
+                 Industrial applications. Park Controls and Communications Private Limited, PCC for short is well known within the Indian Defence
                  and Aerospace sector.
                </p>
                <img
@@ -315,7 +316,7 @@
              </div>
            </div>
          </div>
-         <div class="col-xl-3 col-lg-3 col-sm-6">
+         <div class="col-xl-3 col-lg-3 col-md-6">
            <div class="footer-widget">
              <div class="f-widget-title">
                <h2>Locations</h2>
@@ -326,7 +327,7 @@
                    <h3>India Office</h3>
                    <a href="#"
                      >2716, Suranjan Das Rd, Rd, HAL 3rd Stage, Bhoomi Reddy
-                     Colony, New Tippasandra, Bengaluru, Karnataka 560075</a
+                     Colony, New Tippasandra, Bengaluru, Karnataka 560075.</a
                    >
                  </li>
                  <%--<li>
@@ -340,7 +341,7 @@
              </div>
            </div>
          </div>
-         <div class="col-xl-2 col-lg-3 col-sm-6">
+         <div class="col-xl-2 col-lg-3 col-md-6">
            <div class="footer-widget">
              <div class="f-widget-title">
                <h2>Contact US</h2>
@@ -375,7 +376,7 @@
              </div>
            </div>
          </div>
-         <div class="col-xl-2 col-lg-3 col-sm-6">
+         <div class="col-xl-2 col-lg-3 col-md-6">
            <div class="footer-widget">
              <div class="f-widget-title">
                <h2>Industries</h2>
@@ -408,9 +409,9 @@
    </div>
  </footer>
  <!-- footer-end -->
-        <a href="#" class="float" >
+<%--        <a href="#" class="float" >
             <img src="/image/chat.png" />
-</a>
+</a>--%>
 
 
  <!-- JS here -->
@@ -510,6 +511,8 @@
 
 
      </script>
+        <script>
+        </script>
          
 
     </form>

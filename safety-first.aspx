@@ -85,7 +85,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="row g-lg-4 gy-5 mb-70">
+                    <div class="row g-lg-4  mb-70">
                         <div class="col-lg-12 ">
                             <div class="section-title1 two">
                                 <h2>Safety First – A Commitment to Excellence
@@ -125,7 +125,7 @@ At Park Controls and Communications Private Limited (PCC), safety is at the core
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8">
-                    <div class="text-center our-approach mb-50">
+                    <div class=" our-approach mb-50">
                         <h2>PCC Safety First: Committed to Protecting Lives, Promoting Workplace Safety.</h2>
                         <p>
 PCC Safety First is our unwavering commitment to fostering a safe and secure environment across all operations. We prioritize the well-being of our employees, partners, and stakeholders by adhering to the highest safety standards. By proactively identifying and mitigating risks, we ensure a workplace free from hazards. Safety is not just a policy but a shared responsibility embedded in our culture. Our goal is to protect lives, preserve resources, and maintain operational excellence. Every team member plays a vital role in upholding our safety values. We believe that a safe workplace is the foundation for success. At PCC, safety always comes first because it is essential for achieving our mission and sustaining growth. Together, we build a future where safety drives performance and innovation.                        </p>

@@ -12,7 +12,7 @@
                     style="background-image: url(image/b1.png); background-size: cover;">
                     <div class="container">
                         <div class="row justify-content-start align-items-start">
-                            <div class="col-lg-9 col-md-5">
+                            <div class="col-lg-9 col-md-8">
                                 <div class="slider-content s-slider-content mt-200 pt-50">
                                     <h2 data-animation="fadeInUp" data-delay=".4s">Driving Data Acquisition while Powering Precision
                                     </h2>
@@ -38,7 +38,7 @@
                     style="background-image: url(image/banner-4.png); background-size: cover;">
                     <div class="container">
                         <div class="row justify-content-start align-items-start">
-                            <div class="col-lg-9 col-md-5">
+                            <div class="col-lg-9 col-md-8">
                                 <div class="slider-content s-slider-content mt-100  pt-50">
                                     <h2 data-animation="fadeInUp" data-delay=".4s">Control Refined. Performance Redefined.
                                     </h2>
@@ -64,7 +64,7 @@
                     style="background-image: url(image/banner-1.png); background-size: cover;">
                     <div class="container">
                         <div class="row justify-content-start align-items-start">
-                            <div class="col-lg-9 col-md-5">
+                            <div class="col-lg-9 col-md-8">
                                 <div class="slider-content s-slider-content mt-100  pt-50">
                                     <h2 data-animation="fadeInUp" data-delay=".4s">Raising the Standard for Seamless Synchronization  
                                     </h2>
@@ -132,7 +132,7 @@
                                             <img src="image/icon-2.png" alt="img" />
                                         </div>
                                         <h2>Empowered Vision.
-                                            <br />
+                                            <br class="d-lg-block d-md-none d-none "/>
                                             Embedded Values</h2>
                                     </div>
                                     <p>
@@ -167,7 +167,7 @@
                             <div class="pcc-section-heading mb-0">
                                 <span>Our Core Competence</span>
                                 <h2>Delivering Excellence in
-                                    <br />
+                                   <br class="d-lg-block d-md-none d-none "/>
                                     Defence & Aerospace</h2>
                             </div>
                             <%--<div class="service-btn d-lg-block d-none">
@@ -299,7 +299,7 @@
             <div class="container">
                 <div class="wptb-funfacts--inner">
                     <div class="row">
-                        <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+                        <div class="col-lg-4 col-md-4 mb-4 mb-md-0 mb-lg-0">
                             <div class="wptb-counter1 style1 wow skewIn">
                                 <div class="wptb-item--inner">
                                     <div class="wptb-item--icon">
@@ -315,14 +315,14 @@
                             </div>
                         </div>
 
-                        <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+                        <div class="col-lg-4 col-md-4 mb-4 mb-md-0 mb-lg-0">
                             <div class="wptb-counter1 style1 wow skewIn">
                                 <div class="wptb-item--inner">
                                     <div class="wptb-item--icon">
                                         <img src="image/icons/client.png" alt="" />
                                     </div>
                                     <div class="wptb-item--holder">
-                                        <div class="wptb-item--text">Engineer Partner</div>
+                                        <div class="wptb-item--text">Engineering Partners</div>
                                         <div class="wptb-item--value">
                                             <span class="odometer"></span><span class="suffix">275+</span>
                                         </div>
@@ -331,7 +331,7 @@
                             </div>
                         </div>
 
-                        <div class="col-lg-4 col-md-6">
+                        <div class="col-lg-4 col-md-4 mb-4 mb-md-0 mb-lg-0">
                             <div class="wptb-counter1 style1 wow skewIn">
                                 <div class="wptb-item--inner">
                                     <div class="wptb-item--icon">

@@ -40,7 +40,7 @@ public partial class job_listing : System.Web.UI.Page
                                     <div class='info-wrapper'>
                                         <a href='/job/" + Jobs[i].JobUrl + @"' class='title fw-500 tran3s'>" + Jobs[i].JobTitle + @"</a>
                                         <ul class='style-none d-flex flex-wrap info-data'>
-                                            <li>₹" + Jobs[i].Salary + @"</li>
+                                        
                                             <li>" + Jobs[i].Education +@"</li>
                                             <li>" + Jobs[i].JobLocation +@"</li>
                                         </ul>
@@ -49,7 +49,7 @@ public partial class job_listing : System.Web.UI.Page
                                 <p>
                                     " + Jobs[i].ShortDesc + @"
                                 </p>
-                                <div class='d-sm-flex align-items-center justify-content-between mt-auto'>
+                                <div class='d-sm-flex career-flex align-items-center justify-content-between mt-auto'>
                                     <div class='d-flex align-items-center'>
                                         <a href='/job/" + Jobs[i].JobUrl + @"' class='job-duration fw-500'>" + Jobs[i].EmploymentType + @"</a>
                                     </div>

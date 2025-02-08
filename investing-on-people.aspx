@@ -75,11 +75,11 @@ We know our people can thrive when their daily experience matches what they valu
     <section class="bg-light section-padding">
         <div class="container">
             <div class="row">
-                 <div class="col-lg-6">
+                 <div class="col-lg-6 order-lg-0 order-1">
 
      <img src="image/pcc.png">
  </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6 order-lg-1 order-0">
                     <div class="inveast-card pl-50">
                         <h2>How we support our people
                         </h2>
@@ -98,7 +98,7 @@ We know our people can thrive when their daily experience matches what they valu
 
             </div>
             <div class="row mt-5">
-                <div class="col-lg-6">
+                <div class="col-md-6 col-12">
                     <div class="people-card">
                         <img src="image/My-plus-Icon_Alumni2.jpg">
                         <h4>Well-being
@@ -108,7 +108,7 @@ Our people will be supported by different career paths, development curricula an
                         </p>
                     </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-md-6 col-12">
                     <div class="people-card">
                         <img src="image/My-plus-Icon_Development2.jpg">
                         <h4>Development
@@ -120,7 +120,7 @@ Our people will have greater opportunities to grow, to practice new skills, and 
                         </p>
                     </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-md-6 col-12">
                     <div class="people-card">
                         <img src="image/My-plus-Icon_Total%20Rewards2.jpg">
                         <h4>Rewards
@@ -132,7 +132,7 @@ Our people easily access and choose from a menu of benefits and perks, with opti
                         </p>
                     </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-md-6 col-12">
                     <div class="people-card">
                         <img src="image/My-plus-Icon_Well-being2.jpg">
                         <h4>Always a PCC
