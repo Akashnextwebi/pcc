@@ -309,13 +309,6 @@
 
 
                                 <div class="cart_button">
-                                    <%--<a href='javascript:void(0);' id='hidenId' class='btn-three w-100 hidenId' data-id='1' data-bs-toggle='modal' data-bs-target='#exampleModal'>
-                                        <div class='btn-wrap'>
-                                            <span class='text-first'><i class='fa-solid fa-cloud-arrow-down me-2'></i>
-                                                Download Brochure</span>
-                                            <span class='text-second'><i class='fa-solid fa-cloud-arrow-down me-2'></i>Download <b></b>Brochure</span>
-                                        </div>
-                                    </a>--%>
                                     <%=strpdf%>
                                 </div>
 
@@ -342,12 +335,12 @@
                             </ul>
                             <div class="tab-content">
 
-                                <div class="tab-pane fade show" id="Capabilities" runat="server" tabindex="0">
+                                <div class="tab-pane fade" id="Capabilities" runat="server" tabindex="0">
                                     <div class="row justify-content-center gy-4">
                                         <%=strCapabilities %>
                                     </div>
                                 </div>
-                                <div class="tab-pane show active" id="Specifications" runat="server" tabindex="0">
+                                <div class="tab-pane fade show active" id="Specifications" runat="server" tabindex="0">
                                     <div class="row justify-content-center">
                                         <div class="col-lg-8">
                                             <div class="wptb-accordion wptb-accordion1">
