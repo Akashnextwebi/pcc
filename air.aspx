@@ -67,7 +67,7 @@
     </div>
     <div class="horizontal-scrolling-section">
         <div class="single-scroll-container" style="background-image: linear-gradient(180deg, rgb(0 0 0 / 58%) 0%, rgb(0 0 0 / 20%) 100%), url(/<%=strbannerimg2%>)">
-            <div class="container-fluid one pl--95">
+            <div class="container">
                 <div class="horizontal-scrolling-content">
                     <div class="section-title1 two">
                         <span><%=strIndustryName %></span>

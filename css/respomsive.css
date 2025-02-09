@@ -860,6 +860,11 @@
         .wptb-item--content {
             overflow: auto;
         }
+        .product_left .product_zoom .product_zoom_container .product_zoom_info img {
+            width: auto !important;
+            height: auto !important;
+            object-fit: cover;
+        }
     }
 
 
@@ -867,8 +872,25 @@
         .pcc-header .header-mid {
             padding: 20px 0px !important;
         }
-
-        .history-section h1 {
+        .mt-120 {
+            margin-top: 0px !important;
+        }
+        .breadcrumb-section .banner-content h1 {
+            font-size: 26px !important;
+            line-height: 32px !important;
+        }
+        .strip {
+            position: relative;
+            top: unset !important;
+            z-index: 99        }
+        .breadcrumb-list {
+            padding:10px 20px !important;
+        }        .breadcrumb-list li {
+            line-height: 1;
+            color: #fff;
+            font-size: 10px !important;
+        }
+            .history-section h1 {
             font-size: 24px !important;
         }
 
@@ -1230,7 +1252,7 @@
         }
 
         .card1:hover .intro1 {
-            height: 120px !important;
+            height: 110px !important;
         }
 
         .product_left .product_zoom {
@@ -1498,5 +1520,10 @@
 
         .job-detail-section .social-share {
             flex-wrap: wrap;
+        }
+        .product_left .product_zoom .product_zoom_container .product_zoom_info img {
+            width: auto !important;
+            height: auto !important;
+            object-fit: cover;
         }
     }

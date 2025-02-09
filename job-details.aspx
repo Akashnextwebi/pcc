@@ -19,6 +19,7 @@
             margin: 0 auto;
             width: 100%;
         }
+   
 
         .job-block-seven {
             position: relative;

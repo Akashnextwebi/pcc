@@ -432,7 +432,7 @@
                             data-animation="fadeInLeft"
                             data-delay=".4s">
                             <a
-                                href="https://www.youtube.com/watch?v=D0UnqGm_miA"
+                                href="https://youtube.com/shorts/Sb21UWXblcA"
                                 class="video-i popup-video">
                                 <span class="play-icon">
                                     <i class="fa-solid fa-play"></i>
