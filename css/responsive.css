@@ -1147,7 +1147,7 @@
   }
   .mean-container .mean-nav ul li a {
     border-top: 1px solid rgba(217, 217, 217, 0.5);
-    color: #333;
+    color: #000;
     display: block;
     float: left;
     margin: 0;
@@ -1155,7 +1155,9 @@
     text-align: left;
     text-decoration: none;
     width: 90%;
-    font-size: 15px;
+    font-size: 14px;
+    text-transform:capitalize !important;
+    line-height:20px !important;
     font-weight: 600;
   }
   .mean-container .mean-nav ul li li a:first-child,
@@ -1745,7 +1747,6 @@
     padding: 10px 5%;
     text-align: left;
     text-decoration: none;
-    text-transform: uppercase;
     width: 90%;
     font-size: 15px;
     font-weight: 600;

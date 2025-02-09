@@ -52,6 +52,11 @@
             color: #244034b3;
             position: relative;
             margin-right: 20px;
+            overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
         }
 
             .job-list-three .main-wrapper .info-data li:before {
@@ -65,6 +70,11 @@
             font-size: 14px;
             line-height: 28px;
             margin-bottom: 25px;
+            overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
         }
 
         .job-list-three .main-wrapper .job-duration {
@@ -100,7 +110,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <main class="wrapper">
 
-        <div class="breadcrumb-section" style="background-image: linear-gradient(270deg, rgba(0, 0, 0, .55), rgba(0, 0, 0, 0.55) 101.02%), url(image/blog/braadcrumb-bg3.jpg);">
+        <div class="breadcrumb-section" style="background-image: linear-gradient(270deg, rgba(0, 0, 0, .55), rgba(0, 0, 0, 0.55) 101.02%), url(image/bg1/career.png);">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
@@ -117,7 +127,7 @@
         </div>
         <section class="section-padding">
             <div class="container">
-                <div class="row justify-content-center">
+                <div class="row justify-content-center align-items-center">
                     <div class="col-lg-6">
                         <div class="text-start ">
                             <h2 class="mb-40 ">About Career at PCC</h2>
@@ -147,7 +157,7 @@
 
             </div>
         </section>
-        <section class="section-padding ">
+        <section class="section-padding bg-light ">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">

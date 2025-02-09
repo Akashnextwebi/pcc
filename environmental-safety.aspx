@@ -87,7 +87,7 @@
                 <div class="col-lg-12">
                     <div class="Environmental-wrapper">
                      
-                                                        <h2>Environmental Safety – Sustainable Innovation for a Greener Future
+                                                        <h2 class="mb-30">Environmental Safety – Sustainable Innovation for a Greener Future
 
 </h2>
                                 <p>
@@ -112,7 +112,7 @@ We adhere to global environmental standards and implement green initiatives acro
 
                             
 
-                        <div class="row mt-5">
+                        <div class="row gy-4 mt-5">
                             <div class="col-lg-6">
                                 <img src="image/env/1.png" />
                             </div>

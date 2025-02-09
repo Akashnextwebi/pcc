@@ -31,7 +31,8 @@
         display:flex !important;
         justify-content:start !important;
         gap:1rem;
-
+        overflow:scroll;
+        width:100%;
     }
     .campus-slider .swiper-button-prev {
         color: #fff;
@@ -51,7 +52,7 @@
         z-index: 1;
         transform: translateY(26px);
         text-transform: uppercase;
-        z-index: 9;
+        z-index: 1;
     }
 
     .wptb-accordion1 .wptb--item .wptb-item--content {
@@ -356,7 +357,22 @@
                 top: 50%;
                 transform: translateY(-50%);
             }
-
+            .strip {
+    position: relative;
+    top: 120px;
+    z-index: 99;
+}
+          
+            .product_left .product_zoom .product_zoom_container .product_zoom_info img {
+    width: 800px;
+    height: 532px;
+    object-fit: cover;
+}
+        @media (min-width: 320px) and (max-width: 767px) {
+            .breadcrumb-list{
+                padding:10px 0px !important;
+            }
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
@@ -367,7 +383,7 @@
                     <div class="col-lg-12">
                         <ul class="breadcrumb-list">
                             <li><a href="/">Home</a></li>
-                            <li><a href="javascript:void(0);">Product</a></li>
+                            <li><a href="javascript:void(0);">Products</a></li>
                             <li><a href="javascript:void(0);"><%=strName %></a></li>
 
                         </ul>
@@ -376,7 +392,7 @@
             </div>
         </div>
 
-        <section class="product_view section-padding mt-100">
+        <section class="product_view section-padding mt-120">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-7 pe-lg-5">

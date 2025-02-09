@@ -505,6 +505,10 @@
             align-items: center;
             justify-content: space-between;
         }
+        .statement-content-bottom ul li svg{
+            width:28px !important;
+            height:28px !important
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
@@ -513,12 +517,12 @@
             <div class="row">
                 <div class="col-lg-12 d-flex flex-lg-row flex-column align-items-xxl-end align-items-lg-center justify-content-between gap-5">
                     <div class="banner-left-content">
-                        <h1>Make in India  
+                        <h3>Make in India  
 
-                        </h1>
-                        <div class="quate-text1 w-50">
-                            <h3 class="mb-3">The Make in India Initiative
-                            </h3>
+                        </h3>
+                        <div class="quate-text1 w-75">
+                            <h1 class="mb-3">The Make in India Initiative
+                            </h1>
                             <div class="content">
                                 <p>
 Launched in September 2014, the Make in India campaign is a flagship initiative of the Government of India aimed at transforming the country into a global manufacturing hub. Its key goals include:
@@ -549,7 +553,7 @@ Launched in September 2014, the Make in India campaign is a flagship initiative 
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2>
+                    <h2 class="mb-30">
                         Make in India – Driving Self-Reliance & Sustainability
 
                     </h2>
@@ -560,7 +564,7 @@ Launched in September 2014, the Make in India campaign is a flagship initiative 
             </div>
         </div>
     </section>
-    <div class="section-padding">
+    <div class="section-padding bg-light">
 
         <div class="container">
             <div class="row g-lg-4 gy-5">

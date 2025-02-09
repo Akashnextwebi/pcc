@@ -39,7 +39,7 @@ public partial class job_listing : System.Web.UI.Page
                                        <img src='/image/media_37.png' data-src='/image/media_37.png' alt='' class='lazy-img m-auto'></a>
                                     <div class='info-wrapper'>
                                         <a href='/job/" + Jobs[i].JobUrl + @"' class='title fw-500 tran3s'>" + Jobs[i].JobTitle + @"</a>
-                                        <ul class='style-none d-flex flex-wrap info-data'>
+                                        <ul class='style-none d-flex  info-data'>
                                         
                                             <li>" + Jobs[i].Education +@"</li>
                                             <li>" + Jobs[i].JobLocation +@"</li>
