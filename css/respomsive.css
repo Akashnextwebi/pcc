@@ -1,1264 +1,1405 @@
 ﻿
-
-@media (min-width: 768px) and (max-width: 991px) {
-    .pcc-header .header-mid {
-        padding: 20px 0px !important;
+@media (min-width: 992px) and (max-width: 1199px) {
+    .main-menu ul li a{
+        font-size:12px !important;
     }
-    .card1:hover .intro1 {
-        height: 110px !important;
-    }
-    .product_left .product_zoom .product_zoom_button_group {
-        width: 100% !important;
-        padding-right: 0px !important;
-        overflow-x: scroll !important;
-        display: flex !important;
-    }
-        .product_left .product_zoom .product_zoom_button_group li:first-child {
-            margin-left: 0px  !important;
-        }
-        .product_left .product_zoom .product_zoom_button_group li {
-            margin: 0px 5px !important;
-        }
-    .client-logo-wrap {
-        display: grid;
-        grid-template-columns: repeat(6, 16%) !important
-    }
-    .scrollbox2{
-        display:none !important;
+    .pcc-header .main-menu nav > ul > li:not(:last-child) {
+        margin-right: 20px;
     }
     .header-top {
-        padding: 8px 5px !important;
+        border-bottom: 1px solid #3f4146;
+        color: #fff;
+        padding: 8px 25px;
     }
-    .logo img {
-        width: 240px !important;
+    .about-title img {
+        height: 40px !important;
     }
-    .skills-img img{
-        width:100% !important;
+    .pcc-header .header-mid {
+        padding: 10px 25px;
     }
-    .mb-105 {
-        margin-bottom: 0px !important;
+    .slider-content.s-slider-content.mt-200.pt-50{
+        margin-top:0px !important;
     }
-
     .slider-bg {
-        min-height: 380px !important;
+        min-height: 50vh !important;
     }
-
-    .slider-content {
-        margin-bottom: 0px !important;
-        margin-top: 0px !important;
-        padding-top: 0px !important;
+    .slider-btn.mt-30.mb-105 {
+        margin-bottom: 0px;
     }
-
-    .float {
-        display: none !important;
-    }
-
-    .about-title h2 {
-        font-size: 32px !important;
-        line-height: 38px !important;
-        letter-spacing: -1px;
-    }
-
     .slider-content h2 {
-        font-size: 32px;
-        letter-spacing: 0;
-        line-height: 28px;
-        margin-bottom: 30px;
+        font-size: 46px !important;
+        line-height: 55px !important;
     }
-
-    p {
-        font-size: 14px !important;
-        line-height: 20px !important
+    .about-p {
+        padding-top: 60px !important;
     }
-
-    .single-slider:before {
-        background: linear-gradient(90deg, rgb(0 0 0) 100%, #00000000 100%);
+    .about-area .nav.nav-tabs li{
+        display:none !important;
     }
-
+    .about-title h2 {
+        font-size: 38px !important;
+        line-height: 46px !important;
+    }
+    .pcc-section-heading h2 {
+        font-size: 38px !important;
+        line-height: 46px !important;
+        margin-bottom: 0;
+    }
+    .service-card h3 {
+        font-size: 22px !important;
+        line-height:28px !important;
+        font-weight: 700 !important;
+    }
+    .wptb-funfacts-one .wptb-funfacts--inner {
+        position: relative;
+        padding: 60px 60px !important;
+    }
+    .wptb-counter1.style1 .wptb-item--value{
+        font-size:45px !important;
+        line-height:54px !important;
+    }
+    .service .section-t h2{
+        font-size:80px !important;
+    }
     .pb-120 {
         padding-bottom: 60px !important;
     }
-
-    .pt-120 {
-        padding-top: 60px !important;
-    }
-
-    .about-area .nav.nav-tabs li span:hover, .about-area .nav.nav-tabs li span.active {
-        display: none !important;
-    }
-
-    .badge img {
-        width: 100px !important;
-    }
-
-    .badge .make-in-india {
-        width: 50px !important;
-    }
-
-    .new-flex {
-        flex-direction: column;
-        text-align: start !important;
-        align-items: start !important;
-    }
-
-    .pcc-section-heading h2 {
-        font-size: 32px !important;
-        line-height: 38px !important;
-        font-weight: 600 !important;
-        margin-bottom: 0;
-    }
-
-    .services-slider-pcc .service-card {
-        margin-right: 10px !important;
-        height: 100% !important;
-        margin-left: 10px !important;
-    }
-    .section-t h2 {
-    
-        margin-right: 50px !important;
-    }
-
-    .service-card h3 {
-        font-size: 20px !important;
-        line-height: 26px !important;
-        font-weight: 700 !important;
-    }
-
-    .wptb-funfacts-one .wptb-funfacts--inner {
-        padding: 40px 20px !important;
-    }
-
-    .wptb-counter1.style1 .wptb-item--value {
-        font-size: 28px !important;
-        font-weight: 600 !important;
-        gap:0px !important;
-        line-height:34px !important;
-    }
-
-    .wptb-funfacts-one.has-before-bg .wptb-funfacts--inner::before {
-        background-color: unset !important;
-    }
-
-    .pt-80 {
-        padding-top: 60px !important;
-    }
-
-    .industry-card {
-        position: relative;
-        z-index: 1;
-        margin-bottom: 20px;
-    }
-
-        .industry-card .image-caption {
-            font-size: 18px !important;
-        }
-
-    .client-logo-wrap .client-card {
-        padding: 20px !important;
-        height: unset !important;
-    }
-
-    .pr-30 {
-        padding-right: 15px !important;
-    }
-
-    .pcc-section-heading {
-        margin-bottom: 20px !important;
-    }
-
-    .skills {
-        margin-top: 20px !important;
-    }
-
-    .service-box-slider .text {
-        padding: 30px 0px 30px !important;
-    }
-
-    .wptb-counter1.style1 .wptb-item--icon {
-        width: 54px !important;
-        height: 54px !important;
-    }
-
-    .service-box-slider h3 {
-        font-size: 32px !important;
-        line-height: 38px !important;
-        font-weight: 600 !important;
-        margin-bottom: 20px;
-    }
-
-    .product-card-img {
-        width: 100% !important;
-    }
-
-    .service li {
-        margin-bottom: 0px;
-    }
-
-    .cta .cta__row .cta__col:first-child {
-        /* width: calc(100% - 300px); */
-        width: unset !important;
-       
-    }
-
-    .cta .cta__row {
-        padding: 20px !important;
-        height:220px !important;
-    }
-
     .cta h2 {
-        font-size: 32px !important;
-        line-height: 38px !important;
         color: #fff;
-        max-width: 100%;
-        text-align: center;
+        font-size: 36px;
+        line-height: 42px;
+        max-width: 730px;
     }
-
-    .cta .cta__row .cta__col:nth-child(2) {
-        width: 100% !important;
-        text-align: center;
-    }
-
-    .partner-slider {
-        grid-template-columns: repeat(3, 1fr) !important;
-    }
-
     .pb-100 {
-        padding-bottom: 40px !important;
+        padding-bottom: 60px !important;
     }
-
-    .pt-100 {
-        padding-top: 40px !important;
+    .breadcrumb-section{
+        padding:250px 0px 150px !important;
     }
-
-    .f-widget-title h2 {
-        padding-bottom: 10px !important;
-        padding-top: 20px !important;
-    }
-    .mb-100 {
-        margin-bottom: 40px !important;
-    }
-    .breadcrumb-section {
-        padding: 150px 40px 150px !important;
-    }
-    .job-list-three .main-wrapper p {
-        overflow: hidden;
-        text-overflow: ellipsis;
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-    }
-    .banner-area6 .banner-left-content {
-    
-        width:80% !important;
-    }
-    .advantage-img img{
-        width:100% !important;
-    }
-
-
-    .breadcrumb-section .banner-content h1 {
-        font-size: 30px !important;
-    }
-    .mb-70 {
-        margin-bottom: 40px !important;
-    }
-    .header-three {
-        margin-bottom: 0px !important;
-    }
-
-    .pl--95 {
-        padding-left: 10px !important;
-    }
-
-    .breadcrumb-section .banner-content .breadcrumb-list li {
-        font-size: 14px !important;
-    }
-
     .wptb-intro-one .wptb-heading {
         margin-top: 0px !important;
     }
-
-    .wptb-item--title {
-        font-size: 32px !important;
-        line-height: 38px !important;
-        font-weight: 600 !important;
-        margin-bottom: 30px !important;
+    .pl--95 {
+        padding-left: 15px !important;
     }
-
-    .text-one {
-        color: #79010c;
-        font-size: 18px !important;
-        text-align: left;
+    .breadcrumb-section .banner-content h1 {
+        color: #fff;
+        font-size: 48px !important;
+        line-height:54px !important ;
     }
-
-    .service-card {
-        padding: 0px !important;
-    }
-
-    .pl-50 {
-        padding: 15px !important;
-    }
-
-    .wptb-why-choose-one .wptb-icon-box2 {
-        padding: 30px 45px !important
-    }
-
-    .wptb-video-player1 {
-        min-height: auto !important;
-    }
-
-    .f-widget-title img {
-        height: 50px !important;
-        max-width: inherit;
-        filter: unset !important;
-    }
-
-    .wptb-service-two .wptb-item--title {
-        font-size: 32px !important;
-        line-height: 38px !important;
-        margin-bottom: 50px !important;
-    }
-
-    .wptb-icon-box2 .wptb-item--title {
-        font-size: 20px !important;
-        margin-bottom: 15px !important;
-    }
-
-    .history-section .inner-box:first-child .image-box, .history-section .inner-box:nth-child(3) .image-box, .history-section .inner-box:nth-child(5) .image-box, .history-section .inner-box:nth-child(7) .image-box, .history-section .inner-box:nth-child(9) .image-box, .history-section .inner-box:nth-child(11) .image-box {
-        display: none;
-    }
-
-    .history-section .inner-box:first-child .image-box, .history-section .inner-box:nth-child(3) .image-box, .history-section .inner-box:nth-child(5) .image-box, .history-section .inner-box:nth-child(7) .image-box, .history-section .inner-box:nth-child(9) .image-box, .history-section .inner-box:nth-child(11) .image-box {
-        display: none;
-    }
-
-    .history-section .inner-box:nth-child(2) .image-box, .history-section .inner-box:nth-child(4) .image-box, .history-section .inner-box:nth-child(6) .image-box, .history-section .inner-box:nth-child(8) .image-box, .history-section .inner-box:nth-child(10) .image-box, .history-section .inner-box:nth-child(12) .image-box {
-        display: none !important;
-    }
-
-    .history-section .content-box h2 {
-        font-size: 24px !important;
-        line-height: 30px !important;
-        color: #e12121 !important;
-    }
-
-    .history-section .content-box .text:before {
-        content: unset !important;
-    }
-
-    .history-section .content-box .text {
-        padding: 10px 0px 0px !important;
-    }
-
-    .history-section .content-box h2 {
-        border-top: 1px solid #e2e2e2;
-        border-bottom: unset !important;
-        padding-top: 20px !important;
-        padding-bottom: 0px !important;
-    }
-
-    .single-testimonial {
-        padding: 20px !important;
-    }
-
     .ta-info h6 {
-        font-size: 16px !important;
+        font-size: 18px !important;
         margin-bottom: 5px;
         color: #fff;
     }
-
     .ta-info span {
         color: #fff;
         font-size: 14px !important;
-    }
-
-    .sec-title h2 {
-        font-size: 32px !important;
-        line-height: 38px !important;
-    }
-
-    h2 {
-        font-size: 32px !important;
-        line-height: 38px !important;
-        margin-bottom: 20px !important;
-    }
-
-    .section-padding {
-        padding: 40px 0px !important;
-    }
-
-    .eg-card3.three .card-content {
-        padding: 40px 20px !important;
-    }
-
-        .eg-card3.three .card-content .catgory-and-title h5 a {
-            font-size: 20px !important;
-        }
-
-    .text-h1 {
-        font-size: 18px !important;
-        line-height: 26px !important;
-        margin-bottom: 0px !important;
-    }
-
-    .product_left .product_zoom .product_zoom_button_group{
-        margin-bottom:0px !important;
-    }
-
-    .product_left .product_zoom {
-        display: flex !important;
-        flex-direction: column-reverse !important;
-        gap: 1rem !important;
-    }
-
-        .product_left .product_zoom .product_zoom_button_group li a {
-            width: 80px !important;
-            height: 80px !important;
-        }
-
-    .contact-btn button {
-        padding: 15px;
-        background: #c72329;
-        font-size: 16px !important;
-        line-height: 20px;
-        border: 0;
-        color: #fff;
-    }
-
-    .mt-100 {
-        margin-top: 0px !important;
-    }
-
-    .section-padding {
-        padding: 40px 0px !important;
-    }
-
-    .wptb-icon-box2.style3 {
-        padding: 20px !important;
-    }
-
-    .modal-body {
-        padding: 20px 20px !important;
-    }
-
-    input[type="submit"], .btn {
-        height: 45px !important;
-    }
-
-        .btn i {
-            margin-left: 10px;
-            font-size: 16px;
-            position: absolute;
-            left: -10px !important;
-            background: var(--pcc-primary-theme);
-            top: 0px !important;
-            color: #fff;
-            width: 50px;
-            height: 100%;
-            line-height: 48px !important;
-        }
-
-    .product_details_tab .nav {
-        gap: unset !important;
-        flex-wrap: unset !important;
-    }
-
-    .wptb-accordion1 .wptb--item .wptb-item--content {
-        padding: 20px 10px !important;
-    }
-
-    .wptb-accordion1 .wptb-item-title {
-        padding: 10px 10px !important;
-    }
-
-        .wptb-accordion1 .wptb-item-title i {
-            right: 0px !important;
-        }
-
-        .wptb-accordion1 .wptb-item-title > span {
-            padding-right: 20px !important;
-        }
-
-    .card1 {
-        height: 250px !important;
-    }
-
-    .solution-section h2 {
-        font-size: 24px !important;
-        line-height: 32px !important;
-    }
-
-    .card1 .img1 {
-        padding-bottom: 50px;
-    }
-
-    .intro1 {
-        height: 50px !important;
-    }
-
-    .pt-130 {
-        padding-top: 60px !important;
-    }
-
-    .pt-130 {
-        padding-top: 60px !important;
-    }
-
-    .btn {
-        line-height: 9px !important;
-    }
-
-    .sticky-menu .header-mid {
-        padding: 10px 0px !important;
-    }
-    .wptb-office .wptb-item--inner .wptb-item--title{
-        font-size:14px !important;
-        line-height:22px !important;
-    }
-    .banner-area6 {
-        padding: 50px 0px 50px !important;
-    }
-
-        .banner-area6 .banner-left-content h1 {
-            font-size: 20px !important;
-            line-height: 26px !important;
-        }
-
-    .w-50 {
-        width: 100% !important;
-    }
-
-    .banner-area6 .banner-left-content .btn-group {
-        gap: 15px !important;
-        padding-top: 20px !important;
-    }
-
-        .banner-area6 .banner-left-content .btn-group li.success-rate {
-            gap: 10px !important;
-        }
-
-    .badge .make-in-india {
-        animation: none;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 75px;
-        left: auto !important;
-        right: 32px !important;
-        margin: 0 auto;
-        z-index: 1;
-    }
-
-    .magnetic-wrap {
-        position: relative;
-        display: flex;
-        justify-content: end !important;
-        align-items: center;
-        margin-top: -172px;
-    }
-
-    .banner-area6 .banner-left-content h1 {
-        margin-bottom: 10px !important;
-    }
-
-    .statement-content-bottom ul li {
-        font-weight: 500 !important;
-        font-size: 14px !important;
-    }
-
-    .statement-content.pl-50 {
-        padding: 0px !important;
-    }
-
-    .advantage-img.two {
-        margin-top: -50px !important;
-    }
-
-    .mb-130 {
-        margin-bottom: 30px !important;
-    }
-
-    .wptb-office-address .widget {
-        padding-left: 20px !important;
-    }
-
-        .wptb-office-address .widget .widget-title {
-            font-size: 20px !important;
-            line-height: 26px !important;
-        }
-
-    .widget .widget-title {
-        position: relative;
-        margin-bottom: 16px !important;
-    }
-
-    .wptb-office .wptb-item--inner .wptb-item--title {
-        margin-bottom: 0px !important;
-    }
-
-    .widget {
-        padding: 0px 30px 20px 30px !important;
-    }
-
-    .mr-bottom-90 {
-        margin-bottom: 0px !important;
-    }
-
-    .wptb-item--title {
-        font-size: 32px !important;
-        line-height: 38px !important;
-    }
-
-    .services-slider-pcc .service-card {
-        padding: 30px 25px 30px !important;
-    }
-
-    .d-flex.new-flex.justify-content-between.align-items-center.mb-50 {
-        margin-bottom: 0px !important;
     }
     .cc1 h4 {
-        font-size:16px !important;
-    }
-    .header-three .mean-container a.meanmenu-reveal {
-        color: #000 !important;
-        border: 1px solid #000;
-    }
-    .history-section h1{
-        font-size:30px !important;
-    }
-    .wptb-item--content {
-        overflow: auto;
-    }
-}
-
-
-@media (min-width: 320px) and (max-width: 767px) {
-    .pcc-header .header-mid {
-        padding: 20px 0px !important;
-    }
-
-    .history-section h1 {
-        font-size: 24px !important;
-    }
-    .wptb-item--content {
-        overflow: auto;
-    } 
-    .client-logo-wrap {
-        display: grid;
-        grid-template-columns: repeat(3, 33%) !important;
-    }
-
-    .logo img {
-        width: 240px !important;
-    }
-    .product_left .product_zoom .product_zoom_button_group {
-        margin-bottom: 0px !important;
-    }
-    .mb-105 {
-        margin-bottom: 0px !important;
-    }
-
-    .slider-bg {
-        min-height: 500px !important;
-    }
-
-    .slider-content {
-        margin-bottom: 0px !important;
-        margin-top: 0px !important;
-        padding-top: 0px !important;
-    }
-
-    .float {
-        display: none !important;
-    }
-
-    .about-title h2 {
-        font-size: 28px !important;
-        line-height: 34px !important;
-        letter-spacing: -1px;
-    }
-
-    .slider-content h2 {
-        font-size: 32px;
-        letter-spacing: 0;
-        line-height: 28px;
-        margin-bottom: 30px;
-    }
-
-    p {
-        font-size: 14px !important;
-        line-height: 20px !important
-    }
-
-    .single-slider:before {
-        background: linear-gradient(90deg, rgb(0 0 0) 100%, #00000000 100%);
-    }
-
-    .pb-120 {
-        padding-bottom: 60px !important;
-    }
-
-    .pt-120 {
-        padding-top: 60px !important;
-    }
-
-    .about-area .nav.nav-tabs li span:hover, .about-area .nav.nav-tabs li span.active {
-        display: none !important;
-    }
-
-    .badge img {
-        width: 100px !important;
-    }
-
-    .badge .make-in-india {
-        width: 50px !important;
-    }
-
-    .new-flex {
-        flex-direction: column;
-        text-align: start !important;
-        align-items: start !important;
-    }
-
-    .pcc-section-heading h2 {
-        font-size: 28px !important;
-        line-height: 34px !important;
-        font-weight: 600 !important;
-        margin-bottom: 0;
-    }
-
-    .services-slider-pcc .service-card {
-        margin-right: 0px !important;
-        height: 100% !important;
-        margin-left: 0px !important;
-    }
-
-    .service-card h3 {
-        font-size: 20px !important;
-        line-height: 26px !important;
-        font-weight: 700 !important;
-    }
-
-    .wptb-funfacts-one .wptb-funfacts--inner {
-        padding: 40px 20px !important;
-    }
-
-    .wptb-counter1.style1 .wptb-item--value {
-        font-size: 32px !important;
-        font-weight: 600 !important;
-        line-height: 40px !important;
-    }
-
-    .wptb-funfacts-one.has-before-bg .wptb-funfacts--inner::before {
-        background-color: unset !important;
-    }
-
-    .pt-80 {
-        padding-top: 60px !important;
-    }
-
-    .industry-card {
-        position: relative;
-        z-index: 1;
-        margin-bottom: 20px;
-    }
-
-        .industry-card .image-caption {
-            font-size: 20px !important;
-        }
-
-    .client-logo-wrap .client-card {
-        padding: 20px !important;
-        height: unset !important;
-    }
-
-    .pr-30 {
-        padding-right: 15px !important;
-    }
-
-    .pcc-section-heading {
-        margin-bottom: 20px !important;
-    }
-
-    .skills {
-        margin-top: 20px !important;
-    }
-
-    .service-box-slider .text {
-        padding: 30px 0px 30px !important;
-    }
-
-    .wptb-counter1.style1 .wptb-item--icon {
-        width: 54px !important;
-        height: 54px !important;
-    }
-
-    .service-box-slider h3 {
-        font-size: 28px !important;
-        line-height: 34px !important;
-        font-weight: 600 !important;
-        margin-bottom: 20px;
-    }
-
-    .product-card-img {
-        width: 100% !important;
-    }
-
-    .service li {
-        margin-bottom: 0px;
-    }
-
-    .cta .cta__row .cta__col:first-child {
-        /* width: calc(100% - 300px); */
-        width: unset !important;
-    }
-
-    .cta .cta__row {
-        padding: 20px !important;
-    }
-
-    .cta h2 {
-        font-size: 28px !important;
-        line-height: 34px !important;
-        color: #fff;
-        max-width: 100%;
+        background: #f1f1f1;
+        padding: 10px 0px;
+        font-size: 16px;
         text-align: center;
     }
-
-    .cta .cta__row .cta__col:nth-child(2) {
-        width: 100% !important;
-        text-align: center;
-    }
-
-    .partner-slider {
-        grid-template-columns: repeat(3, 1fr) !important;
-    }
-
-    .pb-100 {
-        padding-bottom: 40px !important;
-    }
-
-    .pt-100 {
-        padding-top: 40px !important;
-    }
-
-    .f-widget-title h2 {
-        padding-bottom: 10px !important;
-        padding-top: 20px !important;
-    }
-
-    .breadcrumb-section {
-        padding: 50px 0px 50px !important;
-    }
-
-        .breadcrumb-section .banner-content h1 {
-            font-size: 26px !important;
-        }
-
-    .header-three {
-        margin-bottom: 0px !important;
-    }
-
-    .pl--95 {
-        padding-left: 10px !important;
-    }
-
-    .breadcrumb-section .banner-content .breadcrumb-list li {
-        font-size: 10px !important;
-    }
-
-    .wptb-intro-one .wptb-heading {
-        margin-top: 0px !important;
-    }
-
-    .wptb-item--title {
-        font-size: 28px !important;
-        line-height: 34px !important;
-        font-weight: 600 !important;
-        margin-bottom: 30px !important;
-    }
-
-    .text-one {
-        color: #79010c;
-        font-size: 18px !important;
-        text-align: left;
-    }
-
-    .service-card {
-        padding: 0px !important;
-    }
-
-    .pl-50 {
-        padding: 15px !important;
-    }
-
-    .wptb-why-choose-one .wptb-icon-box2 {
-        padding: 30px 15px !important
-    }
-
-    .wptb-video-player1 {
-        min-height: auto !important;
-    }
-
-    .f-widget-title img {
-        height: 50px !important;
-        max-width: inherit;
-        filter: unset !important;
-    }
-
-    .wptb-service-two .wptb-item--title {
-        font-size: 28px !important;
-        line-height: 34px !important;
-        margin-bottom: 50px !important;
-    }
-
-    .wptb-icon-box2 .wptb-item--title {
-        font-size: 20px !important;
-        margin-bottom: 15px !important;
-    }
-
-    .history-section .inner-box:first-child .image-box, .history-section .inner-box:nth-child(3) .image-box, .history-section .inner-box:nth-child(5) .image-box, .history-section .inner-box:nth-child(7) .image-box, .history-section .inner-box:nth-child(9) .image-box, .history-section .inner-box:nth-child(11) .image-box {
-        display: none;
-    }
-
-    .history-section .inner-box:first-child .image-box, .history-section .inner-box:nth-child(3) .image-box, .history-section .inner-box:nth-child(5) .image-box, .history-section .inner-box:nth-child(7) .image-box, .history-section .inner-box:nth-child(9) .image-box, .history-section .inner-box:nth-child(11) .image-box {
-        display: none;
-    }
-
-    .history-section .inner-box:nth-child(2) .image-box, .history-section .inner-box:nth-child(4) .image-box, .history-section .inner-box:nth-child(6) .image-box, .history-section .inner-box:nth-child(8) .image-box, .history-section .inner-box:nth-child(10) .image-box, .history-section .inner-box:nth-child(12) .image-box {
-        display: none !important;
-    }
-
-    .history-section .content-box h2 {
-        font-size: 24px !important;
-        line-height: 30px !important;
-        color: #e12121 !important;
-    }
-
-    .history-section .content-box .text:before {
-        content: unset !important;
-    }
-
-    .history-section .content-box .text {
-        padding: 10px 0px 0px !important;
-    }
-
-    .history-section .content-box h2 {
-        border-top: 1px solid #e2e2e2;
-        border-bottom: unset !important;
-        padding-top: 20px !important;
-        padding-bottom: 0px !important;
-    }
-
-    .single-testimonial {
-        padding: 20px !important;
-    }
-
-    .ta-info h6 {
-        font-size: 16px !important;
-        margin-bottom: 5px;
-        color: #fff;
-    }
-
-    .ta-info span {
-        color: #fff;
-        font-size: 14px !important;
-    }
-
-    .sec-title h2 {
-        font-size: 28px !important;
-        line-height: 34px !important
-    }
-
-    h2 {
-        font-size: 28px !important;
-        line-height: 34px !important;
-        margin-bottom: 20px !important;
-    }
-
-    .section-padding {
-        padding: 40px 0px !important;
-    }
-
     .eg-card3.three .card-content {
-        padding: 40px 20px !important;
+        padding:35px 20px !important;
     }
-
         .eg-card3.three .card-content .catgory-and-title h5 a {
+            font-size: 18px !important;
+        }
+    .text-h1{
+        font-size:18px !important;
+    }
+
+}
+    @media (min-width: 768px) and (max-width: 991px) {
+        .pcc-header .header-mid {
+            padding: 20px 0px !important;
+        }
+
+        .card1:hover .intro1 {
+            height: 110px !important;
+        }
+
+        .product_left .product_zoom .product_zoom_button_group {
+            width: 100% !important;
+            padding-right: 0px !important;
+            overflow-x: scroll !important;
+            display: flex !important;
+        }
+
+            .product_left .product_zoom .product_zoom_button_group li:first-child {
+                margin-left: 0px !important;
+            }
+
+            .product_left .product_zoom .product_zoom_button_group li {
+                margin: 0px 5px !important;
+            }
+
+        .client-logo-wrap {
+            display: grid;
+            grid-template-columns: repeat(6, 16%) !important
+        }
+
+        .scrollbox2 {
+            display: none !important;
+        }
+
+        .header-top {
+            padding: 8px 5px !important;
+        }
+
+        .logo img {
+            width: 240px !important;
+        }
+
+        .skills-img img {
+            width: 100% !important;
+        }
+
+        .mb-105 {
+            margin-bottom: 0px !important;
+        }
+
+        .slider-bg {
+            min-height: 380px !important;
+        }
+
+        .slider-content {
+            margin-bottom: 0px !important;
+            margin-top: 0px !important;
+            padding-top: 0px !important;
+        }
+
+        .float {
+            display: none !important;
+        }
+
+        .about-title h2 {
+            font-size: 32px !important;
+            line-height: 38px !important;
+            letter-spacing: -1px;
+        }
+
+        .slider-content h2 {
+            font-size: 32px;
+            letter-spacing: 0;
+            line-height: 28px;
+            margin-bottom: 30px;
+        }
+
+        p {
+            font-size: 14px !important;
+            line-height: 20px !important
+        }
+
+        .single-slider:before {
+            background: linear-gradient(90deg, rgb(0 0 0) 100%, #00000000 100%);
+        }
+
+        .pb-120 {
+            padding-bottom: 60px !important;
+        }
+
+        .pt-120 {
+            padding-top: 60px !important;
+        }
+
+        .about-area .nav.nav-tabs li span:hover, .about-area .nav.nav-tabs li span.active {
+            display: none !important;
+        }
+
+        .badge img {
+            width: 100px !important;
+        }
+
+        .badge .make-in-india {
+            width: 50px !important;
+        }
+
+        .new-flex {
+            flex-direction: column;
+            text-align: start !important;
+            align-items: start !important;
+        }
+
+        .pcc-section-heading h2 {
+            font-size: 32px !important;
+            line-height: 38px !important;
+            font-weight: 600 !important;
+            margin-bottom: 0;
+        }
+
+        .services-slider-pcc .service-card {
+            margin-right: 10px !important;
+            height: 100% !important;
+            margin-left: 10px !important;
+        }
+
+        .section-t h2 {
+            margin-right: 50px !important;
+        }
+
+        .service-card h3 {
             font-size: 20px !important;
+            line-height: 26px !important;
+            font-weight: 700 !important;
         }
 
-    .text-h1 {
-        font-size: 18px !important;
-        line-height: 26px !important;
-        margin-bottom: 0px !important;
-    }
-
-    .card1:hover .intro1 {
-        height: 120px !important;
-    }
-
-    .product_left .product_zoom {
-        display: flex !important;
-        flex-direction: column-reverse !important;
-        gap: 1rem !important;
-    }
-
-        .product_left .product_zoom .product_zoom_button_group li a {
-            width: 80px !important;
-            height: 80px !important;
+        .wptb-funfacts-one .wptb-funfacts--inner {
+            padding: 40px 20px !important;
         }
 
-    .contact-btn button {
-        padding: 15px;
-        background: #c72329;
-        font-size: 16px !important;
-        line-height: 20px;
-        border: 0;
-        color: #fff;
-    }
+        .wptb-counter1.style1 .wptb-item--value {
+            font-size: 28px !important;
+            font-weight: 600 !important;
+            gap: 0px !important;
+            line-height: 34px !important;
+        }
 
-    .mt-100 {
-        margin-top: 0px !important;
-    }
+        .wptb-funfacts-one.has-before-bg .wptb-funfacts--inner::before {
+            background-color: unset !important;
+        }
 
-    .section-padding {
-        padding: 40px 0px !important;
-    }
+        .pt-80 {
+            padding-top: 60px !important;
+        }
 
-    .wptb-icon-box2.style3 {
-        padding: 20px !important;
-    }
+        .industry-card {
+            position: relative;
+            z-index: 1;
+            margin-bottom: 20px;
+        }
 
-    .modal-body {
-        padding: 20px 0px !important;
-    }
+            .industry-card .image-caption {
+                font-size: 18px !important;
+            }
 
-    input[type="submit"], .btn {
-        height: 45px !important;
-    }
+        .client-logo-wrap .client-card {
+            padding: 20px !important;
+            height: unset !important;
+        }
 
-        .btn i {
-            margin-left: 10px;
-            font-size: 16px;
-            position: absolute;
-            left: -10px !important;
-            background: var(--pcc-primary-theme);
-            top: 0px !important;
+        .pr-30 {
+            padding-right: 15px !important;
+        }
+
+        .pcc-section-heading {
+            margin-bottom: 20px !important;
+        }
+
+        .skills {
+            margin-top: 20px !important;
+        }
+
+        .service-box-slider .text {
+            padding: 30px 0px 30px !important;
+        }
+
+        .wptb-counter1.style1 .wptb-item--icon {
+            width: 54px !important;
+            height: 54px !important;
+        }
+
+        .service-box-slider h3 {
+            font-size: 32px !important;
+            line-height: 38px !important;
+            font-weight: 600 !important;
+            margin-bottom: 20px;
+        }
+
+        .product-card-img {
+            width: 100% !important;
+        }
+
+        .service li {
+            margin-bottom: 0px;
+        }
+
+        .cta .cta__row .cta__col:first-child {
+            /* width: calc(100% - 300px); */
+            width: unset !important;
+        }
+
+        .cta .cta__row {
+            padding: 20px !important;
+            height: 220px !important;
+        }
+
+        .cta h2 {
+            font-size: 32px !important;
+            line-height: 38px !important;
             color: #fff;
-            width: 50px;
-            height: 100%;
-            line-height: 48px !important;
+            max-width: 100%;
+            text-align: center;
         }
 
-    .product_details_tab .nav {
-        gap: unset !important;
-        flex-wrap: unset !important;
-    }
-
-    .wptb-accordion1 .wptb--item .wptb-item--content {
-        padding: 20px 10px !important;
-    }
-
-    .wptb-accordion1 .wptb-item-title {
-        padding: 10px 10px !important;
-    }
-
-        .wptb-accordion1 .wptb-item-title i {
-            right: 0px !important;
+        .cta .cta__row .cta__col:nth-child(2) {
+            width: 100% !important;
+            text-align: center;
         }
 
-        .wptb-accordion1 .wptb-item-title > span {
-            padding-right: 20px !important;
+        .partner-slider {
+            grid-template-columns: repeat(3, 1fr) !important;
         }
 
-    .card1 {
-        height: 250px !important;
-    }
-
-    .solution-section h2 {
-        font-size: 24px !important;
-        line-height: 32px !important;
-    }
-
-    .card1 .img1 {
-        padding-bottom: 50px;
-    }
-
-    .intro1 {
-        height: 50px !important;
-    }
-
-    .pt-130 {
-        padding-top: 60px !important;
-    }
-
-    .pt-130 {
-        padding-top: 60px !important;
-    }
-
-    .btn {
-        line-height: 9px !important;
-    }
-
-    .sticky-menu .header-mid {
-        padding: 20px 0px !important;
-    }
-
-    .banner-area6 {
-        padding: 50px 0px 50px !important;
-    }
-
-        .banner-area6 .banner-left-content h1 {
-            font-size: 20px !important;
-            line-height: 26px !important;
+        .pb-100 {
+            padding-bottom: 40px !important;
         }
 
-    .w-50 {
-        width: 100% !important;
-    }
-
-    .banner-area6 .banner-left-content .btn-group {
-        gap: 15px !important;
-        padding-top: 20px !important;
-    }
-
-        .banner-area6 .banner-left-content .btn-group li.success-rate {
-            gap: 10px !important;
+        .pt-100 {
+            padding-top: 40px !important;
         }
 
-    .badge .make-in-india {
-        animation: none;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 75px;
-        left: auto !important;
-        right: 32px !important;
-        margin: 0 auto;
-        z-index: 1;
-    }
-
-    .magnetic-wrap {
-        position: relative;
-        display: flex;
-        justify-content: end !important;
-        align-items: center;
-        margin-top: -172px;
-    }
-
-    .banner-area6 .banner-left-content h1 {
-        margin-bottom: 10px !important;
-    }
-
-    .statement-content-bottom ul li {
-        font-weight: 500 !important;
-        font-size: 14px !important;
-    }
-
-    .statement-content.pl-50 {
-        padding: 0px !important;
-    }
-
-    .advantage-img.two {
-        margin-top: -50px !important;
-    }
-
-    .mb-130 {
-        margin-bottom: 60px !important;
-    }
-
-    .wptb-office-address .widget {
-        padding-left: 20px !important;
-    }
-
-        .wptb-office-address .widget .widget-title {
-            font-size: 20px !important;
-            line-height: 26px !important;
+        .f-widget-title h2 {
+            padding-bottom: 10px !important;
+            padding-top: 20px !important;
         }
 
-    .widget .widget-title {
-        position: relative;
-        margin-bottom: 16px !important;
-    }
+        .mb-100 {
+            margin-bottom: 40px !important;
+        }
 
-    .wptb-office .wptb-item--inner .wptb-item--title {
-        margin-bottom: 0px !important;
-    }
+        .breadcrumb-section {
+            padding: 150px 40px 150px !important;
+        }
 
-    .widget {
-        padding: 0px 30px 20px 30px !important;
-    }
-
-    .mr-bottom-90 {
-        margin-bottom: 0px !important;
-    }
-
-    .wptb-item--title {
-        font-size: 28px;
-        line-height: 34px;
-    }
-
-    .services-slider-pcc .service-card {
-        padding: 30px 25px 30px !important;
-    }
-
-    .d-flex.new-flex.justify-content-between.align-items-center.mb-50 {
-        margin-bottom: 0px !important;
-    }
-
-    .job-list-three {
-        padding: 15px !important;
-    }
-
-        .job-list-three .main-wrapper .info-data li {
+        .job-list-three .main-wrapper p {
             overflow: hidden;
             text-overflow: ellipsis;
             display: -webkit-box;
-            -webkit-line-clamp: 1;
+            -webkit-line-clamp: 2;
             -webkit-box-orient: vertical;
         }
 
-    .career-flex {
-        gap: 1rem;
-        display: flex !important;
-        flex-direction: column !important;
-        justify-content: start !important;
+        .banner-area6 .banner-left-content {
+            width: 80% !important;
+        }
+
+        .advantage-img img {
+            width: 100% !important;
+        }
+
+
+        .breadcrumb-section .banner-content h1 {
+            font-size: 30px !important;
+        }
+
+        .mb-70 {
+            margin-bottom: 40px !important;
+        }
+
+        .header-three {
+            margin-bottom: 0px !important;
+        }
+
+        .pl--95 {
+            padding-left: 10px !important;
+        }
+
+        .breadcrumb-section .banner-content .breadcrumb-list li {
+            font-size: 14px !important;
+        }
+
+        .wptb-intro-one .wptb-heading {
+            margin-top: 0px !important;
+        }
+
+        .wptb-item--title {
+            font-size: 32px !important;
+            line-height: 38px !important;
+            font-weight: 600 !important;
+            margin-bottom: 30px !important;
+        }
+
+        .text-one {
+            color: #79010c;
+            font-size: 18px !important;
+            text-align: left;
+        }
+
+        .service-card {
+            padding: 0px !important;
+        }
+
+        .pl-50 {
+            padding: 15px !important;
+        }
+
+        .wptb-why-choose-one .wptb-icon-box2 {
+            padding: 30px 45px !important
+        }
+
+        .wptb-video-player1 {
+            min-height: auto !important;
+        }
+
+        .f-widget-title img {
+            height: 50px !important;
+            max-width: inherit;
+            filter: unset !important;
+        }
+
+        .wptb-service-two .wptb-item--title {
+            font-size: 32px !important;
+            line-height: 38px !important;
+            margin-bottom: 50px !important;
+        }
+
+        .wptb-icon-box2 .wptb-item--title {
+            font-size: 20px !important;
+            margin-bottom: 15px !important;
+        }
+
+        .history-section .inner-box:first-child .image-box, .history-section .inner-box:nth-child(3) .image-box, .history-section .inner-box:nth-child(5) .image-box, .history-section .inner-box:nth-child(7) .image-box, .history-section .inner-box:nth-child(9) .image-box, .history-section .inner-box:nth-child(11) .image-box {
+            display: none;
+        }
+
+        .history-section .inner-box:first-child .image-box, .history-section .inner-box:nth-child(3) .image-box, .history-section .inner-box:nth-child(5) .image-box, .history-section .inner-box:nth-child(7) .image-box, .history-section .inner-box:nth-child(9) .image-box, .history-section .inner-box:nth-child(11) .image-box {
+            display: none;
+        }
+
+        .history-section .inner-box:nth-child(2) .image-box, .history-section .inner-box:nth-child(4) .image-box, .history-section .inner-box:nth-child(6) .image-box, .history-section .inner-box:nth-child(8) .image-box, .history-section .inner-box:nth-child(10) .image-box, .history-section .inner-box:nth-child(12) .image-box {
+            display: none !important;
+        }
+
+        .history-section .content-box h2 {
+            font-size: 24px !important;
+            line-height: 30px !important;
+            color: #e12121 !important;
+        }
+
+        .history-section .content-box .text:before {
+            content: unset !important;
+        }
+
+        .history-section .content-box .text {
+            padding: 10px 0px 0px !important;
+        }
+
+        .history-section .content-box h2 {
+            border-top: 1px solid #e2e2e2;
+            border-bottom: unset !important;
+            padding-top: 20px !important;
+            padding-bottom: 0px !important;
+        }
+
+        .single-testimonial {
+            padding: 20px !important;
+        }
+
+        .ta-info h6 {
+            font-size: 16px !important;
+            margin-bottom: 5px;
+            color: #fff;
+        }
+
+        .ta-info span {
+            color: #fff;
+            font-size: 14px !important;
+        }
+
+        .sec-title h2 {
+            font-size: 32px !important;
+            line-height: 38px !important;
+        }
+
+        h2 {
+            font-size: 32px !important;
+            line-height: 38px !important;
+            margin-bottom: 20px !important;
+        }
+
+        .section-padding {
+            padding: 40px 0px !important;
+        }
+
+        .eg-card3.three .card-content {
+            padding: 40px 20px !important;
+        }
+
+            .eg-card3.three .card-content .catgory-and-title h5 a {
+                font-size: 20px !important;
+            }
+
+        .text-h1 {
+            font-size: 18px !important;
+            line-height: 26px !important;
+            margin-bottom: 0px !important;
+        }
+
+        .product_left .product_zoom .product_zoom_button_group {
+            margin-bottom: 0px !important;
+        }
+
+        .product_left .product_zoom {
+            display: flex !important;
+            flex-direction: column-reverse !important;
+            gap: 1rem !important;
+        }
+
+            .product_left .product_zoom .product_zoom_button_group li a {
+                width: 80px !important;
+                height: 80px !important;
+            }
+
+        .contact-btn button {
+            padding: 15px;
+            background: #c72329;
+            font-size: 16px !important;
+            line-height: 20px;
+            border: 0;
+            color: #fff;
+        }
+
+        .mt-100 {
+            margin-top: 0px !important;
+        }
+
+        .section-padding {
+            padding: 40px 0px !important;
+        }
+
+        .wptb-icon-box2.style3 {
+            padding: 20px !important;
+        }
+
+        .modal-body {
+            padding: 20px 20px !important;
+        }
+
+        input[type="submit"], .btn {
+            height: 45px !important;
+        }
+
+            .btn i {
+                margin-left: 10px;
+                font-size: 16px;
+                position: absolute;
+                left: -10px !important;
+                background: var(--pcc-primary-theme);
+                top: 0px !important;
+                color: #fff;
+                width: 50px;
+                height: 100%;
+                line-height: 48px !important;
+            }
+
+        .product_details_tab .nav {
+            gap: unset !important;
+            flex-wrap: unset !important;
+        }
+
+        .wptb-accordion1 .wptb--item .wptb-item--content {
+            padding: 20px 10px !important;
+        }
+
+        .wptb-accordion1 .wptb-item-title {
+            padding: 10px 10px !important;
+        }
+
+            .wptb-accordion1 .wptb-item-title i {
+                right: 0px !important;
+            }
+
+            .wptb-accordion1 .wptb-item-title > span {
+                padding-right: 20px !important;
+            }
+
+        .card1 {
+            height: 250px !important;
+        }
+
+        .solution-section h2 {
+            font-size: 24px !important;
+            line-height: 32px !important;
+        }
+
+        .card1 .img1 {
+            padding-bottom: 50px;
+        }
+
+        .intro1 {
+            height: 50px !important;
+        }
+
+        .pt-130 {
+            padding-top: 60px !important;
+        }
+
+        .pt-130 {
+            padding-top: 60px !important;
+        }
+
+        .btn {
+            line-height: 9px !important;
+        }
+
+        .sticky-menu .header-mid {
+            padding: 10px 0px !important;
+        }
+
+        .wptb-office .wptb-item--inner .wptb-item--title {
+            font-size: 14px !important;
+            line-height: 22px !important;
+        }
+
+        .banner-area6 {
+            padding: 50px 0px 50px !important;
+        }
+
+            .banner-area6 .banner-left-content h1 {
+                font-size: 20px !important;
+                line-height: 26px !important;
+            }
+
+        .w-50 {
+            width: 100% !important;
+        }
+
+        .banner-area6 .banner-left-content .btn-group {
+            gap: 15px !important;
+            padding-top: 20px !important;
+        }
+
+            .banner-area6 .banner-left-content .btn-group li.success-rate {
+                gap: 10px !important;
+            }
+
+        .badge .make-in-india {
+            animation: none;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 75px;
+            left: auto !important;
+            right: 32px !important;
+            margin: 0 auto;
+            z-index: 1;
+        }
+
+        .magnetic-wrap {
+            position: relative;
+            display: flex;
+            justify-content: end !important;
+            align-items: center;
+            margin-top: -172px;
+        }
+
+        .banner-area6 .banner-left-content h1 {
+            margin-bottom: 10px !important;
+        }
+
+        .statement-content-bottom ul li {
+            font-weight: 500 !important;
+            font-size: 14px !important;
+        }
+
+        .statement-content.pl-50 {
+            padding: 0px !important;
+        }
+
+        .advantage-img.two {
+            margin-top: -50px !important;
+        }
+
+        .mb-130 {
+            margin-bottom: 30px !important;
+        }
+
+        .wptb-office-address .widget {
+            padding-left: 20px !important;
+        }
+
+            .wptb-office-address .widget .widget-title {
+                font-size: 20px !important;
+                line-height: 26px !important;
+            }
+
+        .widget .widget-title {
+            position: relative;
+            margin-bottom: 16px !important;
+        }
+
+        .wptb-office .wptb-item--inner .wptb-item--title {
+            margin-bottom: 0px !important;
+        }
+
+        .widget {
+            padding: 0px 30px 20px 30px !important;
+        }
+
+        .mr-bottom-90 {
+            margin-bottom: 0px !important;
+        }
+
+        .wptb-item--title {
+            font-size: 32px !important;
+            line-height: 38px !important;
+        }
+
+        .services-slider-pcc .service-card {
+            padding: 30px 25px 30px !important;
+        }
+
+        .d-flex.new-flex.justify-content-between.align-items-center.mb-50 {
+            margin-bottom: 0px !important;
+        }
+
+        .cc1 h4 {
+            font-size: 16px !important;
+        }
+
+        .header-three .mean-container a.meanmenu-reveal {
+            color: #000 !important;
+            border: 1px solid #000;
+        }
+
+        .history-section h1 {
+            font-size: 30px !important;
+        }
+
+        .wptb-item--content {
+            overflow: auto;
+        }
     }
 
-    .career-flex {
-        gap: 1rem;
-        display: flex !important;
-        flex-direction: column !important;
-        justify-content: start !important;
-        align-items: start !important;
-    }
 
-    .job-list-three .main-wrapper p {
-        overflow: hidden;
-        text-overflow: ellipsis;
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-    }
+    @media (min-width: 320px) and (max-width: 767px) {
+        .pcc-header .header-mid {
+            padding: 20px 0px !important;
+        }
 
-    .job-list-three .main-wrapper .info-wrapper {
-        width: calc(100% - 50px);
-        padding-left: 10px !important;
-        padding-right: 10px !important;
+        .history-section h1 {
+            font-size: 24px !important;
+        }
+
+        .wptb-item--content {
+            overflow: auto;
+        }
+
+        .client-logo-wrap {
+            display: grid;
+            grid-template-columns: repeat(3, 33%) !important;
+        }
+
+        .logo img {
+            width: 240px !important;
+        }
+
+        .product_left .product_zoom .product_zoom_button_group {
+            margin-bottom: 0px !important;
+        }
+
+        .mb-105 {
+            margin-bottom: 0px !important;
+        }
+
+        .slider-bg {
+            min-height: 500px !important;
+        }
+
+        .slider-content {
+            margin-bottom: 0px !important;
+            margin-top: 0px !important;
+            padding-top: 0px !important;
+        }
+
+        .float {
+            display: none !important;
+        }
+
+        .about-title h2 {
+            font-size: 28px !important;
+            line-height: 34px !important;
+            letter-spacing: -1px;
+        }
+
+        .slider-content h2 {
+            font-size: 32px;
+            letter-spacing: 0;
+            line-height: 28px;
+            margin-bottom: 30px;
+        }
+
+        p {
+            font-size: 14px !important;
+            line-height: 20px !important
+        }
+
+        .single-slider:before {
+            background: linear-gradient(90deg, rgb(0 0 0) 100%, #00000000 100%);
+        }
+
+        .pb-120 {
+            padding-bottom: 60px !important;
+        }
+
+        .pt-120 {
+            padding-top: 60px !important;
+        }
+
+        .about-area .nav.nav-tabs li span:hover, .about-area .nav.nav-tabs li span.active {
+            display: none !important;
+        }
+
+        .badge img {
+            width: 100px !important;
+        }
+
+        .badge .make-in-india {
+            width: 50px !important;
+        }
+
+        .new-flex {
+            flex-direction: column;
+            text-align: start !important;
+            align-items: start !important;
+        }
+
+        .pcc-section-heading h2 {
+            font-size: 28px !important;
+            line-height: 34px !important;
+            font-weight: 600 !important;
+            margin-bottom: 0;
+        }
+
+        .services-slider-pcc .service-card {
+            margin-right: 0px !important;
+            height: 100% !important;
+            margin-left: 0px !important;
+        }
+
+        .service-card h3 {
+            font-size: 20px !important;
+            line-height: 26px !important;
+            font-weight: 700 !important;
+        }
+
+        .wptb-funfacts-one .wptb-funfacts--inner {
+            padding: 40px 20px !important;
+        }
+
+        .wptb-counter1.style1 .wptb-item--value {
+            font-size: 32px !important;
+            font-weight: 600 !important;
+            line-height: 40px !important;
+        }
+
+        .wptb-funfacts-one.has-before-bg .wptb-funfacts--inner::before {
+            background-color: unset !important;
+        }
+
+        .pt-80 {
+            padding-top: 60px !important;
+        }
+
+        .industry-card {
+            position: relative;
+            z-index: 1;
+            margin-bottom: 20px;
+        }
+
+            .industry-card .image-caption {
+                font-size: 20px !important;
+            }
+
+        .client-logo-wrap .client-card {
+            padding: 20px !important;
+            height: unset !important;
+        }
+
+        .pr-30 {
+            padding-right: 15px !important;
+        }
+
+        .pcc-section-heading {
+            margin-bottom: 20px !important;
+        }
+
+        .skills {
+            margin-top: 20px !important;
+        }
+
+        .service-box-slider .text {
+            padding: 30px 0px 30px !important;
+        }
+
+        .wptb-counter1.style1 .wptb-item--icon {
+            width: 54px !important;
+            height: 54px !important;
+        }
+
+        .service-box-slider h3 {
+            font-size: 28px !important;
+            line-height: 34px !important;
+            font-weight: 600 !important;
+            margin-bottom: 20px;
+        }
+
+        .product-card-img {
+            width: 100% !important;
+        }
+
+        .service li {
+            margin-bottom: 0px;
+        }
+
+        .cta .cta__row .cta__col:first-child {
+            /* width: calc(100% - 300px); */
+            width: unset !important;
+        }
+
+        .cta .cta__row {
+            padding: 20px !important;
+        }
+
+        .cta h2 {
+            font-size: 28px !important;
+            line-height: 34px !important;
+            color: #fff;
+            max-width: 100%;
+            text-align: center;
+        }
+
+        .cta .cta__row .cta__col:nth-child(2) {
+            width: 100% !important;
+            text-align: center;
+        }
+
+        .partner-slider {
+            grid-template-columns: repeat(3, 1fr) !important;
+        }
+
+        .pb-100 {
+            padding-bottom: 40px !important;
+        }
+
+        .pt-100 {
+            padding-top: 40px !important;
+        }
+
+        .f-widget-title h2 {
+            padding-bottom: 10px !important;
+            padding-top: 20px !important;
+        }
+
+        .breadcrumb-section {
+            padding: 50px 0px 50px !important;
+        }
+
+            .breadcrumb-section .banner-content h1 {
+                font-size: 26px !important;
+            }
+
+        .header-three {
+            margin-bottom: 0px !important;
+        }
+
+        .pl--95 {
+            padding-left: 10px !important;
+        }
+
+        .breadcrumb-section .banner-content .breadcrumb-list li {
+            font-size: 10px !important;
+        }
+
+        .wptb-intro-one .wptb-heading {
+            margin-top: 0px !important;
+        }
+
+        .wptb-item--title {
+            font-size: 28px !important;
+            line-height: 34px !important;
+            font-weight: 600 !important;
+            margin-bottom: 30px !important;
+        }
+
+        .text-one {
+            color: #79010c;
+            font-size: 18px !important;
+            text-align: left;
+        }
+
+        .service-card {
+            padding: 0px !important;
+        }
+
+        .pl-50 {
+            padding: 15px !important;
+        }
+
+        .wptb-why-choose-one .wptb-icon-box2 {
+            padding: 30px 15px !important
+        }
+
+        .wptb-video-player1 {
+            min-height: auto !important;
+        }
+
+        .f-widget-title img {
+            height: 50px !important;
+            max-width: inherit;
+            filter: unset !important;
+        }
+
+        .wptb-service-two .wptb-item--title {
+            font-size: 28px !important;
+            line-height: 34px !important;
+            margin-bottom: 50px !important;
+        }
+
+        .wptb-icon-box2 .wptb-item--title {
+            font-size: 20px !important;
+            margin-bottom: 15px !important;
+        }
+
+        .history-section .inner-box:first-child .image-box, .history-section .inner-box:nth-child(3) .image-box, .history-section .inner-box:nth-child(5) .image-box, .history-section .inner-box:nth-child(7) .image-box, .history-section .inner-box:nth-child(9) .image-box, .history-section .inner-box:nth-child(11) .image-box {
+            display: none;
+        }
+
+        .history-section .inner-box:first-child .image-box, .history-section .inner-box:nth-child(3) .image-box, .history-section .inner-box:nth-child(5) .image-box, .history-section .inner-box:nth-child(7) .image-box, .history-section .inner-box:nth-child(9) .image-box, .history-section .inner-box:nth-child(11) .image-box {
+            display: none;
+        }
+
+        .history-section .inner-box:nth-child(2) .image-box, .history-section .inner-box:nth-child(4) .image-box, .history-section .inner-box:nth-child(6) .image-box, .history-section .inner-box:nth-child(8) .image-box, .history-section .inner-box:nth-child(10) .image-box, .history-section .inner-box:nth-child(12) .image-box {
+            display: none !important;
+        }
+
+        .history-section .content-box h2 {
+            font-size: 24px !important;
+            line-height: 30px !important;
+            color: #e12121 !important;
+        }
+
+        .history-section .content-box .text:before {
+            content: unset !important;
+        }
+
+        .history-section .content-box .text {
+            padding: 10px 0px 0px !important;
+        }
+
+        .history-section .content-box h2 {
+            border-top: 1px solid #e2e2e2;
+            border-bottom: unset !important;
+            padding-top: 20px !important;
+            padding-bottom: 0px !important;
+        }
+
+        .single-testimonial {
+            padding: 20px !important;
+        }
+
+        .ta-info h6 {
+            font-size: 16px !important;
+            margin-bottom: 5px;
+            color: #fff;
+        }
+
+        .ta-info span {
+            color: #fff;
+            font-size: 14px !important;
+        }
+
+        .sec-title h2 {
+            font-size: 28px !important;
+            line-height: 34px !important
+        }
+
+        h2 {
+            font-size: 28px !important;
+            line-height: 34px !important;
+            margin-bottom: 20px !important;
+        }
+
+        .section-padding {
+            padding: 40px 0px !important;
+        }
+
+        .eg-card3.three .card-content {
+            padding: 40px 20px !important;
+        }
+
+            .eg-card3.three .card-content .catgory-and-title h5 a {
+                font-size: 20px !important;
+            }
+
+        .text-h1 {
+            font-size: 18px !important;
+            line-height: 26px !important;
+            margin-bottom: 0px !important;
+        }
+
+        .card1:hover .intro1 {
+            height: 120px !important;
+        }
+
+        .product_left .product_zoom {
+            display: flex !important;
+            flex-direction: column-reverse !important;
+            gap: 1rem !important;
+        }
+
+            .product_left .product_zoom .product_zoom_button_group li a {
+                width: 80px !important;
+                height: 80px !important;
+            }
+
+        .contact-btn button {
+            padding: 15px;
+            background: #c72329;
+            font-size: 16px !important;
+            line-height: 20px;
+            border: 0;
+            color: #fff;
+        }
+
+        .mt-100 {
+            margin-top: 0px !important;
+        }
+
+        .section-padding {
+            padding: 40px 0px !important;
+        }
+
+        .wptb-icon-box2.style3 {
+            padding: 20px !important;
+        }
+
+        .modal-body {
+            padding: 20px 0px !important;
+        }
+
+        input[type="submit"], .btn {
+            height: 45px !important;
+        }
+
+            .btn i {
+                margin-left: 10px;
+                font-size: 16px;
+                position: absolute;
+                left: -10px !important;
+                background: var(--pcc-primary-theme);
+                top: 0px !important;
+                color: #fff;
+                width: 50px;
+                height: 100%;
+                line-height: 48px !important;
+            }
+
+        .product_details_tab .nav {
+            gap: unset !important;
+            flex-wrap: unset !important;
+        }
+
+        .wptb-accordion1 .wptb--item .wptb-item--content {
+            padding: 20px 10px !important;
+        }
+
+        .wptb-accordion1 .wptb-item-title {
+            padding: 10px 10px !important;
+        }
+
+            .wptb-accordion1 .wptb-item-title i {
+                right: 0px !important;
+            }
+
+            .wptb-accordion1 .wptb-item-title > span {
+                padding-right: 20px !important;
+            }
+
+        .card1 {
+            height: 250px !important;
+        }
+
+        .solution-section h2 {
+            font-size: 24px !important;
+            line-height: 32px !important;
+        }
+
+        .card1 .img1 {
+            padding-bottom: 50px;
+        }
+
+        .intro1 {
+            height: 50px !important;
+        }
+
+        .pt-130 {
+            padding-top: 60px !important;
+        }
+
+        .pt-130 {
+            padding-top: 60px !important;
+        }
+
+        .btn {
+            line-height: 9px !important;
+        }
+
+        .sticky-menu .header-mid {
+            padding: 20px 0px !important;
+        }
+
+        .banner-area6 {
+            padding: 50px 0px 50px !important;
+        }
+
+            .banner-area6 .banner-left-content h1 {
+                font-size: 20px !important;
+                line-height: 26px !important;
+            }
+
+        .w-50 {
+            width: 100% !important;
+        }
+
+        .banner-area6 .banner-left-content .btn-group {
+            gap: 15px !important;
+            padding-top: 20px !important;
+        }
+
+            .banner-area6 .banner-left-content .btn-group li.success-rate {
+                gap: 10px !important;
+            }
+
+        .badge .make-in-india {
+            animation: none;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 75px;
+            left: auto !important;
+            right: 32px !important;
+            margin: 0 auto;
+            z-index: 1;
+        }
+
+        .magnetic-wrap {
+            position: relative;
+            display: flex;
+            justify-content: end !important;
+            align-items: center;
+            margin-top: -172px;
+        }
+
+        .banner-area6 .banner-left-content h1 {
+            margin-bottom: 10px !important;
+        }
+
+        .statement-content-bottom ul li {
+            font-weight: 500 !important;
+            font-size: 14px !important;
+        }
+
+        .statement-content.pl-50 {
+            padding: 0px !important;
+        }
+
+        .advantage-img.two {
+            margin-top: -50px !important;
+        }
+
+        .mb-130 {
+            margin-bottom: 60px !important;
+        }
+
+        .wptb-office-address .widget {
+            padding-left: 20px !important;
+        }
+
+            .wptb-office-address .widget .widget-title {
+                font-size: 20px !important;
+                line-height: 26px !important;
+            }
+
+        .widget .widget-title {
+            position: relative;
+            margin-bottom: 16px !important;
+        }
+
+        .wptb-office .wptb-item--inner .wptb-item--title {
+            margin-bottom: 0px !important;
+        }
+
+        .widget {
+            padding: 0px 30px 20px 30px !important;
+        }
+
+        .mr-bottom-90 {
+            margin-bottom: 0px !important;
+        }
+
+        .wptb-item--title {
+            font-size: 28px;
+            line-height: 34px;
+        }
+
+        .services-slider-pcc .service-card {
+            padding: 30px 25px 30px !important;
+        }
+
+        .d-flex.new-flex.justify-content-between.align-items-center.mb-50 {
+            margin-bottom: 0px !important;
+        }
+
+        .job-list-three {
+            padding: 15px !important;
+        }
+
+            .job-list-three .main-wrapper .info-data li {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 1;
+                -webkit-box-orient: vertical;
+            }
+
+        .career-flex {
+            gap: 1rem;
+            display: flex !important;
+            flex-direction: column !important;
+            justify-content: start !important;
+        }
+
+        .career-flex {
+            gap: 1rem;
+            display: flex !important;
+            flex-direction: column !important;
+            justify-content: start !important;
+            align-items: start !important;
+        }
+
+        .job-list-three .main-wrapper p {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
+
+        .job-list-three .main-wrapper .info-wrapper {
+            width: calc(100% - 50px);
+            padding-left: 10px !important;
+            padding-right: 10px !important;
+        }
+
+        .job-block-seven h4 {
+            font-size: 20px !important;
+        }
+
+        .job-block-seven .job-info {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            margin-bottom: 10px;
+            gap: 1rem;
+        }
+
+        .job-detail-section .social-share {
+            flex-wrap: wrap;
+        }
     }
-    .job-block-seven h4 {
-        font-size:20px !important;
-    }
-    .job-block-seven .job-info {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        margin-bottom: 10px;
-        gap: 1rem;
-    }
-    .job-detail-section .social-share{
-        flex-wrap:wrap;
-    }
-}
