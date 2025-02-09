@@ -132,7 +132,7 @@ public partial class job_details : System.Web.UI.Page
                 lblStatus.CssClass = "alert alert-success d-block";
                 string Pageurl = HttpContext.Current.Request.Url.AbsoluteUri.ToString();
                 MailMessage mail = new MailMessage();
-                mail.To.Add(ConfigurationManager.AppSettings["ToMail"]);
+                mail.To.Add("hr@parkcontrols.com");
                 if (!string.IsNullOrEmpty(ConfigurationManager.AppSettings["CCMail"]))
                 {
                     mail.CC.Add(ConfigurationManager.AppSettings["CCMail"]);

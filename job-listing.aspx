@@ -89,10 +89,11 @@
             border-radius: 17px;
             background: #31795a;
         }
-        .career-image{
-           border:1px solid #eee;
-           box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
-           padding:4px;
+
+        .career-image {
+            border: 1px solid #eee;
+            box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+            padding: 4px;
         }
     </style>
 </asp:Content>
@@ -106,7 +107,7 @@
                         <div class="banner-content">
                             <h1>Career</h1>
                             <ul class="breadcrumb-list">
-                                <li><a href="Default.aspx">Home</a></li>
+                                <li><a href="/">Home</a></li>
                                 <li>Career</li>
                             </ul>
                         </div>
@@ -121,25 +122,29 @@
                         <div class="text-start ">
                             <h2 class="mb-40 ">About Career at PCC</h2>
                             <p>
-Park Controls and Communications Private Limited, (PCC) is a company of three and half decades standing within the Defence and Aerospace Industry.  The company holds a monopoly status for the supply of products to the many Aircraft, Missiles, Unmanned Air Vehicles, Bombs and Satellite programs of the Government of India and Private suppliers to Defence and Aerospace.
+                                Park Controls and Communications Private Limited, (PCC) is a company of three and half decades standing within the Defence and Aerospace Industry.  The company holds a monopoly status for the supply of products to the many Aircraft, Missiles, Unmanned Air Vehicles, Bombs and Satellite programs of the Government of India and Private suppliers to Defence and Aerospace.
 
                             </p>
                             <p>
-PCC is on a fast track growth trajectory and is aiming to be the top player within the Industry and therefore, is continuously on the lookout for young and efficient problem solvers and go-getters, who have the ability to deliver from the first day of joining the organization. The positions are high pressure in nature with expectations that are very high and top notch.
-</p>
-                            <p>Rewards and compensation are the best in the Industry. 
-</p>
-                            <p><strong>Come! Join us!! We are making a new high-tech world.
+                                PCC is on a fast track growth trajectory and is aiming to be the top player within the Industry and therefore, is continuously on the lookout for young and efficient problem solvers and go-getters, who have the ability to deliver from the first day of joining the organization. The positions are high pressure in nature with expectations that are very high and top notch.
+                            </p>
+                            <p>
+                                Rewards and compensation are the best in the Industry. 
+                            </p>
+                            <p>
+                                <strong>Come! Join us!! We are making a new high-tech world.
 
-</strong></p>
+                                </strong>
+                            </p>
                         </div>
                     </div>
-                     <div class="col-lg-6">
-     <div class="career-image">
-     <img src="image/career/c1.jpg" /></div>
- </div>
+                    <div class="col-lg-6">
+                        <div class="career-image">
+                            <img src="image/career/c1.jpg" />
+                        </div>
+                    </div>
                 </div>
-               
+
             </div>
         </section>
         <section class="section-padding ">
@@ -154,9 +159,7 @@ PCC is on a fast track growth trajectory and is aiming to be the top player with
                     </div>
                 </div>
                 <div class="row gy-4">
-                 <%=strJobs %>
-              
-                   
+                    <%=strJobs %>
                 </div>
             </div>
         </section>
