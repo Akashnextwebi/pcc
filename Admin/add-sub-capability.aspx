@@ -64,7 +64,7 @@
                                 <div class="col-lg-6 mb-2">
                                     <label class="">Banner Image <sup class="text-danger">*</sup></label>
                                     <asp:FileUpload runat="server" ID="BannerImage" CssClass="form-control" />
-                                    <small class="text-danger">.png, .jpeg, .jpg, .gif formats are required, Image Size Should be 1080 × 720 px</small><br />
+                                    <small class="text-danger">.png, .jpeg, .jpg, .gif formats are required, Image Size Should be 1920 × 650 px</small><br />
                                     <%=strBannerImage %>
                                 </div>
                                 <div class="row mb-2">

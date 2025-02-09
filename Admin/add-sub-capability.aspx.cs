@@ -299,7 +299,7 @@ public partial class Admin_add_sub_capability : System.Web.UI.Page
                 if ((fileExtension == ".jpg" || fileExtension == ".jpeg" || fileExtension == ".png" || fileExtension == ".gif" || fileExtension == ".webp"))
                 {
                     System.Drawing.Bitmap bitimg = new System.Drawing.Bitmap(BannerImage.PostedFile.InputStream);
-                    if ((bitimg.PhysicalDimension.Height != 720) || (bitimg.PhysicalDimension.Width != 1080))
+                    if ((bitimg.PhysicalDimension.Height != 650) || (bitimg.PhysicalDimension.Width != 1920))
                     {
                         return "Size";
                     }
