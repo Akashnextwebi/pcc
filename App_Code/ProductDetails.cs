@@ -542,7 +542,7 @@ public class ProductDetails
             string query = @"select * from ProductDetails Where Capability=@Capability and status='Active'";
             using (SqlCommand cmd = new SqlCommand(query, conSQ))
             {
-                cmd.Parameters.AddWithValue("@Industry", SqlDbType.NVarChar).Value = CapID;
+                cmd.Parameters.AddWithValue("@Capability", SqlDbType.NVarChar).Value = CapID;
                 SqlDataAdapter sda = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 sda.Fill(dt);

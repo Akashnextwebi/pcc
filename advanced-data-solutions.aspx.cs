@@ -8,18 +8,18 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Xml.Linq;
 
-public partial class advanced_data_solutions :  System.Web.UI.Page
+public partial class advanced_data_solutions : System.Web.UI.Page
 {
     SqlConnection conSQ = new SqlConnection(ConfigurationManager.ConnectionStrings["conSQ"].ConnectionString);
-    public string strBanner = "", strBannertitle = "", strDesctitle = "", strDesc = "", strsubcapability="", StrWhitepaper="";
+    public string strBanner = "", strBannertitle = "", strDesctitle = "", strDesc = "", strsubcapability = "", StrWhitepaper = "";
     protected void Page_Load(object sender, EventArgs e)
     {
-       
+
         if (RouteData.Values["curl"] != null)
         {
             BindCapabilityDetails();
         }
-        
+
     }
     public void BindCapabilityDetails()
     {
@@ -30,7 +30,7 @@ public partial class advanced_data_solutions :  System.Web.UI.Page
             if (CA != null)
             {
                 strBanner = CA.BannerImage;
-                strBannertitle=CA.BannerTitle;
+                strBannertitle = CA.BannerTitle;
                 strDesctitle = CA.DescHeading;
                 strDesc = CA.FullDesc;
                 BindSubcapability(Convert.ToString(CA.Id));
@@ -64,7 +64,7 @@ public partial class advanced_data_solutions :  System.Web.UI.Page
                                     <img src='image/sub1/right-arrow2.png' alt=''>
                                 </a>
                                 <div class='catgory-and-title'>
-                                    <a href='" + url+ @"'>" + ca[i].Tag + @"</a>
+                                    <a href='" + url + @"'>" + ca[i].Tag + @"</a>
                                     <h5><a href='" + url + @"'>" + ca[i].SubCapabilityName + @"</a></h5>
                                 </div>
                             </div>
@@ -75,14 +75,14 @@ public partial class advanced_data_solutions :  System.Web.UI.Page
             else
             {
                 var pro = ProductDetails.GetAllCompentensisProduct(conSQ, name);
-                if(pro.Count > 0)
+                if (pro.Count > 0)
                 {
-                    for(int i = 0;i < pro.Count; i++)
+                    for (int i = 0; i < pro.Count; i++)
                     {
-                        var url = "product/" + pro[i].ProductUrl;
-                        strsubcapability += @"<div class='col-lg-4'>
+                        var url = "/product/" + pro[i].ProductUrl;
+                        strsubcapability += @"<div class='col-lg-4 col-md-6'>
                             <div class='card1'>
-                                <a href='/" + url + @"' contenteditable='false' style='cursor: pointer;'>
+                                <a href='" + url + @"' contenteditable='false' style='cursor: pointer;'>
                                     <img src='/" + pro[i].ThumbImage + @"' class='img1'>
                                     <div class='intro1'>
                                         <h4 class='text-h1'>" + pro[i].ProductName + @"

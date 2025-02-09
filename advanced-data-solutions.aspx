@@ -331,14 +331,17 @@
 
         .broacher-content h4 {
             font-size: 24px;
-           
             margin-top: 10px;
         }
+
         .broacher-content h5 {
-            font-size:24px;
-            line-height:30px;
+            font-size: 24px;
+            line-height: 30px;
         }
     </style>
+
+    <link href="/css/industries.css" rel="stylesheet" />
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <main class="wrapper">
@@ -371,7 +374,7 @@
                 </div>
             </div>
         </section>
-        <section class="section-padding" id="divCap" runat="server" >
+        <section class="section-padding" id="divCap" runat="server">
             <div class="container">
                 <div class="row gy-4"><%=strsubcapability %></div>
             </div>
