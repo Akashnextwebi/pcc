@@ -152,7 +152,7 @@
             transition: var(--transition-base);
         }
 
-        .wptb-item--title {
+  h2.wptb-item--title1 {
             font-size: 42px ;
             margin-bottom: 30px ;
             line-height: 48px ;
@@ -172,7 +172,7 @@
         <!-- Page Header -->
 
         <div class="breadcrumb-section" style="background-image: linear-gradient(270deg, rgba(0, 0, 0, .55), rgba(0, 0, 0, 0.55) 101.02%), url(image/blog/braadcrumb-bg3.jpg);">
-            <div class="container-fluid one pl--95">
+            <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="banner-content">
@@ -297,7 +297,7 @@
                                     <div class="wptb-item--inner">
                                         <h6 class="wptb-item--subtitle">SEND US MAIL
                                         </h6>
-                                        <h1 class="wptb-item--title">Get in Touch</h1>
+                                        <h2 class="wptb-item--title1">Get in Touch</h2>
                                         <div class="wptb-item--divider"></div>
                                         <div class="wptb-item--description">
 Have questions or need assistance? Reach out to us, and our team will be happy to help!                                        </div>

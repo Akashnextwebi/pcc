@@ -44,7 +44,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
         <div class="breadcrumb-section" style="background-image: linear-gradient(270deg, rgba(0, 0, 0, .55), rgba(0, 0, 0, 0.55) 101.02%), url(image/blog/braadcrumb-bg3.jpg);">
-    <div class="container-fluid one pl--95">
+    <div class="container">
         <div class="row">
             <div class="col-lg-12">
                 <div class="banner-content">

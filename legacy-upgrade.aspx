@@ -6,7 +6,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
       <div class="breadcrumb-section" style="background-image: linear-gradient(270deg, rgba(0, 0, 0, .55), rgba(0, 0, 0, 0.55) 101.02%), url(image/update.png);">
-        <div class="container-fluid one pl--95">
+        <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="banner-content">
@@ -20,8 +20,8 @@
             </div>
         </div>
     </div>
-    <div class="service-details-wrapper pt-130 mb-40">
-        <div class="container one pl--95">
+    <div class="service-details-wrapper pt-100 pb-100">
+        <div class="container ">
             <div class="details-page-content mb-70">
                 <h2>Legacy Upgrade in PCC</h2>
                 <div class="row g-lg-4 gy-2">

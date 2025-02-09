@@ -100,7 +100,7 @@
     <main class="wrapper">
 
         <div class="breadcrumb-section" style="background-image: linear-gradient(270deg, rgba(0, 0, 0, .55), rgba(0, 0, 0, 0.55) 101.02%), url(image/blog/braadcrumb-bg3.jpg);">
-            <div class="container-fluid one pl--95">
+            <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="banner-content">
@@ -117,9 +117,9 @@
         <section class="section-padding">
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-lg-8">
-                        <div class="text-center mb-100">
-                            <h2>About Career at PCC</h2>
+                    <div class="col-lg-6">
+                        <div class="text-start ">
+                            <h2 class="mb-40 ">About Career at PCC</h2>
                             <p>
 Park Controls and Communications Private Limited, (PCC) is a company of three and half decades standing within the Defence and Aerospace Industry.  The company holds a monopoly status for the supply of products to the many Aircraft, Missiles, Unmanned Air Vehicles, Bombs and Satellite programs of the Government of India and Private suppliers to Defence and Aerospace.
 
@@ -134,14 +134,12 @@ PCC is on a fast track growth trajectory and is aiming to be the top player with
 </strong></p>
                         </div>
                     </div>
+                     <div class="col-lg-6">
+     <div class="career-image">
+     <img src="image/career/c1.jpg" /></div>
+ </div>
                 </div>
-                <div class="row justify-content-center align-items-center ">
-                    <div class="col-lg-10">
-                        <div class="career-image">
-                        <img src="image/career/c1.jpg" /></div>
-                    </div>
-
-                </div>
+               
             </div>
         </section>
         <section class="section-padding ">
