@@ -90,7 +90,7 @@ public partial class Admin_add_product : System.Web.UI.Page
                 ddlCapabilityType.DataTextField = "CapabilityName";
                 ddlCapabilityType.DataValueField = "Id";
                 ddlCapabilityType.DataBind();
-                ddlCapabilityType.Items.Insert(0, new ListItem { Value = "0", Text = "Select Capability" });
+                ddlCapabilityType.Items.Insert(0, new ListItem { Value = "0", Text = "Select Competencies" });
             }
         }
         catch (Exception ex)

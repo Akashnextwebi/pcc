@@ -366,9 +366,9 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <ul class="breadcrumb-list">
-                            <li><a href="/Default.aspx">Home</a></li>
-                            <li><a href="/Default.aspx">Home</a></li>
-                            <li><a href="/Default.aspx">Home</a></li>
+                            <li><a href="/">Home</a></li>
+                            <li><a href="javascript:void(0);">Product</a></li>
+                            <li><a href="javascript:void(0);"><%=strName %></a></li>
 
                         </ul>
                     </div>
