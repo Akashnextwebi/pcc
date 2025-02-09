@@ -240,7 +240,7 @@
                                 <div class="wptb-office">
                                     <div class="wptb-item--inner">
                                         <div class="wptb-item--subtitle">
-                                            PARK CONTROLS & COMMUNICATIONS (P) LTD.,
+                                            Park Controls and Communications Private Limited
 
 
                                         </div>

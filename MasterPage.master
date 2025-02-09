@@ -105,13 +105,13 @@
          <div class="header-top__col-left">
            <ul class="header-top-link-list">
              <li>
-               <a href="#">
+               <a href="tel:+918025292513">
                  <i class="fa fa-phone"></i>
                  +91 80252 92513
                </a>
              </li>
              <li>
-               <a href="#">
+               <a href="mailto:info@parkcontrols.com">
                  <i class="fa fa-envelope"></i>
                  info@parkcontrols.com
                </a>
@@ -138,11 +138,11 @@
            <div class="social-media-links">
              <ul class="social-link-list">
                <li>
-                 <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                 <a href="https://www.linkedin.com/company/parkcontrols/?viewAsMember=true"><i class="fa-brands fa-linkedin-in"></i></a>
                </li>
-               <li>
+              <%-- <li>
                  <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-               </li>
+               </li>--%>
              </ul>
            </div>
          </div>
@@ -399,8 +399,7 @@
        <div class="row align-items-center">
          <div class="col-lg-12">
            <div class="copy-text text-center">
-             Copyright &copy; 2025 All rights reserved by Park Controls &
-             Communications. | Design By
+             Copyright &copy; 2025 All rights reserved by Park Controls and Communications Private Limited | Design By
              <a href="https://www.nextwebi.com/" target="_blank">NextWebi</a>
            </div>
          </div>

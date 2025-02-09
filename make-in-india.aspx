@@ -570,7 +570,7 @@ Launched in September 2014, the Make in India campaign is a flagship initiative 
             <div class="row g-lg-4 gy-5">
                 <div class="col-lg-4">
                     <div class="advantage-img two">
-                        <img src="image/india/2.png" alt="">
+                        <img src="image/india.png" alt="">
                     </div>
                 </div>
                 <div class="col-lg-8">

@@ -5,7 +5,7 @@
     <link href="css/services.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-    <div class="breadcrumb-section" style="background-image: linear-gradient(270deg, rgba(0, 0, 0, .55), rgba(0, 0, 0, 0.55) 101.02%), url(image/blog/braadcrumb-bg3.jpg);">
+    <div class="breadcrumb-section" style="background-image: linear-gradient(270deg, rgba(0, 0, 0, .55), rgba(0, 0, 0, 0.55) 101.02%), url(image/future.png);">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -37,7 +37,7 @@
                             In today’s technology-driven world, where change is the only constant, the pursuit of future-proof products is more relevant than ever. At PCC, our passion for innovation, combined with exceptional skills and expertise, drives us to design and develop cutting-edge, feature-rich solutions. From the Heavy Vehicle Dashboard Display to the Data Acquisition Unit for HUMS, the products in our PARK portfolio deliver outstanding value to aerospace programs that are continuously evolving.
                         </p>
                         <p>We thrive on challenges and welcome your ideas that need to be transformed into innovative products. Reach out to us, and let’s shape the future together.</p>
-                        <p>Talk to us for undertaking turnkey solutions wherein we take up integration of third party products with products from the PARK portfolio to realize customized solutions that meet your precise needs</p>
+                        <p>Talk to us for <strong class="text-dark">undertaking turnkey solutions wherein we take up integration of third party</strong> products with products from the PARK portfolio to realize customized solutions that meet your precise needs</p>
                     </div>
 
                 </div>
@@ -48,10 +48,10 @@
 
             <div class="row gy-4">
                 <div class="col-lg-6">
-                    <img src="image/ls/1.png" />
+                    <img src="image/f1.png" />
                 </div>
                 <div class="col-lg-6">
-                    <img src="image/ls/2.png" />
+                    <img src="image/f2.png" />
 
                 </div>
 
