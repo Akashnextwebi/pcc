@@ -65,7 +65,7 @@
             </div>
         </div>
     </div>
-    <div class="horizontal-scrolling-section d-none">
+    <div class="horizontal-scrolling-section">
         <div class="single-scroll-container" style="background-image: linear-gradient(180deg, rgb(0 0 0 / 58%) 0%, rgb(0 0 0 / 20%) 100%), url(/<%=strbannerimg2%>)">
             <div class="container-fluid one pl--95">
                 <div class="horizontal-scrolling-content">
@@ -76,9 +76,7 @@
                         </h2>
                     </div>
                     <p><%=strFullDesc2 %></p>
-                    <div class="slider-btn ">
-                        <a href="#" class="btn ss-btn mr-15" data-animation="fadeInLeft" data-delay=".4s" tabindex="0" style="animation-delay: 0.4s;"><i class="fal fa-long-arrow-right"></i>Read more</a>
-                    </div>
+                  
                 </div>
             </div>
         </div>

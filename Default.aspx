@@ -9,7 +9,7 @@
             <div class="slider-active" style="background: #101010">
                 <div
                     class="single-slider slider-bg d-flex align-items-center"
-                    style="background-image: url(image/b1.png); background-size: cover;">
+                    style="background-image: url(image/bg1/bb1-min.webp); background-size: cover;">
                     <div class="container">
                         <div class="row justify-content-start align-items-start">
                             <div class="col-lg-9 col-md-8">
@@ -35,7 +35,7 @@
                 </div>
                 <div
                     class="single-slider slider-bg d-flex align-items-center"
-                    style="background-image: url(image/banner-4.png); background-size: cover;">
+                    style="background-image: url(image/bg1/bb2-min.webp); background-size: cover;">
                     <div class="container">
                         <div class="row justify-content-start align-items-start">
                             <div class="col-lg-9 col-md-8">
@@ -61,7 +61,7 @@
                 </div>
                 <div
                     class="single-slider slider-bg d-flex align-items-center"
-                    style="background-image: url(image/banner-1.png); background-size: cover;">
+                    style="background-image: url(image/bg1/bb3-min.webp); background-size: cover;">
                     <div class="container">
                         <div class="row justify-content-start align-items-start">
                             <div class="col-lg-9 col-md-8">

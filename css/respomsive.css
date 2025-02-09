@@ -11,6 +11,38 @@
         }
 }
 
+@media (min-width: 1200px) and (max-width: 1300px) {
+    .eg-card3.three .card-content {
+        padding: 50px 30px !important;
+    }
+
+        .eg-card3.three .card-content .catgory-and-title h5 a {
+            font-size: 22px !important;
+            line-height: 28px !important;
+        }
+    .slider-area .single-slider {
+        top:50px !important;
+    }
+.pt-50{
+        padding-top:0px !important;
+    }
+    .section-t h2{
+        margin-right:40px !important;
+    }
+    .about-area .nav.nav-tabs{
+        right:-140px !important;
+    }
+    .wptb-counter1.style1 .wptb-item--value {
+    font-size:50px !important;
+    line-height:58px !important;
+    }
+
+    .service .section-t h2{
+        font-size:100px !important;
+    }
+
+}
+
 
 
 
