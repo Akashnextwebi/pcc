@@ -1,6 +1,14 @@
 ﻿
 @media (min-width: 1300px) and (max-width: 1400px) {
+    .eg-card3.three .card-content {
+        padding: 50px 30px !important;
+    }
 
+        .eg-card3.three .card-content .catgory-and-title h5 a {
+       
+            font-size:22px !important;
+            line-height:28px !important;
+        }
 }
 
 
