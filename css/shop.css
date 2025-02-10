@@ -554,7 +554,7 @@ ul.popular_product_list {
         margin: 0px;
         list-style: none;
         max-width: 100%;
-        overflow-x: unset ;
+        overflow-x: scroll ;
         display: flex;
         align-items:center !important;
         gap:1rem;

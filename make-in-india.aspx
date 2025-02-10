@@ -509,6 +509,11 @@
             width:28px !important;
             height:28px !important
         }
+        .advantage-img{
+            border:2px solid #fff;
+            position:sticky;
+            top:0px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
@@ -570,7 +575,7 @@ Launched in September 2014, the Make in India campaign is a flagship initiative 
             <div class="row g-lg-4 gy-5">
                 <div class="col-lg-4">
                     <div class="advantage-img two">
-                        <img src="image/india.png" alt="">
+                        <img src="image/i1.png" alt="">
                     </div>
                 </div>
                 <div class="col-lg-8">

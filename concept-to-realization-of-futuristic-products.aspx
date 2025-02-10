@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="concept-to-realization-of-futuristic-products.aspx.cs" Inherits="realization_of_concept_to_fruition_of_futuristic" %>
+﻿<%@ Page Title="Concept to Realization of Futuristic Products" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="concept-to-realization-of-futuristic-products.aspx.cs" Inherits="realization_of_concept_to_fruition_of_futuristic" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <link href="css/breadcrums.css" rel="stylesheet" />

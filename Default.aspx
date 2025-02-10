@@ -180,7 +180,7 @@
                             <div class="service-card">
                                 <div class="card-inner">
                                     <div class="title">
-                                        <h3>Advanced Avionics Solutions</h3>
+                                        <h3>Advanced Avionics<br /> Solutions</h3>
                                         <p>
                                             Creating Smarter, Safer, and Highly Efficient Systems for On-board & Ground Operations. 
                                         </p>
@@ -431,7 +431,7 @@
                             class="skills-img wow fadeInLeft animated"
                             data-animation="fadeInLeft"
                             data-delay=".4s">
-                            <a
+                          <%--  <a
                                 href="https://www.youtube.com/shorts/Sb21UWXblcA"
                                 class="video-i popup-video">
                                 <span class="play-icon">
@@ -443,9 +443,9 @@
                                     <span
                                         class="playvideo_animation"
                                         style="animation-delay: 0.6s"></span>
-                                </span>
-                                <img src="image/why-choose-us.jpg" alt="img" class="img" />
-                            </a>
+                                </span></a>--%>
+                                <img src="image/why4.png" alt="img" class="img" />
+                            
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-12 col-sm-12">
