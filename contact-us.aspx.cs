@@ -77,6 +77,7 @@ public partial class contact_us : System.Web.UI.Page
             smtp.Credentials = new System.Net.NetworkCredential
             (ConfigurationManager.AppSettings["userName"], ConfigurationManager.AppSettings["password"]);
             smtp.EnableSsl = Convert.ToBoolean(ConfigurationManager.AppSettings["enableSsl"]);
+            smtp.Timeout = 10000;
             smtp.Send(mail);
             return 1;
         }
