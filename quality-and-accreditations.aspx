@@ -81,7 +81,7 @@
                 <span class="sub-title">Certification</span>
                 <h2>Quality and Accreditations</h2>
             </div>
-            <div class="row justify-content-center">
+            <div class="row gy-4 justify-content-center">
                 <div class="col-lg-3 col-md-4">
                     <div class="cc1">
                         <div class="certificate-img">

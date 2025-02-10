@@ -3,6 +3,11 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <link href="/css/breadcrums.css" rel="stylesheet" />
     <link href="/css/industries.css" rel="stylesheet" />
+    <style>
+        .breadcrumb-section{
+            background-position:top !important;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <div class="breadcrumb-section" style="background-image: linear-gradient(270deg, rgba(0, 0, 0, .55), rgba(0, 0, 0, 0.55) 101.02%), url(/<%=strBannerImage%>);">
@@ -51,8 +56,7 @@
                     </div>
 
                 </div>
-                <div class="col-lg-12">
-                    <div class="row gy-4">
+                
 
                         <%=strProduct %>
 
@@ -60,12 +64,10 @@
                     </div>
 
 
-                </div>
                
-            </div>
         </div>
-    </div>
-    <div class="horizontal-scrolling-section">
+    </div> 
+    <div class="horizontal-scrolling-section d-none ">
         <div class="single-scroll-container" style="background-image: linear-gradient(180deg, rgb(0 0 0 / 58%) 0%, rgb(0 0 0 / 20%) 100%), url(/<%=strbannerimg2%>)">
             <div class="container">
                 <div class="horizontal-scrolling-content">

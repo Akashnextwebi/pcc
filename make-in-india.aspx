@@ -516,7 +516,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 d-flex flex-lg-row flex-column align-items-xxl-end align-items-lg-center justify-content-between gap-5">
-                    <div class="banner-left-content">
+                    <div class="banner-left-content new-left">
                         <h3>Make in India  
 
                         </h3>

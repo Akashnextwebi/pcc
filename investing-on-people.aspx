@@ -67,7 +67,7 @@ We know our people can thrive when their daily experience matches what they valu
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <img src="image/jcr_content.jpeg" />
+                    <img src="image/inv.png" />
                 </div>
             </div>
         </div>

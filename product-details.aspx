@@ -366,12 +366,15 @@
             .product_left .product_zoom .product_zoom_container .product_zoom_info img {
     width: 800px;
     height: 532px;
-    object-fit: cover;
+    object-fit: contain;
 }
         @media (min-width: 320px) and (max-width: 767px) {
             .breadcrumb-list{
                 padding:10px 0px !important;
             }
+        }
+        .product_image_zoom {
+            background: #f7f6f4;
         }
     </style>
 </asp:Content>
@@ -513,31 +516,30 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body bg-light">
-                        <div class="row">
-                            <div class="col-lg-12 ">
+                      
                                 <div class="wptb-form" method="post">
                                     <div class="wptb-form--inner">
                                         <div class="row gy-3">
-                                            <div class="col-lg-12 col-md-12">
+                                            <div class="col-lg-12 col-md-12 p-0 p-lg-2">
                                                 <div class="form-group">
                                                     <asp:TextBox ID="textFname" runat="server" class="form-control textFname" MaxLength="100" placeholder="Enter Your Name"></asp:TextBox>
                                                     <span class="spnfname text-danger"></span>
                                                 </div>
                                             </div>
-                                            <div class="col-lg-12 col-md-12">
+                                            <div class="col-lg-12 col-md-12 p-0 p-lg-2">
                                                 <div class="form-group">
                                                     <asp:TextBox ID="txtContact" class="form-control txtContact" runat="server" MaxLength="15" placeholder="Mobile Number"></asp:TextBox>
                                                     <span class="spncontact text-danger"></span>
                                                 </div>
                                             </div>
-                                            <div class="col-lg-12 col-md-12">
+                                            <div class="col-lg-12 col-md-12 p-0 p-lg-2">
                                                 <div class="form-group">
                                                     <asp:TextBox ID="txtemailAdress" class="form-control txtemailAdress" runat="server" MaxLength="100" placeholder="Corporate E-mail ID"></asp:TextBox>
                                                     <span class="spnemail text-danger"></span>
                                                 </div>
                                             </div>
 
-                                            <div class="col-md-12 col-lg-12 ">
+                                            <div class="col-md-12 col-lg-12  p-0 p-lg-2">
 
                                                 <div class="slider-btn">
                                                     <asp:LinkButton runat="server" ID="BtnSubmit" CssClass="btn ss-btn BtnSubmit" ValidationGroup="Save">Download<i class="fa-solid fa-cloud-arrow-down"></i></asp:LinkButton>
@@ -547,8 +549,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
+                       
 
                 </div>
             </div>
@@ -562,37 +563,36 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body bg-light">
-                        <div class="row">
-                            <div class="col-lg-12  ">
+                       
                                 <div class="wptb-form" method="post">
                                     <div class="wptb-form--inner">
                                         <div class="row gy-3">
-                                            <div class="col-lg-12 col-md-12">
+                                            <div class="col-lg-12 col-md-12 p-0 p-lg-2">
                                                 <div class="form-group">
                                                     <input type="text" name="name" class="form-control" id="txtname" placeholder="Enter Your Name" required>
                                                     <span class="spnname text-danger"></span>
                                                 </div>
                                             </div>
-                                            <div class="col-lg-12 col-md-12">
+                                            <div class="col-lg-12 col-md-12 p-0 p-lg-2">
                                                 <div class="form-group">
                                                     <input type="text" name="password" class="form-control" id="txtcontact" placeholder="Mobile Number">
                                                     <span class="spncontact text-danger"></span>
                                                 </div>
                                             </div>
-                                            <div class="col-lg-12 col-md-12">
+                                            <div class="col-lg-12 col-md-12 p-0 p-lg-2">
                                                 <div class="form-group">
                                                     <input type="text" name="password" class="form-control" id="txtemail" placeholder="Email" />
                                                     <span class="spnemail text-danger"></span>
                                                 </div>
                                             </div>
-                                            <div class="col-lg-12 col-md-12">
+                                            <div class="col-lg-12 col-md-12 p-0 p-lg-2">
                                                 <div class="form-group">
                                                     <textarea type="text" name="message" class="form-control" id="txtmessage" placeholder="Message"></textarea>
                                                     <span class="spnmessage text-danger"></span>
                                                 </div>
                                             </div>
 
-                                            <div class="col-md-12 col-lg-12">
+                                            <div class="col-md-12 col-lg-12 p-0 p-lg-2">
                                                 <div class="slider-btn">
                                                     <%-- <a
                                                 href="#"
@@ -600,7 +600,7 @@
                                                 data-animation="fadeInLeft"
                                                 data-delay=".4s">Submit<i class="fal fa-long-arrow-right"></i></a>--%>
                                                     <%--<input type="button" value="Submit" class="btn ss-btn mr-15" data-animation="fadeInLeft" data-delay=".4s" onclick="submitFunction()"><i class="fal fa-long-arrow-right"></i>--%>
-                                                    <button class="btn ss-btn mr-15 btnsubmit" data-animation="fadeInLeft" data-delay=".4s">
+                                                    <button class="btn ss-btn  btnsubmit" data-animation="fadeInLeft" data-delay=".4s">
                                                         Submit<i class="fal fa-long-arrow-right"></i>
                                                     </button>
 
@@ -610,8 +610,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
+                       
 
                 </div>
             </div>
@@ -660,6 +659,8 @@
     </script>
     <script src="/js/vendor/jquery-3.6.0.min.js"></script>
     <script src="/js/pages/brochure-enguiry.js"></script>
+    <script>
 
+    </script>
 </asp:Content>
 

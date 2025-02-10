@@ -357,8 +357,7 @@
                                     <li><%=strBannertitle %></li>
                                 </ul>
                             </div>
-                            <div class="slider-btn mt-30 ">
-                            </div>
+                           
                         </div>
                     </div>
                 </div>

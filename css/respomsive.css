@@ -58,11 +58,17 @@
             font-size: 12px !important;
             line-height: 18px !important;
         }
+        section.slider-area.p-relative{
+            margin-top:100px !important;
+          
+        }
 
         .pcc-header .main-menu nav > ul > li:not(:last-child) {
             margin-right: 25px;
         }
-
+        .pcc-header .main-menu nav > ul > li:not(:last-child) {
+            margin-right: 36px;
+        }
         .header-top {
             border-bottom: 1px solid #3f4146;
             color: #fff;
@@ -83,16 +89,23 @@
         }
 
         .slider-content.s-slider-content.mt-200.pt-50 {
-            margin-top: 0px !important;
+            margin-top: 50px !important;
+            margin-bottom:30px !important;
         }
-
+        .slider-content.s-slider-content.mt-100.pt-50 {
+            margin-top: 50px !important;
+            margin-bottom: 30px !important;
+            padding-top:0px !important;
+        }
+        .client-logo-wrap {
+            display: grid;
+            grid-template-columns: repeat(6, 16%) !important;
+        }
         .pt-130 {
             padding-top: 60px !important;
         }
 
-        .slider-bg {
-            min-height: 50vh !important;
-        }
+       
 
         .slider-btn.mt-30.mb-105 {
             margin-bottom: 0px;
@@ -861,9 +874,23 @@
             overflow: auto;
         }
         .product_left .product_zoom .product_zoom_container .product_zoom_info img {
-            width: auto !important;
-            height: auto !important;
-            object-fit: cover;
+            width: 800px;
+            height: 500px;
+            object-fit: contain !important;
+        }
+        .service-card{
+            height:100% !important;
+        }
+        .service-card p{
+            min-height:60px;
+        }
+        .strip {
+            position: relative;
+            top: 0px !important;
+            z-index: 99;
+        }
+        .mt-120 {
+            margin-top: 0px !important;
         }
     }
 
@@ -890,7 +917,27 @@
             color: #fff;
             font-size: 10px !important;
         }
-            .history-section h1 {
+        .new-left h3{
+            font-size:20px !important;
+            
+            line-height:30px !important;
+
+        }
+        .error-area {
+            padding: 80px 0px 80px !important;
+        }
+        ul.style-none.d-flex.info-data{
+            flex-direction:column;
+        }
+        .job-detail-section .upper-box{
+            padding:40px 0px 40px!important;
+        }
+        .new-left h1 {
+            font-size: 28px !important;
+            line-height: 34px !important;
+        }
+
+        .history-section h1 {
             font-size: 24px !important;
         }
 
@@ -1288,7 +1335,7 @@
         }
 
         .modal-body {
-            padding: 20px 0px !important;
+            padding: 20px 20px !important;
         }
 
         input[type="submit"], .btn {
@@ -1367,8 +1414,8 @@
         }
 
             .banner-area6 .banner-left-content h1 {
-                font-size: 20px !important;
-                line-height: 26px !important;
+                font-size: 28px !important;
+                line-height: 34px !important;
             }
 
         .w-50 {

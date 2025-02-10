@@ -633,10 +633,10 @@ PCAMi-1000 Flight Instrumentation & Recording System
                                 </h2>
                                 <div class="text">
                                     <p>
-                                        Indigenization of the GURT Test Equipment Complex
-                                    </p>
+                                        Indigenization of the GURT Test Equipment Complex.
+                                    </p>    <br />
                                     <p>
-                                        Health & Utility Management System DAU for Aircraft
+                                        Health & Utility Management System DAU for Aircraft.
 
 
 
@@ -675,14 +675,15 @@ PCAMi-1000 Flight Instrumentation & Recording System
                                 </h2>
                                 <div class="text">
                                     <p>
-                                        Fuel Flow Metering Unit for the Sukhoi Aircraft
+                                        Fuel Flow Metering Unit for the Sukhoi Aircraft.
                                     </p>
-                                    <p>Engine Control Unit for Military Ground Vehicles from 300 Hp to 1500 Hp</p>
-                                    <p>Integrated Demodulation System for Telemetry Ground Station</p>
+                                    <br />
+                                    <p>Engine Control Unit for Military Ground Vehicles from 300 Hp to 1500 Hp.</p>    <br />
+                                    <p>Integrated Demodulation System for Telemetry Ground Station.</p>    <br />
 
 
                                     <p>
-                                        Heavy Vehicles Digital Display Units for Armoured carriers and other surface vehicles
+                                        Heavy Vehicles Digital Display Units for Armoured carriers and other surface vehicles.
 
 
 
@@ -806,8 +807,8 @@ PCAMi-1000 Flight Instrumentation & Recording System
 
                                 </div>
                                 <div class="title">
-                                   Indigenization of the GURT Test Equipment Complex
-Health & Utility Management System DAU for Aircraft
+                                 <p>  Indigenization of the GURT Test Equipment Complex</p><p>
+Health & Utility Management System DAU for Aircraft</p>
 
 
 
@@ -822,16 +823,16 @@ Health & Utility Management System DAU for Aircraft
                                 </div>
                                 <div class="title">
 
-Fuel Flow Metering Unit for the Sukhoi Aircraft
-                                    <br />
+<P>Fuel Flow Metering Unit for the Sukhoi Aircraft</p>
+                                  
 
-Engine Control Unit for Military Ground Vehicles from 300 Hp to 1500 Hp
-                                    <br />
+<P>Engine Control Unit for Military Ground Vehicles from 300 Hp to 1500 Hp</p>
+                                   
 
-Integrated Demodulation System for Telemetry Ground Station
-                                    <br />
+<P>Integrated Demodulation System for Telemetry Ground Station</p>
+                                   
 
-Heavy Vehicles Digital Display Units for Armoured carriers and other surface vehicles
+<P>Heavy Vehicles Digital Display Units for Armoured carriers and other surface vehicles</p>
 
 
 

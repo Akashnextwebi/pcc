@@ -11,7 +11,9 @@
             padding: 28px 40px 30px;
             transition: all .2s ease-in-out 0s;
         }
-
+        ul.style-none.d-flex.info-data {
+    flex-direction: column;
+}
             .job-list-three .main-wrapper {
                 position: relative;
                 display: flex;

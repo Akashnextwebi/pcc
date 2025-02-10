@@ -47,10 +47,10 @@
 
 
             <div class="row gy-4">
-                <div class="col-lg-6">
+                <div class="col-lg-6 col-md-6">
                     <img src="image/f1.png" />
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6 col-md-6">
                     <img src="image/f2.png" />
 
                 </div>

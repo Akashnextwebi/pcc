@@ -84,7 +84,7 @@
             </div>
         </div>
     </div>
-    <div class="career-page pt-100 mb-100">
+    <div class="career-page pt-100 pb-100">
         <div class="container">
             <div class="row align-items-center">
 

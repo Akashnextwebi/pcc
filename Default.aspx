@@ -39,7 +39,7 @@
                     <div class="container">
                         <div class="row justify-content-start align-items-start">
                             <div class="col-lg-9 col-md-8">
-                                <div class="slider-content s-slider-content mt-100  pt-50">
+                                <div class="slider-content s-slider-content mt-100 pt-50">
                                     <h2 data-animation="fadeInUp" data-delay=".4s">Control Refined. Performance Redefined.
                                     </h2>
                                     <p data-animation="fadeInUp" data-delay=".6s">
@@ -65,7 +65,7 @@
                     <div class="container">
                         <div class="row justify-content-start align-items-start">
                             <div class="col-lg-9 col-md-8">
-                                <div class="slider-content s-slider-content mt-100  pt-50">
+                                <div class="slider-content s-slider-content mt-100 pt-50">
                                     <h2 data-animation="fadeInUp" data-delay=".4s">Raising the Standard for Seamless Synchronization  
                                     </h2>
                                     <p data-animation="fadeInUp" data-delay=".6s">
@@ -203,7 +203,7 @@
                                     <div class="title">
                                         <h3>Precise Time & Frequency solutions</h3>
                                         <p>
-                                            Delivering Perfection where every Second<br />
+                                            Delivering Perfection where every Second
                                             Matters.
                                         </p>
                                     </div>
@@ -229,7 +229,7 @@
                                             Solutions</h3>
                                         <p>
                                             Ensuring Consistent Performance for
-                                            <br />
+                                          
                                             Mission-Critical Applications
                                         </p>
                                     </div>
@@ -254,7 +254,7 @@
                                             Solutions</h3>
                                         <p>
                                             Redefining complex requirements with
-                                            <br />
+                                       
                                             adaptable innovations. 
                                         </p>
                                     </div>
@@ -432,7 +432,7 @@
                             data-animation="fadeInLeft"
                             data-delay=".4s">
                             <a
-                                href="https://youtube.com/shorts/Sb21UWXblcA"
+                                href="https://www.youtube.com/shorts/Sb21UWXblcA"
                                 class="video-i popup-video">
                                 <span class="play-icon">
                                     <i class="fa-solid fa-play"></i>

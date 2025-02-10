@@ -36,10 +36,10 @@
 
 
             <div class="row gy-4">
-                <div class="col-lg-6">
+                <div class="col-lg-6 col-md-6">
                     <img src="image/l1.png" />
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6 col-md-6">
                     <img src="image/l2.png" />
 
                 </div>
