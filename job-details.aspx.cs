@@ -13,7 +13,7 @@ using System.Web.UI.WebControls;
 public partial class job_details : System.Web.UI.Page
 {
     SqlConnection conSQ = new SqlConnection(ConfigurationManager.ConnectionStrings["conSQ"].ConnectionString);
-    public string strJobTitle = "", strEducation = "", strJobLocation = "", strJobDescription = "", strKeyResponsibilities = "", strSkills = "", strEmploymentType = "", strtime = "",strImage="";
+    public string strJobTitle = "", strEducation = "", strJobLocation = "", strJobDescription = "", strKeyResponsibilities = "", strSkills = "", strEmploymentType = "", strtime = "", strImage = "";
     protected void Page_Load(object sender, EventArgs e)
     {
         var jurl = Convert.ToString(RouteData.Values["jurl"]);
@@ -162,12 +162,12 @@ public partial class job_details : System.Web.UI.Page
                 smtp.Port = Convert.ToInt32(ConfigurationManager.AppSettings["port"]);
                 smtp.Credentials = new System.Net.NetworkCredential(ConfigurationManager.AppSettings["userName"], ConfigurationManager.AppSettings["password"]);
                 smtp.EnableSsl = Convert.ToBoolean(ConfigurationManager.AppSettings["enableSsl"]);
-
+                smtp.Timeout = 10000;
                 smtp.Send(mail);
                 lblStatus.Text = "true";
                 txtname.Text = txtemail.Text = txtcontact.Text = txtexperience.Text = txtlocation.Text = txtcompany.Text = txtWriteYourMessage.Text = "";
                 ddlNoticePeriod.ClearSelection();
-               lblStatus.Text = "Job applied successfully";
+                lblStatus.Text = "Job applied successfully";
                 //Response.Redirect("thankyou.aspx");
 
             }
