@@ -4,6 +4,14 @@
     <link href="css/about.css" rel="stylesheet" />
 
     <link href="css/breadcrums.css" rel="stylesheet" />
+    <style>
+        @media (min-width: 320px) and (max-width: 767px) {
+    .wptb-item--title {
+        font-size: 24px !important;
+        line-height: 30px !important;
+    }
+}
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <div class="breadcrumb-section" style="background-image: linear-gradient(270deg, rgba(0, 0, 0, .55), rgba(0, 0, 0, 0.55) 101.02%), url(image/blog/braadcrumb-bg3.jpg);">

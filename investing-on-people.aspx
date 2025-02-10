@@ -67,14 +67,14 @@ We know our people can thrive when their daily experience matches what they valu
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <img src="image/jcr_content.jpeg" />
+                    <img src="image/inv.png" />
                 </div>
             </div>
         </div>
     </div>
     <section class="bg-light section-padding">
         <div class="container">
-            <div class="row">
+            <div class="row d-none">
                  <div class="col-lg-6 order-lg-0 order-1">
 
      <img src="image/pcc.png">

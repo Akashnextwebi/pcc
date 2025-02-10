@@ -516,7 +516,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 d-flex flex-lg-row flex-column align-items-xxl-end align-items-lg-center justify-content-between gap-5">
-                    <div class="banner-left-content">
+                    <div class="banner-left-content new-left">
                         <h3>Make in India  
 
                         </h3>
@@ -570,7 +570,7 @@ Launched in September 2014, the Make in India campaign is a flagship initiative 
             <div class="row g-lg-4 gy-5">
                 <div class="col-lg-4">
                     <div class="advantage-img two">
-                        <img src="image/india/2.png" alt="">
+                        <img src="image/india.png" alt="">
                     </div>
                 </div>
                 <div class="col-lg-8">

@@ -36,7 +36,7 @@
                                             href="/"
                                             class="btn ss-btn mr-15"
                                             data-animation="fadeInLeft"
-                                            data-delay=".4s" ><i class="fal fa-long-arrow-right" ></i>Go to home page more</a>                        </div>
+                                            data-delay=".4s" ><i class="fal fa-long-arrow-right" ></i>Back to home page </a>                        </div>
                     </div>
                 </div>
             </div>

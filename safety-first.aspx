@@ -63,13 +63,13 @@
             position: relative;
             padding: 50px 35px;
         }
-        .mb-40{
-            margin-bottom:40px !important;
+        .mb-30{
+            margin-bottom:30px !important;
         }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-    <div class="breadcrumb-section" style="background-image: linear-gradient(270deg, rgba(0, 0, 0, .55), rgba(0, 0, 0, 0.55) 101.02%), url(image/bg1/1.png);">
+    <div class="breadcrumb-section" style="background-image: linear-gradient(270deg, rgba(0, 0, 0, .55), rgba(0, 0, 0, 0.55) 101.02%), url(image/safety.png);">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -84,7 +84,7 @@
             </div>
         </div>
     </div>
-    <div class="career-page pt-100 mb-100">
+    <div class="career-page pt-100 pb-100">
         <div class="container">
             <div class="row align-items-center">
 
@@ -115,7 +115,7 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="new-image">
-                        <img src="image/bg1/safe-min.jpg" />
+                        <img src="image/s1.png" />
                     </div>
                 </div>
 

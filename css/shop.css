@@ -553,9 +553,11 @@ ul.popular_product_list {
         padding: 0px;
         margin: 0px;
         list-style: none;
-        max-height: 515px;
-        overflow-y: scroll;
-        display: inline-block;
+        max-width: 100%;
+        overflow-x: unset ;
+        display: flex;
+        align-items:center !important;
+        gap:1rem;
         padding-right: 23px;
     }
 
@@ -615,7 +617,7 @@ ul.popular_product_list {
 
     .product_left .product_zoom .product_zoom_container {
         flex: 1;
-        max-height: 560px;
+        max-width: 100%;
         overflow: hidden;
     }
 
